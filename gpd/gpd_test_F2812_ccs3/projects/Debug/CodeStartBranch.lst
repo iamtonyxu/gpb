@@ -1,0 +1,60 @@
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:52 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/CodeStartBranch.asm             PAGE    1
+
+       1              ***********************************************************************
+       2              * File: CodeStartBranch.asm
+       3              * Devices: TMS320F2812, TMS320F2811, TMS320F2810
+       4              * Author: David M. Alter, Texas Instruments Inc.
+       5              * History:
+       6              *   09/08/03 - original (D. Alter)
+       7              ***********************************************************************
+       8              
+       9        0001  WD_DISABLE      .set    1               ;set to 1 to disable WD, else set to 0
+      10              
+      11                  .ref _c_int00
+      12              
+      13              ***********************************************************************
+      14              * Function: codestart section
+      15              *
+      16              * Description: Branch to code starting point
+      17              ***********************************************************************
+      18 00000000           .sect "codestart"
+      19              
+      20                  .if WD_DISABLE == 1
+      21 00000000 0040'         LB wd_disable       ;Branch to watchdog disable code
+         00000001 0000 
+      22                  .else
+      23                      LB _c_int00         ;Branch to start of boot.asm in RTS library
+      24                  .endif
+      25              
+      26              ;end codestart section
+      27              
+      28              
+      29              ***********************************************************************
+      30              * Function: wd_disable
+      31              *
+      32              * Description: Disables the watchdog timer
+      33              ***********************************************************************
+      34                  .if WD_DISABLE == 1
+      35              
+      36 00000000               .text
+      37 00000000       wd_disable:
+      38 00000000 7622          EALLOW                                  ;Enable EALLOW protected register access
+      39 00000001 B9C0      MOVZ DP, #7029h>>6      ;Set data page for WDCR register
+      40 00000002 2829      MOV @7029h, #0068h      ;Set WDDIS bit in WDCR to disable WD
+         00000003 0068 
+      41 00000004 761A          EDIS                                    ;Disable EALLOW protected register access
+      42 00000005 0040!     LB _c_int00             ;Branch to start of boot.asm in RTS library
+         00000006 0000 
+      43              
+      44                  .endif
+      45              
+      46              ;end wd_disable
+      47              ***********************************************************************
+      48              
+      49              
+      50                      .end                    ; end of file CodeStartBranch.asm
+
+No Assembly Errors, No Assembly Warnings

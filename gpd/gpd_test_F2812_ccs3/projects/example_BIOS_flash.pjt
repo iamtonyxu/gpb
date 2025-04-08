@@ -1,0 +1,54 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="C:\D\dsp\work\eZdspF2812_examples_BIOS520_2006Jan13\projects\"
+ProjectType=Executable
+CPUFamily=TMS320C28XX
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="..\src\Adc.c"
+Source="..\src\CodeStartBranch.asm"
+Source="..\src\DefaultIsr_BIOS.c"
+Source="..\src\DelayUs.asm"
+Source="..\src\DSP281x_GlobalVariableDefs.c"
+Source="..\src\Ev.c"
+Source="..\src\Gpio.c"
+Source="..\src\main_BIOS.c"
+Source="..\src\passwords.asm"
+Source="..\src\PieCtrl_BIOS.c"
+Source="..\src\SetDBGIER.asm"
+Source="..\src\SysCtrl.c"
+Source="..\src\Xintf.c"
+Source="example_BIOS_flash.tcf"
+Source="..\cmd\f2812_BIOS_flash.cmd"
+Source="..\DSP281x_headers\cmd\DSP281x_Headers_BIOS.cmd"
+Source="example_BIOS_flashcfg.cmd"
+
+[Generated Files]
+Source="example_BIOS_flashcfg.s28"
+Source="example_BIOS_flashcfg_c.c"
+
+["Compiler" Settings: "Debug"]
+Options=-g -k -q -ss -pds303 -al -as -fr"$(Proj_dir)\Debug" -fs"$(Proj_dir)\Debug" -ft"$(Proj_dir)\Debug" -fb"$(Proj_dir)\Debug" -ff"$(Proj_dir)\Debug" -i"$(Proj_dir)" -i"$(Proj_dir)\..\include" -i"$(Proj_dir)\..\DSP281x_Headers\include" -d"_DEBUG" -d"LARGE_MODEL" -d"EXAMPLE_FLASH" -d"EXAMPLE_BIOS" -ml -mt -v28
+
+["Compiler" Settings: "Release"]
+Options=-q -o3 -fr"C:\D\dsp\work\eZdspF2812_examples_BIOS520_2006Jan13\projects\Release" -d"LARGE_MODEL" -ml -v28
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-Dconfig.importPath="$(Install_dir)/bios_5_20/packages;"
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v28
+
+["Linker" Settings: "Debug"]
+Options=-q -a -c -m"$(Proj_dir)\Debug\example_BIOS_flash.map" -o"$(Proj_dir)\Debug\example_BIOS_flash.out" -w -x
+
+["Linker" Settings: "Release"]
+Options=-q -c -o".\Release\lab9.out" -x
+

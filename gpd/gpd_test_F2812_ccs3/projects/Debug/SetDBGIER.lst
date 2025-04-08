@@ -1,0 +1,42 @@
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:52 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/SetDBGIER.asm                   PAGE    1
+
+       1              ***********************************************************************
+       2              * File: SetDBGIER.asm
+       3              * Devices: TMS320F2812, TMS320F2811, TMS320F2810
+       4              * Author: David M. Alter, Texas Instruments Inc.
+       5              * History:
+       6              *   09/08/03 - original (D. Alter)
+       7              * Notes: none
+       8              ***********************************************************************
+       9              
+      10              
+      11              **********************************************************************
+      12              * Function: SetDBGIER()                                              *
+      13              * Description: Sets the DBGIER register (for realtime emulation).    *
+      14              * DSP: TMS320F2812, TMS320F2811, TMS320F2810                         *
+      15              * Last Modified: 08/12/03                                            *
+      16              * Include files: none                                                *
+      17              * Function Prototype: void SetDBGIER(unsigned int)                   *
+      18              * Useage: SetDBGIER(value);                                          *
+      19              * Input Parameters: Uint16 value = value to put in DBGIER register.  *
+      20              * Return Value: none                                                 *
+      21              * Notes: none                                                        *
+      22              **********************************************************************
+      23                              .def _SetDBGIER
+      24 00000000                       .text
+      25                              
+      26 00000000       _SetDBGIER:
+      27 00000000 96BD                  MOV     *SP++,AL
+      28 00000001 7612                  POP     DBGIER
+      29 00000002 0006                  LRETR
+      30              
+      31              ; end of function SetDBGIER() ****************************************
+      32              
+      33              
+      34              ;end of file SetDBGIER.asm
+      35                     .end
+
+No Assembly Errors, No Assembly Warnings

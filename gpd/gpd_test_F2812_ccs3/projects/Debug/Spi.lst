@@ -1,0 +1,1801 @@
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE    1
+
+       1              ;***************************************************************
+       2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
+       3              ;* Date/Time created: Tue Apr  8 10:05:53 2025                 *
+       4              ;***************************************************************
+       5                      .compiler_opts --abi=coffabi --diag_wrap=off --float_support=softlib --hll_source=on --mem_model:code
+       6                      .asg    XAR2, FP
+       7              
+       8              $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       9                      .dwattr $C$DW$CU, DW_AT_name("C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c")
+      10                      .dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v22.6.2.LTS Copyright (c) 1996-2
+      11                      .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      12                      .dwattr $C$DW$CU, DW_AT_comp_dir("C:\repo\jabil2025\gpb\gpb_project_v3\projects\example_nonBIOS_ram\D
+      13              $C$DW$1 .dwtag  DW_TAG_variable
+      14                      .dwattr $C$DW$1, DW_AT_name("SpiaRegs")
+      15                      .dwattr $C$DW$1, DW_AT_TI_symbol_name("_SpiaRegs")
+      16                      .dwattr $C$DW$1, DW_AT_type(*$C$DW$T$44)
+      17                      .dwattr $C$DW$1, DW_AT_declaration
+      18                      .dwattr $C$DW$1, DW_AT_external
+      19              
+      20              ;       C:\ti\ccs1281\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\ac2000.exe -@C:\\Users\\fgjlb01\\AppData
+      21 00000000               .sect   ".text"
+      22                      .clink
+      23                      .global _InitSpi
+      24              
+      25              $C$DW$2 .dwtag  DW_TAG_subprogram
+      26                      .dwattr $C$DW$2, DW_AT_name("InitSpi")
+      27                      .dwattr $C$DW$2, DW_AT_low_pc(_InitSpi)
+      28                      .dwattr $C$DW$2, DW_AT_high_pc(0x00)
+      29                      .dwattr $C$DW$2, DW_AT_TI_symbol_name("_InitSpi")
+      30                      .dwattr $C$DW$2, DW_AT_external
+      31                      .dwattr $C$DW$2, DW_AT_TI_begin_file("C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c")
+      32                      .dwattr $C$DW$2, DW_AT_TI_begin_line(0x27)
+      33                      .dwattr $C$DW$2, DW_AT_TI_begin_column(0x06)
+      34                      .dwattr $C$DW$2, DW_AT_TI_max_frame_size(-2)
+      35                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 40,column 1,is_stmt,address _InitSpi,i
+      36              
+      37                      .dwfde $C$DW$CIE, _InitSpi
+      38              ;----------------------------------------------------------------------
+      39              ;  39 | void InitSpi(void)                                                     
+      40              ;----------------------------------------------------------------------
+      41              
+      42              ;***************************************************************
+      43              ;* FNAME: _InitSpi                      FR SIZE:   0           *
+      44              ;*                                                             *
+      45              ;* FUNCTION ENVIRONMENT                                        *
+      46              ;*                                                             *
+      47              ;* FUNCTION PROPERTIES                                         *
+      48              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+      49              ;***************************************************************
+      50              
+      51 00000000       _InitSpi:
+      52                      .dwcfi  cfa_offset, -2
+      53                      .dwcfi  save_reg_to_mem, 26, 0
+      54                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 41,column 2,is_stmt,isa 0
+      55              ;----------------------------------------------------------------------
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE    2
+
+      56              ;  41 | SpiaRegs.SPICCR.bit.SPISWRESET = 0;                                    
+      57              ;----------------------------------------------------------------------
+      58 00000000 761F!         MOVW      DP,#_SpiaRegs         ; [CPU_ARAU] 
+         00000001 0000 
+      59 00000002 1800!         AND       @$BLOCKED(_SpiaRegs),#0xff7f ; [CPU_ALU] |41| 
+         00000003 FF7F 
+      60                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 46,column 2,is_stmt,isa 0
+      61              ;----------------------------------------------------------------------
+      62              ;  46 | SpiaRegs.SPIBRR = 29; // was 14; for 2MHZ                              
+      63              ;----------------------------------------------------------------------
+      64 00000004 56BF!         MOVB      @$BLOCKED(_SpiaRegs)+4,#29,UNC ; [CPU_ALU] |46| 
+         00000005 1D04 
+      65                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 50,column 1,is_stmt,isa 0
+      66              $C$DW$3 .dwtag  DW_TAG_TI_branch
+      67                      .dwattr $C$DW$3, DW_AT_low_pc(0x00)
+      68                      .dwattr $C$DW$3, DW_AT_TI_return
+      69              
+      70 00000006 0006          LRETR     ; [CPU_ALU] 
+      71                      ; return occurs ; [] 
+      72                      .dwattr $C$DW$2, DW_AT_TI_end_file("C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c")
+      73                      .dwattr $C$DW$2, DW_AT_TI_end_line(0x32)
+      74                      .dwattr $C$DW$2, DW_AT_TI_end_column(0x01)
+      75                      .dwendentry
+      76                      .dwendtag $C$DW$2
+      77              
+      78 00000007               .sect   ".text"
+      79                      .clink
+      80                      .global _ConfigSpi
+      81              
+      82              $C$DW$4 .dwtag  DW_TAG_subprogram
+      83                      .dwattr $C$DW$4, DW_AT_name("ConfigSpi")
+      84                      .dwattr $C$DW$4, DW_AT_low_pc(_ConfigSpi)
+      85                      .dwattr $C$DW$4, DW_AT_high_pc(0x00)
+      86                      .dwattr $C$DW$4, DW_AT_TI_symbol_name("_ConfigSpi")
+      87                      .dwattr $C$DW$4, DW_AT_external
+      88                      .dwattr $C$DW$4, DW_AT_TI_begin_file("C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c")
+      89                      .dwattr $C$DW$4, DW_AT_TI_begin_line(0x49)
+      90                      .dwattr $C$DW$4, DW_AT_TI_begin_column(0x06)
+      91                      .dwattr $C$DW$4, DW_AT_TI_max_frame_size(-4)
+      92                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 74,column 1,is_stmt,address _ConfigSpi
+      93              
+      94                      .dwfde $C$DW$CIE, _ConfigSpi
+      95              $C$DW$5 .dwtag  DW_TAG_formal_parameter
+      96                      .dwattr $C$DW$5, DW_AT_name("ClkPol")
+      97                      .dwattr $C$DW$5, DW_AT_TI_symbol_name("_ClkPol")
+      98                      .dwattr $C$DW$5, DW_AT_type(*$C$DW$T$10)
+      99                      .dwattr $C$DW$5, DW_AT_location[DW_OP_reg0]
+     100              
+     101              $C$DW$6 .dwtag  DW_TAG_formal_parameter
+     102                      .dwattr $C$DW$6, DW_AT_name("NoOfBits")
+     103                      .dwattr $C$DW$6, DW_AT_TI_symbol_name("_NoOfBits")
+     104                      .dwattr $C$DW$6, DW_AT_type(*$C$DW$T$10)
+     105                      .dwattr $C$DW$6, DW_AT_location[DW_OP_reg1]
+     106              
+     107              ;----------------------------------------------------------------------
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE    3
+
+     108              ;  73 | void ConfigSpi(int ClkPol, int NoOfBits)                               
+     109              ;----------------------------------------------------------------------
+     110              
+     111              ;***************************************************************
+     112              ;* FNAME: _ConfigSpi                    FR SIZE:   2           *
+     113              ;*                                                             *
+     114              ;* FUNCTION ENVIRONMENT                                        *
+     115              ;*                                                             *
+     116              ;* FUNCTION PROPERTIES                                         *
+     117              ;*                            0 Parameter,  2 Auto,  0 SOE     *
+     118              ;***************************************************************
+     119              
+     120 00000007       _ConfigSpi:
+     121                      .dwcfi  cfa_offset, -2
+     122                      .dwcfi  save_reg_to_mem, 26, 0
+     123 00000007 FE02          ADDB      SP,#2                 ; [CPU_ARAU] 
+     124                      .dwcfi  cfa_offset, -4
+     125              $C$DW$7 .dwtag  DW_TAG_variable
+     126                      .dwattr $C$DW$7, DW_AT_name("ClkPol")
+     127                      .dwattr $C$DW$7, DW_AT_TI_symbol_name("_ClkPol")
+     128                      .dwattr $C$DW$7, DW_AT_type(*$C$DW$T$10)
+     129                      .dwattr $C$DW$7, DW_AT_location[DW_OP_breg20 -1]
+     130              
+     131              $C$DW$8 .dwtag  DW_TAG_variable
+     132                      .dwattr $C$DW$8, DW_AT_name("NoOfBits")
+     133                      .dwattr $C$DW$8, DW_AT_TI_symbol_name("_NoOfBits")
+     134                      .dwattr $C$DW$8, DW_AT_type(*$C$DW$T$10)
+     135                      .dwattr $C$DW$8, DW_AT_location[DW_OP_breg20 -2]
+     136              
+     137 00000008 9742          MOV       *-SP[2],AH            ; [CPU_ALU] |74| 
+     138 00000009 9641          MOV       *-SP[1],AL            ; [CPU_ALU] |74| 
+     139                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 76,column 2,is_stmt,isa 0
+     140              ;----------------------------------------------------------------------
+     141              ;  76 | SpiaRegs.SPICCR.bit.SPISWRESET = 0;                                    
+     142              ;----------------------------------------------------------------------
+     143 0000000a 761F!         MOVW      DP,#_SpiaRegs         ; [CPU_ARAU] 
+         0000000b 0000 
+     144 0000000c 1800!         AND       @$BLOCKED(_SpiaRegs),#0xff7f ; [CPU_ALU] |76| 
+         0000000d FF7F 
+     145                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 78,column 2,is_stmt,isa 0
+     146              ;----------------------------------------------------------------------
+     147              ;  78 | ClkPol = ((ClkPol >= 0) && (ClkPol < 4)) ? ClkPol : 0;                 
+     148              ;----------------------------------------------------------------------
+     149 0000000e 5200          CMPB      AL,#0                 ; [CPU_ALU] |78| 
+     150 0000000f 6403          B         $C$L1,LT              ; [CPU_ALU] |78| 
+     151                      ; branchcc occurs ; [] |78| 
+     152 00000010 5204          CMPB      AL,#4                 ; [CPU_ALU] |78| 
+     153 00000011 6402          B         $C$L2,LT              ; [CPU_ALU] |78| 
+     154                      ; branchcc occurs ; [] |78| 
+     155 00000012       $C$L1:    
+     156 00000012 9A00          MOVB      AL,#0                 ; [CPU_ALU] |78| 
+     157 00000013       $C$L2:    
+     158 00000013 9641          MOV       *-SP[1],AL            ; [CPU_ALU] |78| 
+     159                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 79,column 2,is_stmt,isa 0
+     160              ;----------------------------------------------------------------------
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE    4
+
+     161              ;  79 | NoOfBits = ((NoOfBits >= 0) && (NoOfBits < 17)) ? NoOfBits : 8;        
+     162              ;----------------------------------------------------------------------
+     163 00000014 9242          MOV       AL,*-SP[2]            ; [CPU_ALU] |79| 
+     164 00000015 6403          B         $C$L3,LT              ; [CPU_ALU] |79| 
+     165                      ; branchcc occurs ; [] |79| 
+     166 00000016 5211          CMPB      AL,#17                ; [CPU_ALU] |79| 
+     167 00000017 6402          B         $C$L4,LT              ; [CPU_ALU] |79| 
+     168                      ; branchcc occurs ; [] |79| 
+     169 00000018       $C$L3:    
+     170 00000018 9A08          MOVB      AL,#8                 ; [CPU_ALU] |79| 
+     171 00000019       $C$L4:    
+     172 00000019 9642          MOV       *-SP[2],AL            ; [CPU_ALU] |79| 
+     173                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 81,column 2,is_stmt,isa 0
+     174              ;----------------------------------------------------------------------
+     175              ;  81 | switch(ClkPol) {                                                       
+     176              ;  82 |         case 0: /* Transmit on falling edge; Receive on rising edge; no
+     177              ;     |  Delay */                                                              
+     178              ;----------------------------------------------------------------------
+     179 0000001a 6F15          B         $C$L9,UNC             ; [CPU_ALU] |81| 
+     180                      ; branch occurs ; [] |81| 
+     181 0000001b       $C$L5:    
+     182                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 83,column 4,is_stmt,isa 0
+     183              ;----------------------------------------------------------------------
+     184              ;  83 | SpiaRegs.SPICCR.bit.CLKPOLARITY = 1;                                   
+     185              ;----------------------------------------------------------------------
+     186 0000001b 1A00!         OR        @$BLOCKED(_SpiaRegs),#0x0040 ; [CPU_ALU] |83| 
+         0000001c 0040 
+     187                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 84,column 4,is_stmt,isa 0
+     188              ;----------------------------------------------------------------------
+     189              ;  84 | SpiaRegs.SPICTL.bit.CLK_PHASE = 0;                                     
+     190              ;----------------------------------------------------------------------
+     191 0000001d 1801!         AND       @$BLOCKED(_SpiaRegs)+1,#0xfff7 ; [CPU_ALU] |84| 
+         0000001e FFF7 
+     192                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 85,column 4,is_stmt,isa 0
+     193              ;----------------------------------------------------------------------
+     194              ;  85 | break;                                                                 
+     195              ;  86 | case 1: /* Transmit on falling edge; Receive on rising edge; Delay */  
+     196              ;----------------------------------------------------------------------
+     197 0000001f 6F18          B         $C$L10,UNC            ; [CPU_ALU] |85| 
+     198                      ; branch occurs ; [] |85| 
+     199 00000020       $C$L6:    
+     200                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 87,column 4,is_stmt,isa 0
+     201              ;----------------------------------------------------------------------
+     202              ;  87 | SpiaRegs.SPICCR.bit.CLKPOLARITY = 1;                                   
+     203              ;----------------------------------------------------------------------
+     204 00000020 1A00!         OR        @$BLOCKED(_SpiaRegs),#0x0040 ; [CPU_ALU] |87| 
+         00000021 0040 
+     205                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 88,column 4,is_stmt,isa 0
+     206              ;----------------------------------------------------------------------
+     207              ;  88 | SpiaRegs.SPICTL.bit.CLK_PHASE = 1;                                     
+     208              ;----------------------------------------------------------------------
+     209 00000022 1A01!         OR        @$BLOCKED(_SpiaRegs)+1,#0x0008 ; [CPU_ALU] |88| 
+         00000023 0008 
+     210                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 89,column 4,is_stmt,isa 0
+     211              ;----------------------------------------------------------------------
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE    5
+
+     212              ;  89 | break;                                                                 
+     213              ;  91 | case 2: /* Transmit on rising edge; Receive on falling edge; no Delay *
+     214              ;     | /                                                                      
+     215              ;----------------------------------------------------------------------
+     216 00000024 6F13          B         $C$L10,UNC            ; [CPU_ALU] |89| 
+     217                      ; branch occurs ; [] |89| 
+     218 00000025       $C$L7:    
+     219                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 92,column 4,is_stmt,isa 0
+     220              ;----------------------------------------------------------------------
+     221              ;  92 | SpiaRegs.SPICCR.bit.CLKPOLARITY = 0;                                   
+     222              ;----------------------------------------------------------------------
+     223 00000025 1800!         AND       @$BLOCKED(_SpiaRegs),#0xffbf ; [CPU_ALU] |92| 
+         00000026 FFBF 
+     224                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 93,column 4,is_stmt,isa 0
+     225              ;----------------------------------------------------------------------
+     226              ;  93 | SpiaRegs.SPICTL.bit.CLK_PHASE = 0;                                     
+     227              ;----------------------------------------------------------------------
+     228 00000027 1801!         AND       @$BLOCKED(_SpiaRegs)+1,#0xfff7 ; [CPU_ALU] |93| 
+         00000028 FFF7 
+     229                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 94,column 4,is_stmt,isa 0
+     230              ;----------------------------------------------------------------------
+     231              ;  94 | break;                                                                 
+     232              ;  96 | case 3: /* Transmit on rising edge; Receive on falling edge; Delay */  
+     233              ;----------------------------------------------------------------------
+     234 00000029 6F0E          B         $C$L10,UNC            ; [CPU_ALU] |94| 
+     235                      ; branch occurs ; [] |94| 
+     236 0000002a       $C$L8:    
+     237                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 97,column 4,is_stmt,isa 0
+     238              ;----------------------------------------------------------------------
+     239              ;  97 | SpiaRegs.SPICCR.bit.CLKPOLARITY = 0;                                   
+     240              ;----------------------------------------------------------------------
+     241 0000002a 1800!         AND       @$BLOCKED(_SpiaRegs),#0xffbf ; [CPU_ALU] |97| 
+         0000002b FFBF 
+     242                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 98,column 4,is_stmt,isa 0
+     243              ;----------------------------------------------------------------------
+     244              ;  98 | SpiaRegs.SPICTL.bit.CLK_PHASE = 1;                                     
+     245              ;----------------------------------------------------------------------
+     246 0000002c 1A01!         OR        @$BLOCKED(_SpiaRegs)+1,#0x0008 ; [CPU_ALU] |98| 
+         0000002d 0008 
+     247                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 99,column 4,is_stmt,isa 0
+     248              ;----------------------------------------------------------------------
+     249              ;  99 | break;                                                                 
+     250              ;----------------------------------------------------------------------
+     251 0000002e 6F09          B         $C$L10,UNC            ; [CPU_ALU] |99| 
+     252                      ; branch occurs ; [] |99| 
+     253 0000002f       $C$L9:    
+     254                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 81,column 2,is_stmt,isa 0
+     255 0000002f 9241          MOV       AL,*-SP[1]            ; [CPU_ALU] |81| 
+     256 00000030 61EB          B         $C$L5,EQ              ; [CPU_ALU] |81| 
+     257                      ; branchcc occurs ; [] |81| 
+     258 00000031 5201          CMPB      AL,#1                 ; [CPU_ALU] |81| 
+     259 00000032 61EE          B         $C$L6,EQ              ; [CPU_ALU] |81| 
+     260                      ; branchcc occurs ; [] |81| 
+     261 00000033 5202          CMPB      AL,#2                 ; [CPU_ALU] |81| 
+     262 00000034 61F1          B         $C$L7,EQ              ; [CPU_ALU] |81| 
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE    6
+
+     263                      ; branchcc occurs ; [] |81| 
+     264 00000035 5203          CMPB      AL,#3                 ; [CPU_ALU] |81| 
+     265 00000036 61F4          B         $C$L8,EQ              ; [CPU_ALU] |81| 
+     266                      ; branchcc occurs ; [] |81| 
+     267 00000037       $C$L10:    
+     268                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 102,column 2,is_stmt,isa 0
+     269              ;----------------------------------------------------------------------
+     270              ; 102 | SpiaRegs.SPICCR.bit.SPICHAR = ((NoOfBits - 1) & 0xf);                  
+     271              ;----------------------------------------------------------------------
+     272 00000037 9242          MOV       AL,*-SP[2]            ; [CPU_ALU] |102| 
+     273 00000038 CD00!         AND       AH,@$BLOCKED(_SpiaRegs),#0xfff0 ; [CPU_ALU] |102| 
+         00000039 FFF0 
+     274 0000003a 9CFF          ADDB      AL,#-1                ; [CPU_ALU] |102| 
+     275 0000003b 900F          ANDB      AL,#0x0f              ; [CPU_ALU] |102| 
+     276 0000003c 900F          ANDB      AL,#0x0f              ; [CPU_ALU] |102| 
+     277 0000003d CAA8          OR        AL,AH                 ; [CPU_ALU] |102| 
+     278 0000003e 9600!         MOV       @$BLOCKED(_SpiaRegs),AL ; [CPU_ALU] |102| 
+     279                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 103,column 2,is_stmt,isa 0
+     280              ;----------------------------------------------------------------------
+     281              ; 103 | SpiaRegs.SPIFFTX.bit.SPIFFENA = 0;              /* Disable SPI FIFO Enh
+     282              ;     | ancements */                                                           
+     283              ;----------------------------------------------------------------------
+     284 0000003f 180A!         AND       @$BLOCKED(_SpiaRegs)+10,#0xbfff ; [CPU_ALU] |103| 
+         00000040 BFFF 
+     285                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 105,column 2,is_stmt,isa 0
+     286              ;----------------------------------------------------------------------
+     287              ; 105 | SpiaRegs.SPICTL.bit.MASTER_SLAVE = 1;           /* Master Mode */      
+     288              ;----------------------------------------------------------------------
+     289 00000041 1A01!         OR        @$BLOCKED(_SpiaRegs)+1,#0x0004 ; [CPU_ALU] |105| 
+         00000042 0004 
+     290                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 106,column 2,is_stmt,isa 0
+     291              ;----------------------------------------------------------------------
+     292              ; 106 | SpiaRegs.SPICTL.bit.TALK = 1;                                          
+     293              ;----------------------------------------------------------------------
+     294 00000043 1A01!         OR        @$BLOCKED(_SpiaRegs)+1,#0x0002 ; [CPU_ALU] |106| 
+         00000044 0002 
+     295                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 107,column 2,is_stmt,isa 0
+     296              ;----------------------------------------------------------------------
+     297              ; 107 | SpiaRegs.SPICCR.bit.SPISWRESET = 1;                     /* SPI Ready to
+     298              ;     |  Transmit and Receive */                                               
+     299              ;----------------------------------------------------------------------
+     300 00000045 1A00!         OR        @$BLOCKED(_SpiaRegs),#0x0080 ; [CPU_ALU] |107| 
+         00000046 0080 
+     301                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 109,column 1,is_stmt,isa 0
+     302 00000047 FE82          SUBB      SP,#2                 ; [CPU_ARAU] 
+     303                      .dwcfi  cfa_offset, -2
+     304              $C$DW$9 .dwtag  DW_TAG_TI_branch
+     305                      .dwattr $C$DW$9, DW_AT_low_pc(0x00)
+     306                      .dwattr $C$DW$9, DW_AT_TI_return
+     307              
+     308 00000048 0006          LRETR     ; [CPU_ALU] 
+     309                      ; return occurs ; [] 
+     310                      .dwattr $C$DW$4, DW_AT_TI_end_file("C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c")
+     311                      .dwattr $C$DW$4, DW_AT_TI_end_line(0x6d)
+     312                      .dwattr $C$DW$4, DW_AT_TI_end_column(0x01)
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE    7
+
+     313                      .dwendentry
+     314                      .dwendtag $C$DW$4
+     315              
+     316 00000049               .sect   ".text"
+     317                      .clink
+     318                      .global _TxSpi
+     319              
+     320              $C$DW$10        .dwtag  DW_TAG_subprogram
+     321                      .dwattr $C$DW$10, DW_AT_name("TxSpi")
+     322                      .dwattr $C$DW$10, DW_AT_low_pc(_TxSpi)
+     323                      .dwattr $C$DW$10, DW_AT_high_pc(0x00)
+     324                      .dwattr $C$DW$10, DW_AT_TI_symbol_name("_TxSpi")
+     325                      .dwattr $C$DW$10, DW_AT_external
+     326                      .dwattr $C$DW$10, DW_AT_TI_begin_file("C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c")
+     327                      .dwattr $C$DW$10, DW_AT_TI_begin_line(0x7e)
+     328                      .dwattr $C$DW$10, DW_AT_TI_begin_column(0x06)
+     329                      .dwattr $C$DW$10, DW_AT_TI_max_frame_size(-4)
+     330                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 127,column 1,is_stmt,address _TxSpi,is
+     331              
+     332                      .dwfde $C$DW$CIE, _TxSpi
+     333              $C$DW$11        .dwtag  DW_TAG_formal_parameter
+     334                      .dwattr $C$DW$11, DW_AT_name("Data")
+     335                      .dwattr $C$DW$11, DW_AT_TI_symbol_name("_Data")
+     336                      .dwattr $C$DW$11, DW_AT_type(*$C$DW$T$19)
+     337                      .dwattr $C$DW$11, DW_AT_location[DW_OP_reg0]
+     338              
+     339              ;----------------------------------------------------------------------
+     340              ; 126 | void TxSpi(Uint16 Data)                                                
+     341              ;----------------------------------------------------------------------
+     342              
+     343              ;***************************************************************
+     344              ;* FNAME: _TxSpi                        FR SIZE:   2           *
+     345              ;*                                                             *
+     346              ;* FUNCTION ENVIRONMENT                                        *
+     347              ;*                                                             *
+     348              ;* FUNCTION PROPERTIES                                         *
+     349              ;*                            0 Parameter,  1 Auto,  0 SOE     *
+     350              ;***************************************************************
+     351              
+     352 00000049       _TxSpi:
+     353                      .dwcfi  cfa_offset, -2
+     354                      .dwcfi  save_reg_to_mem, 26, 0
+     355 00000049 FE02          ADDB      SP,#2                 ; [CPU_ARAU] 
+     356                      .dwcfi  cfa_offset, -4
+     357              $C$DW$12        .dwtag  DW_TAG_variable
+     358                      .dwattr $C$DW$12, DW_AT_name("Data")
+     359                      .dwattr $C$DW$12, DW_AT_TI_symbol_name("_Data")
+     360                      .dwattr $C$DW$12, DW_AT_type(*$C$DW$T$19)
+     361                      .dwattr $C$DW$12, DW_AT_location[DW_OP_breg20 -1]
+     362              
+     363 0000004a 9641          MOV       *-SP[1],AL            ; [CPU_ALU] |127| 
+     364                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 128,column 2,is_stmt,isa 0
+     365              ;----------------------------------------------------------------------
+     366              ; 128 | SpiaRegs.SPITXBUF = Data;                                              
+     367              ;----------------------------------------------------------------------
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE    8
+
+     368 0000004b 761F!         MOVW      DP,#_SpiaRegs+8       ; [CPU_ARAU] 
+         0000004c 0000 
+     369 0000004d 9608!         MOV       @$BLOCKED(_SpiaRegs)+8,AL ; [CPU_ALU] |128| 
+     370                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 130,column 1,is_stmt,isa 0
+     371 0000004e FE82          SUBB      SP,#2                 ; [CPU_ARAU] 
+     372                      .dwcfi  cfa_offset, -2
+     373              $C$DW$13        .dwtag  DW_TAG_TI_branch
+     374                      .dwattr $C$DW$13, DW_AT_low_pc(0x00)
+     375                      .dwattr $C$DW$13, DW_AT_TI_return
+     376              
+     377 0000004f 0006          LRETR     ; [CPU_ALU] 
+     378                      ; return occurs ; [] 
+     379                      .dwattr $C$DW$10, DW_AT_TI_end_file("C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c")
+     380                      .dwattr $C$DW$10, DW_AT_TI_end_line(0x82)
+     381                      .dwattr $C$DW$10, DW_AT_TI_end_column(0x01)
+     382                      .dwendentry
+     383                      .dwendtag $C$DW$10
+     384              
+     385 00000050               .sect   ".text"
+     386                      .clink
+     387                      .global _RxSpi
+     388              
+     389              $C$DW$14        .dwtag  DW_TAG_subprogram
+     390                      .dwattr $C$DW$14, DW_AT_name("RxSpi")
+     391                      .dwattr $C$DW$14, DW_AT_low_pc(_RxSpi)
+     392                      .dwattr $C$DW$14, DW_AT_high_pc(0x00)
+     393                      .dwattr $C$DW$14, DW_AT_TI_symbol_name("_RxSpi")
+     394                      .dwattr $C$DW$14, DW_AT_external
+     395                      .dwattr $C$DW$14, DW_AT_type(*$C$DW$T$19)
+     396                      .dwattr $C$DW$14, DW_AT_TI_begin_file("C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c")
+     397                      .dwattr $C$DW$14, DW_AT_TI_begin_line(0x93)
+     398                      .dwattr $C$DW$14, DW_AT_TI_begin_column(0x08)
+     399                      .dwattr $C$DW$14, DW_AT_TI_max_frame_size(-2)
+     400                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 148,column 1,is_stmt,address _RxSpi,is
+     401              
+     402                      .dwfde $C$DW$CIE, _RxSpi
+     403              ;----------------------------------------------------------------------
+     404              ; 147 | Uint16 RxSpi(void)                                                     
+     405              ;----------------------------------------------------------------------
+     406              
+     407              ;***************************************************************
+     408              ;* FNAME: _RxSpi                        FR SIZE:   0           *
+     409              ;*                                                             *
+     410              ;* FUNCTION ENVIRONMENT                                        *
+     411              ;*                                                             *
+     412              ;* FUNCTION PROPERTIES                                         *
+     413              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     414              ;***************************************************************
+     415              
+     416 00000050       _RxSpi:
+     417                      .dwcfi  cfa_offset, -2
+     418                      .dwcfi  save_reg_to_mem, 26, 0
+     419                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 149,column 2,is_stmt,isa 0
+     420              ;----------------------------------------------------------------------
+     421              ; 149 | return SpiaRegs.SPIRXBUF;                                              
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE    9
+
+     422              ;----------------------------------------------------------------------
+     423 00000050 761F!         MOVW      DP,#_SpiaRegs+7       ; [CPU_ARAU] 
+         00000051 0000 
+     424 00000052 9207!         MOV       AL,@$BLOCKED(_SpiaRegs)+7 ; [CPU_ALU] |149| 
+     425                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 151,column 1,is_stmt,isa 0
+     426              $C$DW$15        .dwtag  DW_TAG_TI_branch
+     427                      .dwattr $C$DW$15, DW_AT_low_pc(0x00)
+     428                      .dwattr $C$DW$15, DW_AT_TI_return
+     429              
+     430 00000053 0006          LRETR     ; [CPU_ALU] 
+     431                      ; return occurs ; [] 
+     432                      .dwattr $C$DW$14, DW_AT_TI_end_file("C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c")
+     433                      .dwattr $C$DW$14, DW_AT_TI_end_line(0x97)
+     434                      .dwattr $C$DW$14, DW_AT_TI_end_column(0x01)
+     435                      .dwendentry
+     436                      .dwendtag $C$DW$14
+     437              
+     438 00000054               .sect   ".text"
+     439                      .clink
+     440                      .global _FormatSpiTxWord
+     441              
+     442              $C$DW$16        .dwtag  DW_TAG_subprogram
+     443                      .dwattr $C$DW$16, DW_AT_name("FormatSpiTxWord")
+     444                      .dwattr $C$DW$16, DW_AT_low_pc(_FormatSpiTxWord)
+     445                      .dwattr $C$DW$16, DW_AT_high_pc(0x00)
+     446                      .dwattr $C$DW$16, DW_AT_TI_symbol_name("_FormatSpiTxWord")
+     447                      .dwattr $C$DW$16, DW_AT_external
+     448                      .dwattr $C$DW$16, DW_AT_type(*$C$DW$T$19)
+     449                      .dwattr $C$DW$16, DW_AT_TI_begin_file("C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c")
+     450                      .dwattr $C$DW$16, DW_AT_TI_begin_line(0xaa)
+     451                      .dwattr $C$DW$16, DW_AT_TI_begin_column(0x08)
+     452                      .dwattr $C$DW$16, DW_AT_TI_max_frame_size(-4)
+     453                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 171,column 1,is_stmt,address _FormatSp
+     454              
+     455                      .dwfde $C$DW$CIE, _FormatSpiTxWord
+     456              $C$DW$17        .dwtag  DW_TAG_formal_parameter
+     457                      .dwattr $C$DW$17, DW_AT_name("Data")
+     458                      .dwattr $C$DW$17, DW_AT_TI_symbol_name("_Data")
+     459                      .dwattr $C$DW$17, DW_AT_type(*$C$DW$T$19)
+     460                      .dwattr $C$DW$17, DW_AT_location[DW_OP_reg0]
+     461              
+     462              $C$DW$18        .dwtag  DW_TAG_formal_parameter
+     463                      .dwattr $C$DW$18, DW_AT_name("Length")
+     464                      .dwattr $C$DW$18, DW_AT_TI_symbol_name("_Length")
+     465                      .dwattr $C$DW$18, DW_AT_type(*$C$DW$T$19)
+     466                      .dwattr $C$DW$18, DW_AT_location[DW_OP_reg1]
+     467              
+     468              ;----------------------------------------------------------------------
+     469              ; 170 | Uint16 FormatSpiTxWord(Uint16 Data, Uint16 Length)                     
+     470              ;----------------------------------------------------------------------
+     471              
+     472              ;***************************************************************
+     473              ;* FNAME: _FormatSpiTxWord              FR SIZE:   2           *
+     474              ;*                                                             *
+     475              ;* FUNCTION ENVIRONMENT                                        *
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE   10
+
+     476              ;*                                                             *
+     477              ;* FUNCTION PROPERTIES                                         *
+     478              ;*                            0 Parameter,  2 Auto,  0 SOE     *
+     479              ;***************************************************************
+     480              
+     481 00000054       _FormatSpiTxWord:
+     482                      .dwcfi  cfa_offset, -2
+     483                      .dwcfi  save_reg_to_mem, 26, 0
+     484 00000054 FE02          ADDB      SP,#2                 ; [CPU_ARAU] 
+     485                      .dwcfi  cfa_offset, -4
+     486              $C$DW$19        .dwtag  DW_TAG_variable
+     487                      .dwattr $C$DW$19, DW_AT_name("Data")
+     488                      .dwattr $C$DW$19, DW_AT_TI_symbol_name("_Data")
+     489                      .dwattr $C$DW$19, DW_AT_type(*$C$DW$T$19)
+     490                      .dwattr $C$DW$19, DW_AT_location[DW_OP_breg20 -1]
+     491              
+     492              $C$DW$20        .dwtag  DW_TAG_variable
+     493                      .dwattr $C$DW$20, DW_AT_name("Length")
+     494                      .dwattr $C$DW$20, DW_AT_TI_symbol_name("_Length")
+     495                      .dwattr $C$DW$20, DW_AT_type(*$C$DW$T$19)
+     496                      .dwattr $C$DW$20, DW_AT_location[DW_OP_breg20 -2]
+     497              
+     498 00000055 9742          MOV       *-SP[2],AH            ; [CPU_ALU] |171| 
+     499 00000056 9641          MOV       *-SP[1],AL            ; [CPU_ALU] |171| 
+     500                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 172,column 2,is_stmt,isa 0
+     501              ;----------------------------------------------------------------------
+     502              ; 172 | Length = ((Length > 0) && (Length < 17)) ? Length : 8;                 
+     503              ;----------------------------------------------------------------------
+     504 00000057 9242          MOV       AL,*-SP[2]            ; [CPU_ALU] |172| 
+     505 00000058 6103          B         $C$L11,EQ             ; [CPU_ALU] |172| 
+     506                      ; branchcc occurs ; [] |172| 
+     507 00000059 5211          CMPB      AL,#17                ; [CPU_ALU] |172| 
+     508 0000005a 6802          B         $C$L12,LO             ; [CPU_ALU] |172| 
+     509                      ; branchcc occurs ; [] |172| 
+     510 0000005b       $C$L11:    
+     511 0000005b 9A08          MOVB      AL,#8                 ; [CPU_ALU] |172| 
+     512 0000005c       $C$L12:    
+     513 0000005c 9642          MOV       *-SP[2],AL            ; [CPU_ALU] |172| 
+     514                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 174,column 2,is_stmt,isa 0
+     515              ;----------------------------------------------------------------------
+     516              ; 174 | return (Data << (16 - Length));                                        
+     517              ;----------------------------------------------------------------------
+     518 0000005d 28AC          MOV       T,#16                 ; [CPU_ALU] |174| 
+         0000005e 0010 
+     519 0000005f 92AC          MOV       AL,T                  ; [CPU_ALU] |174| 
+     520 00000060 9E42          SUB       AL,*-SP[2]            ; [CPU_ALU] |174| 
+     521 00000061 2DA9          MOV       T,AL                  ; [CPU_ALU] |174| 
+     522 00000062 9241          MOV       AL,*-SP[1]            ; [CPU_ALU] |174| 
+     523 00000063 FF66          LSL       AL,T                  ; [CPU_ALU] |174| 
+     524                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 176,column 1,is_stmt,isa 0
+     525 00000064 FE82          SUBB      SP,#2                 ; [CPU_ARAU] 
+     526                      .dwcfi  cfa_offset, -2
+     527              $C$DW$21        .dwtag  DW_TAG_TI_branch
+     528                      .dwattr $C$DW$21, DW_AT_low_pc(0x00)
+     529                      .dwattr $C$DW$21, DW_AT_TI_return
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE   11
+
+     530              
+     531 00000065 0006          LRETR     ; [CPU_ALU] 
+     532                      ; return occurs ; [] 
+     533                      .dwattr $C$DW$16, DW_AT_TI_end_file("C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c")
+     534                      .dwattr $C$DW$16, DW_AT_TI_end_line(0xb0)
+     535                      .dwattr $C$DW$16, DW_AT_TI_end_column(0x01)
+     536                      .dwendentry
+     537                      .dwendtag $C$DW$16
+     538              
+     539 00000066               .sect   ".text"
+     540                      .clink
+     541                      .global _SpiRxNotReady
+     542              
+     543              $C$DW$22        .dwtag  DW_TAG_subprogram
+     544                      .dwattr $C$DW$22, DW_AT_name("SpiRxNotReady")
+     545                      .dwattr $C$DW$22, DW_AT_low_pc(_SpiRxNotReady)
+     546                      .dwattr $C$DW$22, DW_AT_high_pc(0x00)
+     547                      .dwattr $C$DW$22, DW_AT_TI_symbol_name("_SpiRxNotReady")
+     548                      .dwattr $C$DW$22, DW_AT_external
+     549                      .dwattr $C$DW$22, DW_AT_type(*$C$DW$T$19)
+     550                      .dwattr $C$DW$22, DW_AT_TI_begin_file("C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c")
+     551                      .dwattr $C$DW$22, DW_AT_TI_begin_line(0xc2)
+     552                      .dwattr $C$DW$22, DW_AT_TI_begin_column(0x08)
+     553                      .dwattr $C$DW$22, DW_AT_TI_max_frame_size(-2)
+     554                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 195,column 1,is_stmt,address _SpiRxNot
+     555              
+     556                      .dwfde $C$DW$CIE, _SpiRxNotReady
+     557              ;----------------------------------------------------------------------
+     558              ; 194 | Uint16 SpiRxNotReady(void)                                             
+     559              ;----------------------------------------------------------------------
+     560              
+     561              ;***************************************************************
+     562              ;* FNAME: _SpiRxNotReady                FR SIZE:   0           *
+     563              ;*                                                             *
+     564              ;* FUNCTION ENVIRONMENT                                        *
+     565              ;*                                                             *
+     566              ;* FUNCTION PROPERTIES                                         *
+     567              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     568              ;***************************************************************
+     569              
+     570 00000066       _SpiRxNotReady:
+     571                      .dwcfi  cfa_offset, -2
+     572                      .dwcfi  save_reg_to_mem, 26, 0
+     573                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 196,column 2,is_stmt,isa 0
+     574              ;----------------------------------------------------------------------
+     575              ; 196 | if(SpiaRegs.SPISTS.bit.INT_FLAG)                                       
+     576              ;----------------------------------------------------------------------
+     577 00000066 761F!         MOVW      DP,#_SpiaRegs+2       ; [CPU_ARAU] 
+         00000067 0000 
+     578 00000068 4602!         TBIT      @$BLOCKED(_SpiaRegs)+2,#6 ; [CPU_ALU] |196| 
+     579 00000069 6C03          B         $C$L13,NTC            ; [CPU_ALU] |196| 
+     580                      ; branchcc occurs ; [] |196| 
+     581                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 197,column 3,is_stmt,isa 0
+     582              ;----------------------------------------------------------------------
+     583              ; 197 | return 0;                                                              
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE   12
+
+     584              ; 198 | else                                                                   
+     585              ;----------------------------------------------------------------------
+     586 0000006a 9A00          MOVB      AL,#0                 ; [CPU_ALU] |197| 
+     587 0000006b 6F02          B         $C$L14,UNC            ; [CPU_ALU] |197| 
+     588                      ; branch occurs ; [] |197| 
+     589 0000006c       $C$L13:    
+     590                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 199,column 3,is_stmt,isa 0
+     591              ;----------------------------------------------------------------------
+     592              ; 199 | return 1;                                                              
+     593              ;----------------------------------------------------------------------
+     594 0000006c 9A01          MOVB      AL,#1                 ; [CPU_ALU] |199| 
+     595 0000006d       $C$L14:    
+     596                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 201,column 1,is_stmt,isa 0
+     597              $C$DW$23        .dwtag  DW_TAG_TI_branch
+     598                      .dwattr $C$DW$23, DW_AT_low_pc(0x00)
+     599                      .dwattr $C$DW$23, DW_AT_TI_return
+     600              
+     601 0000006d 0006          LRETR     ; [CPU_ALU] 
+     602                      ; return occurs ; [] 
+     603                      .dwattr $C$DW$22, DW_AT_TI_end_file("C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c")
+     604                      .dwattr $C$DW$22, DW_AT_TI_end_line(0xc9)
+     605                      .dwattr $C$DW$22, DW_AT_TI_end_column(0x01)
+     606                      .dwendentry
+     607                      .dwendtag $C$DW$22
+     608              
+     609 0000006e               .sect   ".text"
+     610                      .clink
+     611                      .global _SpiTxNotReady
+     612              
+     613              $C$DW$24        .dwtag  DW_TAG_subprogram
+     614                      .dwattr $C$DW$24, DW_AT_name("SpiTxNotReady")
+     615                      .dwattr $C$DW$24, DW_AT_low_pc(_SpiTxNotReady)
+     616                      .dwattr $C$DW$24, DW_AT_high_pc(0x00)
+     617                      .dwattr $C$DW$24, DW_AT_TI_symbol_name("_SpiTxNotReady")
+     618                      .dwattr $C$DW$24, DW_AT_external
+     619                      .dwattr $C$DW$24, DW_AT_type(*$C$DW$T$19)
+     620                      .dwattr $C$DW$24, DW_AT_TI_begin_file("C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c")
+     621                      .dwattr $C$DW$24, DW_AT_TI_begin_line(0xdc)
+     622                      .dwattr $C$DW$24, DW_AT_TI_begin_column(0x08)
+     623                      .dwattr $C$DW$24, DW_AT_TI_max_frame_size(-2)
+     624                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 221,column 1,is_stmt,address _SpiTxNot
+     625              
+     626                      .dwfde $C$DW$CIE, _SpiTxNotReady
+     627              ;----------------------------------------------------------------------
+     628              ; 220 | Uint16 SpiTxNotReady(void)                                             
+     629              ;----------------------------------------------------------------------
+     630              
+     631              ;***************************************************************
+     632              ;* FNAME: _SpiTxNotReady                FR SIZE:   0           *
+     633              ;*                                                             *
+     634              ;* FUNCTION ENVIRONMENT                                        *
+     635              ;*                                                             *
+     636              ;* FUNCTION PROPERTIES                                         *
+     637              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     638              ;***************************************************************
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE   13
+
+     639              
+     640 0000006e       _SpiTxNotReady:
+     641                      .dwcfi  cfa_offset, -2
+     642                      .dwcfi  save_reg_to_mem, 26, 0
+     643                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 222,column 2,is_stmt,isa 0
+     644              ;----------------------------------------------------------------------
+     645              ; 222 | if(SpiaRegs.SPISTS.bit.BUFFULL_FLAG)                                   
+     646              ;----------------------------------------------------------------------
+     647 0000006e 761F!         MOVW      DP,#_SpiaRegs+2       ; [CPU_ARAU] 
+         0000006f 0000 
+     648 00000070 4502!         TBIT      @$BLOCKED(_SpiaRegs)+2,#5 ; [CPU_ALU] |222| 
+     649 00000071 6C03          B         $C$L15,NTC            ; [CPU_ALU] |222| 
+     650                      ; branchcc occurs ; [] |222| 
+     651                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 223,column 3,is_stmt,isa 0
+     652              ;----------------------------------------------------------------------
+     653              ; 223 | return 1;                                                              
+     654              ; 224 | else                                                                   
+     655              ;----------------------------------------------------------------------
+     656 00000072 9A01          MOVB      AL,#1                 ; [CPU_ALU] |223| 
+     657 00000073 6F02          B         $C$L16,UNC            ; [CPU_ALU] |223| 
+     658                      ; branch occurs ; [] |223| 
+     659 00000074       $C$L15:    
+     660                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 225,column 3,is_stmt,isa 0
+     661              ;----------------------------------------------------------------------
+     662              ; 225 | return 0;                                                              
+     663              ;----------------------------------------------------------------------
+     664 00000074 9A00          MOVB      AL,#0                 ; [CPU_ALU] |225| 
+     665 00000075       $C$L16:    
+     666                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c",line 227,column 1,is_stmt,isa 0
+     667              $C$DW$25        .dwtag  DW_TAG_TI_branch
+     668                      .dwattr $C$DW$25, DW_AT_low_pc(0x00)
+     669                      .dwattr $C$DW$25, DW_AT_TI_return
+     670              
+     671 00000075 0006          LRETR     ; [CPU_ALU] 
+     672                      ; return occurs ; [] 
+     673                      .dwattr $C$DW$24, DW_AT_TI_end_file("C:/repo/jabil2025/gpb/gpb_project_v3/Spi.c")
+     674                      .dwattr $C$DW$24, DW_AT_TI_end_line(0xe3)
+     675                      .dwattr $C$DW$24, DW_AT_TI_end_column(0x01)
+     676                      .dwendentry
+     677                      .dwendtag $C$DW$24
+     678              
+     679              ;**************************************************************
+     680              ;* UNDEFINED EXTERNAL REFERENCES                              *
+     681              ;**************************************************************
+     682                      .global _SpiaRegs
+     683              
+     684              ;***************************************************************
+     685              ;* TYPE INFORMATION                                            *
+     686              ;***************************************************************
+     687              
+     688              $C$DW$T$20      .dwtag  DW_TAG_structure_type
+     689                      .dwattr $C$DW$T$20, DW_AT_name("SPICCR_BITS")
+     690                      .dwattr $C$DW$T$20, DW_AT_byte_size(0x01)
+     691              $C$DW$26        .dwtag  DW_TAG_member
+     692                      .dwattr $C$DW$26, DW_AT_type(*$C$DW$T$19)
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE   14
+
+     693                      .dwattr $C$DW$26, DW_AT_name("SPICHAR")
+     694                      .dwattr $C$DW$26, DW_AT_TI_symbol_name("_SPICHAR")
+     695                      .dwattr $C$DW$26, DW_AT_bit_offset(0x0c)
+     696                      .dwattr $C$DW$26, DW_AT_bit_size(0x04)
+     697                      .dwattr $C$DW$26, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     698                      .dwattr $C$DW$26, DW_AT_accessibility(DW_ACCESS_public)
+     699              
+     700              $C$DW$27        .dwtag  DW_TAG_member
+     701                      .dwattr $C$DW$27, DW_AT_type(*$C$DW$T$19)
+     702                      .dwattr $C$DW$27, DW_AT_name("SPILBK")
+     703                      .dwattr $C$DW$27, DW_AT_TI_symbol_name("_SPILBK")
+     704                      .dwattr $C$DW$27, DW_AT_bit_offset(0x0b)
+     705                      .dwattr $C$DW$27, DW_AT_bit_size(0x01)
+     706                      .dwattr $C$DW$27, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     707                      .dwattr $C$DW$27, DW_AT_accessibility(DW_ACCESS_public)
+     708              
+     709              $C$DW$28        .dwtag  DW_TAG_member
+     710                      .dwattr $C$DW$28, DW_AT_type(*$C$DW$T$19)
+     711                      .dwattr $C$DW$28, DW_AT_name("rsvd1")
+     712                      .dwattr $C$DW$28, DW_AT_TI_symbol_name("_rsvd1")
+     713                      .dwattr $C$DW$28, DW_AT_bit_offset(0x0a)
+     714                      .dwattr $C$DW$28, DW_AT_bit_size(0x01)
+     715                      .dwattr $C$DW$28, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     716                      .dwattr $C$DW$28, DW_AT_accessibility(DW_ACCESS_public)
+     717              
+     718              $C$DW$29        .dwtag  DW_TAG_member
+     719                      .dwattr $C$DW$29, DW_AT_type(*$C$DW$T$19)
+     720                      .dwattr $C$DW$29, DW_AT_name("CLKPOLARITY")
+     721                      .dwattr $C$DW$29, DW_AT_TI_symbol_name("_CLKPOLARITY")
+     722                      .dwattr $C$DW$29, DW_AT_bit_offset(0x09)
+     723                      .dwattr $C$DW$29, DW_AT_bit_size(0x01)
+     724                      .dwattr $C$DW$29, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     725                      .dwattr $C$DW$29, DW_AT_accessibility(DW_ACCESS_public)
+     726              
+     727              $C$DW$30        .dwtag  DW_TAG_member
+     728                      .dwattr $C$DW$30, DW_AT_type(*$C$DW$T$19)
+     729                      .dwattr $C$DW$30, DW_AT_name("SPISWRESET")
+     730                      .dwattr $C$DW$30, DW_AT_TI_symbol_name("_SPISWRESET")
+     731                      .dwattr $C$DW$30, DW_AT_bit_offset(0x08)
+     732                      .dwattr $C$DW$30, DW_AT_bit_size(0x01)
+     733                      .dwattr $C$DW$30, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     734                      .dwattr $C$DW$30, DW_AT_accessibility(DW_ACCESS_public)
+     735              
+     736              $C$DW$31        .dwtag  DW_TAG_member
+     737                      .dwattr $C$DW$31, DW_AT_type(*$C$DW$T$19)
+     738                      .dwattr $C$DW$31, DW_AT_name("rsvd2")
+     739                      .dwattr $C$DW$31, DW_AT_TI_symbol_name("_rsvd2")
+     740                      .dwattr $C$DW$31, DW_AT_bit_offset(0x00)
+     741                      .dwattr $C$DW$31, DW_AT_bit_size(0x08)
+     742                      .dwattr $C$DW$31, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     743                      .dwattr $C$DW$31, DW_AT_accessibility(DW_ACCESS_public)
+     744              
+     745                      .dwendtag $C$DW$T$20
+     746              
+     747              
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE   15
+
+     748              $C$DW$T$21      .dwtag  DW_TAG_union_type
+     749                      .dwattr $C$DW$T$21, DW_AT_name("SPICCR_REG")
+     750                      .dwattr $C$DW$T$21, DW_AT_byte_size(0x01)
+     751              $C$DW$32        .dwtag  DW_TAG_member
+     752                      .dwattr $C$DW$32, DW_AT_type(*$C$DW$T$19)
+     753                      .dwattr $C$DW$32, DW_AT_name("all")
+     754                      .dwattr $C$DW$32, DW_AT_TI_symbol_name("_all")
+     755                      .dwattr $C$DW$32, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     756                      .dwattr $C$DW$32, DW_AT_accessibility(DW_ACCESS_public)
+     757              
+     758              $C$DW$33        .dwtag  DW_TAG_member
+     759                      .dwattr $C$DW$33, DW_AT_type(*$C$DW$T$20)
+     760                      .dwattr $C$DW$33, DW_AT_name("bit")
+     761                      .dwattr $C$DW$33, DW_AT_TI_symbol_name("_bit")
+     762                      .dwattr $C$DW$33, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     763                      .dwattr $C$DW$33, DW_AT_accessibility(DW_ACCESS_public)
+     764              
+     765                      .dwendtag $C$DW$T$21
+     766              
+     767              
+     768              $C$DW$T$22      .dwtag  DW_TAG_structure_type
+     769                      .dwattr $C$DW$T$22, DW_AT_name("SPICTL_BITS")
+     770                      .dwattr $C$DW$T$22, DW_AT_byte_size(0x01)
+     771              $C$DW$34        .dwtag  DW_TAG_member
+     772                      .dwattr $C$DW$34, DW_AT_type(*$C$DW$T$19)
+     773                      .dwattr $C$DW$34, DW_AT_name("SPIINTENA")
+     774                      .dwattr $C$DW$34, DW_AT_TI_symbol_name("_SPIINTENA")
+     775                      .dwattr $C$DW$34, DW_AT_bit_offset(0x0f)
+     776                      .dwattr $C$DW$34, DW_AT_bit_size(0x01)
+     777                      .dwattr $C$DW$34, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     778                      .dwattr $C$DW$34, DW_AT_accessibility(DW_ACCESS_public)
+     779              
+     780              $C$DW$35        .dwtag  DW_TAG_member
+     781                      .dwattr $C$DW$35, DW_AT_type(*$C$DW$T$19)
+     782                      .dwattr $C$DW$35, DW_AT_name("TALK")
+     783                      .dwattr $C$DW$35, DW_AT_TI_symbol_name("_TALK")
+     784                      .dwattr $C$DW$35, DW_AT_bit_offset(0x0e)
+     785                      .dwattr $C$DW$35, DW_AT_bit_size(0x01)
+     786                      .dwattr $C$DW$35, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     787                      .dwattr $C$DW$35, DW_AT_accessibility(DW_ACCESS_public)
+     788              
+     789              $C$DW$36        .dwtag  DW_TAG_member
+     790                      .dwattr $C$DW$36, DW_AT_type(*$C$DW$T$19)
+     791                      .dwattr $C$DW$36, DW_AT_name("MASTER_SLAVE")
+     792                      .dwattr $C$DW$36, DW_AT_TI_symbol_name("_MASTER_SLAVE")
+     793                      .dwattr $C$DW$36, DW_AT_bit_offset(0x0d)
+     794                      .dwattr $C$DW$36, DW_AT_bit_size(0x01)
+     795                      .dwattr $C$DW$36, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     796                      .dwattr $C$DW$36, DW_AT_accessibility(DW_ACCESS_public)
+     797              
+     798              $C$DW$37        .dwtag  DW_TAG_member
+     799                      .dwattr $C$DW$37, DW_AT_type(*$C$DW$T$19)
+     800                      .dwattr $C$DW$37, DW_AT_name("CLK_PHASE")
+     801                      .dwattr $C$DW$37, DW_AT_TI_symbol_name("_CLK_PHASE")
+     802                      .dwattr $C$DW$37, DW_AT_bit_offset(0x0c)
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE   16
+
+     803                      .dwattr $C$DW$37, DW_AT_bit_size(0x01)
+     804                      .dwattr $C$DW$37, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     805                      .dwattr $C$DW$37, DW_AT_accessibility(DW_ACCESS_public)
+     806              
+     807              $C$DW$38        .dwtag  DW_TAG_member
+     808                      .dwattr $C$DW$38, DW_AT_type(*$C$DW$T$19)
+     809                      .dwattr $C$DW$38, DW_AT_name("OVERRUNINTENA")
+     810                      .dwattr $C$DW$38, DW_AT_TI_symbol_name("_OVERRUNINTENA")
+     811                      .dwattr $C$DW$38, DW_AT_bit_offset(0x0b)
+     812                      .dwattr $C$DW$38, DW_AT_bit_size(0x01)
+     813                      .dwattr $C$DW$38, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     814                      .dwattr $C$DW$38, DW_AT_accessibility(DW_ACCESS_public)
+     815              
+     816              $C$DW$39        .dwtag  DW_TAG_member
+     817                      .dwattr $C$DW$39, DW_AT_type(*$C$DW$T$19)
+     818                      .dwattr $C$DW$39, DW_AT_name("rsvd")
+     819                      .dwattr $C$DW$39, DW_AT_TI_symbol_name("_rsvd")
+     820                      .dwattr $C$DW$39, DW_AT_bit_offset(0x00)
+     821                      .dwattr $C$DW$39, DW_AT_bit_size(0x0b)
+     822                      .dwattr $C$DW$39, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     823                      .dwattr $C$DW$39, DW_AT_accessibility(DW_ACCESS_public)
+     824              
+     825                      .dwendtag $C$DW$T$22
+     826              
+     827              
+     828              $C$DW$T$23      .dwtag  DW_TAG_union_type
+     829                      .dwattr $C$DW$T$23, DW_AT_name("SPICTL_REG")
+     830                      .dwattr $C$DW$T$23, DW_AT_byte_size(0x01)
+     831              $C$DW$40        .dwtag  DW_TAG_member
+     832                      .dwattr $C$DW$40, DW_AT_type(*$C$DW$T$19)
+     833                      .dwattr $C$DW$40, DW_AT_name("all")
+     834                      .dwattr $C$DW$40, DW_AT_TI_symbol_name("_all")
+     835                      .dwattr $C$DW$40, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     836                      .dwattr $C$DW$40, DW_AT_accessibility(DW_ACCESS_public)
+     837              
+     838              $C$DW$41        .dwtag  DW_TAG_member
+     839                      .dwattr $C$DW$41, DW_AT_type(*$C$DW$T$22)
+     840                      .dwattr $C$DW$41, DW_AT_name("bit")
+     841                      .dwattr $C$DW$41, DW_AT_TI_symbol_name("_bit")
+     842                      .dwattr $C$DW$41, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     843                      .dwattr $C$DW$41, DW_AT_accessibility(DW_ACCESS_public)
+     844              
+     845                      .dwendtag $C$DW$T$23
+     846              
+     847              
+     848              $C$DW$T$24      .dwtag  DW_TAG_structure_type
+     849                      .dwattr $C$DW$T$24, DW_AT_name("SPIFFCT_BITS")
+     850                      .dwattr $C$DW$T$24, DW_AT_byte_size(0x01)
+     851              $C$DW$42        .dwtag  DW_TAG_member
+     852                      .dwattr $C$DW$42, DW_AT_type(*$C$DW$T$19)
+     853                      .dwattr $C$DW$42, DW_AT_name("TXDLY")
+     854                      .dwattr $C$DW$42, DW_AT_TI_symbol_name("_TXDLY")
+     855                      .dwattr $C$DW$42, DW_AT_bit_offset(0x08)
+     856                      .dwattr $C$DW$42, DW_AT_bit_size(0x08)
+     857                      .dwattr $C$DW$42, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE   17
+
+     858                      .dwattr $C$DW$42, DW_AT_accessibility(DW_ACCESS_public)
+     859              
+     860              $C$DW$43        .dwtag  DW_TAG_member
+     861                      .dwattr $C$DW$43, DW_AT_type(*$C$DW$T$19)
+     862                      .dwattr $C$DW$43, DW_AT_name("rsvd")
+     863                      .dwattr $C$DW$43, DW_AT_TI_symbol_name("_rsvd")
+     864                      .dwattr $C$DW$43, DW_AT_bit_offset(0x00)
+     865                      .dwattr $C$DW$43, DW_AT_bit_size(0x08)
+     866                      .dwattr $C$DW$43, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     867                      .dwattr $C$DW$43, DW_AT_accessibility(DW_ACCESS_public)
+     868              
+     869                      .dwendtag $C$DW$T$24
+     870              
+     871              
+     872              $C$DW$T$25      .dwtag  DW_TAG_union_type
+     873                      .dwattr $C$DW$T$25, DW_AT_name("SPIFFCT_REG")
+     874                      .dwattr $C$DW$T$25, DW_AT_byte_size(0x01)
+     875              $C$DW$44        .dwtag  DW_TAG_member
+     876                      .dwattr $C$DW$44, DW_AT_type(*$C$DW$T$19)
+     877                      .dwattr $C$DW$44, DW_AT_name("all")
+     878                      .dwattr $C$DW$44, DW_AT_TI_symbol_name("_all")
+     879                      .dwattr $C$DW$44, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     880                      .dwattr $C$DW$44, DW_AT_accessibility(DW_ACCESS_public)
+     881              
+     882              $C$DW$45        .dwtag  DW_TAG_member
+     883                      .dwattr $C$DW$45, DW_AT_type(*$C$DW$T$24)
+     884                      .dwattr $C$DW$45, DW_AT_name("bit")
+     885                      .dwattr $C$DW$45, DW_AT_TI_symbol_name("_bit")
+     886                      .dwattr $C$DW$45, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     887                      .dwattr $C$DW$45, DW_AT_accessibility(DW_ACCESS_public)
+     888              
+     889                      .dwendtag $C$DW$T$25
+     890              
+     891              
+     892              $C$DW$T$26      .dwtag  DW_TAG_structure_type
+     893                      .dwattr $C$DW$T$26, DW_AT_name("SPIFFRX_BITS")
+     894                      .dwattr $C$DW$T$26, DW_AT_byte_size(0x01)
+     895              $C$DW$46        .dwtag  DW_TAG_member
+     896                      .dwattr $C$DW$46, DW_AT_type(*$C$DW$T$19)
+     897                      .dwattr $C$DW$46, DW_AT_name("RXFFIL")
+     898                      .dwattr $C$DW$46, DW_AT_TI_symbol_name("_RXFFIL")
+     899                      .dwattr $C$DW$46, DW_AT_bit_offset(0x0b)
+     900                      .dwattr $C$DW$46, DW_AT_bit_size(0x05)
+     901                      .dwattr $C$DW$46, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     902                      .dwattr $C$DW$46, DW_AT_accessibility(DW_ACCESS_public)
+     903              
+     904              $C$DW$47        .dwtag  DW_TAG_member
+     905                      .dwattr $C$DW$47, DW_AT_type(*$C$DW$T$19)
+     906                      .dwattr $C$DW$47, DW_AT_name("RXFFIENA")
+     907                      .dwattr $C$DW$47, DW_AT_TI_symbol_name("_RXFFIENA")
+     908                      .dwattr $C$DW$47, DW_AT_bit_offset(0x0a)
+     909                      .dwattr $C$DW$47, DW_AT_bit_size(0x01)
+     910                      .dwattr $C$DW$47, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     911                      .dwattr $C$DW$47, DW_AT_accessibility(DW_ACCESS_public)
+     912              
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE   18
+
+     913              $C$DW$48        .dwtag  DW_TAG_member
+     914                      .dwattr $C$DW$48, DW_AT_type(*$C$DW$T$19)
+     915                      .dwattr $C$DW$48, DW_AT_name("RXFFINTCLR")
+     916                      .dwattr $C$DW$48, DW_AT_TI_symbol_name("_RXFFINTCLR")
+     917                      .dwattr $C$DW$48, DW_AT_bit_offset(0x09)
+     918                      .dwattr $C$DW$48, DW_AT_bit_size(0x01)
+     919                      .dwattr $C$DW$48, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     920                      .dwattr $C$DW$48, DW_AT_accessibility(DW_ACCESS_public)
+     921              
+     922              $C$DW$49        .dwtag  DW_TAG_member
+     923                      .dwattr $C$DW$49, DW_AT_type(*$C$DW$T$19)
+     924                      .dwattr $C$DW$49, DW_AT_name("RXFFINT")
+     925                      .dwattr $C$DW$49, DW_AT_TI_symbol_name("_RXFFINT")
+     926                      .dwattr $C$DW$49, DW_AT_bit_offset(0x08)
+     927                      .dwattr $C$DW$49, DW_AT_bit_size(0x01)
+     928                      .dwattr $C$DW$49, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     929                      .dwattr $C$DW$49, DW_AT_accessibility(DW_ACCESS_public)
+     930              
+     931              $C$DW$50        .dwtag  DW_TAG_member
+     932                      .dwattr $C$DW$50, DW_AT_type(*$C$DW$T$19)
+     933                      .dwattr $C$DW$50, DW_AT_name("RXFFST")
+     934                      .dwattr $C$DW$50, DW_AT_TI_symbol_name("_RXFFST")
+     935                      .dwattr $C$DW$50, DW_AT_bit_offset(0x03)
+     936                      .dwattr $C$DW$50, DW_AT_bit_size(0x05)
+     937                      .dwattr $C$DW$50, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     938                      .dwattr $C$DW$50, DW_AT_accessibility(DW_ACCESS_public)
+     939              
+     940              $C$DW$51        .dwtag  DW_TAG_member
+     941                      .dwattr $C$DW$51, DW_AT_type(*$C$DW$T$19)
+     942                      .dwattr $C$DW$51, DW_AT_name("RXFIFORESET")
+     943                      .dwattr $C$DW$51, DW_AT_TI_symbol_name("_RXFIFORESET")
+     944                      .dwattr $C$DW$51, DW_AT_bit_offset(0x02)
+     945                      .dwattr $C$DW$51, DW_AT_bit_size(0x01)
+     946                      .dwattr $C$DW$51, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     947                      .dwattr $C$DW$51, DW_AT_accessibility(DW_ACCESS_public)
+     948              
+     949              $C$DW$52        .dwtag  DW_TAG_member
+     950                      .dwattr $C$DW$52, DW_AT_type(*$C$DW$T$19)
+     951                      .dwattr $C$DW$52, DW_AT_name("RXFFOVFCLR")
+     952                      .dwattr $C$DW$52, DW_AT_TI_symbol_name("_RXFFOVFCLR")
+     953                      .dwattr $C$DW$52, DW_AT_bit_offset(0x01)
+     954                      .dwattr $C$DW$52, DW_AT_bit_size(0x01)
+     955                      .dwattr $C$DW$52, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     956                      .dwattr $C$DW$52, DW_AT_accessibility(DW_ACCESS_public)
+     957              
+     958              $C$DW$53        .dwtag  DW_TAG_member
+     959                      .dwattr $C$DW$53, DW_AT_type(*$C$DW$T$19)
+     960                      .dwattr $C$DW$53, DW_AT_name("RXFFOVF")
+     961                      .dwattr $C$DW$53, DW_AT_TI_symbol_name("_RXFFOVF")
+     962                      .dwattr $C$DW$53, DW_AT_bit_offset(0x00)
+     963                      .dwattr $C$DW$53, DW_AT_bit_size(0x01)
+     964                      .dwattr $C$DW$53, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     965                      .dwattr $C$DW$53, DW_AT_accessibility(DW_ACCESS_public)
+     966              
+     967                      .dwendtag $C$DW$T$26
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE   19
+
+     968              
+     969              
+     970              $C$DW$T$27      .dwtag  DW_TAG_union_type
+     971                      .dwattr $C$DW$T$27, DW_AT_name("SPIFFRX_REG")
+     972                      .dwattr $C$DW$T$27, DW_AT_byte_size(0x01)
+     973              $C$DW$54        .dwtag  DW_TAG_member
+     974                      .dwattr $C$DW$54, DW_AT_type(*$C$DW$T$19)
+     975                      .dwattr $C$DW$54, DW_AT_name("all")
+     976                      .dwattr $C$DW$54, DW_AT_TI_symbol_name("_all")
+     977                      .dwattr $C$DW$54, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     978                      .dwattr $C$DW$54, DW_AT_accessibility(DW_ACCESS_public)
+     979              
+     980              $C$DW$55        .dwtag  DW_TAG_member
+     981                      .dwattr $C$DW$55, DW_AT_type(*$C$DW$T$26)
+     982                      .dwattr $C$DW$55, DW_AT_name("bit")
+     983                      .dwattr $C$DW$55, DW_AT_TI_symbol_name("_bit")
+     984                      .dwattr $C$DW$55, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     985                      .dwattr $C$DW$55, DW_AT_accessibility(DW_ACCESS_public)
+     986              
+     987                      .dwendtag $C$DW$T$27
+     988              
+     989              
+     990              $C$DW$T$28      .dwtag  DW_TAG_structure_type
+     991                      .dwattr $C$DW$T$28, DW_AT_name("SPIFFTX_BITS")
+     992                      .dwattr $C$DW$T$28, DW_AT_byte_size(0x01)
+     993              $C$DW$56        .dwtag  DW_TAG_member
+     994                      .dwattr $C$DW$56, DW_AT_type(*$C$DW$T$19)
+     995                      .dwattr $C$DW$56, DW_AT_name("TXFFIL")
+     996                      .dwattr $C$DW$56, DW_AT_TI_symbol_name("_TXFFIL")
+     997                      .dwattr $C$DW$56, DW_AT_bit_offset(0x0b)
+     998                      .dwattr $C$DW$56, DW_AT_bit_size(0x05)
+     999                      .dwattr $C$DW$56, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1000                      .dwattr $C$DW$56, DW_AT_accessibility(DW_ACCESS_public)
+    1001              
+    1002              $C$DW$57        .dwtag  DW_TAG_member
+    1003                      .dwattr $C$DW$57, DW_AT_type(*$C$DW$T$19)
+    1004                      .dwattr $C$DW$57, DW_AT_name("TXFFIENA")
+    1005                      .dwattr $C$DW$57, DW_AT_TI_symbol_name("_TXFFIENA")
+    1006                      .dwattr $C$DW$57, DW_AT_bit_offset(0x0a)
+    1007                      .dwattr $C$DW$57, DW_AT_bit_size(0x01)
+    1008                      .dwattr $C$DW$57, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1009                      .dwattr $C$DW$57, DW_AT_accessibility(DW_ACCESS_public)
+    1010              
+    1011              $C$DW$58        .dwtag  DW_TAG_member
+    1012                      .dwattr $C$DW$58, DW_AT_type(*$C$DW$T$19)
+    1013                      .dwattr $C$DW$58, DW_AT_name("TXFFINTCLR")
+    1014                      .dwattr $C$DW$58, DW_AT_TI_symbol_name("_TXFFINTCLR")
+    1015                      .dwattr $C$DW$58, DW_AT_bit_offset(0x09)
+    1016                      .dwattr $C$DW$58, DW_AT_bit_size(0x01)
+    1017                      .dwattr $C$DW$58, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1018                      .dwattr $C$DW$58, DW_AT_accessibility(DW_ACCESS_public)
+    1019              
+    1020              $C$DW$59        .dwtag  DW_TAG_member
+    1021                      .dwattr $C$DW$59, DW_AT_type(*$C$DW$T$19)
+    1022                      .dwattr $C$DW$59, DW_AT_name("TXFFINT")
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE   20
+
+    1023                      .dwattr $C$DW$59, DW_AT_TI_symbol_name("_TXFFINT")
+    1024                      .dwattr $C$DW$59, DW_AT_bit_offset(0x08)
+    1025                      .dwattr $C$DW$59, DW_AT_bit_size(0x01)
+    1026                      .dwattr $C$DW$59, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1027                      .dwattr $C$DW$59, DW_AT_accessibility(DW_ACCESS_public)
+    1028              
+    1029              $C$DW$60        .dwtag  DW_TAG_member
+    1030                      .dwattr $C$DW$60, DW_AT_type(*$C$DW$T$19)
+    1031                      .dwattr $C$DW$60, DW_AT_name("TXFFST")
+    1032                      .dwattr $C$DW$60, DW_AT_TI_symbol_name("_TXFFST")
+    1033                      .dwattr $C$DW$60, DW_AT_bit_offset(0x03)
+    1034                      .dwattr $C$DW$60, DW_AT_bit_size(0x05)
+    1035                      .dwattr $C$DW$60, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1036                      .dwattr $C$DW$60, DW_AT_accessibility(DW_ACCESS_public)
+    1037              
+    1038              $C$DW$61        .dwtag  DW_TAG_member
+    1039                      .dwattr $C$DW$61, DW_AT_type(*$C$DW$T$19)
+    1040                      .dwattr $C$DW$61, DW_AT_name("TXFIFO")
+    1041                      .dwattr $C$DW$61, DW_AT_TI_symbol_name("_TXFIFO")
+    1042                      .dwattr $C$DW$61, DW_AT_bit_offset(0x02)
+    1043                      .dwattr $C$DW$61, DW_AT_bit_size(0x01)
+    1044                      .dwattr $C$DW$61, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1045                      .dwattr $C$DW$61, DW_AT_accessibility(DW_ACCESS_public)
+    1046              
+    1047              $C$DW$62        .dwtag  DW_TAG_member
+    1048                      .dwattr $C$DW$62, DW_AT_type(*$C$DW$T$19)
+    1049                      .dwattr $C$DW$62, DW_AT_name("SPIFFENA")
+    1050                      .dwattr $C$DW$62, DW_AT_TI_symbol_name("_SPIFFENA")
+    1051                      .dwattr $C$DW$62, DW_AT_bit_offset(0x01)
+    1052                      .dwattr $C$DW$62, DW_AT_bit_size(0x01)
+    1053                      .dwattr $C$DW$62, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1054                      .dwattr $C$DW$62, DW_AT_accessibility(DW_ACCESS_public)
+    1055              
+    1056              $C$DW$63        .dwtag  DW_TAG_member
+    1057                      .dwattr $C$DW$63, DW_AT_type(*$C$DW$T$19)
+    1058                      .dwattr $C$DW$63, DW_AT_name("SPIRST")
+    1059                      .dwattr $C$DW$63, DW_AT_TI_symbol_name("_SPIRST")
+    1060                      .dwattr $C$DW$63, DW_AT_bit_offset(0x00)
+    1061                      .dwattr $C$DW$63, DW_AT_bit_size(0x01)
+    1062                      .dwattr $C$DW$63, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1063                      .dwattr $C$DW$63, DW_AT_accessibility(DW_ACCESS_public)
+    1064              
+    1065                      .dwendtag $C$DW$T$28
+    1066              
+    1067              
+    1068              $C$DW$T$29      .dwtag  DW_TAG_union_type
+    1069                      .dwattr $C$DW$T$29, DW_AT_name("SPIFFTX_REG")
+    1070                      .dwattr $C$DW$T$29, DW_AT_byte_size(0x01)
+    1071              $C$DW$64        .dwtag  DW_TAG_member
+    1072                      .dwattr $C$DW$64, DW_AT_type(*$C$DW$T$19)
+    1073                      .dwattr $C$DW$64, DW_AT_name("all")
+    1074                      .dwattr $C$DW$64, DW_AT_TI_symbol_name("_all")
+    1075                      .dwattr $C$DW$64, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1076                      .dwattr $C$DW$64, DW_AT_accessibility(DW_ACCESS_public)
+    1077              
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE   21
+
+    1078              $C$DW$65        .dwtag  DW_TAG_member
+    1079                      .dwattr $C$DW$65, DW_AT_type(*$C$DW$T$28)
+    1080                      .dwattr $C$DW$65, DW_AT_name("bit")
+    1081                      .dwattr $C$DW$65, DW_AT_TI_symbol_name("_bit")
+    1082                      .dwattr $C$DW$65, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1083                      .dwattr $C$DW$65, DW_AT_accessibility(DW_ACCESS_public)
+    1084              
+    1085                      .dwendtag $C$DW$T$29
+    1086              
+    1087              
+    1088              $C$DW$T$30      .dwtag  DW_TAG_structure_type
+    1089                      .dwattr $C$DW$T$30, DW_AT_name("SPIPRI_BITS")
+    1090                      .dwattr $C$DW$T$30, DW_AT_byte_size(0x01)
+    1091              $C$DW$66        .dwtag  DW_TAG_member
+    1092                      .dwattr $C$DW$66, DW_AT_type(*$C$DW$T$19)
+    1093                      .dwattr $C$DW$66, DW_AT_name("rsvd1")
+    1094                      .dwattr $C$DW$66, DW_AT_TI_symbol_name("_rsvd1")
+    1095                      .dwattr $C$DW$66, DW_AT_bit_offset(0x0c)
+    1096                      .dwattr $C$DW$66, DW_AT_bit_size(0x04)
+    1097                      .dwattr $C$DW$66, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1098                      .dwattr $C$DW$66, DW_AT_accessibility(DW_ACCESS_public)
+    1099              
+    1100              $C$DW$67        .dwtag  DW_TAG_member
+    1101                      .dwattr $C$DW$67, DW_AT_type(*$C$DW$T$19)
+    1102                      .dwattr $C$DW$67, DW_AT_name("FREE")
+    1103                      .dwattr $C$DW$67, DW_AT_TI_symbol_name("_FREE")
+    1104                      .dwattr $C$DW$67, DW_AT_bit_offset(0x0b)
+    1105                      .dwattr $C$DW$67, DW_AT_bit_size(0x01)
+    1106                      .dwattr $C$DW$67, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1107                      .dwattr $C$DW$67, DW_AT_accessibility(DW_ACCESS_public)
+    1108              
+    1109              $C$DW$68        .dwtag  DW_TAG_member
+    1110                      .dwattr $C$DW$68, DW_AT_type(*$C$DW$T$19)
+    1111                      .dwattr $C$DW$68, DW_AT_name("SOFT")
+    1112                      .dwattr $C$DW$68, DW_AT_TI_symbol_name("_SOFT")
+    1113                      .dwattr $C$DW$68, DW_AT_bit_offset(0x0a)
+    1114                      .dwattr $C$DW$68, DW_AT_bit_size(0x01)
+    1115                      .dwattr $C$DW$68, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1116                      .dwattr $C$DW$68, DW_AT_accessibility(DW_ACCESS_public)
+    1117              
+    1118              $C$DW$69        .dwtag  DW_TAG_member
+    1119                      .dwattr $C$DW$69, DW_AT_type(*$C$DW$T$19)
+    1120                      .dwattr $C$DW$69, DW_AT_name("PRIORITY")
+    1121                      .dwattr $C$DW$69, DW_AT_TI_symbol_name("_PRIORITY")
+    1122                      .dwattr $C$DW$69, DW_AT_bit_offset(0x09)
+    1123                      .dwattr $C$DW$69, DW_AT_bit_size(0x01)
+    1124                      .dwattr $C$DW$69, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1125                      .dwattr $C$DW$69, DW_AT_accessibility(DW_ACCESS_public)
+    1126              
+    1127              $C$DW$70        .dwtag  DW_TAG_member
+    1128                      .dwattr $C$DW$70, DW_AT_type(*$C$DW$T$19)
+    1129                      .dwattr $C$DW$70, DW_AT_name("rsvd2")
+    1130                      .dwattr $C$DW$70, DW_AT_TI_symbol_name("_rsvd2")
+    1131                      .dwattr $C$DW$70, DW_AT_bit_offset(0x00)
+    1132                      .dwattr $C$DW$70, DW_AT_bit_size(0x09)
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE   22
+
+    1133                      .dwattr $C$DW$70, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1134                      .dwattr $C$DW$70, DW_AT_accessibility(DW_ACCESS_public)
+    1135              
+    1136                      .dwendtag $C$DW$T$30
+    1137              
+    1138              
+    1139              $C$DW$T$31      .dwtag  DW_TAG_union_type
+    1140                      .dwattr $C$DW$T$31, DW_AT_name("SPIPRI_REG")
+    1141                      .dwattr $C$DW$T$31, DW_AT_byte_size(0x01)
+    1142              $C$DW$71        .dwtag  DW_TAG_member
+    1143                      .dwattr $C$DW$71, DW_AT_type(*$C$DW$T$19)
+    1144                      .dwattr $C$DW$71, DW_AT_name("all")
+    1145                      .dwattr $C$DW$71, DW_AT_TI_symbol_name("_all")
+    1146                      .dwattr $C$DW$71, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1147                      .dwattr $C$DW$71, DW_AT_accessibility(DW_ACCESS_public)
+    1148              
+    1149              $C$DW$72        .dwtag  DW_TAG_member
+    1150                      .dwattr $C$DW$72, DW_AT_type(*$C$DW$T$30)
+    1151                      .dwattr $C$DW$72, DW_AT_name("bit")
+    1152                      .dwattr $C$DW$72, DW_AT_TI_symbol_name("_bit")
+    1153                      .dwattr $C$DW$72, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1154                      .dwattr $C$DW$72, DW_AT_accessibility(DW_ACCESS_public)
+    1155              
+    1156                      .dwendtag $C$DW$T$31
+    1157              
+    1158              
+    1159              $C$DW$T$32      .dwtag  DW_TAG_structure_type
+    1160                      .dwattr $C$DW$T$32, DW_AT_name("SPISTS_BITS")
+    1161                      .dwattr $C$DW$T$32, DW_AT_byte_size(0x01)
+    1162              $C$DW$73        .dwtag  DW_TAG_member
+    1163                      .dwattr $C$DW$73, DW_AT_type(*$C$DW$T$19)
+    1164                      .dwattr $C$DW$73, DW_AT_name("rsvd1")
+    1165                      .dwattr $C$DW$73, DW_AT_TI_symbol_name("_rsvd1")
+    1166                      .dwattr $C$DW$73, DW_AT_bit_offset(0x0b)
+    1167                      .dwattr $C$DW$73, DW_AT_bit_size(0x05)
+    1168                      .dwattr $C$DW$73, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1169                      .dwattr $C$DW$73, DW_AT_accessibility(DW_ACCESS_public)
+    1170              
+    1171              $C$DW$74        .dwtag  DW_TAG_member
+    1172                      .dwattr $C$DW$74, DW_AT_type(*$C$DW$T$19)
+    1173                      .dwattr $C$DW$74, DW_AT_name("BUFFULL_FLAG")
+    1174                      .dwattr $C$DW$74, DW_AT_TI_symbol_name("_BUFFULL_FLAG")
+    1175                      .dwattr $C$DW$74, DW_AT_bit_offset(0x0a)
+    1176                      .dwattr $C$DW$74, DW_AT_bit_size(0x01)
+    1177                      .dwattr $C$DW$74, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1178                      .dwattr $C$DW$74, DW_AT_accessibility(DW_ACCESS_public)
+    1179              
+    1180              $C$DW$75        .dwtag  DW_TAG_member
+    1181                      .dwattr $C$DW$75, DW_AT_type(*$C$DW$T$19)
+    1182                      .dwattr $C$DW$75, DW_AT_name("INT_FLAG")
+    1183                      .dwattr $C$DW$75, DW_AT_TI_symbol_name("_INT_FLAG")
+    1184                      .dwattr $C$DW$75, DW_AT_bit_offset(0x09)
+    1185                      .dwattr $C$DW$75, DW_AT_bit_size(0x01)
+    1186                      .dwattr $C$DW$75, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1187                      .dwattr $C$DW$75, DW_AT_accessibility(DW_ACCESS_public)
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE   23
+
+    1188              
+    1189              $C$DW$76        .dwtag  DW_TAG_member
+    1190                      .dwattr $C$DW$76, DW_AT_type(*$C$DW$T$19)
+    1191                      .dwattr $C$DW$76, DW_AT_name("OVERRUN_FLAG")
+    1192                      .dwattr $C$DW$76, DW_AT_TI_symbol_name("_OVERRUN_FLAG")
+    1193                      .dwattr $C$DW$76, DW_AT_bit_offset(0x08)
+    1194                      .dwattr $C$DW$76, DW_AT_bit_size(0x01)
+    1195                      .dwattr $C$DW$76, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1196                      .dwattr $C$DW$76, DW_AT_accessibility(DW_ACCESS_public)
+    1197              
+    1198              $C$DW$77        .dwtag  DW_TAG_member
+    1199                      .dwattr $C$DW$77, DW_AT_type(*$C$DW$T$19)
+    1200                      .dwattr $C$DW$77, DW_AT_name("rsvd2")
+    1201                      .dwattr $C$DW$77, DW_AT_TI_symbol_name("_rsvd2")
+    1202                      .dwattr $C$DW$77, DW_AT_bit_offset(0x00)
+    1203                      .dwattr $C$DW$77, DW_AT_bit_size(0x08)
+    1204                      .dwattr $C$DW$77, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1205                      .dwattr $C$DW$77, DW_AT_accessibility(DW_ACCESS_public)
+    1206              
+    1207                      .dwendtag $C$DW$T$32
+    1208              
+    1209              
+    1210              $C$DW$T$33      .dwtag  DW_TAG_union_type
+    1211                      .dwattr $C$DW$T$33, DW_AT_name("SPISTS_REG")
+    1212                      .dwattr $C$DW$T$33, DW_AT_byte_size(0x01)
+    1213              $C$DW$78        .dwtag  DW_TAG_member
+    1214                      .dwattr $C$DW$78, DW_AT_type(*$C$DW$T$19)
+    1215                      .dwattr $C$DW$78, DW_AT_name("all")
+    1216                      .dwattr $C$DW$78, DW_AT_TI_symbol_name("_all")
+    1217                      .dwattr $C$DW$78, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1218                      .dwattr $C$DW$78, DW_AT_accessibility(DW_ACCESS_public)
+    1219              
+    1220              $C$DW$79        .dwtag  DW_TAG_member
+    1221                      .dwattr $C$DW$79, DW_AT_type(*$C$DW$T$32)
+    1222                      .dwattr $C$DW$79, DW_AT_name("bit")
+    1223                      .dwattr $C$DW$79, DW_AT_TI_symbol_name("_bit")
+    1224                      .dwattr $C$DW$79, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1225                      .dwattr $C$DW$79, DW_AT_accessibility(DW_ACCESS_public)
+    1226              
+    1227                      .dwendtag $C$DW$T$33
+    1228              
+    1229              
+    1230              $C$DW$T$35      .dwtag  DW_TAG_structure_type
+    1231                      .dwattr $C$DW$T$35, DW_AT_name("SPI_REGS")
+    1232                      .dwattr $C$DW$T$35, DW_AT_byte_size(0x10)
+    1233              $C$DW$80        .dwtag  DW_TAG_member
+    1234                      .dwattr $C$DW$80, DW_AT_type(*$C$DW$T$21)
+    1235                      .dwattr $C$DW$80, DW_AT_name("SPICCR")
+    1236                      .dwattr $C$DW$80, DW_AT_TI_symbol_name("_SPICCR")
+    1237                      .dwattr $C$DW$80, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1238                      .dwattr $C$DW$80, DW_AT_accessibility(DW_ACCESS_public)
+    1239              
+    1240              $C$DW$81        .dwtag  DW_TAG_member
+    1241                      .dwattr $C$DW$81, DW_AT_type(*$C$DW$T$23)
+    1242                      .dwattr $C$DW$81, DW_AT_name("SPICTL")
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE   24
+
+    1243                      .dwattr $C$DW$81, DW_AT_TI_symbol_name("_SPICTL")
+    1244                      .dwattr $C$DW$81, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1245                      .dwattr $C$DW$81, DW_AT_accessibility(DW_ACCESS_public)
+    1246              
+    1247              $C$DW$82        .dwtag  DW_TAG_member
+    1248                      .dwattr $C$DW$82, DW_AT_type(*$C$DW$T$33)
+    1249                      .dwattr $C$DW$82, DW_AT_name("SPISTS")
+    1250                      .dwattr $C$DW$82, DW_AT_TI_symbol_name("_SPISTS")
+    1251                      .dwattr $C$DW$82, DW_AT_data_member_location[DW_OP_plus_uconst 0x2]
+    1252                      .dwattr $C$DW$82, DW_AT_accessibility(DW_ACCESS_public)
+    1253              
+    1254              $C$DW$83        .dwtag  DW_TAG_member
+    1255                      .dwattr $C$DW$83, DW_AT_type(*$C$DW$T$19)
+    1256                      .dwattr $C$DW$83, DW_AT_name("rsvd1")
+    1257                      .dwattr $C$DW$83, DW_AT_TI_symbol_name("_rsvd1")
+    1258                      .dwattr $C$DW$83, DW_AT_data_member_location[DW_OP_plus_uconst 0x3]
+    1259                      .dwattr $C$DW$83, DW_AT_accessibility(DW_ACCESS_public)
+    1260              
+    1261              $C$DW$84        .dwtag  DW_TAG_member
+    1262                      .dwattr $C$DW$84, DW_AT_type(*$C$DW$T$19)
+    1263                      .dwattr $C$DW$84, DW_AT_name("SPIBRR")
+    1264                      .dwattr $C$DW$84, DW_AT_TI_symbol_name("_SPIBRR")
+    1265                      .dwattr $C$DW$84, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    1266                      .dwattr $C$DW$84, DW_AT_accessibility(DW_ACCESS_public)
+    1267              
+    1268              $C$DW$85        .dwtag  DW_TAG_member
+    1269                      .dwattr $C$DW$85, DW_AT_type(*$C$DW$T$19)
+    1270                      .dwattr $C$DW$85, DW_AT_name("rsvd2")
+    1271                      .dwattr $C$DW$85, DW_AT_TI_symbol_name("_rsvd2")
+    1272                      .dwattr $C$DW$85, DW_AT_data_member_location[DW_OP_plus_uconst 0x5]
+    1273                      .dwattr $C$DW$85, DW_AT_accessibility(DW_ACCESS_public)
+    1274              
+    1275              $C$DW$86        .dwtag  DW_TAG_member
+    1276                      .dwattr $C$DW$86, DW_AT_type(*$C$DW$T$19)
+    1277                      .dwattr $C$DW$86, DW_AT_name("SPIRXEMU")
+    1278                      .dwattr $C$DW$86, DW_AT_TI_symbol_name("_SPIRXEMU")
+    1279                      .dwattr $C$DW$86, DW_AT_data_member_location[DW_OP_plus_uconst 0x6]
+    1280                      .dwattr $C$DW$86, DW_AT_accessibility(DW_ACCESS_public)
+    1281              
+    1282              $C$DW$87        .dwtag  DW_TAG_member
+    1283                      .dwattr $C$DW$87, DW_AT_type(*$C$DW$T$19)
+    1284                      .dwattr $C$DW$87, DW_AT_name("SPIRXBUF")
+    1285                      .dwattr $C$DW$87, DW_AT_TI_symbol_name("_SPIRXBUF")
+    1286                      .dwattr $C$DW$87, DW_AT_data_member_location[DW_OP_plus_uconst 0x7]
+    1287                      .dwattr $C$DW$87, DW_AT_accessibility(DW_ACCESS_public)
+    1288              
+    1289              $C$DW$88        .dwtag  DW_TAG_member
+    1290                      .dwattr $C$DW$88, DW_AT_type(*$C$DW$T$19)
+    1291                      .dwattr $C$DW$88, DW_AT_name("SPITXBUF")
+    1292                      .dwattr $C$DW$88, DW_AT_TI_symbol_name("_SPITXBUF")
+    1293                      .dwattr $C$DW$88, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+    1294                      .dwattr $C$DW$88, DW_AT_accessibility(DW_ACCESS_public)
+    1295              
+    1296              $C$DW$89        .dwtag  DW_TAG_member
+    1297                      .dwattr $C$DW$89, DW_AT_type(*$C$DW$T$19)
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE   25
+
+    1298                      .dwattr $C$DW$89, DW_AT_name("SPIDAT")
+    1299                      .dwattr $C$DW$89, DW_AT_TI_symbol_name("_SPIDAT")
+    1300                      .dwattr $C$DW$89, DW_AT_data_member_location[DW_OP_plus_uconst 0x9]
+    1301                      .dwattr $C$DW$89, DW_AT_accessibility(DW_ACCESS_public)
+    1302              
+    1303              $C$DW$90        .dwtag  DW_TAG_member
+    1304                      .dwattr $C$DW$90, DW_AT_type(*$C$DW$T$29)
+    1305                      .dwattr $C$DW$90, DW_AT_name("SPIFFTX")
+    1306                      .dwattr $C$DW$90, DW_AT_TI_symbol_name("_SPIFFTX")
+    1307                      .dwattr $C$DW$90, DW_AT_data_member_location[DW_OP_plus_uconst 0xa]
+    1308                      .dwattr $C$DW$90, DW_AT_accessibility(DW_ACCESS_public)
+    1309              
+    1310              $C$DW$91        .dwtag  DW_TAG_member
+    1311                      .dwattr $C$DW$91, DW_AT_type(*$C$DW$T$27)
+    1312                      .dwattr $C$DW$91, DW_AT_name("SPIFFRX")
+    1313                      .dwattr $C$DW$91, DW_AT_TI_symbol_name("_SPIFFRX")
+    1314                      .dwattr $C$DW$91, DW_AT_data_member_location[DW_OP_plus_uconst 0xb]
+    1315                      .dwattr $C$DW$91, DW_AT_accessibility(DW_ACCESS_public)
+    1316              
+    1317              $C$DW$92        .dwtag  DW_TAG_member
+    1318                      .dwattr $C$DW$92, DW_AT_type(*$C$DW$T$25)
+    1319                      .dwattr $C$DW$92, DW_AT_name("SPIFFCT")
+    1320                      .dwattr $C$DW$92, DW_AT_TI_symbol_name("_SPIFFCT")
+    1321                      .dwattr $C$DW$92, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+    1322                      .dwattr $C$DW$92, DW_AT_accessibility(DW_ACCESS_public)
+    1323              
+    1324              $C$DW$93        .dwtag  DW_TAG_member
+    1325                      .dwattr $C$DW$93, DW_AT_type(*$C$DW$T$34)
+    1326                      .dwattr $C$DW$93, DW_AT_name("rsvd3")
+    1327                      .dwattr $C$DW$93, DW_AT_TI_symbol_name("_rsvd3")
+    1328                      .dwattr $C$DW$93, DW_AT_data_member_location[DW_OP_plus_uconst 0xd]
+    1329                      .dwattr $C$DW$93, DW_AT_accessibility(DW_ACCESS_public)
+    1330              
+    1331              $C$DW$94        .dwtag  DW_TAG_member
+    1332                      .dwattr $C$DW$94, DW_AT_type(*$C$DW$T$31)
+    1333                      .dwattr $C$DW$94, DW_AT_name("SPIPRI")
+    1334                      .dwattr $C$DW$94, DW_AT_TI_symbol_name("_SPIPRI")
+    1335                      .dwattr $C$DW$94, DW_AT_data_member_location[DW_OP_plus_uconst 0xf]
+    1336                      .dwattr $C$DW$94, DW_AT_accessibility(DW_ACCESS_public)
+    1337              
+    1338                      .dwendtag $C$DW$T$35
+    1339              
+    1340              $C$DW$95        .dwtag  DW_TAG_TI_far_type
+    1341                      .dwattr $C$DW$95, DW_AT_type(*$C$DW$T$35)
+    1342              
+    1343              $C$DW$T$44      .dwtag  DW_TAG_volatile_type
+    1344                      .dwattr $C$DW$T$44, DW_AT_type(*$C$DW$95)
+    1345              
+    1346              $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+    1347                      .dwattr $C$DW$T$2, DW_AT_name("void")
+    1348              
+    1349              $C$DW$T$4       .dwtag  DW_TAG_base_type
+    1350                      .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+    1351                      .dwattr $C$DW$T$4, DW_AT_name("bool")
+    1352                      .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE   26
+
+    1353              
+    1354              $C$DW$T$5       .dwtag  DW_TAG_base_type
+    1355                      .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+    1356                      .dwattr $C$DW$T$5, DW_AT_name("signed char")
+    1357                      .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+    1358              
+    1359              $C$DW$T$6       .dwtag  DW_TAG_base_type
+    1360                      .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+    1361                      .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+    1362                      .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+    1363              
+    1364              $C$DW$T$7       .dwtag  DW_TAG_base_type
+    1365                      .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+    1366                      .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+    1367                      .dwattr $C$DW$T$7, DW_AT_byte_size(0x01)
+    1368              
+    1369              $C$DW$T$8       .dwtag  DW_TAG_base_type
+    1370                      .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+    1371                      .dwattr $C$DW$T$8, DW_AT_name("short")
+    1372                      .dwattr $C$DW$T$8, DW_AT_byte_size(0x01)
+    1373              
+    1374              $C$DW$T$9       .dwtag  DW_TAG_base_type
+    1375                      .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+    1376                      .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+    1377                      .dwattr $C$DW$T$9, DW_AT_byte_size(0x01)
+    1378              
+    1379              $C$DW$T$10      .dwtag  DW_TAG_base_type
+    1380                      .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+    1381                      .dwattr $C$DW$T$10, DW_AT_name("int")
+    1382                      .dwattr $C$DW$T$10, DW_AT_byte_size(0x01)
+    1383              
+    1384              $C$DW$T$11      .dwtag  DW_TAG_base_type
+    1385                      .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+    1386                      .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+    1387                      .dwattr $C$DW$T$11, DW_AT_byte_size(0x01)
+    1388              
+    1389              $C$DW$T$19      .dwtag  DW_TAG_typedef
+    1390                      .dwattr $C$DW$T$19, DW_AT_name("Uint16")
+    1391                      .dwattr $C$DW$T$19, DW_AT_type(*$C$DW$T$11)
+    1392                      .dwattr $C$DW$T$19, DW_AT_language(DW_LANG_C)
+    1393              
+    1394              
+    1395              $C$DW$T$34      .dwtag  DW_TAG_array_type
+    1396                      .dwattr $C$DW$T$34, DW_AT_type(*$C$DW$T$19)
+    1397                      .dwattr $C$DW$T$34, DW_AT_language(DW_LANG_C)
+    1398                      .dwattr $C$DW$T$34, DW_AT_byte_size(0x02)
+    1399              $C$DW$96        .dwtag  DW_TAG_subrange_type
+    1400                      .dwattr $C$DW$96, DW_AT_upper_bound(0x01)
+    1401              
+    1402                      .dwendtag $C$DW$T$34
+    1403              
+    1404              $C$DW$T$12      .dwtag  DW_TAG_base_type
+    1405                      .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+    1406                      .dwattr $C$DW$T$12, DW_AT_name("long")
+    1407                      .dwattr $C$DW$T$12, DW_AT_byte_size(0x02)
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE   27
+
+    1408              
+    1409              $C$DW$T$13      .dwtag  DW_TAG_base_type
+    1410                      .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+    1411                      .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+    1412                      .dwattr $C$DW$T$13, DW_AT_byte_size(0x02)
+    1413              
+    1414              $C$DW$T$14      .dwtag  DW_TAG_base_type
+    1415                      .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+    1416                      .dwattr $C$DW$T$14, DW_AT_name("long long")
+    1417                      .dwattr $C$DW$T$14, DW_AT_byte_size(0x04)
+    1418              
+    1419              $C$DW$T$15      .dwtag  DW_TAG_base_type
+    1420                      .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+    1421                      .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+    1422                      .dwattr $C$DW$T$15, DW_AT_byte_size(0x04)
+    1423              
+    1424              $C$DW$T$16      .dwtag  DW_TAG_base_type
+    1425                      .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+    1426                      .dwattr $C$DW$T$16, DW_AT_name("float")
+    1427                      .dwattr $C$DW$T$16, DW_AT_byte_size(0x02)
+    1428              
+    1429              $C$DW$T$17      .dwtag  DW_TAG_base_type
+    1430                      .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+    1431                      .dwattr $C$DW$T$17, DW_AT_name("double")
+    1432                      .dwattr $C$DW$T$17, DW_AT_byte_size(0x02)
+    1433              
+    1434              $C$DW$T$18      .dwtag  DW_TAG_base_type
+    1435                      .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+    1436                      .dwattr $C$DW$T$18, DW_AT_name("long double")
+    1437                      .dwattr $C$DW$T$18, DW_AT_byte_size(0x04)
+    1438              
+    1439                      .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+    1440              
+    1441              ;***************************************************************
+    1442              ;* DWARF CIE ENTRIES                                           *
+    1443              ;***************************************************************
+    1444              
+    1445              $C$DW$CIE       .dwcie 26
+    1446                      .dwcfi  cfa_register, 20
+    1447                      .dwcfi  cfa_offset, 0
+    1448                      .dwcfi  same_value, 28
+    1449                      .dwcfi  same_value, 6
+    1450                      .dwcfi  same_value, 7
+    1451                      .dwcfi  same_value, 8
+    1452                      .dwcfi  same_value, 9
+    1453                      .dwcfi  same_value, 10
+    1454                      .dwcfi  same_value, 11
+    1455                      .dwendentry
+    1456              
+    1457              ;***************************************************************
+    1458              ;* DWARF REGISTER MAP                                          *
+    1459              ;***************************************************************
+    1460              
+    1461              $C$DW$97        .dwtag  DW_TAG_TI_assign_register
+    1462                      .dwattr $C$DW$97, DW_AT_name("AL")
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE   28
+
+    1463                      .dwattr $C$DW$97, DW_AT_location[DW_OP_reg0]
+    1464              
+    1465              $C$DW$98        .dwtag  DW_TAG_TI_assign_register
+    1466                      .dwattr $C$DW$98, DW_AT_name("AH")
+    1467                      .dwattr $C$DW$98, DW_AT_location[DW_OP_reg1]
+    1468              
+    1469              $C$DW$99        .dwtag  DW_TAG_TI_assign_register
+    1470                      .dwattr $C$DW$99, DW_AT_name("PL")
+    1471                      .dwattr $C$DW$99, DW_AT_location[DW_OP_reg2]
+    1472              
+    1473              $C$DW$100       .dwtag  DW_TAG_TI_assign_register
+    1474                      .dwattr $C$DW$100, DW_AT_name("PH")
+    1475                      .dwattr $C$DW$100, DW_AT_location[DW_OP_reg3]
+    1476              
+    1477              $C$DW$101       .dwtag  DW_TAG_TI_assign_register
+    1478                      .dwattr $C$DW$101, DW_AT_name("SP")
+    1479                      .dwattr $C$DW$101, DW_AT_location[DW_OP_reg20]
+    1480              
+    1481              $C$DW$102       .dwtag  DW_TAG_TI_assign_register
+    1482                      .dwattr $C$DW$102, DW_AT_name("XT")
+    1483                      .dwattr $C$DW$102, DW_AT_location[DW_OP_reg21]
+    1484              
+    1485              $C$DW$103       .dwtag  DW_TAG_TI_assign_register
+    1486                      .dwattr $C$DW$103, DW_AT_name("T")
+    1487                      .dwattr $C$DW$103, DW_AT_location[DW_OP_reg22]
+    1488              
+    1489              $C$DW$104       .dwtag  DW_TAG_TI_assign_register
+    1490                      .dwattr $C$DW$104, DW_AT_name("ST0")
+    1491                      .dwattr $C$DW$104, DW_AT_location[DW_OP_reg23]
+    1492              
+    1493              $C$DW$105       .dwtag  DW_TAG_TI_assign_register
+    1494                      .dwattr $C$DW$105, DW_AT_name("ST1")
+    1495                      .dwattr $C$DW$105, DW_AT_location[DW_OP_reg24]
+    1496              
+    1497              $C$DW$106       .dwtag  DW_TAG_TI_assign_register
+    1498                      .dwattr $C$DW$106, DW_AT_name("PC")
+    1499                      .dwattr $C$DW$106, DW_AT_location[DW_OP_reg25]
+    1500              
+    1501              $C$DW$107       .dwtag  DW_TAG_TI_assign_register
+    1502                      .dwattr $C$DW$107, DW_AT_name("RPC")
+    1503                      .dwattr $C$DW$107, DW_AT_location[DW_OP_reg26]
+    1504              
+    1505              $C$DW$108       .dwtag  DW_TAG_TI_assign_register
+    1506                      .dwattr $C$DW$108, DW_AT_name("FP")
+    1507                      .dwattr $C$DW$108, DW_AT_location[DW_OP_reg28]
+    1508              
+    1509              $C$DW$109       .dwtag  DW_TAG_TI_assign_register
+    1510                      .dwattr $C$DW$109, DW_AT_name("DP")
+    1511                      .dwattr $C$DW$109, DW_AT_location[DW_OP_reg29]
+    1512              
+    1513              $C$DW$110       .dwtag  DW_TAG_TI_assign_register
+    1514                      .dwattr $C$DW$110, DW_AT_name("SXM")
+    1515                      .dwattr $C$DW$110, DW_AT_location[DW_OP_reg30]
+    1516              
+    1517              $C$DW$111       .dwtag  DW_TAG_TI_assign_register
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE   29
+
+    1518                      .dwattr $C$DW$111, DW_AT_name("PM")
+    1519                      .dwattr $C$DW$111, DW_AT_location[DW_OP_reg31]
+    1520              
+    1521              $C$DW$112       .dwtag  DW_TAG_TI_assign_register
+    1522                      .dwattr $C$DW$112, DW_AT_name("OVM")
+    1523                      .dwattr $C$DW$112, DW_AT_location[DW_OP_regx 0x20]
+    1524              
+    1525              $C$DW$113       .dwtag  DW_TAG_TI_assign_register
+    1526                      .dwattr $C$DW$113, DW_AT_name("PAGE0")
+    1527                      .dwattr $C$DW$113, DW_AT_location[DW_OP_regx 0x21]
+    1528              
+    1529              $C$DW$114       .dwtag  DW_TAG_TI_assign_register
+    1530                      .dwattr $C$DW$114, DW_AT_name("AMODE")
+    1531                      .dwattr $C$DW$114, DW_AT_location[DW_OP_regx 0x22]
+    1532              
+    1533              $C$DW$115       .dwtag  DW_TAG_TI_assign_register
+    1534                      .dwattr $C$DW$115, DW_AT_name("EALLOW")
+    1535                      .dwattr $C$DW$115, DW_AT_location[DW_OP_regx 0x4e]
+    1536              
+    1537              $C$DW$116       .dwtag  DW_TAG_TI_assign_register
+    1538                      .dwattr $C$DW$116, DW_AT_name("INTM")
+    1539                      .dwattr $C$DW$116, DW_AT_location[DW_OP_regx 0x23]
+    1540              
+    1541              $C$DW$117       .dwtag  DW_TAG_TI_assign_register
+    1542                      .dwattr $C$DW$117, DW_AT_name("IFR")
+    1543                      .dwattr $C$DW$117, DW_AT_location[DW_OP_regx 0x24]
+    1544              
+    1545              $C$DW$118       .dwtag  DW_TAG_TI_assign_register
+    1546                      .dwattr $C$DW$118, DW_AT_name("IER")
+    1547                      .dwattr $C$DW$118, DW_AT_location[DW_OP_regx 0x25]
+    1548              
+    1549              $C$DW$119       .dwtag  DW_TAG_TI_assign_register
+    1550                      .dwattr $C$DW$119, DW_AT_name("V")
+    1551                      .dwattr $C$DW$119, DW_AT_location[DW_OP_regx 0x26]
+    1552              
+    1553              $C$DW$120       .dwtag  DW_TAG_TI_assign_register
+    1554                      .dwattr $C$DW$120, DW_AT_name("PSEUDOH")
+    1555                      .dwattr $C$DW$120, DW_AT_location[DW_OP_regx 0x4c]
+    1556              
+    1557              $C$DW$121       .dwtag  DW_TAG_TI_assign_register
+    1558                      .dwattr $C$DW$121, DW_AT_name("VOL")
+    1559                      .dwattr $C$DW$121, DW_AT_location[DW_OP_regx 0x4d]
+    1560              
+    1561              $C$DW$122       .dwtag  DW_TAG_TI_assign_register
+    1562                      .dwattr $C$DW$122, DW_AT_name("AR0")
+    1563                      .dwattr $C$DW$122, DW_AT_location[DW_OP_reg4]
+    1564              
+    1565              $C$DW$123       .dwtag  DW_TAG_TI_assign_register
+    1566                      .dwattr $C$DW$123, DW_AT_name("XAR0")
+    1567                      .dwattr $C$DW$123, DW_AT_location[DW_OP_reg5]
+    1568              
+    1569              $C$DW$124       .dwtag  DW_TAG_TI_assign_register
+    1570                      .dwattr $C$DW$124, DW_AT_name("AR1")
+    1571                      .dwattr $C$DW$124, DW_AT_location[DW_OP_reg6]
+    1572              
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Spi.asm          PAGE   30
+
+    1573              $C$DW$125       .dwtag  DW_TAG_TI_assign_register
+    1574                      .dwattr $C$DW$125, DW_AT_name("XAR1")
+    1575                      .dwattr $C$DW$125, DW_AT_location[DW_OP_reg7]
+    1576              
+    1577              $C$DW$126       .dwtag  DW_TAG_TI_assign_register
+    1578                      .dwattr $C$DW$126, DW_AT_name("AR2")
+    1579                      .dwattr $C$DW$126, DW_AT_location[DW_OP_reg8]
+    1580              
+    1581              $C$DW$127       .dwtag  DW_TAG_TI_assign_register
+    1582                      .dwattr $C$DW$127, DW_AT_name("XAR2")
+    1583                      .dwattr $C$DW$127, DW_AT_location[DW_OP_reg9]
+    1584              
+    1585              $C$DW$128       .dwtag  DW_TAG_TI_assign_register
+    1586                      .dwattr $C$DW$128, DW_AT_name("AR3")
+    1587                      .dwattr $C$DW$128, DW_AT_location[DW_OP_reg10]
+    1588              
+    1589              $C$DW$129       .dwtag  DW_TAG_TI_assign_register
+    1590                      .dwattr $C$DW$129, DW_AT_name("XAR3")
+    1591                      .dwattr $C$DW$129, DW_AT_location[DW_OP_reg11]
+    1592              
+    1593              $C$DW$130       .dwtag  DW_TAG_TI_assign_register
+    1594                      .dwattr $C$DW$130, DW_AT_name("AR4")
+    1595                      .dwattr $C$DW$130, DW_AT_location[DW_OP_reg12]
+    1596              
+    1597              $C$DW$131       .dwtag  DW_TAG_TI_assign_register
+    1598                      .dwattr $C$DW$131, DW_AT_name("XAR4")
+    1599                      .dwattr $C$DW$131, DW_AT_location[DW_OP_reg13]
+    1600              
+    1601              $C$DW$132       .dwtag  DW_TAG_TI_assign_register
+    1602                      .dwattr $C$DW$132, DW_AT_name("AR5")
+    1603                      .dwattr $C$DW$132, DW_AT_location[DW_OP_reg14]
+    1604              
+    1605              $C$DW$133       .dwtag  DW_TAG_TI_assign_register
+    1606                      .dwattr $C$DW$133, DW_AT_name("XAR5")
+    1607                      .dwattr $C$DW$133, DW_AT_location[DW_OP_reg15]
+    1608              
+    1609              $C$DW$134       .dwtag  DW_TAG_TI_assign_register
+    1610                      .dwattr $C$DW$134, DW_AT_name("AR6")
+    1611                      .dwattr $C$DW$134, DW_AT_location[DW_OP_reg16]
+    1612              
+    1613              $C$DW$135       .dwtag  DW_TAG_TI_assign_register
+    1614                      .dwattr $C$DW$135, DW_AT_name("XAR6")
+    1615                      .dwattr $C$DW$135, DW_AT_location[DW_OP_reg17]
+    1616              
+    1617              $C$DW$136       .dwtag  DW_TAG_TI_assign_register
+    1618                      .dwattr $C$DW$136, DW_AT_name("AR7")
+    1619                      .dwattr $C$DW$136, DW_AT_location[DW_OP_reg18]
+    1620              
+    1621              $C$DW$137       .dwtag  DW_TAG_TI_assign_register
+    1622                      .dwattr $C$DW$137, DW_AT_name("XAR7")
+    1623                      .dwattr $C$DW$137, DW_AT_location[DW_OP_reg19]
+    1624              
+    1625                      .dwendtag $C$DW$CU
+    1626              
+
+No Assembly Errors, No Assembly Warnings

@@ -1,0 +1,89 @@
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:52 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/DelayUs.asm                     PAGE    1
+
+       1              **********************************************************************
+       2              * File: DelayUs.asm                                                  *
+       3              * DSP: TMS320F2812, TMS320F2811, TMS320F2810                         *
+       4              * Author: David M. Alter, Texas Instruments Inc.                     *
+       5              * History:                                                           *
+       6              *   11/13/05 - added save/restore of ST1 to preserve EALLOW setting  *
+       7              *              (D. Alter)                                            *
+       8              *   05/02/05 - added watchdog servicing in outer loop (D. Alter)     *
+       9              *   02/11/05 - original (D. Alter)                                   *
+      10              *   05/02/05 - added watchdog servicing in outer loop (D. Alter)     *
+      11              *   09/01/04 - fixed counter bug by zeroing AH (D. Alter)            *
+      12              *   09/08/03 - original (D. Alter)                                   *
+      13              **********************************************************************
+      14              
+      15        7025  WDKEY   .set    0x7025
+      16              
+      17              **********************************************************************
+      18              * Function: DelayUs()                                                *
+      19              * Description: Implements a time delay.                              *
+      20              * DSP: TMS320F2812, TMS320F2811, TMS320F2810                         *
+      21              * Last Modified: 05/02/05                                            *
+      22              * Include files: none                                                *
+      23              * Function Prototype: void DelayUs(unsigned int)                     *
+      24              * Useage: DelayUs(Usec);                                             *
+      25              * Input Parameters: unsigned int Usec = time delay in microseconds   *
+      26              * Return Value: none                                                 *
+      27              * Notes:                                                             *
+      28              *   1) The execution time of this routine is based upon a 150 MHz    *
+      29              *      CPUCLK.  It also assumes that the function executes out of    *
+      30              *      internal RAM.  If executing out of internal flash, the        *
+      31              *      execution speed will be slightly slower.  However, the inner  *
+      32              *      loop of this function is essentially invariant to the memory  *
+      33              *      it is running in.  Therefore, even when running in flash      *
+      34              *      memory, the basic loop time will be only slightly longer than *
+      35              *      1 us.                                                         *
+      36              *                                                                    *
+      37              *   2) The outer loop of this function is interruptible (i.e., every *
+      38              *      1 us).  The user should disable interrupts before calling the *
+      39              *      function if they need an exact delay time, as opposed to a    *
+      40              *      minimum delay time.                                           *
+      41              *                                                                    *
+      42              **********************************************************************
+      43                     .def _DelayUs
+      44 00000000              .text
+      45              
+      46 00000000       _DelayUs:
+      47 00000000 9B00          MOVB AH, #0                   ;Zero AH
+      48 00000001 7608          PUSH ST1                      ;Save ST1 to preserve EALLOW setting
+      49              
+      50 00000002       DelayUs1:                             ;Outer loop
+      51              
+      52              ;Service the watchdog in case it is active
+      53 00000002 7622          EALLOW
+      54 00000003 B9C0          MOVZ DP, #(WDKEY>>6)
+      55 00000004 2825          MOV @WDKEY, #0x0055
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:52 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/DelayUs.asm                     PAGE    2
+
+         00000005 0055 
+      56 00000006 2825          MOV @WDKEY, #0x00AA
+         00000007 00AA 
+      57 00000008 761A          EDIS
+      58              
+      59              ;Proceed with the inner loop
+      60 00000009 F68A          RPT #138                      ;Inner loop
+      61 0000000a 7700       || NOP
+      62              
+      63 0000000b 1901          SUBB ACC,#1                   ;Decrement outer loop counter
+      64 0000000c 56C2          BF DelayUs1, GT               ;Branch for outer loop
+         0000000d FFF6 
+      65              
+      66              ;Finish up
+      67 0000000e 7600          POP ST1                       ;Restore ST1
+      68 0000000f 0006          LRETR                         ;Return
+      69              
+      70              ;end of function DelayUs() ******************************************
+      71              
+      72              
+      73              ;end of file DelayUs.asm
+      74                     .end
+
+No Assembly Errors, No Assembly Warnings
