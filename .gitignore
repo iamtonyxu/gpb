@@ -85,3 +85,8 @@
 *F2812_example_ccs3
 *libero_setup
 *png
+*.metadata
+*.jxbrowser.userdata
+*dvt
+RemoteSystemsTempFiles
+Debug
