@@ -1,15 +1,15 @@
 /*
 // TI File $Revision: /main/2 $
-// Checkin $Date: April 28, 2005   15:20:00 $
+// Checkin $Date: April 28, 2005   15:19:56 $
 //###########################################################################
 //
-// FILE:	F2812_XintfBoot.cmd
+// FILE:	F2812.cmd
 //
-// TITLE:	Linker Command File For F2812 Device with boot from XINTF Zone 7
+// TITLE:	Linker Command File For F2812 Device
 //
 //###########################################################################
-// $TI Release: DSP281x C/C++ Header Files V1.20 $
-// $Release Date: July 27, 2009 $
+// $TI Release: $
+// $Release Date: $
 //###########################################################################
 */
 
@@ -69,7 +69,7 @@ PAGE 0:    /* Program Memory */
    ZONE1       : origin = 0x004000, length = 0x002000     /* XINTF zone 1 */
    RAML0       : origin = 0x008000, length = 0x001000     /* on-chip RAM block L0 */
    ZONE2       : origin = 0x080000, length = 0x080000     /* XINTF zone 2 */
-   ZONE6       : origin = 0x100000, length = 0x040000     /* XINTF zone 6 allocated for code */
+   ZONE6       : origin = 0x100000, length = 0x080000     /* XINTF zone 6 */
    OTP         : origin = 0x3D7800, length = 0x000800     /* on-chip OTP */
    FLASHJ      : origin = 0x3D8000, length = 0x002000     /* on-chip FLASH */
    FLASHI      : origin = 0x3DA000, length = 0x002000     /* on-chip FLASH */
@@ -83,10 +83,8 @@ PAGE 0:    /* Program Memory */
    CSM_RSVD    : origin = 0x3F7F80, length = 0x000076     /* Part of FLASHA.  Program with all 0x0000 when CSM is in use. */
    BEGIN       : origin = 0x3F7FF6, length = 0x000002     /* Part of FLASHA.  Used for "boot to Flash" bootloader mode. */
    CSM_PWL     : origin = 0x3F7FF8, length = 0x000008     /* Part of FLASHA.  CSM password locations in FLASHA */
-
-   RAMH0       : origin = 0x3F8000, length = 0x002000     /* on-chip RAM block H0 */
    
-/* ZONE7       : origin = 0x3FC000, length = 0x003FC0 */   /* XINTF zone 7 available if MP/MCn=1 */ 
+/* ZONE7       : origin = 0x3FC000, length = 0x003FC0     /* XINTF zone 7 available if MP/MCn=1 */ 
    ROM         : origin = 0x3FF000, length = 0x000FC0     /* Boot ROM available if MP/MCn=0 */
    RESET       : origin = 0x3FFFC0, length = 0x000002     /* part of boot ROM (MP/MCn=0) or XINTF zone 7 (MP/MCn=1) */
    VECTORS     : origin = 0x3FFFC2, length = 0x00003E     /* part of boot ROM (MP/MCn=0) or XINTF zone 7 (MP/MCn=1) */
@@ -98,9 +96,8 @@ PAGE 1 :   /* Data Memory */
    RAMM0       : origin = 0x000000, length = 0x000400     /* on-chip RAM block M0 */
    RAMM1       : origin = 0x000400, length = 0x000400     /* on-chip RAM block M1 */
    RAML1       : origin = 0x009000, length = 0x001000     /* on-chip RAM block L1 */
-   ZONE6       : origin = 0x104000, length = 0x004000     /* XINTF zone 6 allocated for data */
    FLASHB      : origin = 0x3F4000, length = 0x002000     /* on-chip FLASH */
-
+   RAMH0       : origin = 0x3F8000, length = 0x002000     /* on-chip RAM block H0 */
 }
 
 /* Allocate sections to memory blocks.
@@ -114,39 +111,51 @@ SECTIONS
 {
  
    /* Allocate program areas: */
-   .cinit              : > ZONE6      PAGE = 0
-   .pinit              : > ZONE6,     PAGE = 0
-   .text               : > ZONE6      PAGE = 0
-   codestart           : > BEGIN      PAGE = 0
-   reset_vec           : > RESET      PAGE = 0
-   ramfuncs            : LOAD = ZONE6, 
-                         RUN = RAMH0, 
+   .cinit              : > FLASHA      PAGE = 0
+   .pinit              : > FLASHA,     PAGE = 0
+   .text               : > FLASHA      PAGE = 0
+   codestart           : > BEGIN       PAGE = 0
+                         
+#ifdef __TI_COMPILER_VERSION__
+   #if __TI_COMPILER_VERSION__ >= 15009000
+    .TI.ramfunc : {} LOAD = FLASHD,
+                         RUN = RAML0,
                          LOAD_START(_RamfuncsLoadStart),
                          LOAD_END(_RamfuncsLoadEnd),
                          RUN_START(_RamfuncsRunStart),
                          PAGE = 0
+   #else
+   ramfuncs            : LOAD = FLASHD, 
+                         RUN = RAML0, 
+                         LOAD_START(_RamfuncsLoadStart),
+                         LOAD_END(_RamfuncsLoadEnd),
+                         RUN_START(_RamfuncsRunStart),
+                         PAGE = 0   
+   #endif
+#endif
 
    csmpasswds          : > CSM_PWL     PAGE = 0
-   ramdata             : > RAMM1       PAGE = 1
-
+   csm_rsvd            : > CSM_RSVD    PAGE = 0
+   
    /* Allocate uninitalized data sections: */
    .stack              : > RAMM0       PAGE = 1
-   .ebss               : > ZONE6       PAGE = 1
-   .esysmem            : > ZONE6       PAGE = 1
+   .ebss               : > RAML1       PAGE = 1
+   .esysmem            : > RAMH0       PAGE = 1
 
    /* Initalized sections go in Flash */
-   .econst             : > ZONE6,      PAGE = 1
-   .switch             : > ZONE6,      PAGE = 1      
+   /* For SDFlash to program these, they must be allocated to page 0 */
+   .econst             : > FLASHA      PAGE = 0
+   .switch             : > FLASHA      PAGE = 0      
 
    /* Allocate IQ math areas: */
-   IQmath              : > ZONE6       PAGE = 0                  /* Math Code */
+   IQmath              : > FLASHC      PAGE = 0                  /* Math Code */
    IQmathTables        : > ROM         PAGE = 0, TYPE = NOLOAD   /* Math Tables In ROM */
 
    /* .reset is a standard section used by the compiler.  It contains the */ 
    /* the address of the start of _c_int00 for C Code.   /*
-   /* When booting from XINTF this is a pointer to the c_init routine */
-   /* For this example we will go through codestart first, in order to*/
-   /* disable the watchdog before the init.  Thus this is DSECT       */
+   /* When using the boot ROM this section and the CPU vector */
+   /* table is not needed.  Thus the default type is set here to  */
+   /* DSECT  */ 
    .reset              : > RESET,      PAGE = 0, TYPE = DSECT
    vectors             : > VECTORS     PAGE = 0, TYPE = DSECT
 

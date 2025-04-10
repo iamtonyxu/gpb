@@ -77,7 +77,22 @@ extern cregister volatile unsigned int IER;
 #define BIT14   0x4000
 #define BIT15   0x8000
 
-
+#define ADCIN0      0
+#define ADCIN1      1
+#define ADCIN2      2
+#define ADCIN3      3
+#define ADCIN4      4
+#define ADCIN5      5
+#define ADCIN6      6
+#define ADCIN7      7
+#define ADCIN8      8
+#define ADCIN9      9
+#define ADCIN10     10
+#define ADCIN11     11
+#define ADCIN12     12
+#define ADCIN13     13
+#define ADCIN14     14
+#define ADCIN15     15
 
 //---------------------------------------------------------------------------
 // For Portability, User Is Recommended To Use Following Data Type Size
@@ -86,6 +101,7 @@ extern cregister volatile unsigned int IER;
 
 #ifndef DSP28_DATA_TYPES
 #define DSP28_DATA_TYPES
+typedef unsigned char       Byte;
 typedef int                 int16;
 typedef long                int32;
 typedef long long           int64;
