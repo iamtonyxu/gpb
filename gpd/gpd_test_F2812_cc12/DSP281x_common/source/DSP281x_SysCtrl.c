@@ -66,7 +66,7 @@ void InitSysCtrl(void)
 //                   CAUTION
 // This function MUST be executed out of RAM. Executing it
 // out of OTP/Flash will yield unpredictable results
-//#pragma CODE_SECTION(InitFlash, "ramfuncs") // Not sure this line is a must or not?
+#pragma CODE_SECTION(InitFlash, "ramfuncs") // Not sure this line is a must or not?
 void InitFlash(void)
 {
    EALLOW;

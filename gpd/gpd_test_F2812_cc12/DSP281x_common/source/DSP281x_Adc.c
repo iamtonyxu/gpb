@@ -40,9 +40,9 @@ void InitAdc(void)
  bit 0         0:      SMODE_SEL, 0=sequential sampling, 1=simultaneous sampling
 */
 
-    DSP28x_usDelay(10000);                     // Wait 10 ms before setting ADCPWDN
+    DELAY_US(10000);                     // Wait 10 ms before setting ADCPWDN
     AdcRegs.ADCTRL3.bit.ADCPWDN = 1;    // Set ADCPWDN=1 to power main ADC
-    DSP28x_usDelay(1000);                      // Wait 1 ms before using the ADC
+    DELAY_US(1000);                      // Wait 1 ms before using the ADC
 
 /*** Configure the other ADC register ***/
     AdcRegs.ADCTRL3.bit.SMODE_SEL = 1;      // Set up Simultaneous sampling mode
@@ -127,7 +127,7 @@ void GetAdcCalibrationFactors(float *Gain, int32 *OffSet)
         StartConversion();
         Vref += ((ResltReg[ADCIN5] >> 4) & 0x0fff);
         Vagnd += ((ResltReg[ADCIN6] >> 4) & 0x0fff);
-        DSP28x_usDelay(8000); // Delay for 10mS
+        DELAY_US(8000); // Delay for 10mS
     }
 
     Vref /= 1024;   // Take average

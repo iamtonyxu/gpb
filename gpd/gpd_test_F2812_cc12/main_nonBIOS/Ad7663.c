@@ -251,7 +251,7 @@ int Ad7663MuxSelect(Uint16 Chnl)
 				GpioDataRegs.GPBCLEAR.bit.GPIOB2 = 1;	// A2 = 0
 				break;
 		}
-		DSP28x_usDelay(5); // Delay for 6.25uS to allow input to ADC to settle
+		DELAY_US(5); // Delay for 6.25uS to allow input to ADC to settle
 		return TRUE;
 	}
 

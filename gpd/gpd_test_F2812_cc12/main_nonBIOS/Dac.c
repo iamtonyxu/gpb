@@ -80,7 +80,7 @@ void TxDacData(Uint16 DacChnl, float Volts)
 	
 	DacChipSel(TRUE);			// Assert Chip select 
 	DacFrameStart(TRUE);		// Assert FS 
-	DSP28x_usDelay(0);
+	DELAY_US(1);
 	TxSpi(Packet);
 	while(SpiRxNotReady()) {} 	// Wait for complete SPI Transmission 
 	DacFrameStart(FALSE);		// De-Assert FS
@@ -136,7 +136,7 @@ void DacFrameStart(Uint16 Mode)
 {
 	if(Mode) {
 		GpioDataRegs.GPDSET.bit.GPIOD6 = 1;		// SPIFS = HIGH
-		DSP28x_usDelay(0);
+		DELAY_US(1);
 		GpioDataRegs.GPDCLEAR.bit.GPIOD6 = 1;	// SPIFS = LOW
 	}
 	else {
@@ -164,7 +164,7 @@ void DacFrameStart(Uint16 Mode)
 void LoadDac(void)
 {
 	GpioDataRegs.GPDCLEAR.bit.GPIOD5 = 1;	// Set LD_DA LOW
-	DSP28x_usDelay(5);
+	DELAY_US(5);
 	GpioDataRegs.GPDSET.bit.GPIOD5  = 1;	// Set LD_DA HIGH
 	
 } /* LoadDac() */

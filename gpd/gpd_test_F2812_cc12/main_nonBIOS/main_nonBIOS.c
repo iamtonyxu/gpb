@@ -21,7 +21,7 @@
 #include "Eeprom.h"
 #include "Max7301.h"
 
-// 申明外部变量(这里变量将在F2812.cmd里定义)
+// 锟斤拷锟斤拷锟解部锟斤拷锟斤拷(锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟紽2812.cmd锟斤定锟斤拷)
 extern Uint16 RamfuncsLoadStart;
 extern Uint16 RamfuncsLoadEnd;
 extern Uint16 RamfuncsRunStart;
@@ -56,7 +56,7 @@ int main(void)
     IER = 0x0000;                       // Disable CPU interrupts
     IFR = 0x0000;                       // Clear interrupt flags
 
-    //初始化PIE中断向量表，并使其指向中断服务子程序（ISR）
+    //锟斤拷始锟斤拷PIE锟叫讹拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷使锟斤拷指锟斤拷锟叫断凤拷锟斤拷锟接筹拷锟斤拷ISR锟斤拷
     InitPieVectTable();
 
     /*** Enable interrupts ***/
@@ -86,7 +86,7 @@ int main(void)
         GpioDataRegs.GPATOGGLE.bit.GPIOA1 = 1;
         GpioDataRegs.GPATOGGLE.bit.GPIOA2 = 1;
         for(idx = 0; idx < 20; idx++) /* Total Delay ~ 1-sec */
-            DSP28x_usDelay(40000); /* Delay 50mS */
+            DELAY_US(40000); /* Delay 50mS */
     }
 
     /* Calculate the Gain and Offset Calibration factors for the DSP-ADC.
@@ -476,14 +476,14 @@ int main(void)
                     GpioDataRegs.GPBSET.bit.GPIOB6 = 1;
                     GpioDataRegs.GPBCLEAR.bit.GPIOB7 = 1;
                     for(idx = 0; idx < 20; idx++) /* Total Delay ~ 1-sec */
-                        DSP28x_usDelay(40000); /* Delay 50mS */
+                        DELAY_US(40000); /* Delay 50mS */
                     GpioDataRegs.GPBSET.bit.GPIOB7 = 1;
                     GpioDataRegs.GPBCLEAR.bit.GPIOB6 = 1;
                     for(idx = 0; idx < 20; idx++) /* Total Delay ~ 1-sec */
-                        DSP28x_usDelay(40000); /* Delay 50mS */
+                        DELAY_US(40000); /* Delay 50mS */
                     GpioDataRegs.GPBCLEAR.bit.GPIOB7 = 1;
                     for(idx = 0; idx < 20; idx++) /* Total Delay ~ 1-sec */
-                        DSP28x_usDelay(40000); /* Delay 50mS */
+                        DELAY_US(40000); /* Delay 50mS */
                     GpioDataRegs.GPBSET.bit.GPIOB6 = 1;
                     GpioDataRegs.GPBSET.bit.GPIOB7 = 1;
                 break;
@@ -665,7 +665,7 @@ int main(void)
                 TxMessage.sMsgStruct.Cmd = '~';
                 TxMessage.sMsgStruct.Length = 0;
         }
-        DSP28x_usDelay(65535); /* Delay approximately 82mS */
+        DELAY_US(65535); /* Delay approximately 82mS */
         TxECanMsg(15, &TxMessage);
         GpioDataRegs.GPATOGGLE.bit.GPIOA0 = 1;
         GpioDataRegs.GPATOGGLE.bit.GPIOA1 = 1;
