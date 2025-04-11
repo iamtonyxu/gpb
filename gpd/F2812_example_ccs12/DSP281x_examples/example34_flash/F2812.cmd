@@ -115,7 +115,8 @@ SECTIONS
    .pinit              : > FLASHA,     PAGE = 0
    .text               : > FLASHA      PAGE = 0
    codestart           : > BEGIN       PAGE = 0
-                         
+
+/*
 #ifdef __TI_COMPILER_VERSION__
    #if __TI_COMPILER_VERSION__ >= 15009000
     .TI.ramfunc : {} LOAD = FLASHD,
@@ -133,6 +134,14 @@ SECTIONS
                          PAGE = 0   
    #endif
 #endif
+*/
+
+   ramfuncs            : LOAD = FLASHD,
+                         RUN = RAML0,
+                         LOAD_START(_RamfuncsLoadStart),
+                         LOAD_END(_RamfuncsLoadEnd),
+                         RUN_START(_RamfuncsRunStart),
+                         PAGE = 0
 
    csmpasswds          : > CSM_PWL     PAGE = 0
    csm_rsvd            : > CSM_RSVD    PAGE = 0

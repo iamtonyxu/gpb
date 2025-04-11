@@ -81,6 +81,11 @@ void init_eva_timer2(void);
 void init_evb_timer3(void);
 void init_evb_timer4(void);
 
+// 本文件中用到的函数需要先申明，如下所示：
+void delay_loop(void);
+void Gpio_select(void);
+void Gpio_example1(void);
+
 //本例使用的全局变量
 Uint32 EvaTimer1InterruptCount;
 Uint32 EvaTimer2InterruptCount;
@@ -152,6 +157,9 @@ void main(void)
 // 该函数必须在RAM里运行
    InitFlash();
 
+   // Init GPIO
+   Gpio_select();
+
    //初始化计数值为 0
    EvaTimer1InterruptCount = 0;
    EvaTimer2InterruptCount = 0;
@@ -183,6 +191,7 @@ void main(void)
    while(1)
    {
        LoopCount++;
+       Gpio_example1();
    }
 
 } 
@@ -371,7 +380,75 @@ interrupt void evb_timer4_isr(void)
 
 }
 
+//延迟子函数
+void delay_loop()
+{
+    Uint32      i;
+    Uint32      j;
+    for(i=0;i<32;i++)
+    for (j = 0; j < 100000; j++) {}
+}
 
+
+void Gpio_example1(void)
+{
+   // Example 1:
+   // 取反I/O口使用 DATA寄存器
+   while(1)
+   {
+       GpioDataRegs.GPADAT.all    =0x00FF;
+       GpioDataRegs.GPBDAT.all    =0x0000;
+       GpioDataRegs.GPDDAT.all    =0x0000;
+       GpioDataRegs.GPEDAT.all    =0x0000;
+       GpioDataRegs.GPFDAT.all    =0x0000;
+       GpioDataRegs.GPGDAT.all    =0x0000;
+       delay_loop();
+
+       GpioDataRegs.GPADAT.all    =0x0000;
+       GpioDataRegs.GPBDAT.all    =0x0000;
+       GpioDataRegs.GPDDAT.all    =0x0000;    // Four I/Os only
+       GpioDataRegs.GPEDAT.all    =0x0000;    // ThreeI/Os only
+       GpioDataRegs.GPFDAT.all    =0x0000;
+       GpioDataRegs.GPGDAT.all    =0x0000;    // Two  I/Os only
+       delay_loop();
+    }
+}
+
+void Gpio_select(void)
+{
+
+    Uint16 var1;
+    Uint16 var2;
+    Uint16 var3;
+
+    var1= 0x0000;       // 设置GPIO的功能为I/O口
+    var2= 0xFFFF;       // 设置GPIO的方向为输出
+    var3= 0x0000;       // 设置输入限定值
+
+    EALLOW;
+
+    GpioMuxRegs.GPAMUX.all=var1;
+    GpioMuxRegs.GPBMUX.all=var1;
+    GpioMuxRegs.GPDMUX.all=var1;
+    GpioMuxRegs.GPFMUX.all=var1;
+    GpioMuxRegs.GPEMUX.all=var1;
+    GpioMuxRegs.GPGMUX.all=var1;
+
+    GpioMuxRegs.GPADIR.all=var2;        // 配置GPIO口为输出口
+    GpioMuxRegs.GPBDIR.all=var2;
+    GpioMuxRegs.GPDDIR.all=var2;
+    GpioMuxRegs.GPEDIR.all=var2;
+    GpioMuxRegs.GPFDIR.all=var2;
+    GpioMuxRegs.GPGDIR.all=var2;
+
+    GpioMuxRegs.GPAQUAL.all=var3;       // 设置输入限定值
+    GpioMuxRegs.GPBQUAL.all=var3;
+    GpioMuxRegs.GPDQUAL.all=var3;
+    GpioMuxRegs.GPEQUAL.all=var3;
+
+    EDIS;
+
+}
 //===========================================================================
 // No more.
 //===========================================================================

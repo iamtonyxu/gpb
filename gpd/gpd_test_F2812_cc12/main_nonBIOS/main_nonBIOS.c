@@ -81,7 +81,7 @@ int main(void)
     asm(" CLRC INTM, DBGM");            // Enable global interrupts and realtime debug
 
     /* Toggle D20, D21, and D27 to indicate successful boot */
-    for(Cnt = 0; Cnt < 3; Cnt++) {
+    for(Cnt = 0; Cnt < 3*2; Cnt++) {
         GpioDataRegs.GPATOGGLE.bit.GPIOA0 = 1;
         GpioDataRegs.GPATOGGLE.bit.GPIOA1 = 1;
         GpioDataRegs.GPATOGGLE.bit.GPIOA2 = 1;

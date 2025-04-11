@@ -106,11 +106,6 @@
 			<locationURI>PARENT-2-PROJECT_LOC/DSP281x_common/source/DSP281x_Xintf.c</locationURI>
 		</link>
 		<link>
-			<name>DSP281x_XintfBootReset.asm</name>
-			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/DSP281x_common/source/DSP281x_XintfBootReset.asm</locationURI>
-		</link>
-		<link>
 			<name>DSP281x_usDelay.asm</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/DSP281x_common/source/DSP281x_usDelay.asm</locationURI>
