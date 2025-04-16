@@ -1,0 +1,35 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CG1349 :	| Running Verilog Compiler in System Verilog mode
+@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\CLK_DIV.V":21:7:21:15|Synthesizing module CLOCK_DIV in library work.
+@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\dual_port_ram.v":19:7:19:18|Synthesizing module DP_RAM_2R_1W in library work.
+@N: CL134 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\dual_port_ram.v":53:1:53:6|Found RAM ram, depth=1024, width=16
+@N: CL134 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\dual_port_ram.v":53:1:53:6|Found RAM ram, depth=1024, width=16
+@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\ADC_AD7663AS.V":59:7:59:18|Synthesizing module ADC_AD7663AS in library work.
+@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\ADDR_DECODER.v":51:7:51:17|Synthesizing module AdderDecode in library work.
+@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\CLK_GEN.v":32:7:32:12|Synthesizing module ClkGen in library work.
+@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\DAC_AD8803AR.v":30:7:30:18|Synthesizing module DAC_AD8803AR in library work.
+@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\FPGA_WD.v":19:7:19:14|Synthesizing module FPGA_WDI in library work.
+@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\GANTRY_MOT.v":31:7:31:18|Synthesizing module Gantry_Motor in library work.
+@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\GPIO.v":19:7:19:10|Synthesizing module GPIO in library work.
+@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\LIFT_MOT.v":31:7:31:16|Synthesizing module Lift_Motor in library work.
+@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\Timer_Counter.v":19:7:19:19|Synthesizing module TIMER_COUNTER in library work.
+@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\FREQ_COUNTER.v":24:7:24:24|Synthesizing module OSCILLATOR_COUNTER in library work.
+@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\pci_emu_target.v":33:7:33:20|Synthesizing module PCI_EMU_TARGET in library work.
+@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\ScratchPadRegister.v":20:7:20:26|Synthesizing module SCRATCH_PAD_REGISTER in library work.
+@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\component\work\Top\Top.v":9:7:9:9|Synthesizing module Top in library work.
+@N: CL201 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\LIFT_MOT.v":141:4:141:9|Trying to extract state machine for register phase_cnt.
+@N: CL159 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\LIFT_MOT.v":42:20:42:25|Input SYSCLK is unused.
+@N: CL159 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\GPIO.v":23:20:23:28|Input GPIO_ADDR is unused.
+@N: CL159 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\GPIO.v":34:20:34:27|Input ADMUX_RE is unused.
+@N: CL159 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\GPIO.v":36:20:36:27|Input ADSEL_RE is unused.
+@N: CL159 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\GPIO.v":38:20:38:25|Input STS_RE is unused.
+@N: CL159 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\GPIO.v":40:20:40:35|Input GANTRY_96V_IF_RE is unused.
+@N: CL159 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\GPIO.v":42:20:42:33|Input LIFT_96V_IF_RE is unused.
+@N: CL201 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\GANTRY_MOT.v":141:4:141:9|Trying to extract state machine for register phase_cnt.
+@N: CL159 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\GANTRY_MOT.v":42:20:42:25|Input SYSCLK is unused.
+@N: CL159 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\FPGA_WD.v":20:12:20:18|Input OPB_CLK is unused.
+@N: CL201 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\ADC_AD7663AS.V":133:4:133:9|Trying to extract state machine for register status.
+@N: CL201 :"C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\hdl\ADC_AD7663AS.V":133:4:133:9|Trying to extract state machine for register state.
+@N|Running in 64-bit mode
+

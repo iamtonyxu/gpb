@@ -1,0 +1,66 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-3
+Install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: LAPTOP-6FQD1N4B
+
+Implementation : synthesis
+
+# Written on Sat Apr 12 14:19:06 2025
+
+##### FILES SYNTAX CHECKED ##############################################
+Constraint File(s):      "C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\designer\Top\synthesis.fdc"
+
+#Run constraint checker to find more issues with constraints.
+#########################################################################
+
+
+
+No issues found in constraint syntax.
+
+
+
+Clock Summary
+*************
+
+          Start                                      Requested     Requested     Clock        Clock          Clock
+Level     Clock                                      Frequency     Period        Type         Group          Load 
+------------------------------------------------------------------------------------------------------------------
+0 -       Top|PCI_CLK2                               100.0 MHz     10.000        inferred     (multiple)     474  
+                                                                                                                  
+0 -       Top|SYSCLK                                 100.0 MHz     10.000        inferred     (multiple)     262  
+                                                                                                                  
+0 -       ADC_AD7663AS|ram_wr_clk_inferred_clock     100.0 MHz     10.000        inferred     (multiple)     16   
+                                                                                                                  
+0 -       CLOCK_DIV_4|N_17_inferred_clock            100.0 MHz     10.000        inferred     (multiple)     16   
+                                                                                                                  
+0 -       Gantry_Motor|N_1_inferred_clock            100.0 MHz     10.000        inferred     (multiple)     13   
+                                                                                                                  
+0 -       Lift_Motor|N_1_inferred_clock              100.0 MHz     10.000        inferred     (multiple)     13   
+==================================================================================================================
+
+
+Clock Load Summary
+******************
+
+                                           Clock     Source                                        Clock Pin                                      Non-clock Pin                                      Non-clock Pin                            
+Clock                                      Load      Pin                                           Seq Example                                    Seq Example                                        Comb Example                             
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Top|PCI_CLK2                               474       PCI_CLK2(port)                                DAC_AD8803AR_0.trig.C                          OSCILLATOR_COUNTER_0.counter.count[15:0].D[15]     I_1.A(CLKINT)                            
+                                                                                                                                                                                                                                              
+Top|SYSCLK                                 262       SYSCLK(port)                                  DAC_AD8803AR_0.done.C                          Lift_Motor_0.pwm.D[0]                              I_2.A(CLKINT)                            
+                                                                                                                                                                                                                                              
+ADC_AD7663AS|ram_wr_clk_inferred_clock     16        ADC_AD7663AS_0.ram_wr_clk.Q[0](dffre)         ADC_AD7663AS_0.data_in_ram.ram[15:0].CLK       -                                                  -                                        
+                                                                                                                                                                                                                                              
+CLOCK_DIV_4|N_17_inferred_clock            16        ClkGen_0.pulse2mhz_div.clkout.Q[0](dffre)     OSCILLATOR_COUNTER_0.counter.count[15:0].C     ClkGen_0.pulse2mhz_div.clkout.D[0]                 ClkGen_0.pulse2mhz_div.clkout_2.I[0](inv)
+                                                                                                                                                                                                                                              
+Gantry_Motor|N_1_inferred_clock            13        Gantry_Motor_0.pwm.Q[0](dffre)                Gantry_Motor_0.pwm_cmd.C                       -                                                  Gantry_Motor_0.I_1.A(CLKINT)             
+                                                                                                                                                                                                                                              
+Lift_Motor|N_1_inferred_clock              13        Lift_Motor_0.pwm.Q[0](dffre)                  Lift_Motor_0.pwm_cmd.C                         -                                                  Lift_Motor_0.I_1.A(CLKINT)               
+==============================================================================================================================================================================================================================================

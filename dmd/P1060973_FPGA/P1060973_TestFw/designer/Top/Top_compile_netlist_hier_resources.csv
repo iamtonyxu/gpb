@@ -1,0 +1,25 @@
+Detailed Resource Usage
+Module Name,Fabric 4LUT,Fabric DFF,Interface 4LUT,Interface DFF,Single-Ended I/O,LSRAM (20K),Chip Globals
+ADC_AD7663AS_0/Primitives,285,155,0,0,0,0,0
+ADC_AD7663AS_0/aqclkdiv/Primitives,43,17,0,0,0,0,0
+ADC_AD7663AS_0/data_in_ram/Primitives,0,0,36,36,0,1,0
+ADC_AD7663AS_0/sclk/Primitives,43,17,0,0,0,0,1
+AdderDecode_0/Primitives,134,6,0,0,0,0,0
+ClkGen_0/Primitives,16,3,0,0,0,0,0
+ClkGen_0/clk_16khz_div/Primitives,35,17,0,0,0,0,0
+ClkGen_0/pulse200khz_div/Primitives,37,17,0,0,0,0,0
+ClkGen_0/pulse20khz_div/Primitives,36,17,0,0,0,0,0
+ClkGen_0/pulse2khz_div/Primitives,35,17,0,0,0,0,0
+ClkGen_0/pulse2mhz_div/Primitives,25,17,0,0,0,0,1
+ClkGen_0/wdclk_div/Primitives,35,17,0,0,0,0,1
+DAC_AD8803AR_0/Primitives,57,78,0,0,0,0,0
+DAC_AD8803AR_0/tx_clk_mod/Primitives,43,17,0,0,0,0,1
+FPGA_WDI_0/Primitives,5,5,0,0,0,0,0
+GPIO_0/Primitives,65,67,0,0,0,0,0
+Gantry_Motor_0/Primitives,21,16,0,0,0,0,1
+Lift_Motor_0/Primitives,21,16,0,0,0,0,1
+OSCILLATOR_COUNTER_0/Primitives,27,35,0,0,0,0,0
+OSCILLATOR_COUNTER_0/counter/Primitives,17,16,0,0,0,0,0
+PCI_EMU_TARGET_0/Primitives,48,75,0,0,0,0,0
+Primitives/Primitives,2,0,0,0,159,0,2
+SCRATCH_PAD_REGISTER_0/Primitives,17,48,0,0,0,0,0

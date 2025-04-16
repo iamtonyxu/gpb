@@ -1,0 +1,404 @@
+KEY LIBERO "2024.2"
+KEY CAPTURE "2024.2.0.13"
+KEY DEFAULT_IMPORT_LOC ""
+KEY DEFAULT_OPEN_LOC ""
+KEY ProjectID "0"
+KEY HDLTechnology "VERILOG"
+KEY VERILOGMODE "SYSTEMVERILOG"
+KEY VHDLMODE "VHDL2008"
+KEY SYSTEMVERILOGMFCU "FALSE"
+KEY UseConstraintFlowTechnology "TRUE"
+KEY VendorTechnology_Family "PolarFire"
+KEY VendorTechnology_Die "PA5M100T"
+KEY VendorTechnology_Package "fcg484"
+KEY VendorTechnology_Speed "STD"
+KEY VendorTechnology_DieVoltage "1.0"
+KEY VendorTechnology_PART_RANGE "EXT"
+KEY VendorTechnology_DSW_VCCA_VOLTAGE_RAMP_RATE ""
+KEY VendorTechnology_IO_DEFT_STD "LVCMOS18"
+KEY VendorTechnology_OPCONR ""
+KEY VendorTechnology_PLL_SUPPLY ""
+KEY VendorTechnology_RAD_EXPOSURE ""
+KEY VendorTechnology_RESERVEMIGRATIONPINS "1"
+KEY VendorTechnology_RESTRICTPROBEPINS "1"
+KEY VendorTechnology_RESTRICTSPIPINS "0"
+KEY VendorTechnology_SYSTEM_CONTROLLER_SUSPEND_MODE "0"
+KEY VendorTechnology_TARGETDEVICESFORMIGRATION "MPF100TL;"
+KEY VendorTechnology_TEMPR "EXT"
+KEY VendorTechnology_UNUSED_MSS_IO_RESISTOR_PULL "None"
+KEY VendorTechnology_VCCI_1.2_VOLTR "EXT"
+KEY VendorTechnology_VCCI_1.5_VOLTR "EXT"
+KEY VendorTechnology_VCCI_1.8_VOLTR "EXT"
+KEY VendorTechnology_VCCI_2.5_VOLTR "EXT"
+KEY VendorTechnology_VCCI_3.3_VOLTR "EXT"
+KEY VendorTechnology_VOLTR "EXT"
+KEY ProjectLocation "C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw"
+KEY ProjectDescription ""
+KEY UseRootLocationForLinkedFiles "FALSE"
+KEY RootLocationENVForLinkedFiles ""
+KEY RootLocationForLinkedFiles ""
+KEY GlobalIncludePaths ""
+KEY Pa4PeripheralNewSeq "GOOD"
+KEY MemoryMapDrcSeverity "FALSE"
+KEY LossOfDataDRCSeverity "TRUE"
+KEY IdWidthMismatchDRCSeverity "TRUE"
+KEY SimulationType "VERILOG"
+KEY Vendor "Actel"
+KEY ActiveRoot "Top::work"
+LIST REVISIONS
+VALUE="Impl1",NUM=1
+CURREV=1
+ENDLIST
+LIST GlobalIncludeFileList
+ENDLIST
+LIST FileManager
+VALUE "<project>\component\work\Top\Top.cxf,actgen_cxf"
+STATE="utd"
+TIME="1744437958"
+SIZE="14404"
+ENDFILE
+VALUE "<project>\component\work\Top\Top.v,hdl"
+STATE="utd"
+TIME="1744437958"
+SIZE="31089"
+PARENT="<project>\component\work\Top\Top.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\constraint\io\Top.pdc,io_pdc"
+STATE="utd"
+TIME="1744440392"
+SIZE="10266"
+ENDFILE
+VALUE "<project>\hdl\ADC_AD7663AS.V,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="10967"
+ENDFILE
+VALUE "<project>\hdl\ADDR_DECODER.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="9540"
+ENDFILE
+VALUE "<project>\hdl\CLK_DIV.V,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="1268"
+ENDFILE
+VALUE "<project>\hdl\CLK_GEN.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="5399"
+ENDFILE
+VALUE "<project>\hdl\DAC_AD8803AR.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="3868"
+ENDFILE
+VALUE "<project>\hdl\dual_port_ram.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="1535"
+ENDFILE
+VALUE "<project>\hdl\FPGA_WD.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="1428"
+ENDFILE
+VALUE "<project>\hdl\FREQ_COUNTER.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="3008"
+ENDFILE
+VALUE "<project>\hdl\GANTRY_MOT.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="5477"
+ENDFILE
+VALUE "<project>\hdl\GPIO.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="10145"
+ENDFILE
+VALUE "<project>\hdl\LIFT_MOT.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="5475"
+ENDFILE
+VALUE "<project>\hdl\MOT_PWM_GEN.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="3181"
+ENDFILE
+VALUE "<project>\hdl\pci_emu_target.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="4665"
+ENDFILE
+VALUE "<project>\hdl\ScratchPadRegister.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="1627"
+ENDFILE
+VALUE "<project>\hdl\Timer_Counter.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="1139"
+ENDFILE
+VALUE "<project>\simulation\run.do,do"
+STATE="utd"
+TIME="1744439532"
+SIZE="1611"
+ENDFILE
+VALUE "<project>\simulation\testbench_presynth_simulation.log,log"
+STATE="utd"
+TIME="1744439585"
+SIZE="3510"
+ENDFILE
+VALUE "<project>\stimulus\tb_Top.v,tb_hdl"
+STATE="utd"
+TIME="1744439487"
+SIZE="3252"
+ENDFILE
+VALUE "<project>\synthesis\Top.so,so"
+STATE="utd"
+TIME="1744438752"
+SIZE="232"
+ENDFILE
+VALUE "<project>\synthesis\Top.vm,syn_vm"
+STATE="utd"
+TIME="1744438752"
+SIZE="465369"
+ENDFILE
+VALUE "<project>\synthesis\Top_syn.prj,prj"
+STATE="utd"
+TIME="1744438753"
+SIZE="4276"
+ENDFILE
+VALUE "<project>\synthesis\Top_vm.sdc,syn_sdc"
+STATE="utd"
+TIME="1744438752"
+SIZE="2724"
+ENDFILE
+ENDLIST
+LIST UsedFile
+ENDLIST
+LIST NewModulesInfo
+LIST "Top::work"
+FILE "<project>\component\work\Top\Top.v,hdl"
+LIST AssociatedStimulus
+VALUE "<project>\stimulus\tb_Top.v,tb_hdl"
+ENDLIST
+LIST PNRConstraints
+VALUE "<project>\constraint\io\Top.pdc,io_pdc"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+ENDLIST
+LIST AssociatedStimulus
+LIST Top
+VALUE "<project>\stimulus\tb_Top.v,tb_hdl"
+ENDLIST
+ENDLIST
+LIST Other_Association
+ENDLIST
+LIST SimulationOptions
+UseAutomaticDoFile=true
+IncludeWaveDo=false
+Type=max
+RunTime=1000ns
+Resolution=1ps
+VsimOpt=
+EntityName=testbench
+TopInstanceName=<top>_0
+DoFileName=
+DoFileName2=wave.do
+DoFileParams=
+DisplayDUTWave=false
+LogAllSignals=false
+DisablePulseFiltering=false
+DumpVCD=false
+VCDFileName=power.vcd
+VHDL2008=false
+Verilog2001=false
+SystemVerilog=false
+TimeUnit=1
+TimeUnitBase=ns
+Precision=100
+PrecisionBase=ps
+SdfCorner=slow_lv_ht
+PliPath=C:/Microchip/Libero_SoC_v2024.2/Designer/lib/questasim/pli/pf_crypto_win_questa_me64_pli.dll
+UseCustomPliPath=false
+ENDLIST
+LIST ModelSimLibPath
+UseCustomPath=FALSE
+LibraryPath=
+ENDLIST
+LIST GlobalFlowOptions
+GenerateHDLAfterSynthesis=FALSE
+GenerateHDLAfterPhySynthesis=FALSE
+RunDRCAfterSynthesis=FALSE
+AutoCheckConstraints=TRUE
+UpdateModelSimIni=TRUE
+NoIOMode=FALSE
+PeriInitStandalone=FALSE
+OnDemandBuildDH=TRUE
+EnableViewDraw=FALSE
+UpdateViewDrawIni=TRUE
+GenerateHDLFromSchematic=TRUE
+VmNetlistFlowOn=TRUE
+EnableDesignSeparationOn=FALSE
+EnableSETMitigationOn=FALSE
+DisplayFanoutLimit=10
+AbortFlowOnPDCErrorsOn=TRUE
+AbortFlowOnSDCErrorsOn=TRUE
+AbortFlowOn3.3V_IO_ON=FALSE
+InstantiateInSmartDesign=TRUE
+FlashProInputFile=pdb
+SmartGenCompileReport=T
+ENDLIST
+LIST PhySynthesisOptions
+ENDLIST
+LIST Profiles
+NAME="SoftConsole"
+FUNCTION="SoftwareIDE"
+TOOL="SoftConsole"
+LOCATION="eclipse.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="synplify_Pro"
+FUNCTION="Synthesis"
+TOOL="Synplify Pro ME"
+LOCATION="C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\bin\synplify_pro.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="QuestaSim ME"
+FUNCTION="Simulation"
+TOOL="QuestaSim ME"
+LOCATION="questasim.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="Identify Debugger"
+FUNCTION="IdentifyDebugger"
+TOOL="Identify Debugger"
+LOCATION="identify_debugger.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+ENDLIST
+LIST ProjectState5.1
+LIST "Top::work"
+LIST Impl1
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST ExcludePackageForSimulation
+ENDLIST
+LIST ExcludePackageForSynthesis
+ENDLIST
+LIST IncludeModuleForSimulation
+ENDLIST
+LIST CDBOrder
+ENDLIST
+LIST UserCustomizedFileList
+ENDLIST
+LIST OpenedFileList
+ORIENTATION;HORIZONTAL
+StartPage;StartPage;0
+ACTIVEVIEW;StartPage
+ENDLIST
+LIST ModuleSubBlockList
+LIST "ADC_AD7663AS::work","hdl\ADC_AD7663AS.V","FALSE","FALSE"
+SUBBLOCK "CLOCK_DIV::work","hdl\CLK_DIV.V","FALSE","FALSE"
+SUBBLOCK "DP_RAM_2R_1W::work","hdl\dual_port_ram.v","FALSE","FALSE"
+ENDLIST
+LIST "AdderDecode::work","hdl\ADDR_DECODER.v","FALSE","FALSE"
+ENDLIST
+LIST "ClkGen::work","hdl\CLK_GEN.v","FALSE","FALSE"
+SUBBLOCK "CLOCK_DIV::work","hdl\CLK_DIV.V","FALSE","FALSE"
+ENDLIST
+LIST "CLOCK_DIV::work","hdl\CLK_DIV.V","FALSE","FALSE"
+ENDLIST
+LIST "DAC_AD8803AR::work","hdl\DAC_AD8803AR.v","FALSE","FALSE"
+SUBBLOCK "CLOCK_DIV::work","hdl\CLK_DIV.V","FALSE","FALSE"
+ENDLIST
+LIST "DP_RAM_2R_1W::work","hdl\dual_port_ram.v","FALSE","FALSE"
+ENDLIST
+LIST "FPGA_WDI::work","hdl\FPGA_WD.v","FALSE","FALSE"
+ENDLIST
+LIST "Gantry_Motor::work","hdl\GANTRY_MOT.v","FALSE","FALSE"
+ENDLIST
+LIST "GPIO::work","hdl\GPIO.v","FALSE","FALSE"
+ENDLIST
+LIST "Lift_Motor::work","hdl\LIFT_MOT.v","FALSE","FALSE"
+ENDLIST
+LIST "MotCtrl::work","hdl\MOT_PWM_GEN.v","FALSE","FALSE"
+ENDLIST
+LIST "OSCILLATOR_COUNTER::work","hdl\FREQ_COUNTER.v","FALSE","FALSE"
+SUBBLOCK "TIMER_COUNTER::work","hdl\Timer_Counter.v","FALSE","FALSE"
+ENDLIST
+LIST "PCI_EMU_TARGET::work","hdl\pci_emu_target.v","FALSE","FALSE"
+ENDLIST
+LIST "SCRATCH_PAD_REGISTER::work","hdl\ScratchPadRegister.v","FALSE","FALSE"
+ENDLIST
+LIST "TIMER_COUNTER::work","hdl\Timer_Counter.v","FALSE","FALSE"
+ENDLIST
+LIST "Top::work","component\work\Top\Top.v","TRUE","FALSE"
+SUBBLOCK "ADC_AD7663AS::work","hdl\ADC_AD7663AS.V","FALSE","FALSE"
+SUBBLOCK "AdderDecode::work","hdl\ADDR_DECODER.v","FALSE","FALSE"
+SUBBLOCK "ClkGen::work","hdl\CLK_GEN.v","FALSE","FALSE"
+SUBBLOCK "DAC_AD8803AR::work","hdl\DAC_AD8803AR.v","FALSE","FALSE"
+SUBBLOCK "FPGA_WDI::work","hdl\FPGA_WD.v","FALSE","FALSE"
+SUBBLOCK "GPIO::work","hdl\GPIO.v","FALSE","FALSE"
+SUBBLOCK "Gantry_Motor::work","hdl\GANTRY_MOT.v","FALSE","FALSE"
+SUBBLOCK "Lift_Motor::work","hdl\LIFT_MOT.v","FALSE","FALSE"
+SUBBLOCK "OSCILLATOR_COUNTER::work","hdl\FREQ_COUNTER.v","FALSE","FALSE"
+SUBBLOCK "PCI_EMU_TARGET::work","hdl\pci_emu_target.v","FALSE","FALSE"
+SUBBLOCK "SCRATCH_PAD_REGISTER::work","hdl\ScratchPadRegister.v","FALSE","FALSE"
+ENDLIST
+LIST "tb_Top::work","stimulus\tb_Top.v","FALSE","TRUE"
+SUBBLOCK "Top::work","component\work\Top\Top.v","TRUE","FALSE"
+ENDLIST
+ENDLIST
+LIST ActiveTestBenchList
+ENDLIST
+LIST IOTabList
+VALUE "constraint\io\Top.pdc"
+ENDLIST
+LIST FPTabList
+ENDLIST
+LIST TimingTabList
+ENDLIST
+LIST FDCTabList
+ENDLIST

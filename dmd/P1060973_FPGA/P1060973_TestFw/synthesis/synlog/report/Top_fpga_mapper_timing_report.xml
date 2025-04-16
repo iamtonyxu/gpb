@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- *************************************************************************************
+FILE DESCRIPTION
+Max Top 5 critical clocks will be reported. For rest user needs to refer to Detailed report
+*******************************************************************************************-->
+<report_table display_priority="2" name="Timing Summary">
+<report_link name="Detailed report">
+<data>C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\synthesis\synlog\Top_fpga_mapper.srr</data>
+<title>START OF TIMING REPORT</title>
+</report_link>
+<row>
+<data tcl_name="clock_name">Clock Name</data>
+<data tcl_name="req_freq">Req Freq</data>
+<data tcl_name="est_freq">Est Freq</data>
+<data tcl_name="slack">Slack</data>
+</row>
+<row>
+<data>ADC_AD7663AS|ram_wr_clk_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>CLOCK_DIV_4|N_17_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>522.3 MHz</data>
+<data>8.085</data>
+</row>
+<row>
+<data>Gantry_Motor|N_1_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>765.4 MHz</data>
+<data>8.694</data>
+</row>
+<row>
+<data>Lift_Motor|N_1_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>765.4 MHz</data>
+<data>8.694</data>
+</row>
+<row>
+<data>Top|PCI_CLK2</data>
+<data>100.0 MHz</data>
+<data>78.3 MHz</data>
+<data>-1.385</data>
+</row>
+<row>
+<data>Top|SYSCLK</data>
+<data>100.0 MHz</data>
+<data>169.2 MHz</data>
+<data>4.089</data>
+</row>
+</report_table>

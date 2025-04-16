@@ -90,3 +90,43 @@
 *dvt
 RemoteSystemsTempFiles
 Debug
+
+
+# Libero SoC V2024 - ignore build and generated output directories
+###################### 
+/jbuild/  
+/db/  
+/libero_work/  
+/output/  
+/ipcache/  
+
+# Ignore project intermediate files  
+*.bit  
+*.svf  
+*.sof  
+*.rpd  
+
+# Ignore simulation, synthesis and timing logs and reports  
+*.log  
+*.jou  
+*.wlf  
+*.rep  
+*.sta  
+*.sdc  
+*.ngr  
+*.sdf  
+
+# Ignore user-specific and workspace files  
+*.user  
+*.prefs  
+*.vscode/  
+
+# Backup and temporary files  
+*.bak  
+*.tmp  
+*.swp  
+*.cache  
+
+# OS generated files  
+.DS_Store  
+Thumbs.db  

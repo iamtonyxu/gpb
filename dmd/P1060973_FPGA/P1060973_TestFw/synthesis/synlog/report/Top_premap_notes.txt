@@ -1,0 +1,18 @@
+@N: MF472 |Synthesis running in Automatic Compile Point mode
+@N: MF474 |No compile point is identified in Automatic Compile Point mode
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+@N: BN362 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\dual_port_ram.v":53:1:53:6|Removing sequential instance PA_RADDR[9:0] (in view: work.DP_RAM_2R_1W_16s_10s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\dual_port_ram.v":53:1:53:6|Removing sequential instance ram_1_reg[15:0] (in view: work.DP_RAM_2R_1W_16s_10s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: FP130 |Promoting Net PCI_CLK2 on CLKINT  I_1 
+@N: FP130 |Promoting Net SYSCLK on CLKINT  I_2 
+@N: FP130 |Promoting Net ADC_AD7663AS_0.sclk.CLK_OUT on CLKINT  I_1 
+@N: FP130 |Promoting Net DAC_AD8803AR_0.tx_clk_mod.CLK_OUT on CLKINT  I_1 
+@N: FP130 |Promoting Net ClkGen_0.pulse2mhz_div.clkout on CLKINT  I_1 
+@N: FP130 |Promoting Net Lift_Motor_0.pwm on CLKINT  I_1 
+@N: FP130 |Promoting Net Gantry_Motor_0.pwm on CLKINT  I_1 
+@N: FP130 |Promoting Net ClkGen_0.wdclk_div.CLK_OUT on CLKINT  I_1 
+@N: FX1184 |Applying syn_allowed_resources blockrams=352 on top level netlist Top 
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+@N: BN225 |Writing default property annotation file C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\synthesis\Top.sap.

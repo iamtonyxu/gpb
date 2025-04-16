@@ -1,0 +1,213 @@
+# Sat Apr 12 14:19:06 2025
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-3
+Install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: LAPTOP-6FQD1N4B
+
+Implementation : synthesis
+Synopsys Microchip Technology Pre-mapping, Version map202309actp1, Build 008R, Built Jul 25 2024 08:49:59, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 186MB peak: 186MB)
+
+
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 192MB peak: 201MB)
+
+Reading constraint file: C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\designer\Top\synthesis.fdc
+@L: C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\synthesis\Top_scck.rpt 
+See clock summary report "C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\synthesis\Top_scck.rpt"
+@N: MF472 |Synthesis running in Automatic Compile Point mode
+@N: MF474 |No compile point is identified in Automatic Compile Point mode
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 199MB peak: 201MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 200MB peak: 201MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 200MB peak: 201MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 200MB peak: 202MB)
+
+
+Vector Gate Optimization Enabled: Optimizing  Partial Hanging Logic. 
+NConnInternalConnection caching is on
+@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\adc_ad7663as.v":133:4:133:9|User-specified initial value defined for instance ADC_AD7663AS_0.data_count[10:0] is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\adc_ad7663as.v":133:4:133:9|User-specified initial value defined for instance ADC_AD7663AS_0.time_out_count[6:0] is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\adc_ad7663as.v":133:4:133:9|User-specified initial value defined for instance ADC_AD7663AS_0.clk_aq_low[1:0] is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\adc_ad7663as.v":133:4:133:9|User-specified initial value defined for instance ADC_AD7663AS_0.clk_aq_high[1:0] is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\adc_ad7663as.v":133:4:133:9|User-specified initial value defined for instance ADC_AD7663AS_0.ram_wr_pt[9:0] is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\adc_ad7663as.v":133:4:133:9|User-specified initial value defined for instance ADC_AD7663AS_0.AD_CNVST is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\adc_ad7663as.v":133:4:133:9|User-specified initial value defined for instance ADC_AD7663AS_0.ram_wr_clk is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\adc_ad7663as.v":133:4:133:9|User-specified initial value defined for instance ADC_AD7663AS_0.ad_sclk_en is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\adc_ad7663as.v":133:4:133:9|User-specified initial value defined for instance ADC_AD7663AS_0.sdout_buf[15:0] is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\adc_ad7663as.v":352:1:352:6|User-specified initial value defined for instance ADC_AD7663AS_0.clk_div_sd[15:0] is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\adc_ad7663as.v":352:1:352:6|User-specified initial value defined for instance ADC_AD7663AS_0.clk_div_aq[15:0] is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\adc_ad7663as.v":352:1:352:6|User-specified initial value defined for instance ADC_AD7663AS_0.data_length[11:0] is being ignored due to limitations in architecture. 
+@W: BN132 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\pci_emu_target.v":92:4:92:9|Removing sequential instance PCI_EMU_TARGET_0.opb_addr_byte_1[7:0] because it is equivalent to instance PCI_EMU_TARGET_0.opb_do_byte_1[7:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\pci_emu_target.v":92:4:92:9|Removing sequential instance PCI_EMU_TARGET_0.opb_addr_byte_2[7:0] because it is equivalent to instance PCI_EMU_TARGET_0.opb_do_byte_2[7:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\pci_emu_target.v":92:4:92:9|Removing sequential instance PCI_EMU_TARGET_0.opb_addr_byte_3[7:0] because it is equivalent to instance PCI_EMU_TARGET_0.opb_do_byte_3[7:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Starting HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 255MB peak: 255MB)
+
+
+Finished HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 255MB peak: 256MB)
+
+@W: MO156 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\dual_port_ram.v":53:1:53:6|RAM ram_1[15:0] removed due to constant propagation. 
+
+Started DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 256MB peak: 256MB)
+
+
+Finished DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 256MB peak: 256MB)
+
+@N: BN362 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\dual_port_ram.v":53:1:53:6|Removing sequential instance PA_RADDR[9:0] (in view: work.DP_RAM_2R_1W_16s_10s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\dual_port_ram.v":53:1:53:6|Removing sequential instance ram_1_reg[15:0] (in view: work.DP_RAM_2R_1W_16s_10s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: FP130 |Promoting Net PCI_CLK2 on CLKINT  I_1 
+@N: FP130 |Promoting Net SYSCLK on CLKINT  I_2 
+@N: FP130 |Promoting Net ADC_AD7663AS_0.sclk.CLK_OUT on CLKINT  I_1 
+@N: FP130 |Promoting Net DAC_AD8803AR_0.tx_clk_mod.CLK_OUT on CLKINT  I_1 
+@N: FP130 |Promoting Net ClkGen_0.pulse2mhz_div.clkout on CLKINT  I_1 
+@N: FP130 |Promoting Net Lift_Motor_0.pwm on CLKINT  I_1 
+@N: FP130 |Promoting Net Gantry_Motor_0.pwm on CLKINT  I_1 
+@N: FP130 |Promoting Net ClkGen_0.wdclk_div.CLK_OUT on CLKINT  I_1 
+@N: FX1184 |Applying syn_allowed_resources blockrams=352 on top level netlist Top 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 258MB peak: 258MB)
+
+
+
+Clock Summary
+******************
+
+          Start                                      Requested     Requested     Clock        Clock          Clock
+Level     Clock                                      Frequency     Period        Type         Group          Load 
+------------------------------------------------------------------------------------------------------------------
+0 -       Top|PCI_CLK2                               100.0 MHz     10.000        inferred     (multiple)     474  
+                                                                                                                  
+0 -       Top|SYSCLK                                 100.0 MHz     10.000        inferred     (multiple)     262  
+                                                                                                                  
+0 -       ADC_AD7663AS|ram_wr_clk_inferred_clock     100.0 MHz     10.000        inferred     (multiple)     16   
+                                                                                                                  
+0 -       CLOCK_DIV_4|N_17_inferred_clock            100.0 MHz     10.000        inferred     (multiple)     16   
+                                                                                                                  
+0 -       Gantry_Motor|N_1_inferred_clock            100.0 MHz     10.000        inferred     (multiple)     13   
+                                                                                                                  
+0 -       Lift_Motor|N_1_inferred_clock              100.0 MHz     10.000        inferred     (multiple)     13   
+==================================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                                           Clock     Source                                        Clock Pin                                      Non-clock Pin                                      Non-clock Pin                            
+Clock                                      Load      Pin                                           Seq Example                                    Seq Example                                        Comb Example                             
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Top|PCI_CLK2                               474       PCI_CLK2(port)                                DAC_AD8803AR_0.trig.C                          OSCILLATOR_COUNTER_0.counter.count[15:0].D[15]     I_1.A(CLKINT)                            
+                                                                                                                                                                                                                                              
+Top|SYSCLK                                 262       SYSCLK(port)                                  DAC_AD8803AR_0.done.C                          Lift_Motor_0.pwm.D[0]                              I_2.A(CLKINT)                            
+                                                                                                                                                                                                                                              
+ADC_AD7663AS|ram_wr_clk_inferred_clock     16        ADC_AD7663AS_0.ram_wr_clk.Q[0](dffre)         ADC_AD7663AS_0.data_in_ram.ram[15:0].CLK       -                                                  -                                        
+                                                                                                                                                                                                                                              
+CLOCK_DIV_4|N_17_inferred_clock            16        ClkGen_0.pulse2mhz_div.clkout.Q[0](dffre)     OSCILLATOR_COUNTER_0.counter.count[15:0].C     ClkGen_0.pulse2mhz_div.clkout.D[0]                 ClkGen_0.pulse2mhz_div.clkout_2.I[0](inv)
+                                                                                                                                                                                                                                              
+Gantry_Motor|N_1_inferred_clock            13        Gantry_Motor_0.pwm.Q[0](dffre)                Gantry_Motor_0.pwm_cmd.C                       -                                                  Gantry_Motor_0.I_1.A(CLKINT)             
+                                                                                                                                                                                                                                              
+Lift_Motor|N_1_inferred_clock              13        Lift_Motor_0.pwm.Q[0](dffre)                  Lift_Motor_0.pwm_cmd.C                         -                                                  Lift_Motor_0.I_1.A(CLKINT)               
+==============================================================================================================================================================================================================================================
+
+@W: MT530 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\dual_port_ram.v":61:1:61:6|Found inferred clock Top|PCI_CLK2 which controls 474 sequential elements including ADC_AD7663AS_0.data_in_ram.PB_RADDR[9:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\clk_div.v":37:1:37:6|Found inferred clock Top|SYSCLK which controls 262 sequential elements including ADC_AD7663AS_0.aqclkdiv.cntr[15:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\timer_counter.v":42:1:42:6|Found inferred clock CLOCK_DIV_4|N_17_inferred_clock which controls 16 sequential elements including OSCILLATOR_COUNTER_0.counter.count[15:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\lift_mot.v":141:4:141:9|Found inferred clock Lift_Motor|N_1_inferred_clock which controls 13 sequential elements including Lift_Motor_0.phase[5:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\gantry_mot.v":141:4:141:9|Found inferred clock Gantry_Motor|N_1_inferred_clock which controls 13 sequential elements including Gantry_Motor_0.phase[5:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\repo\jabil2025\dmd\p1060973_fpga\p1060973_testfw\hdl\dual_port_ram.v":53:1:53:6|Found inferred clock ADC_AD7663AS|ram_wr_clk_inferred_clock which controls 16 sequential elements including ADC_AD7663AS_0.data_in_ram.ram[15:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file C:\repo\jabil2025\dmd\P1060973_FPGA\P1060973_TestFw\synthesis\Top.sap.
+
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 258MB peak: 258MB)
+
+Encoding state machine phase_cnt[5:0] (in view: work.Gantry_Motor(verilog))
+original code -> new code
+   000 -> 000
+   001 -> 001
+   010 -> 010
+   011 -> 011
+   100 -> 100
+   101 -> 101
+Encoding state machine phase_cnt[5:0] (in view: work.Lift_Motor(verilog))
+original code -> new code
+   000 -> 000
+   001 -> 001
+   010 -> 010
+   011 -> 011
+   100 -> 100
+   101 -> 101
+Encoding state machine state[23:0] (in view: work.ADC_AD7663AS(verilog))
+original code -> new code
+   00000 -> 000000000000000000000001
+   00001 -> 000000000000000000000010
+   00010 -> 000000000000000000000100
+   00011 -> 000000000000000000001000
+   00100 -> 000000000000000000010000
+   00101 -> 000000000000000000100000
+   00110 -> 000000000000000001000000
+   00111 -> 000000000000000010000000
+   01000 -> 000000000000000100000000
+   01001 -> 000000000000001000000000
+   01010 -> 000000000000010000000000
+   01011 -> 000000000000100000000000
+   01100 -> 000000000001000000000000
+   01101 -> 000000000010000000000000
+   01110 -> 000000000100000000000000
+   01111 -> 000000001000000000000000
+   10000 -> 000000010000000000000000
+   10001 -> 000000100000000000000000
+   10010 -> 000001000000000000000000
+   10011 -> 000010000000000000000000
+   10100 -> 000100000000000000000000
+   10101 -> 001000000000000000000000
+   10110 -> 010000000000000000000000
+   10111 -> 100000000000000000000000
+Encoding state machine status[11:0] (in view: work.ADC_AD7663AS(verilog))
+original code -> new code
+   0000 -> 000000000001
+   0001 -> 000000000010
+   0010 -> 000000000100
+   0100 -> 000000001000
+   0101 -> 000000010000
+   0110 -> 000000100000
+   1000 -> 000001000000
+   1001 -> 000010000000
+   1010 -> 000100000000
+   1100 -> 001000000000
+   1101 -> 010000000000
+   1110 -> 100000000000
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:01s; Memory used current: 262MB peak: 262MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 264MB peak: 264MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 172MB peak: 264MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Apr 12 14:19:07 2025
+
+###########################################################]
