@@ -1,6 +1,6 @@
 `timescale 1ns/100ps
 
-module top(
+module cmd_server(
     // system clock and reset
     input               SYS_CLK,
     input               SYS_RST,

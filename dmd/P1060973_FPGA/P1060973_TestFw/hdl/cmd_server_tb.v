@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module top_tb;
+module cmd_server_tb;
 
     // System Clock and Reset
     reg SYS_CLK;
@@ -32,7 +32,7 @@ module top_tb;
     reg [7:0] uart_tdata;
 
     // Instantiate the Unit Under Test (UUT)
-    top uut (
+    cmd_server uut (
         .SYS_CLK(SYS_CLK),
         .SYS_RST(SYS_RST),
         .PULSE_2KHZ(PULSE_2KHZ),
