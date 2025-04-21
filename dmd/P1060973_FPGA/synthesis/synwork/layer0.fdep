@@ -1,0 +1,139 @@
+#OPTIONS:"|-mixedhdl|-modhint|C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\synthesis\\synwork\\_verilog_hintfile|-top|top|-layerid|0|-orig_srs|C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\synthesis\\synwork\\top_comp.srs|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-I|C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\synthesis\\|-I|C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib|-sysv|-devicelib|C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\generic\\acg5.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\bin64\\c_ver.exe":1721969592
+#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\synthesis\\synwork\\_verilog_hintfile":1745242717
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\generic\\acg5.v":1721920354
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\hypermods.v":1721919828
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\scemi_objects.v":1721919828
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\scemi_pipes.svh":1721919828
+#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\component\\polarfire_syn_comps.v":1745243890
+#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\hdl\\ADDR_DECODER.v":1740808091
+#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\hdl\\ScratchPadRegister.v":1740808091
+#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\hdl\\afifo.v":1730446225
+#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\hdl\\msg_buffer.v":1744962480
+#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\hdl\\msg_read.v":1745062887
+#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\hdl\\msg_write.v":1745061472
+#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\hdl\\opb_emu_target.v":1744968756
+#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\hdl\\cmd_server.v":1744973417
+#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\hdl\\top.v":1745241738
+#CUR:"afifo_8s_4s_8s_4s_mem_27512_initial_block":1745243894
+#numinternalfiles:4
+#defaultlanguage:verilog
+0			"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v" verilog
+1			"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v" verilog
+2			"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v" verilog
+3			"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v" verilog
+4			"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_buffer.v" verilog
+5			"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v" verilog
+6			"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v" verilog
+7			"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\opb_emu_target.v" verilog
+8			"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmd_server.v" verilog
+9			"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v" verilog
+#Dependency Lists(Uses List)
+0 -1
+1 -1
+2 -1
+3 -1
+4 3
+5 -1
+6 -1
+7 5 6
+8 4 7
+9 8 1 2
+#Dependency Lists(Users Of)
+0 -1
+1 9
+2 9
+3 4
+4 8
+5 7
+6 7
+7 8
+8 9
+9 -1
+#Design Unit to File Association
+module work APBM 0
+module work APBS 0
+module work BANKCTRLM 0
+module work BANKCTRL_GPIO 0
+module work BANKCTRL_HSIO 0
+module work BANKEN 0
+module work CRN_COMMON 0
+module work CRN_INT 0
+module work CRYPTO 0
+module work CRYPTO_SOC 0
+module work DEBUG 0
+module work DLL 0
+module work DRI 0
+module work ENFORCE 0
+module work GLITCHDETECT 0
+module work GPSS_COMMON 0
+module work HS_IO_CLK 0
+module work ICB_BANKCLK 0
+module work ICB_CLKDIVDELAY 0
+module work ICB_CLKDIV 0
+module work ICB_CLKINT 0
+module work ICB_CLKSTOP_EN 0
+module work ICB_CLKSTOP 0
+module work ICB_INT 0
+module work ICB_MUXING 0
+module work ICB_NGMUX 0
+module work INIT 0
+module work IOD 0
+module work LANECTRL 0
+module work LANERST 0
+module work OSC_RC160MHZ 0
+module work OSC_RC200MHZ 0
+module work OSC_RC2MHZ 0
+module work PCIE_COMMON 0
+module work PCIE 0
+module work PF_SPI 0
+module work PLL 0
+module work QUADRST_PCIE 0
+module work QUADRST 0
+module work SCB 0
+module work SYSCTRL_RESET_STATUS 0
+module work SYSRESET 0
+module work SYS_SERVICES 0
+module work TAMPER 0
+module work TVS 0
+module work TX_PLL 0
+module work UPROM 0
+module work USPI 0
+module work VOLTAGEDETECT 0
+module work VREFBANKDYN 0
+module work VREFCTRL 0
+module work XCVR_64B6XB 0
+module work XCVR_8B10B 0
+module work XCVR_APB_LINK 0
+module work XCVR_APB_LINK_V 0
+module work XCVR_APB_LINK_V2 0
+module work XCVR_DUAL_PCS 0
+module work XCVR_PIPE_AXI0 0
+module work XCVR_PIPE_AXI1 0
+module work XCVR_PIPE 0
+module work XCVR_PMA 0
+module work XCVR_REF_CLK_N 0
+module work XCVR_REF_CLK_P 0
+module work XCVR_REF_CLK 0
+module work XCVR_TEST 0
+module work XCVR_VV 0
+module work XCVR 0
+module work CORELNKTMR_V 0
+module work PFSOC_SCSM 0
+module work CLKBUF_DIFF 0
+module work CLKBUF_DIFF_ODT 0
+module work AdderDecode 1
+module work SCRATCH_PAD_REGISTER 2
+module work afifo 3
+module work msg_buffer 4
+module work msg_read 5
+module work msg_write 6
+module work opb_emu_target 7
+module work cmd_server 8
+module work top 9
+#Unbound instances to file Association.
+inst work cmd_server cmn_uart 8
+inst work cmd_server cmn_uart 8
+
+#identified top module
+top_module top

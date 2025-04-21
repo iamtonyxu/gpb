@@ -1,0 +1,466 @@
+KEY LIBERO "2024.2"
+KEY CAPTURE "2024.2.0.13"
+KEY DEFAULT_IMPORT_LOC ""
+KEY DEFAULT_OPEN_LOC ""
+KEY ProjectID "0"
+KEY HDLTechnology "VERILOG"
+KEY VERILOGMODE "SYSTEMVERILOG"
+KEY VHDLMODE "VHDL2008"
+KEY SYSTEMVERILOGMFCU "FALSE"
+KEY UseConstraintFlowTechnology "TRUE"
+KEY VendorTechnology_Family "PolarFire"
+KEY VendorTechnology_Die "PA5M100T"
+KEY VendorTechnology_Package "fcg484"
+KEY VendorTechnology_Speed "STD"
+KEY VendorTechnology_DieVoltage "1.0"
+KEY VendorTechnology_PART_RANGE "EXT"
+KEY VendorTechnology_DSW_VCCA_VOLTAGE_RAMP_RATE ""
+KEY VendorTechnology_IO_DEFT_STD "LVCMOS18"
+KEY VendorTechnology_OPCONR ""
+KEY VendorTechnology_PLL_SUPPLY ""
+KEY VendorTechnology_RAD_EXPOSURE ""
+KEY VendorTechnology_RESERVEMIGRATIONPINS "1"
+KEY VendorTechnology_RESTRICTPROBEPINS "1"
+KEY VendorTechnology_RESTRICTSPIPINS "0"
+KEY VendorTechnology_SYSTEM_CONTROLLER_SUSPEND_MODE "0"
+KEY VendorTechnology_TARGETDEVICESFORMIGRATION "MPF100TL;"
+KEY VendorTechnology_TEMPR "EXT"
+KEY VendorTechnology_UNUSED_MSS_IO_RESISTOR_PULL "None"
+KEY VendorTechnology_VCCI_1.2_VOLTR "EXT"
+KEY VendorTechnology_VCCI_1.5_VOLTR "EXT"
+KEY VendorTechnology_VCCI_1.8_VOLTR "EXT"
+KEY VendorTechnology_VCCI_2.5_VOLTR "EXT"
+KEY VendorTechnology_VCCI_3.3_VOLTR "EXT"
+KEY VendorTechnology_VOLTR "EXT"
+KEY ProjectLocation "C:\repo\jabil2025\dmd\P1060973_FPGA"
+KEY ProjectDescription ""
+KEY UseRootLocationForLinkedFiles "FALSE"
+KEY RootLocationENVForLinkedFiles ""
+KEY RootLocationForLinkedFiles ""
+KEY GlobalIncludePaths ""
+KEY Pa4PeripheralNewSeq "GOOD"
+KEY MemoryMapDrcSeverity "FALSE"
+KEY LossOfDataDRCSeverity "TRUE"
+KEY IdWidthMismatchDRCSeverity "TRUE"
+KEY SimulationType "VERILOG"
+KEY Vendor "Actel"
+KEY ActiveRoot "top::work"
+LIST REVISIONS
+VALUE="Impl1",NUM=1
+CURREV=1
+ENDLIST
+LIST GlobalIncludeFileList
+ENDLIST
+LIST FileManager
+VALUE "<project>\constraint\io\top.pdc,io_pdc"
+STATE="utd"
+TIME="1745243661"
+SIZE="3879"
+ENDFILE
+VALUE "<project>\hdl\ADC_AD7663AS.V,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="10967"
+ENDFILE
+VALUE "<project>\hdl\ADDR_DECODER.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="9540"
+ENDFILE
+VALUE "<project>\hdl\afifo.v,hdl"
+STATE="utd"
+TIME="1730446225"
+SIZE="20479"
+ENDFILE
+VALUE "<project>\hdl\afifo_tb.v,hdl"
+STATE="utd"
+TIME="1744870953"
+SIZE="1401"
+ENDFILE
+VALUE "<project>\hdl\CLK_DIV.V,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="1268"
+ENDFILE
+VALUE "<project>\hdl\CLK_GEN.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="5399"
+ENDFILE
+VALUE "<project>\hdl\cmd_server.v,hdl"
+STATE="utd"
+TIME="1744973417"
+SIZE="3117"
+ENDFILE
+VALUE "<project>\hdl\cmd_server_tb.v,hdl"
+STATE="utd"
+TIME="1745130222"
+SIZE="4871"
+ENDFILE
+VALUE "<project>\hdl\cmn_uart.vhd,hdl"
+STATE="utd"
+TIME="1474197791"
+SIZE="25394"
+ENDFILE
+VALUE "<project>\hdl\DAC_AD8803AR.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="3868"
+ENDFILE
+VALUE "<project>\hdl\dual_port_ram.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="1535"
+ENDFILE
+VALUE "<project>\hdl\FPGA_WD.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="1428"
+ENDFILE
+VALUE "<project>\hdl\FREQ_COUNTER.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="3008"
+ENDFILE
+VALUE "<project>\hdl\GANTRY_MOT.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="5477"
+ENDFILE
+VALUE "<project>\hdl\GPIO.v,hdl"
+STATE="utd"
+TIME="1745059399"
+SIZE="10161"
+ENDFILE
+VALUE "<project>\hdl\LIFT_MOT.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="5475"
+ENDFILE
+VALUE "<project>\hdl\MOT_PWM_GEN.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="3181"
+ENDFILE
+VALUE "<project>\hdl\msg_buffer.v,hdl"
+STATE="utd"
+TIME="1744962480"
+SIZE="2181"
+ENDFILE
+VALUE "<project>\hdl\msg_read.v,hdl"
+STATE="utd"
+TIME="1745062887"
+SIZE="10300"
+ENDFILE
+VALUE "<project>\hdl\msg_read_tb.v,hdl"
+STATE="utd"
+TIME="1744972059"
+SIZE="5572"
+ENDFILE
+VALUE "<project>\hdl\msg_write.v,hdl"
+STATE="utd"
+TIME="1745061472"
+SIZE="10004"
+ENDFILE
+VALUE "<project>\hdl\msg_write_tb.v,hdl"
+STATE="utd"
+TIME="1744936760"
+SIZE="2599"
+ENDFILE
+VALUE "<project>\hdl\opb_emu_target.v,hdl"
+STATE="utd"
+TIME="1744968756"
+SIZE="1979"
+ENDFILE
+VALUE "<project>\hdl\pci_emu_target.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="4665"
+ENDFILE
+VALUE "<project>\hdl\ScratchPadRegister.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="1627"
+ENDFILE
+VALUE "<project>\hdl\Timer_Counter.v,hdl"
+STATE="utd"
+TIME="1740808091"
+SIZE="1139"
+ENDFILE
+VALUE "<project>\hdl\top.v,hdl"
+STATE="utd"
+TIME="1745241738"
+SIZE="26032"
+ENDFILE
+VALUE "<project>\hdl\top_tb.v,hdl"
+STATE="utd"
+TIME="1745117617"
+SIZE="5405"
+ENDFILE
+VALUE "<project>\synthesis\top.so,so"
+STATE="utd"
+TIME="1745242743"
+SIZE="216"
+ENDFILE
+VALUE "<project>\synthesis\top.vm,syn_vm"
+STATE="utd"
+TIME="1745242742"
+SIZE="135393"
+ENDFILE
+VALUE "<project>\synthesis\top_syn.prj,prj"
+STATE="utd"
+TIME="1745242743"
+SIZE="3669"
+ENDFILE
+VALUE "<project>\synthesis\top_vm.sdc,syn_sdc"
+STATE="utd"
+TIME="1745242742"
+SIZE="969"
+ENDFILE
+ENDLIST
+LIST UsedFile
+ENDLIST
+LIST NewModulesInfo
+LIST "top::work"
+FILE "<project>\hdl\top.v,hdl"
+LIST PNRConstraints
+VALUE "<project>\constraint\io\top.pdc,io_pdc"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSYNTHESIS(<project>\synthesis\top.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST synthesis_implementations
+VALUE "synthesis"
+ENDLIST
+ENDLIST
+ENDLIST
+LIST AssociatedStimulus
+ENDLIST
+LIST Other_Association
+ENDLIST
+LIST SimulationOptions
+UseAutomaticDoFile=true
+IncludeWaveDo=false
+Type=max
+RunTime=1000ns
+Resolution=1ps
+VsimOpt=
+EntityName=testbench
+TopInstanceName=<top>_0
+DoFileName=
+DoFileName2=wave.do
+DoFileParams=
+DisplayDUTWave=false
+LogAllSignals=false
+DisablePulseFiltering=false
+DumpVCD=false
+VCDFileName=power.vcd
+VHDL2008=false
+Verilog2001=false
+SystemVerilog=false
+TimeUnit=1
+TimeUnitBase=ns
+Precision=100
+PrecisionBase=ps
+SdfCorner=slow_lv_ht
+PliPath=C:/Microchip/Libero_SoC_v2024.2/Designer/lib/questasim/pli/pf_crypto_win_questa_me64_pli.dll
+UseCustomPliPath=false
+ENDLIST
+LIST ModelSimLibPath
+UseCustomPath=FALSE
+LibraryPath=
+ENDLIST
+LIST GlobalFlowOptions
+GenerateHDLAfterSynthesis=FALSE
+GenerateHDLAfterPhySynthesis=FALSE
+RunDRCAfterSynthesis=FALSE
+AutoCheckConstraints=TRUE
+UpdateModelSimIni=TRUE
+NoIOMode=FALSE
+PeriInitStandalone=FALSE
+OnDemandBuildDH=TRUE
+EnableViewDraw=FALSE
+UpdateViewDrawIni=TRUE
+GenerateHDLFromSchematic=TRUE
+VmNetlistFlowOn=TRUE
+EnableDesignSeparationOn=FALSE
+EnableSETMitigationOn=FALSE
+DisplayFanoutLimit=10
+AbortFlowOnPDCErrorsOn=TRUE
+AbortFlowOnSDCErrorsOn=TRUE
+AbortFlowOn3.3V_IO_ON=FALSE
+InstantiateInSmartDesign=TRUE
+FlashProInputFile=pdb
+SmartGenCompileReport=T
+ENDLIST
+LIST PhySynthesisOptions
+ENDLIST
+LIST Profiles
+NAME="SoftConsole"
+FUNCTION="SoftwareIDE"
+TOOL="SoftConsole"
+LOCATION="eclipse.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="synplify_Pro"
+FUNCTION="Synthesis"
+TOOL="Synplify Pro ME"
+LOCATION="C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\bin\synplify_pro.exe"
+PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
+BATCH=1
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="QuestaSim ME"
+FUNCTION="Simulation"
+TOOL="QuestaSim ME"
+LOCATION="questasim.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="Identify Debugger"
+FUNCTION="IdentifyDebugger"
+TOOL="Identify Debugger"
+LOCATION="identify_debugger.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+ENDLIST
+LIST ProjectState5.1
+LIST "top::work"
+LIST Impl1
+ideSYNTHESIS(<project>\synthesis\top.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST ExcludePackageForSimulation
+ENDLIST
+LIST ExcludePackageForSynthesis
+ENDLIST
+LIST IncludeModuleForSimulation
+ENDLIST
+LIST CDBOrder
+ENDLIST
+LIST UserCustomizedFileList
+ENDLIST
+LIST OpenedFileList
+ORIENTATION;HORIZONTAL
+Reports;Reports;0
+ReportsCurrentItem;Place and Route:top_layout_log.log
+HDL;hdl\top.v;0
+HDL;constraint\io\top.pdc;0
+Constraint Manager;Constraint Manager;0
+StartPage;StartPage;0
+ACTIVEVIEW;Constraint Manager
+ENDLIST
+LIST ModuleSubBlockList
+LIST "ADC_AD7663AS::work","hdl\ADC_AD7663AS.V","FALSE","FALSE"
+SUBBLOCK "CLOCK_DIV::work","hdl\CLK_DIV.V","FALSE","FALSE"
+SUBBLOCK "DP_RAM_2R_1W::work","hdl\dual_port_ram.v","FALSE","FALSE"
+ENDLIST
+LIST "AdderDecode::work","hdl\ADDR_DECODER.v","FALSE","FALSE"
+ENDLIST
+LIST "afifo::work","hdl\afifo.v","FALSE","FALSE"
+ENDLIST
+LIST "afifo_tb::work","hdl\afifo_tb.v","FALSE","FALSE"
+SUBBLOCK "afifo::work","hdl\afifo.v","FALSE","FALSE"
+ENDLIST
+LIST "ClkGen::work","hdl\CLK_GEN.v","FALSE","FALSE"
+SUBBLOCK "CLOCK_DIV::work","hdl\CLK_DIV.V","FALSE","FALSE"
+ENDLIST
+LIST "CLOCK_DIV::work","hdl\CLK_DIV.V","FALSE","FALSE"
+ENDLIST
+LIST "cmd_server::work","hdl\cmd_server.v","FALSE","FALSE"
+SUBBLOCK "cmn_uart::work","hdl\cmn_uart.vhd","FALSE","FALSE"
+SUBBLOCK "msg_buffer::work","hdl\msg_buffer.v","FALSE","FALSE"
+SUBBLOCK "opb_emu_target::work","hdl\opb_emu_target.v","FALSE","FALSE"
+ENDLIST
+LIST "cmd_server_tb::work","hdl\cmd_server_tb.v","FALSE","FALSE"
+SUBBLOCK "cmd_server::work","hdl\cmd_server.v","FALSE","FALSE"
+ENDLIST
+LIST "DAC_AD8803AR::work","hdl\DAC_AD8803AR.v","FALSE","FALSE"
+SUBBLOCK "CLOCK_DIV::work","hdl\CLK_DIV.V","FALSE","FALSE"
+ENDLIST
+LIST "afifo::work","hdl\afifo.v","FALSE","FALSE"
+ENDLIST
+LIST "cmn_uart::work","hdl\cmn_uart.vhd","FALSE","FALSE"
+ENDLIST
+LIST "DP_RAM_2R_1W::work","hdl\dual_port_ram.v","FALSE","FALSE"
+ENDLIST
+LIST "FPGA_WDI::work","hdl\FPGA_WD.v","FALSE","FALSE"
+ENDLIST
+LIST "Gantry_Motor::work","hdl\GANTRY_MOT.v","FALSE","FALSE"
+ENDLIST
+LIST "GPIO::work","hdl\GPIO.v","FALSE","FALSE"
+ENDLIST
+LIST "Lift_Motor::work","hdl\LIFT_MOT.v","FALSE","FALSE"
+ENDLIST
+LIST "MotCtrl::work","hdl\MOT_PWM_GEN.v","FALSE","FALSE"
+ENDLIST
+LIST "msg_buffer::work","hdl\msg_buffer.v","FALSE","FALSE"
+SUBBLOCK "afifo::work","hdl\afifo.v","FALSE","FALSE"
+ENDLIST
+LIST "msg_read::work","hdl\msg_read.v","FALSE","FALSE"
+ENDLIST
+LIST "msg_read_tb::work","hdl\msg_read_tb.v","FALSE","FALSE"
+SUBBLOCK "afifo::work","hdl\afifo.v","FALSE","FALSE"
+SUBBLOCK "msg_read::work","hdl\msg_read.v","FALSE","FALSE"
+ENDLIST
+LIST "msg_write::work","hdl\msg_write.v","FALSE","FALSE"
+ENDLIST
+LIST "msg_write_tb::work","hdl\msg_write_tb.v","FALSE","FALSE"
+SUBBLOCK "msg_write::work","hdl\msg_write.v","FALSE","FALSE"
+ENDLIST
+LIST "opb_emu_target::work","hdl\opb_emu_target.v","FALSE","FALSE"
+SUBBLOCK "msg_read::work","hdl\msg_read.v","FALSE","FALSE"
+SUBBLOCK "msg_write::work","hdl\msg_write.v","FALSE","FALSE"
+ENDLIST
+LIST "OSCILLATOR_COUNTER::work","hdl\FREQ_COUNTER.v","FALSE","FALSE"
+SUBBLOCK "TIMER_COUNTER::work","hdl\Timer_Counter.v","FALSE","FALSE"
+ENDLIST
+LIST "PCI_EMU_TARGET::work","hdl\pci_emu_target.v","FALSE","FALSE"
+ENDLIST
+LIST "SCRATCH_PAD_REGISTER::work","hdl\ScratchPadRegister.v","FALSE","FALSE"
+ENDLIST
+LIST "TIMER_COUNTER::work","hdl\Timer_Counter.v","FALSE","FALSE"
+ENDLIST
+LIST "top::work","hdl\top.v","FALSE","FALSE"
+SUBBLOCK "AdderDecode::work","hdl\ADDR_DECODER.v","FALSE","FALSE"
+SUBBLOCK "SCRATCH_PAD_REGISTER::work","hdl\ScratchPadRegister.v","FALSE","FALSE"
+SUBBLOCK "cmd_server::work","hdl\cmd_server.v","FALSE","FALSE"
+ENDLIST
+ENDLIST
+LIST ActiveTestBenchList
+ENDLIST
+LIST IOTabList
+VALUE "constraint\io\top.pdc"
+ENDLIST
+LIST FPTabList
+ENDLIST
+LIST TimingTabList
+ENDLIST
+LIST FDCTabList
+ENDLIST

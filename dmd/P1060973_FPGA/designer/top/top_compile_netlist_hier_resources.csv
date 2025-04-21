@@ -1,0 +1,11 @@
+Detailed Resource Usage
+Module Name,Fabric 4LUT,Fabric DFF,Interface 4LUT,Interface DFF,Single-Ended I/O,uSRAM (64x12),Chip Globals
+Primitives/Primitives,0,0,0,0,5,0,1
+cmd_server_0/cmn_uart_inst/Primitives,59,50,0,0,0,0,0
+cmd_server_0/msg_buffer_inst/Primitives,1,1,0,0,0,0,0
+cmd_server_0/msg_buffer_inst/rx_fifo_inst/Primitives,29,40,0,0,0,0,0
+cmd_server_0/msg_buffer_inst/rx_fifo_inst/mem_mem_0_0/Primitives,0,0,12,12,0,1,0
+cmd_server_0/msg_buffer_inst/tx_fifo_inst/Primitives,31,40,0,0,0,0,0
+cmd_server_0/msg_buffer_inst/tx_fifo_inst/mem_mem_0_0/Primitives,0,0,12,12,0,1,0
+cmd_server_0/opb_emu_target_inst/msg_read_inst/Primitives,114,89,0,0,0,0,0
+cmd_server_0/opb_emu_target_inst/msg_write_inst/Primitives,102,85,0,0,0,0,0

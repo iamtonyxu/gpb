@@ -1,0 +1,38 @@
+%%% protect protected_file
+#OPTIONS:"|-bldtbl|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-work_is_curlib|1|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-vhdl2008|-work_is_curlib|1|-ignore_undefined_lib|-lib|work"
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\bin64\\c_vhdl.exe":1721969626
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\location.map":1721919830
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\std.vhd":1721919856
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd\\snps_haps_pkg.vhd":1721919830
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\std1164.vhd":1721919830
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\std_textio.vhd":1721919830
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\numeric.vhd":1721921378
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd\\umr_capim.vhd":1721919830
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\arith.vhd":1721919830
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\unsigned.vhd":1721919830
+#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\hdl\\cmn_uart.vhd":1474197791
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd\\math_real.vhd":1721921372
+@E8lFkRDCO_lMk0Ns
+LDHs$NsRsIF	N
+bsCNl0RCs1  eh__h.FRLFNDCMN
+bsCNl0RCsA7qz_a)q MRH0CCosN
+bsCNl0RCsBBpmi)_w  TzhRBYHCM0o
+CsHkMb0pRBmRBi-H4
+M0bkR1)  -aR4M
+HbRk0k0Ns_0NOHRPC-H4
+M0bkRa7qqa_1)v q_RQh-H4
+M0bkRa7qqa_1)v q__Qh1RaA-F4
+kk0b0qR7a1q_aq) vh_Q_iqBR
+-4Fbk0kM0RC_G0OlFlN_M8s8CN$4R-
+0FkbRk07qqa_)1a _qvmRza-F4
+kk0b0qR7a1q_aq) vz_maa_1A4R-
+bHMk70Rq_aq1 a)qmv_zqa_B-iR4k
+F00bkRRaX-H4
+M0bkRR)X-F4
+kk0b0CR8L_kok0Ns_$bER
+-4ClM8FD8kC
+
+
+
+
+@ 
