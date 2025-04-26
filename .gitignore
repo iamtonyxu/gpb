@@ -27,6 +27,7 @@ work/
 ######################
 #libero temp files
 ######################
+dmd_vivado/
 simulation/
 synthesis/
 tooldata/
