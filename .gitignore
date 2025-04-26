@@ -8,43 +8,12 @@
 !*.vh
 !*.bd
 !*.edif
-#########
-#IP files
-#########
-#.xci: synthesis and implemented not possible - you need to return back to the previous version to generate output products
-#.xci + .dcp: implementation possible but not re-synthesis
-#*.xci(www.spiritconsortium.org)
-!*.xci
-#*.dcp(checkpoint files)
-!*.dcp
-!*.vds
-!*.pb
-#All bd comments and layout coordinates are stored within .ui
-!*.ui
-!*.ooc
-#########
-#System Generator
-#########
-!*.mdl
-!*.slx
-!*.bxml
-#########
-#Simulation logic analyzer
-#########
-!*.wcfg
-!*.coe
-!*.do
-!*.sh
-#########
-#MIG
-#########
-!*.prj
-!*.mem
+
 #########
 #Constraint files
 #########
 #Do NOT ignore *.xdc files
-!*.xdc
+!*.pdc
 
 
 # Compiled source #
@@ -97,8 +66,11 @@ Debug
 /jbuild/  
 /db/  
 /libero_work/  
-/output/  
-/ipcache/  
+/output/
+work/
+synthesis/
+tooldata/
+viewdraw/
 
 # Ignore project intermediate files  
 *.bit  
