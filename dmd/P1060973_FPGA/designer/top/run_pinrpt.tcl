@@ -1,6 +1,6 @@
 DESIGN=top
-DESDIR=C:\repo\jabil2025\dmd\P1060973_FPGA\designer\top
-TARGET_DIR=C:\repo\jabil2025\dmd\P1060973_FPGA\designer\top
+DESDIR=C:\repo2\gpb\dmd\P1060973_FPGA\designer\top
+TARGET_DIR=C:\repo2\gpb\dmd\P1060973_FPGA\designer\top
 FAM=PolarFire
 DIE=PA5M100T
 PACKAGE=fcg484

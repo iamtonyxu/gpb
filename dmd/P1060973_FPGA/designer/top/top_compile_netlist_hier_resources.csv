@@ -1,11 +1,21 @@
 Detailed Resource Usage
 Module Name,Fabric 4LUT,Fabric DFF,Interface 4LUT,Interface DFF,Single-Ended I/O,uSRAM (64x12),Chip Globals
-Primitives/Primitives,0,0,0,0,5,0,1
-cmd_server_0/cmn_uart_inst/Primitives,59,50,0,0,0,0,0
+Primitives/Primitives,1,0,0,0,8,0,1
+adder_decode_0/Primitives,86,16,0,0,0,0,0
+clk_gen_0/Primitives,36,1,0,0,0,0,0
+clk_gen_0/pulse20khz_div/Primitives,36,17,0,0,0,0,0
+clk_gen_0/pulse2khz_div/Primitives,35,17,0,0,0,0,1
+clkgen_2khz/Primitives,22,17,0,0,0,0,0
+cmd_server_0/cmn_uart_inst/Primitives,69,50,0,0,0,0,0
 cmd_server_0/msg_buffer_inst/Primitives,1,1,0,0,0,0,0
-cmd_server_0/msg_buffer_inst/rx_fifo_inst/Primitives,29,40,0,0,0,0,0
+cmd_server_0/msg_buffer_inst/rx_fifo_inst/Primitives,30,40,0,0,0,0,0
 cmd_server_0/msg_buffer_inst/rx_fifo_inst/mem_mem_0_0/Primitives,0,0,12,12,0,1,0
-cmd_server_0/msg_buffer_inst/tx_fifo_inst/Primitives,31,40,0,0,0,0,0
+cmd_server_0/msg_buffer_inst/tx_fifo_inst/Primitives,21,40,0,0,0,0,0
 cmd_server_0/msg_buffer_inst/tx_fifo_inst/mem_mem_0_0/Primitives,0,0,12,12,0,1,0
-cmd_server_0/opb_emu_target_inst/msg_read_inst/Primitives,114,89,0,0,0,0,0
-cmd_server_0/opb_emu_target_inst/msg_write_inst/Primitives,102,85,0,0,0,0,0
+cmd_server_0/opb_emu_target_inst/Primitives,24,8,0,0,0,0,0
+cmd_server_0/opb_emu_target_inst/clkgen_1hz/Primitives,23,17,0,0,0,0,0
+cmd_server_0/opb_emu_target_inst/msg_read_inst/Primitives,137,106,0,0,0,0,0
+cmd_server_0/opb_emu_target_inst/msg_write_inst/Primitives,131,94,0,0,0,0,0
+osc_counter_0/Primitives,29,35,0,0,0,0,0
+osc_counter_0/counter/Primitives,17,16,0,0,0,0,0
+scratch_pad_0/Primitives,18,48,0,0,0,0,0

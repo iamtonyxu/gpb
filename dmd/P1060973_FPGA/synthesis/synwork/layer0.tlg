@@ -1,157 +1,151 @@
-@W: CG238 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmd_server.v":48:6:48:18|Instantiation will not be bound to the VHDL entity. For mixed HDL, only integer/real/string generics on the VHDL side are supported.  Change VHDL generic types to one of the supported types for mixed HDL usage.
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":62:7:62:11|Synthesizing module afifo in library work.
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_DIV.V":21:7:21:15|Synthesizing module CLOCK_DIV in library work.
+Running optimization stage 1 on CLOCK_DIV .......
+Finished optimization stage 1 on CLOCK_DIV (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 97MB)
+@W: CG238 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmd_server.v":48:6:48:18|Instantiation will not be bound to the VHDL entity. For mixed HDL, only integer/real/string generics on the VHDL side are supported.  Change VHDL generic types to one of the supported types for mixed HDL usage.
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":62:7:62:11|Synthesizing module afifo in library work.
 
 	DSIZE=32'b00000000000000000000000000001000
 	ASIZE=32'b00000000000000000000000000000100
 	DW=32'b00000000000000000000000000001000
 	AW=32'b00000000000000000000000000000100
    Generated name = afifo_8s_4s_8s_4s
-Opening data file afifo_8s_4s_8s_4s_mem_27512_initial_block from directory .
-@W: CG532 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":93:4:93:10|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
-@W: CG532 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":110:1:110:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
-@W: CG532 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":127:1:127:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
-@W: CG532 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":140:1:140:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
-@W: CG532 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":169:1:169:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
-@W: CG532 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":185:1:185:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
-@W: CG532 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":198:1:198:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+Opening data file afifo_8s_4s_8s_4s_mem_8640_initial_block from directory .
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":93:4:93:10|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":110:1:110:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":127:1:127:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":140:1:140:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":169:1:169:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":185:1:185:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":198:1:198:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 Running optimization stage 1 on afifo_8s_4s_8s_4s .......
-@N: CL134 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":149:1:149:6|Found RAM mem, depth=16, width=8
-@W: CL260 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":128:1:128:6|Pruning register bit 4 of wgray[4:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-@W: CL260 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":186:1:186:6|Pruning register bit 4 of rgray[4:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-Finished optimization stage 1 on afifo_8s_4s_8s_4s (CPU Time 0h:00m:00s, Memory Used current: 96MB peak: 97MB)
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_buffer.v":3:7:3:16|Synthesizing module msg_buffer in library work.
+@N: CL134 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":149:1:149:6|Found RAM mem, depth=16, width=8
+@W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":128:1:128:6|Pruning register bit 4 of wgray[4:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":186:1:186:6|Pruning register bit 4 of rgray[4:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+Finished optimization stage 1 on afifo_8s_4s_8s_4s (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_buffer.v":3:7:3:16|Synthesizing module msg_buffer in library work.
 Running optimization stage 1 on msg_buffer .......
-Finished optimization stage 1 on msg_buffer (CPU Time 0h:00m:00s, Memory Used current: 96MB peak: 97MB)
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":21:7:21:14|Synthesizing module msg_read in library work.
-@N: CG179 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":187:31:187:41|Removing redundant assignment.
+Finished optimization stage 1 on msg_buffer (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":21:7:21:14|Synthesizing module msg_read in library work.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":187:31:187:41|Removing redundant assignment.
 Running optimization stage 1 on msg_read .......
-Finished optimization stage 1 on msg_read (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":21:7:21:15|Synthesizing module msg_write in library work.
-@N: CG179 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":143:32:143:39|Removing redundant assignment.
-@N: CG179 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":164:29:164:37|Removing redundant assignment.
-@N: CG179 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":165:27:165:33|Removing redundant assignment.
-@N: CG179 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":180:27:180:33|Removing redundant assignment.
-@N: CG179 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":197:27:197:33|Removing redundant assignment.
-@N: CG179 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":246:31:246:41|Removing redundant assignment.
+Finished optimization stage 1 on msg_read (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":21:7:21:15|Synthesizing module msg_write in library work.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":143:32:143:39|Removing redundant assignment.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":164:29:164:37|Removing redundant assignment.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":165:27:165:33|Removing redundant assignment.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":180:27:180:33|Removing redundant assignment.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":197:27:197:33|Removing redundant assignment.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":246:31:246:41|Removing redundant assignment.
 Running optimization stage 1 on msg_write .......
-Finished optimization stage 1 on msg_write (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\opb_emu_target.v":3:7:3:20|Synthesizing module opb_emu_target in library work.
+Finished optimization stage 1 on msg_write (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\opb_emu_target.v":3:7:3:20|Synthesizing module opb_emu_target in library work.
 Running optimization stage 1 on opb_emu_target .......
-Finished optimization stage 1 on opb_emu_target (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmd_server.v":3:7:3:16|Synthesizing module cmd_server in library work.
-@N: CG794 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmd_server.v":48:6:48:18|Using module cmn_uart from library work
+Finished optimization stage 1 on opb_emu_target (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmd_server.v":3:7:3:16|Synthesizing module cmd_server in library work.
+@N: CG794 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmd_server.v":48:6:48:18|Using module cmn_uart from library work
 Running optimization stage 1 on cmd_server .......
-Finished optimization stage 1 on cmd_server (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v":51:7:51:17|Synthesizing module AdderDecode in library work.
+Finished optimization stage 1 on cmd_server (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v":51:7:51:17|Synthesizing module AdderDecode in library work.
 Running optimization stage 1 on AdderDecode .......
-Finished optimization stage 1 on AdderDecode (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":20:7:20:26|Synthesizing module SCRATCH_PAD_REGISTER in library work.
+Finished optimization stage 1 on AdderDecode (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 120MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_GEN.v":32:7:32:12|Synthesizing module ClkGen in library work.
+Running optimization stage 1 on ClkGen .......
+@W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_GEN.v":152:1:152:6|Pruning unused register clk2meghz_div[15:0]. Make sure that there are no unused intermediate registers.
+Finished optimization stage 1 on ClkGen (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 120MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\Timer_Counter.v":19:7:19:19|Synthesizing module TIMER_COUNTER in library work.
+Running optimization stage 1 on TIMER_COUNTER .......
+Finished optimization stage 1 on TIMER_COUNTER (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 120MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FREQ_COUNTER.v":24:7:24:24|Synthesizing module OSCILLATOR_COUNTER in library work.
+Running optimization stage 1 on OSCILLATOR_COUNTER .......
+@W: CL271 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FREQ_COUNTER.v":90:1:90:6|Pruning unused bits 31 to 16 of sp[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FREQ_COUNTER.v":75:1:75:6|Optimizing register bit OSC_CT_DO[16] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FREQ_COUNTER.v":75:1:75:6|Optimizing register bit OSC_CT_DO[17] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FREQ_COUNTER.v":75:1:75:6|Optimizing register bit OSC_CT_DO[18] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FREQ_COUNTER.v":75:1:75:6|Optimizing register bit OSC_CT_DO[19] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FREQ_COUNTER.v":75:1:75:6|Optimizing register bit OSC_CT_DO[20] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FREQ_COUNTER.v":75:1:75:6|Optimizing register bit OSC_CT_DO[21] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FREQ_COUNTER.v":75:1:75:6|Optimizing register bit OSC_CT_DO[22] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FREQ_COUNTER.v":75:1:75:6|Optimizing register bit OSC_CT_DO[23] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FREQ_COUNTER.v":75:1:75:6|Optimizing register bit OSC_CT_DO[24] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FREQ_COUNTER.v":75:1:75:6|Optimizing register bit OSC_CT_DO[25] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FREQ_COUNTER.v":75:1:75:6|Optimizing register bit OSC_CT_DO[26] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FREQ_COUNTER.v":75:1:75:6|Optimizing register bit OSC_CT_DO[27] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FREQ_COUNTER.v":75:1:75:6|Optimizing register bit OSC_CT_DO[28] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FREQ_COUNTER.v":75:1:75:6|Optimizing register bit OSC_CT_DO[29] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FREQ_COUNTER.v":75:1:75:6|Optimizing register bit OSC_CT_DO[30] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FREQ_COUNTER.v":75:1:75:6|Optimizing register bit OSC_CT_DO[31] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FREQ_COUNTER.v":75:1:75:6|Pruning register bits 31 to 16 of OSC_CT_DO[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 1 on OSCILLATOR_COUNTER (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 120MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":20:7:20:26|Synthesizing module SCRATCH_PAD_REGISTER in library work.
 Running optimization stage 1 on SCRATCH_PAD_REGISTER .......
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[16] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[17] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[18] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[19] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[20] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[21] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[22] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[23] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[24] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[25] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[26] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[27] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[28] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[29] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[30] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[31] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL279 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Pruning register bits 31 to 16 of SP_DO[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-Finished optimization stage 1 on SCRATCH_PAD_REGISTER (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":3:7:3:9|Synthesizing module top in library work.
-@W: CG781 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":178:16:178:29|Input GPIO_IN on instance adder_decode_0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":178:16:178:29|Input OSC_CT_IN on instance adder_decode_0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":178:16:178:29|Input CLK_GEN_IN on instance adder_decode_0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":178:16:178:29|Input ILIM_DAC_IN on instance adder_decode_0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":178:16:178:29|Input ADC_IN on instance adder_decode_0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":178:16:178:29|Input GANT_MOT_IN on instance adder_decode_0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":178:16:178:29|Input LIFT_MOT_IN on instance adder_decode_0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":107:20:107:31|Removing wire PULSE_200KHZ, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":108:20:108:30|Removing wire PULSE_20KHZ, as there is no assignment to it.
-@W: CG184 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":109:20:109:29|Removing wire PULSE_2KHZ, as it has the load but no drivers.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":110:20:110:30|Removing wire PULSE_100US, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":111:20:111:27|Removing wire CLK_2MHZ, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":114:20:114:26|Removing wire GPIO_IN, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":115:20:115:28|Removing wire OSC_CT_IN, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":116:20:116:29|Removing wire CLK_GEN_IN, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":117:20:117:30|Removing wire ILIM_DAC_IN, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":118:20:118:25|Removing wire ADC_IN, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":119:20:119:30|Removing wire GANT_MOT_IN, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":120:20:120:30|Removing wire LIFT_MOT_IN, as there is no assignment to it.
-@W: CG184 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":121:17:121:22|Removing wire SP1_RE, as it has the load but no drivers.
-@W: CG184 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":122:17:122:22|Removing wire SP1_WE, as it has the load but no drivers.
-@W: CG184 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":123:17:123:22|Removing wire SP2_RE, as it has the load but no drivers.
-@W: CG184 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":124:17:124:22|Removing wire SP2_WE, as it has the load but no drivers.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":125:20:125:30|Removing wire STD_CONT_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":126:20:126:29|Removing wire CCHL_IF_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":127:20:127:33|Removing wire SER_PENDANT_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":128:20:128:28|Removing wire PWR_IF_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":129:20:129:35|Removing wire LIFT_MOT_SENS_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":130:20:130:32|Removing wire SPD_DMD_IF_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":131:20:131:37|Removing wire GANTRY_MOT_SENS_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":132:20:132:31|Removing wire SPD_EMOPS_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":133:20:133:25|Removing wire GPO_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":134:20:134:25|Removing wire GPO_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":135:20:135:27|Removing wire ADMUX_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":136:20:136:27|Removing wire ADMUX_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":137:20:137:27|Removing wire ADSEL_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":138:20:138:27|Removing wire ADSEL_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":139:20:139:25|Removing wire STS_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":140:20:140:25|Removing wire STS_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":141:20:141:35|Removing wire GANTRY_96V_IF_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":142:20:142:35|Removing wire GANTRY_96V_IF_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":143:20:143:33|Removing wire LIFT_96V_IF_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":144:20:144:33|Removing wire LIFT_96V_IF_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":145:20:145:29|Removing wire MOT_GPO_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":146:20:146:29|Removing wire COUNTER_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":147:20:147:29|Removing wire COUNTER_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":148:20:148:30|Removing wire ILIM_DAC_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":149:20:149:30|Removing wire ILIM_DAC_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":150:20:150:27|Removing wire CLOCK_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":151:20:151:27|Removing wire CLOCK_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":152:20:152:25|Removing wire ADC_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":153:20:153:25|Removing wire ADC_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":154:20:154:30|Removing wire GANT_MOT_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":155:20:155:30|Removing wire GANT_MOT_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":156:20:156:30|Removing wire LIFT_MOT_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":157:20:157:30|Removing wire LIFT_MOT_WE, as there is no assignment to it.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[16] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[17] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[18] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[19] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[20] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[21] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[22] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[23] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[24] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[25] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[26] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[27] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[28] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[29] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[30] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[31] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Pruning register bits 31 to 16 of SP_DO[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 1 on SCRATCH_PAD_REGISTER (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 120MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v":3:7:3:9|Synthesizing module top in library work.
+@W: CG184 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v":121:20:121:26|Removing wire GPIO_IN, as it has the load but no drivers.
+@W: CG184 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v":124:20:124:30|Removing wire ILIM_DAC_IN, as it has the load but no drivers.
+@W: CG184 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v":125:20:125:25|Removing wire ADC_IN, as it has the load but no drivers.
+@W: CG184 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v":126:20:126:30|Removing wire GANT_MOT_IN, as it has the load but no drivers.
+@W: CG184 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v":127:20:127:30|Removing wire LIFT_MOT_IN, as it has the load but no drivers.
 Running optimization stage 1 on top .......
-Finished optimization stage 1 on top (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+Finished optimization stage 1 on top (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 120MB)
 Running optimization stage 2 on top .......
-@W: CL156 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":109:20:109:29|*Input PULSE_2KHZ to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
-@W: CL156 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":121:17:121:22|*Input SP1_RE to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
-@W: CL156 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":122:17:122:22|*Input SP1_WE to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
-@W: CL156 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":123:17:123:22|*Input SP2_RE to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
-@W: CL156 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":124:17:124:22|*Input SP2_WE to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
-Finished optimization stage 2 on top (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 99MB)
+@W: CL156 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v":121:20:121:26|*Input GPIO_IN[31:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v":124:20:124:30|*Input ILIM_DAC_IN[31:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v":125:20:125:25|*Input ADC_IN[31:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v":126:20:126:30|*Input GANT_MOT_IN[31:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v":127:20:127:30|*Input LIFT_MOT_IN[31:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+Finished optimization stage 2 on top (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 120MB)
 Running optimization stage 2 on SCRATCH_PAD_REGISTER .......
-@W: CL246 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":23:20:23:24|Input port bits 31 to 16 of SP_DI[31:0] are unused. Assign logic for all port bits or change the input port size.
-Finished optimization stage 2 on SCRATCH_PAD_REGISTER (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+@W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":23:20:23:24|Input port bits 31 to 16 of SP_DI[31:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on SCRATCH_PAD_REGISTER (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 120MB)
+Running optimization stage 2 on OSCILLATOR_COUNTER .......
+@W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FREQ_COUNTER.v":26:24:26:32|Input port bits 31 to 16 of OSC_CT_DI[31:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on OSCILLATOR_COUNTER (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 120MB)
+Running optimization stage 2 on TIMER_COUNTER .......
+Finished optimization stage 2 on TIMER_COUNTER (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 120MB)
+Running optimization stage 2 on ClkGen .......
+@W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_GEN.v":34:17:34:26|Input port bits 31 to 16 of CLK_GEN_DI[31:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on ClkGen (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 120MB)
 Running optimization stage 2 on AdderDecode .......
-@W: CL246 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v":56:20:56:27|Input port bits 31 to 20 of DEC_ADDR[31:0] are unused. Assign logic for all port bits or change the input port size.
-Finished optimization stage 2 on AdderDecode (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+@W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v":56:20:56:27|Input port bits 31 to 20 of DEC_ADDR[31:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on AdderDecode (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 121MB)
 Running optimization stage 2 on cmd_server .......
-Finished optimization stage 2 on cmd_server (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+Finished optimization stage 2 on cmd_server (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 121MB)
 Running optimization stage 2 on opb_emu_target .......
-Finished optimization stage 2 on opb_emu_target (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\opb_emu_target.v":121:4:121:9|Trying to extract state machine for register state.
+Extracted state machine for register state
+State machine has 3 reachable states with original encodings of:
+   00
+   01
+   10
+Finished optimization stage 2 on opb_emu_target (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 121MB)
 Running optimization stage 2 on msg_write .......
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[9] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[10] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[11] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[12] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[13] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[14] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[15] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL279 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Pruning register bits 15 to 8 of timeout_cnt[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-@N: CL201 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":74:4:74:9|Trying to extract state machine for register state.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[9] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[10] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[11] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[12] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[13] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[14] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[15] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Pruning register bits 15 to 8 of timeout_cnt[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":74:4:74:9|Trying to extract state machine for register state.
 Extracted state machine for register state
 State machine has 7 reachable states with original encodings of:
    00000000
@@ -161,32 +155,34 @@ State machine has 7 reachable states with original encodings of:
    00000100
    00000101
    00000110
-Finished optimization stage 2 on msg_write (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 100MB)
+Finished optimization stage 2 on msg_write (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 121MB)
 Running optimization stage 2 on msg_read .......
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[9] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[10] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[11] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[12] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[13] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[14] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[15] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL279 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Pruning register bits 15 to 8 of timeout_cnt[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-@N: CL201 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Trying to extract state machine for register state.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Optimizing register bit state[3] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Optimizing register bit state[4] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Optimizing register bit state[5] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Optimizing register bit state[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Optimizing register bit state[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL279 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Pruning register bits 7 to 3 of state[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-Finished optimization stage 2 on msg_read (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 105MB)
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[9] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[10] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[11] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[12] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[13] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[14] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[15] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Pruning register bits 15 to 8 of timeout_cnt[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Trying to extract state machine for register state.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Optimizing register bit state[3] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Optimizing register bit state[4] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Optimizing register bit state[5] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Optimizing register bit state[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Optimizing register bit state[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Pruning register bits 7 to 3 of state[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 2 on msg_read (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 121MB)
 Running optimization stage 2 on msg_buffer .......
-Finished optimization stage 2 on msg_buffer (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 105MB)
+Finished optimization stage 2 on msg_buffer (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 121MB)
 Running optimization stage 2 on afifo_8s_4s_8s_4s .......
-Finished optimization stage 2 on afifo_8s_4s_8s_4s (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 105MB)
+Finished optimization stage 2 on afifo_8s_4s_8s_4s (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 121MB)
+Running optimization stage 2 on CLOCK_DIV .......
+Finished optimization stage 2 on CLOCK_DIV (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 121MB)
 
 For a summary of runtime per design unit, please see file:
 ==========================================================
-@L: C:\repo\jabil2025\dmd\P1060973_FPGA\synthesis\synwork\layer0.duruntime
+@L: C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\synwork\layer0.duruntime
 
 

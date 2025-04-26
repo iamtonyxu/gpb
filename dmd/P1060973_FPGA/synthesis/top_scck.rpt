@@ -12,10 +12,10 @@ Hostname: LAPTOP-6FQD1N4B
 
 Implementation : synthesis
 
-# Written on Mon Apr 21 21:58:21 2025
+# Written on Fri Apr 25 20:24:45 2025
 
 ##### FILES SYNTAX CHECKED ##############################################
-Constraint File(s):      "C:\repo\jabil2025\dmd\P1060973_FPGA\designer\top\synthesis.fdc"
+Constraint File(s):      "C:\repo2\gpb\dmd\P1060973_FPGA\designer\top\synthesis.fdc"
 
 #Run constraint checker to find more issues with constraints.
 #########################################################################
@@ -29,18 +29,22 @@ No issues found in constraint syntax.
 Clock Summary
 *************
 
-          Start           Requested     Requested     Clock        Clock          Clock
-Level     Clock           Frequency     Period        Type         Group          Load 
----------------------------------------------------------------------------------------
-0 -       top|SYS_CLK     100.0 MHz     10.000        inferred     (multiple)     386  
-=======================================================================================
+          Start                 Requested     Requested     Clock        Clock          Clock
+Level     Clock                 Frequency     Period        Type         Group          Load 
+---------------------------------------------------------------------------------------------
+0 -       top|SYS_CLK           100.0 MHz     10.000        inferred     (multiple)     641  
+                                                                                             
+0 -       top|DBUG_HEADER10     100.0 MHz     10.000        inferred     (multiple)     1    
+=============================================================================================
 
 
 Clock Load Summary
 ******************
 
-                Clock     Source            Clock Pin                         Non-clock Pin     Non-clock Pin
-Clock           Load      Pin               Seq Example                       Seq Example       Comb Example 
--------------------------------------------------------------------------------------------------------------
-top|SYS_CLK     386       SYS_CLK(port)     scratch_pad_0.dev_sp1[15:0].C     -                 I_1.A(CLKINT)
-=============================================================================================================
+                      Clock     Source                  Clock Pin                         Non-clock Pin                               Non-clock Pin                  
+Clock                 Load      Pin                     Seq Example                       Seq Example                                 Comb Example                   
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+top|SYS_CLK           641       SYS_CLK(port)           scratch_pad_0.dev_sp1[15:0].C     -                                           I_1.A(CLKINT)                  
+                                                                                                                                                                     
+top|DBUG_HEADER10     1         DBUG_HEADER10(port)     osc_counter_0.cntr_trig.C         osc_counter_0.counter.count[15:0].D[15]     osc_counter_0.cntr_en.I[0](and)
+=====================================================================================================================================================================

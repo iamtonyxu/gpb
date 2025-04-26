@@ -3,7 +3,7 @@
 <doc>
 <title>Compile Report</title>
 <text>Microchip Technology Inc. - Microchip Libero Software Release v2024.2 (Version 2024.2.0.13)</text>
-<text>Date: Mon Apr 21 21:58:34 2025
+<text>Date: Fri Apr 25 20:24:57 2025
 </text>
 <section><name>Device Selection</name></section>
 <table>
@@ -52,7 +52,7 @@
 </row>
 <row>
  <cell>Source</cell>
- <cell>C:\repo\jabil2025\dmd\P1060973_FPGA\synthesis\top.vm</cell>
+ <cell>C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\top.vm</cell>
 </row>
 </table>
 <section><name>Options</name></section>
@@ -74,15 +74,15 @@
 </header>
 <row>
  <cell>4LUT</cell>
- <cell>360</cell>
+ <cell>740</cell>
  <cell>108600</cell>
- <cell>0.33</cell>
+ <cell>0.68</cell>
 </row>
 <row>
  <cell>DFF</cell>
- <cell>329</cell>
+ <cell>547</cell>
  <cell>108600</cell>
- <cell>0.30</cell>
+ <cell>0.50</cell>
 </row>
 <row>
  <cell>I/O Register</cell>
@@ -92,15 +92,15 @@
 </row>
 <row>
  <cell>User I/O</cell>
- <cell>5</cell>
+ <cell>8</cell>
  <cell>244</cell>
- <cell>2.05</cell>
+ <cell>3.28</cell>
 </row>
 <row>
  <cell>-- Single-ended I/O</cell>
- <cell>5</cell>
+ <cell>8</cell>
  <cell>244</cell>
- <cell>2.05</cell>
+ <cell>3.28</cell>
 </row>
 <row>
  <cell>-- Differential I/O Pairs</cell>
@@ -128,9 +128,9 @@
 </row>
 <row>
  <cell>H-Chip Global</cell>
- <cell>1</cell>
+ <cell>2</cell>
  <cell>48</cell>
- <cell>2.08</cell>
+ <cell>4.17</cell>
 </row>
 <row>
  <cell>PLL</cell>
@@ -166,8 +166,8 @@
 </header>
 <row>
  <cell>Fabric Logic</cell>
- <cell>336</cell>
- <cell>305</cell>
+ <cell>716</cell>
+ <cell>523</cell>
 </row>
 <row>
  <cell>uSRAM Interface Logic</cell>
@@ -186,8 +186,41 @@
 </row>
 <row>
  <cell>Total Used</cell>
- <cell>360</cell>
- <cell>329</cell>
+ <cell>740</cell>
+ <cell>547</cell>
+</row>
+</table>
+<section><name>Detailed Carry Chains Resource Usage</name></section>
+<table>
+<header>
+</header>
+<row>
+ <cell>Length</cell>
+ <cell>Used</cell>
+</row>
+<row>
+ <cell>9</cell>
+ <cell>2</cell>
+</row>
+<row>
+ <cell>14</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>15</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>16</cell>
+ <cell>4</cell>
+</row>
+<row>
+ <cell>17</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>Total</cell>
+ <cell>9</cell>
 </row>
 </table>
 <section><name>I/O Function</name></section>
@@ -200,13 +233,13 @@
 </header>
 <row>
  <cell>Input I/O</cell>
- <cell>3</cell>
+ <cell>4</cell>
  <cell>0</cell>
  <cell>0</cell>
 </row>
 <row>
  <cell>Output I/O</cell>
- <cell>2</cell>
+ <cell>4</cell>
  <cell>0</cell>
  <cell>0</cell>
 </row>
@@ -237,7 +270,7 @@
  <cell>Name</cell>
 </header>
 <row>
- <cell>307</cell>
+ <cell>474</cell>
  <cell>INT_NET</cell>
  <cell>Net   : NN_1</cell>
 </row>
@@ -245,6 +278,21 @@
  <cell></cell>
  <cell></cell>
  <cell>Driver: I_1/U0_RGB1</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Source: NETLIST</cell>
+</row>
+<row>
+ <cell>51</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : DBUG_HEADER6_c</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: clk_gen_0/pulse2khz_div/CLK_OUT_RNIP6F97/U0_RGB1</cell>
 </row>
 <row>
  <cell></cell>
@@ -268,7 +316,7 @@
  <cell>Name</cell>
 </header>
 <row>
- <cell>307</cell>
+ <cell>508</cell>
  <cell>INT_NET</cell>
  <cell>Net   : RESET_N_c</cell>
 </row>
@@ -278,19 +326,19 @@
  <cell>Driver: RESET_N_ibuf</cell>
 </row>
 <row>
- <cell>60</cell>
+ <cell>47</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_write_inst/N_334</cell>
+ <cell>Net   : cmd_server_0/opb_emu_target_inst/N_94_1</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_write_inst/next_state6_i_0_o2_i_o2</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/ping_mode_65_1</cell>
 </row>
 <row>
- <cell>37</cell>
+ <cell>46</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/OPB_WE</cell>
+ <cell>Net   : cmd_server_0_opb_emu_target_inst_msg_write_inst_OPB_WE</cell>
 </row>
 <row>
  <cell></cell>
@@ -298,34 +346,34 @@
  <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_WE</cell>
 </row>
 <row>
- <cell>33</cell>
+ <cell>40</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_371</cell>
+ <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_405</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/byte_cnt_RNIMB08O[0]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_6_i_0_0_o2[3]</cell>
 </row>
 <row>
- <cell>32</cell>
+ <cell>39</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_276</cell>
+ <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_308</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/state_RNIODBNS[1]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/un1_next_state72_1_i_0_0_0</cell>
 </row>
 <row>
- <cell>32</cell>
+ <cell>34</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_278</cell>
+ <cell>Net   : cmd_server_0_opb_emu_target_inst_msg_write_inst_OPB_RE</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/state_RNIEPBVK1[1]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_RE</cell>
 </row>
 <row>
  <cell>32</cell>
@@ -335,7 +383,7 @@
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_write_inst/state_RNIIAPS6[3]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_write_inst/state_RNIIHLD8[3]</cell>
 </row>
 <row>
  <cell>32</cell>
@@ -345,27 +393,27 @@
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_write_inst/state_RNIH9PS6[2]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_write_inst/state_RNIHGLD8[2]</cell>
 </row>
 <row>
- <cell>18</cell>
+ <cell>32</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/state_Z[2]</cell>
+ <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_310</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/state[2]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/un1_next_state28_1_i_0_0_0</cell>
 </row>
 <row>
- <cell>16</cell>
+ <cell>31</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/byte_cnt_Z[2]</cell>
+ <cell>Net   : clk_gen_0_clk16khz_div[3]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/byte_cnt[2]</cell>
+ <cell>Driver: clk_gen_0/clk16khz_div[3]</cell>
 </row>
 </table>
 <section><name>High fanout nets (through buffer trees)</name></section>
@@ -376,7 +424,7 @@
  <cell>Name</cell>
 </header>
 <row>
- <cell>307</cell>
+ <cell>508</cell>
  <cell>INT_NET</cell>
  <cell>Net   : RESET_N_c</cell>
 </row>
@@ -386,19 +434,19 @@
  <cell>Driver: RESET_N_ibuf</cell>
 </row>
 <row>
- <cell>60</cell>
+ <cell>47</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_write_inst/N_334</cell>
+ <cell>Net   : cmd_server_0/opb_emu_target_inst/N_94_1</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_write_inst/next_state6_i_0_o2_i_o2</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/ping_mode_65_1</cell>
 </row>
 <row>
- <cell>37</cell>
+ <cell>46</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/OPB_WE</cell>
+ <cell>Net   : cmd_server_0_opb_emu_target_inst_msg_write_inst_OPB_WE</cell>
 </row>
 <row>
  <cell></cell>
@@ -406,34 +454,34 @@
  <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_WE</cell>
 </row>
 <row>
- <cell>33</cell>
+ <cell>40</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_371</cell>
+ <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_405</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/byte_cnt_RNIMB08O[0]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_6_i_0_0_o2[3]</cell>
 </row>
 <row>
- <cell>32</cell>
+ <cell>39</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_276</cell>
+ <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_308</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/state_RNIODBNS[1]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/un1_next_state72_1_i_0_0_0</cell>
 </row>
 <row>
- <cell>32</cell>
+ <cell>34</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_278</cell>
+ <cell>Net   : cmd_server_0_opb_emu_target_inst_msg_write_inst_OPB_RE</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/state_RNIEPBVK1[1]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_RE</cell>
 </row>
 <row>
  <cell>32</cell>
@@ -443,7 +491,7 @@
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_write_inst/state_RNIIAPS6[3]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_write_inst/state_RNIIHLD8[3]</cell>
 </row>
 <row>
  <cell>32</cell>
@@ -453,27 +501,27 @@
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_write_inst/state_RNIH9PS6[2]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_write_inst/state_RNIHGLD8[2]</cell>
 </row>
 <row>
- <cell>18</cell>
+ <cell>32</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/state_Z[2]</cell>
+ <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_310</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/state[2]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/un1_next_state28_1_i_0_0_0</cell>
 </row>
 <row>
- <cell>16</cell>
+ <cell>31</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/byte_cnt_Z[2]</cell>
+ <cell>Net   : clk_gen_0_clk16khz_div[3]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/byte_cnt[2]</cell>
+ <cell>Driver: clk_gen_0/clk16khz_div[3]</cell>
 </row>
 </table>
 </doc>

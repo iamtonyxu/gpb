@@ -3,9 +3,9 @@ set_device \
     -die PA5M100T \
     -pkg fcg484
 set_proj_dir \
-    -path {C:\repo\jabil2025\dmd\P1060973_FPGA}
+    -path {C:\repo2\gpb\dmd\P1060973_FPGA}
 set_impl_dir \
-    -path {C:\repo\jabil2025\dmd\P1060973_FPGA\designer\top}
+    -path {C:\repo2\gpb\dmd\P1060973_FPGA\designer\top}
 set_is_relative_path \
     -value {FALSE}
 set_root_path_dir \

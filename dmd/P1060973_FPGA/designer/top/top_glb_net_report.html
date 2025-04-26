@@ -31,7 +31,7 @@
     <body>
         <h1 align="center">Global Net Report</h1>
         <p>Microchip Technology Inc. - Microchip Libero Software Release v2024.2 (Version 2024.2.0.13)</p>
-        <p>Date: Mon Apr 21 22:06:36 2025
+        <p>Date: Fri Apr 25 20:25:15 2025
 </p>
         <h2>Global Nets Information</h2>
         <table cellpadding="4">
@@ -47,7 +47,14 @@
                 <td>I_1/U0</td>
                 <td>(866, 81)</td>
                 <td>I_1/U0_Y</td>
-                <td>307</td>
+                <td>474</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>clk_gen_0/pulse2khz_div/CLK_OUT_RNIP6F97/U0</td>
+                <td>(864, 81)</td>
+                <td>clk_gen_0/pulse2khz_div/CLK_OUT_RNIP6F97/U0_Y</td>
+                <td>51</td>
             </tr>
         </table>
         <p/>
@@ -75,12 +82,32 @@
                 <td>I_1/U0</td>
                 <td>SYS_CLK_ibuf/YIN</td>
                 <td>HARDWIRED</td>
-                <td>1</td>
+                <td>2</td>
             </tr>
         </table>
         <p/>
         <h2>Fabric to GB Connections</h2>
-        <p>(none)</p>
+        <table cellpadding="4">
+            <tr>
+                <th/>
+                <th> From </th>
+                <th> From Location </th>
+                <th> To </th>
+                <th> Net Name </th>
+                <th> Net Type </th>
+                <th> Fanout </th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>clk_gen_0/pulse2khz_div/CLK_OUT:Y</td>
+                <td>(154, 45)</td>
+                <td>clk_gen_0/pulse2khz_div/CLK_OUT_RNIP6F97/U0</td>
+                <td>clk_gen_0/pulse2khz_div/CLK_OUT_Z</td>
+                <td>ROUTED</td>
+                <td>1</td>
+            </tr>
+        </table>
+        <p/>
         <h2>CCC to GB Connections</h2>
         <p>(none)</p>
         <h2>CCC Input Connections</h2>
@@ -104,10 +131,40 @@
                 <td>I_1/U0</td>
                 <td>(866, 81)</td>
                 <td>I_1/U0_Y</td>
-                <td>307</td>
-                <td/>
+                <td>474</td>
+                <td>1</td>
                 <td>(433, 14)</td>
-                <td>307</td>
+                <td>116</td>
+            </tr>
+            <tr>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>2</td>
+                <td>(433, 41)</td>
+                <td>358</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>clk_gen_0/pulse2khz_div/CLK_OUT_RNIP6F97/U0</td>
+                <td>(864, 81)</td>
+                <td>clk_gen_0/pulse2khz_div/CLK_OUT_RNIP6F97/U0_Y</td>
+                <td>51</td>
+                <td>1</td>
+                <td>(432, 12)</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>2</td>
+                <td>(432, 39)</td>
+                <td>25</td>
             </tr>
         </table>
         <p/>
@@ -116,21 +173,38 @@
             <tr/>
             <tr>
                 <td>The number of clock signals through  H-Chip Global resources</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>The number of clock signals through     Row Global resources</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>The number of clock signals through  Sector Global resources</td>
                 <td>2</td>
             </tr>
             <tr>
+                <td>The number of clock signals through     Row Global resources</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>The number of clock signals through  Sector Global resources</td>
+                <td>10</td>
+            </tr>
+            <tr>
                 <td>The number of clock signals through Cluster Global resources</td>
-                <td>32</td>
+                <td>58</td>
             </tr>
         </table>
         <p/>
+        <h2>Warning: Local Clock Nets</h2>
+        <p>The following clocks are routed using regular routing resources instead of dedicated global resources. Clocks using regular routing have less predictable amounts of clock jitter versus the dedicated global resources. Microchip recommends using clock input and clock generation paths that maximize the usage of dedicated global routing resources, as well as promoting these signals below to dedicated global resources. Refer to the PolarFire and PolarFire SoC Clocking Resources User Guide for more information
+</p>
+        <table cellpadding="4">
+            <tr>
+                <th/>
+                <th> From </th>
+                <th> Driving Net </th>
+                <th> To </th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>DBUG_HEADER10</td>
+                <td>DBUG_HEADER10_c</td>
+                <td>osc_counter_0/cntr_trig:CLK</td>
+            </tr>
+        </table>
     </body>
 </html>

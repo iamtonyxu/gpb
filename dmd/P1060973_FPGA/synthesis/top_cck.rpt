@@ -12,12 +12,12 @@ Hostname: LAPTOP-6FQD1N4B
 
 Implementation : synthesis
 
-# Written on Mon Apr 21 21:58:22 2025
+# Written on Fri Apr 25 20:24:46 2025
 
 ##### DESIGN INFO #######################################################
 
 Top View:                "top"
-Constraint File(s):      "C:\repo\jabil2025\dmd\P1060973_FPGA\designer\top\synthesis.fdc"
+Constraint File(s):      "C:\repo2\gpb\dmd\P1060973_FPGA\designer\top\synthesis.fdc"
 
 
 
@@ -34,10 +34,12 @@ Found 0 issues in 0 out of 0 constraints
 Clock Relationships
 *******************
 
-Starting        Ending          |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
--------------------------------------------------------------------------------------------------------------------------------------------
-top|SYS_CLK     top|SYS_CLK     |     10.000           |     No paths         |     5.000            |     5.000                            
-===========================================================================================================================================
+Starting              Ending                |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+top|SYS_CLK           top|SYS_CLK           |     10.000           |     No paths         |     5.000            |     5.000                            
+top|SYS_CLK           top|DBUG_HEADER10     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+top|DBUG_HEADER10     top|SYS_CLK           |     Diff grp         |     No paths         |     No paths         |     No paths                         
+=======================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 
@@ -45,10 +47,10 @@ top|SYS_CLK     top|SYS_CLK     |     10.000           |     No paths         | 
 Unconstrained Start/End Points
 ******************************
 
+p:DBUG_HEADER2
+p:DBUG_HEADER4
 p:POWER_GOOD
 p:RESET_N
-p:UART_RXD
-p:UART_TXD
 
 
 Inapplicable constraints

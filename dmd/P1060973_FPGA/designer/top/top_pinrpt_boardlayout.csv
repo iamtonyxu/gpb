@@ -1,11 +1,11 @@
 Device Selection
 Report Version,Date,Product,Release,Version,Design Name,Family,Die,Package
-0.1,Mon Apr 21 22:06:53 2025,Designer,v2024.2,2024.2.0.13,top,PolarFire,MPF100T,FCG484
+0.1,Fri Apr 25 20:25:33 2025,Designer,v2024.2,2024.2.0.13,top,PolarFire,MPF100T,FCG484
 Pin Report
 Pin,Port,Function,Bank,State,I/O Std,Direction,Used I/O Reg,User I/O Lock Down,Clamp Diode,Resistor Pull,Use I/O Calibration from the lane,Schmitt Trigger,Vcm Input Range,On Die Termination,Odt Value (Ohm),Input Delay,Slew,Output Drive (mA),Impedance (ohm),Output Load (pF),Source Termination (Ohm),Output Delay,Board Layout
 A1,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
 A2,---,GPIO145PB2/CLKIN_S_2/CCC_SW_CLKIN_S_2/CCC_SW_PLL1_OUT0,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
-A3,UART_RXD,GPIO145NB2,Bank2,Fixed,LVCMOS33,Input,None,No,ON,Up,No,OFF,---,---,---,OFF,---,---,---,---,---,---,UART_RXD
+A3,DBUG_HEADER2,GPIO145NB2,Bank2,Fixed,LVCMOS33,Input,None,No,ON,Up,No,OFF,---,---,---,OFF,---,---,---,---,---,---,DBUG_HEADER2
 A4,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
 A5,---,GPIO3NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 A6,---,GPIO9PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
@@ -70,8 +70,8 @@ AB20,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,--
 AB21,---,XCVR_0_TX3_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
 AB22,---,XCVR_0_TX3_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
 B1,---,GPIO144NB2/DQS,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
-B2,---,GPIO147PB2/CLKIN_S_3/CCC_SW_CLKIN_S_3,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
-B3,---,GPIO147NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+B2,DBUG_HEADER8,GPIO147PB2/CLKIN_S_3/CCC_SW_CLKIN_S_3,Bank2,Fixed,LVCMOS33,Output,None,No,ON,None,No,---,---,---,---,---,OFF,8,---,5,---,OFF,DBUG_HEADER8
+B3,DBUG_HEADER10,GPIO147NB2,Bank2,Fixed,LVCMOS33,Input,None,No,ON,Up,No,OFF,---,---,---,OFF,---,---,---,---,---,---,DBUG_HEADER10
 B4,---,GPIO3PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 B5,---,GPIO5NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 B6,---,VDDI2,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
@@ -115,7 +115,7 @@ C21,---,VDDA,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,--
 C22,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
 D1,POWER_GOOD,GPIO142NB2,Bank2,Fixed,LVCMOS33,Output,None,No,ON,None,No,---,---,---,---,---,OFF,12,---,5,---,OFF,POWER_GOOD
 D2,---,GPIO143PB2/CCC_SW_CLKIN_S_1,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
-D3,---,GPIO146NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+D3,DBUG_HEADER6,GPIO146NB2,Bank2,Fixed,LVCMOS33,Output,None,No,ON,None,No,---,---,---,---,---,OFF,8,---,5,---,OFF,DBUG_HEADER6
 D4,---,GPIO1PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 D5,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
 D6,---,GPIO4NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
@@ -137,7 +137,7 @@ D21,---,XCVR_1_TX1_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,--
 D22,---,XCVR_1_TX1_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
 E1,---,GPIO142PB2/CCC_SW_CLKIN_S_0,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 E2,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
-E3,UART_TXD,GPIO146PB2/CCC_SW_PLL1_OUT1,Bank2,Fixed,LVCMOS33,Output,None,No,ON,None,No,---,---,---,---,---,OFF,8,---,5,---,OFF,UART_TXD
+E3,DBUG_HEADER4,GPIO146PB2/CCC_SW_PLL1_OUT1,Bank2,Fixed,LVCMOS33,Output,None,No,ON,None,No,---,---,---,---,---,OFF,12,---,5,---,OFF,DBUG_HEADER4
 E4,---,GPIO2NB2/DQS,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 E5,---,GPIO0NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 E6,---,GPIO4PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"

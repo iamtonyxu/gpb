@@ -1,14 +1,51 @@
 @N: MF916 |Option synthesis_strategy=base is enabled. 
 @N: MF248 |Running in 64-bit mode.
 @N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
-@N: BN362 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\scratchpadregister.v":39:4:39:9|Removing sequential instance scratch_pad_0.dev_sp2[15:0] (in view: work.top(verilog)) of type view:PrimLib.dffpatre(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\scratchpadregister.v":53:4:53:9|Removing sequential instance scratch_pad_0.SP_DO_1[15:0] (in view: work.top(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\scratchpadregister.v":39:4:39:9|Removing sequential instance scratch_pad_0.dev_sp1[15:0] (in view: work.top(verilog)) of type view:PrimLib.dffpatre(prim) because it does not drive other instances.
-@N: FX702 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0] (in view: work.afifo_8s_4s_8s_4s_1(verilog)).
-@N: FX702 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0]
-@N: FX702 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0] (in view: work.afifo_8s_4s_8s_4s_0(verilog)).
-@N: FX702 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0]
-@N: MO225 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|There are no possible illegal states for state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl)); safe FSM implementation is not required.
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\timer_counter.v":42:1:42:6|Found counter in view:work.top(verilog) instance osc_counter_0.counter.count[15:0] 
+@N: FX702 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0] (in view: work.afifo_8s_4s_8s_4s_1(verilog)).
+@N: FX702 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0]
+@N: FX702 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0] (in view: work.afifo_8s_4s_8s_4s_0(verilog)).
+@N: FX702 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0]
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":176:4:176:9|Found counter in view:work.msg_read(verilog) instance timeout_cnt[7:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_write.v":235:4:235:9|Found counter in view:work.msg_write(verilog) instance timeout_cnt[7:0] 
+@N: MO225 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|There are no possible illegal states for state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl)); safe FSM implementation is not required.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":152:1:152:6|Removing sequential instance clk_gen_0.pulse500us_div[9] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":152:1:152:6|Removing sequential instance clk_gen_0.pulse100us_div[6] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":152:1:152:6|Removing sequential instance clk_gen_0.pulse50us_div[3] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":152:1:152:6|Removing sequential instance clk_gen_0.pulse50us_div[5] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":152:1:152:6|Removing sequential instance clk_gen_0.pulse5us_div[8] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":152:1:152:6|Removing sequential instance clk_gen_0.clk16khz_div[10] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":152:1:152:6|Removing sequential instance clk_gen_0.clk16khz_div[11] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":152:1:152:6|Removing sequential instance clk_gen_0.clk16khz_div[12] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":152:1:152:6|Removing sequential instance clk_gen_0.clk16khz_div[13] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":152:1:152:6|Removing sequential instance clk_gen_0.clk16khz_div[14] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":152:1:152:6|Removing sequential instance clk_gen_0.clk16khz_div[15] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":152:1:152:6|Removing sequential instance clk_gen_0.clk16khz_div[0] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":152:1:152:6|Removing sequential instance clk_gen_0.clk16khz_div[1] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":152:1:152:6|Removing sequential instance clk_gen_0.clk16khz_div[2] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":152:1:152:6|Removing sequential instance clk_gen_0.clk16khz_div[4] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":202:4:202:9|Removing sequential instance adder_decode_0.DEC_DO[19] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":202:4:202:9|Removing sequential instance adder_decode_0.DEC_DO[20] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":202:4:202:9|Removing sequential instance adder_decode_0.DEC_DO[21] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":202:4:202:9|Removing sequential instance adder_decode_0.DEC_DO[22] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":202:4:202:9|Removing sequential instance adder_decode_0.DEC_DO[23] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":202:4:202:9|Removing sequential instance adder_decode_0.DEC_DO[24] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":202:4:202:9|Removing sequential instance adder_decode_0.DEC_DO[25] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":202:4:202:9|Removing sequential instance adder_decode_0.DEC_DO[26] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":202:4:202:9|Removing sequential instance adder_decode_0.DEC_DO[27] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":202:4:202:9|Removing sequential instance adder_decode_0.DEC_DO[28] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":202:4:202:9|Removing sequential instance adder_decode_0.DEC_DO[29] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":202:4:202:9|Removing sequential instance adder_decode_0.DEC_DO[30] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":202:4:202:9|Removing sequential instance adder_decode_0.DEC_DO[31] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":202:4:202:9|Removing sequential instance adder_decode_0.DEC_DO[16] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":202:4:202:9|Removing sequential instance adder_decode_0.DEC_DO[17] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":202:4:202:9|Removing sequential instance adder_decode_0.DEC_DO[18] (in view: work.top(verilog)) because it does not drive other instances.
+@N: FX271 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":241:4:241:9|Replicating instance cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_ADDR[13] (in view: work.top(verilog)) with 4 loads 1 time to improve timing.
+@N: FX271 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":241:4:241:9|Replicating instance cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_ADDR[14] (in view: work.top(verilog)) with 9 loads 1 time to improve timing.
+@N: FX271 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":241:4:241:9|Replicating instance cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_ADDR[15] (in view: work.top(verilog)) with 9 loads 1 time to improve timing.
+@N: FX271 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":260:4:260:9|Replicating instance cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_RE (in view: work.top(verilog)) with 43 loads 2 times to improve timing.
+@N: FX271 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":241:4:241:9|Replicating instance cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_ADDR[18] (in view: work.top(verilog)) with 15 loads 2 times to improve timing.
+@N: FX271 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":241:4:241:9|Replicating instance cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_ADDR[0] (in view: work.top(verilog)) with 30 loads 2 times to improve timing.
 @N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
 @N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
 @N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.

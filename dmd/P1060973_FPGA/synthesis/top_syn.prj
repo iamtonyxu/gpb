@@ -1,22 +1,26 @@
 #--  Synopsys, Inc.
 #--  Version V-2023.09M-3
-#--  Project file C:\repo\jabil2025\dmd\P1060973_FPGA\synthesis\top_syn.prj
-#--  Written on Mon Apr 21 21:58:28 2025
+#--  Project file C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\top_syn.prj
+#--  Written on Fri Apr 25 20:24:52 2025
 
 
 #project files
 add_file -verilog "../component/polarfire_syn_comps.v"
-add_file -verilog "C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v"
-add_file -verilog "C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ScratchPadRegister.v"
-add_file -vhdl -lib work "C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmn_uart.vhd"
-add_file -verilog "C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/afifo.v"
-add_file -verilog "C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_buffer.v"
-add_file -verilog "C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_read.v"
-add_file -verilog "C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_write.v"
-add_file -verilog "C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/opb_emu_target.v"
-add_file -verilog "C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmd_server.v"
-add_file -verilog "C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v"
-add_file -fpga_constraint "C:/repo/jabil2025/dmd/P1060973_FPGA/designer/top/synthesis.fdc"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/CLK_DIV.V"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/CLK_GEN.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/Timer_Counter.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/FREQ_COUNTER.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ScratchPadRegister.v"
+add_file -vhdl -lib work "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_uart.vhd"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/afifo.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_buffer.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_read.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_write.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/opb_emu_target.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmd_server.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/top.v"
+add_file -fpga_constraint "C:/repo2/gpb/dmd/P1060973_FPGA/designer/top/synthesis.fdc"
 
 
 #implementation: "synthesis"

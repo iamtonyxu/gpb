@@ -1,6 +1,6 @@
 <project name="top" version="1.2">
     <ProjectDirectory>
-        C:\repo\jabil2025\dmd\P1060973_FPGA\designer\top\top_fp
+        C:\repo2\gpb\dmd\P1060973_FPGA\designer\top\top_fp
     </ProjectDirectory>
     <View>
         ChainView
@@ -9,7 +9,7 @@
         MPF100T
     </LiberoTargetDevice>
     <LogFile>
-        C:\repo\jabil2025\dmd\P1060973_FPGA\designer\top\top_fp\top.log
+        C:\repo2\gpb\dmd\P1060973_FPGA\designer\top\top_fp\top.log
     </LogFile>
     <SerializationOption>
         Skip
@@ -47,6 +47,7 @@
                 </ClkMode>
             </FlashPro3>
             <FlashPro4>
+                <ForceTCK/>
                 <TCK>
                     4000000
                 </TCK>

@@ -1,46 +1,39 @@
-C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_write.v {1 {vlog -work work -vopt C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_write.v
+C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_write.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_write.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 -- Compiling module msg_write
 
 Top level modules:
 	msg_write
 
-} {} {}} C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/dual_port_ram.v {1 {vlog -work work -vopt C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/dual_port_ram.v
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/dual_port_ram.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/dual_port_ram.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 -- Compiling module DP_RAM_2R_1W
 
 Top level modules:
 	DP_RAM_2R_1W
 
-} {} {}} C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/afifo_tb.v {1 {vlog -work work -vopt C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/afifo_tb.v
-Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
--- Compiling module afifo_tb
-
-Top level modules:
-	afifo_tb
-
-} {} {}} C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmd_server.v {1 {vlog -work work -vopt C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmd_server.v
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmd_server.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmd_server.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 -- Compiling module cmd_server
 
 Top level modules:
 	cmd_server
 
-} {} {}} C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/CLK_GEN.v {1 {vlog -work work -vopt C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/CLK_GEN.v
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/afifo_tb.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/afifo_tb.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module afifo_tb
+
+Top level modules:
+	afifo_tb
+
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/CLK_GEN.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/CLK_GEN.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 -- Compiling module ClkGen
 
 Top level modules:
 	ClkGen
 
-} {} {}} C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/afifo.v {1 {vlog -work work -vopt C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/afifo.v
-Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
--- Compiling module afifo
-
-Top level modules:
-	afifo
-
-} {} {}} C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmn_uart.vhd {1 {vcom -work work -2002 -explicit -vopt C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmn_uart.vhd
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_uart.vhd {1 {vcom -work work -2002 -explicit -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_uart.vhd
 Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 19 2013
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -50,112 +43,84 @@ Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 19 2013
 -- Compiling entity cmn_uart
 -- Compiling architecture RTL of cmn_uart
 
-} {} {}} C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v {1 {vlog -work work -vopt C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/afifo.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/afifo.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module afifo
+
+Top level modules:
+	afifo
+
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmd_server_tb.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmd_server_tb.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module cmd_server_tb
+
+Top level modules:
+	cmd_server_tb
+
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/top_tb.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/top_tb.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module top_tb
+
+Top level modules:
+	top_tb
+
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 -- Compiling module AdderDecode
 
 Top level modules:
 	AdderDecode
 
-} {} {}} C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/Timer_Counter.v {1 {vlog -work work -vopt C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/Timer_Counter.v
-Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
--- Compiling module TIMER_COUNTER
-
-Top level modules:
-	TIMER_COUNTER
-
-} {} {}} C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_buffer.v {1 {vlog -work work -vopt C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_buffer.v
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_buffer.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_buffer.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 -- Compiling module msg_buffer
 
 Top level modules:
 	msg_buffer
 
-} {} {}} C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/FPGA_WD.v {1 {vlog -work work -vopt C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/FPGA_WD.v
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/Timer_Counter.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/Timer_Counter.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
--- Compiling module FPGA_WDI
+-- Compiling module TIMER_COUNTER
 
 Top level modules:
-	FPGA_WDI
+	TIMER_COUNTER
 
-} {} {}} C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/DAC_AD8803AR.v {1 {vlog -work work -vopt C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/DAC_AD8803AR.v
-Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
--- Compiling module DAC_AD8803AR
-
-Top level modules:
-	DAC_AD8803AR
-
-} {} {}} C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_read.v {1 {vlog -work work -vopt C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_read.v
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_read.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_read.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 -- Compiling module msg_read
 
 Top level modules:
 	msg_read
 
-} {} {}} C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ScratchPadRegister.v {1 {vlog -work work -vopt C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ScratchPadRegister.v
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/top.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/top.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
--- Compiling module SCRATCH_PAD_REGISTER
+-- Compiling module top
 
 Top level modules:
-	SCRATCH_PAD_REGISTER
+	top
 
-} {} {}} C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/CLK_DIV.V {1 {vlog -work work -vopt C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/CLK_DIV.V
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/CLK_DIV.V {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/CLK_DIV.V
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 -- Compiling module CLOCK_DIV
 
 Top level modules:
 	CLOCK_DIV
 
-} {} {}} C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/GANTRY_MOT.v {1 {vlog -work work -vopt C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/GANTRY_MOT.v
-Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
--- Compiling module Gantry_Motor
-
-Top level modules:
-	Gantry_Motor
-
-} {} {}} C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/FREQ_COUNTER.v {1 {vlog -work work -vopt C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/FREQ_COUNTER.v
-Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
--- Compiling module OSCILLATOR_COUNTER
-
-Top level modules:
-	OSCILLATOR_COUNTER
-
-} {} {}} C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/opb_emu_target.v {1 {vlog -work work -vopt C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/opb_emu_target.v
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/opb_emu_target.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/opb_emu_target.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 -- Compiling module opb_emu_target
 
 Top level modules:
 	opb_emu_target
 
-} {} {}} C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ADC_AD7663AS.V {1 {vlog -work work -vopt C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ADC_AD7663AS.V
-Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
--- Compiling module ADC_AD7663AS
-
-Top level modules:
-	ADC_AD7663AS
-
-} {} {}} C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/LIFT_MOT.v {1 {vlog -work work -vopt C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/LIFT_MOT.v
-Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
--- Compiling module Lift_Motor
-
-Top level modules:
-	Lift_Motor
-
-} {} {}} C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_write_tb.v {1 {vlog -work work -vopt C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_write_tb.v
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_write_tb.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_write_tb.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 -- Compiling module msg_write_tb
 
 Top level modules:
 	msg_write_tb
 
-} {} {}} C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/GPIO.v {1 {vlog -work work -vopt C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/GPIO.v
-Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
--- Compiling module GPIO
-
-Top level modules:
-	GPIO
-
-} {} {}} C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_read_tb.v {1 {vlog -work work -vopt C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_read_tb.v
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_read_tb.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_read_tb.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 -- Compiling module msg_read_tb
 

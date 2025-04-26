@@ -1,14 +1,18 @@
 #List of actual used RTLs.
 
-File                                                                         Type     IN_PROJECT/INCLUDED/LIBRARY
+File                                                                    Type     IN_PROJECT/INCLUDED/LIBRARY
 
-"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v"                           verilog                      IN PROJECT
-"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v"            verilog                      IN PROJECT
-"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v"                  verilog                      IN PROJECT
-"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmd_server.v"                    verilog                      IN PROJECT
-"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd"                       vhdl                      IN PROJECT
-"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\opb_emu_target.v"                verilog                      IN PROJECT
-"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v"                     verilog                      IN PROJECT
-"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v"                      verilog                      IN PROJECT
-"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_buffer.v"                    verilog                      IN PROJECT
-"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v"                         verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v"                           verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v"            verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FREQ_COUNTER.v"                  verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\Timer_Counter.v"                 verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_GEN.v"                       verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_DIV.V"                       verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v"                  verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmd_server.v"                    verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd"                       vhdl                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\opb_emu_target.v"                verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v"                     verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v"                      verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_buffer.v"                    verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v"                         verilog                      IN PROJECT

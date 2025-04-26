@@ -1,11 +1,20 @@
 
 . Module name, SLE, CFG, ARI1, BUFFER, MACC_PA, RAM1K20, RAM64X12, GLOBAL, IO
-. top, 305, 337, 0, 0, 0, 0, 2, 1, 5
-.	. cmd_server, 305, 337, 0, 0, 0, 0, 2, 0, 0
-.	.	. msg_buffer, 81, 61, 0, 0, 0, 0, 2, 0, 0
-.	.	.	. afifo_8s_4s_8s_4s_1, 40, 29, 0, 0, 0, 0, 1, 0, 0
-.	.	.	. afifo_8s_4s_8s_4s_1_0, 40, 31, 0, 0, 0, 0, 1, 0, 0
-.	.	. opb_emu_target, 174, 217, 0, 0, 0, 0, 0, 0, 0
-.	.	.	. msg_read, 89, 115, 0, 0, 0, 0, 0, 0, 0
-.	.	.	. msg_write, 85, 102, 0, 0, 0, 0, 0, 0, 0
-.	.	. work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY, 50, 59, 0, 0, 0, 0, 0, 0, 0
+. top, 523, 590, 126, 0, 0, 0, 2, 2, 8
+.	. AdderDecode, 16, 86, 0, 0, 0, 0, 0, 0, 0
+.	. CLOCK_DIV_7, 17, 6, 16, 0, 0, 0, 0, 0, 0
+.	. ClkGen, 35, 46, 59, 0, 0, 0, 0, 1, 0
+.	.	. CLOCK_DIV_4, 17, 5, 29, 0, 0, 0, 0, 1, 0
+.	.	. CLOCK_DIV_5, 17, 5, 30, 0, 0, 0, 0, 0, 0
+.	. OSCILLATOR_COUNTER, 51, 30, 17, 0, 0, 0, 0, 0, 0
+.	.	. TIMER_COUNTER, 16, 0, 17, 0, 0, 0, 0, 0, 0
+.	. SCRATCH_PAD_REGISTER, 48, 18, 0, 0, 0, 0, 0, 0, 0
+.	. cmd_server, 356, 403, 34, 0, 0, 0, 2, 0, 0
+.	.	. msg_buffer, 81, 52, 0, 0, 0, 0, 2, 0, 0
+.	.	.	. afifo_8s_4s_8s_4s_1, 40, 30, 0, 0, 0, 0, 1, 0, 0
+.	.	.	. afifo_8s_4s_8s_4s_1_0, 40, 21, 0, 0, 0, 0, 1, 0, 0
+.	.	. opb_emu_target, 225, 282, 34, 0, 0, 0, 0, 0, 0
+.	.	.	. CLOCK_DIV_0, 17, 7, 16, 0, 0, 0, 0, 0, 0
+.	.	.	. msg_read, 106, 129, 9, 0, 0, 0, 0, 0, 0
+.	.	.	. msg_write, 94, 122, 9, 0, 0, 0, 0, 0, 0
+.	.	. work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY, 50, 69, 0, 0, 0, 0, 0, 0, 0

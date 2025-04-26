@@ -1,4 +1,4 @@
-# Mon Apr 21 21:58:21 2025
+# Fri Apr 25 20:24:45 2025
 
 
 Copyright (C) 1994-2023 Synopsys, Inc.
@@ -19,21 +19,21 @@ Synopsys Microchip Technology Pre-mapping, Version map202309actp1, Build 008R, B
 Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 185MB peak: 185MB)
 
 
-Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 190MB peak: 200MB)
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 191MB peak: 200MB)
 
-Reading constraint file: C:\repo\jabil2025\dmd\P1060973_FPGA\designer\top\synthesis.fdc
-@L: C:\repo\jabil2025\dmd\P1060973_FPGA\synthesis\top_scck.rpt 
-See clock summary report "C:\repo\jabil2025\dmd\P1060973_FPGA\synthesis\top_scck.rpt"
+Reading constraint file: C:\repo2\gpb\dmd\P1060973_FPGA\designer\top\synthesis.fdc
+@L: C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\top_scck.rpt 
+See clock summary report "C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\top_scck.rpt"
 @N: MF472 |Synthesis running in Automatic Compile Point mode
 @N: MF474 |No compile point is identified in Automatic Compile Point mode
 @N: MF916 |Option synthesis_strategy=base is enabled. 
 @N: MF248 |Running in 64-bit mode.
 @N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
 
-Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 196MB peak: 200MB)
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 197MB peak: 200MB)
 
 
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 196MB peak: 200MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 197MB peak: 200MB)
 
 
 Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 197MB peak: 200MB)
@@ -44,74 +44,90 @@ Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h
 
 Vector Gate Optimization Enabled: Optimizing  Partial Hanging Logic. 
 NConnInternalConnection caching is on
-@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\afifo.v":199:1:199:6|User-specified initial value defined for instance cmd_server_0.msg_buffer_inst.tx_fifo_inst.o_rempty is being ignored due to limitations in architecture. 
-@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\afifo.v":141:1:141:6|User-specified initial value defined for instance cmd_server_0.msg_buffer_inst.tx_fifo_inst.o_wfull is being ignored due to limitations in architecture. 
-@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.uart_rx_data_out_stb is being ignored due to limitations in architecture. 
-@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\cmn_uart.vhd":330:6:330:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.uart_rx_filter[1:0] is being ignored due to limitations in architecture. 
-@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\cmn_uart.vhd":330:6:330:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.uart_rx_bit is being ignored due to limitations in architecture. 
-@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.uart_rx_count[2:0] is being ignored due to limitations in architecture. 
-@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\cmn_uart.vhd":300:6:300:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.oversample_baud_counter[5:0] is being ignored due to limitations in architecture. 
-@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\cmn_uart.vhd":222:6:222:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.uart_tx_count[2:0] is being ignored due to limitations in architecture. 
-@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.uart_rx_data_block[7:0] is being ignored due to limitations in architecture. 
-@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\cmn_uart.vhd":222:6:222:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.uart_tx_data_block[7:0] is being ignored due to limitations in architecture. 
-@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\cmn_uart.vhd":199:6:199:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.baud_counter[3:0] is being ignored due to limitations in architecture. 
-@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\cmn_uart.vhd":476:8:476:9|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.next_command_ready is being ignored due to limitations in architecture. 
-@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\cmn_uart.vhd":222:6:222:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.uart_tx_data is being ignored due to limitations in architecture. 
-@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\cmn_uart.vhd":300:6:300:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.oversample_baud_tick is being ignored due to limitations in architecture. 
-@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.uart_rx_sync_clock[3:0] is being ignored due to limitations in architecture. 
-@W: FX1172 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\cmn_uart.vhd":222:6:222:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.uart_rx_data_in_ack is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\afifo.v":199:1:199:6|User-specified initial value defined for instance cmd_server_0.msg_buffer_inst.tx_fifo_inst.o_rempty is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\afifo.v":141:1:141:6|User-specified initial value defined for instance cmd_server_0.msg_buffer_inst.tx_fifo_inst.o_wfull is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.uart_rx_data_out_stb is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":330:6:330:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.uart_rx_filter[1:0] is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":330:6:330:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.uart_rx_bit is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.uart_rx_count[2:0] is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":300:6:300:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.oversample_baud_counter[5:0] is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":222:6:222:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.uart_tx_count[2:0] is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.uart_rx_data_block[7:0] is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":222:6:222:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.uart_tx_data_block[7:0] is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":199:6:199:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.baud_counter[3:0] is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":476:8:476:9|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.next_command_ready is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":222:6:222:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.uart_tx_data is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":300:6:300:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.oversample_baud_tick is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.uart_rx_sync_clock[3:0] is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":222:6:222:7|User-specified initial value defined for instance cmd_server_0.cmn_uart_inst.uart_rx_data_in_ack is being ignored due to limitations in architecture. 
 
-Starting HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 252MB peak: 252MB)
-
-
-Finished HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 252MB peak: 253MB)
-
-@N: MO111 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\top.v":109:20:109:29|Tristate driver PULSE_2KHZ (in view: work.top(verilog)) on net PULSE_2KHZ (in view: work.top(verilog)) has its enable tied to GND.
-@N: MO111 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\top.v":121:17:121:22|Tristate driver SP1_RE (in view: work.top(verilog)) on net SP1_RE (in view: work.top(verilog)) has its enable tied to GND.
-@N: MO111 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\top.v":122:17:122:22|Tristate driver SP1_WE (in view: work.top(verilog)) on net SP1_WE (in view: work.top(verilog)) has its enable tied to GND.
-@N: MO111 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\top.v":123:17:123:22|Tristate driver SP2_RE (in view: work.top(verilog)) on net SP2_RE (in view: work.top(verilog)) has its enable tied to GND.
-@N: MO111 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\top.v":124:17:124:22|Tristate driver SP2_WE (in view: work.top(verilog)) on net SP2_WE (in view: work.top(verilog)) has its enable tied to GND.
-
-Started DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 252MB peak: 253MB)
+Starting HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
 
 
-Finished DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 252MB peak: 253MB)
+Finished HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 254MB)
 
-@N: BN362 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\cmn_uart.vhd":476:8:476:9|Removing sequential instance next_command_ready (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: MO111 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\top.v":121:20:121:26|Tristate driver GPIO_IN[31] (in view: work.top(verilog)) on net GPIO_IN[31] (in view: work.top(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\top.v":121:20:121:26|Tristate driver GPIO_IN[30] (in view: work.top(verilog)) on net GPIO_IN[30] (in view: work.top(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\top.v":121:20:121:26|Tristate driver GPIO_IN[29] (in view: work.top(verilog)) on net GPIO_IN[29] (in view: work.top(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\top.v":121:20:121:26|Tristate driver GPIO_IN[28] (in view: work.top(verilog)) on net GPIO_IN[28] (in view: work.top(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\top.v":121:20:121:26|Tristate driver GPIO_IN[27] (in view: work.top(verilog)) on net GPIO_IN[27] (in view: work.top(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\top.v":121:20:121:26|Tristate driver GPIO_IN[26] (in view: work.top(verilog)) on net GPIO_IN[26] (in view: work.top(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\top.v":121:20:121:26|Tristate driver GPIO_IN[25] (in view: work.top(verilog)) on net GPIO_IN[25] (in view: work.top(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\top.v":121:20:121:26|Tristate driver GPIO_IN[24] (in view: work.top(verilog)) on net GPIO_IN[24] (in view: work.top(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\top.v":121:20:121:26|Tristate driver GPIO_IN[23] (in view: work.top(verilog)) on net GPIO_IN[23] (in view: work.top(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\top.v":121:20:121:26|Tristate driver GPIO_IN[22] (in view: work.top(verilog)) on net GPIO_IN[22] (in view: work.top(verilog)) has its enable tied to GND.
+
+Started DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 254MB peak: 254MB)
+
+
+Finished DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 254MB peak: 254MB)
+
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":476:8:476:9|Removing sequential instance next_command_ready (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":183:4:183:9|Removing sequential instance dataout[5:0] (in view: work.AdderDecode(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":79:11:79:25|Removing instance pulse200khz_div (in view: work.ClkGen(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":108:11:108:19|Removing instance wdclk_div (in view: work.ClkGen(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":131:11:131:23|Removing instance clk_16khz_div (in view: work.ClkGen(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":101:11:101:23|Removing instance pulse2mhz_div (in view: work.ClkGen(verilog)) because it does not drive other instances.
 @N: FP130 |Promoting Net SYS_CLK on CLKINT  I_1 
+@N: FP130 |Promoting Net clk_gen_0.pulse2khz_div.CLK_OUT on CLKINT  I_2 
 @N: FX1184 |Applying syn_allowed_resources blockrams=352 on top level netlist top 
 
-Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 254MB peak: 254MB)
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 255MB peak: 255MB)
 
 
 
 Clock Summary
 ******************
 
-          Start           Requested     Requested     Clock        Clock          Clock
-Level     Clock           Frequency     Period        Type         Group          Load 
----------------------------------------------------------------------------------------
-0 -       top|SYS_CLK     100.0 MHz     10.000        inferred     (multiple)     386  
-=======================================================================================
+          Start                 Requested     Requested     Clock        Clock          Clock
+Level     Clock                 Frequency     Period        Type         Group          Load 
+---------------------------------------------------------------------------------------------
+0 -       top|SYS_CLK           100.0 MHz     10.000        inferred     (multiple)     641  
+                                                                                             
+0 -       top|DBUG_HEADER10     100.0 MHz     10.000        inferred     (multiple)     1    
+=============================================================================================
 
 
 
 Clock Load Summary
 ***********************
 
-                Clock     Source            Clock Pin                         Non-clock Pin     Non-clock Pin
-Clock           Load      Pin               Seq Example                       Seq Example       Comb Example 
--------------------------------------------------------------------------------------------------------------
-top|SYS_CLK     386       SYS_CLK(port)     scratch_pad_0.dev_sp1[15:0].C     -                 I_1.A(CLKINT)
-=============================================================================================================
+                      Clock     Source                  Clock Pin                         Non-clock Pin                               Non-clock Pin                  
+Clock                 Load      Pin                     Seq Example                       Seq Example                                 Comb Example                   
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+top|SYS_CLK           641       SYS_CLK(port)           scratch_pad_0.dev_sp1[15:0].C     -                                           I_1.A(CLKINT)                  
+                                                                                                                                                                     
+top|DBUG_HEADER10     1         DBUG_HEADER10(port)     osc_counter_0.cntr_trig.C         osc_counter_0.counter.count[15:0].D[15]     osc_counter_0.cntr_en.I[0](and)
+=====================================================================================================================================================================
 
-@W: MT530 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\afifo.v":199:1:199:6|Found inferred clock top|SYS_CLK which controls 386 sequential elements including cmd_server_0.msg_buffer_inst.rx_fifo_inst.o_rempty. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_div.v":37:1:37:6|Found inferred clock top|SYS_CLK which controls 641 sequential elements including clkgen_2khz.cntr[15:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\freq_counter.v":62:1:62:6|Found inferred clock top|DBUG_HEADER10 which controls 1 sequential elements including osc_counter_0.cntr_trig. This clock has no specified timing constraint which may adversely impact design performance. 
 
 @N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
 Finished Pre Mapping Phase.
-@N: BN225 |Writing default property annotation file C:\repo\jabil2025\dmd\P1060973_FPGA\synthesis\top.sap.
+@N: BN225 |Writing default property annotation file C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\top.sap.
 
-Starting constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 254MB peak: 255MB)
+Starting constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 256MB peak: 256MB)
 
 Encoding state machine state[6:0] (in view: work.msg_write(verilog))
 original code -> new code
@@ -122,13 +138,18 @@ original code -> new code
    00000100 -> 0010000
    00000101 -> 0100000
    00000110 -> 1000000
+Encoding state machine state[2:0] (in view: work.opb_emu_target(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
 Encoding state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl))
 original code -> new code
    00 -> 00
    01 -> 01
    10 -> 10
    11 -> 11
-@N: MO225 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|There are no possible illegal states for state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl)); safe FSM implementation is not required.
+@N: MO225 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|There are no possible illegal states for state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl)); safe FSM implementation is not required.
 Encoding state machine uart_tx_state[0:4] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl))
 original code -> new code
    00001 -> 00001
@@ -137,16 +158,16 @@ original code -> new code
    01000 -> 01000
    10000 -> 10000
 
-Finished constraint checker preprocessing (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 256MB peak: 256MB)
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 258MB peak: 258MB)
 
 
-Finished constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 257MB peak: 257MB)
+Finished constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 259MB peak: 259MB)
 
 Pre-mapping successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 167MB peak: 258MB)
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 169MB peak: 260MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Mon Apr 21 21:58:22 2025
+# Fri Apr 25 20:24:46 2025
 
 ###########################################################]
