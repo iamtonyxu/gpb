@@ -4,14 +4,14 @@ module top(
     // System clock and reset
     input              SYS_CLK,
     input              RESET_N,
-    output             POWER_GOOD,
+    output             POWER_GOOD, // CLK_1HZ
 
-    // 16KHz reference clock
-    //input              CLK_16KHZ, // DBUG_HEADER10
-
-    // UART interface
-    input              UART_RXD, // DBUG_HEADER2
-    output             UART_TXD  // DBUG_HEADER2
+    // DEBUG PORT
+    input              DBUG_HEADER2, // UART_RXD
+    output             DBUG_HEADER4, // UART_TXD
+    output             DBUG_HEADER6, // CLK_2KHZ
+    output             DBUG_HEADER8, // CLK_20KHZ
+    input              DBUG_HEADER10 // REF_CLK_16KHZ
 
 /*
     // AD7663AS ADC interface
@@ -103,14 +103,21 @@ module top(
     wire              OPB_RE;
     wire              OPB_WE;
 
+    // UART Interface
+    wire            UART_RXD;
+    wire            UART_TXD;
+
     // pulse signals
     wire            PULSE_200KHZ;
     wire            PULSE_20KHZ;
     wire            PULSE_2KHZ;
+    wire            PULSE_1HZ;
     wire            PULSE_100US;
     wire            CLK_2MHZ;
+    wire            REF_CLK_16KHZ;
 
     wire    [31:0]  SP_IN; // from scratchpad
+//
     wire    [31:0]  GPIO_IN; // from GPIO
     wire    [31:0]  OSC_CT_IN; // from oscillator counter
     wire    [31:0]  CLK_GEN_IN; // from clock generator
@@ -155,8 +162,22 @@ module top(
     wire            GANT_MOT_WE; // gantry motor write enable
     wire            LIFT_MOT_RE; // lift motor read enable
     wire            LIFT_MOT_WE; // lift motor write enable
+//
+    assign POWER_GOOD = PULSE_1HZ; // Power good signal after FPGA programmed
+    assign DBUG_HEADER6 = PULSE_2KHZ; // CLK_2KHZ output for debugging
+    assign DBUG_HEADER8 = PULSE_20KHZ; // CLK_20KHZ output for debugging
+    assign REF_CLK_16KHZ = DBUG_HEADER10; // REF_CLK_16KHZ input for Freq counter
 
-    assign POWER_GOOD = 1'b1; // Power good signal after FPGA programmed
+    assign DBUG_HEADER4 = UART_TXD;
+    assign UART_RXD = DBUG_HEADER2;
+
+    // PULSE_1HZ
+	CLOCK_DIV clkgen_2khz(
+		.CLK_DIV(16'd1000),
+		.CLK_IN(PULSE_2KHZ),
+        .RST(~RESET_N),
+		.CLK_OUT(PULSE_1HZ)
+	);
 
     // cmd_server module instantiation
     cmd_server cmd_server_0(
@@ -182,7 +203,7 @@ module top(
         .DEC_WE(OPB_WE),                 // Write enable signal
         .DEC_ADDR(OPB_ADDR),             // Address input
         .SP_IN(SP_IN),                   // Scratchpad input
-/*
+//
         .GPIO_IN(GPIO_IN),               // GPIO output
         .OSC_CT_IN(OSC_CT_IN),           // Oscillator counter output
         .CLK_GEN_IN(CLK_GEN_IN),         // Clock generator output
@@ -227,11 +248,11 @@ module top(
         .GANT_MOT_WE(GANT_MOT_WE),       // Gantry motor write enable
         .LIFT_MOT_RE(LIFT_MOT_RE),       // Lift motor read enable
         .LIFT_MOT_WE(LIFT_MOT_WE),       // Lift motor write enable
-        .DATA_OUT(GPIO_OUT),             // Data output
-*/
+        .DATA_OUT(),             // Data output
+//
         .DEC_DO(OPB_DI)                  // Decoder data output
     );
-/*
+
     // CLK_GEN module instantiation
     ClkGen clk_gen_0 (
         .CLK_GEN_DO(CLK_GEN_IN),         // Clock generator data output
@@ -260,9 +281,9 @@ module top(
         .OPB_CLK(OPB_CLK),               // OPB clock
         .OPB_RST(OPB_RST),               // OPB reset
         .SYSCLK(SYS_CLK),                // System clock
-        .REF_CLK(CLK_16KHZ)              // Reference clock (16kHz)
+        .REF_CLK(REF_CLK_16KHZ)          // Reference clock (16kHz)
     );
-*/
+
     // SCRATCH_PAD_REGISTER module instantiation
     SCRATCH_PAD_REGISTER scratch_pad_0 (
         .OPB_CLK(OPB_CLK),               // OPB clock

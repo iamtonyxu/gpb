@@ -114,11 +114,32 @@ module AdderDecode(
     assign DATA_OUT = dataout;
     //End Debug
 
+    // xxx_RE_d1
+	reg          SP1_RE_d1;
+	reg          SP2_RE_d1;
+    reg          STD_CONT_RE_d1;
+    reg          CCHL_IF_RE_d1;
+    reg          SER_PENDANT_RE_d1;
+    reg          PWR_IF_RE_d1;
+    reg          LIFT_MOT_SENS_RE_d1;
+    reg          SPD_DMD_IF_RE_d1;
+    reg          GANTRY_MOT_SENS_RE_d1;
+    reg          SPD_EMOPS_RE_d1;
+    reg          GPO_RE_d1;
+    reg          ADMUX_RE_d1;
+    reg          ADSEL_RE_d1;
+    reg          STS_RE_d1;
+    reg          GANTRY_96V_IF_RE_d1;
+    reg          LIFT_96V_IF_RE_d1;
+    reg          COUNTER_RE_d1;
+    reg          ILIM_DAC_RE_d1;
+    reg          CLOCK_RE_d1;
+    reg          ADC_RE_d1;
+    reg          GANT_MOT_RE_d1;
+    reg          LIFT_MOT_RE_d1;
+
     wire [19:0] dec_addr;
     assign dec_addr = DEC_ADDR;
-
-    
-  
 
 	assign COUNTER_RE           = DEC_RE & (dec_addr >= `COUNTER_ADDR) & (dec_addr < (`COUNTER_ADDR+`COUNTER_SIZE));	
 	assign COUNTER_WE           = DEC_WE & (dec_addr >= `COUNTER_ADDR) & (dec_addr < (`COUNTER_ADDR+`COUNTER_SIZE));
@@ -180,11 +201,11 @@ module AdderDecode(
 	assign LIFT_96V_IF_WE       = DEC_WE & (dec_addr == `LIFT_96V_IF_ADDR);
 
 	
-    always@(negedge OPB_CLK or posedge OPB_RST) begin
+    always@(posedge OPB_CLK or posedge OPB_RST) begin
         if(OPB_RST) begin   
            dataout  <= 6'b0;
-           //reout    <= 1'b0;           
- 
+           //reout    <= 1'b0;
+
         end
         else if(SP1_RE) begin
             //reout <= SP1_RE;
@@ -197,15 +218,103 @@ module AdderDecode(
         end
 
     end	
-    
-    assign DEC_DO               = (ILIM_DAC_RE) ? ILIM_DAC_IN[31:0]         : 32'bz;
-    assign DEC_DO               = (GANT_MOT_RE) ? GANT_MOT_IN[31:0]         : 32'bz;
-    assign DEC_DO               = (LIFT_MOT_RE) ? LIFT_MOT_IN[31:0]         : 32'bz;
-    assign DEC_DO               = (ADC_RE)      ? ADC_IN[31:0]              : 32'bz;
-    assign DEC_DO               = (COUNTER_RE)  ? OSC_CT_IN[31:0]           : 32'bz; 
-    assign DEC_DO               = (CLOCK_RE)    ? CLK_GEN_IN[31:0]          : 32'bz; 
-    assign DEC_DO               = (SP1_RE)      ? SP_IN[31:0]               : 32'bz; 
-    assign DEC_DO               = (SP2_RE)      ? SP_IN[31:0]               : 32'bz;
-    assign DEC_DO               = ((GPO_RE) || (GANTRY_96V_IF_RE) || (LIFT_96V_IF_RE) || (STD_CONT_RE) || (CCHL_IF_RE) || (SER_PENDANT_RE) || (PWR_IF_RE) || (LIFT_MOT_SENS_RE) || (SPD_DMD_IF_RE ) || (GANTRY_MOT_SENS_RE) || (SPD_EMOPS_RE) || (STS_RE) || (ADMUX_RE ) || (ADSEL_RE)) ? GPIO_IN[31:0]      : 32'bz;
+
+    // xxx_d1
+    always@(posedge OPB_CLK or posedge OPB_RST) begin
+        if(OPB_RST) begin
+            SP1_RE_d1           <= 0;
+            SP2_RE_d1           <= 0;
+            STD_CONT_RE_d1      <= 0;
+            CCHL_IF_RE_d1       <= 0;
+            SER_PENDANT_RE_d1   <= 0;
+            PWR_IF_RE_d1        <= 0;
+            LIFT_MOT_SENS_RE_d1 <= 0;
+            SPD_DMD_IF_RE_d1    <= 0;
+            GANTRY_MOT_SENS_RE_d1 <= 0;
+            SPD_EMOPS_RE_d1     <= 0;
+            GPO_RE_d1           <= 0;
+            ADMUX_RE_d1         <= 0;
+            ADSEL_RE_d1         <= 0;
+            STS_RE_d1           <= 0;
+            GANTRY_96V_IF_RE_d1 <= 0;
+            LIFT_96V_IF_RE_d1   <= 0;
+            COUNTER_RE_d1       <= 0;
+            ILIM_DAC_RE_d1      <= 0;
+            CLOCK_RE_d1         <= 0;
+            ADC_RE_d1           <= 0;
+            GANT_MOT_RE_d1      <= 0;
+            LIFT_MOT_RE_d1      <= 0;
+        end else begin
+            SP1_RE_d1           <= SP1_RE;
+            SP2_RE_d1           <= SP2_RE;
+            STD_CONT_RE_d1      <= STD_CONT_RE;
+            CCHL_IF_RE_d1       <= CCHL_IF_RE;
+            SER_PENDANT_RE_d1   <= SER_PENDANT_RE;
+            PWR_IF_RE_d1        <= PWR_IF_RE;
+            LIFT_MOT_SENS_RE_d1 <= LIFT_MOT_SENS_RE;
+            SPD_DMD_IF_RE_d1    <= SPD_DMD_IF_RE;
+            GANTRY_MOT_SENS_RE_d1 <= GANTRY_MOT_SENS_RE;
+            SPD_EMOPS_RE_d1     <= SPD_EMOPS_RE;
+            GPO_RE_d1           <= GPO_RE;
+            ADMUX_RE_d1         <= ADMUX_RE;
+            ADSEL_RE_d1         <= ADSEL_RE;
+            STS_RE_d1           <= STS_RE;
+            GANTRY_96V_IF_RE_d1 <= GANTRY_96V_IF_RE;
+            LIFT_96V_IF_RE_d1   <= LIFT_96V_IF_RE;
+            COUNTER_RE_d1       <= COUNTER_RE;
+            ILIM_DAC_RE_d1      <= ILIM_DAC_RE;
+            CLOCK_RE_d1         <= CLOCK_RE;
+            ADC_RE_d1           <= ADC_RE;
+            GANT_MOT_RE_d1      <= GANT_MOT_RE;
+            LIFT_MOT_RE_d1      <= LIFT_MOT_RE;
+        end
+    end
+
+    // DEC_DO
+/*
+    always@(posedge OPB_CLK or posedge OPB_RST) begin
+        if(OPB_RST) begin   
+           DEC_DO  <= 32'b0; 
+        end
+        else if(SP1_RE_d1) begin
+            DEC_DO <= SP_IN[31:0];
+        end
+        else if(SP2_RE_d1) begin
+            DEC_DO <= SP_IN[31:0];
+        end
+        else if(GPO_RE_d1) begin
+            DEC_DO <= GPIO_IN[31:0];
+        end
+        else if(ADC_RE_d1) begin
+            DEC_DO <= ADC_IN[31:0];
+        end
+        else if(COUNTER_RE_d1) begin
+            DEC_DO <= OSC_CT_IN[31:0];
+        end
+        else if(CLOCK_RE_d1) begin
+            DEC_DO <= CLK_GEN_IN[31:0];
+        end
+        else if(ILIM_DAC_RE_d1) begin
+            DEC_DO <= ILIM_DAC_IN[31:0];
+        end
+        else if(GANT_MOT_RE_d1) begin
+            DEC_DO <= GANT_MOT_IN[31:0];
+        end
+        else if(LIFT_MOT_RE_d1) begin
+            DEC_DO <= LIFT_MOT_IN[31:0];
+        end
+    end
+*/
+
+    assign DEC_DO   = (ILIM_DAC_RE_d1) ? ILIM_DAC_IN[31:0]         : 32'bz;
+    assign DEC_DO   = (GANT_MOT_RE_d1) ? GANT_MOT_IN[31:0]         : 32'bz;
+    assign DEC_DO   = (LIFT_MOT_RE_d1) ? LIFT_MOT_IN[31:0]         : 32'bz;
+    assign DEC_DO   = (ADC_RE_d1)      ? ADC_IN[31:0]              : 32'bz;
+    assign DEC_DO   = (COUNTER_RE_d1)  ? OSC_CT_IN[31:0]           : 32'bz; 
+    assign DEC_DO   = (CLOCK_RE_d1)    ? CLK_GEN_IN[31:0]          : 32'bz; 
+    assign DEC_DO   = (SP1_RE_d1)      ? SP_IN[31:0]               : 32'bz; 
+    assign DEC_DO   = (SP2_RE_d1)      ? SP_IN[31:0]               : 32'bz;
+    assign DEC_DO   = ((GPO_RE_d1) || (GANTRY_96V_IF_RE_d1) || (LIFT_96V_IF_RE_d1) || (STD_CONT_RE_d1) || (CCHL_IF_RE_d1) || (SER_PENDANT_RE_d1) || (PWR_IF_RE_d1) || (LIFT_MOT_SENS_RE_d1) || (SPD_DMD_IF_RE_d1) || (GANTRY_MOT_SENS_RE_d1) || (SPD_EMOPS_RE_d1) || (STS_RE_d1) || (ADMUX_RE_d1) || (ADSEL_RE_d1)) ? GPIO_IN[31:0]      : 32'bz;
+
 
 endmodule

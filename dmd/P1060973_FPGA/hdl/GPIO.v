@@ -192,7 +192,6 @@ module GPIO (
         if(OPB_RST) begin
             fpga_done <= 1'b0;
         end 
-
         else begin
             fpga_done <= 1'b1;
         end

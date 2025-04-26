@@ -1,46 +1,32 @@
 `timescale 1ns/1ps
 
-module cmd_server_tb;
+module top_tb;
 
     // System Clock and Reset
     reg SYS_CLK;
-    reg SYS_RST;
-    reg PULSE_2KHZ;
+    reg RESET_N;
 
-    // OPB Bus
-    wire OPB_CLK;
-    wire OPB_RST;
-    reg [31:0] OPB_DI;
-    wire [31:0] OPB_DO;
-    wire [31:0] OPB_ADDR;
-    wire OPB_RE;
-    wire OPB_WE;
-
-    // UART signals
+    wire POWER_GOOD;
     wire UART_TXD;
     reg  UART_RXD;
+    wire CLK_2KHZ;
+    wire CLK_20KHZ;
 
     reg [7:0] uart_tdata;
 
-    // Instantiate the Unit Under Test (UUT)
-    cmd_server uut (
+    // Instantiate the Unit Under Test module top
+    top uut (
         .SYS_CLK(SYS_CLK),
-        .SYS_RST(SYS_RST),
-        .PULSE_2KHZ(PULSE_2KHZ),
-        .OPB_CLK(OPB_CLK),
-        .OPB_RST(OPB_RST),
-        .OPB_DI(OPB_DI),
-        .OPB_DO(OPB_DO),
-        .OPB_ADDR(OPB_ADDR),
-        .OPB_RE(OPB_RE),
-        .OPB_WE(OPB_WE),
-        .UART_TXD(UART_TXD),
-        .UART_RXD(UART_RXD)
+        .RESET_N(RESET_N),
+        .POWER_GOOD(POWER_GOOD),
+        .DBUG_HEADER2(UART_RXD),
+        .DBUG_HEADER4(UART_TXD),
+        .DBUG_HEADER6(CLK_2KHZ),
+        .DBUG_HEADER8(CLK_20KHZ),
+        .DBUG_HEADER10(CLK_20KHZ)
     );
 
     parameter CLOCK_PERIOD = 10; // 100M SYS_Clock in ns
-    //parameter PULSE_PERIOD = 500000; // 2 kHz pulse period in ns
-    parameter PULSE_PERIOD = 5000; // 200 kHz pulse to accelerate simulation
 
 // Task to send a byte using UART protocol
 task uart_send;
@@ -101,22 +87,16 @@ endtask
         forever #(CLOCK_PERIOD/2) SYS_CLK = ~SYS_CLK; // 100 MHz clock
     end
 
-    // Generate 2 kHz pulse
-    initial begin
-        PULSE_2KHZ = 0;
-        forever #(PULSE_PERIOD/2) PULSE_2KHZ = ~PULSE_2KHZ; // 2 kHz pulse
-    end
-
     // Testbench logic
     initial begin
         // Initialize inputs
-        SYS_RST = 1;
+        RESET_N = 0;
         UART_RXD = 1;
-        OPB_DI = 32'h0;
+
         // Reset the system
         #100;
-        SYS_RST = 0; 
-        #(PULSE_PERIOD*4000); // wait 2s
+        RESET_N = 1; 
+      #100000; // Wait for Ping message to be sent
 
         // Uart send cmd of OPB write operation
         uart_send(8'h5A);
@@ -134,27 +114,115 @@ endtask
         repeat(10) begin
             uart_recv(uart_tdata);
         end
-        #100; // Wait for processing
+        #1000000; // Wait 1us
 
-
-        // Uart send cmd of OPB write operation
-        OPB_DI = 32'h12345678; // Set OPB_DI to a test value
+        // Read scrach pad 1
         uart_send(8'h5B);
-        uart_send(8'h12);
-        uart_send(8'h34);
-        uart_send(8'h56);
-        uart_send(8'h78);
-        uart_send(8'hAA);
-        uart_send(8'hBB);
-        uart_send(8'hCC);
-        uart_send(8'hDD);
+        uart_send(8'h00);
+        uart_send(8'h01);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h00);
         uart_send(8'hA4);
 
         // check response reply on OPB write operation
         repeat(10) begin
             uart_recv(uart_tdata);
         end
-        #100; // Wait for processing
+        #1000000; // Wait 1us
+
+        // Read scrach pad 2
+        uart_send(8'h5B);
+        uart_send(8'h00);
+        uart_send(8'h02);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'hA4);
+
+        // check response reply on OPB write operation
+        repeat(10) begin
+            uart_recv(uart_tdata);
+        end
+        #1000000; // Wait 1us
+
+        // Write scrach pad 1
+        uart_send(8'h5A);
+        uart_send(8'h00);
+        uart_send(8'h01);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h11);
+        uart_send(8'h22);
+        uart_send(8'h33);
+        uart_send(8'h44);
+        uart_send(8'hA5);
+
+        // check response reply on OPB write operation
+        repeat(10) begin
+            uart_recv(uart_tdata);
+        end
+        #1000000; // Wait 1us
+
+        // Write scrach pad 2
+        uart_send(8'h5A);
+        uart_send(8'h00);
+        uart_send(8'h02);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h55);
+        uart_send(8'h66);
+        uart_send(8'h77);
+        uart_send(8'h88);
+        uart_send(8'hA5);
+
+        // check response reply on OPB write operation
+        repeat(10) begin
+            uart_recv(uart_tdata);
+        end
+        #1000000; // Wait 1us
+
+        // Read scrach pad 1
+        uart_send(8'h5B);
+        uart_send(8'h00);
+        uart_send(8'h01);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'hA4);
+
+        // check response reply on OPB write operation
+        repeat(10) begin
+            uart_recv(uart_tdata);
+        end
+        #1000000; // Wait 1us
+
+        // Read scrach pad 2
+        uart_send(8'h5B);
+        uart_send(8'h00);
+        uart_send(8'h02);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'hA4);
+
+        // check response reply on OPB write operation
+        repeat(10) begin
+            uart_recv(uart_tdata);
+        end
+        #1000000; // Wait 1us
 
 /*
         // Timout error test
@@ -164,14 +232,12 @@ endtask
         uart_send(8'hCC);
         uart_send(8'hDD);
 */
-        #100;
         $stop;
     end
 
-    // Monitor OPB signals
+    // monitor power_good signal
     initial begin
-        $monitor("Time: %0t, OPB_DI: %h, OPB_DO: %h, OPB_ADDR: %h, OPB_RE: %b, OPB_WE: %b",
-                 $time, OPB_DI, OPB_DO, OPB_ADDR, OPB_RE, OPB_WE);
+        $monitor("Time: %0t, POWER_GOOD: %b", $time, POWER_GOOD);
     end
 
 endmodule
