@@ -1,49 +1,39 @@
-#########
+######################
 #Source files:
-#########
+######################
 #Do NOT ignore VHDL, Verilog, block diagrams or EDIF files.
 !*.vhd
 !*.v
 !*.sv
 !*.vh
-!*.bd
-!*.edif
 
-#########
+######################
 #Constraint files
-#########
-#Do NOT ignore *.xdc files
+######################
+#Do NOT ignore *.pdc files
 !*.pdc
 
+######################
+#top_fp files
+######################
+!top_fp/
 
-# Compiled source #
-###################
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.obj
-*.so
-*.mexw64
-*.asv
+######################
+#modelsim files
+######################
+work/
+*.wlf
 
+######################
+#libero temp files
+######################
+simulation/
+synthesis/
+tooldata/
+viewdraw/
 
-# Packages #
-############
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-.vscode
-
-# Logs and databases #
+######################
+# referrence doc
 ######################
 *.log
 *.sql
@@ -58,47 +48,23 @@
 *.jxbrowser.userdata
 *dvt
 RemoteSystemsTempFiles
-Debug
 
+######################
+# Compiled source #
+######################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.obj
+*.so
+*.mexw64
+*.asv
 
-# Libero SoC V2024 - ignore build and generated output directories
-###################### 
-/jbuild/  
-/db/  
-/libero_work/  
-/output/
-work/
-synthesis/
-tooldata/
-viewdraw/
-
-# Ignore project intermediate files  
-*.bit  
-*.svf  
-*.sof  
-*.rpd  
-
-# Ignore simulation, synthesis and timing logs and reports  
-*.log  
-*.jou  
-*.wlf  
-*.rep  
-*.sta  
-*.sdc  
-*.ngr  
-*.sdf  
-
-# Ignore user-specific and workspace files  
-*.user  
-*.prefs  
-*.vscode/  
-
-# Backup and temporary files  
-*.bak  
-*.tmp  
-*.swp  
-*.cache  
-
-# OS generated files  
-.DS_Store  
-Thumbs.db  
+######################
+# Ignore user-specific and workspace files
+######################
+*.user
+*.prefs
+*.vscode/
