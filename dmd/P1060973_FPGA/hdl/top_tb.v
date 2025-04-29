@@ -12,6 +12,12 @@ module top_tb;
     wire CLK_2KHZ;
     wire CLK_20KHZ;
 
+    // EEPROM INTERFACE
+    wire    EEP_CS_N;
+    wire    EEP_SI;
+    wire    EEP_SCK;
+    wire    EEP_SO;
+
     reg [7:0] uart_tdata;
 
     // Instantiate the Unit Under Test module top
@@ -23,7 +29,18 @@ module top_tb;
         .DBUG_HEADER4(UART_TXD),
         .DBUG_HEADER6(CLK_2KHZ),
         .DBUG_HEADER8(CLK_20KHZ),
-        .DBUG_HEADER10(CLK_20KHZ)
+        .DBUG_HEADER10(CLK_20KHZ),
+        .EEP_CS_N(EEP_CS_N),
+        .EEP_SI(EEP_SI),
+        .EEP_SCK(EEP_SCK),
+        .EEP_SO(EEP_SO)
+    );
+
+    SER_EEPROM_SIM dut_eeprom (
+        .CS_N(EEP_CS_N),
+        .SCLK(EEP_SCK),
+        .SI(EEP_SI),
+        .SO(EEP_SO)
     );
 
     parameter CLOCK_PERIOD = 10; // 100M SYS_Clock in ns
@@ -97,7 +114,7 @@ endtask
         #100;
         RESET_N = 1; 
       #100000; // Wait for Ping message to be sent
-
+/*
         // Uart send cmd of OPB write operation
         uart_send(8'h5A);
         uart_send(8'hAA);
@@ -213,6 +230,60 @@ endtask
         uart_send(8'h00);
         uart_send(8'h00);
         uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'hA4);
+
+        // check response reply on OPB write operation
+        repeat(10) begin
+            uart_recv(uart_tdata);
+        end
+        #1000000; // Wait 1us
+*/
+        // OPB WRITE: EEPROM Write
+        uart_send(8'h5A);
+        uart_send(8'h00);
+        uart_send(8'h0B);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h30); // READ
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h5a);
+        uart_send(8'hA5);
+
+        // check response reply on OPB write operation
+        repeat(10) begin
+            uart_recv(uart_tdata);
+        end
+        #1000000; // Wait 1us
+
+        // OPE WRITE: EEPROM Read
+        uart_send(8'h5A);
+        uart_send(8'h00);
+        uart_send(8'h0B);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h00); // READ
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'hA5);
+
+        // check response reply on OPB write operation
+        repeat(10) begin
+            uart_recv(uart_tdata);
+        end
+        #1000000; // Wait 1us
+
+        // OPE READ: EEPROM DATA
+        uart_send(8'h5B);
+        uart_send(8'h00);
+        uart_send(8'h0B);
+        uart_send(8'h00);
+        uart_send(8'h00);
+        uart_send(8'h00); // READ
         uart_send(8'h00);
         uart_send(8'h00);
         uart_send(8'h00);

@@ -11,8 +11,13 @@ module top(
     output             DBUG_HEADER4, // UART_TXD
     output             DBUG_HEADER6, // CLK_2KHZ
     output             DBUG_HEADER8, // CLK_20KHZ
-    input              DBUG_HEADER10 // REF_CLK_16KHZ
+    input              DBUG_HEADER10, // REF_CLK_16KHZ
 
+    // EEPROM INTERFACE
+    output             EEP_CS_N,
+    output             EEP_SI,
+    output             EEP_SCK,
+    input              EEP_SO
 /*
     // AD7663AS ADC interface
     output             AD_CNVST,
@@ -117,6 +122,7 @@ module top(
     wire            REF_CLK_16KHZ;
 
     wire    [31:0]  SP_IN; // from scratchpad
+    wire    [31:0]  EEP_IN; // from EEPROM
 //
     wire    [31:0]  GPIO_IN; // from GPIO
     wire    [31:0]  OSC_CT_IN; // from oscillator counter
@@ -211,6 +217,7 @@ module top(
         .ADC_IN(ADC_IN),                 // ADC output
         .GANT_MOT_IN(GANT_MOT_IN),       // Gantry motor output
         .LIFT_MOT_IN(LIFT_MOT_IN),       // Lift motor output
+        .EEP_IN(EEP_IN),                 // EEPROM output
         .SP1_RE(SP1_RE),                 // Scratchpad 1 read enable
         .SP1_WE(SP1_WE),                 // Scratchpad 1 write enable
         .SP2_RE(SP2_RE),                 // Scratchpad 2 read enable
@@ -248,6 +255,8 @@ module top(
         .GANT_MOT_WE(GANT_MOT_WE),       // Gantry motor write enable
         .LIFT_MOT_RE(LIFT_MOT_RE),       // Lift motor read enable
         .LIFT_MOT_WE(LIFT_MOT_WE),       // Lift motor write enable
+        .EEP_RE(EEP_RE),                 // EEPROM RE
+        .EEP_WE(EEP_WE),                 // EEPROM WE
         .DATA_OUT(),             // Data output
 //
         .DEC_DO(OPB_DI)                  // Decoder data output
@@ -294,6 +303,19 @@ module top(
         .SP1_WE(SP1_WE),                 // Scratchpad 1 write enable
         .SP2_RE(SP2_RE),                 // Scratchpad 2 read enable
         .SP2_WE(SP2_WE)                  // Scratchpad 2 write enable
+    );
+
+    EEPROM_OPB_IF eeprom_0(
+    .OPB_CLK(OPB_CLK),               // OPB clock
+    .OPB_RST(OPB_RST),               // OPB reset
+    .EEP_DI(OPB_DO),                 // EEPROM data input
+    .EEP_RE(EEP_RE),                 // EEPROM read enable
+    .EEP_WE(EEP_WE),                 // EEPROM write enable
+    .EEP_DO(EEP_IN),                 // EEPROM data output
+    .EEP_CS_N(EEP_CS_N),             // EEPROM chip select (active low)
+    .EEP_SI(EEP_SI),                 // EEPROM serial input
+    .EEP_SCK(EEP_SCK),               // EEPROM serial clock
+    .EEP_SO(EEP_SO)                  // EEPROM serial output
     );
 
 /*

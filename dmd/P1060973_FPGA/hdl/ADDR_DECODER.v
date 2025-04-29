@@ -17,13 +17,10 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////// 
 `timescale 1ns / 1ps
 `define COUNTER_ADDR	        32'h00000000		/* COUNTER address */
-`define COUNTER_SIZE	        32'h00000040		/* COUNTER size */
 `define SP1_ADDR		        32'h00010000		/* Scratch Pad 1 address */
 `define SP2_ADDR		        32'h00020000		/* Scratch Pad 2 address */
 `define CLOCK_ADDR		        32'h00030000		/* CLOCK module address */
-`define CLOCK_SIZE		        32'h00000028		/* CLOCK module size */
 `define ILIM_DAC_ADDR           32'h00040000        /* ILIM address */
-`define ILIM_DAC_SIZE           32'h00000020        /* ILIM size */
 `define STD_CONT_ADDR           32'h00050000        /* Stand Cont IF - Digital Input address */
 `define CCHL_IF_ADDR            32'h00050100        /* CCHL_IF - Digital Input address */
 `define SER_PENDANT_ADDR        32'h00050200        /* Service Pendant - Digital Input address */
@@ -40,13 +37,16 @@
 `define LIFT_96V_IF_ADDR  	    32'h00060500        /* LIFT 96V IF ADDR */
 `define MOT_GPO_WE_ADDR         32'h00070000        /* MOT_GPO_WE_ADDR Addr */
 `define ADC_ADDR		        32'h00080000		/* Analog to Digital converter address */
-`define ADC_SIZE			    32'h00006000		/* Analog to Digital converter size */
 `define GANTRY_MOT_ADDR         32'h00090000        /* Gantry Motor address */
-`define GANTRY_MOT_SIZE         32'h00000004        /* Gantry Motor size    */
 `define LIFT_MOT_ADDR           32'h000a0000        /* Lift Motor address */
+`define EEP_ADDR		        32'h000b0000		/* EEPROM address */
+
+`define COUNTER_SIZE	        32'h00000040		/* COUNTER size */
+`define CLOCK_SIZE		        32'h00000028		/* CLOCK module size */
+`define ILIM_DAC_SIZE           32'h00000020        /* ILIM size */
+`define ADC_SIZE			    32'h00006000		/* Analog to Digital converter size */
+`define GANTRY_MOT_SIZE         32'h00000004        /* Gantry Motor size    */
 `define LIFT_MOT_SIZE           32'h00000008        /* Lift Motor size */
-
-
 
 module AdderDecode(
     input           OPB_CLK,
@@ -62,6 +62,7 @@ module AdderDecode(
     input   [31:0]  ADC_IN,
     input   [31:0]  GANT_MOT_IN,
     input   [31:0]  LIFT_MOT_IN,
+    input   [31:0]  EEP_IN,
 	output          SP1_RE,
 	output          SP1_WE,
 	output          SP2_RE,
@@ -99,6 +100,9 @@ module AdderDecode(
     output          GANT_MOT_WE,
     output          LIFT_MOT_RE,
     output          LIFT_MOT_WE,
+
+    output          EEP_RE,
+    output          EEP_WE,
     //output          WE_OUT,
     //output          RE_OUT,
     output  [5:0]   DATA_OUT,
@@ -137,6 +141,8 @@ module AdderDecode(
     reg          ADC_RE_d1;
     reg          GANT_MOT_RE_d1;
     reg          LIFT_MOT_RE_d1;
+    reg          EEP_RE_d1;
+    reg          EEP_WE_d1;
 
     wire [19:0] dec_addr;
     assign dec_addr = DEC_ADDR;
@@ -200,7 +206,9 @@ module AdderDecode(
 	assign LIFT_96V_IF_RE       = DEC_RE & (dec_addr == `LIFT_96V_IF_ADDR);
 	assign LIFT_96V_IF_WE       = DEC_WE & (dec_addr == `LIFT_96V_IF_ADDR);
 
-	
+	assign EEP_RE               = DEC_RE & (dec_addr == `EEP_ADDR);
+	assign EEP_WE               = DEC_WE & (dec_addr == `EEP_ADDR);
+
     always@(posedge OPB_CLK or posedge OPB_RST) begin
         if(OPB_RST) begin   
            dataout  <= 6'b0;
@@ -244,6 +252,8 @@ module AdderDecode(
             ADC_RE_d1           <= 0;
             GANT_MOT_RE_d1      <= 0;
             LIFT_MOT_RE_d1      <= 0;
+            EEP_RE_d1           <= 0;
+            EEP_WE_d1           <= 0;
         end else begin
             SP1_RE_d1           <= SP1_RE;
             SP2_RE_d1           <= SP2_RE;
@@ -267,6 +277,8 @@ module AdderDecode(
             ADC_RE_d1           <= ADC_RE;
             GANT_MOT_RE_d1      <= GANT_MOT_RE;
             LIFT_MOT_RE_d1      <= LIFT_MOT_RE;
+            EEP_RE_d1           <= EEP_RE;
+            EEP_WE_d1           <= EEP_WE;
         end
     end
 
@@ -315,6 +327,6 @@ module AdderDecode(
     assign DEC_DO   = (SP1_RE_d1)      ? SP_IN[31:0]               : 32'bz; 
     assign DEC_DO   = (SP2_RE_d1)      ? SP_IN[31:0]               : 32'bz;
     assign DEC_DO   = ((GPO_RE_d1) || (GANTRY_96V_IF_RE_d1) || (LIFT_96V_IF_RE_d1) || (STD_CONT_RE_d1) || (CCHL_IF_RE_d1) || (SER_PENDANT_RE_d1) || (PWR_IF_RE_d1) || (LIFT_MOT_SENS_RE_d1) || (SPD_DMD_IF_RE_d1) || (GANTRY_MOT_SENS_RE_d1) || (SPD_EMOPS_RE_d1) || (STS_RE_d1) || (ADMUX_RE_d1) || (ADSEL_RE_d1)) ? GPIO_IN[31:0]      : 32'bz;
-
+    assign DEC_DO   = (EEP_RE_d1)      ? EEP_IN[31:0]              : 32'bz;
 
 endmodule

@@ -10,31 +10,36 @@
 # 
 
 # 100MHZ, U55
-set_io -port_name {SYS_CLK}           -pin_name R1    -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
+set_io -port_name {SYS_CLK}     -pin_name R1    -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
 
 # RESET#, SW1
-set_io -port_name {RESET_N}           -pin_name L6    -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
+set_io -port_name {RESET_N}     -pin_name L6    -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
 
 # POWER_GOOD
-set_io -port_name {POWER_GOOD}        -pin_name D1    -fixed true  -io_std LVCMOS33    -OUT_DRIVE 12 -DIRECTION OUTPUT
+set_io -port_name {POWER_GOOD}  -pin_name D1    -fixed true  -io_std LVCMOS33    -OUT_DRIVE 12 -DIRECTION OUTPUT
 
 
 # DEBUG PORT
 # J11-2, Debug Header-DBUG_HEADER2
-set_io -port_name {DBUG_HEADER2}          -pin_name A3    -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
+set_io -port_name {DBUG_HEADER2}    -pin_name A3    -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
 
 # J11-4, Debug Header-DBUG_HEADER4
-set_io -port_name {DBUG_HEADER4}          -pin_name E3    -fixed true  -io_std LVCMOS33   -OUT_DRIVE 12 -DIRECTION OUTPUT
+set_io -port_name {DBUG_HEADER4}    -pin_name E3    -fixed true  -io_std LVCMOS33   -OUT_DRIVE 12 -DIRECTION OUTPUT
 
 # J11-6, Debug Header-DBUG_HEADER6
-set_io -port_name {DBUG_HEADER6}          -pin_name D3    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {DBUG_HEADER6}    -pin_name D3    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
 
 # J11-8, Debug Header-DBUG_HEADER8
-set_io -port_name {DBUG_HEADER8}          -pin_name B2    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {DBUG_HEADER8}    -pin_name B2    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
 
 # J11-10, Debug Header-DBUG_HEADER10
-set_io -port_name {DBUG_HEADER10}         -pin_name B3    -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
+set_io -port_name {DBUG_HEADER10}   -pin_name B3    -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
 
+# EEPROM INTERFACE
+set_io -port_name {EEP_CS_N}        -pin_name M3    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {EEP_SI}          -pin_name M2    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {EEP_SCK}         -pin_name L7    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {EEP_SO}          -pin_name L8    -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
 # TP77
 # set_io -port_name {AD_CNVST}          -pin_name H4    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
 
