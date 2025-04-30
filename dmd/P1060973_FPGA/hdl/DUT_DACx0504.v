@@ -19,7 +19,7 @@ module DUT_DACx0504(
 
     input              DAC_CLK, // 12.5MHz clock
     input              DAC_SDI,
-    input              DAC_CS,
+    input              DAC_CS_N,
     output             DAC_SDO
 );
 
@@ -53,7 +53,7 @@ module DUT_DACx0504(
     always @(posedge DAC_CLK or posedge SYS_RST) begin
         if (SYS_RST) begin
             bit_count <= 5'd0; // Reset bit counter
-        end else if(~DAC_CS)begin
+        end else if(~DAC_CS_N)begin
             bit_count <= bit_count + 1;
         end else begin
             bit_count <= 5'd0; // Reset bit counter when CS is high
@@ -65,7 +65,7 @@ module DUT_DACx0504(
         if (SYS_RST) begin
             shift_in <= 24'h0; // Reset shift register
             shift_out <= 24'h0; // Reset shift register
-        end else if(~DAC_CS)begin
+        end else if(~DAC_CS_N)begin
             if(bit_count > 0) begin
                 shift_in <= {shift_in[22:0], DAC_SDI}; // Shift in data from DAC_SDI
                 shift_out <= {shift_out[22:0], 1'b0}; // Shift out data to DAC_SDO

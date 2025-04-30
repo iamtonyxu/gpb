@@ -28,7 +28,7 @@ module DAC_DACx0504_tb;
     wire [31:0] OPB_DO;
     wire DAC_CLK;
     wire DAC_SDI;
-    wire DAC_CS;
+    wire DAC_CS_N;
 
     // dac_rdata
     reg [23:0] dac_rdata; // Register to hold the read data from DAC
@@ -64,7 +64,7 @@ module DAC_DACx0504_tb;
     endtask
 
     // Instantiate the DAC_DACx0504_IF module
-    DAC_DACx0504 dac_if (
+    DAC_DACx0504_IF dac_if (
         .OPB_CLK(OPB_CLK),
         .OPB_RST(OPB_RST),
         .OPB_ADDR(OPB_ADDR),
@@ -74,7 +74,7 @@ module DAC_DACx0504_tb;
         .OPB_DO(OPB_DO),
         .DAC_CLK(DAC_CLK),
         .DAC_SDI(DAC_SDI),
-        .DAC_CS(DAC_CS),
+        .DAC_CS_N(DAC_CS_N),
         .DAC_SDO(DAC_SDO)
     );
 
@@ -84,7 +84,7 @@ module DAC_DACx0504_tb;
         .SYS_RST(OPB_RST),
         .DAC_CLK(DAC_CLK),
         .DAC_SDI(DAC_SDI),
-        .DAC_CS(DAC_CS),
+        .DAC_CS_N(DAC_CS_N),
         .DAC_SDO(DAC_SDO)
     );
 

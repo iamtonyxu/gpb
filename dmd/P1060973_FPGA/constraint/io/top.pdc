@@ -10,7 +10,7 @@
 # 
 
 # 100MHZ, U55
-set_io -port_name {SYS_CLK}     -pin_name R1    -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
+set_io -port_name {FPGA_100M_CLK}  pin_name R1    -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
 
 # RESET#, SW1
 set_io -port_name {RESET_N}     -pin_name L6    -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
@@ -40,77 +40,21 @@ set_io -port_name {EEP_CS_N}        -pin_name M3    -fixed true  -io_std LVCMOS3
 set_io -port_name {EEP_SI}          -pin_name M2    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
 set_io -port_name {EEP_SCK}         -pin_name L7    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
 set_io -port_name {EEP_SO}          -pin_name L8    -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
-# TP77
-# set_io -port_name {AD_CNVST}          -pin_name H4    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
 
-# TP76
-# set_io -port_name {AD_SCLK}           -pin_name H4    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-
-# TP78
-# set_io -port_name {AD_SDOUT}          -pin_name H4    -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
-
-# (NOT USED)
-# set_io -port_name {AD_BUSY}           -DIRECTION INPUT
-
-# TP120
-# set_io -port_name {ILIM_DAC_CLK}      -pin_name H2    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-
-# TP119
-# set_io -port_name {ILIM_DAC_SDI}      -pin_name J6    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-
-# TP117
-# set_io -port_name {ILIM_DAC_SDO}      -pin_name H7    -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
-
-# TP121
-# set_io -port_name {ILIM_DAC_CS}       -pin_name K6    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-
-# GNT_PWM_PHA_HI
-# set_io -port_name {GANT_PWM[5]}       -pin_name A7    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-
-# GNT_PWM_PHA_LO
-# set_io -port_name {GANT_PWM[4]}       -pin_name E9    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-
-# GNT_PWM_PHB_HI
-# set_io -port_name {GANT_PWM[3]}       -pin_name D9    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-
-# GNT_PWM_PHB_LO
-# set_io -port_name {GANT_PWM[2]}       -pin_name B8    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-
-# GNT_PWM_PHC_HI
-# set_io -port_name {GANT_PWM[1]}       -pin_name A8    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-
-# GNT_PWM_PHC_LO
-# set_io -port_name {GANT_PWM[0]}       -pin_name B12   -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-
-# NOT FOUND
-# set_io -port_name {GANT_MOT_DRV_EN}   -DIRECTION OUTPUT
-
-# NOT FOUND
-# set_io -port_name {GANT_CURR_SAMP}    -DIRECTION OUTPUT
-
-# LFT_PWM_PHA_HI
-# set_io -port_name {LIFT_PWM[5]}       -pin_name P7    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-
-# LFT_PWM_PHA_LO
-# set_io -port_name {LIFT_PWM[4]}       -pin_name P8    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-
-# LFT_PWM_PHB_HI
-# set_io -port_name {LIFT_PWM[3]}       -pin_name N7    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-
-# LFT_PWM_PHB_LO
-# set_io -port_name {LIFT_PWM[2]}       -pin_name N8    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-
-# LFT_PWM_PHC_HI
-# set_io -port_name {LIFT_PWM[1]}       -pin_name N6    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-
-# LFT_PWM_PHC_LO
-# set_io -port_name {LIFT_PWM[0]}       -pin_name N5    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-
-# NOT FOUND
-# set_io -port_name {LIFT_MOT_DRV_EN}   -DIRECTION OUTPUT
-
-# NOT FOUND
-# set_io -port_name {LIFT_CURR_SAMP}    -DIRECTION OUTPUT
-
-# WD_TRIG, TP79
-# set_io -port_name {WD_OUT}            -pin_name D6    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+# ADC/DAC INTERFACE
+# set_io -port_name {AD_SEL0}           -pin_name J2    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+# set_io -port_name {AD_SEL1}           -pin_name K3    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+# set_io -port_name {AD_SEL2}           -pin_name L2    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+# set_io -port_name {AD_MUX1_N}         -pin_name H1    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+# set_io -port_name {AD_MUX2_N}         -pin_name J1    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+# set_io -port_name {AD_MUX3_N}         -pin_name F2    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+# set_io -port_name {AD_MUX4_N}         -pin_name F1    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+# set_io -port_name {AD_MUX5_N}         -pin_name G2    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {ST_DAC_CLK}        -pin_name H2    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {DAC_SDI}           -pin_name J6    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {DAC_CS_N}          -pin_name K6    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {DAC_SDO}           -pin_name H7    -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
+set_io -port_name {ADC_SDOUT}         -pin_name J7    -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
+# set_io -port_name {12V_ACT_DIODE_ON_N}-pin_name J8    -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
+set_io -port_name {ST_ADC_CLK}        -pin_name K8    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {ADC_CNVST}         -pin_name H4    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT

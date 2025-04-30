@@ -2,102 +2,205 @@
 
 module top(
     // System clock and reset
-    input              SYS_CLK,
+    input              FPGA_100M_CLK,
     input              RESET_N,
-    output             POWER_GOOD, // CLK_1HZ
+/*
+    // POWER IF
+    input              P24V_GOOD_N,
+    input              FAN_FAIL_N,
+    output             FAN_EN,
+    output             12V_ISO_EN,
 
+    // GANTRY 96V EMOPS
+    input              24V_GNT_EMOPS_PG,
+    output             24V_GNT_EMOPS_EN,
+    output             GNT_EMOPS_EN,
+
+    // GANTRY 96V INTERFACE
+    output             GNT_MOT_PWR_EN,
+    output             GNT_BRK_PWR_EN,
+*/
+    output             WD_TRIG,
+/*
+    input              OC_V_GNT_MOT_DRV,
+    input              OC_V_GNT_BRK_DRV,
+    input              GNT_MOT_PWR_FLT_N,
+    input              GNT_BRK_PWR_FLT_N,
+    input              GNT_EMOPS_OV_L,
+    input              5V_ISO_MON_GNT,
+    output             GNT_SHUNT_EN,
+    input              GNT_SHUNT_ON,
+    input              5V_ISO_MON_LFT,
+
+    // GANTRY DRIVER
+    output             GNT_PWM_PHA_HI,
+    output             GNT_PWM_PHA_LO,
+    output             GNT_PWM_PHB_HI,
+    output             GNT_PWM_PHB_LO,
+    output             GNT_PWM_PHC_HI,
+    output             GNT_PWM_PHC_LO,
+
+    // SPD-DMD IF
+    output             GNT_HW_EN_MON,
+    output             LFT_ST_DISB_MON,
+    output             LFT_HW_EN_MON,
+    output             GNT_ST_DISB_MON,
+    output             DMD_PWR_OK,
+    output             SPARE_MON,
+    input              SPDIO_FLT_N,
+    input              SPD2_24V_STATUS_N,
+    input              LFT_ST_DISB,
+    input              LFT_HW_EN_N,
+    input              GNT_ST_DISB,
+    input              GNT_HW_EN_N,
+
+    // LIFT MOTOR HALL SENSOR IF
+    output             LFT_HALL_PWR_EN_N,
+    input              LFT_HALL_PWR_OK,
+    input              LFT_HALL_SNS1_N,
+    input              LFT_HALL_SNS2_N,
+    input              LFT_HALL_SNS3_N,
+
+    // GANTRY BRAKE DRIVER
+    input              PWM_BRK_EXT_FAULT,
+    output             GNT_BRK_EXT_EN,
+    output             GNT_BRK_SW_MON,
+    input              GNT_BRK1_FB_N,
+    input              GNT_BRK2_FB_N,
+    input              GNT_BRK3_FB_N,
+    output             GNT_BRK1_PWM_HI,
+    output             GNT_BRK1_PWM_LO,
+    output             GNT_BRK1_RET_PWM_HI,
+    output             GNT_BRK1_RET_PWM_LO,
+    output             GNT_BRK2_PWM_HI,
+    output             GNT_BRK2_PWM_LO,
+    output             GNT_BRK2_RET_PWM_HI,
+    output             GNT_BRK2_RET_PWM_LO,
+    output             GNT_BRK3_PWM_HI,
+    output             GNT_BRK3_PWM_LO,
+    output             GNT_BRK3_RET_PWM_HI,
+    output             GNT_BRK3_RET_PWM_LO,
+
+    // LIFT MOTOR INTERFACE
+    input              24V_LFT_EMOPS_PG,
+    output             LFT_PWM_PHA_HI,
+    output             LFT_PWM_PHA_LO,
+    output             LFT_PWM_PHB_HI,
+    output             LFT_PWM_PHB_LO,
+    output             LFT_PWM_PHC_HI,
+    output             LFT_PWM_PHC_LO,
+
+    // GPIO
+    output             GPIO2, // TP99
+    output             GPIO3, // TP97
+    output             GPIO5, // TP98
+*/
+    // EEPROM INTERFACE
+    output             EEP_CS_N,
+    output             EEP_SI,
+    output             EEP_SCK,
+    input              EEP_SO,
+/*
+    // LIFT 96V INTERFACE
+    output             24V_LFT_EMOPS_EN,
+    input              OC_V_LFT_MOT_DRV,
+    output             LFT_SHUNT_EN,
+    input              LFT_SHUNT_ON,
+    output             LFT_EMOPS_EN,
+    input              LFT_EMOPS_OV_L,
+    input              LFT_MOT_PWR_FLT_N,
+    output             LFT_MOT_PWR_EN,
+
+    // SPD_EMOPS INTERFACE
+    output             EMOPS_STAT1,
+    output             EMOPS_STAT2,
+    output             LFT_ROT_BRK_RLS,
+    output             LAT_LNG_BRK_RLS,
+    input              EM_DOWN_LIMIT,
+    input              EM_UP_LIMIT,
+    input              CCH_LFT_MOT_EN_N,
+    input              CCH_LFT_DWN_N,
+    input              CCH_LAT_LNG_FLOAT_N,
+    input              EMO_GOOD_N,
+    input              SITE_24V_PWR_OK_N,
+    output             SRVC_CCH_GNT_N,
+    output             EM_CCH_24V_EN,
+    input              SPD_EMOPS_FLT_N,
+
+    // STAND CONTROLLER INTERFACE
+    output             EXOPS_GNT_24V_EN,
+    input              GNT_CCW_LIMIT,
+    input              GNT_CW_LIMIT,
+    output             ST_MSSB_TX,
+    input              MSSB_RX,
+    output             ST_SRV_MSSB_TX,
+
+    // SERVICE PENDANT
+    input              SRV_MSSB_RX,
+    output             PAN_24V_SW,
+
+    // MISCELLANEOUS
+    input              MAINS_LEVEL_FB,
+*/
+    output             POWER_GOOD,
+/*
+    output             MSSB_COMM_FAULT,
+    output             HSWAP_FAULT,
+
+    // EXT BRAKE DRIVER
+    output             EXT_BRK1_DRV_EN,
+    output             EXT_BRK2_DRV_EN,
+    output             EXT_BRK3_DRV_EN,
+*/
     // DEBUG PORT
     input              DBUG_HEADER2, // UART_RXD
     output             DBUG_HEADER4, // UART_TXD
     output             DBUG_HEADER6, // CLK_2KHZ
     output             DBUG_HEADER8, // CLK_20KHZ
-    input              DBUG_HEADER10, // REF_CLK_16KHZ
+    input              DBUG_HEADER10, // REF_CLK_2KHZ
 
-    // EEPROM INTERFACE
-    output             EEP_CS_N,
-    output             EEP_SI,
-    output             EEP_SCK,
-    input              EEP_SO
 /*
-    // AD7663AS ADC interface
-    output             AD_CNVST,
-    output             AD_SCLK,
-    input              AD_SDOUT,
-    input              AD_BUSY, // NOT USED
+    // CCHL INTERFACE
+    output             LFT_SER_CLK,
+    output             LFT_SER_SYNC,
+    output             LFT_SER_DATA0,
+    output             LFT_SER_DATA1,
+    input              LFT_SERIO_FLT_N,
+    input              LFT_MTN_EN_N,
+    input              LFT_SER_PAGE_SEL_N,
+    input              LFT_DOWN_LIMIT,
+    input              LFT_UP_LIMIT,
 
-    // AD8803AR DAC interface
-    output             ILIM_DAC_CLK,
-    output             ILIM_DAC_SDI,
-    output             ILIM_DAC_CS,
-
-    // Gantry_Motor interface
-    output     [5:0]   GANT_PWM,
-    output             GANT_MOT_DRV_EN, // NOT USED
-    output             GANT_CURR_SAMP, // NOT USED
-
-    // Lift_Motor interface
-    output     [5:0]   LIFT_PWM,
-    output             LIFT_MOT_DRV_EN, // NOT USED
-    output             LIFT_CURR_SAMP, // NOT USED
-
-    // FPGA_WDI interface
-    output             WD_OUT,
-
-    // GPIO interface
-    input      [14:0]  DMD_IO,
-    input      [5:0]   STAND_CONT_IF,
-    input      [4:0]   CCHL_IF,
-    input      [6:0]   SERVICE_PENDANT,
-    input      [6:0]   PWR_IF,
-    input      [3:0]   LIFT_MOT_SNS_IF,
-    input      [4:0]   SPD_DMD_IF,
-    input      [4:0]   GANT_MOT_SNS_IF,
-    input      [4:0]   SPD_EMOPS_IF,
-    output     [3:0]   AD_MUX,
-    output     [2:0]   AD_SEL,
-    output     [7:0]   STS,
-    output             FPGA_DONE,
-    output             GANT_96V_BYPASS,
-    output             GANT_24V_PWR_EN,
-    output             GANT_96V_PWR_EN,
-    output             GANT_MOT_SHUNT_EN_N,
-    output             LIFT_96V_BYPASS,
-    output             LIFT_24V_PWR_EN,
-    output             LIFT_96V_PWR_EN,
-    output             LIFT_MOT_SHUNT_EN_N,
-    output             GANT_SERIO_RST_N,
-    output             GANT_SER_DATA1,
-    output             GANT_SER_DATA0,
-    output             GANT_SER_SYNC,
-    output             GANT_SER_CLK,
-    output             LIFT_SERIO_RST_N,
-    output             LIFT_SER_DATA1,
-    output             LIFT_SER_DATA0,
-    output             LIFT_SER_SYNC,
-    output             LIFT_SER_CLK,
-    output             LIFT_BRK_OVRD_LED_CTRL,
-    output             FAN_EN,
-    output             LIFT_HALL_PWR_EN,
-    output             SPDIO_RST_N,
-    output             SPARE_MON,
-    output             DMD_PWR_OK,
-    output             GANT_ST_DISB_MON,
-    output             LIFT_HW_EN_MON,
-    output             LIFT_ST_DISB_MON,
-    output             GNT_HW_EN_MON,
-    output             GNT_HALL_PWR_EN,
-    output             GNT_BRK_RLS,
-    output             LFT_BRK_RLS,
-    output             LAT_LNG_BRK_RLS,
-    output             EMOPS_STAT2,
-    output             EMOPS_STAT1,
-    output             EM_24V_EN,
-    output             GANT_BRK_RLS1,
-
-    // Debug GPIO
-    output     [5:0]   GPIO_OUT
+    // ADC/DAC INTERFACE
+    output             AD_SEL0,
+    output             AD_SEL1,
+    output             AD_SEL2,
+    output             AD_MUX1_N,
+    output             AD_MUX2_N,
+    output             AD_MUX3_N,
+    output             AD_MUX4_N,
+    output             AD_MUX5_N,
+*/
+    output             ST_DAC_CLK,
+    output             DAC_SDI,
+    output             DAC_CS_N,
+    input              DAC_SDO,
+    input              ADC_SDOUT,
+    //input              12V_ACT_DIODE_ON_N,
+    output             ST_ADC_CLK,
+    output             ADC_CNVST
+/*
+    // DEBUG PORT
+    output             DBUG_MISO,
+    input              DBUG_MOSI,
+    input              DBUG_CS_N,
+    input              DBUG_SCLK,
+    input              DBUG_ACTIVE
 */
 );
+
+    // SYS_CLK
+    wire              SYS_CLK; //FPGA_100M_CLK
 
     // OPB interface signals
     wire              OPB_CLK;
@@ -119,7 +222,7 @@ module top(
     wire            PULSE_1HZ;
     wire            PULSE_100US;
     wire            CLK_2MHZ;
-    wire            REF_CLK_16KHZ;
+    wire            REF_CLK_2KHZ;
 
     wire    [31:0]  SP_IN; // from scratchpad
     wire    [31:0]  EEP_IN; // from EEPROM
@@ -169,10 +272,11 @@ module top(
     wire            LIFT_MOT_RE; // lift motor read enable
     wire            LIFT_MOT_WE; // lift motor write enable
 //
+    assign SYS_CLK = FPGA_100M_CLK; // 100MHz Clock
     assign POWER_GOOD = PULSE_1HZ; // Power good signal after FPGA programmed
     assign DBUG_HEADER6 = PULSE_2KHZ; // CLK_2KHZ output for debugging
     assign DBUG_HEADER8 = PULSE_20KHZ; // CLK_20KHZ output for debugging
-    assign REF_CLK_16KHZ = DBUG_HEADER10; // REF_CLK_16KHZ input for Freq counter
+    assign REF_CLK_2KHZ = DBUG_HEADER10; // REF_CLK_2KHZ input for Freq counter
 
     assign DBUG_HEADER4 = UART_TXD;
     assign UART_RXD = DBUG_HEADER2;
@@ -282,15 +386,14 @@ module top(
 
     // OSCILLATOR_COUNTER module instantiation
     OSCILLATOR_COUNTER osc_counter_0 (
+        .OPB_CLK(OPB_CLK),               // OPB clock
+        .OPB_RST(OPB_RST),               // OPB reset
         .OSC_CT_DO(OSC_CT_IN),           // Oscillator counter data output
         .OSC_CT_DI(OPB_DO),              // Oscillator counter data input
         .OPB_ADDR(OPB_ADDR),             // OPB address
         .OSC_CT_RE(COUNTER_RE),          // Read enable signal
         .OSC_CT_WE(COUNTER_WE),          // Write enable signal
-        .OPB_CLK(OPB_CLK),               // OPB clock
-        .OPB_RST(OPB_RST),               // OPB reset
-        .SYSCLK(SYS_CLK),                // System clock
-        .REF_CLK(REF_CLK_16KHZ)          // Reference clock (16kHz)
+        .REF_CLK(REF_CLK_2KHZ)          // Reference clock (2KHz)
     );
 
     // SCRATCH_PAD_REGISTER module instantiation
@@ -318,94 +421,44 @@ module top(
     .EEP_SO(EEP_SO)                  // EEPROM serial output
     );
 
+ADC_ADS8864_IF adc_0 (
+    .OPB_CLK(OPB_CLK),
+    .OPB_RST(OPB_RST),
+    .OPB_RE(ADC_RE),
+    .OPB_WE(ADC_WE),
+    .OPB_ADDR(OPB_ADDR),
+    .OPB_DO(ADC_IN),
+    .OPB_DI(OPB_DO),
+
+    .ADC_CNVST(ADC_CNVST),
+    .ADC_SCLK(ST_ADC_CLK),
+    .ADC_SDOUT(ADC_SDOUT)
+);
+
+DAC_DACx0504_IF dac_0 (
+    .OPB_CLK(OPB_CLK),
+    .OPB_RST(OPB_RST),
+    .OPB_ADDR(OPB_ADDR),
+    .OPB_DI(OPB_DO),
+    .OPB_WE(ILIM_DAC_WE),
+    .OPB_RE(ILIM_DAC_RE),
+    .OPB_DO(ILIM_DAC_IN),
+    .DAC_CLK(ST_DAC_CLK),
+    .DAC_SDI(DAC_SDI),
+    .DAC_CS_N(DAC_CS_N),
+    .DAC_SDO(DAC_SDO)
+);
+
+    // FPGA_WDI module instantiation
+    FPGA_WDI fpga_wdi_0 (
+        .OPB_CLK(OPB_CLK),                 // OPB clock
+        .PULSE_100US(PULSE_100US),         // 100us pulse signal
+        .OPB_RST(OPB_RST),                 // OPB reset
+        .WD_TRIG(WD_TRIG)                  // Watchdog output
+    );
+
 /*
-   // Example instantiation of the AdderDecode module
-    AdderDecode adder_decode_0 (
-        .OPB_CLK(OPB_CLK),               // System clock
-        .OPB_RST(OPB_RST),               // System reset
-        .DEC_RE(OPB_RE),                 // Read enable signal
-        .DEC_WE(OPB_WE),                 // Write enable signal
-        .DEC_ADDR(OPB_ADDR),             // Address input
-        .SP_IN(SP_IN),                   // Scratchpad input
-        .GPIO_IN(GPIO_IN),               // GPIO output
-        .OSC_CT_IN(OSC_CT_IN),           // Oscillator counter output
-        .CLK_GEN_IN(CLK_GEN_IN),         // Clock generator output
-        .ILIM_DAC_IN(ILIM_DAC_IN),       // ILIM DAC output
-        .ADC_IN(ADC_IN),                 // ADC output
-        .GANT_MOT_IN(GANT_MOT_IN),       // Gantry motor output
-        .LIFT_MOT_IN(LIFT_MOT_IN),       // Lift motor output
-        .SP1_RE(SP1_RE),                 // Scratchpad 1 read enable
-        .SP1_WE(SP1_WE),                 // Scratchpad 1 write enable
-        .SP2_RE(SP2_RE),                 // Scratchpad 2 read enable
-        .SP2_WE(SP2_WE),                 // Scratchpad 2 write enable
-        .STD_CONT_RE(STD_CONT_RE),       // Standard control read enable
-        .CCHL_IF_RE(CCHL_IF_RE),         // CCHL interface read enable
-        .SER_PENDANT_RE(SER_PENDANT_RE), // Service pendant read enable
-        .PWR_IF_RE(PWR_IF_RE),           // Power interface read enable
-        .LIFT_MOT_SENS_RE(LIFT_MOT_SENS_RE), // Lift motor sensor read enable
-        .SPD_DMD_IF_RE(SPD_DMD_IF_RE),   // Speed demand interface read enable
-        .GANTRY_MOT_SENS_RE(GANTRY_MOT_SENS_RE), // Gantry motor sensor read enable
-        .SPD_EMOPS_RE(SPD_EMOPS_RE),     // SPD EMOPS read enable
-        .GPO_RE(GPO_RE),                 // General-purpose output read enable
-        .GPO_WE(GPO_WE),                 // General-purpose output write enable
-        .ADMUX_RE(ADMUX_RE),             // ADMUX read enable
-        .ADMUX_WE(ADMUX_WE),             // ADMUX write enable
-        .ADSEL_RE(ADSEL_RE),             // ADSEL read enable
-        .ADSEL_WE(ADSEL_WE),             // ADSEL write enable
-        .STS_RE(STS_RE),                 // Status read enable
-        .STS_WE(STS_WE),                 // Status write enable
-        .GANTRY_96V_IF_RE(GANTRY_96V_IF_RE), // Gantry 96V interface read enable
-        .GANTRY_96V_IF_WE(GANTRY_96V_IF_WE), // Gantry 96V interface write enable
-        .LIFT_96V_IF_RE(LIFT_96V_IF_RE), // Lift 96V interface read enable
-        .LIFT_96V_IF_WE(LIFT_96V_IF_WE), // Lift 96V interface write enable
-        .MOT_GPO_WE(MOT_GPO_WE),         // Motor GPO write enable
-        .COUNTER_WE(COUNTER_WE),         // Counter write enable
-        .COUNTER_RE(COUNTER_RE),         // Counter read enable
-        .ILIM_DAC_WE(ILIM_DAC_WE),       // ILIM DAC write enable
-        .ILIM_DAC_RE(ILIM_DAC_RE),       // ILIM DAC read enable
-        .CLOCK_WE(CLOCK_WE),             // Clock write enable
-        .CLOCK_RE(CLOCK_RE),             // Clock read enable
-        .ADC_RE(ADC_RE),                 // ADC read enable
-        .ADC_WE(ADC_WE),                 // ADC write enable
-        .GANT_MOT_RE(GANT_MOT_RE),       // Gantry motor read enable
-        .GANT_MOT_WE(GANT_MOT_WE),       // Gantry motor write enable
-        .LIFT_MOT_RE(LIFT_MOT_RE),       // Lift motor read enable
-        .LIFT_MOT_WE(LIFT_MOT_WE),       // Lift motor write enable
-        .DATA_OUT(GPIO_OUT),             // Data output
-        .DEC_DO(OPB_DI)                  // Decoder data output
-    );
-
-    // ADC_AD7663AS module instantiation
-    ADC_AD7663AS adc_adc7663as_0 (
-        .ADC_DO(ADC_IN),                 // ADC data output
-        .ADC_DI(OPB_DO),                 // ADC data input
-        .ADC_ADDR(OPB_ADDR),             // OPB address
-        .ADC_RE(ADC_RE),                 // Read enable signal
-        .ADC_WE(ADC_WE),                 // Write enable signal
-        .OPB_CLK(OPB_CLK),               // OPB clock
-        .OPB_RST(OPB_RST),               // OPB reset
-        .SYSCLK(SYS_CLK),                // System clock
-        .AD_CNVST(AD_CNVST),             // ADC conversion start signal
-        .AD_SCLK(AD_SCLK),               // ADC clock output
-        .AD_SDOUT(AD_SDOUT),             // ADC data output
-        .AD_BUSY(AD_BUSY)                // ADC busy signal
-    );
-
-    // DAC_AD8803AR module instantiation
-    DAC_AD8803AR dac_ad8803ar_0 (
-        .ILIM_DAC_CLK(ILIM_DAC_CLK),     // DAC clock output (not connected)
-        .ILIM_DAC_SDI(ILIM_DAC_SDI),     // DAC data input (not connected)
-        .ILIM_DAC_CS(ILIM_DAC_CS),       // DAC chip select (not connected)
-        .DAC_DO(ILIM_DAC_IN),            // DAC data output
-        .DAC_DI(OPB_DO),                 // DAC data input
-        .OPB_ADDR(OPB_ADDR),             // OPB address
-        .DAC_RE(ILIM_DAC_RE),            // Read enable signal
-        .DAC_WE(ILIM_DAC_WE),            // Write enable signal
-        .OPB_CLK(OPB_CLK),               // OPB clock
-        .OPB_RST(OPB_RST),               // OPB reset
-        .SYSCLK(SYS_CLK)                 // System clock
-    );
-
+ 
     // Gantry_Motor module instantiation
     Gantry_Motor gantry_motor_0 (
         .GANT_MOT_DO(GANT_MOT_IN),          // Gantry motor data output
@@ -521,13 +574,6 @@ module top(
         .GPIO_DO(GPIO_IN)                   // GPIO data output
     );
 
-    // FPGA_WDI module instantiation
-    FPGA_WDI fpga_wdi_0 (
-        .OPB_CLK(OPB_CLK),                 // OPB clock
-        .PULSE_100US(PULSE_100US),         // 100us pulse signal
-        .OPB_RST(OPB_RST),                 // OPB reset
-        .WD_OUT(WD_OUT)                    // Watchdog output
-    );
 */
 
     endmodule

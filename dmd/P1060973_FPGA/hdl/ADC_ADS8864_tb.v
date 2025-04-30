@@ -10,12 +10,12 @@ module ADC_ADS8864_tb;
     reg OPB_CLK;
     reg OPB_RST;
     reg SYSCLK;
-    wire AD_SDOUT;
+    wire ADC_SDOUT;
 
     // Outputs
     wire [31:0] OPB_DO;
-    wire AD_SCLK;
-    wire AD_CNVST;
+    wire ADC_SCLK;
+    wire ADC_CNVST;
 
     // registers
     reg [31:0] opb_do_reg; // Register to hold the output data
@@ -33,17 +33,17 @@ module ADC_ADS8864_tb;
         .OPB_CLK(OPB_CLK),
         .OPB_RST(OPB_RST),
         //.SYSCLK(SYSCLK),
-        .AD_CNVST(AD_CNVST),
-        .AD_SCLK(AD_SCLK),
-        .AD_SDOUT(AD_SDOUT)
+        .ADC_CNVST(ADC_CNVST),
+        .ADC_SCLK(ADC_SCLK),
+        .ADC_SDOUT(ADC_SDOUT)
     );
 
     DUT_ADS8864 adc_dut (
         .RESET(OPB_RST),
         .SYSCLK(OPB_CLK),
-        .AD_SCLK(AD_SCLK),
-        .AD_CNVST(AD_CNVST),
-        .AD_SDOUT(AD_SDOUT)
+        .ADC_SCLK(ADC_SCLK),
+        .ADC_CNVST(ADC_CNVST),
+        .ADC_SDOUT(ADC_SDOUT)
     );
 
     // task of OPB write
@@ -105,10 +105,11 @@ module ADC_ADS8864_tb;
         OPB_WRITE(32'h800, 32'h2); // Control register address and data
 
         // Wait for the state machine to complete
-        #200;
+      #150000;
 
         // Read the status register
         OPB_READ(32'h808, opb_do_reg); // Status register address
+        #1000;
 
         // Read the RAM data
         OPB_READ(32'h000, opb_do_reg); // RAM address

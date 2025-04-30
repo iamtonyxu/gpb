@@ -51,17 +51,17 @@
 `define S_END            5'h19
 
 module ADC_ADS8864_IF(
-	output reg  [31:0]      OPB_DO,  
-	input       [31:0]      OPB_DI,
-	input       [31:0]      OPB_ADDR,
+	input                   OPB_CLK,
+	input                   OPB_RST,
 	input                   OPB_RE,
 	input                   OPB_WE,
-	input                   OPB_CLK,			//100MHz
-	input                   OPB_RST,
-	
-	output reg              AD_CNVST = 1'b0,
-	output                  AD_SCLK,
-	input                   AD_SDOUT
+	input       [31:0]      OPB_ADDR,
+	output reg  [31:0]      OPB_DO,
+	input       [31:0]      OPB_DI,
+
+	output reg              ADC_CNVST = 1'b0,
+	output                  ADC_SCLK,
+	input                   ADC_SDOUT
 );
 	 
 	 //Registers
@@ -73,11 +73,11 @@ module ADC_ADS8864_IF(
 	 reg [9:0] ram_wr_pt = 10'h000;		    // Ram Write Pointer
 	 reg ram_wr_clk = 1'b0;					// ram write clock
 	 reg [4:0] state = 5'h0;				// state of state machine
-	 reg [15:0] sdout_buf = 16'h0;		    // buffer for the AD_SDOUT signal
+	 reg [15:0] sdout_buf = 16'h0;		    // buffer for the ADC_SDOUT signal
 	 reg [10:0] data_count = 11'h0;		    // count samples as they are saved to ram
 	 reg [1:0] clk_aq_low = 2'h0;			// used to look for clk_aq edges
 	 reg [1:0] clk_aq_high = 2'h0;		    // used to look for clk_aq edges
-	 reg ad_sclk_en = 1'b0;					// enable the sclk
+	 reg ADC_SCLK_en = 1'b0;					// enable the sclk
 	 reg [6:0] time_out_count = 7'h0;	    // time out counter
      reg [15:0] sp;
 
@@ -97,7 +97,7 @@ module ADC_ADS8864_IF(
 							(OPB_ADDR[11:0] >= `D_RAM_ADDR) & 
 							(OPB_ADDR[11:0] < (`D_RAM_ADDR + `D_RAM_SIZE));
 							
-	assign AD_SCLK = (clk_sd && ad_sclk_en);
+	assign ADC_SCLK = (clk_sd && ADC_SCLK_en);
  
 	
 	CLOCK_DIV aqclkdiv(
@@ -124,13 +124,13 @@ module ADC_ADS8864_IF(
 		.PA_WE(1'b1), 				   // Ram is always write enabled 
 		.PA_CLK(ram_wr_clk),		   // state machine controls clock signal
 		.PB_DO(ram_opb_do),
-		.PB_ADDR(OPB_ADDR[10:1]),
+		.PB_ADDR(OPB_ADDR[9:0]),
 		.PB_CLK(OPB_CLK)
 	);
 	
     always@(posedge clk_sd or posedge OPB_RST) begin 
         if(OPB_RST) begin
-            AD_CNVST        <= 1'b0;
+            ADC_CNVST        <= 1'b0;
             status          <= 4'b0;
             time_out_count  <= 7'b0;
             sdout_buf       <= 16'b0;
@@ -139,7 +139,7 @@ module ADC_ADS8864_IF(
             data_count      <= 11'b0;
             clk_aq_low      <= 2'h0;
 			clk_aq_high     <= 2'h0;
-            ad_sclk_en      <= 1'h0;
+            ADC_SCLK_en      <= 1'h0;
             state           <= `S_START;
             sp              <= 16'h1122;
         end
@@ -170,19 +170,19 @@ module ADC_ADS8864_IF(
 					end
 				end
 				`S_CNVST_SET: begin
-					AD_CNVST <= 1'b1;										// set conversion start
+					ADC_CNVST <= 1'b1;										// set conversion start
 					clk_aq_low <= 2'h0;										// clear aq_clk edge detection
 					clk_aq_high <= 2'h0;
 					state <= `S_CNVST_CLEAR;
 				end
                 `S_CNVST_CLEAR: begin
-                    AD_CNVST <= 1'b0;										// clear conversion start
+                    ADC_CNVST <= 1'b0;										// clear conversion start
                     state <= `S_BUSY;
 					time_out_count <= 0;
                 end
 				`S_BUSY: begin
-					if(!AD_SDOUT) begin
-						state <= `S_READ0;									// wait for AD_SDOUT to go low
+					if(!ADC_SDOUT) begin
+						state <= `S_READ0;									// wait for ADC_SDOUT to go low
 					end
 					else if(time_out_count >= TIMEOUT_CONV) begin
 						status[2] <= 1'b1;
@@ -193,78 +193,78 @@ module ADC_ADS8864_IF(
 					end				
 				end
 				`S_READ0: begin 
-					ad_sclk_en <= 1'b1;
+					ADC_SCLK_en <= 1'b1;
 					state <= state + 1;
 					time_out_count <= 0;
 				end
 				`S_READ_BUSY: begin 
-					ad_sclk_en <= 1'b1;
+					ADC_SCLK_en <= 1'b1;
 					state <= state + 1;
 				end
 				`S_READ1: begin 
-					sdout_buf <= {sdout_buf[14:0],AD_SDOUT};//0
+					sdout_buf <= {sdout_buf[14:0],ADC_SDOUT};//0
 					state <= state + 1;
 				end
 				`S_READ2: begin 
-					sdout_buf <= {sdout_buf[14:0],AD_SDOUT};//1
+					sdout_buf <= {sdout_buf[14:0],ADC_SDOUT};//1
 					state <= state + 1;
 				end
 				`S_READ3: begin 
-					sdout_buf <= {sdout_buf[14:0],AD_SDOUT};//2
+					sdout_buf <= {sdout_buf[14:0],ADC_SDOUT};//2
 					state <= state + 1;
 				end
 				`S_READ4: begin 
-					sdout_buf <= {sdout_buf[14:0],AD_SDOUT};//3
+					sdout_buf <= {sdout_buf[14:0],ADC_SDOUT};//3
 					state <= state + 1;
 				end
 				`S_READ5: begin 
-					sdout_buf <= {sdout_buf[14:0],AD_SDOUT};//4
+					sdout_buf <= {sdout_buf[14:0],ADC_SDOUT};//4
 					state <= state + 1;
 				end
 				`S_READ6: begin 
-					sdout_buf <= {sdout_buf[14:0],AD_SDOUT};//5
+					sdout_buf <= {sdout_buf[14:0],ADC_SDOUT};//5
 					state <= state + 1;
 				end
 				`S_READ7: begin 
-					sdout_buf <= {sdout_buf[14:0],AD_SDOUT};//6
+					sdout_buf <= {sdout_buf[14:0],ADC_SDOUT};//6
 					state <= state + 1;
 				end
 				`S_READ8: begin 
-					sdout_buf <= {sdout_buf[14:0],AD_SDOUT};//7
+					sdout_buf <= {sdout_buf[14:0],ADC_SDOUT};//7
 					state <= state + 1;
 				end
 				`S_READ9: begin 
-					sdout_buf <= {sdout_buf[14:0],AD_SDOUT};//8
+					sdout_buf <= {sdout_buf[14:0],ADC_SDOUT};//8
 					state <= state + 1;
 				end
 				`S_READ10: begin 
-					sdout_buf <= {sdout_buf[14:0],AD_SDOUT};//9
+					sdout_buf <= {sdout_buf[14:0],ADC_SDOUT};//9
 					state <= state + 1;
 				end
 				`S_READ11: begin 
-					sdout_buf <= {sdout_buf[14:0],AD_SDOUT};//10
+					sdout_buf <= {sdout_buf[14:0],ADC_SDOUT};//10
 					state <= state + 1;
 				end
 				`S_READ12: begin 
-					sdout_buf <= {sdout_buf[14:0],AD_SDOUT};//11
+					sdout_buf <= {sdout_buf[14:0],ADC_SDOUT};//11
 					state <= state + 1;
 				end
 				`S_READ13: begin 
-					sdout_buf <= {sdout_buf[14:0],AD_SDOUT};//12
+					sdout_buf <= {sdout_buf[14:0],ADC_SDOUT};//12
 					state <= state + 1;             
 				end
 				`S_READ14: begin 
-					sdout_buf <= {sdout_buf[14:0],AD_SDOUT};//13
+					sdout_buf <= {sdout_buf[14:0],ADC_SDOUT};//13
 					state <= state + 1;
                     sp <= 16'h0013;
 				end
 				`S_READ15: begin 
-					sdout_buf <= {sdout_buf[14:0],AD_SDOUT};//14
+					sdout_buf <= {sdout_buf[14:0],ADC_SDOUT};//14
 					state <= state + 1;
 				end
 				`S_READ16: begin 
-					sdout_buf <= {sdout_buf[14:0],AD_SDOUT};//15
-					ad_sclk_en <= 1'b0;
+					sdout_buf <= {sdout_buf[14:0],ADC_SDOUT};//15
+					ADC_SCLK_en <= 1'b0;
 					state <= state + 1;
 				end
 				`S_READ17: begin

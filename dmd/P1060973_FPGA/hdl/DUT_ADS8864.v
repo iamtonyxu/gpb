@@ -3,9 +3,9 @@
 module DUT_ADS8864(
     input               RESET,
     input               SYSCLK, // 100MHz clock
- 	input               AD_SCLK,
-	input               AD_CNVST,
-	output reg          AD_SDOUT
+ 	input               ADC_SCLK,
+	input               ADC_CNVST,
+	output reg          ADC_SDOUT
 );
 
     parameter CONVERT_TIME = 8'd35; // 1400ns timeout for ADC conversion under 25MHz clock
@@ -40,14 +40,14 @@ module DUT_ADS8864(
         end else begin
             case(state)
                 IDLE: begin
-                    if (AD_CNVST) begin
+                    if (ADC_CNVST) begin
                         state <= CONVERT;
                     end else begin
                         state <= IDLE;
                     end
                 end
                 CONVERT: begin
-                    if (AD_CNVST) begin
+                    if (ADC_CNVST) begin
                         state <= BUSY;
                     end else begin
                         state <= IDLE;
@@ -61,7 +61,7 @@ module DUT_ADS8864(
                     end
                 end
                 READ: begin
-                    if(AD_CNVST) begin
+                    if(ADC_CNVST) begin
                         state <= CONVERT;
                     end else if (sdout_counter >= SDOUT_BITS) begin
                         state <= DONE;
@@ -95,7 +95,7 @@ module DUT_ADS8864(
     end
 
     // sdout_counter
-    always @(posedge AD_SCLK or posedge RESET) begin
+    always @(posedge ADC_SCLK or posedge RESET) begin
         if (RESET) begin
             sdout_counter <= 5'd0;
         end else if (state == READ) begin
@@ -109,20 +109,20 @@ module DUT_ADS8864(
         end
     end
 
-    // AD_SDOUT
+    // ADC_SDOUT
     always @(posedge clk_sd or posedge RESET) begin
         if (RESET) begin
-            AD_SDOUT <= 1'b1;
+            ADC_SDOUT <= 1'b1;
         end else if (convert_counter >= CONVERT_TIME-5) begin
-            AD_SDOUT <= 1'b0;
+            ADC_SDOUT <= 1'b0;
         end else if (state == READ) begin
             if (sdout_counter < SDOUT_BITS) begin
-                AD_SDOUT <= ADC_VALUE[SDOUT_BITS - 1 - sdout_counter]; // shift out ADC value
+                ADC_SDOUT <= ADC_VALUE[SDOUT_BITS - 1 - sdout_counter]; // shift out ADC value
             end else begin
-                AD_SDOUT <= 1'b0; // reset output after reading all bits
+                ADC_SDOUT <= 1'b0; // reset output after reading all bits
             end
         end else if(state == IDLE) begin
-            AD_SDOUT <= 1'b1; // reset output in other states
+            ADC_SDOUT <= 1'b1; // reset output in other states
         end
     end
 
