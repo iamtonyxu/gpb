@@ -4,7 +4,7 @@ module top_tb;
 
     // Test Case Configuration
     integer  SCRATCHPAD_TEST        = 0;    // Enable Scratchpad Test
-    integer  ADC_TEST               = 1;    // Enable ADC Test
+    integer  ADC_TEST               = 0;    // Enable ADC Test
     integer  DAC_TEST               = 1;    // Enable DAC Test
     integer  EEPROM_TEST            = 0;    // Enable EEPROM Test
     integer  OSC_COUNTER_TEST       = 0;    // Enable Oscillator Counter Test
@@ -250,37 +250,37 @@ module top_tb;
         if (ADC_TEST == 1) begin
             $display("ADC Test Start...");
             // OPB WRITE: Trigger ADC Convert
-            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h08); uart_send(8'h08); uart_send(8'h00);
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h06); uart_send(8'h08); uart_send(8'h00);
             uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h02); uart_send(8'hA5);
             repeat(10) uart_recv(uart_tdata);
             #1000000;    // Wait 1us
 
             // OPB Read: Check ADC Status
-            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h08); uart_send(8'h08); uart_send(8'h08);
+            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h06); uart_send(8'h08); uart_send(8'h08);
             uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
             repeat(10) uart_recv(uart_tdata);
             #100;    // Wait 100ns
 
             // OPB Read: Read ADC Data RAM @ADRR = 10'h000
-            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h08); uart_send(8'h00); uart_send(8'h00);
+            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h06); uart_send(8'h00); uart_send(8'h00);
             uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
             repeat(10) uart_recv(uart_tdata);
             #100;    // Wait 100ns
 
             // OPB Read: Read ADC Data RAM @ADRR = 10'h001
-            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h08); uart_send(8'h00); uart_send(8'h01);
+            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h06); uart_send(8'h00); uart_send(8'h01);
             uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
             repeat(10) uart_recv(uart_tdata);
             #100;    // Wait 100ns
 
             // OPB Read: Read ADC Data RAM @ADRR = 10'h002
-            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h08); uart_send(8'h00); uart_send(8'h02);
+            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h06); uart_send(8'h00); uart_send(8'h02);
             uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
             repeat(10) uart_recv(uart_tdata);
             #100;    // Wait 100ns
 
             // OPB Read: Read ADC Data RAM @ADRR = 10'h003
-            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h08); uart_send(8'h00); uart_send(8'h03);
+            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h06); uart_send(8'h00); uart_send(8'h03);
             uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
             repeat(10) uart_recv(uart_tdata);
             #100;    // Wait 100ns
@@ -291,8 +291,31 @@ module top_tb;
         // DAC Test
         if (DAC_TEST == 1) begin
             $display("DAC Test Start...");
-            // TODO: Implement DAC test
+            // OPB WRITE: Write DAC0 register
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h04); uart_send(8'h00); uart_send(8'h08);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h12); uart_send(8'h34); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+            #1000000;    // Wait 1us
+
+            // OPB WRITE: Write DAC1 register
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h04); uart_send(8'h00); uart_send(8'h09);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h56); uart_send(8'h78); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+            #1000000;    // Wait 1us
+
+            // OPB WRITE: Write DAC2 register
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h04); uart_send(8'h00); uart_send(8'h0A);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'hab); uart_send(8'hcd); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+            #1000000;    // Wait 1us
+
+            // OPB WRITE: Write DAC3 register
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h04); uart_send(8'h00); uart_send(8'h0B);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'hbe); uart_send(8'hef); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+            #1000000;    // Wait 1us
             $display("DAC Test End.");
+
         end
 
         // Oscillator Counter Test

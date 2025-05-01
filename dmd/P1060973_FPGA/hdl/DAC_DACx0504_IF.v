@@ -1,5 +1,5 @@
 `timescale 1ns/100ps
-
+/*
 `define NOP_ADDR        4'h0
 `define DEVICE_ID_ADDR  4'h1
 `define SYNC_ADDR       4'h2
@@ -12,7 +12,7 @@
 `define DAC1_ADDR       4'h9
 `define DAC2_ADDR       4'hA
 `define DAC3_ADDR       4'hB
-
+*/
 module DAC_DACx0504_IF(
     input               OPB_CLK,
     input               OPB_RST,
