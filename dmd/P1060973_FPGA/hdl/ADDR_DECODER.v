@@ -33,6 +33,9 @@ module AdderDecode(
     input   [31:0]  CLK_GEN_IN,
     input   [31:0]  ILIM_DAC_IN,
     input   [31:0]  ADC_IN,
+    input   [31:0]  GANTRY_MOT_IN,
+    input   [31:0]  LIFT_MOT_IN,
+    input   [31:0]  MSSB_IN,
     input   [31:0]  EEP_IN,
     input   [31:0]  GPIO_IN,
 
@@ -49,8 +52,15 @@ module AdderDecode(
     output          ILIM_DAC_RE,
     output          ADC_RE,
     output          ADC_WE,
+    output          GANTRY_MOT_IF_RE,
+    output          GANTRY_MOT_IF_WE,
+    output          LIFT_MOT_IF_RE,
+    output          LIFT_MOT_IF_WE,
+    output          MSSB_IF_RE,
+    output          MSSB_IF_WE,
     output          EEP_RE,
     output          EEP_WE,
+
     output          PWR_IF_RE,
     output          PWR_IF_WE,
     output          GANTRY_EMOPS_IF_RE,
@@ -92,6 +102,9 @@ module AdderDecode(
     reg CLOCK_RE_d1;
     reg ILIM_DAC_RE_d1;
     reg ADC_RE_d1;
+    reg GANTRY_MOT_IF_RE_d1;
+    reg LIFT_MOT_IF_RE_d1;
+    reg MSSB_IF_RE_d1;
     reg EEP_RE_d1;
     reg PWR_IF_RE_d1;
     reg GANTRY_EMOPS_IF_RE_d1;
@@ -128,6 +141,15 @@ module AdderDecode(
 
     assign ADC_RE               = DEC_RE & (DEC_ADDR >= `ADC_ADDR) & (DEC_ADDR < (`ADC_ADDR + `ADC_SIZE));
     assign ADC_WE               = DEC_WE & (DEC_ADDR >= `ADC_ADDR) & (DEC_ADDR < (`ADC_ADDR + `ADC_SIZE));
+
+    assign GANTRY_MOT_IF_RE   = DEC_RE & (DEC_ADDR >= `GANTRY_MOT_ADDR) & (DEC_ADDR < (`GANTRY_MOT_ADDR + `GANTRY_MOT_SIZE));
+    assign GANTRY_MOT_IF_WE   = DEC_WE & (DEC_ADDR >= `GANTRY_MOT_ADDR) & (DEC_ADDR < (`GANTRY_MOT_ADDR + `GANTRY_MOT_SIZE));
+
+    assign LIFT_MOT_IF_RE       = DEC_RE & (DEC_ADDR >= `LIFT_MOT_ADDR) & (DEC_ADDR < (`LIFT_MOT_ADDR + `LIFT_MOT_SIZE));
+    assign LIFT_MOT_IF_WE       = DEC_WE & (DEC_ADDR >= `LIFT_MOT_ADDR) & (DEC_ADDR < (`LIFT_MOT_ADDR + `LIFT_MOT_SIZE));
+
+    assign MSSB_IF_RE              = DEC_RE & (DEC_ADDR >= `MSSB_ADDR) & (DEC_ADDR < (`MSSB_ADDR + `MSSB_SIZE));
+    assign MSSB_IF_WE              = DEC_WE & (DEC_ADDR >= `MSSB_ADDR) & (DEC_ADDR < (`MSSB_ADDR + `MSSB_SIZE));
 
     assign EEP_RE               = DEC_RE & (DEC_ADDR == `EEP_ADDR);
     assign EEP_WE               = DEC_WE & (DEC_ADDR == `EEP_ADDR);
@@ -189,6 +211,9 @@ module AdderDecode(
             CLOCK_RE_d1             <= 0;
             ILIM_DAC_RE_d1          <= 0;
             ADC_RE_d1               <= 0;
+            GANTRY_MOT_IF_RE_d1     <= 0;
+            LIFT_MOT_IF_RE_d1       <= 0;
+            MSSB_IF_RE_d1              <= 0;
             EEP_RE_d1               <= 0;
             PWR_IF_RE_d1            <= 0;
             GANTRY_EMOPS_IF_RE_d1   <= 0;
@@ -213,7 +238,11 @@ module AdderDecode(
             CLOCK_RE_d1             <= CLOCK_RE;
             ILIM_DAC_RE_d1          <= ILIM_DAC_RE;
             ADC_RE_d1               <= ADC_RE;
+            GANTRY_MOT_IF_RE_d1   <= GANTRY_MOT_IF_RE;
+            LIFT_MOT_IF_RE_d1       <= LIFT_MOT_IF_RE;
+            MSSB_IF_RE_d1              <= MSSB_IF_RE;
             EEP_RE_d1               <= EEP_RE;
+
             PWR_IF_RE_d1            <= PWR_IF_RE;
             GANTRY_EMOPS_IF_RE_d1   <= GANTRY_EMOPS_IF_RE;
             GANTRY_96V_IF_RE_d1     <= GANTRY_96V_IF_RE;
@@ -240,6 +269,9 @@ module AdderDecode(
                     (CLOCK_RE_d1)                ? CLK_GEN_IN      :
                     (ILIM_DAC_RE_d1)             ? ILIM_DAC_IN     :
                     (ADC_RE_d1)                  ? ADC_IN          :
+                    (GANTRY_MOT_IF_RE_d1)        ? GANTRY_MOT_IN   :
+                    (LIFT_MOT_IF_RE_d1)          ? LIFT_MOT_IN     :
+                    (MSSB_IF_RE_d1)                 ? MSSB_IN         :
                     (EEP_RE_d1)                  ? EEP_IN          :
                     (PWR_IF_RE_d1)               ? GPIO_IN         :
                     (GANTRY_EMOPS_IF_RE_d1)      ? GPIO_IN         :

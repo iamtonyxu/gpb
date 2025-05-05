@@ -3,48 +3,55 @@
 module top_tb;
 
     // Test Case Configuration
-    integer  SCRATCHPAD_TEST        = 0;    // Enable Scratchpad Test
-    integer  ADC_TEST               = 0;    // Enable ADC Test
-    integer  DAC_TEST               = 1;    // Enable DAC Test
-    integer  EEPROM_TEST            = 0;    // Enable EEPROM Test
-    integer  OSC_COUNTER_TEST       = 0;    // Enable Oscillator Counter Test
+    integer SCRATCHPAD_TEST        = 0;    // Enable Scratchpad Test
+    integer ADC_TEST               = 0;    // Enable ADC Test
+    integer DAC_TEST               = 0;    // Enable DAC Test
+    integer EEPROM_TEST            = 0;    // Enable EEPROM Test
+    integer OSC_COUNTER_TEST       = 0;    // Enable Oscillator Counter Test
+    integer GPIO_TEST              = 1;    // Enable GPIO Test
+    integer MSSB_TEST              = 0;    // Enable MSSB Test
+    integer GANTRY_MOT_TEST        = 0;    // Enable Gantry Motor Test
+    integer LIFT_MOT_TEST          = 0;    // Enable Lift Motor Test
+
 
     // System Clock and Reset
-    reg         SYS_CLK;
-    reg         RESET_N;
+    reg SYS_CLK;
+    reg RESET_N;
 
     // System Signals
-    wire        POWER_GOOD;
-    wire        UART_TXD;
-    reg         UART_RXD;
-    wire        CLK_2KHZ;
-    wire        CLK_20KHZ;
+    wire POWER_GOOD;
+    wire UART_TXD;
+    reg UART_RXD;
+    wire CLK_2KHZ;
+    wire CLK_20KHZ;
 
     // EEPROM Interface
-    wire        EEP_CS_N;
-    wire        EEP_SI;
-    wire        EEP_SCK;
-    wire        EEP_SO;
+    wire EEP_CS_N;
+    wire EEP_SI;
+    wire EEP_SCK;
+    wire EEP_SO;
 
     // Watchdog Signal
-    wire        WD_TRIG;
+    wire WD_TRIG;
 
     // ADC Interface
-    wire        ADC_SDOUT;
-    wire        ST_ADC_CLK;
-    wire        ADC_CNVST;
+    wire ADC_SDOUT;
+    wire ST_ADC_CLK;
+    wire ADC_CNVST;
 
     // DAC Interface
-    wire        ST_DAC_CLK;
-    wire        DAC_SDI;
-    wire        DAC_CS_N;
-    wire        DAC_SDO;
+    wire ST_DAC_CLK;
+    wire DAC_SDI;
+    wire DAC_CS_N;
+    wire DAC_SDO;
 
     // UART Data
-    reg [7:0]   uart_tdata;
+    reg [7:0] uart_tdata;
 
     // Clock Period Definition
     parameter CLOCK_PERIOD = 10;    // 100MHz System Clock in ns
+
+    integer ii; // Loop variable for GPIO test
 
     // Instantiate the Unit Under Test (UUT)
     top uut (
@@ -113,7 +120,7 @@ module top_tb;
         input [7:0] data;    // Byte to send
         integer i;
         reg [10:0] uart_frame;    // UART frame: start bit, data bits, stop bit
-        integer baud_delay;        // Delay for one baud period
+        integer baud_delay;       // Delay for one baud period
         begin
             // Calculate the delay for one baud period
             // Baud rate = 115200, Clock frequency = 100 MHz
@@ -137,7 +144,7 @@ module top_tb;
     task uart_recv;
         output reg [7:0] data;    // Received byte
         integer i;
-        integer baud_delay;        // Delay for one baud period
+        integer baud_delay;       // Delay for one baud period
         begin
             // Calculate the delay for one baud period
             // Baud rate = 115200, Clock frequency = 100 MHz
@@ -164,7 +171,7 @@ module top_tb;
     // Clock Generation
     initial begin
         SYS_CLK = 0;
-        forever #(CLOCK_PERIOD/2) SYS_CLK = ~SYS_CLK;    // 100 MHz clock
+        forever #(CLOCK_PERIOD / 2) SYS_CLK = ~SYS_CLK;    // 100 MHz clock
     end
 
     // Testbench Main Process
@@ -184,12 +191,6 @@ module top_tb;
             
             // Read Scratchpad 1
             uart_send(8'h5B); uart_send(8'h00); uart_send(8'h01); uart_send(8'h00); uart_send(8'h00);
-            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
-            repeat(10) uart_recv(uart_tdata);
-            #1000000;    // Wait 1us
-
-            // Read Scratchpad 2
-            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h02); uart_send(8'h00); uart_send(8'h00);
             uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
             repeat(10) uart_recv(uart_tdata);
             #1000000;    // Wait 1us
@@ -335,6 +336,96 @@ module top_tb;
             #1000000;    // Wait 1us
             
             $display("Oscillator Counter Test End.");
+        end
+
+        // GPIO Test
+        if (GPIO_TEST == 1) begin
+            $display("GPIO Test Start...");
+
+            // OPB READ: GPIO Read
+            ii = 0;
+            for (ii = 0; ii < 16; ii = ii + 1) begin
+                uart_send(8'h5B); uart_send(8'h00); uart_send(8'h05); uart_send(8'h00); uart_send(ii);
+                uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
+                repeat(10) uart_recv(uart_tdata);
+                #1000000;    // Wait 1us
+            end
+
+            // OPB WRITE: GPIO Write all 1 to GPIO[15:0]
+            ii = 0;
+            for (ii = 0; ii < 16; ii = ii + 1) begin
+                uart_send(8'h5A); uart_send(8'h00); uart_send(8'h05); uart_send(8'h00); uart_send(ii);
+                uart_send(8'h00); uart_send(8'h00); uart_send(8'hFF); uart_send(8'hFF); uart_send(8'hA5);
+                repeat(10) uart_recv(uart_tdata);
+                #1000000;    // Wait 1us
+            end
+
+            // OPB READ: GPIO Read
+            ii = 0;
+            for (ii = 0; ii < 16; ii = ii + 1) begin
+                uart_send(8'h5B); uart_send(8'h00); uart_send(8'h05); uart_send(8'h00); uart_send(ii);
+                uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
+                repeat(10) uart_recv(uart_tdata);
+                #1000000;    // Wait 1us
+            end
+
+            // OPB WRITE: GPIO Write all 0 to GPIO[15:0]
+            ii = 0;
+            for (ii = 0; ii < 16; ii = ii + 1) begin
+                uart_send(8'h5A); uart_send(8'h00); uart_send(8'h05); uart_send(8'h00); uart_send(ii);
+                uart_send(8'h00); uart_send(8'h00); uart_send(8'hFF); uart_send(8'hFF); uart_send(8'hA5);
+                repeat(10) uart_recv(uart_tdata);
+                #1000000;    // Wait 1us
+            end
+
+            // OPB READ: GPIO Read
+            ii = 0;
+            for (ii = 0; ii < 16; ii = ii + 1) begin
+                uart_send(8'h5B); uart_send(8'h00); uart_send(8'h05); uart_send(8'h00); uart_send(ii);
+                uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
+                repeat(10) uart_recv(uart_tdata);
+                #1000000;    // Wait 1us
+            end
+
+            $display("GPIO Test End.");
+        end
+
+        // MSSB Test
+        if (MSSB_TEST == 1) begin
+            $display("MSSB Test Start...");
+
+            // OPB WRITE: MSSB Write
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h0A); uart_send(8'h00); uart_send(8'h00);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+            #1000000;    // Wait 1us
+
+            // OPB READ: MSSB Read
+            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h0A); uart_send(8'h00); uart_send(8'h00);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
+            repeat(10) uart_recv(uart_tdata);
+            #1000000;    // Wait 1us
+
+            $display("MSSB Test End.");
+        end
+
+        // Gantry Motor Test
+        if (GANTRY_MOT_TEST == 1) begin
+            $display("Gantry Motor Test Start...");
+
+            // OPB WRITE: Gantry Motor Write
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h00); uart_send(8'h00);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+            #1000000;    // Wait 1us
+
+            // OPB READ: Gantry Motor Read
+            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h07); uart_send(8'h00); uart_send(8'h00);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
+            repeat(10) uart_recv(uart_tdata);
+            #1000000;    // Wait 1us
+
+            $display("Gantry Motor Test End.");
         end
 
         $stop;

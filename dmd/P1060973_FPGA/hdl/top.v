@@ -36,7 +36,7 @@ module top(
     input              ADC_SDOUT,
     output             ST_ADC_CLK,
     output             ADC_CNVST,
-/*
+
     // GANTRY DRIVER
     output             GNT_PWM_PHA_HI,
     output             GNT_PWM_PHA_LO,
@@ -74,7 +74,7 @@ module top(
     // SERVICNE_MSSB
     output             ST_SRV_MSSB_TX,
     input              SRV_MSSB_RX,
-*/
+
     //---------------------------------
     //---------   GPIO  ---------------
     //---------------------------------
@@ -239,6 +239,9 @@ module top(
     wire    [31:0]  CLK_GEN_IN; // from clock generator
     wire    [31:0]  ILIM_DAC_IN; // from ILIM DAC
     wire    [31:0]  ADC_IN; // from ADC
+    wire    [31:0]  GANTRY_MOT_IN; // from gantry motor
+    wire    [31:0]  LIFT_MOT_IN; // from lift motor
+    wire    [31:0]  MSSB_IN; // from MSSB
     wire    [31:0]  EEP_IN; // from EEPROM
     wire    [31:0]  GPIO_IN; // from GPIO
 
@@ -255,8 +258,15 @@ module top(
     wire            ILIM_DAC_RE; // ILIM DAC read enable
     wire            ADC_RE; // ADC read enable
     wire            ADC_WE; // ADC write enable
+    wire           GANTRY_MOT_IF_RE; // Gantry motor interface read enable
+    wire           GANTRY_MOT_IF_WE; // Gantry motor interface write enable
+    wire           LIFT_MOT_IF_RE; // Lift motor interface read enable
+    wire           LIFT_MOT_IF_WE; // Lift motor interface write enable
+    wire           MSSB_IF_RE; // MSSB read enable
+    wire           MSSB_IF_WE; // MSSB write enable
     wire           EEP_RE; // EEPROM read enable
     wire           EEP_WE; // EEPROM write enable
+    // GPIO interface signals
     wire          PWR_IF_RE; // Power interface read enable
     wire          PWR_IF_WE; // Power interface write enable
     wire          GANTRY_EMOPS_IF_RE; // Gantry EMOPS interface read enable
@@ -344,6 +354,9 @@ module top(
         .CLK_GEN_IN(CLK_GEN_IN),         // Clock generator output
         .ILIM_DAC_IN(ILIM_DAC_IN),       // ILIM DAC output
         .ADC_IN(ADC_IN),                 // ADC output
+        .GANTRY_MOT_IN(GANTRY_MOT_IN),       // Gantry motor output
+        .LIFT_MOT_IN(LIFT_MOT_IN),           // Lift motor output
+        .MSSB_IN(MSSB_IN),               // MSSB output
         .EEP_IN(EEP_IN),                 // EEPROM output
         .GPIO_IN(GPIO_IN),               // GPIO output
 
@@ -362,6 +375,12 @@ module top(
         .ADC_WE(ADC_WE),                 // ADC write enable
         .EEP_RE(EEP_RE),                 // EEPROM RE
         .EEP_WE(EEP_WE),                 // EEPROM WE
+        .GANTRY_MOT_IF_RE(GANTRY_MOT_IF_RE), // Gantry motor interface read enable
+        .GANTRY_MOT_IF_WE(GANTRY_MOT_IF_WE), // Gantry motor interface write enable
+        .LIFT_MOT_IF_RE(LIFT_MOT_IF_RE), // Lift motor interface read enable
+        .LIFT_MOT_IF_WE(LIFT_MOT_IF_WE), // Lift motor interface write enable
+        .MSSB_IF_RE(MSSB_IF_RE),             // MSSB read enable
+        .MSSB_IF_WE(MSSB_IF_WE),             // MSSB write enable
         .PWR_IF_RE(PWR_IF_RE),           // Power interface read enable
         .PWR_IF_WE(PWR_IF_WE),           // Power interface write enable
         .GANTRY_EMOPS_IF_RE(GANTRY_EMOPS_IF_RE), // Gantry EMOPS interface read enable
@@ -660,46 +679,79 @@ DAC_DACx0504_IF dac_0 (
         .GPIO5(GPIO5)
     );
 
-/*
- 
-    // Gantry_Motor module instantiation
-    Gantry_Motor gantry_motor_0 (
-        .GANT_MOT_DO(GANT_MOT_IN),          // Gantry motor data output
-        .GANT_PWM(GANT_PWM),                // Gantry motor PWM output
-        .GANT_MOT_DRV_EN(GANT_MOT_DRV_EN),  // Gantry motor driver enable
-        .GANT_CURR_SAMP(GANT_CURR_SAMP),    // Gantry motor current sample
-        .GANT_MOT_DI(OPB_DO),               // Gantry motor data input
-        .GANT_ADDR(OPB_ADDR),               // OPB address
-        .GANT_MOT_RE(GANT_MOT_RE),          // Read enable signal
-        .GANT_MOT_WE(GANT_MOT_WE),          // Write enable signal
-        .OPB_CLK(OPB_CLK),                  // OPB clock
-        .OPB_RST(OPB_RST),                  // OPB reset
-        .SYSCLK(SYS_CLK),                   // System clock
-        .CLK_200KHZ(PULSE_200KHZ),          // 200kHz clock input
-        .CLK_20KHZ(PULSE_20KHZ),            // 20kHz clock input
-        .CLK_2KHZ(PULSE_2KHZ)               // 2kHz clock input
-    );
+// Gantry_Motor Interface module instantiation
+GANTRY_MOT_IF gantry_mot_if_0 (
+    // OPB Interface
+    .OPB_CLK(OPB_CLK),                  // OPB clock
+    .OPB_RST(OPB_RST),                  // OPB reset
+    .OPB_ADDR(OPB_ADDR),                // OPB address
+    .OPB_DI(OPB_DO),                    // OPB data input
+    .GANTRY_MOT_IF_RE(GANTRY_MOT_IF_RE), // Read enable signal
+    .GANTRY_MOT_IF_WE(GANTRY_MOT_IF_WE), // Write enable signal
+    .OPB_DO(GANTRY_MOT_IN),             // OPB data output
 
-    // Lift_Motor module instantiation
-    Lift_Motor lift_motor_0 (
-        .LIFT_MOT_DO(LIFT_MOT_IN),          // Lift motor data output
-        .LIFT_PWM(LIFT_PWM),                // Lift motor PWM output
-        .LIFT_MOT_DRV_EN(LIFT_MOT_DRV_EN),  // Lift motor driver enable
-        .LIFT_CURR_SAMP(LIFT_CURR_SAMP),    // Lift motor current sample
-        .LIFT_MOT_DI(OPB_DO),               // Lift motor data input
-        .LIFT_ADDR(OPB_ADDR),               // OPB address
-        .LIFT_MOT_RE(LIFT_MOT_RE),          // Read enable signal
-        .LIFT_MOT_WE(LIFT_MOT_WE),          // Write enable signal
-        .OPB_CLK(OPB_CLK),                  // OPB clock
-        .OPB_RST(OPB_RST),                  // OPB reset
-        .SYSCLK(SYS_CLK),                   // System clock
-        .CLK_200KHZ(PULSE_200KHZ),          // 200kHz clock input
-        .CLK_20KHZ(PULSE_20KHZ),            // 20kHz clock input
-        .CLK_2KHZ(PULSE_2KHZ)               // 2kHz clock input
-    );
+    // GANTRY DRIVER
+    .GNT_PWM_PHA_HI(GNT_PWM_PHA_HI),
+    .GNT_PWM_PHA_LO(GNT_PWM_PHA_LO),
+    .GNT_PWM_PHB_HI(GNT_PWM_PHB_HI),
+    .GNT_PWM_PHB_LO(GNT_PWM_PHB_LO),
+    .GNT_PWM_PHC_HI(GNT_PWM_PHC_HI),
+    .GNT_PWM_PHC_LO(GNT_PWM_PHC_LO),
 
+    // GANTRY BRAKE DRIVER
+    .GNT_BRK1_PWM_HI(GNT_BRK1_PWM_HI),
+    .GNT_BRK1_PWM_LO(GNT_BRK1_PWM_LO),
+    .GNT_BRK1_RET_PWM_HI(GNT_BRK1_RET_PWM_HI),
+    .GNT_BRK1_RET_PWM_LO(GNT_BRK1_RET_PWM_LO),
+    .GNT_BRK2_PWM_HI(GNT_BRK2_PWM_HI),
+    .GNT_BRK2_PWM_LO(GNT_BRK2_PWM_LO),
+    .GNT_BRK2_RET_PWM_HI(GNT_BRK2_RET_PWM_HI),
+    .GNT_BRK2_RET_PWM_LO(GNT_BRK2_RET_PWM_LO),
+    .GNT_BRK3_PWM_HI(GNT_BRK3_PWM_HI),
+    .GNT_BRK3_PWM_LO(GNT_BRK3_PWM_LO),
+    .GNT_BRK3_RET_PWM_HI(GNT_BRK3_RET_PWM_HI),
+    .GNT_BRK3_RET_PWM_LO(GNT_BRK3_RET_PWM_LO)
+);
 
-*/
+// Instantiate the LIFT_MOT_IF module
+LIFT_MOT_IF lift_mot_if_0 (
+    // OPB Interface connections
+    .OPB_CLK(OPB_CLK),                  // OPB clock
+    .OPB_RST(OPB_RST),                  // OPB reset
+    .OPB_ADDR(OPB_ADDR),                // OPB address
+    .OPB_DI(OPB_DO),                    // OPB data input
+    .LIFT_MOT_IF_RE(LIFT_MOT_IF_RE),    // Read enable signal
+    .LIFT_MOT_IF_WE(LIFT_MOT_IF_WE),    // Write enable signal
+    .OPB_DO(LIFT_MOT_IN),               // OPB data output
+
+    // LIFT MOTOR INTERFACE connections
+    .LFT_PWM_PHA_HI(LFT_PWM_PHA_HI),    // Lift motor phase A high
+    .LFT_PWM_PHA_LO(LFT_PWM_PHA_LO),    // Lift motor phase A low
+    .LFT_PWM_PHB_HI(LFT_PWM_PHB_HI),    // Lift motor phase B high
+    .LFT_PWM_PHB_LO(LFT_PWM_PHB_LO),    // Lift motor phase B low
+    .LFT_PWM_PHC_HI(LFT_PWM_PHC_HI),    // Lift motor phase C high
+    .LFT_PWM_PHC_LO(LFT_PWM_PHC_LO)     // Lift motor phase C low
+);
+
+// Instantiate the MSSB_IF module
+MSSB_IF mssb_if_0 (
+    // OPB Interface connections
+    .OPB_CLK(OPB_CLK),                  // OPB clock
+    .OPB_RST(OPB_RST),                  // OPB reset
+    .OPB_ADDR(OPB_ADDR),                // OPB address
+    .OPB_DI(OPB_DO),                    // OPB data input
+    .MSSB_IF_RE(MSSB_IF_RE),            // Read enable signal
+    .MSSB_IF_WE(MSSB_IF_WE),            // Write enable signal
+    .OPB_DO(MSSB_IN),                   // OPB data output
+
+    // STAND_MSSB connections
+    .ST_MSSB_TX(ST_MSSB_TX),            // Stand MSSB transmit
+    .MSSB_RX(MSSB_RX),                  // Stand MSSB receive
+
+    // SERVICE_MSSB connections
+    .ST_SRV_MSSB_TX(ST_SRV_MSSB_TX),    // Service MSSB transmit
+    .SRV_MSSB_RX(SRV_MSSB_RX)           // Service MSSB receive
+);
 
 endmodule
 

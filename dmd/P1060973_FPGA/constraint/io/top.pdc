@@ -43,12 +43,12 @@ set_io -port_name {GNT_SHUNT_ON}      -pin_name D8    -fixed true  -io_std LVCMO
 set_io -port_name {P5V_ISO_MON_LFT}   -pin_name A6    -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
 
 # GANTRY DRIVER
-#set_io -port_name {GNT_PWM_PHA_HI}    -pin_name A7    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-#set_io -port_name {GNT_PWM_PHA_LO}    -pin_name E9    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-#set_io -port_name {GNT_PWM_PHB_HI}    -pin_name D9    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-#set_io -port_name {GNT_PWM_PHB_LO}    -pin_name B8    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-#set_io -port_name {GNT_PWM_PHC_HI}    -pin_name A8    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-#set_io -port_name {GNT_PWM_PHC_LO}    -pin_name B12   -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {GNT_PWM_PHA_HI}    -pin_name A7    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {GNT_PWM_PHA_LO}    -pin_name E9    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {GNT_PWM_PHB_HI}    -pin_name D9    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {GNT_PWM_PHB_LO}    -pin_name B8    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {GNT_PWM_PHC_HI}    -pin_name A8    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {GNT_PWM_PHC_LO}    -pin_name B12   -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
 
 # SPD-DMD IF
 set_io -port_name {GNT_HW_EN_MON}     -pin_name B13   -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
@@ -78,26 +78,26 @@ set_io -port_name {GNT_BRK_SW_MON}      -pin_name P1  -fixed true  -io_std LVCMO
 set_io -port_name {GNT_BRK1_FB_N}       -pin_name N2  -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
 set_io -port_name {GNT_BRK2_FB_N}       -pin_name P2  -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
 set_io -port_name {GNT_BRK3_FB_N}       -pin_name T5  -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
-#set_io -port_name {GNT_BRK1_PWM_HI}     -pin_name T6  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-#set_io -port_name {GNT_BRK1_PWM_LO}     -pin_name P4  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-#set_io -port_name {GNT_BRK1_RET_PWM_HI} -pin_name R3  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-#set_io -port_name {GNT_BRK1_RET_PWM_LO} -pin_name T2  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-#set_io -port_name {GNT_BRK2_PWM_HI}     -pin_name T3  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-#set_io -port_name {GNT_BRK2_PWM_LO}     -pin_name N4  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-#set_io -port_name {GNT_BRK2_RET_PWM_HI} -pin_name P3  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-#set_io -port_name {GNT_BRK2_RET_PWM_LO} -pin_name R5  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-#set_io -port_name {GNT_BRK3_PWM_HI}     -pin_name R4  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-#set_io -port_name {GNT_BRK3_PWM_LO}     -pin_name P9  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-#set_io -port_name {GNT_BRK3_RET_PWM_HI} -pin_name R8  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-#set_io -port_name {GNT_BRK3_RET_PWM_LO} -pin_name P6  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {GNT_BRK1_PWM_HI}     -pin_name T6  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {GNT_BRK1_PWM_LO}     -pin_name P4  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {GNT_BRK1_RET_PWM_HI} -pin_name R3  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {GNT_BRK1_RET_PWM_LO} -pin_name T2  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {GNT_BRK2_PWM_HI}     -pin_name T3  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {GNT_BRK2_PWM_LO}     -pin_name N4  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {GNT_BRK2_RET_PWM_HI} -pin_name P3  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {GNT_BRK2_RET_PWM_LO} -pin_name R5  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {GNT_BRK3_PWM_HI}     -pin_name R4  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {GNT_BRK3_PWM_LO}     -pin_name P9  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {GNT_BRK3_RET_PWM_HI} -pin_name R8  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {GNT_BRK3_RET_PWM_LO} -pin_name P6  -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
 
 # LIFT MOTOR INTERFACE
-#set_io -port_name {LFT_PWM_PHA_HI}    -pin_name P7    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-#set_io -port_name {LFT_PWM_PHA_LO}    -pin_name P8    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-#set_io -port_name {LFT_PWM_PHB_HI}    -pin_name N7    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-#set_io -port_name {LFT_PWM_PHB_LO}    -pin_name N8    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-#set_io -port_name {LFT_PWM_PHC_HI}    -pin_name N6    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-#set_io -port_name {LFT_PWM_PHC_LO}    -pin_name N5    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {LFT_PWM_PHA_HI}    -pin_name P7    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {LFT_PWM_PHA_LO}    -pin_name P8    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {LFT_PWM_PHB_HI}    -pin_name N7    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {LFT_PWM_PHB_LO}    -pin_name N8    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {LFT_PWM_PHC_HI}    -pin_name N6    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {LFT_PWM_PHC_LO}    -pin_name N5    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
 
 # GPIO
 set_io -port_name {GPIO2}             -pin_name M8    -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
@@ -141,12 +141,12 @@ set_io -port_name {SPD_EMOPS_FLT_N}   -pin_name G15   -fixed true  -io_std LVCMO
 set_io -port_name {EXOPS_GNT_24V_EN}  -pin_name D16   -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
 set_io -port_name {GNT_CCW_LIMIT}     -pin_name D17   -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
 set_io -port_name {GNT_CW_LIMIT}      -pin_name E15   -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
-#set_io -port_name {ST_MSSB_TX}        -pin_name E16   -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
-#set_io -port_name {MSSB_RX}           -pin_name G17   -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
-#set_io -port_name {ST_SRV_MSSB_TX}    -pin_name F17   -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {ST_MSSB_TX}        -pin_name E16   -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
+set_io -port_name {MSSB_RX}           -pin_name G17   -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
+set_io -port_name {ST_SRV_MSSB_TX}    -pin_name F17   -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
 
 # SERVICE PENDANT
-#set_io -port_name {SRV_MSSB_RX}       -pin_name F15   -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
+set_io -port_name {SRV_MSSB_RX}       -pin_name F15   -fixed true  -io_std LVCMOS33    -DIRECTION INPUT
 set_io -port_name {PAN_24V_SW}        -pin_name F16   -fixed true  -io_std LVCMOS33    -DIRECTION OUTPUT
 
 # MISCELLANEOUS

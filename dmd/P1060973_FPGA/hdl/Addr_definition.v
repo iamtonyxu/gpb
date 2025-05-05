@@ -22,9 +22,8 @@
 `define GPIO_FREE_IF_ADDR       32'h0005000F        /* GPIO FREE IF address */
 `define ADC_ADDR                32'h00060000        /* Analog to Digital converter address */
 `define GANTRY_MOT_ADDR         32'h00070000        /* Gantry Motor address */
-`define GANTRY_BRAKE_ADDR       32'h00080000        /* Gantry Brake address */
-`define LIFT_MOT_ADDR           32'h00090000        /* Lift Motor address */
-`define MSSB_ADDR               32'h000A0000        /* MSSB address */
+`define LIFT_MOT_ADDR           32'h00080000        /* Lift Motor address */
+`define MSSB_ADDR               32'h00090000        /* MSSB address */
 `define EEP_ADDR                32'h000B0000        /* EEPROM address */
 
 // Description: Size definition for each sub-system
@@ -32,5 +31,6 @@
 `define CLOCK_SIZE              32'h00000028        /* CLOCK module size */
 `define ILIM_DAC_SIZE           32'h00000020        /* ILIM size */
 `define ADC_SIZE                32'h00006000        /* Analog to Digital converter size */
-`define GANTRY_MOT_SIZE         32'h00000004        /* Gantry Motor size */
-`define LIFT_MOT_SIZE           32'h00000008        /* Lift Motor size */
+`define GANTRY_MOT_SIZE         32'h00000010        /* Gantry Motor size */
+`define LIFT_MOT_SIZE           32'h00000010        /* Lift Motor size */
+`define MSSB_SIZE               32'h00000010        /* MSSB size */
