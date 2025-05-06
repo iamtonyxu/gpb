@@ -20,7 +20,7 @@ module ADC_ADS8864_tb;
     // registers
     reg [31:0] opb_do_reg; // Register to hold the output data
 
-    parameter PERIOD_OPB_CLK = 40; // 25 MHz clock period
+    parameter PERIOD_OPB_CLK = 10; // 100 MHz clock period
     parameter PERIOD_SYSCLK = 10; // 100 MHz clock period
 
     // Instantiate the Unit Under Test (UUT)

@@ -68,8 +68,8 @@ module ADC_ADS8864_IF(
 	 reg [2:0] control;				        // control[1]: start sample, control[2]: reset module, 
 	 reg [3:0] status = 4'b0000;			// status[0]: busy, status[1]: done, status[2]: aq timeout, status[3]: busy timout
 	 reg [11:0] data_length = 12'h5;		// number of samples to collect
-	 reg [15:0] clk_div_aq  = 16'd250;      //16'd500;	    // aquasition clock default 200KHz 
-	 reg [15:0] clk_div_sd  = 16'd3;        //16'd4;		// serial data clock default 25MHz
+	 reg [15:0] clk_div_aq  = 16'd250;      // aquasition clock default 200KHz 
+	 reg [15:0] clk_div_sd  = 16'd3;        // serial data clock default 16.67MHz
 	 reg [9:0] ram_wr_pt = 10'h000;		    // Ram Write Pointer
 	 reg ram_wr_clk = 1'b0;					// ram write clock
 	 reg [4:0] state = 5'h0;				// state of state machine
@@ -78,15 +78,11 @@ module ADC_ADS8864_IF(
 	 reg [1:0] clk_aq_low = 2'h0;			// used to look for clk_aq edges
 	 reg [1:0] clk_aq_high = 2'h0;		    // used to look for clk_aq edges
 	 reg ADC_SCLK_en = 1'b0;					// enable the sclk
-	 reg [6:0] time_out_count = 7'h0;	    // time out counter
+	 reg [7:0] time_out_count = 8'h0;	    // time out counter
      reg [15:0] sp;
 
      // Tconv (Conversion time) max = 1300 ns
      parameter TIMEOUT_CONV = 7'd35; // 1400ns timeout for ADC conversion
-    // Tacq (Acquisition time) min = 1200 ns
-
-     parameter TIMEOUT_400NS = 7'h64; // 400ns timeout for ADC conversion
-     parameter  TIMEOUT_100NS = 7'h1a; // 100ns timeout for ADC readout
 
 	 //signals
 	 wire clk_aq;
@@ -127,12 +123,32 @@ module ADC_ADS8864_IF(
 		.PB_ADDR(OPB_ADDR[9:0]),
 		.PB_CLK(OPB_CLK)
 	);
+
+	// conv_count, state switch from `S_CNVST_SET to `S_CNVST_CLEAR only if conv_count reaches 20
+	// conv_count is used to count the number of clock cycles of clk_sd
+	reg [7:0] conv_count = 8'h0;
+	always@(posedge clk_sd or posedge OPB_RST) begin
+		if(OPB_RST) begin
+			conv_count <= 8'h0;
+		end
+		else if(state == `S_CNVST_SET) begin
+			if(conv_count >= TIMEOUT_CONV) begin
+				conv_count <= 8'h0;
+			end
+			else begin
+				conv_count <= conv_count + 1'b1;
+			end
+		end
+		else begin
+			conv_count <= 8'h0;
+		end
+	end
 	
     always@(posedge clk_sd or posedge OPB_RST) begin 
         if(OPB_RST) begin
             ADC_CNVST        <= 1'b0;
             status          <= 4'b0;
-            time_out_count  <= 7'b0;
+            time_out_count  <= 8'b0;
             sdout_buf       <= 16'b0;
             ram_wr_pt       <= 10'b0;
 			ram_wr_clk      <= 1'b0;
@@ -153,31 +169,38 @@ module ADC_ADS8864_IF(
 			clk_aq_low      <= 2'h0;
 			clk_aq_high     <= 2'h0;
             sp              <= 16'h3344;
-		end
-		else if(control[1] || status[0]) begin
-			case(state)
-				`S_START: begin
-					if((clk_aq_high == 2'h3) && (clk_aq_low == 2'h3))begin	// start action on rising edge of clk_aq
-						state <= `S_CNVST_SET;
-						status[0] <= 1'b1;									// status busy
-						status[1] <= 1'b0;									// status not done						
-					end
-					else if((clk_aq == 1'b0) && (clk_aq_low != 2'h3)) begin
-						clk_aq_low <= clk_aq_low + 2'h1;
-					end
-					else if((clk_aq == 1'b1) && (clk_aq_low == 2'h3)) begin
-						clk_aq_high <= clk_aq_high + 2'h1;
-					end
-				end
-				`S_CNVST_SET: begin
-					ADC_CNVST <= 1'b1;										// set conversion start
-					clk_aq_low <= 2'h0;										// clear aq_clk edge detection
-					clk_aq_high <= 2'h0;
-					state <= `S_CNVST_CLEAR;
-				end
+        end
+        else if(control[1] || status[0]) begin
+            case(state)
+                `S_START: begin
+                    sdout_buf <= 16'h0;                 // clear buffer
+                    if((clk_aq_high == 2'h3) && (clk_aq_low == 2'h3))begin    // start action on rising edge of clk_aq
+                        state <= `S_CNVST_SET;
+                        status[0] <= 1'b1;                                  // status busy
+                        status[1] <= 1'b0;                                  // status not done                        
+                    end
+                    else if((clk_aq == 1'b0) && (clk_aq_low != 2'h3)) begin
+                        clk_aq_low <= clk_aq_low + 2'h1;
+                    end
+                    else if((clk_aq == 1'b1) && (clk_aq_low == 2'h3)) begin
+                        clk_aq_high <= clk_aq_high + 2'h1;
+                    end
+                end
+                `S_CNVST_SET: begin
+                    ADC_CNVST <= 1'b1;   // set conversion start
+                    clk_aq_low <= 2'h0;  // clear aq_clk edge detection
+                    clk_aq_high <= 2'h0;
+                    if(conv_count >= TIMEOUT_CONV) begin
+                        state <= `S_CNVST_CLEAR; // wait for 1400ns
+                    end
+                    else begin
+                        state <= `S_CNVST_SET;
+                    end
+                end
                 `S_CNVST_CLEAR: begin
                     ADC_CNVST <= 1'b0;										// clear conversion start
-                    state <= `S_BUSY;
+                    //state <= `S_BUSY;
+					state <= `S_READ1; // skip to S_READ1 under 3-wire without a BUSY Indicator
 					time_out_count <= 0;
                 end
 				`S_BUSY: begin
@@ -185,11 +208,13 @@ module ADC_ADS8864_IF(
 						state <= `S_READ0;									// wait for ADC_SDOUT to go low
 					end
 					else if(time_out_count >= TIMEOUT_CONV) begin
+						time_out_count <= 0;
 						status[2] <= 1'b1;
 						state <= `S_END;
 					end
 					else begin
 						time_out_count <= time_out_count +1;
+						state <= `S_BUSY;									// wait for ADC_SDOUT to go low
 					end				
 				end
 				`S_READ0: begin 
@@ -197,11 +222,11 @@ module ADC_ADS8864_IF(
 					state <= state + 1;
 					time_out_count <= 0;
 				end
-				`S_READ_BUSY: begin 
-					ADC_SCLK_en <= 1'b1;
+				`S_READ_BUSY: begin
 					state <= state + 1;
 				end
 				`S_READ1: begin 
+					ADC_SCLK_en <= 1'b1; // 3-wire without a BUSY Indicator
 					sdout_buf <= {sdout_buf[14:0],ADC_SDOUT};//0
 					state <= state + 1;
 				end
@@ -264,10 +289,10 @@ module ADC_ADS8864_IF(
 				end
 				`S_READ16: begin 
 					sdout_buf <= {sdout_buf[14:0],ADC_SDOUT};//15
-					ADC_SCLK_en <= 1'b0;
 					state <= state + 1;
 				end
 				`S_READ17: begin
+					ADC_SCLK_en <= 1'b0;
 					data_count <= data_count + 1;
 					ram_wr_clk <= 1'b1;
 					state <= state + 1;
@@ -275,29 +300,27 @@ module ADC_ADS8864_IF(
 				`S_READ18: begin
 					ram_wr_clk <= 1'b0;
 					ram_wr_pt <= ram_wr_pt + 1;
-					if(data_count >= data_length)
+					if (data_count >= data_length)
 						state <= `S_END;
 					else
 						state <= `S_WAIT;
 				end
-				`S_WAIT: begin												// wait for next rising edge of clk_aq
-					if((clk_aq_high == 2'h3) && (clk_aq_low == 2'h3))begin	// start action on rising edge of clk_aq
+				`S_WAIT: begin // Wait for next rising edge of clk_aq
+					if ((clk_aq_high == 2'h3) && (clk_aq_low == 2'h3)) begin // Start action on rising edge of clk_aq
 						state <= `S_CNVST_SET;
-					end
-					else if((clk_aq == 1'b0) && (clk_aq_low != 2'h3)) begin
+					end else if ((clk_aq == 1'b0) && (clk_aq_low != 2'h3)) begin
 						clk_aq_low <= clk_aq_low + 2'h1;
-					end
-					else if((clk_aq == 1'b1) && (clk_aq_low == 2'h3)) begin
+					end else if ((clk_aq == 1'b1) && (clk_aq_low == 2'h3)) begin
 						clk_aq_high <= clk_aq_high + 2'h1;
 					end
 				end
 				`S_END: begin
-					if(status[0]) begin										//reset state machine
-						status[0]   <= 1'b0;
-						status[1]   <= 1'b1;
-						ram_wr_clk  <= 1'b0;
-						ram_wr_pt   <= 10'h000;
-						data_count  <= 11'h0;						
+					if (status[0]) begin // Reset state machine
+						status[0] <= 1'b0;
+						status[1] <= 1'b1;
+						ram_wr_clk <= 1'b0;
+						ram_wr_pt <= 10'h000;
+						data_count <= 11'h0;
 					end					
 				end
 			endcase
@@ -330,7 +353,7 @@ module ADC_ADS8864_IF(
 		    OPB_DO <= {27'b0 , state};	
 		end	
 		else if(OPB_RE && (OPB_ADDR[11:0] == `STATUS_ADDR)) begin
-		    OPB_DO <= {30'b0 , status};	
+		    OPB_DO <= {ADC_SDOUT, 27'b0 , status};	
 		end	
 		else if(ram_re) begin
 		    OPB_DO <= {16'b0 , ram_opb_do};	
