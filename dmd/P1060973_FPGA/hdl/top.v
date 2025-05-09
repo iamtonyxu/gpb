@@ -13,9 +13,9 @@ module top(
     // DEBUG PORT
     input              DBUG_HEADER2, // UART_RXD
     output             DBUG_HEADER4, // UART_TXD
-    output             DBUG_HEADER6, // CLK_2KHZ
-    output             DBUG_HEADER8, // CLK_20KHZ
-    input              DBUG_HEADER10, // REF_CLK_2KHZ
+    output             DBUG_HEADER6, // CLK_2KHZ (Debug only)
+    output             DBUG_HEADER8, // CLK_20KHZ (Debug only)
+    input              DBUG_HEADER10, // REF_CLK_2KHZ (Input for Freq counter)
 
     // Watchdog Trigger
     output             WD_TRIG,
