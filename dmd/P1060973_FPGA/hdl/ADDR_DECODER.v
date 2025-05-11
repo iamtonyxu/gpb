@@ -34,6 +34,12 @@ module AdderDecode(
     input   [31:0]  ILIM_DAC_IN,
     input   [31:0]  ADC_IN,
     input   [31:0]  GANTRY_MOT_IN,
+    input   [31:0]  GANTRY_BRK1_IN,
+    input   [31:0]  GANTRY_BRK2_IN,
+    input   [31:0]  GANTRY_BRK3_IN,
+    input   [31:0]  GANTRY_BRK1_RET_IN,
+    input   [31:0]  GANTRY_BRK2_RET_IN,
+    input   [31:0]  GANTRY_BRK3_RET_IN,
     input   [31:0]  LIFT_MOT_IN,
     input   [31:0]  MSSB_STN_IN,
     input   [31:0]  MSSB_SRV_IN,
@@ -55,6 +61,18 @@ module AdderDecode(
     output          ADC_WE,
     output          GANTRY_MOT_IF_RE,
     output          GANTRY_MOT_IF_WE,
+    output          GANTRY_BRK1_IF_RE,
+    output          GANTRY_BRK1_IF_WE,
+    output          GANTRY_BRK2_IF_RE,
+    output          GANTRY_BRK2_IF_WE,
+    output          GANTRY_BRK3_IF_RE,
+    output          GANTRY_BRK3_IF_WE,
+    output          GANTRY_BRK1_RET_IF_RE,
+    output          GANTRY_BRK1_RET_IF_WE,
+    output          GANTRY_BRK2_RET_IF_RE,
+    output          GANTRY_BRK2_RET_IF_WE,
+    output          GANTRY_BRK3_RET_IF_RE,
+    output          GANTRY_BRK3_RET_IF_WE,
     output          LIFT_MOT_IF_RE,
     output          LIFT_MOT_IF_WE,
     output          MSSB_STN_RE,
@@ -107,6 +125,12 @@ module AdderDecode(
     reg ADC_RE_d1;
     reg GANTRY_MOT_IF_RE_d1;
     reg LIFT_MOT_IF_RE_d1;
+    reg GANTRY_BRK1_IF_RE_d1;
+    reg GANTRY_BRK2_IF_RE_d1;
+    reg GANTRY_BRK3_IF_RE_d1;
+    reg GANTRY_BRK1_RET_IF_RE_d1;
+    reg GANTRY_BRK2_RET_IF_RE_d1;
+    reg GANTRY_BRK3_RET_IF_RE_d1;
     reg MSSB_STN_RE_d1;
     reg MSSB_SRV_RE_d1;
     reg EEP_RE_d1;
@@ -148,6 +172,28 @@ module AdderDecode(
 
     assign GANTRY_MOT_IF_RE   = DEC_RE & (DEC_ADDR >= `GANTRY_MOT_ADDR) & (DEC_ADDR < (`GANTRY_MOT_ADDR + `GANTRY_MOT_SIZE));
     assign GANTRY_MOT_IF_WE   = DEC_WE & (DEC_ADDR >= `GANTRY_MOT_ADDR) & (DEC_ADDR < (`GANTRY_MOT_ADDR + `GANTRY_MOT_SIZE));
+
+    assign GANTRY_BRK1_IF_RE   = DEC_RE & (DEC_ADDR >= `GANTRY_BRK1_ADDR) & (DEC_ADDR < (`GANTRY_BRK1_ADDR + `GANTRY_MOT_SIZE));
+    assign GANTRY_BRK1_IF_WE   = DEC_WE & (DEC_ADDR >= `GANTRY_BRK1_ADDR) & (DEC_ADDR < (`GANTRY_BRK1_ADDR + `GANTRY_MOT_SIZE));
+
+    assign GANTRY_BRK2_IF_RE = DEC_RE & (DEC_ADDR >= `GANTRY_BRK2_ADDR) & (DEC_ADDR < (`GANTRY_BRK2_ADDR + `GANTRY_MOT_SIZE));
+    assign GANTRY_BRK2_IF_WE = DEC_WE & (DEC_ADDR >= `GANTRY_BRK2_ADDR) & (DEC_ADDR < (`GANTRY_BRK2_ADDR + `GANTRY_MOT_SIZE));
+
+    assign GANTRY_BRK3_IF_RE = DEC_RE & (DEC_ADDR >= `GANTRY_BRK3_ADDR) & (DEC_ADDR < (`GANTRY_BRK3_ADDR + `GANTRY_MOT_SIZE));
+    assign GANTRY_BRK3_IF_WE = DEC_WE & (DEC_ADDR >= `GANTRY_BRK3_ADDR) & (DEC_ADDR < (`GANTRY_BRK3_ADDR + `GANTRY_MOT_SIZE));
+
+    // RE/WE signals for GANTRY_BRK1_RET
+    assign GANTRY_BRK1_RET_IF_RE = DEC_RE & (DEC_ADDR >= `GANTRY_BRK1_RET_ADDR) & (DEC_ADDR < (`GANTRY_BRK1_RET_ADDR + `GANTRY_MOT_SIZE));
+    assign GANTRY_BRK1_RET_IF_WE = DEC_WE & (DEC_ADDR >= `GANTRY_BRK1_RET_ADDR) & (DEC_ADDR < (`GANTRY_BRK1_RET_ADDR + `GANTRY_MOT_SIZE));
+
+    // RE/WE signals for GANTRY_BRK2_RET
+    assign GANTRY_BRK2_RET_IF_RE = DEC_RE & (DEC_ADDR >= `GANTRY_BRK2_RET_ADDR) & (DEC_ADDR < (`GANTRY_BRK2_RET_ADDR + `GANTRY_MOT_SIZE));
+    assign GANTRY_BRK2_RET_IF_WE = DEC_WE & (DEC_ADDR >= `GANTRY_BRK2_RET_ADDR) & (DEC_ADDR < (`GANTRY_BRK2_RET_ADDR + `GANTRY_MOT_SIZE));
+
+    // RE/WE signals for GANTRY_BRK3_RET
+    assign GANTRY_BRK3_RET_IF_RE = DEC_RE & (DEC_ADDR >= `GANTRY_BRK3_RET_ADDR) & (DEC_ADDR < (`GANTRY_BRK3_RET_ADDR + `GANTRY_MOT_SIZE));
+    assign GANTRY_BRK3_RET_IF_WE = DEC_WE & (DEC_ADDR >= `GANTRY_BRK3_RET_ADDR) & (DEC_ADDR < (`GANTRY_BRK3_RET_ADDR + `GANTRY_MOT_SIZE));
+
 
     assign LIFT_MOT_IF_RE       = DEC_RE & (DEC_ADDR >= `LIFT_MOT_ADDR) & (DEC_ADDR < (`LIFT_MOT_ADDR + `LIFT_MOT_SIZE));
     assign LIFT_MOT_IF_WE       = DEC_WE & (DEC_ADDR >= `LIFT_MOT_ADDR) & (DEC_ADDR < (`LIFT_MOT_ADDR + `LIFT_MOT_SIZE));
@@ -219,6 +265,12 @@ module AdderDecode(
             ILIM_DAC_RE_d1          <= 0;
             ADC_RE_d1               <= 0;
             GANTRY_MOT_IF_RE_d1     <= 0;
+            GANTRY_BRK1_IF_RE_d1    <= 0;
+            GANTRY_BRK2_IF_RE_d1    <= 0;
+            GANTRY_BRK3_IF_RE_d1    <= 0;
+            GANTRY_BRK1_RET_IF_RE_d1 <= 0;
+            GANTRY_BRK2_RET_IF_RE_d1 <= 0;
+            GANTRY_BRK3_RET_IF_RE_d1 <= 0;
             LIFT_MOT_IF_RE_d1       <= 0;
             MSSB_STN_RE_d1          <= 0;
             MSSB_SRV_RE_d1          <= 0;
@@ -247,6 +299,12 @@ module AdderDecode(
             ILIM_DAC_RE_d1          <= ILIM_DAC_RE;
             ADC_RE_d1               <= ADC_RE;
             GANTRY_MOT_IF_RE_d1   <= GANTRY_MOT_IF_RE;
+            GANTRY_BRK1_IF_RE_d1    <= GANTRY_BRK1_IF_RE;
+            GANTRY_BRK2_IF_RE_d1    <= GANTRY_BRK2_IF_RE;
+            GANTRY_BRK3_IF_RE_d1    <= GANTRY_BRK3_IF_RE;
+            GANTRY_BRK1_RET_IF_RE_d1 <= GANTRY_BRK1_RET_IF_RE;
+            GANTRY_BRK2_RET_IF_RE_d1 <= GANTRY_BRK2_RET_IF_RE;
+            GANTRY_BRK3_RET_IF_RE_d1 <= GANTRY_BRK3_RET_IF_RE;
             LIFT_MOT_IF_RE_d1       <= LIFT_MOT_IF_RE;
             MSSB_STN_RE_d1          <= MSSB_STN_RE;
             MSSB_SRV_RE_d1          <= MSSB_SRV_RE;
@@ -279,6 +337,12 @@ module AdderDecode(
                     (ILIM_DAC_RE_d1)             ? ILIM_DAC_IN     :
                     (ADC_RE_d1)                  ? ADC_IN          :
                     (GANTRY_MOT_IF_RE_d1)        ? GANTRY_MOT_IN   :
+                    (GANTRY_BRK1_IF_RE_d1)       ? GANTRY_BRK1_IN  :
+                    (GANTRY_BRK2_IF_RE_d1)       ? GANTRY_BRK2_IN  :
+                    (GANTRY_BRK3_IF_RE_d1)       ? GANTRY_BRK3_IN  :
+                    (GANTRY_BRK1_RET_IF_RE_d1)   ? GANTRY_BRK1_RET_IN :
+                    (GANTRY_BRK2_RET_IF_RE_d1)   ? GANTRY_BRK2_RET_IN :
+                    (GANTRY_BRK3_RET_IF_RE_d1)   ? GANTRY_BRK3_RET_IN :
                     (LIFT_MOT_IF_RE_d1)          ? LIFT_MOT_IN     :
                     (MSSB_STN_RE_d1)             ? MSSB_STN_IN     :
                     (MSSB_SRV_RE_d1)             ? MSSB_SRV_IN     :

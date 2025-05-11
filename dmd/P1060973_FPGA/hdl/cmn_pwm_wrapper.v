@@ -262,7 +262,7 @@ module cmn_pwm_wrapper
     always @(posedge OPB_CLK or posedge OPB_RST) begin
         if (OPB_RST) begin
             pwm_status <= 0;
-        end if(state == ST_PWM) begin
+        end else if(state == ST_PWM) begin
             pwm_status[23:8] <= act_test_duration;
             if(mot_over_curr_i) begin
                 pwm_status[0] <= 1; // over-current detected

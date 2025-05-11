@@ -22,6 +22,12 @@
 `define GPIO_FREE_IF_ADDR       32'h0005000F        /* GPIO FREE IF address */
 `define ADC_ADDR                32'h00060000        /* Analog to Digital converter address */
 `define GANTRY_MOT_ADDR         32'h00070000        /* Gantry Motor address */
+`define GANTRY_BRK1_ADDR        32'h00071000        /* Gantry Brake1 address */
+`define GANTRY_BRK2_ADDR        32'h00072000        /* Gantry Brake2 address */
+`define GANTRY_BRK3_ADDR        32'h00073000        /* Gantry Brake3 address */
+`define GANTRY_BRK1_RET_ADDR    32'h00074000        /* Gantry Brake1_ret address */
+`define GANTRY_BRK2_RET_ADDR    32'h00075000        /* Gantry Brake2_ret address */
+`define GANTRY_BRK3_RET_ADDR    32'h00076000        /* Gantry Brake3_ret address */
 `define LIFT_MOT_ADDR           32'h00080000        /* Lift Motor address */
 `define MSSB_STN_ADDR           32'h00090000        /* MSSB address */
 `define MSSB_SRV_ADDR           32'h00091000        /* MSSB address */

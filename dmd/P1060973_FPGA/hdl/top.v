@@ -240,6 +240,12 @@ module top(
     wire    [31:0]  ILIM_DAC_IN; // from ILIM DAC
     wire    [31:0]  ADC_IN; // from ADC
     wire    [31:0]  GANTRY_MOT_IN; // from gantry motor
+    wire    [31:0]  GANTRY_BRK1_IN; // from gantry brake 1
+    wire    [31:0]  GANTRY_BRK2_IN; // from gantry brake 2
+    wire    [31:0]  GANTRY_BRK3_IN; // from gantry brake 3
+    wire    [31:0]  GANTRY_BRK1_RET_IN; // from gantry brake 1 ret
+    wire    [31:0]  GANTRY_BRK2_RET_IN; // from gantry brake 2 ret
+    wire    [31:0]  GANTRY_BRK3_RET_IN; // from gantry brake 3 ret
     wire    [31:0]  LIFT_MOT_IN; // from lift motor
     wire    [31:0]  MSSB_STN_IN; // from MSSB STN
     wire    [31:0]  MSSB_SRV_IN; // from MSSB SRV
@@ -261,6 +267,18 @@ module top(
     wire            ADC_WE; // ADC write enable
     wire           GANTRY_MOT_IF_RE; // Gantry motor interface read enable
     wire           GANTRY_MOT_IF_WE; // Gantry motor interface write enable
+    wire           GANTRY_BRK1_IF_RE;
+    wire           GANTRY_BRK1_IF_WE;
+    wire           GANTRY_BRK2_IF_RE;
+    wire           GANTRY_BRK2_IF_WE;
+    wire           GANTRY_BRK3_IF_RE;
+    wire           GANTRY_BRK3_IF_WE;
+    wire           GANTRY_BRK1_RET_IF_RE;
+    wire           GANTRY_BRK1_RET_IF_WE;
+    wire           GANTRY_BRK2_RET_IF_RE;
+    wire           GANTRY_BRK2_RET_IF_WE;
+    wire           GANTRY_BRK3_RET_IF_RE;
+    wire           GANTRY_BRK3_RET_IF_WE;
     wire           LIFT_MOT_IF_RE; // Lift motor interface read enable
     wire           LIFT_MOT_IF_WE; // Lift motor interface write enable
     wire           MSSB_STN_RE; // MSSB STN read enable
@@ -302,6 +320,59 @@ module top(
     wire          DEBUG_IF_WE;        // Debug interface write enable
     wire          GPIO_FREE_IF_RE;    // GPIO free interface read enable
     wire          GPIO_FREE_IF_WE;    // GPIO free interface write enable
+
+    wire    [5:0] gantry_mot_pwm;
+    wire    [5:0] lift_mot_pwm;
+    wire    [1:0] gantry_brk1_pwm;
+    wire    [1:0] gantry_brk2_pwm;
+    wire    [1:0] gantry_brk3_pwm;
+    wire    [1:0] gantry_brk1_ret_pwm;
+    wire    [1:0] gantry_brk2_ret_pwm;
+    wire    [1:0] gantry_brk3_ret_pwm;
+
+    // muti-driver signals
+    // from module GPIO
+    wire          gnt_mot_pwr_en_1;
+    wire          gnt_brk_pwr_en_1;
+    wire          lft_mot_pwr_en_1;
+
+    // from module common_pwm_wrapper
+    wire          gnt_mot_pwr_en_2;
+    wire          gnt_mot_pwr_override;
+    wire    [5:0] gnt_brk_pwr_en_2; // from module common_pwm_wrapper
+    wire    [5:0] gnt_brk_pwr_override;
+    wire          lft_mot_pwr_en_2;
+    wire          lft_mot_pwr_override;
+
+    // PWM Test has higher priority than GPIO
+    assign GNT_MOT_PWR_EN = gnt_mot_pwr_override ? gnt_mot_pwr_en_2 : gnt_mot_pwr_en_1;
+    assign GNT_BRK_PWR_EN = (|gnt_brk_pwr_override) ? (|gnt_brk_pwr_en_2) : gnt_brk_pwr_en_1; // Brake power enable
+    assign LFT_MOT_PWR_EN = lft_mot_pwr_override ? lft_mot_pwr_en_2 : lft_mot_pwr_en_1; // Lift motor power enable
+
+    assign GNT_PWM_PHA_HI = gantry_mot_pwm[0]; // PWM phase A high
+    assign GNT_PWM_PHA_LO = gantry_mot_pwm[1]; // PWM phase A low
+    assign GNT_PWM_PHB_HI = gantry_mot_pwm[2]; // PWM phase B high
+    assign GNT_PWM_PHB_LO = gantry_mot_pwm[3]; // PWM phase B low
+    assign GNT_PWM_PHC_HI = gantry_mot_pwm[4]; // PWM phase C high
+    assign GNT_PWM_PHC_LO = gantry_mot_pwm[5]; // PWM phase C low
+    assign GNT_BRK1_PWM_HI = gantry_brk1_pwm[0]; // Brake 1 PWM high
+    assign GNT_BRK1_PWM_LO = gantry_brk1_pwm[1]; // Brake 1 PWM low
+    assign GNT_BRK1_RET_PWM_HI = gantry_brk1_ret_pwm[0]; // Brake 1 ret PWM high
+    assign GNT_BRK1_RET_PWM_LO = gantry_brk1_ret_pwm[1]; // Brake 1 ret PWM low
+    assign GNT_BRK2_PWM_HI = gantry_brk2_pwm[0]; // Brake 2 PWM high
+    assign GNT_BRK2_PWM_LO = gantry_brk2_pwm[1]; // Brake 2 PWM low
+    assign GNT_BRK2_RET_PWM_HI = gantry_brk2_ret_pwm[0]; // Brake 2 ret PWM high
+    assign GNT_BRK2_RET_PWM_LO = gantry_brk2_ret_pwm[1]; // Brake 2 ret PWM low
+    assign GNT_BRK3_PWM_HI = gantry_brk3_pwm[0]; // Brake 3 PWM high
+    assign GNT_BRK3_PWM_LO = gantry_brk3_pwm[1]; // Brake 3 PWM low
+    assign GNT_BRK3_RET_PWM_HI = gantry_brk3_ret_pwm[0]; // Brake 3 ret PWM high
+    assign GNT_BRK3_RET_PWM_LO = gantry_brk3_ret_pwm[1]; // Brake 3 ret PWM low
+    assign LFT_PWM_PHA_HI = lift_mot_pwm[0]; // Lift motor phase A high
+    assign LFT_PWM_PHA_LO = lift_mot_pwm[1]; // Lift motor phase A low
+    assign LFT_PWM_PHB_HI = lift_mot_pwm[2]; // Lift motor phase B high
+    assign LFT_PWM_PHB_LO = lift_mot_pwm[3]; // Lift motor phase B low
+    assign LFT_PWM_PHC_HI = lift_mot_pwm[4]; // Lift motor phase C high
+    assign LFT_PWM_PHC_LO = lift_mot_pwm[5]; // Lift motor phase C low
 
 //
     assign SYS_CLK = FPGA_100M_CLK; // 100MHz Clock
@@ -358,6 +429,12 @@ module top(
         .ILIM_DAC_IN(ILIM_DAC_IN),       // ILIM DAC output
         .ADC_IN(ADC_IN),                 // ADC output
         .GANTRY_MOT_IN(GANTRY_MOT_IN),   // Gantry motor output
+        .GANTRY_BRK1_IN(GANTRY_BRK1_IN),   // Gantry brake 1 output
+        .GANTRY_BRK2_IN(GANTRY_BRK2_IN),   // Gantry brake 2 output
+        .GANTRY_BRK3_IN(GANTRY_BRK3_IN),   // Gantry brake 3 output
+        .GANTRY_BRK1_RET_IN(GANTRY_BRK1_RET_IN), // Gantry brake 1 ret output
+        .GANTRY_BRK2_RET_IN(GANTRY_BRK2_RET_IN), // Gantry brake 2 ret output
+        .GANTRY_BRK3_RET_IN(GANTRY_BRK3_RET_IN), // Gantry brake 3 ret output
         .LIFT_MOT_IN(LIFT_MOT_IN),       // Lift motor output
         .MSSB_STN_IN(MSSB_STN_IN),       // MSSB STN output
         .MSSB_SRV_IN(MSSB_SRV_IN),       // MSSB SRV output
@@ -381,6 +458,18 @@ module top(
         .EEP_WE(EEP_WE),                 // EEPROM WE
         .GANTRY_MOT_IF_RE(GANTRY_MOT_IF_RE), // Gantry motor interface read enable
         .GANTRY_MOT_IF_WE(GANTRY_MOT_IF_WE), // Gantry motor interface write enable
+        .GANTRY_BRK1_IF_RE(GANTRY_BRK1_IF_RE), // Gantry brake 1 interface read enable
+        .GANTRY_BRK1_IF_WE(GANTRY_BRK1_IF_WE), // Gantry brake 1 interface write enable
+        .GANTRY_BRK2_IF_RE(GANTRY_BRK2_IF_RE), // Gantry brake 2 interface read enable
+        .GANTRY_BRK2_IF_WE(GANTRY_BRK2_IF_WE), // Gantry brake 2 interface write enable
+        .GANTRY_BRK3_IF_RE(GANTRY_BRK3_IF_RE), // Gantry brake 3 interface read enable
+        .GANTRY_BRK3_IF_WE(GANTRY_BRK3_IF_WE), // Gantry brake 3 interface write enable
+        .GANTRY_BRK1_RET_IF_RE(GANTRY_BRK1_RET_IF_RE), // Gantry brake 1 ret interface read enable
+        .GANTRY_BRK1_RET_IF_WE(GANTRY_BRK1_RET_IF_WE), // Gantry brake 1 ret interface write enable
+        .GANTRY_BRK2_RET_IF_RE(GANTRY_BRK2_RET_IF_RE), // Gantry brake 2 ret interface read enable
+        .GANTRY_BRK2_RET_IF_WE(GANTRY_BRK2_RET_IF_WE), // Gantry brake 2 ret interface write enable
+        .GANTRY_BRK3_RET_IF_RE(GANTRY_BRK3_RET_IF_RE), // Gantry brake 3 ret interface read enable
+        .GANTRY_BRK3_RET_IF_WE(GANTRY_BRK3_RET_IF_WE), // Gantry brake 3 ret interface write enable
         .LIFT_MOT_IF_RE(LIFT_MOT_IF_RE), // Lift motor interface read enable
         .LIFT_MOT_IF_WE(LIFT_MOT_IF_WE), // Lift motor interface write enable
         .MSSB_STN_RE(MSSB_STN_RE),       // MSSB STN read enable
@@ -567,8 +656,8 @@ DAC_DACx0504_IF dac_0 (
         .P12V_ACT_DIODE_ON_N(P12V_ACT_DIODE_ON_N),
 
         // GANTRY_96V_IF
-        .GNT_MOT_PWR_EN(GNT_MOT_PWR_EN),
-        .GNT_BRK_PWR_EN(GNT_BRK_PWR_EN),
+        .GNT_MOT_PWR_EN(gnt_mot_pwr_en_1),
+        .GNT_BRK_PWR_EN(gnt_brk_pwr_en_1),
         .GNT_SHUNT_EN(GNT_SHUNT_EN),
         .OC_V_GNT_MOT_DRV(OC_V_GNT_MOT_DRV),
         .OC_V_GNT_BRK_DRV(OC_V_GNT_BRK_DRV),
@@ -628,7 +717,7 @@ DAC_DACx0504_IF dac_0 (
         .P24V_LFT_EMOPS_EN(P24V_LFT_EMOPS_EN),
         .LFT_SHUNT_EN(LFT_SHUNT_EN),
         .LFT_EMOPS_EN(LFT_EMOPS_EN),
-        .LFT_MOT_PWR_EN(LFT_MOT_PWR_EN),
+        .LFT_MOT_PWR_EN(lft_mot_pwr_en_1),
         .P24V_LFT_EMOPS_PG(P24V_LFT_EMOPS_PG),
         .OC_V_LFT_MOT_DRV(OC_V_LFT_MOT_DRV),
         .LFT_SHUNT_ON(LFT_SHUNT_ON),
@@ -685,60 +774,6 @@ DAC_DACx0504_IF dac_0 (
         .GPIO5(GPIO5)
     );
 
-// Gantry_Motor Interface module instantiation
-GANTRY_MOT_IF gantry_mot_if_0 (
-    // OPB Interface
-    .OPB_CLK(OPB_CLK),                  // OPB clock
-    .OPB_RST(OPB_RST),                  // OPB reset
-    .OPB_ADDR(OPB_ADDR),                // OPB address
-    .OPB_DI(OPB_DO),                    // OPB data input
-    .GANTRY_MOT_IF_RE(GANTRY_MOT_IF_RE), // Read enable signal
-    .GANTRY_MOT_IF_WE(GANTRY_MOT_IF_WE), // Write enable signal
-    .OPB_DO(GANTRY_MOT_IN),             // OPB data output
-
-    // GANTRY DRIVER
-    .GNT_PWM_PHA_HI(GNT_PWM_PHA_HI),
-    .GNT_PWM_PHA_LO(GNT_PWM_PHA_LO),
-    .GNT_PWM_PHB_HI(GNT_PWM_PHB_HI),
-    .GNT_PWM_PHB_LO(GNT_PWM_PHB_LO),
-    .GNT_PWM_PHC_HI(GNT_PWM_PHC_HI),
-    .GNT_PWM_PHC_LO(GNT_PWM_PHC_LO),
-
-    // GANTRY BRAKE DRIVER
-    .GNT_BRK1_PWM_HI(GNT_BRK1_PWM_HI),
-    .GNT_BRK1_PWM_LO(GNT_BRK1_PWM_LO),
-    .GNT_BRK1_RET_PWM_HI(GNT_BRK1_RET_PWM_HI),
-    .GNT_BRK1_RET_PWM_LO(GNT_BRK1_RET_PWM_LO),
-    .GNT_BRK2_PWM_HI(GNT_BRK2_PWM_HI),
-    .GNT_BRK2_PWM_LO(GNT_BRK2_PWM_LO),
-    .GNT_BRK2_RET_PWM_HI(GNT_BRK2_RET_PWM_HI),
-    .GNT_BRK2_RET_PWM_LO(GNT_BRK2_RET_PWM_LO),
-    .GNT_BRK3_PWM_HI(GNT_BRK3_PWM_HI),
-    .GNT_BRK3_PWM_LO(GNT_BRK3_PWM_LO),
-    .GNT_BRK3_RET_PWM_HI(GNT_BRK3_RET_PWM_HI),
-    .GNT_BRK3_RET_PWM_LO(GNT_BRK3_RET_PWM_LO)
-);
-
-// Instantiate the LIFT_MOT_IF module
-LIFT_MOT_IF lift_mot_if_0 (
-    // OPB Interface connections
-    .OPB_CLK(OPB_CLK),                  // OPB clock
-    .OPB_RST(OPB_RST),                  // OPB reset
-    .OPB_ADDR(OPB_ADDR),                // OPB address
-    .OPB_DI(OPB_DO),                    // OPB data input
-    .LIFT_MOT_IF_RE(LIFT_MOT_IF_RE),    // Read enable signal
-    .LIFT_MOT_IF_WE(LIFT_MOT_IF_WE),    // Write enable signal
-    .OPB_DO(LIFT_MOT_IN),               // OPB data output
-
-    // LIFT MOTOR INTERFACE connections
-    .LFT_PWM_PHA_HI(LFT_PWM_PHA_HI),    // Lift motor phase A high
-    .LFT_PWM_PHA_LO(LFT_PWM_PHA_LO),    // Lift motor phase A low
-    .LFT_PWM_PHB_HI(LFT_PWM_PHB_HI),    // Lift motor phase B high
-    .LFT_PWM_PHB_LO(LFT_PWM_PHB_LO),    // Lift motor phase B low
-    .LFT_PWM_PHC_HI(LFT_PWM_PHC_HI),    // Lift motor phase C high
-    .LFT_PWM_PHC_LO(LFT_PWM_PHC_LO)     // Lift motor phase C low
-);
-
 // Instantiate the MSSB_IF module
 MSSB_IF mssb_if_0 (
     // OPB Interface connections
@@ -771,6 +806,175 @@ MSSB_IF mssb_if_1 (
     .MSSB_RX(SRV_MSSB_RX)           // Service MSSB receive
 );
 
+// GNT MOTOR
+cmn_pwm_wrapper gantry_mot_if_0 (
+    // OPB signals
+    .OPB_CLK(OPB_CLK),                  // 100MHz clock
+    .OPB_RST(OPB_RST),                  // Reset signal
+    .OPB_RE(GANTRY_MOT_IF_RE),          // OPB read enable
+    .OPB_WE(GANTRY_MOT_IF_WE),          // OPB write enable
+    .OPB_ADDR(OPB_ADDR),                // OPB address bus
+    .OPB_DO(GANTRY_MOT_IN),             // OPB data output
+    .OPB_DI(OPB_DI),                    // OPB data input
+
+    // Motor and brake signals
+    .mot_pwm_o(gantry_mot_pwm),          // Motor PWM output
+    .brk_pwm_o(),                        // Brake PWM output
+    .mot_en_out_o(gnt_mot_pwr_en_2),     // Motor enable output
+    .brk_en_out_o(),                     // Brake enable output
+    .mot_over_curr_i(OC_V_GNT_MOT_DRV),  // Motor over-current input
+    .brk_over_curr_i(0),                 // Brake over-current input
+    .pwm_override_o(gnt_mot_pwr_override)// PWM override signal
+);
+
+// GNT BRAKE1
+cmn_pwm_wrapper gantry_brk1_if_0 (
+    // OPB signals
+    .OPB_CLK(OPB_CLK),                  // 100MHz clock
+    .OPB_RST(OPB_RST),                  // Reset signal
+    .OPB_RE(GANTRY_BRK1_IF_RE),         // OPB read enable
+    .OPB_WE(GANTRY_BRK1_IF_WE),         // OPB write enable
+    .OPB_ADDR(OPB_ADDR),                // OPB address bus
+    .OPB_DO(GANTRY_BRK1_IN),            // OPB data output
+    .OPB_DI(OPB_DI),                    // OPB data input
+
+    // Motor and brake signals
+    .mot_pwm_o(),                       // Motor PWM output
+    .brk_pwm_o(gantry_brk1_pwm[1:0]),   // Brake PWM output
+    .mot_en_out_o(),                    // Motor enable output
+    .brk_en_out_o(gnt_brk_pwr_en_2[0]), // Brake enable output
+    .mot_over_curr_i(0),                // Motor over-current input
+    .brk_over_curr_i(OC_V_GNT_BRK_DRV),  // Brake over-current input
+    .pwm_override_o(gnt_brk_pwr_override[0])// PWM override signal
+);
+
+// GNT BRAKE2
+cmn_pwm_wrapper gantry_brk2_if_0 (
+    // OPB signals
+    .OPB_CLK(OPB_CLK),                  // 100MHz clock
+    .OPB_RST(OPB_RST),                  // Reset signal
+    .OPB_RE(GANTRY_BRK2_IF_RE),         // OPB read enable
+    .OPB_WE(GANTRY_BRK2_IF_WE),         // OPB write enable
+    .OPB_ADDR(OPB_ADDR),                // OPB address bus
+    .OPB_DO(GANTRY_BRK2_IN),            // OPB data output
+    .OPB_DI(OPB_DI),                    // OPB data input
+
+    // Motor and brake signals
+    .mot_pwm_o(),                       // Motor PWM output
+    .brk_pwm_o(gantry_brk2_pwm[1:0]),   // Brake PWM output
+    .mot_en_out_o(),                    // Motor enable output
+    .brk_en_out_o(gnt_brk_pwr_en_2[1]), // Brake enable output
+    .mot_over_curr_i(0),                // Motor over-current input
+    .brk_over_curr_i(OC_V_GNT_BRK_DRV),  // Brake over-current input
+    .pwm_override_o(gnt_brk_pwr_override[1])// PWM override signal
+);
+
+// GNT BRAKE3
+cmn_pwm_wrapper gantry_brk3_if_0 (
+    // OPB signals
+    .OPB_CLK(OPB_CLK),                  // 100MHz clock
+    .OPB_RST(OPB_RST),                  // Reset signal
+    .OPB_RE(GANTRY_BRK3_IF_RE),         // OPB read enable
+    .OPB_WE(GANTRY_BRK3_IF_WE),         // OPB write enable
+    .OPB_ADDR(OPB_ADDR),                // OPB address bus
+    .OPB_DO(GANTRY_BRK3_IN),            // OPB data output
+    .OPB_DI(OPB_DI),                    // OPB data input
+
+    // Motor and brake signals
+    .mot_pwm_o(),                       // Motor PWM output
+    .brk_pwm_o(gantry_brk3_pwm[1:0]),   // Brake PWM output
+    .mot_en_out_o(),                    // Motor enable output
+    .brk_en_out_o(gnt_brk_pwr_en_2[2]), // Brake enable output
+    .mot_over_curr_i(0),                // Motor over-current input
+    .brk_over_curr_i(OC_V_GNT_BRK_DRV),  // Brake over-current input
+    .pwm_override_o(gnt_brk_pwr_override[2])// PWM override signal
+);
+
+// GNT BRAKE1 RET
+cmn_pwm_wrapper gantry_brk1_ret_if_0 (
+    // OPB signals
+    .OPB_CLK(OPB_CLK),                  // 100MHz clock
+    .OPB_RST(OPB_RST),                  // Reset signal
+    .OPB_RE(GANTRY_BRK1_RET_IF_RE),     // OPB read enable
+    .OPB_WE(GANTRY_BRK1_RET_IF_WE),     // OPB write enable
+    .OPB_ADDR(OPB_ADDR),                // OPB address bus
+    .OPB_DO(GANTRY_BRK1_RET_IN),        // OPB data output
+    .OPB_DI(OPB_DI),                    // OPB data input
+
+    // Motor and brake signals
+    .mot_pwm_o(),                       // Motor PWM output
+    .brk_pwm_o(gantry_brk1_ret_pwm[1:0]),// Brake PWM output
+    .mot_en_out_o(),                    // Motor enable output
+    .brk_en_out_o(gnt_brk_pwr_en_2[3]), // Brake enable output
+    .mot_over_curr_i(0),                // Motor over-current input
+    .brk_over_curr_i(OC_V_GNT_BRK_DRV),  // Brake over-current input
+    .pwm_override_o(gnt_brk_pwr_override[3])// PWM override signal
+);
+
+// GNT BRAKE2 RET
+cmn_pwm_wrapper gantry_brk2_ret_if_0 (
+    // OPB signals
+    .OPB_CLK(OPB_CLK),                  // 100MHz clock
+    .OPB_RST(OPB_RST),                  // Reset signal
+    .OPB_RE(GANTRY_BRK2_RET_IF_RE),     // OPB read enable
+    .OPB_WE(GANTRY_BRK2_RET_IF_WE),     // OPB write enable
+    .OPB_ADDR(OPB_ADDR),                // OPB address bus
+    .OPB_DO(GANTRY_BRK2_RET_IN),        // OPB data output
+    .OPB_DI(OPB_DI),                    // OPB data input
+
+    // Motor and brake signals
+    .mot_pwm_o(),                       // Motor PWM output
+    .brk_pwm_o(gantry_brk2_ret_pwm[1:0]),// Brake PWM output
+    .mot_en_out_o(),                    // Motor enable output
+    .brk_en_out_o(gnt_brk_pwr_en_2[4]), // Brake enable output
+    .mot_over_curr_i(0),                // Motor over-current input
+    .brk_over_curr_i(OC_V_GNT_BRK_DRV),  // Brake over-current input
+    .pwm_override_o(gnt_brk_pwr_override[4])// PWM override signal
+);
+
+// GNT BRAKE3 RET
+cmn_pwm_wrapper gantry_brk3_ret_if_0 (
+    // OPB signals
+    .OPB_CLK(OPB_CLK),                  // 100MHz clock
+    .OPB_RST(OPB_RST),                  // Reset signal
+    .OPB_RE(GANTRY_BRK3_RET_IF_RE),     // OPB read enable
+    .OPB_WE(GANTRY_BRK3_RET_IF_WE),     // OPB write enable
+    .OPB_ADDR(OPB_ADDR),                // OPB address bus
+    .OPB_DO(GANTRY_BRK3_RET_IN),        // OPB data output
+    .OPB_DI(OPB_DI),                    // OPB data input
+
+    // Motor and brake signals
+    .mot_pwm_o(),                       // Motor PWM output
+    .brk_pwm_o(gantry_brk3_ret_pwm[1:0]),// Brake PWM output
+    .mot_en_out_o(),                    // Motor enable output
+    .brk_en_out_o(gnt_brk_pwr_en_2[5]), // Brake enable output
+    .mot_over_curr_i(0),                // Motor over-current input
+    .brk_over_curr_i(OC_V_GNT_BRK_DRV),  // Brake over-current input
+    .pwm_override_o(gnt_brk_pwr_override[5])// PWM override signal
+);
+
+// Lift Motor
+cmn_pwm_wrapper lift_mot_if_0 (
+    // OPB signals
+    .OPB_CLK(OPB_CLK),                  // 100MHz clock
+    .OPB_RST(OPB_RST),                  // Reset signal
+    .OPB_RE(LIFT_MOT_IF_RE),            // OPB read enable
+    .OPB_WE(LIFT_MOT_IF_WE),            // OPB write enable
+    .OPB_ADDR(OPB_ADDR),                // OPB address bus
+    .OPB_DO(LIFT_MOT_IN),               // OPB data output
+    .OPB_DI(OPB_DI),                    // OPB data input
+
+    // Motor and brake signals
+    .mot_pwm_o(lift_mot_pwm),           // Motor PWM output
+    .brk_pwm_o(),                       // Brake PWM output (not used)
+    .mot_en_out_o(lft_mot_pwr_en_2),     // Motor enable output
+    .brk_en_out_o(),                    // Brake enable output (not used)
+    .mot_over_curr_i(OC_V_LFT_MOT_DRV), // Motor over-current input
+    .brk_over_curr_i(0),                 // Brake over-current input (not used)
+    .pwm_override_o(lft_mot_pwr_override)// PWM override signal
+);
+
+// THE END!
 endmodule
 
 
