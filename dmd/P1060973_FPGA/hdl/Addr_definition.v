@@ -23,7 +23,8 @@
 `define ADC_ADDR                32'h00060000        /* Analog to Digital converter address */
 `define GANTRY_MOT_ADDR         32'h00070000        /* Gantry Motor address */
 `define LIFT_MOT_ADDR           32'h00080000        /* Lift Motor address */
-`define MSSB_ADDR               32'h00090000        /* MSSB address */
+`define MSSB_STN_ADDR           32'h00090000        /* MSSB address */
+`define MSSB_SRV_ADDR           32'h00091000        /* MSSB address */
 `define EEP_ADDR                32'h000B0000        /* EEPROM address */
 
 // Description: Size definition for each sub-system

@@ -6,7 +6,12 @@
 --
 -- Description:
 -- 3 phase rotation PWM and 1 phase brake PWM
---
+-- MOTOR_PWM_PERIODE = CLK_RATE_MHZ * 25 * RESOLUTION
+-- MOTOR_PWM_PERIODE = 25 * 25 * 1 = 625(10'h231)
+-- mot_pwm_param01 = 10'h000 ~ 10'h231
+-- mot_pwm_param23 = 10'h000 ~ 10'h231
+-- mot_pwm_param45 = 10'h000 ~ 10'h231
+-- brk_pwm_param   = 10'h000 ~ 10'h231
 -- History
 --
 ---------------------------------------------------------------------
@@ -29,7 +34,7 @@ Generic (
 );
 Port (
      reset             : in  std_logic;                       -- reset
-     clk               : in  std_logic;
+     clk               : in  std_logic;                       -- clock
      sync              : in  std_logic;                       -- synchronization pulse
      pulse_200us       : in  std_logic;                       -- the 200 us pulse for the servo
      mot_pwm           : out std_logic_vector(5 downto 0);    -- pwm outputs motor 1

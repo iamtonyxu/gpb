@@ -241,7 +241,8 @@ module top(
     wire    [31:0]  ADC_IN; // from ADC
     wire    [31:0]  GANTRY_MOT_IN; // from gantry motor
     wire    [31:0]  LIFT_MOT_IN; // from lift motor
-    wire    [31:0]  MSSB_IN; // from MSSB
+    wire    [31:0]  MSSB_STN_IN; // from MSSB STN
+    wire    [31:0]  MSSB_SRV_IN; // from MSSB SRV
     wire    [31:0]  EEP_IN; // from EEPROM
     wire    [31:0]  GPIO_IN; // from GPIO
 
@@ -262,8 +263,10 @@ module top(
     wire           GANTRY_MOT_IF_WE; // Gantry motor interface write enable
     wire           LIFT_MOT_IF_RE; // Lift motor interface read enable
     wire           LIFT_MOT_IF_WE; // Lift motor interface write enable
-    wire           MSSB_IF_RE; // MSSB read enable
-    wire           MSSB_IF_WE; // MSSB write enable
+    wire           MSSB_STN_RE; // MSSB STN read enable
+    wire           MSSB_STN_WE; // MSSB STN write enable
+    wire           MSSB_SRV_RE; // MSSB SRV read enable
+    wire           MSSB_SRV_WE; // MSSB SRV write enable
     wire           EEP_RE; // EEPROM read enable
     wire           EEP_WE; // EEPROM write enable
     // GPIO interface signals
@@ -354,9 +357,10 @@ module top(
         .CLK_GEN_IN(CLK_GEN_IN),         // Clock generator output
         .ILIM_DAC_IN(ILIM_DAC_IN),       // ILIM DAC output
         .ADC_IN(ADC_IN),                 // ADC output
-        .GANTRY_MOT_IN(GANTRY_MOT_IN),       // Gantry motor output
-        .LIFT_MOT_IN(LIFT_MOT_IN),           // Lift motor output
-        .MSSB_IN(MSSB_IN),               // MSSB output
+        .GANTRY_MOT_IN(GANTRY_MOT_IN),   // Gantry motor output
+        .LIFT_MOT_IN(LIFT_MOT_IN),       // Lift motor output
+        .MSSB_STN_IN(MSSB_STN_IN),       // MSSB STN output
+        .MSSB_SRV_IN(MSSB_SRV_IN),       // MSSB SRV output
         .EEP_IN(EEP_IN),                 // EEPROM output
         .GPIO_IN(GPIO_IN),               // GPIO output
 
@@ -379,8 +383,10 @@ module top(
         .GANTRY_MOT_IF_WE(GANTRY_MOT_IF_WE), // Gantry motor interface write enable
         .LIFT_MOT_IF_RE(LIFT_MOT_IF_RE), // Lift motor interface read enable
         .LIFT_MOT_IF_WE(LIFT_MOT_IF_WE), // Lift motor interface write enable
-        .MSSB_IF_RE(MSSB_IF_RE),             // MSSB read enable
-        .MSSB_IF_WE(MSSB_IF_WE),             // MSSB write enable
+        .MSSB_STN_RE(MSSB_STN_RE),       // MSSB STN read enable
+        .MSSB_STN_WE(MSSB_STN_WE),       // MSSB STN write enable
+        .MSSB_SRV_RE(MSSB_SRV_RE),       // MSSB SRV read enable
+        .MSSB_SRV_WE(MSSB_SRV_WE),       // MSSB SRV write enable
         .PWR_IF_RE(PWR_IF_RE),           // Power interface read enable
         .PWR_IF_WE(PWR_IF_WE),           // Power interface write enable
         .GANTRY_EMOPS_IF_RE(GANTRY_EMOPS_IF_RE), // Gantry EMOPS interface read enable
@@ -740,17 +746,29 @@ MSSB_IF mssb_if_0 (
     .OPB_RST(OPB_RST),                  // OPB reset
     .OPB_ADDR(OPB_ADDR),                // OPB address
     .OPB_DI(OPB_DO),                    // OPB data input
-    .MSSB_IF_RE(MSSB_IF_RE),            // Read enable signal
-    .MSSB_IF_WE(MSSB_IF_WE),            // Write enable signal
-    .OPB_DO(MSSB_IN),                   // OPB data output
+    .MSSB_IF_RE(MSSB_STN_RE),           // Read enable signal
+    .MSSB_IF_WE(MSSB_STN_WE),           // Write enable signal
+    .OPB_DO(MSSB_STN_IN),               // OPB data output
 
     // STAND_MSSB connections
-    .ST_MSSB_TX(ST_MSSB_TX),            // Stand MSSB transmit
-    .MSSB_RX(MSSB_RX),                  // Stand MSSB receive
+    .MSSB_TX(ST_MSSB_TX),            // Stand MSSB transmit
+    .MSSB_RX(MSSB_RX)                   // Stand MSSB receive
+);
+
+// Instantiate the MSSB_IF module
+MSSB_IF mssb_if_1 (
+    // OPB Interface connections
+    .OPB_CLK(OPB_CLK),                  // OPB clock
+    .OPB_RST(OPB_RST),                  // OPB reset
+    .OPB_ADDR(OPB_ADDR),                // OPB address
+    .OPB_DI(OPB_DO),                    // OPB data input
+    .MSSB_IF_RE(MSSB_SRV_RE),           // Read enable signal
+    .MSSB_IF_WE(MSSB_SRV_WE),           // Write enable signal
+    .OPB_DO(MSSB_SRV_IN),               // OPB data output
 
     // SERVICE_MSSB connections
-    .ST_SRV_MSSB_TX(ST_SRV_MSSB_TX),    // Service MSSB transmit
-    .SRV_MSSB_RX(SRV_MSSB_RX)           // Service MSSB receive
+    .MSSB_TX(ST_SRV_MSSB_TX),    // Service MSSB transmit
+    .MSSB_RX(SRV_MSSB_RX)           // Service MSSB receive
 );
 
 endmodule
