@@ -63,11 +63,11 @@ module cmn_pwm_wrapper
     wire [15:0] set_test_duration; // default is 100ms, only used in test_mode = 1
 
     // mot_pwm_param01, mot_pwm_param23, mot_pwm_param45, brk_pwm_param
-    // MOT_PWM_MAX = CLK_RATE_MHZ * 25 * RESOLUTION / 2 - 1 = 25 * 25 * 1 / 2 - 1 = 312
-    reg [31:0] mot_pwm_param01; //only [9:0] is used
-    reg [31:0] mot_pwm_param23; //only [9:0] is used
-    reg [31:0] mot_pwm_param45; //only [9:0] is used
-    reg [31:0] brk_pwm_param; //only [9:0] is used
+    // MOT_PWM_MAX = CLK_RATE_MHZ * 25 * RESOLUTION / 2 - 1 = 25 * 25 * 1 / 2 - 1 = 311
+    reg [31:0] mot_pwm_param01; //only [9:0] is used, max value is 311
+    reg [31:0] mot_pwm_param23; //only [9:0] is used, max value is 311
+    reg [31:0] mot_pwm_param45; //only [9:0] is used, max value is 311
+    reg [31:0] brk_pwm_param; //only [9:0] is used, max value is 311
     // pwm_control[0] -> pwm_start, write 1 to start PWM generation and self-clear to 0
     // pwm_control[1] -> pwm_stop, write 1 to stop PWM generation and self-clear to 0
     reg [31:0]pwm_control; // only [1:0] is used
@@ -104,7 +104,7 @@ module cmn_pwm_wrapper
     always @(posedge OPB_CLK or posedge OPB_RST) begin
         if (OPB_RST) begin
             pwm_config <= {8'h00, DEFAULT_TEST_DURATION, 8'h00};
-        end else if (OPB_WE && OPB_ADDR == `ADDR_PWM_CONFIG) begin
+        end else if (OPB_WE && OPB_ADDR[3:0] == `ADDR_PWM_CONFIG) begin
             pwm_config <= OPB_DI;
             if(pwm_config[23:8] > MAX_TEST_DURATION) begin
                 pwm_config[23:8] <= MAX_TEST_DURATION; // set test duration to max value if it exceeds the limit
@@ -119,13 +119,13 @@ module cmn_pwm_wrapper
             mot_pwm_param23 <= 0;
             mot_pwm_param45 <= 0;
             brk_pwm_param <= 0;
-        end else if (OPB_WE && OPB_ADDR == `ADDR_MOT_PWM_PARAM01) begin
+        end else if (OPB_WE && OPB_ADDR[3:0] == `ADDR_MOT_PWM_PARAM01) begin
             mot_pwm_param01 <= OPB_DI;
-        end else if (OPB_WE && OPB_ADDR == `ADDR_MOT_PWM_PARAM23) begin
+        end else if (OPB_WE && OPB_ADDR[3:0] == `ADDR_MOT_PWM_PARAM23) begin
             mot_pwm_param23 <= OPB_DI;
-        end else if (OPB_WE && OPB_ADDR == `ADDR_MOT_PWM_PARAM45) begin
+        end else if (OPB_WE && OPB_ADDR[3:0] == `ADDR_MOT_PWM_PARAM45) begin
             mot_pwm_param45 <= OPB_DI;
-        end else if (OPB_WE && OPB_ADDR == `ADDR_BRK_PWM_PARAM) begin
+        end else if (OPB_WE && OPB_ADDR[3:0] == `ADDR_BRK_PWM_PARAM) begin
             brk_pwm_param <= OPB_DI;
         end else begin
             mot_pwm_param01 <= mot_pwm_param01;
@@ -139,7 +139,7 @@ module cmn_pwm_wrapper
     always @(posedge OPB_CLK or posedge OPB_RST) begin
         if (OPB_RST) begin
             pwm_control <= 0;
-        end else if (OPB_WE && OPB_ADDR == `ADDR_PWM_CONTROL) begin
+        end else if (OPB_WE && OPB_ADDR[3:0] == `ADDR_PWM_CONTROL) begin
             pwm_control <= OPB_DI;
         end else begin
             pwm_control <= 0; // self-clear to 0
@@ -151,7 +151,7 @@ module cmn_pwm_wrapper
         if (OPB_RST) begin
             OPB_DO <= 0;
         end else if (OPB_RE) begin
-            case (OPB_ADDR)
+            case (OPB_ADDR[3:0])
                 `ADDR_PWM_CONFIG: OPB_DO <= pwm_config;
                 `ADDR_MOT_PWM_PARAM01: OPB_DO <= mot_pwm_param01;
                 `ADDR_MOT_PWM_PARAM23: OPB_DO <= mot_pwm_param23;
@@ -329,4 +329,3 @@ module cmn_pwm_wrapper
     assign brk_en_out_o = (pwm_override_o) ? brk_en_out : 1'b0;
 
 endmodule
-

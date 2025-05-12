@@ -8,11 +8,11 @@ module top_tb;
     integer DAC_TEST               = 0;    // Enable DAC Test
     integer EEPROM_TEST            = 0;    // Enable EEPROM Test
     integer OSC_COUNTER_TEST       = 0;    // Enable Oscillator Counter Test
-    integer GPIO_TEST              = 1;    // Enable GPIO Test
-    integer MSSB_TEST              = 0;    // Enable MSSB Test
+    integer GPIO_TEST              = 0;    // Enable GPIO Test
+    integer MSSB_TEST              = 1;    // Enable MSSB Test
     integer GANTRY_MOT_TEST        = 0;    // Enable Gantry Motor Test
     integer LIFT_MOT_TEST          = 0;    // Enable Lift Motor Test
-
+    integer GANTRY_BRK_TEST        = 0;    // Enable Gantry Brake Test
 
     // System Clock and Reset
     reg SYS_CLK;
@@ -45,13 +45,53 @@ module top_tb;
     wire DAC_CS_N;
     wire DAC_SDO;
 
+    // Gantry Driver
+    wire GNT_PWM_PHA_HI;
+    wire GNT_PWM_PHA_LO;
+    wire GNT_PWM_PHB_HI;
+    wire GNT_PWM_PHB_LO;
+    wire GNT_PWM_PHC_HI;
+    wire GNT_PWM_PHC_LO;
+
+    // Gantry Brake Driver
+    wire GNT_BRK1_PWM_HI;
+    wire GNT_BRK1_PWM_LO;
+    wire GNT_BRK1_RET_PWM_HI;
+    wire GNT_BRK1_RET_PWM_LO;
+    wire GNT_BRK2_PWM_HI;
+    wire GNT_BRK2_PWM_LO;
+    wire GNT_BRK2_RET_PWM_HI;
+    wire GNT_BRK2_RET_PWM_LO;
+    wire GNT_BRK3_PWM_HI;
+    wire GNT_BRK3_PWM_LO;
+    wire GNT_BRK3_RET_PWM_HI;
+    wire GNT_BRK3_RET_PWM_LO;
+
+    // Lift Motor Interface
+    wire LFT_PWM_PHA_HI;
+    wire LFT_PWM_PHA_LO;
+    wire LFT_PWM_PHB_HI;
+    wire LFT_PWM_PHB_LO;
+    wire LFT_PWM_PHC_HI;
+    wire LFT_PWM_PHC_LO;
+
+    wire GNT_MOT_PWR_EN;
+    wire GNT_BRK_PWR_EN;
+    wire LFT_MOT_PWR_EN;
+    reg OC_V_GNT_MOT_DRV;
+    reg OC_V_GNT_BRK_DRV;
+    reg OC_V_LFT_MOT_DRV;
+
+    wire ST_MSSB_TX;
+    wire ST_SRV_MSSB_TX;
+
     // UART Data
     reg [7:0] uart_tdata;
 
     // Clock Period Definition
     parameter CLOCK_PERIOD = 10;    // 100MHz System Clock in ns
 
-    integer ii; // Loop variable for GPIO test
+    integer ii; // Loop variable for GPIO test, pwm test, etc.
 
     // Instantiate the Unit Under Test (UUT)
     top uut (
@@ -85,7 +125,53 @@ module top_tb;
         // DAC Interface
         .ADC_SDOUT(ADC_SDOUT),
         .ST_ADC_CLK(ST_ADC_CLK),
-        .ADC_CNVST(ADC_CNVST)
+        .ADC_CNVST(ADC_CNVST),
+
+    // GANTRY DRIVER
+    .GNT_PWM_PHA_HI(GNT_PWM_PHA_HI),
+    .GNT_PWM_PHA_LO(GNT_PWM_PHA_LO),
+    .GNT_PWM_PHB_HI(GNT_PWM_PHB_HI),
+    .GNT_PWM_PHB_LO(GNT_PWM_PHB_LO),
+    .GNT_PWM_PHC_HI(GNT_PWM_PHC_HI),
+    .GNT_PWM_PHC_LO(GNT_PWM_PHC_LO),
+
+    // GANTRY BRAKE DRIVER
+    .GNT_BRK1_PWM_HI(GNT_BRK1_PWM_HI),
+    .GNT_BRK1_PWM_LO(GNT_BRK1_PWM_LO),
+    .GNT_BRK1_RET_PWM_HI(GNT_BRK1_RET_PWM_HI),
+    .GNT_BRK1_RET_PWM_LO(GNT_BRK1_RET_PWM_LO),
+    .GNT_BRK2_PWM_HI(GNT_BRK2_PWM_HI),
+    .GNT_BRK2_PWM_LO(GNT_BRK2_PWM_LO),
+    .GNT_BRK2_RET_PWM_HI(GNT_BRK2_RET_PWM_HI),
+    .GNT_BRK2_RET_PWM_LO(GNT_BRK2_RET_PWM_LO),
+    .GNT_BRK3_PWM_HI(GNT_BRK3_PWM_HI),
+    .GNT_BRK3_PWM_LO(GNT_BRK3_PWM_LO),
+    .GNT_BRK3_RET_PWM_HI(GNT_BRK3_RET_PWM_HI),
+    .GNT_BRK3_RET_PWM_LO(GNT_BRK3_RET_PWM_LO),
+
+    // LIFT MOTOR INTERFACE
+    .LFT_PWM_PHA_HI(LFT_PWM_PHA_HI),
+    .LFT_PWM_PHA_LO(LFT_PWM_PHA_LO),
+    .LFT_PWM_PHB_HI(LFT_PWM_PHB_HI),
+    .LFT_PWM_PHB_LO(LFT_PWM_PHB_LO),
+    .LFT_PWM_PHC_HI(LFT_PWM_PHC_HI),
+    .LFT_PWM_PHC_LO(LFT_PWM_PHC_LO),
+
+    .GNT_MOT_PWR_EN(GNT_MOT_PWR_EN),
+    .GNT_BRK_PWR_EN(GNT_BRK_PWR_EN),
+    .LFT_MOT_PWR_EN(LFT_MOT_PWR_EN),
+    .OC_V_GNT_MOT_DRV(OC_V_GNT_MOT_DRV),
+    .OC_V_GNT_BRK_DRV(OC_V_GNT_BRK_DRV),
+    .OC_V_LFT_MOT_DRV(OC_V_LFT_MOT_DRV),
+
+    // STAND_MSSB
+    .ST_MSSB_TX(ST_MSSB_TX),
+    .MSSB_RX(ST_MSSB_TX),
+
+    // SERVICNE_MSSB
+    .ST_SRV_MSSB_TX(ST_SRV_MSSB_TX),
+    .SRV_MSSB_RX(ST_SRV_MSSB_TX)
+
     );
 
     // Instantiate EEPROM Simulation Model
@@ -179,6 +265,9 @@ module top_tb;
         // Initialize inputs
         RESET_N = 0;
         UART_RXD = 1;
+        OC_V_GNT_MOT_DRV = 0;
+        OC_V_GNT_BRK_DRV = 0;
+        OC_V_LFT_MOT_DRV = 0;
 
         // Reset the system
         #100;
@@ -395,16 +484,28 @@ module top_tb;
             $display("MSSB Test Start...");
 
             // OPB WRITE: MSSB Write
-            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h0A); uart_send(8'h00); uart_send(8'h00);
-            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA5);
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h09); uart_send(8'h10); uart_send(8'h00);
+            uart_send(8'h80); uart_send(8'h00); uart_send(8'h00); uart_send(8'h30); uart_send(8'hA5);
             repeat(10) uart_recv(uart_tdata);
-            #1000000;    // Wait 1us
+            #1000000;    // Wait 1ms
 
-            // OPB READ: MSSB Read
-            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h0A); uart_send(8'h00); uart_send(8'h00);
+            // OPB READ: MSSB Read status
+            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h09); uart_send(8'h10); uart_send(8'h01);
             uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
             repeat(10) uart_recv(uart_tdata);
-            #1000000;    // Wait 1us
+            #1000;    // Wait 1us
+
+            // OPB READ: MSSB Read status
+            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h09); uart_send(8'h10); uart_send(8'h02);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
+            repeat(10) uart_recv(uart_tdata);
+            #1000;    // Wait 1us
+
+            // OPB READ: MSSB Read status
+            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h09); uart_send(8'h10); uart_send(8'h03);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
+            repeat(10) uart_recv(uart_tdata);
+            #1000;    // Wait 1us
 
             $display("MSSB Test End.");
         end
@@ -414,21 +515,299 @@ module top_tb;
             $display("Gantry Motor Test Start...");
 
             // OPB WRITE: Gantry Motor Write
+            // Write to PWM configuration register, test_mode = 0
             uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h00); uart_send(8'h00);
-            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA5);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h03); uart_send(8'hA5);
             repeat(10) uart_recv(uart_tdata);
-            #1000000;    // Wait 1us
+
+            // Write motor PWM parameters: ADDR_MOT_PWM_PARAM01
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h00); uart_send(8'h01);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h80); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Write motor PWM parameters: ADDR_MOT_PWM_PARAM23
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h00); uart_send(8'h02);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h40); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Write motor PWM parameters: ADDR_MOT_PWM_PARAM45
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h00); uart_send(8'h03);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h20); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Write motor start: ADDR_PWM_CONTROL, pwm_start = 1
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h00); uart_send(8'h05);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h01); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
 
             // OPB READ: Gantry Motor Read
+            // read configuration register
             uart_send(8'h5B); uart_send(8'h00); uart_send(8'h07); uart_send(8'h00); uart_send(8'h00);
             uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
             repeat(10) uart_recv(uart_tdata);
-            #1000000;    // Wait 1us
+            // read ADDR_MOT_PWM_PARAM01 register
+            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h07); uart_send(8'h00); uart_send(8'h01);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
+            repeat(10) uart_recv(uart_tdata);
+            // read ADDR_MOT_PWM_PARAM23 register
+            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h07); uart_send(8'h00); uart_send(8'h02);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
+            repeat(10) uart_recv(uart_tdata);
+            // read ADDR_MOT_PWM_PARAM45 register
+            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h07); uart_send(8'h00); uart_send(8'h03);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
+            repeat(10) uart_recv(uart_tdata);
+            // read ADDR_PWM_CONTROL register
+            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h07); uart_send(8'h00); uart_send(8'h05);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Wait for some time
+            #(1000000); // Wait for 1ms 
+            
+            // Write motor start: ADDR_PWM_CONTROL, pwm_stop = 1
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h00); uart_send(8'h05);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h02); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Wait for some time
+            #(1000000); // Wait for 1ms 
+
+            // OPB WRITE: Gantry Motor Write
+            // Write to PWM configuration register, test_mode = 1, set_test_duration = 16'h10, 16*25 = 0.4ms
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h00); uart_send(8'h00);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h10); uart_send(8'h07); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Write motor start: ADDR_PWM_CONTROL, pwm_start = 1
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h00); uart_send(8'h05);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h01); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Wait for some time
+            #(1000000); // Wait for 1ms
+
+            // Write to PWM configuration register, test_mode = 0
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h00); uart_send(8'h00);
+            uart_send(8'h00); uart_send(8'h0F); uart_send(8'hA0); uart_send(8'h07); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // OPB WRITE: Gantry Motor Write
+            // Write motor start: ADDR_PWM_CONTROL, pwm_start = 1
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h00); uart_send(8'h05);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h01); uart_send(8'hA5);
+            //repeat(10) uart_recv(uart_tdata);
+
+            // Wait for some time
+            #(100000); // Wait for 100us
+/*
+            // Simulate over-current condition
+            OC_V_GNT_MOT_DRV = 1;
+            #50;
+            OC_V_GNT_MOT_DRV = 0;
+*/
+            // Wait for some time
+            #(100000000); // Wait for 100ms
 
             $display("Gantry Motor Test End.");
         end
 
+        // LIFT Motor Test
+        if (LIFT_MOT_TEST == 1) begin
+            $display("Lift Motor Test Start...");
+
+            // OPB WRITE: Gantry Motor Write
+            // Write to PWM configuration register, test_mode = 0
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h08); uart_send(8'h00); uart_send(8'h00);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h03); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Write motor PWM parameters: ADDR_MOT_PWM_PARAM01
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h08); uart_send(8'h00); uart_send(8'h01);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h80); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Write motor PWM parameters: ADDR_MOT_PWM_PARAM23
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h08); uart_send(8'h00); uart_send(8'h02);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h40); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Write motor PWM parameters: ADDR_MOT_PWM_PARAM45
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h08); uart_send(8'h00); uart_send(8'h03);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h20); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Write motor start: ADDR_PWM_CONTROL, pwm_start = 1
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h08); uart_send(8'h00); uart_send(8'h05);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h01); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // OPB READ: Gantry Motor Read
+            // read configuration register
+            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h08); uart_send(8'h00); uart_send(8'h00);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
+            repeat(10) uart_recv(uart_tdata);
+            // read ADDR_MOT_PWM_PARAM01 register
+            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h08); uart_send(8'h00); uart_send(8'h01);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
+            repeat(10) uart_recv(uart_tdata);
+            // read ADDR_MOT_PWM_PARAM23 register
+            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h08); uart_send(8'h00); uart_send(8'h02);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
+            repeat(10) uart_recv(uart_tdata);
+            // read ADDR_MOT_PWM_PARAM45 register
+            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h08); uart_send(8'h00); uart_send(8'h03);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
+            repeat(10) uart_recv(uart_tdata);
+            // read ADDR_PWM_CONTROL register
+            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h08); uart_send(8'h00); uart_send(8'h05);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Wait for some time
+            #(1000000); // Wait for 1ms 
+            
+            // Write motor start: ADDR_PWM_CONTROL, pwm_stop = 1
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h08); uart_send(8'h00); uart_send(8'h05);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h02); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Wait for some time
+            #(1000000); // Wait for 1ms 
+
+            // OPB WRITE: Gantry Motor Write
+            // Write to PWM configuration register, test_mode = 1, set_test_duration = 16'h10, 16*25 = 0.4ms
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h08); uart_send(8'h00); uart_send(8'h00);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h10); uart_send(8'h07); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Write motor start: ADDR_PWM_CONTROL, pwm_start = 1
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h08); uart_send(8'h00); uart_send(8'h05);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h01); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Wait for some time
+            #(1000000); // Wait for 1ms
+
+            // Write to PWM configuration register, test_mode = 1
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h08); uart_send(8'h00); uart_send(8'h00);
+            uart_send(8'h00); uart_send(8'h0F); uart_send(8'hA0); uart_send(8'h07); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // OPB WRITE: Gantry Motor Write
+            // Write motor start: ADDR_PWM_CONTROL, pwm_start = 1
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h08); uart_send(8'h00); uart_send(8'h05);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h01); uart_send(8'hA5);
+            //repeat(10) uart_recv(uart_tdata);
+
+            // Wait for some time
+            #(100000); // Wait for 100us
+if(0) begin
+            // Simulate over-current condition
+            OC_V_LFT_MOT_DRV = 1;
+            #50;
+            OC_V_LFT_MOT_DRV = 0;
+            #(1000000); // Wait for 1ms
+end else begin
+            // Wait for some time
+            #(100000000); // Wait for 100ms
+end
+            #(1000000); // Wait for 1ms
+            $display("Lift Motor Test End.");
+        end
+
+        // Gantry Brake Test
+        if (GANTRY_BRK_TEST == 1) begin
+            $display("Gantry Brake Test Start...");
+            ii = 6; // ii = 1,2,3,4,5,6
+
+            // OPB WRITE: Gantry Motor Write
+            // Write to PWM configuration register, test_mode = 0
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h10*ii); uart_send(8'h00);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h01); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Write motor PWM parameters: ADDR_BRK_PWM_PARAM
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h10*ii); uart_send(8'h04);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h80); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Write motor start: ADDR_PWM_CONTROL, pwm_start = 1
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h10*ii); uart_send(8'h05);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h01); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // OPB READ: Gantry Motor Read
+            // read configuration register
+            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h07); uart_send(8'h10*ii); uart_send(8'h00);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
+            repeat(10) uart_recv(uart_tdata);
+            // read ADDR_BRK_PWM_PARAM register
+            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h07); uart_send(8'h10*ii); uart_send(8'h04);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
+            repeat(10) uart_recv(uart_tdata);
+            // read ADDR_PWM_CONTROL register
+            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h07); uart_send(8'h10*ii); uart_send(8'h05);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Wait for some time
+            #(1000000); // Wait for 1ms 
+            
+            // Write motor start: ADDR_PWM_CONTROL, pwm_stop = 1
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h10*ii); uart_send(8'h05);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h02); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Wait for some time
+            #(1000000); // Wait for 1ms 
+
+            // OPB WRITE: Gantry Motor Write
+            // Write to PWM configuration register, test_mode = 1, set_test_duration = 16'h10, 16*25 = 0.4ms
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h10*ii); uart_send(8'h00);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h10); uart_send(8'h07); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Write motor start: ADDR_PWM_CONTROL, pwm_start = 1
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h10*ii); uart_send(8'h05);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h01); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Wait for some time
+            #(1000000); // Wait for 1ms
+
+            // Write to PWM configuration register, test_mode = 0
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h10*ii); uart_send(8'h00);
+            uart_send(8'h00); uart_send(8'h0F); uart_send(8'hA0); uart_send(8'h07); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // OPB WRITE: Gantry Motor Write
+            // Write motor start: ADDR_PWM_CONTROL, pwm_start = 1
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h10*ii); uart_send(8'h05);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h01); uart_send(8'hA5);
+            //repeat(10) uart_recv(uart_tdata);
+
+            // Wait for some time
+            #(1000000); // Wait for 1ms
+if(1) begin
+            // Simulate over-current condition
+            OC_V_GNT_BRK_DRV = 1;
+            #50;
+            OC_V_GNT_BRK_DRV = 0;
+end else begin
+            // Wait for some time
+            #(100000000); // Wait for 100ms
+end
+            #(1000000); // Wait for 1ms
+            $display("Gantry Brake Test End.");
+        end
+
         $stop;
+    end
+
+    // monitoring uart_tdata
+    initial begin
+        $monitor("Time: %0t, UART Data: %h", $time, uart_tdata);
     end
 
 endmodule

@@ -82,7 +82,7 @@ module cmn_pwm_wrapper_tb;
         // Write motor PWM parameters
         #20;
         OPB_ADDR = `ADDR_MOT_PWM_PARAM01;
-        OPB_DI = 300; // max: 625/2= 312.5
+        OPB_DI = 250; // max: 625/2= 311
         OPB_WE = 1;
         #10;
         OPB_WE = 0;
@@ -94,14 +94,14 @@ module cmn_pwm_wrapper_tb;
         OPB_WE = 0;
 
         OPB_ADDR = `ADDR_MOT_PWM_PARAM45;
-        OPB_DI = 100;
+        OPB_DI = 0;
         OPB_WE = 1;
         #10;
         OPB_WE = 0;
 
         // Write brake PWM parameter
         OPB_ADDR = `ADDR_BRK_PWM_PARAM;
-        OPB_DI = 100; // Example parameter for brake PWM
+        OPB_DI = 311; // Example parameter for brake PWM
         OPB_WE = 1;
         #10;
         OPB_WE = 0;

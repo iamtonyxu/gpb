@@ -815,7 +815,7 @@ cmn_pwm_wrapper gantry_mot_if_0 (
     .OPB_WE(GANTRY_MOT_IF_WE),          // OPB write enable
     .OPB_ADDR(OPB_ADDR),                // OPB address bus
     .OPB_DO(GANTRY_MOT_IN),             // OPB data output
-    .OPB_DI(OPB_DI),                    // OPB data input
+    .OPB_DI(OPB_DO),                    // OPB data input
 
     // Motor and brake signals
     .mot_pwm_o(gantry_mot_pwm),          // Motor PWM output
@@ -836,7 +836,7 @@ cmn_pwm_wrapper gantry_brk1_if_0 (
     .OPB_WE(GANTRY_BRK1_IF_WE),         // OPB write enable
     .OPB_ADDR(OPB_ADDR),                // OPB address bus
     .OPB_DO(GANTRY_BRK1_IN),            // OPB data output
-    .OPB_DI(OPB_DI),                    // OPB data input
+    .OPB_DI(OPB_DO),                    // OPB data input
 
     // Motor and brake signals
     .mot_pwm_o(),                       // Motor PWM output
@@ -857,7 +857,7 @@ cmn_pwm_wrapper gantry_brk2_if_0 (
     .OPB_WE(GANTRY_BRK2_IF_WE),         // OPB write enable
     .OPB_ADDR(OPB_ADDR),                // OPB address bus
     .OPB_DO(GANTRY_BRK2_IN),            // OPB data output
-    .OPB_DI(OPB_DI),                    // OPB data input
+    .OPB_DI(OPB_DO),                    // OPB data input
 
     // Motor and brake signals
     .mot_pwm_o(),                       // Motor PWM output
@@ -878,7 +878,7 @@ cmn_pwm_wrapper gantry_brk3_if_0 (
     .OPB_WE(GANTRY_BRK3_IF_WE),         // OPB write enable
     .OPB_ADDR(OPB_ADDR),                // OPB address bus
     .OPB_DO(GANTRY_BRK3_IN),            // OPB data output
-    .OPB_DI(OPB_DI),                    // OPB data input
+    .OPB_DI(OPB_DO),                    // OPB data input
 
     // Motor and brake signals
     .mot_pwm_o(),                       // Motor PWM output
@@ -899,7 +899,7 @@ cmn_pwm_wrapper gantry_brk1_ret_if_0 (
     .OPB_WE(GANTRY_BRK1_RET_IF_WE),     // OPB write enable
     .OPB_ADDR(OPB_ADDR),                // OPB address bus
     .OPB_DO(GANTRY_BRK1_RET_IN),        // OPB data output
-    .OPB_DI(OPB_DI),                    // OPB data input
+    .OPB_DI(OPB_DO),                    // OPB data input
 
     // Motor and brake signals
     .mot_pwm_o(),                       // Motor PWM output
@@ -920,7 +920,7 @@ cmn_pwm_wrapper gantry_brk2_ret_if_0 (
     .OPB_WE(GANTRY_BRK2_RET_IF_WE),     // OPB write enable
     .OPB_ADDR(OPB_ADDR),                // OPB address bus
     .OPB_DO(GANTRY_BRK2_RET_IN),        // OPB data output
-    .OPB_DI(OPB_DI),                    // OPB data input
+    .OPB_DI(OPB_DO),                    // OPB data input
 
     // Motor and brake signals
     .mot_pwm_o(),                       // Motor PWM output
@@ -941,7 +941,7 @@ cmn_pwm_wrapper gantry_brk3_ret_if_0 (
     .OPB_WE(GANTRY_BRK3_RET_IF_WE),     // OPB write enable
     .OPB_ADDR(OPB_ADDR),                // OPB address bus
     .OPB_DO(GANTRY_BRK3_RET_IN),        // OPB data output
-    .OPB_DI(OPB_DI),                    // OPB data input
+    .OPB_DI(OPB_DO),                    // OPB data input
 
     // Motor and brake signals
     .mot_pwm_o(),                       // Motor PWM output
@@ -962,7 +962,7 @@ cmn_pwm_wrapper lift_mot_if_0 (
     .OPB_WE(LIFT_MOT_IF_WE),            // OPB write enable
     .OPB_ADDR(OPB_ADDR),                // OPB address bus
     .OPB_DO(LIFT_MOT_IN),               // OPB data output
-    .OPB_DI(OPB_DI),                    // OPB data input
+    .OPB_DI(OPB_DO),                    // OPB data input
 
     // Motor and brake signals
     .mot_pwm_o(lift_mot_pwm),           // Motor PWM output
