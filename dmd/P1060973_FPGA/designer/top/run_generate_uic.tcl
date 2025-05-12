@@ -25,6 +25,6 @@ set_override_file \
 set_auto_calib_timeout \
     -value {3000}
 defvar_set -name PA5_PRINT_DEVICE_SELECTION_INIT_DATA_FILE -value 1
-defvar_set -name RESTRICTPROBEPINS                         -value 1
+defvar_set -name RESTRICTPROBEPINS                         -value 0
 defvar_set -name SYSTEM_CONTROLLER_SUSPEND_MODE            -value 0
 defvar_set -name FHB_FLOW                                  -value 0

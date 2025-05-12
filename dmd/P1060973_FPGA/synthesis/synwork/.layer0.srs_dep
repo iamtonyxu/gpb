@@ -1,1 +1,3 @@
-afifo_8s_4s_8s_4s_mem_8640_initial_block
+afifo_8s_4s_8s_4s_mem_14560_initial_block
+afifo_8s_2s_8s_2s_mem_14560_initial_block
+afifo_24s_4s_24s_4s_mem_14560_initial_block

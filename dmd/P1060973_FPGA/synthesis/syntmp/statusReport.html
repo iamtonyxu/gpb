@@ -33,40 +33,40 @@
          </tr>
   <tr>
   <td class="optionTitle"> (compiler)</td><td>Complete</td>
- <td>47</td>
- <td>230</td>
+ <td>107</td>
+ <td>367</td>
 <td>0</td>
 <td>-</td>
-<td>00m:04s</td>
+<td>00m:11s</td>
 <td>-</td>
-<td><font size="-1">2025/4/25</font><br/><font size="-2">20:24</font></td>
+<td><font size="-1">2025/5/12</font><br/><font size="-2">14:36</font></td>
 </tr> 
 
  <tr>
   <td class="optionTitle"> (premap)</td><td>Complete</td>
- <td>27</td>
- <td>18</td>
+ <td>135</td>
+ <td>60</td>
 <td>0</td>
 <td>0m:01s</td>
 <td>0m:01s</td>
-<td>260MB</td>
-<td><font size="-1">2025/4/25</font><br/><font size="-2">20:24</font></td>
+<td>284MB</td>
+<td><font size="-1">2025/5/12</font><br/><font size="-2">14:37</font></td>
 </tr> 
 
  <tr>
   <td class="optionTitle"> (fpga_mapper)</td><td>Complete</td>
- <td>52</td>
- <td>70</td>
+ <td>531</td>
+ <td>97</td>
 <td>0</td>
-<td>0m:04s</td>
-<td>0m:05s</td>
-<td>282MB</td>
-<td><font size="-1">2025/4/25</font><br/><font size="-2">20:24</font></td>
+<td>0m:46s</td>
+<td>0m:48s</td>
+<td>403MB</td>
+<td><font size="-1">2025/5/12</font><br/><font size="-2">14:37</font></td>
 </tr> 
 
 <tr>
   <td class="optionTitle">Multi-srs Generator</td>
-  <td>Complete</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td>00m:01s</td><td class="empty"></td><td class="empty"></td><td><font size="-1">2025/4/25</font><br/><font size="-2">20:24</font></td> 		</tbody>
+  <td>Complete</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td></td><td class="empty"></td><td class="empty"></td><td><font size="-1">2025/5/12</font><br/><font size="-2">14:36</font></td> 		</tbody>
      </table>
  <br> 
  <table width="100%" border="1" cellspacing= "0" cellpadding= "0" >
@@ -74,23 +74,26 @@
 <tfoot> <tr> <td class="optionTitle" colspan="2"></td><td class="optionTitle" colspan="2"></td></tr> 
  </tfoot> 
  <tbody> <tr> 
-<td title ="Total Carry Cells used" class="optionTitle" align="left">Carry Cells</td> <td>126</td>
-<td title ="Total Sequential Cells used" class="optionTitle" align="left">Sequential Cells</td> <td>523</td>
+<td title ="Total Carry Cells used" class="optionTitle" align="left">Carry Cells</td> <td>2197</td>
+<td title ="Total Sequential Cells used" class="optionTitle" align="left">Sequential Cells</td> <td>4778</td>
 </tr>
 <tr> 
 <td title ="Total DSP Blocks used" class="optionTitle" align="left">DSP Blocks
 (dsp_used)</td> <td>0</td>
-<td title ="Total I/O Cells used" class="optionTitle" align="left">I/O Cells</td> <td>8</td>
+<td title ="Total I/O Cells used" class="optionTitle" align="left">I/O Cells</td> <td>148</td>
 </tr>
 <tr> 
-<td title ="Total Global Clock Buffers used" class="optionTitle" align="left">Global Clock Buffers</td> <td>2</td>
+<td title ="Total Global Clock Buffers used" class="optionTitle" align="left">Global Clock Buffers</td> <td>15</td>
+<td title ="Total RAM1K20 used" class="optionTitle" align="left">RAM1K20
+(v_ram)</td> <td>1</td>
+</tr>
+<tr> 
 <td title ="Total RAM64x12 used" class="optionTitle" align="left">RAM64x12
-(v_ram)</td> <td>2</td>
-</tr>
-<tr> 
+(v_ram)</td> <td>6</td>
 <td title ="Total LUTs used" class="optionTitle" align="left">LUTs
-(total_luts)</td> <td>716</td>
-<td class="optionTitle"></td><td></td></tr> 
+(total_luts)</td> <td>5876</td>
+</tr>
+ 
 </tbody>
     </table><br>
  <table width="100%" border="1" cellspacing= "0" cellpadding= "0" >
@@ -99,8 +102,18 @@
  </tfoot> 
 <tbody> 
    <tr><th class="optionTitle" align= "left ">Clock Name</th><th class="optionTitle" align= "left ">Req Freq</th><th class="optionTitle" align= "left ">Est Freq</th><th class="optionTitle" align= "left ">Slack</th></tr> 
-<tr> <td  align="left">top|DBUG_HEADER10</td><td  align="left">100.0 MHz</td><td  align="left">NA</td><td  align="left">NA</td></tr> 
-<tr> <td  align="left">top|SYS_CLK</td><td  align="left">100.0 MHz</td><td  align="left">109.1 MHz</td><td  align="left">0.417</td></tr> 
+<tr> <td  align="left">ADC_ADS8864_IF|ram_wr_clk_inferred_clock</td><td  align="left">100.0 MHz</td><td  align="left">NA</td><td  align="left">NA</td></tr> 
+<tr> <td  align="left">CLOCK_DIV_9|N_17_inferred_clock</td><td  align="left">100.0 MHz</td><td  align="left">218.6 MHz</td><td  align="left">2.712</td></tr> 
+<tr> <td  align="left">CLOCK_DIV_10|N_17_inferred_clock</td><td  align="left">100.0 MHz</td><td  align="left">217.9 MHz</td><td  align="left">5.411</td></tr> 
+<tr> <td  align="left">CLOCK_DIV_11_0|N_17_inferred_clock</td><td  align="left">100.0 MHz</td><td  align="left">236.6 MHz</td><td  align="left">5.773</td></tr> 
+<tr> <td  align="left">CLOCK_DIV_11_1|N_17_inferred_clock</td><td  align="left">100.0 MHz</td><td  align="left">236.6 MHz</td><td  align="left">5.773</td></tr> 
+<tr> <td  align="left">CLOCK_DIV_11_2|N_17_inferred_clock</td><td  align="left">100.0 MHz</td><td  align="left">236.6 MHz</td><td  align="left">5.773</td></tr> 
+<tr> <td  align="left">CLOCK_DIV_11_3|N_17_inferred_clock</td><td  align="left">100.0 MHz</td><td  align="left">236.6 MHz</td><td  align="left">5.773</td></tr> 
+<tr> <td  align="left">CLOCK_DIV_11_4|N_17_inferred_clock</td><td  align="left">100.0 MHz</td><td  align="left">236.6 MHz</td><td  align="left">5.773</td></tr> 
+<tr> <td  align="left">CLOCK_DIV_11_5|N_17_inferred_clock</td><td  align="left">100.0 MHz</td><td  align="left">236.6 MHz</td><td  align="left">5.773</td></tr> 
+<tr> <td  align="left">CLOCK_DIV_11_6|N_17_inferred_clock</td><td  align="left">100.0 MHz</td><td  align="left">217.9 MHz</td><td  align="left">5.411</td></tr> 
+<tr> <td  align="left">top|DBUG_HEADER10</td><td  align="left">100.0 MHz</td><td  align="left">405.1 MHz</td><td  align="left">7.531</td></tr> 
+<tr> <td  align="left">top|FPGA_100M_CLK</td><td  align="left">100.0 MHz</td><td  align="left">113.6 MHz</td><td  align="left">0.597</td></tr> 
 </tbody> 
  </table>
 <br>

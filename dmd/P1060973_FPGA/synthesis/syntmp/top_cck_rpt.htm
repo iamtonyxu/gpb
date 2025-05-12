@@ -1,5 +1,5 @@
 <html><body><samp><pre>
-<!@TC:1745583879>
+<!@TC:1747031807>
 
 Copyright (C) 1994-2023 Synopsys, Inc.
 This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
@@ -14,7 +14,7 @@ Hostname: LAPTOP-6FQD1N4B
 
 Implementation : synthesis
 
-# Written on Fri Apr 25 20:24:46 2025
+# Written on Mon May 12 14:37:01 2025
 
 ##### DESIGN INFO #######################################################
 
@@ -36,44 +36,212 @@ Found 0 issues in 0 out of 0 constraints
 Clock Relationships
 *******************
 
-Starting              Ending                |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
--------------------------------------------------------------------------------------------------------------------------------------------------------
-top|SYS_CLK           top|SYS_CLK           |     10.000           |     No paths         |     5.000            |     5.000                            
-top|SYS_CLK           top|DBUG_HEADER10     |     Diff grp         |     No paths         |     No paths         |     No paths                         
-top|DBUG_HEADER10     top|SYS_CLK           |     Diff grp         |     No paths         |     No paths         |     No paths                         
-=======================================================================================================================================================
+Starting                                     Ending                                       |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+top|FPGA_100M_CLK                            top|FPGA_100M_CLK                            |     10.000           |     10.000           |     5.000            |     5.000                            
+top|FPGA_100M_CLK                            CLOCK_DIV_11_6|N_17_inferred_clock           |     Diff grp         |     No paths         |     No paths         |     No paths                         
+top|FPGA_100M_CLK                            CLOCK_DIV_11_5|N_17_inferred_clock           |     Diff grp         |     No paths         |     No paths         |     No paths                         
+top|FPGA_100M_CLK                            CLOCK_DIV_11_4|N_17_inferred_clock           |     Diff grp         |     No paths         |     No paths         |     No paths                         
+top|FPGA_100M_CLK                            CLOCK_DIV_11_3|N_17_inferred_clock           |     Diff grp         |     No paths         |     No paths         |     No paths                         
+top|FPGA_100M_CLK                            CLOCK_DIV_11_2|N_17_inferred_clock           |     Diff grp         |     No paths         |     No paths         |     No paths                         
+top|FPGA_100M_CLK                            CLOCK_DIV_11_1|N_17_inferred_clock           |     Diff grp         |     No paths         |     No paths         |     No paths                         
+top|FPGA_100M_CLK                            CLOCK_DIV_11_0|N_17_inferred_clock           |     Diff grp         |     No paths         |     No paths         |     No paths                         
+top|FPGA_100M_CLK                            CLOCK_DIV_10|N_17_inferred_clock             |     Diff grp         |     No paths         |     No paths         |     No paths                         
+top|FPGA_100M_CLK                            CLOCK_DIV_9|N_17_inferred_clock              |     Diff grp         |     No paths         |     No paths         |     No paths                         
+top|FPGA_100M_CLK                            ADC_ADS8864_IF|ram_wr_clk_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+top|FPGA_100M_CLK                            top|DBUG_HEADER10                            |     Diff grp         |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_11_6|N_17_inferred_clock           top|FPGA_100M_CLK                            |     Diff grp         |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_11_6|N_17_inferred_clock           CLOCK_DIV_11_6|N_17_inferred_clock           |     10.000           |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_11_5|N_17_inferred_clock           top|FPGA_100M_CLK                            |     Diff grp         |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_11_5|N_17_inferred_clock           CLOCK_DIV_11_5|N_17_inferred_clock           |     10.000           |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_11_4|N_17_inferred_clock           top|FPGA_100M_CLK                            |     Diff grp         |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_11_4|N_17_inferred_clock           CLOCK_DIV_11_4|N_17_inferred_clock           |     10.000           |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_11_3|N_17_inferred_clock           top|FPGA_100M_CLK                            |     Diff grp         |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_11_3|N_17_inferred_clock           CLOCK_DIV_11_3|N_17_inferred_clock           |     10.000           |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_11_2|N_17_inferred_clock           top|FPGA_100M_CLK                            |     Diff grp         |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_11_2|N_17_inferred_clock           CLOCK_DIV_11_2|N_17_inferred_clock           |     10.000           |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_11_1|N_17_inferred_clock           top|FPGA_100M_CLK                            |     Diff grp         |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_11_1|N_17_inferred_clock           CLOCK_DIV_11_1|N_17_inferred_clock           |     10.000           |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_11_0|N_17_inferred_clock           top|FPGA_100M_CLK                            |     Diff grp         |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_11_0|N_17_inferred_clock           CLOCK_DIV_11_0|N_17_inferred_clock           |     10.000           |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_10|N_17_inferred_clock             top|FPGA_100M_CLK                            |     Diff grp         |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_10|N_17_inferred_clock             CLOCK_DIV_10|N_17_inferred_clock             |     10.000           |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_9|N_17_inferred_clock              top|FPGA_100M_CLK                            |     Diff grp         |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_9|N_17_inferred_clock              CLOCK_DIV_9|N_17_inferred_clock              |     10.000           |     10.000           |     5.000            |     5.000                            
+ADC_ADS8864_IF|ram_wr_clk_inferred_clock     top|FPGA_100M_CLK                            |     Diff grp         |     No paths         |     No paths         |     No paths                         
+top|DBUG_HEADER10                            top|FPGA_100M_CLK                            |     Diff grp         |     No paths         |     No paths         |     No paths                         
+top|DBUG_HEADER10                            top|DBUG_HEADER10                            |     10.000           |     No paths         |     No paths         |     No paths                         
+=====================================================================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 
 
-<a name=UnconstrainedStartEndPointsCCK43></a>Unconstrained Start/End Points</a>
+<a name=UnconstrainedStartEndPointsCCK83></a>Unconstrained Start/End Points</a>
 ******************************
 
+p:ADC_CNVST
+p:ADC_SDOUT
+p:AD_MUX1_N
+p:AD_MUX2_N
+p:AD_MUX3_N
+p:AD_MUX4_N
+p:AD_MUX5_N
+p:AD_SEL0
+p:AD_SEL1
+p:AD_SEL2
+p:CCH_LAT_LNG_FLOAT_N
+p:CCH_LFT_DWN_N
+p:CCH_LFT_MOT_EN_N
+p:DAC_CS_N
+p:DAC_SDI
+p:DAC_SDO
+p:DBUG_ACTIVE
+p:DBUG_CS_N
 p:DBUG_HEADER2
 p:DBUG_HEADER4
+p:DBUG_MISO
+p:DBUG_MOSI
+p:DBUG_SCLK
+p:DMD_PWR_OK
+p:EEP_CS_N
+p:EEP_SCK
+p:EEP_SI
+p:EEP_SO
+p:EMOPS_STAT1
+p:EMOPS_STAT2
+p:EMO_GOOD_N
+p:EM_CCH_24V_EN
+p:EM_DOWN_LIMIT
+p:EM_UP_LIMIT
+p:EXOPS_GNT_24V_EN
+p:EXT_BRK1_DRV_EN
+p:EXT_BRK2_DRV_EN
+p:EXT_BRK3_DRV_EN
+p:FAN_EN
+p:FAN_FAIL_N
+p:GNT_BRK1_FB_N
+p:GNT_BRK1_PWM_HI
+p:GNT_BRK1_PWM_LO
+p:GNT_BRK1_RET_PWM_HI
+p:GNT_BRK1_RET_PWM_LO
+p:GNT_BRK2_FB_N
+p:GNT_BRK2_PWM_HI
+p:GNT_BRK2_PWM_LO
+p:GNT_BRK2_RET_PWM_HI
+p:GNT_BRK2_RET_PWM_LO
+p:GNT_BRK3_FB_N
+p:GNT_BRK3_PWM_HI
+p:GNT_BRK3_PWM_LO
+p:GNT_BRK3_RET_PWM_HI
+p:GNT_BRK3_RET_PWM_LO
+p:GNT_BRK_EXT_EN
+p:GNT_BRK_PWR_EN
+p:GNT_BRK_PWR_FLT_N
+p:GNT_BRK_SW_MON
+p:GNT_CCW_LIMIT
+p:GNT_CW_LIMIT
+p:GNT_EMOPS_EN
+p:GNT_EMOPS_OV_L
+p:GNT_HW_EN_MON
+p:GNT_HW_EN_N
+p:GNT_MOT_PWR_EN
+p:GNT_MOT_PWR_FLT_N
+p:GNT_PWM_PHA_HI
+p:GNT_PWM_PHA_LO
+p:GNT_PWM_PHB_HI
+p:GNT_PWM_PHB_LO
+p:GNT_PWM_PHC_HI
+p:GNT_PWM_PHC_LO
+p:GNT_SHUNT_EN
+p:GNT_SHUNT_ON
+p:GNT_ST_DISB
+p:GNT_ST_DISB_MON
+p:GPIO2
+p:GPIO3
+p:GPIO5
+p:HSWAP_FAULT
+p:LAT_LNG_BRK_RLS
+p:LFT_DOWN_LIMIT
+p:LFT_EMOPS_EN
+p:LFT_EMOPS_OV_L
+p:LFT_HALL_PWR_EN_N
+p:LFT_HALL_PWR_OK
+p:LFT_HALL_SNS1_N
+p:LFT_HALL_SNS2_N
+p:LFT_HALL_SNS3_N
+p:LFT_HW_EN_MON
+p:LFT_HW_EN_N
+p:LFT_MOT_PWR_EN
+p:LFT_MOT_PWR_FLT_N
+p:LFT_MTN_EN_N
+p:LFT_PWM_PHA_HI
+p:LFT_PWM_PHA_LO
+p:LFT_PWM_PHB_HI
+p:LFT_PWM_PHB_LO
+p:LFT_PWM_PHC_HI
+p:LFT_PWM_PHC_LO
+p:LFT_ROT_BRK_RLS
+p:LFT_SERIO_FLT_N
+p:LFT_SER_CLK
+p:LFT_SER_DATA0
+p:LFT_SER_DATA1
+p:LFT_SER_PAGE_SEL_N
+p:LFT_SER_SYNC
+p:LFT_SHUNT_EN
+p:LFT_SHUNT_ON
+p:LFT_ST_DISB
+p:LFT_ST_DISB_MON
+p:LFT_UP_LIMIT
+p:MAINS_LEVEL_FB
+p:MSSB_COMM_FAULT
+p:MSSB_RX
+p:OC_V_GNT_BRK_DRV
+p:OC_V_GNT_MOT_DRV
+p:OC_V_LFT_MOT_DRV
+p:P5V_ISO_MON_GNT
+p:P5V_ISO_MON_LFT
+p:P12V_ACT_DIODE_ON_N
+p:P12V_ISO_EN
+p:P24V_GNT_EMOPS_EN
+p:P24V_GNT_EMOPS_PG
+p:P24V_GOOD_N
+p:P24V_LFT_EMOPS_EN
+p:P24V_LFT_EMOPS_PG
+p:PAN_24V_SW
 p:POWER_GOOD
+p:PWM_BRK_EXT_FAULT
 p:RESET_N
+p:SITE_24V_PWR_OK_N
+p:SPARE_MON
+p:SPD2_24V_STATUS_N
+p:SPDIO_FLT_N
+p:SPD_EMOPS_FLT_N
+p:SRVC_CCH_GNT_N
+p:SRV_MSSB_RX
+p:ST_MSSB_TX
+p:ST_SRV_MSSB_TX
+p:WD_TRIG
 
 
-<a name=InapplicableconstraintsCCK44></a>Inapplicable constraints</a>
+<a name=InapplicableconstraintsCCK84></a>Inapplicable constraints</a>
 ************************
 
 (none)
 
 
-<a name=ApplicableConstraintsWithIssuesCCK45></a>Applicable constraints with issues</a>
+<a name=ApplicableConstraintsWithIssuesCCK85></a>Applicable constraints with issues</a>
 **********************************
 
 (none)
 
 
-<a name=ConstraintsWithMatchingWildcardExpressionsCCK46></a>Constraints with matching wildcard expressions</a>
+<a name=ConstraintsWithMatchingWildcardExpressionsCCK86></a>Constraints with matching wildcard expressions</a>
 **********************************************
 
 (none)
 
 
-<a name=LibraryReportCCK47></a>Library Report</a>
+<a name=LibraryReportCCK87></a>Library Report</a>
 **************
 
 

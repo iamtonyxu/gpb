@@ -1,5 +1,5 @@
 ----------------------------------------------------------------
--Pin Report - Date: Fri Apr 25 20:25:33 2025 Pinchecksum: NOT-AVAILABLE
+-Pin Report - Date: Mon May 12 15:05:51 2025 Pinchecksum: NOT-AVAILABLE
 -Product: Designer
 -Release: v2024.2
 -Version: 2024.2.0.13
@@ -9,489 +9,489 @@
 -Package: FCG484
 -----------------------------------------------------------------
 
-Number |Port          |Function                                               |State         |I/O Std  |Direction |Used I/O Reg |User I/O Lock Down |Clamp Diode |Resistor Pull |Use I/O Calibration from the lane |Schmitt Trigger |Vcm Input Range |On Die Termination |Odt Value (Ohm) |Input Delay |Slew |Output Drive (mA) |Impedance (ohm) |Output Load (pF) |Source Termination (Ohm) |Output Delay |
--------|--------------|-------------------------------------------------------|--------------|---------|----------|-------------|-------------------|------------|--------------|----------------------------------|----------------|----------------|-------------------|----------------|------------|-----|------------------|----------------|-----------------|-------------------------|-------------|
-A1                     VSS                                                     Reserved       
-A2                     GPIO145PB2/CLKIN_S_2/CCC_SW_CLKIN_S_2/CCC_SW_PLL1_OUT0  Unassigned     
-A3      DBUG_HEADER2   GPIO145NB2                                              Fixed          LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
-A4                     VSS                                                     Reserved       
-A5                     GPIO3NB2                                                Unassigned     
-A6                     GPIO9PB2                                                Unassigned     
-A7                     GPIO9NB2                                                Unassigned     
-A8                     GPIO11NB2                                               Unassigned     
-A9                     VDDI2                                                   Reserved       
-A10                    GPIO16PB2/LPRB_A                                        User Reserved  
-A11                    GPIO16NB2/LPRB_B                                        User Reserved  
-A12                    GPIO17PB2/CLKIN_S_7                                     Unassigned     
-A13                    GPIO17NB2                                               Unassigned     
-A14                    VSS                                                     Reserved       
-A15                    GPIO35PB2/CLKIN_S_9/CCC_SE_CLKIN_S_9                    Unassigned     
-A16                    GPIO35NB2                                               Unassigned     
-A17                    GPIO32PB2/DQS/CCC_SE_PLL0_OUT0                          Unassigned     
-A18                    VSS                                                     Reserved       
-A19                    XCVR_1_RX0_N                                            Reserved       
-A20                    XCVR_1_RX0_P                                            Reserved       
-A21                    VSS                                                     Reserved       
-A22                    VSS                                                     Reserved       
-AA1                    HSIO102NB0                                              Unassigned     
-AA2                    HSIO98PB0                                               Unassigned     
-AA3                    HSIO100NB0                                              Unassigned     
-AA4                    VSS                                                     Reserved       
-AA5                    HSIO93PB0/DQS                                           Unassigned     
-AA6                    HSIO94NB0                                               Unassigned     
-AA7                    HSIO91PB0                                               Unassigned     
-AA8                    HSIO90PB0                                               Unassigned     
-AA9                    VDDI1                                                   Reserved       
-AA10                   HSIO54PB1                                               Unassigned     
-AA11                   HSIO55NB1                                               Unassigned     
-AA12                   HSIO51PB1/DQS/CCC_NE_PLL1_OUT0                          Unassigned     
-AA13                   HSIO52PB1                                               Unassigned     
-AA14                   VSS                                                     Reserved       
-AA15                   HSIO48NB1                                               Unassigned     
-AA16                   HSIO46PB1                                               Unassigned     
-AA17                   HSIO45NB1/DQS                                           Unassigned     
-AA18                   VSS                                                     Reserved       
-AA19                   XCVR_0_RX3_N                                            Reserved       
-AA20                   XCVR_0_RX3_P                                            Reserved       
-AA21                   VSS                                                     Reserved       
-AA22                   VSS                                                     Reserved       
-AB1                    VSS                                                     Reserved       
-AB2                    HSIO98NB0                                               Unassigned     
-AB3                    HSIO96PB0                                               Unassigned     
-AB4                    HSIO96NB0                                               Unassigned     
-AB5                    HSIO93NB0/DQS                                           Unassigned     
-AB6                    VDDI0                                                   Reserved       
-AB7                    HSIO91NB0                                               Unassigned     
-AB8                    HSIO57PB1/DQS                                           Unassigned     
-AB9                    HSIO57NB1/DQS                                           Unassigned     
-AB10                   HSIO54NB1                                               Unassigned     
-AB11                   VSS                                                     Reserved       
-AB12                   HSIO51NB1/DQS                                           Unassigned     
-AB13                   HSIO52NB1                                               Unassigned     
-AB14                   HSIO50PB1/CLKIN_N_8/CCC_NE_CLKIN_N_8/CCC_NE_PLL1_OUT0   Unassigned     
-AB15                   HSIO50NB1                                               Unassigned     
-AB16                   VDDI1                                                   Reserved       
-AB17                   HSIO45PB1/DQS/CCC_NE_PLL0_OUT0                          Unassigned     
-AB18                   VSS                                                     Reserved       
-AB19                   VSS                                                     Reserved       
-AB20                   VSS                                                     Reserved       
-AB21                   XCVR_0_TX3_N                                            Reserved       
-AB22                   XCVR_0_TX3_P                                            Reserved       
-B1                     GPIO144NB2/DQS                                          Unassigned     
-B2      DBUG_HEADER8   GPIO147PB2/CLKIN_S_3/CCC_SW_CLKIN_S_3                   Fixed          LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
-B3      DBUG_HEADER10  GPIO147NB2                                              Fixed          LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
-B4                     GPIO3PB2                                                Unassigned     
-B5                     GPIO5NB2                                                Unassigned     
-B6                     VDDI2                                                   Reserved       
-B7                     GPIO7NB2                                                Unassigned     
-B8                     GPIO11PB2                                               Unassigned     
-B9                     GPIO14PB2/DQS                                           Unassigned     
-B10                    GPIO14NB2/DQS                                           Unassigned     
-B11                    VSS                                                     Reserved       
-B12                    GPIO12PB2/CLKIN_S_4                                     Unassigned     
-B13                    GPIO12NB2                                               Unassigned     
-B14                    GPIO33PB2/CLKIN_S_8/CCC_SE_CLKIN_S_8/CCC_SE_PLL0_OUT0   Unassigned     
-B15                    GPIO33NB2                                               Unassigned     
-B16                    VDDI2                                                   Reserved       
-B17                    GPIO32NB2/DQS                                           Unassigned     
-B18                    VSS                                                     Reserved       
-B19                    VDDA                                                    Reserved       
-B20                    VSS                                                     Reserved       
-B21                    XCVR_1_TX0_N                                            Reserved       
-B22                    XCVR_1_TX0_P                                            Reserved       
-C1                     GPIO144PB2/DQS/CCC_SW_PLL1_OUT0                         Unassigned     
-C2                     GPIO143NB2                                              Unassigned     
-C3                     VDDI2                                                   Reserved       
-C4                     GPIO1NB2                                                Unassigned     
-C5                     GPIO5PB2                                                Unassigned     
-C6                     GPIO7PB2                                                Unassigned     
-C7                     GPIO6NB2                                                Unassigned     
-C8                     VSS                                                     Reserved       
-C9                     GPIO13PB2/CLKIN_S_5                                     Unassigned     
-C10                    GPIO13NB2                                               Unassigned     
-C11                    GPIO15PB2/CLKIN_S_6                                     Unassigned     
-C12                    GPIO15NB2                                               Unassigned     
-C13                    VDDI2                                                   Reserved       
-C14                    GPIO31PB2                                               Unassigned     
-C15                    GPIO31NB2                                               Unassigned     
-C16                    GPIO34PB2/CCC_SE_PLL0_OUT1                              Unassigned     
-C17                    GPIO34NB2                                               Unassigned     
-C18                    VSS                                                     Reserved       
-C19                    XCVR_1_RX1_N                                            Reserved       
-C20                    XCVR_1_RX1_P                                            Reserved       
-C21                    VDDA                                                    Reserved       
-C22                    VSS                                                     Reserved       
-D1      POWER_GOOD     GPIO142NB2                                              Fixed          LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   12                 ---              5                 ---                       OFF           
-D2                     GPIO143PB2/CCC_SW_CLKIN_S_1                             Unassigned     
-D3      DBUG_HEADER6   GPIO146NB2                                              Fixed          LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
-D4                     GPIO1PB2                                                Unassigned     
-D5                     VSS                                                     Reserved       
-D6                     GPIO4NB2                                                Unassigned     
-D7                     GPIO6PB2                                                Unassigned     
-D8                     GPIO8NB2/DQS                                            Unassigned     
-D9                     GPIO10NB2                                               Unassigned     
-D10                    VDDI2                                                   Reserved       
-D11                    GPIO26PB2/DQS                                           Unassigned     
-D12                    GPIO26NB2/DQS                                           Unassigned     
-D13                    GPIO29PB2                                               Unassigned     
-D14                    GPIO30PB2                                               Unassigned     
-D15                    VSS                                                     Reserved       
-D16                    GPIO38PB2/DQS/CCC_SE_PLL1_OUT0                          Unassigned     
-D17                    GPIO38NB2/DQS                                           Unassigned     
-D18                    VSS                                                     Reserved       
-D19                    XCVR_VREF                                               Reserved       
-D20                    VSS                                                     Reserved       
-D21                    XCVR_1_TX1_N                                            Reserved       
-D22                    XCVR_1_TX1_P                                            Reserved       
-E1                     GPIO142PB2/CCC_SW_CLKIN_S_0                             Unassigned     
-E2                     VSS                                                     Reserved       
-E3      DBUG_HEADER4   GPIO146PB2/CCC_SW_PLL1_OUT1                             Fixed          LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   12                 ---              5                 ---                       OFF           
-E4                     GPIO2NB2/DQS                                            Unassigned     
-E5                     GPIO0NB2                                                Unassigned     
-E6                     GPIO4PB2                                                Unassigned     
-E7                     VDDI2                                                   Reserved       
-E8                     GPIO8PB2/DQS                                            Unassigned     
-E9                     GPIO10PB2                                               Unassigned     
-E10                    GPIO25NB2                                               Unassigned     
-E11                    GPIO28PB2                                               Unassigned     
-E12                    VSS                                                     Reserved       
-E13                    GPIO29NB2                                               Unassigned     
-E14                    GPIO30NB2                                               Unassigned     
-E15                    GPIO39PB2/CCC_SE_CLKIN_S_10/CCC_SE_PLL1_OUT0            Unassigned     
-E16                    GPIO39NB2                                               Unassigned     
-E17                    VDDI2                                                   Reserved       
-E18                    VSS                                                     Reserved       
-E19                    XCVR_1C_REFCLK_P                                        Reserved       
-E20                    XCVR_1C_REFCLK_N                                        Reserved       
-E21                    VDDA                                                    Reserved       
-E22                    VSS                                                     Reserved       
-F1                     GPIO134NB4                                              Unassigned     
-F2                     GPIO134PB4                                              Unassigned     
-F3                     GPIO2PB2/DQS                                            Unassigned     
-F4                     VDDI2                                                   Reserved       
-F5                     GPIO0PB2                                                Unassigned     
-F6                     TDO                                                     Reserved       
-F7                     TMS                                                     Reserved       
-F8                     TCK                                                     Reserved       
-F9                     VSS                                                     Reserved       
-F10                    GPIO25PB2                                               Unassigned     
-F11                    GPIO28NB2                                               Unassigned     
-F12                    GPIO27NB2                                               Unassigned     
-F13                    GPIO27PB2                                               Unassigned     
-F14                    VDDI2                                                   Reserved       
-F15                    GPIO41PB2/CCC_SE_CLKIN_S_11                             Unassigned     
-F16                    GPIO41NB2                                               Unassigned     
-F17                    GPIO40NB2                                               Unassigned     
-F18                    VSS                                                     Reserved       
-F19                    XCVR_VREF                                               Reserved       
-F20                    VSS                                                     Reserved       
-F21                    XCVR_1_RX2_N                                            Reserved       
-F22                    XCVR_1_RX2_P                                            Reserved       
-G1                     VDDI4                                                   Reserved       
-G2                     GPIO135PB4/CLKIN_W_3/CCC_SW_CLKIN_W_3                   Unassigned     
-G3                     SCK                                                     Reserved       
-G4                     SS                                                      Reserved       
-G5                     SDO                                                     Reserved       
-G6                     VSS                                                     Reserved       
-G7                     TRSTB                                                   Reserved       
-G8                     TDI                                                     Reserved       
-G9                     IO_CFG_INTF                                             Reserved       
-G10                    SDI                                                     Reserved       
-G11                    VDDI2                                                   Reserved       
-G12                    GPIO24PB2                                               Unassigned     
-G13                    GPIO24NB2                                               Unassigned     
-G14                    GPIO36PB2                                               Unassigned     
-G15                    GPIO37NB2                                               Unassigned     
-G16                    VSS                                                     Reserved       
-G17                    GPIO40PB2/CCC_SE_PLL1_OUT1                              Unassigned     
-G18                    VDDA25                                                  Reserved       
-G19                    XCVR_1A_REFCLK_P                                        Reserved       
-G20                    XCVR_1A_REFCLK_N                                        Reserved       
-G21                    VDDA                                                    Reserved       
-G22                    VSS                                                     Reserved       
-H1                     GPIO133PB4/DQS                                          Unassigned     
-H2                     GPIO135NB4                                              Unassigned     
-H3                     VSS                                                     Reserved       
-H4                     GPIO139PB4/DQS/CCC_SW_PLL0_OUT0                         Unassigned     
-H5                     GPIO140NB4                                              Unassigned     
-H6                     GPIO140PB4                                              Unassigned     
-H7                     GPIO137PB4/CLKIN_W_2/CCC_SW_CLKIN_W_2/CCC_SW_PLL0_OUT0  Unassigned     
-H8                     VDDI3                                                   Reserved       
-H9                     DEVRST_N                                                Reserved       
-H10                    SPI_EN                                                  Reserved       
-H11                    RESERVED                                                Reserved       
-H12                    VDDI3                                                   Reserved       
-H13                    GPIO36NB2                                               Unassigned     
-H14                    VDDAUX2                                                 Reserved       
-H15                    GPIO37PB2                                               Unassigned     
-H16                    VDDAUX2                                                 Reserved       
-H17                    VDDI2                                                   Reserved       
-H18                    VSS                                                     Reserved       
-H19                    VDDA                                                    Reserved       
-H20                    VSS                                                     Reserved       
-H21                    XCVR_1_TX2_N                                            Reserved       
-H22                    XCVR_1_TX2_P                                            Reserved       
-J1                     GPIO133NB4/DQS                                          Unassigned     
-J2                     GPIO131NB4                                              Unassigned     
-J3                     GPIO131PB4/CLKIN_W_5/CCC_NW_CLKIN_W_5                   Unassigned     
-J4                     GPIO139NB4/DQS                                          Unassigned     
-J5                     VDDI4                                                   Reserved       
-J6                     GPIO136PB4/CCC_SW_PLL0_OUT1                             Unassigned     
-J7                     GPIO137NB4                                              Unassigned     
-J8                     GPIO138PB4/CLKIN_W_1/CCC_SW_CLKIN_W_1                   Unassigned     
-J9                     GPIO141PB4/CLKIN_W_0/CCC_SW_CLKIN_W_0                   Unassigned     
-J10                    VDD25                                                   Reserved       
-J11                    VDDAUX2                                                 Reserved       
-J12                    VSS                                                     Reserved       
-J13                    VDDAUX2                                                 Reserved       
-J14                    VSS                                                     Reserved       
-J15                    VDD                                                     Reserved       
-J16                    VSS                                                     Reserved       
-J17                    VDD25                                                   Reserved       
-J18                    VDD_XCVR_CLK                                            Reserved       
-J19                    XCVR_1B_REFCLK_P                                        Reserved       
-J20                    XCVR_1B_REFCLK_N                                        Reserved       
-J21                    VDDA                                                    Reserved       
-J22                    VSS                                                     Reserved       
-K1                     GPIO130PB4                                              Unassigned     
-K2                     VDDI4                                                   Reserved       
-K3                     GPIO132PB4/CLKIN_W_4/CCC_NW_CLKIN_W_4                   Unassigned     
-K4                     GPIO127NB4/DQS                                          Unassigned     
-K5                     GPIO127PB4/DQS                                          Unassigned     
-K6                     GPIO136NB4                                              Unassigned     
-K7                     VSS                                                     Reserved       
-K8                     GPIO138NB4                                              Unassigned     
-K9                     GPIO141NB4                                              Unassigned     
-K10                    VDDAUX4                                                 Reserved       
-K11                    VSS                                                     Reserved       
-K12                    VDD                                                     Reserved       
-K13                    VSS                                                     Reserved       
-K14                    VDD                                                     Reserved       
-K15                    VSS                                                     Reserved       
-K16                    VDD                                                     Reserved       
-K17                    VSS                                                     Reserved       
-K18                    VSS                                                     Reserved       
-K19                    VDDA                                                    Reserved       
-K20                    VSS                                                     Reserved       
-K21                    XCVR_1_TX3_N                                            Reserved       
-K22                    XCVR_1_TX3_P                                            Reserved       
-L1                     GPIO130NB4                                              Unassigned     
-L2                     GPIO132NB4                                              Unassigned     
-L3                     GPIO128PB4                                              Unassigned     
-L4                     VSS                                                     Reserved       
-L5                     GPIO129PB4                                              Unassigned     
-L6      RESET_N        GPIO126PB4                                              Fixed          LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
-L7                     GPIO125PB4                                              Unassigned     
-L8                     GPIO125NB4                                              Unassigned     
-L9                     VDDI4                                                   Reserved       
-L10                    VSS                                                     Reserved       
-L11                    VDD                                                     Reserved       
-L12                    VSS                                                     Reserved       
-L13                    VDD25                                                   Reserved       
-L14                    VSS                                                     Reserved       
-L15                    VDD                                                     Reserved       
-L16                    VSS                                                     Reserved       
-L17                    VDD                                                     Reserved       
-L18                    VDDA25                                                  Reserved       
-L19                    XCVR_1_RX3_N                                            Reserved       
-L20                    XCVR_1_RX3_P                                            Reserved       
-L21                    VDDA                                                    Reserved       
-L22                    VSS                                                     Reserved       
-M1                     VSS                                                     Reserved       
-M2                     GPIO124NB4                                              Unassigned     
-M3                     GPIO124PB4                                              Unassigned     
-M4                     GPIO128NB4                                              Unassigned     
-M5                     GPIO129NB4                                              Unassigned     
-M6                     VDDI4                                                   Reserved       
-M7                     GPIO126NB4                                              Unassigned     
-M8                     GPIO123PB4                                              Unassigned     
-M9                     GPIO123NB4                                              Unassigned     
-M10                    VDDAUX4                                                 Reserved       
-M11                    VSS                                                     Reserved       
-M12                    VDD                                                     Reserved       
-M13                    VSS                                                     Reserved       
-M14                    VDD                                                     Reserved       
-M15                    VSS                                                     Reserved       
-M16                    VDD                                                     Reserved       
-M17                    VSS                                                     Reserved       
-M18                    VSS                                                     Reserved       
-M19                    VDDA                                                    Reserved       
-M20                    VSS                                                     Reserved       
-M21                    XCVR_0_RX0_N                                            Reserved       
-M22                    XCVR_0_RX0_P                                            Reserved       
-N1                     GPIO109PB4/DQS                                          Unassigned     
-N2                     GPIO112PB4                                              Unassigned     
-N3                     VDDI4                                                   Reserved       
-N4                     GPIO116PB4                                              Unassigned     
-N5                     GPIO122NB4                                              Unassigned     
-N6                     GPIO122PB4                                              Unassigned     
-N7                     GPIO121PB4/DQS                                          Unassigned     
-N8                     GPIO121NB4/DQS                                          Unassigned     
-N9                     VDDAUX4                                                 Reserved       
-N10                    VSS                                                     Reserved       
-N11                    VDD                                                     Reserved       
-N12                    VSS                                                     Reserved       
-N13                    VDD                                                     Reserved       
-N14                    VSS                                                     Reserved       
-N15                    VDD                                                     Reserved       
-N16                    VSS                                                     Reserved       
-N17                    VDD                                                     Reserved       
-N18                    VDD_XCVR_CLK                                            Reserved       
-N19                    XCVR_0C_REFCLK_P                                        Reserved       
-N20                    XCVR_0C_REFCLK_N                                        Reserved       
-N21                    VDDA                                                    Reserved       
-N22                    VSS                                                     Reserved       
-P1                     GPIO109NB4/DQS                                          Unassigned     
-P2                     GPIO112NB4                                              Unassigned     
-P3                     GPIO116NB4                                              Unassigned     
-P4                     GPIO114PB4/CLKIN_W_6/CCC_NW_CLKIN_W_6/CCC_NW_PLL0_OUT1  Unassigned     
-P5                     VSS                                                     Reserved       
-P6                     GPIO119PB4                                              Unassigned     
-P7                     GPIO120PB4                                              Unassigned     
-P8                     GPIO120NB4                                              Unassigned     
-P9                     GPIO118PB4                                              Unassigned     
-P10                    VDD25                                                   Reserved       
-P11                    VSS                                                     Reserved       
-P12                    VDD18                                                   Reserved       
-P13                    VSS                                                     Reserved       
-P14                    VDD18                                                   Reserved       
-P15                    VSS                                                     Reserved       
-P16                    VDD18                                                   Reserved       
-P17                    VSS                                                     Reserved       
-P18                    VSS                                                     Reserved       
-P19                    VDDA                                                    Reserved       
-P20                    VSS                                                     Reserved       
-P21                    XCVR_0_TX0_N                                            Reserved       
-P22                    XCVR_0_TX0_P                                            Reserved       
-R1      SYS_CLK        GPIO108PB4/CLKIN_W_7/CCC_NW_CLKIN_W_7/CCC_NW_PLL0_OUT0  Fixed          LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
-R2                     VSS                                                     Reserved       
-R3                     GPIO114NB4                                              Unassigned     
-R4                     GPIO117NB4                                              Unassigned     
-R5                     GPIO117PB4                                              Unassigned     
-R6                     GPIO119NB4                                              Unassigned     
-R7                     VDDI4                                                   Reserved       
-R8                     GPIO118NB4                                              Unassigned     
-R9                     HSIO80PB0/CLKIN_N_4                                     Unassigned     
-R10                    HSIO80NB0                                               Unassigned     
-R11                    VDDI0                                                   Reserved       
-R12                    HSIO70PB1                                               Unassigned     
-R13                    HSIO69PB1/DQS                                           Unassigned     
-R14                    VDD18                                                   Reserved       
-R15                    HSIO66NB1                                               Unassigned     
-R16                    HSIO47NB1                                               Unassigned     
-R17                    VDD25                                                   Reserved       
-R18                    VDDA25                                                  Reserved       
-R19                    XCVR_0A_REFCLK_P                                        Reserved       
-R20                    XCVR_0A_REFCLK_N                                        Reserved       
-R21                    VDDA                                                    Reserved       
-R22                    VSS                                                     Reserved       
-T1                     GPIO108NB4                                              Unassigned     
-T2                     GPIO115PB4/DQS/CCC_NW_PLL0_OUT0                         Unassigned     
-T3                     GPIO115NB4/DQS                                          Unassigned     
-T4                     VDDI4                                                   Reserved       
-T5                     GPIO113PB4                                              Unassigned     
-T6                     GPIO113NB4                                              Unassigned     
-T7                     HSIO83PB0                                               Unassigned     
-T8                     HSIO83NB0                                               Unassigned     
-T9                     VSS                                                     Reserved       
-T10                    HSIO81PB0/DQS                                           Unassigned     
-T11                    HSIO70NB1                                               Unassigned     
-T12                    HSIO69NB1/DQS                                           Unassigned     
-T13                    HSIO67PB1                                               Unassigned     
-T14                    VDDI1                                                   Reserved       
-T15                    HSIO66PB1/CLKIN_N_7                                     Unassigned     
-T16                    HSIO47PB1                                               Unassigned     
-T17                    HSIO42PB1/CCC_NE_CLKIN_N_11                             Unassigned     
-T18                    VSS                                                     Reserved       
-T19                    VDDA                                                    Reserved       
-T20                    VSS                                                     Reserved       
-T21                    XCVR_0_RX1_N                                            Reserved       
-T22                    XCVR_0_RX1_P                                            Reserved       
-U1                     VDDI0                                                   Reserved       
-U2                     HSIO106NB0                                              Unassigned     
-U3                     HSIO106PB0/CCC_NW_CLKIN_N_1                             Unassigned     
-U4                     HSIO107NB0                                              Unassigned     
-U5                     HSIO107PB0/CCC_NW_CLKIN_N_0                             Unassigned     
-U6                     VSS                                                     Reserved       
-U7                     HSIO95PB0                                               Unassigned     
-U8                     HSIO82PB0                                               Unassigned     
-U9                     HSIO82NB0                                               Unassigned     
-U10                    HSIO81NB0/DQS                                           Unassigned     
-U11                    VDDI1                                                   Reserved       
-U12                    HSIO59PB1                                               Unassigned     
-U13                    HSIO67NB1                                               Unassigned     
-U14                    HSIO71NB1                                               Unassigned     
-U15                    HSIO68NB1                                               Unassigned     
-U16                    VSS                                                     Reserved       
-U17                    HSIO42NB1                                               Unassigned     
-U18                    VSS                                                     Reserved       
-U19                    XCVR_0B_REFCLK_P                                        Reserved       
-U20                    XCVR_0B_REFCLK_N                                        Reserved       
-U21                    VDDA                                                    Reserved       
-U22                    VSS                                                     Reserved       
-V1                     HSIO104PB0/CLKIN_N_2/CCC_NW_CLKIN_N_2/CCC_NW_PLL1_OUT0  Unassigned     
-V2                     HSIO105PB0/DQS/CCC_NW_PLL1_OUT0                         Unassigned     
-V3                     VSS                                                     Reserved       
-V4                     HSIO103PB0/CCC_NW_PLL1_OUT1                             Unassigned     
-V5                     HSIO101PB0                                              Unassigned     
-V6                     HSIO97PB0                                               Unassigned     
-V7                     HSIO95NB0                                               Unassigned     
-V8                     VDDI0                                                   Reserved       
-V9                     HSIO79PB0                                               Unassigned     
-V10                    HSIO79NB0                                               Unassigned     
-V11                    HSIO59NB1                                               Unassigned     
-V12                    HSIO56PB1                                               Unassigned     
-V13                    VSS                                                     Reserved       
-V14                    HSIO71PB1                                               Unassigned     
-V15                    HSIO68PB1/CLKIN_N_6                                     Unassigned     
-V16                    HSIO43PB1/CCC_NE_PLL0_OUT1                              Unassigned     
-V17                    HSIO44NB1                                               Unassigned     
-V18                    VSS                                                     Reserved       
-V19                    VDDA25                                                  Reserved       
-V20                    VSS                                                     Reserved       
-V21                    XCVR_0_TX1_N                                            Reserved       
-V22                    XCVR_0_TX1_P                                            Reserved       
-W1                     HSIO104NB0                                              Unassigned     
-W2                     HSIO105NB0/DQS                                          Unassigned     
-W3                     HSIO103NB0                                              Unassigned     
-W4                     HSIO101NB0                                              Unassigned     
-W5                     VDDI0                                                   Reserved       
-W6                     HSIO97NB0                                               Unassigned     
-W7                     HSIO92PB0                                               Unassigned     
-W8                     HSIO92NB0                                               Unassigned     
-W9                     HSIO78PB0/CLKIN_N_5                                     Unassigned     
-W10                    VSS                                                     Reserved       
-W11                    HSIO58PB1                                               Unassigned     
-W12                    HSIO56NB1                                               Unassigned     
-W13                    HSIO53PB1                                               Unassigned     
-W14                    HSIO49PB1/CCC_NE_PLL1_OUT1                              Unassigned     
-W15                    VDDI1                                                   Reserved       
-W16                    HSIO43NB1                                               Unassigned     
-W17                    HSIO44PB1/CCC_NE_CLKIN_N_10/CCC_NE_PLL0_OUT0            Unassigned     
-W18                    VSS                                                     Reserved       
-W19                    XCVR_0_RX2_N                                            Reserved       
-W20                    XCVR_0_RX2_P                                            Reserved       
-W21                    VDDA                                                    Reserved       
-W22                    VSS                                                     Reserved       
-Y1                     HSIO102PB0/CLKIN_N_3/CCC_NW_CLKIN_N_3                   Unassigned     
-Y2                     VDDI0                                                   Reserved       
-Y3                     HSIO100PB0                                              Unassigned     
-Y4                     HSIO99PB0/DQS                                           Unassigned     
-Y5                     HSIO99NB0/DQS                                           Unassigned     
-Y6                     HSIO94PB0                                               Unassigned     
-Y7                     VSS                                                     Reserved       
-Y8                     HSIO90NB0                                               Unassigned     
-Y9                     HSIO78NB0                                               Unassigned     
-Y10                    HSIO58NB1                                               Unassigned     
-Y11                    HSIO55PB1                                               Unassigned     
-Y12                    VDDI1                                                   Reserved       
-Y13                    HSIO53NB1                                               Unassigned     
-Y14                    HSIO49NB1                                               Unassigned     
-Y15                    HSIO48PB1/CLKIN_N_9/CCC_NE_CLKIN_N_9                    Unassigned     
-Y16                    HSIO46NB1                                               Unassigned     
-Y17                    VSS                                                     Reserved       
-Y18                    VSS                                                     Reserved       
-Y19                    VDDA                                                    Reserved       
-Y20                    VSS                                                     Reserved       
-Y21                    XCVR_0_TX2_N                                            Reserved       
-Y22                    XCVR_0_TX2_P                                            Reserved       
+Number |Port                |Function                                               |State      |I/O Std  |Direction |Used I/O Reg |User I/O Lock Down |Clamp Diode |Resistor Pull |Use I/O Calibration from the lane |Schmitt Trigger |Vcm Input Range |On Die Termination |Odt Value (Ohm) |Input Delay |Slew |Output Drive (mA) |Impedance (ohm) |Output Load (pF) |Source Termination (Ohm) |Output Delay |
+-------|--------------------|-------------------------------------------------------|-----------|---------|----------|-------------|-------------------|------------|--------------|----------------------------------|----------------|----------------|-------------------|----------------|------------|-----|------------------|----------------|-----------------|-------------------------|-------------|
+A1                           VSS                                                     Reserved    
+A2      EXT_BRK3_DRV_EN      GPIO145PB2/CLKIN_S_2/CCC_SW_CLKIN_S_2/CCC_SW_PLL1_OUT0  Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+A3      DBUG_HEADER2         GPIO145NB2                                              Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+A4                           VSS                                                     Reserved    
+A5      GNT_MOT_PWR_EN       GPIO3NB2                                                Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+A6      P5V_ISO_MON_LFT      GPIO9PB2                                                Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+A7      GNT_PWM_PHA_HI       GPIO9NB2                                                Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+A8      GNT_PWM_PHC_HI       GPIO11NB2                                               Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+A9                           VDDI2                                                   Reserved    
+A10     SPD2_24V_STATUS_N    GPIO16PB2/LPRB_A                                        Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+A11     LFT_ST_DISB          GPIO16NB2/LPRB_B                                        Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+A12     LFT_HW_EN_N          GPIO17PB2/CLKIN_S_7                                     Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+A13     GNT_ST_DISB          GPIO17NB2                                               Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+A14                          VSS                                                     Reserved    
+A15     CCH_LAT_LNG_FLOAT_N  GPIO35PB2/CLKIN_S_9/CCC_SE_CLKIN_S_9                    Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+A16     EMO_GOOD_N           GPIO35NB2                                               Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+A17     LFT_ROT_BRK_RLS      GPIO32PB2/DQS/CCC_SE_PLL0_OUT0                          Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+A18                          VSS                                                     Reserved    
+A19                          XCVR_1_RX0_N                                            Reserved    
+A20                          XCVR_1_RX0_P                                            Reserved    
+A21                          VSS                                                     Reserved    
+A22                          VSS                                                     Reserved    
+AA1                          HSIO102NB0                                              Unassigned  
+AA2                          HSIO98PB0                                               Unassigned  
+AA3                          HSIO100NB0                                              Unassigned  
+AA4                          VSS                                                     Reserved    
+AA5                          HSIO93PB0/DQS                                           Unassigned  
+AA6                          HSIO94NB0                                               Unassigned  
+AA7                          HSIO91PB0                                               Unassigned  
+AA8                          HSIO90PB0                                               Unassigned  
+AA9                          VDDI1                                                   Reserved    
+AA10                         HSIO54PB1                                               Unassigned  
+AA11                         HSIO55NB1                                               Unassigned  
+AA12                         HSIO51PB1/DQS/CCC_NE_PLL1_OUT0                          Unassigned  
+AA13                         HSIO52PB1                                               Unassigned  
+AA14                         VSS                                                     Reserved    
+AA15                         HSIO48NB1                                               Unassigned  
+AA16                         HSIO46PB1                                               Unassigned  
+AA17                         HSIO45NB1/DQS                                           Unassigned  
+AA18                         VSS                                                     Reserved    
+AA19                         XCVR_0_RX3_N                                            Reserved    
+AA20                         XCVR_0_RX3_P                                            Reserved    
+AA21                         VSS                                                     Reserved    
+AA22                         VSS                                                     Reserved    
+AB1                          VSS                                                     Reserved    
+AB2                          HSIO98NB0                                               Unassigned  
+AB3                          HSIO96PB0                                               Unassigned  
+AB4                          HSIO96NB0                                               Unassigned  
+AB5                          HSIO93NB0/DQS                                           Unassigned  
+AB6                          VDDI0                                                   Reserved    
+AB7                          HSIO91NB0                                               Unassigned  
+AB8                          HSIO57PB1/DQS                                           Unassigned  
+AB9                          HSIO57NB1/DQS                                           Unassigned  
+AB10                         HSIO54NB1                                               Unassigned  
+AB11                         VSS                                                     Reserved    
+AB12                         HSIO51NB1/DQS                                           Unassigned  
+AB13                         HSIO52NB1                                               Unassigned  
+AB14                         HSIO50PB1/CLKIN_N_8/CCC_NE_CLKIN_N_8/CCC_NE_PLL1_OUT0   Unassigned  
+AB15                         HSIO50NB1                                               Unassigned  
+AB16                         VDDI1                                                   Reserved    
+AB17                         HSIO45PB1/DQS/CCC_NE_PLL0_OUT0                          Unassigned  
+AB18                         VSS                                                     Reserved    
+AB19                         VSS                                                     Reserved    
+AB20                         VSS                                                     Reserved    
+AB21                         XCVR_0_TX3_N                                            Reserved    
+AB22                         XCVR_0_TX3_P                                            Reserved    
+B1      EXT_BRK2_DRV_EN      GPIO144NB2/DQS                                          Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+B2      DBUG_HEADER8         GPIO147PB2/CLKIN_S_3/CCC_SW_CLKIN_S_3                   Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+B3      DBUG_HEADER10        GPIO147NB2                                              Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+B4      GNT_EMOPS_EN         GPIO3PB2                                                Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+B5      OC_V_GNT_BRK_DRV     GPIO5NB2                                                Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+B6                           VDDI2                                                   Reserved    
+B7      P5V_ISO_MON_GNT      GPIO7NB2                                                Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+B8      GNT_PWM_PHB_LO       GPIO11PB2                                               Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+B9      GNT_ST_DISB_MON      GPIO14PB2/DQS                                           Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+B10     DMD_PWR_OK           GPIO14NB2/DQS                                           Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+B11                          VSS                                                     Reserved    
+B12     GNT_PWM_PHC_LO       GPIO12PB2/CLKIN_S_4                                     Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+B13     GNT_HW_EN_MON        GPIO12NB2                                               Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+B14     EM_DOWN_LIMIT        GPIO33PB2/CLKIN_S_8/CCC_SE_CLKIN_S_8/CCC_SE_PLL0_OUT0   Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+B15     EM_UP_LIMIT          GPIO33NB2                                               Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+B16                          VDDI2                                                   Reserved    
+B17     LAT_LNG_BRK_RLS      GPIO32NB2/DQS                                           Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+B18                          VSS                                                     Reserved    
+B19                          VDDA                                                    Reserved    
+B20                          VSS                                                     Reserved    
+B21                          XCVR_1_TX0_N                                            Reserved    
+B22                          XCVR_1_TX0_P                                            Reserved    
+C1      EXT_BRK1_DRV_EN      GPIO144PB2/DQS/CCC_SW_PLL1_OUT0                         Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+C2      HSWAP_FAULT          GPIO143NB2                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+C3                           VDDI2                                                   Reserved    
+C4      P12V_ISO_EN          GPIO1NB2                                                Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+C5      OC_V_GNT_MOT_DRV     GPIO5PB2                                                Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+C6      GNT_EMOPS_OV_L       GPIO7PB2                                                Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+C7      GNT_BRK_PWR_FLT_N    GPIO6NB2                                                Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+C8                           VSS                                                     Reserved    
+C9      LFT_ST_DISB_MON      GPIO13PB2/CLKIN_S_5                                     Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+C10     LFT_HW_EN_MON        GPIO13NB2                                               Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+C11     SPARE_MON            GPIO15PB2/CLKIN_S_6                                     Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+C12     SPDIO_FLT_N          GPIO15NB2                                               Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+C13                          VDDI2                                                   Reserved    
+C14     EMOPS_STAT1          GPIO31PB2                                               Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+C15     EMOPS_STAT2          GPIO31NB2                                               Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+C16     CCH_LFT_MOT_EN_N     GPIO34PB2/CCC_SE_PLL0_OUT1                              Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+C17     CCH_LFT_DWN_N        GPIO34NB2                                               Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+C18                          VSS                                                     Reserved    
+C19                          XCVR_1_RX1_N                                            Reserved    
+C20                          XCVR_1_RX1_P                                            Reserved    
+C21                          VDDA                                                    Reserved    
+C22                          VSS                                                     Reserved    
+D1      POWER_GOOD           GPIO142NB2                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   12                 ---              5                 ---                       OFF           
+D2      MSSB_COMM_FAULT      GPIO143PB2/CCC_SW_CLKIN_S_1                             Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   12                 ---              5                 ---                       OFF           
+D3      DBUG_HEADER6         GPIO146NB2                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+D4      FAN_EN               GPIO1PB2                                                Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+D5                           VSS                                                     Reserved    
+D6      WD_TRIG              GPIO4NB2                                                Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+D7      GNT_MOT_PWR_FLT_N    GPIO6PB2                                                Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+D8      GNT_SHUNT_ON         GPIO8NB2/DQS                                            Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+D9      GNT_PWM_PHB_HI       GPIO10NB2                                               Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+D10                          VDDI2                                                   Reserved    
+D11     LFT_HALL_SNS2_N      GPIO26PB2/DQS                                           Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+D12     LFT_HALL_SNS3_N      GPIO26NB2/DQS                                           Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+D13     LFT_EMOPS_OV_L       GPIO29PB2                                               Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+D14     LFT_MOT_PWR_EN       GPIO30PB2                                               Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+D15                          VSS                                                     Reserved    
+D16     EXOPS_GNT_24V_EN     GPIO38PB2/DQS/CCC_SE_PLL1_OUT0                          Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+D17     GNT_CCW_LIMIT        GPIO38NB2/DQS                                           Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+D18                          VSS                                                     Reserved    
+D19                          XCVR_VREF                                               Reserved    
+D20                          VSS                                                     Reserved    
+D21                          XCVR_1_TX1_N                                            Reserved    
+D22                          XCVR_1_TX1_P                                            Reserved    
+E1      MAINS_LEVEL_FB       GPIO142PB2/CCC_SW_CLKIN_S_0                             Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+E2                           VSS                                                     Reserved    
+E3      DBUG_HEADER4         GPIO146PB2/CCC_SW_PLL1_OUT1                             Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+E4      P24V_GNT_EMOPS_EN    GPIO2NB2/DQS                                            Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+E5      FAN_FAIL_N           GPIO0NB2                                                Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+E6      GNT_BRK_PWR_EN       GPIO4PB2                                                Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+E7                           VDDI2                                                   Reserved    
+E8      GNT_SHUNT_EN         GPIO8PB2/DQS                                            Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+E9      GNT_PWM_PHA_LO       GPIO10PB2                                               Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+E10     LFT_HALL_SNS1_N      GPIO25NB2                                               Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+E11     LFT_SHUNT_EN         GPIO28PB2                                               Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+E12                          VSS                                                     Reserved    
+E13     LFT_EMOPS_EN         GPIO29NB2                                               Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+E14     LFT_MOT_PWR_FLT_N    GPIO30NB2                                               Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+E15     GNT_CW_LIMIT         GPIO39PB2/CCC_SE_CLKIN_S_10/CCC_SE_PLL1_OUT0            Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+E16     ST_MSSB_TX           GPIO39NB2                                               Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+E17                          VDDI2                                                   Reserved    
+E18                          VSS                                                     Reserved    
+E19                          XCVR_1C_REFCLK_P                                        Reserved    
+E20                          XCVR_1C_REFCLK_N                                        Reserved    
+E21                          VDDA                                                    Reserved    
+E22                          VSS                                                     Reserved    
+F1      AD_MUX4_N            GPIO134NB4                                              Fixed       LVCMOS33  Output     None          No                  ON           Up             No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+F2      AD_MUX3_N            GPIO134PB4                                              Fixed       LVCMOS33  Output     None          No                  ON           Up             No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+F3      P24V_GNT_EMOPS_PG    GPIO2PB2/DQS                                            Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+F4                           VDDI2                                                   Reserved    
+F5      P24V_GOOD_N          GPIO0PB2                                                Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+F6                           TDO                                                     Reserved    
+F7                           TMS                                                     Reserved    
+F8                           TCK                                                     Reserved    
+F9                           VSS                                                     Reserved    
+F10     LFT_HALL_PWR_OK      GPIO25PB2                                               Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+F11     LFT_SHUNT_ON         GPIO28NB2                                               Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+F12     OC_V_LFT_MOT_DRV     GPIO27NB2                                               Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+F13     P24V_LFT_EMOPS_EN    GPIO27PB2                                               Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+F14                          VDDI2                                                   Reserved    
+F15     SRV_MSSB_RX          GPIO41PB2/CCC_SE_CLKIN_S_11                             Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+F16     PAN_24V_SW           GPIO41NB2                                               Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+F17     ST_SRV_MSSB_TX       GPIO40NB2                                               Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+F18                          VSS                                                     Reserved    
+F19                          XCVR_VREF                                               Reserved    
+F20                          VSS                                                     Reserved    
+F21                          XCVR_1_RX2_N                                            Reserved    
+F22                          XCVR_1_RX2_P                                            Reserved    
+G1                           VDDI4                                                   Reserved    
+G2      AD_MUX5_N            GPIO135PB4/CLKIN_W_3/CCC_SW_CLKIN_W_3                   Fixed       LVCMOS33  Output     None          No                  ON           Up             No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+G3                           SCK                                                     Reserved    
+G4                           SS                                                      Reserved    
+G5                           SDO                                                     Reserved    
+G6                           VSS                                                     Reserved    
+G7                           TRSTB                                                   Reserved    
+G8                           TDI                                                     Reserved    
+G9                           IO_CFG_INTF                                             Reserved    
+G10                          SDI                                                     Reserved    
+G11                          VDDI2                                                   Reserved    
+G12     GNT_HW_EN_N          GPIO24PB2                                               Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+G13     LFT_HALL_PWR_EN_N    GPIO24NB2                                               Fixed       LVCMOS33  Output     None          No                  ON           Up             No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+G14     SITE_24V_PWR_OK_N    GPIO36PB2                                               Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+G15     SPD_EMOPS_FLT_N      GPIO37NB2                                               Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+G16                          VSS                                                     Reserved    
+G17     MSSB_RX              GPIO40PB2/CCC_SE_PLL1_OUT1                              Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+G18                          VDDA25                                                  Reserved    
+G19                          XCVR_1A_REFCLK_P                                        Reserved    
+G20                          XCVR_1A_REFCLK_N                                        Reserved    
+G21                          VDDA                                                    Reserved    
+G22                          VSS                                                     Reserved    
+H1      AD_MUX1_N            GPIO133PB4/DQS                                          Fixed       LVCMOS33  Output     None          No                  ON           Up             No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+H2      ST_DAC_CLK           GPIO135NB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+H3                           VSS                                                     Reserved    
+H4      ADC_CNVST            GPIO139PB4/DQS/CCC_SW_PLL0_OUT0                         Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+H5      DBUG_CS_N            GPIO140NB4                                              Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+H6      DBUG_MOSI            GPIO140PB4                                              Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+H7      DAC_SDO              GPIO137PB4/CLKIN_W_2/CCC_SW_CLKIN_W_2/CCC_SW_PLL0_OUT0  Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+H8                           VDDI3                                                   Reserved    
+H9                           DEVRST_N                                                Reserved    
+H10                          SPI_EN                                                  Reserved    
+H11                          RESERVED                                                Reserved    
+H12                          VDDI3                                                   Reserved    
+H13     SRVC_CCH_GNT_N       GPIO36NB2                                               Fixed       LVCMOS33  Output     None          No                  ON           Up             No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+H14                          VDDAUX2                                                 Reserved    
+H15     EM_CCH_24V_EN        GPIO37PB2                                               Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+H16                          VDDAUX2                                                 Reserved    
+H17                          VDDI2                                                   Reserved    
+H18                          VSS                                                     Reserved    
+H19                          VDDA                                                    Reserved    
+H20                          VSS                                                     Reserved    
+H21                          XCVR_1_TX2_N                                            Reserved    
+H22                          XCVR_1_TX2_P                                            Reserved    
+J1      AD_MUX2_N            GPIO133NB4/DQS                                          Fixed       LVCMOS33  Output     None          No                  ON           Up             No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+J2      AD_SEL0              GPIO131NB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+J3      LFT_UP_LIMIT         GPIO131PB4/CLKIN_W_5/CCC_NW_CLKIN_W_5                   Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+J4      DBUG_MISO            GPIO139NB4/DQS                                          Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+J5                           VDDI4                                                   Reserved    
+J6      DAC_SDI              GPIO136PB4/CCC_SW_PLL0_OUT1                             Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+J7      ADC_SDOUT            GPIO137NB4                                              Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+J8      P12V_ACT_DIODE_ON_N  GPIO138PB4/CLKIN_W_1/CCC_SW_CLKIN_W_1                   Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+J9      DBUG_SCLK            GPIO141PB4/CLKIN_W_0/CCC_SW_CLKIN_W_0                   Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+J10                          VDD25                                                   Reserved    
+J11                          VDDAUX2                                                 Reserved    
+J12                          VSS                                                     Reserved    
+J13                          VDDAUX2                                                 Reserved    
+J14                          VSS                                                     Reserved    
+J15                          VDD                                                     Reserved    
+J16                          VSS                                                     Reserved    
+J17                          VDD25                                                   Reserved    
+J18                          VDD_XCVR_CLK                                            Reserved    
+J19                          XCVR_1B_REFCLK_P                                        Reserved    
+J20                          XCVR_1B_REFCLK_N                                        Reserved    
+J21                          VDDA                                                    Reserved    
+J22                          VSS                                                     Reserved    
+K1      LFT_SER_PAGE_SEL_N   GPIO130PB4                                              Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+K2                           VDDI4                                                   Reserved    
+K3      AD_SEL1              GPIO132PB4/CLKIN_W_4/CCC_NW_CLKIN_W_4                   Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+K4      LFT_SER_SYNC         GPIO127NB4/DQS                                          Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+K5      LFT_SER_CLK          GPIO127PB4/DQS                                          Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+K6      DAC_CS_N             GPIO136NB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+K7                           VSS                                                     Reserved    
+K8      ST_ADC_CLK           GPIO138NB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+K9      DBUG_ACTIVE          GPIO141NB4                                              Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+K10                          VDDAUX4                                                 Reserved    
+K11                          VSS                                                     Reserved    
+K12                          VDD                                                     Reserved    
+K13                          VSS                                                     Reserved    
+K14                          VDD                                                     Reserved    
+K15                          VSS                                                     Reserved    
+K16                          VDD                                                     Reserved    
+K17                          VSS                                                     Reserved    
+K18                          VSS                                                     Reserved    
+K19                          VDDA                                                    Reserved    
+K20                          VSS                                                     Reserved    
+K21                          XCVR_1_TX3_N                                            Reserved    
+K22                          XCVR_1_TX3_P                                            Reserved    
+L1      LFT_DOWN_LIMIT       GPIO130NB4                                              Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+L2      AD_SEL2              GPIO132NB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+L3      LFT_SER_DATA0        GPIO128PB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+L4                           VSS                                                     Reserved    
+L5      LFT_SERIO_FLT_N      GPIO129PB4                                              Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+L6      RESET_N              GPIO126PB4                                              Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+L7      EEP_SCK              GPIO125PB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+L8      EEP_SO               GPIO125NB4                                              Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+L9                           VDDI4                                                   Reserved    
+L10                          VSS                                                     Reserved    
+L11                          VDD                                                     Reserved    
+L12                          VSS                                                     Reserved    
+L13                          VDD25                                                   Reserved    
+L14                          VSS                                                     Reserved    
+L15                          VDD                                                     Reserved    
+L16                          VSS                                                     Reserved    
+L17                          VDD                                                     Reserved    
+L18                          VDDA25                                                  Reserved    
+L19                          XCVR_1_RX3_N                                            Reserved    
+L20                          XCVR_1_RX3_P                                            Reserved    
+L21                          VDDA                                                    Reserved    
+L22                          VSS                                                     Reserved    
+M1                           VSS                                                     Reserved    
+M2      EEP_SI               GPIO124NB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+M3      EEP_CS_N             GPIO124PB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+M4      LFT_SER_DATA1        GPIO128NB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+M5      LFT_MTN_EN_N         GPIO129NB4                                              Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+M6                           VDDI4                                                   Reserved    
+M7      GPIO5                GPIO126NB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+M8      GPIO2                GPIO123PB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+M9      GPIO3                GPIO123NB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+M10                          VDDAUX4                                                 Reserved    
+M11                          VSS                                                     Reserved    
+M12                          VDD                                                     Reserved    
+M13                          VSS                                                     Reserved    
+M14                          VDD                                                     Reserved    
+M15                          VSS                                                     Reserved    
+M16                          VDD                                                     Reserved    
+M17                          VSS                                                     Reserved    
+M18                          VSS                                                     Reserved    
+M19                          VDDA                                                    Reserved    
+M20                          VSS                                                     Reserved    
+M21                          XCVR_0_RX0_N                                            Reserved    
+M22                          XCVR_0_RX0_P                                            Reserved    
+N1      GNT_BRK_EXT_EN       GPIO109PB4/DQS                                          Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+N2      GNT_BRK1_FB_N        GPIO112PB4                                              Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+N3                           VDDI4                                                   Reserved    
+N4      GNT_BRK2_PWM_LO      GPIO116PB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+N5      LFT_PWM_PHC_LO       GPIO122NB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+N6      LFT_PWM_PHC_HI       GPIO122PB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+N7      LFT_PWM_PHB_HI       GPIO121PB4/DQS                                          Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+N8      LFT_PWM_PHB_LO       GPIO121NB4/DQS                                          Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+N9                           VDDAUX4                                                 Reserved    
+N10                          VSS                                                     Reserved    
+N11                          VDD                                                     Reserved    
+N12                          VSS                                                     Reserved    
+N13                          VDD                                                     Reserved    
+N14                          VSS                                                     Reserved    
+N15                          VDD                                                     Reserved    
+N16                          VSS                                                     Reserved    
+N17                          VDD                                                     Reserved    
+N18                          VDD_XCVR_CLK                                            Reserved    
+N19                          XCVR_0C_REFCLK_P                                        Reserved    
+N20                          XCVR_0C_REFCLK_N                                        Reserved    
+N21                          VDDA                                                    Reserved    
+N22                          VSS                                                     Reserved    
+P1      GNT_BRK_SW_MON       GPIO109NB4/DQS                                          Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+P2      GNT_BRK2_FB_N        GPIO112NB4                                              Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+P3      GNT_BRK2_RET_PWM_HI  GPIO116NB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+P4      GNT_BRK1_PWM_LO      GPIO114PB4/CLKIN_W_6/CCC_NW_CLKIN_W_6/CCC_NW_PLL0_OUT1  Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+P5                           VSS                                                     Reserved    
+P6      GNT_BRK3_RET_PWM_LO  GPIO119PB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+P7      LFT_PWM_PHA_HI       GPIO120PB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+P8      LFT_PWM_PHA_LO       GPIO120NB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+P9      GNT_BRK3_PWM_LO      GPIO118PB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+P10                          VDD25                                                   Reserved    
+P11                          VSS                                                     Reserved    
+P12                          VDD18                                                   Reserved    
+P13                          VSS                                                     Reserved    
+P14                          VDD18                                                   Reserved    
+P15                          VSS                                                     Reserved    
+P16                          VDD18                                                   Reserved    
+P17                          VSS                                                     Reserved    
+P18                          VSS                                                     Reserved    
+P19                          VDDA                                                    Reserved    
+P20                          VSS                                                     Reserved    
+P21                          XCVR_0_TX0_N                                            Reserved    
+P22                          XCVR_0_TX0_P                                            Reserved    
+R1      FPGA_100M_CLK        GPIO108PB4/CLKIN_W_7/CCC_NW_CLKIN_W_7/CCC_NW_PLL0_OUT0  Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+R2                           VSS                                                     Reserved    
+R3      GNT_BRK1_RET_PWM_HI  GPIO114NB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+R4      GNT_BRK3_PWM_HI      GPIO117NB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+R5      GNT_BRK2_RET_PWM_LO  GPIO117PB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+R6      P24V_LFT_EMOPS_PG    GPIO119NB4                                              Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+R7                           VDDI4                                                   Reserved    
+R8      GNT_BRK3_RET_PWM_HI  GPIO118NB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+R9                           HSIO80PB0/CLKIN_N_4                                     Unassigned  
+R10                          HSIO80NB0                                               Unassigned  
+R11                          VDDI0                                                   Reserved    
+R12                          HSIO70PB1                                               Unassigned  
+R13                          HSIO69PB1/DQS                                           Unassigned  
+R14                          VDD18                                                   Reserved    
+R15                          HSIO66NB1                                               Unassigned  
+R16                          HSIO47NB1                                               Unassigned  
+R17                          VDD25                                                   Reserved    
+R18                          VDDA25                                                  Reserved    
+R19                          XCVR_0A_REFCLK_P                                        Reserved    
+R20                          XCVR_0A_REFCLK_N                                        Reserved    
+R21                          VDDA                                                    Reserved    
+R22                          VSS                                                     Reserved    
+T1      PWM_BRK_EXT_FAULT    GPIO108NB4                                              Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+T2      GNT_BRK1_RET_PWM_LO  GPIO115PB4/DQS/CCC_NW_PLL0_OUT0                         Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+T3      GNT_BRK2_PWM_HI      GPIO115NB4/DQS                                          Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+T4                           VDDI4                                                   Reserved    
+T5      GNT_BRK3_FB_N        GPIO113PB4                                              Fixed       LVCMOS33  Input      None          No                  ON           Up             No                                 OFF              ---              ---                 ---              OFF          ---   ---                ---              ---               ---                       ---           
+T6      GNT_BRK1_PWM_HI      GPIO113NB4                                              Fixed       LVCMOS33  Output     None          No                  ON           None           No                                 ---              ---              ---                 ---              ---          OFF   8                  ---              5                 ---                       OFF           
+T7                           HSIO83PB0                                               Unassigned  
+T8                           HSIO83NB0                                               Unassigned  
+T9                           VSS                                                     Reserved    
+T10                          HSIO81PB0/DQS                                           Unassigned  
+T11                          HSIO70NB1                                               Unassigned  
+T12                          HSIO69NB1/DQS                                           Unassigned  
+T13                          HSIO67PB1                                               Unassigned  
+T14                          VDDI1                                                   Reserved    
+T15                          HSIO66PB1/CLKIN_N_7                                     Unassigned  
+T16                          HSIO47PB1                                               Unassigned  
+T17                          HSIO42PB1/CCC_NE_CLKIN_N_11                             Unassigned  
+T18                          VSS                                                     Reserved    
+T19                          VDDA                                                    Reserved    
+T20                          VSS                                                     Reserved    
+T21                          XCVR_0_RX1_N                                            Reserved    
+T22                          XCVR_0_RX1_P                                            Reserved    
+U1                           VDDI0                                                   Reserved    
+U2                           HSIO106NB0                                              Unassigned  
+U3                           HSIO106PB0/CCC_NW_CLKIN_N_1                             Unassigned  
+U4                           HSIO107NB0                                              Unassigned  
+U5                           HSIO107PB0/CCC_NW_CLKIN_N_0                             Unassigned  
+U6                           VSS                                                     Reserved    
+U7                           HSIO95PB0                                               Unassigned  
+U8                           HSIO82PB0                                               Unassigned  
+U9                           HSIO82NB0                                               Unassigned  
+U10                          HSIO81NB0/DQS                                           Unassigned  
+U11                          VDDI1                                                   Reserved    
+U12                          HSIO59PB1                                               Unassigned  
+U13                          HSIO67NB1                                               Unassigned  
+U14                          HSIO71NB1                                               Unassigned  
+U15                          HSIO68NB1                                               Unassigned  
+U16                          VSS                                                     Reserved    
+U17                          HSIO42NB1                                               Unassigned  
+U18                          VSS                                                     Reserved    
+U19                          XCVR_0B_REFCLK_P                                        Reserved    
+U20                          XCVR_0B_REFCLK_N                                        Reserved    
+U21                          VDDA                                                    Reserved    
+U22                          VSS                                                     Reserved    
+V1                           HSIO104PB0/CLKIN_N_2/CCC_NW_CLKIN_N_2/CCC_NW_PLL1_OUT0  Unassigned  
+V2                           HSIO105PB0/DQS/CCC_NW_PLL1_OUT0                         Unassigned  
+V3                           VSS                                                     Reserved    
+V4                           HSIO103PB0/CCC_NW_PLL1_OUT1                             Unassigned  
+V5                           HSIO101PB0                                              Unassigned  
+V6                           HSIO97PB0                                               Unassigned  
+V7                           HSIO95NB0                                               Unassigned  
+V8                           VDDI0                                                   Reserved    
+V9                           HSIO79PB0                                               Unassigned  
+V10                          HSIO79NB0                                               Unassigned  
+V11                          HSIO59NB1                                               Unassigned  
+V12                          HSIO56PB1                                               Unassigned  
+V13                          VSS                                                     Reserved    
+V14                          HSIO71PB1                                               Unassigned  
+V15                          HSIO68PB1/CLKIN_N_6                                     Unassigned  
+V16                          HSIO43PB1/CCC_NE_PLL0_OUT1                              Unassigned  
+V17                          HSIO44NB1                                               Unassigned  
+V18                          VSS                                                     Reserved    
+V19                          VDDA25                                                  Reserved    
+V20                          VSS                                                     Reserved    
+V21                          XCVR_0_TX1_N                                            Reserved    
+V22                          XCVR_0_TX1_P                                            Reserved    
+W1                           HSIO104NB0                                              Unassigned  
+W2                           HSIO105NB0/DQS                                          Unassigned  
+W3                           HSIO103NB0                                              Unassigned  
+W4                           HSIO101NB0                                              Unassigned  
+W5                           VDDI0                                                   Reserved    
+W6                           HSIO97NB0                                               Unassigned  
+W7                           HSIO92PB0                                               Unassigned  
+W8                           HSIO92NB0                                               Unassigned  
+W9                           HSIO78PB0/CLKIN_N_5                                     Unassigned  
+W10                          VSS                                                     Reserved    
+W11                          HSIO58PB1                                               Unassigned  
+W12                          HSIO56NB1                                               Unassigned  
+W13                          HSIO53PB1                                               Unassigned  
+W14                          HSIO49PB1/CCC_NE_PLL1_OUT1                              Unassigned  
+W15                          VDDI1                                                   Reserved    
+W16                          HSIO43NB1                                               Unassigned  
+W17                          HSIO44PB1/CCC_NE_CLKIN_N_10/CCC_NE_PLL0_OUT0            Unassigned  
+W18                          VSS                                                     Reserved    
+W19                          XCVR_0_RX2_N                                            Reserved    
+W20                          XCVR_0_RX2_P                                            Reserved    
+W21                          VDDA                                                    Reserved    
+W22                          VSS                                                     Reserved    
+Y1                           HSIO102PB0/CLKIN_N_3/CCC_NW_CLKIN_N_3                   Unassigned  
+Y2                           VDDI0                                                   Reserved    
+Y3                           HSIO100PB0                                              Unassigned  
+Y4                           HSIO99PB0/DQS                                           Unassigned  
+Y5                           HSIO99NB0/DQS                                           Unassigned  
+Y6                           HSIO94PB0                                               Unassigned  
+Y7                           VSS                                                     Reserved    
+Y8                           HSIO90NB0                                               Unassigned  
+Y9                           HSIO78NB0                                               Unassigned  
+Y10                          HSIO58NB1                                               Unassigned  
+Y11                          HSIO55PB1                                               Unassigned  
+Y12                          VDDI1                                                   Reserved    
+Y13                          HSIO53NB1                                               Unassigned  
+Y14                          HSIO49NB1                                               Unassigned  
+Y15                          HSIO48PB1/CLKIN_N_9/CCC_NE_CLKIN_N_9                    Unassigned  
+Y16                          HSIO46NB1                                               Unassigned  
+Y17                          VSS                                                     Reserved    
+Y18                          VSS                                                     Reserved    
+Y19                          VDDA                                                    Reserved    
+Y20                          VSS                                                     Reserved    
+Y21                          XCVR_0_TX2_N                                            Reserved    
+Y22                          XCVR_0_TX2_P                                            Reserved    

@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.runs/synth_1/top.tcl"
+  variable script "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.runs/synth_1/top.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,33 +70,54 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param checkpoint.writeSynthRtdsInDcp 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z045ffg900-2
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.cache/wt [current_project]
-set_property parent.project_path C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.xpr [current_project]
+set_property webtalk.parent_dir C:/repo2/gpb/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.cache/wt [current_project]
+set_property parent.project_path C:/repo2/gpb/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:zc706:part0:1.4 [current_project]
-set_property ip_output_repo c:/repo/jabil2025/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.cache/ip [current_project]
+set_property ip_output_repo c:/repo2/gpb/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v
-  C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ScratchPadRegister.v
-  C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/afifo.v
-  C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmd_server.v
-  C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_buffer.v
-  C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_read.v
-  C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_write.v
-  C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/opb_emu_target.v
-  C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADC_ADS8864_IF.v
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/CLK_DIV.V
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/CLK_GEN.v
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DAC_DACx0504_IF.v
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/EEPROM_OPB_IF.v
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/FPGA_WD.v
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/GPIO.v
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/MSSB_IF.v
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/OSCILLATOR_COUNTER.v
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ScratchPadRegister.v
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/afifo.v
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmd_server.v
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm_wrapper.v
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/dual_port_ram.v
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_buffer.v
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_read.v
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_write.v
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/opb_emu_target.v
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/top.v
 }
-read_vhdl -library xil_defaultlib C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmn_uart.vhd
+read_vhdl -library xil_defaultlib {
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM.vhd
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_deadband.vhd
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_debouncer.vhd
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm.vhd
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_uart.vhd
+  C:/repo2/gpb/dmd/P1060973_FPGA/hdl/serial_eeprom_if.vhd
+}
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -108,7 +129,7 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 }
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.srcs/utils_1/imports/synth_1/top.dcp
+read_checkpoint -auto_incremental -incremental C:/repo2/gpb/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.srcs/utils_1/imports/synth_1/top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

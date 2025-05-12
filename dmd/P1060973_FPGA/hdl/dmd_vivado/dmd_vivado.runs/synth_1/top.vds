@@ -2,18 +2,18 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Mon Apr 21 21:18:03 2025
-# Process ID: 7040
-# Current directory: C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.runs/synth_1
+# Start of session at: Sun May 11 17:00:06 2025
+# Process ID: 28324
+# Current directory: C:/repo2/gpb/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
-# Log file: C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.runs/synth_1/top.vds
-# Journal file: C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.runs/synth_1\vivado.jou
+# Log file: C:/repo2/gpb/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.runs/synth_1/top.vds
+# Journal file: C:/repo2/gpb/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.runs/synth_1\vivado.jou
 # Running On: LAPTOP-6FQD1N4B, OS: Windows, CPU Frequency: 2611 MHz, CPU Physical cores: 12, Host memory: 34016 MB
 #-----------------------------------------------------------
 source top.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1001.617 ; gain = 117.531
-Command: read_checkpoint -auto_incremental -incremental C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.srcs/utils_1/imports/synth_1/top.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1003.469 ; gain = 118.910
+Command: read_checkpoint -auto_incremental -incremental C:/repo2/gpb/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.srcs/utils_1/imports/synth_1/top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/repo2/gpb/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top top -part xc7z045ffg900-2
 Starting synth_design
@@ -23,137 +23,230 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 31724
+INFO: [Synth 8-7075] Helper process launched with PID 22464
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'clk_sd', assumed default net type 'wire' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DAC_DACx0504_IF.v:73]
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1449.902 ; gain = 410.523
+Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1449.863 ; gain = 408.699
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'top' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:3]
-INFO: [Synth 8-6157] synthesizing module 'cmd_server' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmd_server.v:3]
-INFO: [Synth 8-638] synthesizing module 'cmn_uart' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmn_uart.vhd:93]
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'CLOCK_DIV' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/CLK_DIV.V:21]
+INFO: [Synth 8-6155] done synthesizing module 'CLOCK_DIV' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/CLK_DIV.V:21]
+INFO: [Synth 8-6157] synthesizing module 'cmd_server' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmd_server.v:3]
+INFO: [Synth 8-638] synthesizing module 'cmn_uart' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_uart.vhd:93]
 	Parameter BAUD_RATE bound to: 115200 - type: integer 
 	Parameter CLOCK_FREQUENCY bound to: 100000000 - type: integer 
-INFO: [Synth 8-226] default block is never used [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmn_uart.vhd:361]
-INFO: [Synth 8-256] done synthesizing module 'cmn_uart' (0#1) [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmn_uart.vhd:93]
-INFO: [Synth 8-6157] synthesizing module 'msg_buffer' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_buffer.v:3]
-INFO: [Synth 8-6157] synthesizing module 'afifo' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/afifo.v:62]
+INFO: [Synth 8-226] default block is never used [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_uart.vhd:361]
+INFO: [Synth 8-256] done synthesizing module 'cmn_uart' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_uart.vhd:93]
+INFO: [Synth 8-6157] synthesizing module 'msg_buffer' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_buffer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'afifo' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/afifo.v:62]
 	Parameter DSIZE bound to: 8 - type: integer 
 	Parameter ASIZE bound to: 4 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'afifo' (0#1) [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/afifo.v:62]
-INFO: [Synth 8-6155] done synthesizing module 'msg_buffer' (0#1) [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_buffer.v:3]
-INFO: [Synth 8-6157] synthesizing module 'opb_emu_target' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/opb_emu_target.v:3]
-INFO: [Synth 8-6157] synthesizing module 'msg_read' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_read.v:21]
-INFO: [Synth 8-6155] done synthesizing module 'msg_read' (0#1) [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_read.v:21]
-INFO: [Synth 8-6157] synthesizing module 'msg_write' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_write.v:21]
-INFO: [Synth 8-6155] done synthesizing module 'msg_write' (0#1) [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_write.v:21]
-INFO: [Synth 8-6155] done synthesizing module 'opb_emu_target' (0#1) [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/opb_emu_target.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'cmd_server' (0#1) [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmd_server.v:3]
-INFO: [Synth 8-6157] synthesizing module 'AdderDecode' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v:51]
-INFO: [Synth 8-6155] done synthesizing module 'AdderDecode' (0#1) [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v:51]
-WARNING: [Synth 8-7071] port 'GPIO_IN' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'OSC_CT_IN' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'CLK_GEN_IN' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'ILIM_DAC_IN' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'ADC_IN' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'GANT_MOT_IN' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'LIFT_MOT_IN' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'SP1_RE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'SP1_WE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'SP2_RE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'SP2_WE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'STD_CONT_RE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'CCHL_IF_RE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'SER_PENDANT_RE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'PWR_IF_RE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'LIFT_MOT_SENS_RE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'SPD_DMD_IF_RE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'GANTRY_MOT_SENS_RE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'SPD_EMOPS_RE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'GPO_RE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'GPO_WE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'ADMUX_RE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'ADMUX_WE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'ADSEL_RE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'ADSEL_WE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'STS_RE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'STS_WE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'GANTRY_96V_IF_RE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'GANTRY_96V_IF_WE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'LIFT_96V_IF_RE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'LIFT_96V_IF_WE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'MOT_GPO_WE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'COUNTER_WE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'COUNTER_RE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'ILIM_DAC_WE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'ILIM_DAC_RE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'CLOCK_WE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'CLOCK_RE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'ADC_RE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'ADC_WE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'GANT_MOT_RE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'GANT_MOT_WE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'LIFT_MOT_RE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'LIFT_MOT_WE' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7071] port 'DATA_OUT' of module 'AdderDecode' is unconnected for instance 'adder_decode_0' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-WARNING: [Synth 8-7023] instance 'adder_decode_0' of module 'AdderDecode' has 52 connections declared, but only 7 given [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:178]
-INFO: [Synth 8-6157] synthesizing module 'SCRATCH_PAD_REGISTER' [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ScratchPadRegister.v:20]
-INFO: [Synth 8-6155] done synthesizing module 'SCRATCH_PAD_REGISTER' (0#1) [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ScratchPadRegister.v:20]
-INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:3]
-WARNING: [Synth 8-3848] Net POWER_GOOD in module/entity top does not have driver. [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:7]
-WARNING: [Synth 8-3848] Net PULSE_2KHZ in module/entity top does not have driver. [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:109]
-WARNING: [Synth 8-3848] Net SP1_RE in module/entity top does not have driver. [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:121]
-WARNING: [Synth 8-3848] Net SP1_WE in module/entity top does not have driver. [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:122]
-WARNING: [Synth 8-3848] Net SP2_RE in module/entity top does not have driver. [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:123]
-WARNING: [Synth 8-3848] Net SP2_WE in module/entity top does not have driver. [C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v:124]
-WARNING: [Synth 8-7129] Port SP_DI[31] in module SCRATCH_PAD_REGISTER is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SP_DI[30] in module SCRATCH_PAD_REGISTER is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SP_DI[29] in module SCRATCH_PAD_REGISTER is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SP_DI[28] in module SCRATCH_PAD_REGISTER is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SP_DI[27] in module SCRATCH_PAD_REGISTER is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SP_DI[26] in module SCRATCH_PAD_REGISTER is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SP_DI[25] in module SCRATCH_PAD_REGISTER is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SP_DI[24] in module SCRATCH_PAD_REGISTER is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SP_DI[23] in module SCRATCH_PAD_REGISTER is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SP_DI[22] in module SCRATCH_PAD_REGISTER is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SP_DI[21] in module SCRATCH_PAD_REGISTER is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SP_DI[20] in module SCRATCH_PAD_REGISTER is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SP_DI[19] in module SCRATCH_PAD_REGISTER is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SP_DI[18] in module SCRATCH_PAD_REGISTER is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SP_DI[17] in module SCRATCH_PAD_REGISTER is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SP_DI[16] in module SCRATCH_PAD_REGISTER is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DEC_ADDR[31] in module AdderDecode is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DEC_ADDR[30] in module AdderDecode is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DEC_ADDR[29] in module AdderDecode is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DEC_ADDR[28] in module AdderDecode is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DEC_ADDR[27] in module AdderDecode is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DEC_ADDR[26] in module AdderDecode is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DEC_ADDR[25] in module AdderDecode is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DEC_ADDR[24] in module AdderDecode is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DEC_ADDR[23] in module AdderDecode is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DEC_ADDR[22] in module AdderDecode is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DEC_ADDR[21] in module AdderDecode is either unconnected or has no load
-WARNING: [Synth 8-7129] Port DEC_ADDR[20] in module AdderDecode is either unconnected or has no load
-WARNING: [Synth 8-7129] Port uart_active in module cmn_uart is either unconnected or has no load
-WARNING: [Synth 8-7129] Port POWER_GOOD in module top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port CLK_16KHZ in module top is either unconnected or has no load
+INFO: [Synth 8-6155] done synthesizing module 'afifo' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/afifo.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'msg_buffer' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_buffer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'opb_emu_target' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/opb_emu_target.v:3]
+INFO: [Synth 8-6157] synthesizing module 'msg_read' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_read.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'msg_read' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_read.v:21]
+INFO: [Synth 8-6157] synthesizing module 'msg_write' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_write.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'msg_write' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_write.v:21]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/opb_emu_target.v:134]
+INFO: [Synth 8-6155] done synthesizing module 'opb_emu_target' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/opb_emu_target.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'cmd_server' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmd_server.v:3]
+INFO: [Synth 8-6157] synthesizing module 'AdderDecode' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'AdderDecode' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v:21]
+INFO: [Synth 8-6157] synthesizing module 'ClkGen' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/CLK_GEN.v:32]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/CLK_GEN.v:165]
+INFO: [Synth 8-6155] done synthesizing module 'ClkGen' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/CLK_GEN.v:32]
+INFO: [Synth 8-6157] synthesizing module 'OSCILLATOR_COUNTER' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/OSCILLATOR_COUNTER.v:22]
+INFO: [Synth 8-6157] synthesizing module 'afifo__parameterized0' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/afifo.v:62]
+	Parameter DSIZE bound to: 8 - type: integer 
+	Parameter ASIZE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'afifo__parameterized0' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/afifo.v:62]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/OSCILLATOR_COUNTER.v:131]
+INFO: [Synth 8-6155] done synthesizing module 'OSCILLATOR_COUNTER' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/OSCILLATOR_COUNTER.v:22]
+INFO: [Synth 8-6157] synthesizing module 'SCRATCH_PAD_REGISTER' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ScratchPadRegister.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'SCRATCH_PAD_REGISTER' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ScratchPadRegister.v:20]
+INFO: [Synth 8-6157] synthesizing module 'EEPROM_OPB_IF' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/EEPROM_OPB_IF.v:3]
+INFO: [Synth 8-638] synthesizing module 'serial_eeprom_if' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/serial_eeprom_if.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'serial_eeprom_if' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/serial_eeprom_if.vhd:51]
+INFO: [Synth 8-6155] done synthesizing module 'EEPROM_OPB_IF' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/EEPROM_OPB_IF.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ADC_ADS8864_IF' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADC_ADS8864_IF.v:53]
+INFO: [Synth 8-6157] synthesizing module 'DP_RAM_2R_1W' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/dual_port_ram.v:19]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter ADDR_WIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DP_RAM_2R_1W' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/dual_port_ram.v:19]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADC_ADS8864_IF.v:174]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADC_ADS8864_IF.v:378]
+INFO: [Synth 8-6155] done synthesizing module 'ADC_ADS8864_IF' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADC_ADS8864_IF.v:53]
+INFO: [Synth 8-6157] synthesizing module 'DAC_DACx0504_IF' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DAC_DACx0504_IF.v:16]
+INFO: [Synth 8-6157] synthesizing module 'DP_RAM_2R_1W__parameterized0' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/dual_port_ram.v:19]
+	Parameter DATA_WIDTH bound to: 24 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DP_RAM_2R_1W__parameterized0' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/dual_port_ram.v:19]
+INFO: [Synth 8-6157] synthesizing module 'afifo__parameterized1' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/afifo.v:62]
+	Parameter DSIZE bound to: 24 - type: integer 
+	Parameter ASIZE bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'afifo__parameterized1' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/afifo.v:62]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DAC_DACx0504_IF.v:134]
+INFO: [Synth 8-6155] done synthesizing module 'DAC_DACx0504_IF' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DAC_DACx0504_IF.v:16]
+INFO: [Synth 8-6157] synthesizing module 'FPGA_WDI' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/FPGA_WD.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'FPGA_WDI' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/FPGA_WD.v:19]
+INFO: [Synth 8-6157] synthesizing module 'GPIO' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/GPIO.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'GPIO' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/GPIO.v:15]
+INFO: [Synth 8-6157] synthesizing module 'MSSB_IF' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/MSSB_IF.v:26]
+INFO: [Synth 8-638] synthesizing module 'cmn_uart__parameterized0' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_uart.vhd:93]
+	Parameter BAUD_RATE bound to: 921600 - type: integer 
+	Parameter CLOCK_FREQUENCY bound to: 100000000 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_uart.vhd:361]
+INFO: [Synth 8-256] done synthesizing module 'cmn_uart__parameterized0' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_uart.vhd:93]
+INFO: [Synth 8-6155] done synthesizing module 'MSSB_IF' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/MSSB_IF.v:26]
+INFO: [Synth 8-6157] synthesizing module 'cmn_pwm_wrapper' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm_wrapper.v:26]
+INFO: [Synth 8-638] synthesizing module 'cmn_pwm' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'cmn_debouncer' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_debouncer.vhd:39]
+	Parameter DEBOUNCE_TIME_LTOH bound to: 8 - type: integer 
+	Parameter DEBOUNCE_TIME_HTOL bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'cmn_debouncer' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_debouncer.vhd:39]
+INFO: [Synth 8-638] synthesizing module 'PH_PWM' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM.vhd:56]
+	Parameter MOTOR_PWM_PERIODE bound to: 625 - type: integer 
+	Parameter PHASE_SHIFT bound to: 0 - type: integer 
+	Parameter PWM_CNTR_MAX bound to: 80 - type: integer 
+	Parameter MAX_CUR_SAMPLE_TIME bound to: 128 - type: integer 
+	Parameter ENABLE_CNTR_MAX bound to: 3 - type: integer 
+	Parameter FAULT_CNTR_MAX bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'PH_PWM' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'CMN_DEADBAND' [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_deadband.vhd:64]
+	Parameter DEADBAND_TIME bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'CMN_DEADBAND' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_deadband.vhd:64]
+INFO: [Synth 8-256] done synthesizing module 'cmn_pwm' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm.vhd:61]
+INFO: [Synth 8-6155] done synthesizing module 'cmn_pwm_wrapper' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm_wrapper.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/top.v:3]
+WARNING: [Synth 8-6014] Unused sequential element clk2meghz_div_reg was removed.  [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/CLK_GEN.v:158]
+WARNING: [Synth 8-6014] Unused sequential element startb_d1_reg was removed.  [C:/repo2/gpb/dmd/P1060973_FPGA/hdl/OSCILLATOR_COUNTER.v:150]
+WARNING: [Synth 8-7129] Port uart_active in module cmn_uart__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[31] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[30] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[29] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[28] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[27] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[26] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[25] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[24] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[23] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[22] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[21] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[20] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[19] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[18] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[17] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[16] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[15] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[14] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[13] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[12] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[11] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[10] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[9] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[8] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[7] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[6] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[5] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[4] in module MSSB_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[31] in module GPIO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[30] in module GPIO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[29] in module GPIO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[28] in module GPIO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[27] in module GPIO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[26] in module GPIO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[25] in module GPIO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[24] in module GPIO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[23] in module GPIO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[22] in module GPIO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[21] in module GPIO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[20] in module GPIO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[19] in module GPIO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[18] in module GPIO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[17] in module GPIO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[16] in module GPIO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_CLK in module FPGA_WDI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[31] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[30] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[29] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[28] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[27] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[26] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[25] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[24] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[23] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[22] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[21] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[20] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[19] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[18] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[17] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[16] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[15] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[14] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[13] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[12] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[11] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[10] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[9] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[8] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[7] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[6] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[5] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[4] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[31] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[30] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[29] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[28] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[27] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[26] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[25] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[24] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[23] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[22] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[21] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[20] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[19] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[18] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[17] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_DI[16] in module DAC_DACx0504_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[31] in module ADC_ADS8864_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[30] in module ADC_ADS8864_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[29] in module ADC_ADS8864_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[28] in module ADC_ADS8864_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[27] in module ADC_ADS8864_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[26] in module ADC_ADS8864_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[25] in module ADC_ADS8864_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[24] in module ADC_ADS8864_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[23] in module ADC_ADS8864_IF is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OPB_ADDR[22] in module ADC_ADS8864_IF is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1545.387 ; gain = 506.008
+Finished Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1572.980 ; gain = 531.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1545.387 ; gain = 506.008
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1572.980 ; gain = 531.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z045ffg900-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1545.387 ; gain = 506.008
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1572.980 ; gain = 531.816
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z045ffg900-2
 INFO: [Synth 8-802] inferred FSM for state register 'uart_tx_state_reg' in module 'cmn_uart'
 INFO: [Synth 8-802] inferred FSM for state register 'uart_rx_state_reg' in module 'cmn_uart'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'msg_read'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'msg_write'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'opb_emu_target'
+INFO: [Synth 8-802] inferred FSM for state register 'eeprom_cycle_state_reg' in module 'serial_eeprom_if'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'DAC_DACx0504_IF'
+INFO: [Synth 8-802] inferred FSM for state register 'uart_tx_state_reg' in module 'cmn_uart__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'uart_rx_state_reg' in module 'cmn_uart__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'DB_STATE_reg' in module 'CMN_DEADBAND'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -197,56 +290,170 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
               DONE_STATE |                          0000100 |                         00000101
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'msg_write'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                    PING |                               01 |                               01
+                     OPB |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'opb_emu_target'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                             0000 |                             0000
+       eeprom_read_start |                             0001 |                             0001
+eeprom_status_read_start |                             0010 |                             0010
+       eeprom_wren_start |                             0011 |                             0011
+           eeprom_set_cs |                             0100 |                             0101
+ eeprom_send_instruction |                             0101 |                             0110
+     eeprom_send_address |                             0110 |                             0111
+        eeprom_read_data |                             0111 |                             1001
+       eeprom_write_data |                             1000 |                             1000
+        eeprom_negate_cs |                             1001 |                             1010
+      eeprom_write_start |                             1010 |                             0100
+       eeprom_state_done |                             1011 |                             1011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'eeprom_cycle_state_reg' using encoding 'sequential' in module 'serial_eeprom_if'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0001 |                              000
+                  CS_LOW |                             0010 |                              001
+               BIT_SHIFT |                             0100 |                              010
+                    DONE |                             1000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'DAC_DACx0504_IF'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+           wait_for_tick |                              001 |                              001
+          send_start_bit |                              010 |                              010
+           transmit_data |                              011 |                              011
+           send_stop_bit |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'uart_tx_state_reg' using encoding 'sequential' in module 'cmn_uart__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+rx_wait_start_synchronise |                               00 |                               00
+        rx_get_start_bit |                               01 |                               01
+             rx_get_data |                               10 |                               10
+         rx_get_stop_bit |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'uart_rx_state_reg' using encoding 'sequential' in module 'cmn_uart__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+             db_state_00 |                            00001 |                              000
+             db_state_10 |                            00010 |                              010
+        db_state_10_wait |                            00100 |                              100
+             db_state_01 |                            01000 |                              001
+        db_state_01_wait |                            10000 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'DB_STATE_reg' using encoding 'one-hot' in module 'CMN_DEADBAND'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1545.387 ; gain = 506.008
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 1607.715 ; gain = 566.551
 ---------------------------------------------------------------------------------
+RAM Pipeline Warning: Read Address Register Found For RAM ram_reg. We will not be able to pipeline it. This may degrade performance. 
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input    8 Bit       Adders := 2     
+	   2 Input   32 Bit       Adders := 16    
+	   2 Input   20 Bit       Adders := 2     
+	   2 Input   17 Bit       Adders := 8     
+	   2 Input   16 Bit       Adders := 27    
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 16    
+	   2 Input    8 Bit       Adders := 9     
+	   2 Input    7 Bit       Adders := 16    
 	   2 Input    6 Bit       Adders := 1     
-	   2 Input    5 Bit       Adders := 8     
-	   2 Input    4 Bit       Adders := 3     
-	   2 Input    3 Bit       Adders := 2     
-	   2 Input    2 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 15    
+	   2 Input    4 Bit       Adders := 6     
+	   2 Input    3 Bit       Adders := 44    
+	   2 Input    2 Bit       Adders := 45    
 +---XORs : 
-	   2 Input      5 Bit         XORs := 4     
+	   2 Input      5 Bit         XORs := 6     
+	   2 Input      3 Bit         XORs := 2     
 +---Registers : 
-	               32 Bit    Registers := 5     
-	               16 Bit    Registers := 4     
-	                8 Bit    Registers := 7     
-	                6 Bit    Registers := 2     
-	                5 Bit    Registers := 16    
-	                4 Bit    Registers := 4     
-	                3 Bit    Registers := 2     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 14    
+	               32 Bit    Registers := 113   
+	               24 Bit    Registers := 2     
+	               20 Bit    Registers := 2     
+	               16 Bit    Registers := 40    
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 51    
+	                9 Bit    Registers := 16    
+	                8 Bit    Registers := 32    
+	                7 Bit    Registers := 16    
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 28    
+	                4 Bit    Registers := 13    
+	                3 Bit    Registers := 81    
+	                2 Bit    Registers := 128   
+	                1 Bit    Registers := 249   
 +---RAMs : 
+	              16K Bit	(1024 X 16 bit)          RAMs := 1     
+	              384 Bit	(16 X 24 bit)          RAMs := 2     
 	              128 Bit	(16 X 8 bit)          RAMs := 2     
+	               32 Bit	(4 X 8 bit)          RAMs := 1     
 +---Muxes : 
+	  33 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 124   
 	   5 Input   32 Bit        Muxes := 4     
-	   2 Input   32 Bit        Muxes := 5     
-	   2 Input   16 Bit        Muxes := 1     
-	   5 Input    8 Bit        Muxes := 3     
-	   2 Input    8 Bit        Muxes := 4     
+	   4 Input   24 Bit        Muxes := 1     
+	   2 Input   24 Bit        Muxes := 5     
+	   2 Input   22 Bit        Muxes := 1     
+	   2 Input   21 Bit        Muxes := 2     
+	   2 Input   20 Bit        Muxes := 7     
+	   2 Input   18 Bit        Muxes := 3     
+	   2 Input   17 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 56    
+	  12 Input   16 Bit        Muxes := 1     
+	  27 Input   16 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 1     
+	  27 Input   11 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 33    
+	  27 Input   10 Bit        Muxes := 1     
+	  12 Input    8 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 12    
+	  27 Input    8 Bit        Muxes := 1     
+	   5 Input    8 Bit        Muxes := 7     
+	   2 Input    7 Bit        Muxes := 34    
 	   7 Input    7 Bit        Muxes := 2     
-	   2 Input    7 Bit        Muxes := 18    
-	   2 Input    6 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 3     
-	   2 Input    3 Bit        Muxes := 5     
-	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 9     
+	   5 Input    5 Bit        Muxes := 32    
+	   2 Input    5 Bit        Muxes := 167   
+	  12 Input    5 Bit        Muxes := 1     
+	   3 Input    5 Bit        Muxes := 1     
+	   4 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 17    
+	  12 Input    4 Bit        Muxes := 1     
+	  27 Input    4 Bit        Muxes := 2     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 62    
+	   5 Input    3 Bit        Muxes := 35    
 	   3 Input    3 Bit        Muxes := 1     
 	   4 Input    3 Bit        Muxes := 1     
 	   7 Input    3 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 5     
-	   4 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 22    
-	   5 Input    1 Bit        Muxes := 5     
-	   3 Input    1 Bit        Muxes := 1     
-	   4 Input    1 Bit        Muxes := 5     
+	   3 Input    2 Bit        Muxes := 25    
+	   2 Input    2 Bit        Muxes := 73    
+	   4 Input    2 Bit        Muxes := 11    
+	  27 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 531   
+	   7 Input    1 Bit        Muxes := 5     
+	   5 Input    1 Bit        Muxes := 83    
+	   4 Input    1 Bit        Muxes := 28    
+	  12 Input    1 Bit        Muxes := 15    
+	   8 Input    1 Bit        Muxes := 1     
+	  27 Input    1 Bit        Muxes := 13    
+	   3 Input    1 Bit        Muxes := 8     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -264,23 +471,114 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-7129] Port POWER_GOOD in module top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port CLK_16KHZ in module top is either unconnected or has no load
-WARNING: [Synth 8-3332] Sequential element (cmd_server_0/opb_emu_target_inst/msg_write_inst/FSM_onehot_state_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-6014] Unused sequential element opb_fifo_inst/mem_reg was removed. 
+RAM Pipeline Warning: Read Address Register Found For RAM data_in_ram/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM data_in_ram/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM data_in_ram/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[1].i_mot_deadband/FSM_onehot_DB_STATE_reg[4]) is unused and will be removed from module cmn_pwm__1.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[1].i_mot_deadband/FSM_onehot_DB_STATE_reg[3]) is unused and will be removed from module cmn_pwm__1.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[1].i_mot_deadband/FSM_onehot_DB_STATE_reg[2]) is unused and will be removed from module cmn_pwm__1.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[1].i_mot_deadband/FSM_onehot_DB_STATE_reg[1]) is unused and will be removed from module cmn_pwm__1.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[1].i_mot_deadband/FSM_onehot_DB_STATE_reg[0]) is unused and will be removed from module cmn_pwm__1.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[2].i_mot_deadband/FSM_onehot_DB_STATE_reg[4]) is unused and will be removed from module cmn_pwm__1.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[2].i_mot_deadband/FSM_onehot_DB_STATE_reg[3]) is unused and will be removed from module cmn_pwm__1.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[2].i_mot_deadband/FSM_onehot_DB_STATE_reg[2]) is unused and will be removed from module cmn_pwm__1.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[2].i_mot_deadband/FSM_onehot_DB_STATE_reg[1]) is unused and will be removed from module cmn_pwm__1.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[2].i_mot_deadband/FSM_onehot_DB_STATE_reg[0]) is unused and will be removed from module cmn_pwm__1.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[3].i_mot_deadband/FSM_onehot_DB_STATE_reg[4]) is unused and will be removed from module cmn_pwm__1.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[3].i_mot_deadband/FSM_onehot_DB_STATE_reg[3]) is unused and will be removed from module cmn_pwm__1.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[3].i_mot_deadband/FSM_onehot_DB_STATE_reg[2]) is unused and will be removed from module cmn_pwm__1.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[3].i_mot_deadband/FSM_onehot_DB_STATE_reg[1]) is unused and will be removed from module cmn_pwm__1.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[3].i_mot_deadband/FSM_onehot_DB_STATE_reg[0]) is unused and will be removed from module cmn_pwm__1.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[1].i_mot_deadband/FSM_onehot_DB_STATE_reg[4]) is unused and will be removed from module cmn_pwm__2.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[1].i_mot_deadband/FSM_onehot_DB_STATE_reg[3]) is unused and will be removed from module cmn_pwm__2.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[1].i_mot_deadband/FSM_onehot_DB_STATE_reg[2]) is unused and will be removed from module cmn_pwm__2.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[1].i_mot_deadband/FSM_onehot_DB_STATE_reg[1]) is unused and will be removed from module cmn_pwm__2.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[1].i_mot_deadband/FSM_onehot_DB_STATE_reg[0]) is unused and will be removed from module cmn_pwm__2.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[2].i_mot_deadband/FSM_onehot_DB_STATE_reg[4]) is unused and will be removed from module cmn_pwm__2.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[2].i_mot_deadband/FSM_onehot_DB_STATE_reg[3]) is unused and will be removed from module cmn_pwm__2.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[2].i_mot_deadband/FSM_onehot_DB_STATE_reg[2]) is unused and will be removed from module cmn_pwm__2.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[2].i_mot_deadband/FSM_onehot_DB_STATE_reg[1]) is unused and will be removed from module cmn_pwm__2.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[2].i_mot_deadband/FSM_onehot_DB_STATE_reg[0]) is unused and will be removed from module cmn_pwm__2.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[3].i_mot_deadband/FSM_onehot_DB_STATE_reg[4]) is unused and will be removed from module cmn_pwm__2.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[3].i_mot_deadband/FSM_onehot_DB_STATE_reg[3]) is unused and will be removed from module cmn_pwm__2.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[3].i_mot_deadband/FSM_onehot_DB_STATE_reg[2]) is unused and will be removed from module cmn_pwm__2.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[3].i_mot_deadband/FSM_onehot_DB_STATE_reg[1]) is unused and will be removed from module cmn_pwm__2.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[3].i_mot_deadband/FSM_onehot_DB_STATE_reg[0]) is unused and will be removed from module cmn_pwm__2.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[1].i_mot_deadband/FSM_onehot_DB_STATE_reg[4]) is unused and will be removed from module cmn_pwm__3.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[1].i_mot_deadband/FSM_onehot_DB_STATE_reg[3]) is unused and will be removed from module cmn_pwm__3.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[1].i_mot_deadband/FSM_onehot_DB_STATE_reg[2]) is unused and will be removed from module cmn_pwm__3.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[1].i_mot_deadband/FSM_onehot_DB_STATE_reg[1]) is unused and will be removed from module cmn_pwm__3.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[1].i_mot_deadband/FSM_onehot_DB_STATE_reg[0]) is unused and will be removed from module cmn_pwm__3.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[2].i_mot_deadband/FSM_onehot_DB_STATE_reg[4]) is unused and will be removed from module cmn_pwm__3.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[2].i_mot_deadband/FSM_onehot_DB_STATE_reg[3]) is unused and will be removed from module cmn_pwm__3.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[2].i_mot_deadband/FSM_onehot_DB_STATE_reg[2]) is unused and will be removed from module cmn_pwm__3.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[2].i_mot_deadband/FSM_onehot_DB_STATE_reg[1]) is unused and will be removed from module cmn_pwm__3.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[2].i_mot_deadband/FSM_onehot_DB_STATE_reg[0]) is unused and will be removed from module cmn_pwm__3.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[3].i_mot_deadband/FSM_onehot_DB_STATE_reg[4]) is unused and will be removed from module cmn_pwm__3.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[3].i_mot_deadband/FSM_onehot_DB_STATE_reg[3]) is unused and will be removed from module cmn_pwm__3.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[3].i_mot_deadband/FSM_onehot_DB_STATE_reg[2]) is unused and will be removed from module cmn_pwm__3.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[3].i_mot_deadband/FSM_onehot_DB_STATE_reg[1]) is unused and will be removed from module cmn_pwm__3.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[3].i_mot_deadband/FSM_onehot_DB_STATE_reg[0]) is unused and will be removed from module cmn_pwm__3.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[1].i_mot_deadband/FSM_onehot_DB_STATE_reg[4]) is unused and will be removed from module cmn_pwm__4.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[1].i_mot_deadband/FSM_onehot_DB_STATE_reg[3]) is unused and will be removed from module cmn_pwm__4.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[1].i_mot_deadband/FSM_onehot_DB_STATE_reg[2]) is unused and will be removed from module cmn_pwm__4.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[1].i_mot_deadband/FSM_onehot_DB_STATE_reg[1]) is unused and will be removed from module cmn_pwm__4.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[1].i_mot_deadband/FSM_onehot_DB_STATE_reg[0]) is unused and will be removed from module cmn_pwm__4.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[2].i_mot_deadband/FSM_onehot_DB_STATE_reg[4]) is unused and will be removed from module cmn_pwm__4.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[2].i_mot_deadband/FSM_onehot_DB_STATE_reg[3]) is unused and will be removed from module cmn_pwm__4.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[2].i_mot_deadband/FSM_onehot_DB_STATE_reg[2]) is unused and will be removed from module cmn_pwm__4.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[2].i_mot_deadband/FSM_onehot_DB_STATE_reg[1]) is unused and will be removed from module cmn_pwm__4.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[2].i_mot_deadband/FSM_onehot_DB_STATE_reg[0]) is unused and will be removed from module cmn_pwm__4.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[3].i_mot_deadband/FSM_onehot_DB_STATE_reg[4]) is unused and will be removed from module cmn_pwm__4.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[3].i_mot_deadband/FSM_onehot_DB_STATE_reg[3]) is unused and will be removed from module cmn_pwm__4.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[3].i_mot_deadband/FSM_onehot_DB_STATE_reg[2]) is unused and will be removed from module cmn_pwm__4.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[3].i_mot_deadband/FSM_onehot_DB_STATE_reg[1]) is unused and will be removed from module cmn_pwm__4.
+WARNING: [Synth 8-3332] Sequential element (gen_dead_band_col_pwm[3].i_mot_deadband/FSM_onehot_DB_STATE_reg[0]) is unused and will be removed from module cmn_pwm__4.
+WARNING: [Synth 8-3332] Sequential element (i_brk_deadband/FSM_onehot_DB_STATE_reg[4]) is unused and will be removed from module cmn_pwm__7.
+WARNING: [Synth 8-3332] Sequential element (i_brk_deadband/FSM_onehot_DB_STATE_reg[3]) is unused and will be removed from module cmn_pwm__7.
+WARNING: [Synth 8-3332] Sequential element (i_brk_deadband/FSM_onehot_DB_STATE_reg[2]) is unused and will be removed from module cmn_pwm__7.
+WARNING: [Synth 8-3332] Sequential element (i_brk_deadband/FSM_onehot_DB_STATE_reg[1]) is unused and will be removed from module cmn_pwm__7.
+WARNING: [Synth 8-3332] Sequential element (i_brk_deadband/FSM_onehot_DB_STATE_reg[0]) is unused and will be removed from module cmn_pwm__7.
+WARNING: [Synth 8-3332] Sequential element (i_brk_deadband/FSM_onehot_DB_STATE_reg[4]) is unused and will be removed from module cmn_pwm.
+WARNING: [Synth 8-3332] Sequential element (i_brk_deadband/FSM_onehot_DB_STATE_reg[3]) is unused and will be removed from module cmn_pwm.
+WARNING: [Synth 8-3332] Sequential element (i_brk_deadband/FSM_onehot_DB_STATE_reg[2]) is unused and will be removed from module cmn_pwm.
+WARNING: [Synth 8-3332] Sequential element (i_brk_deadband/FSM_onehot_DB_STATE_reg[1]) is unused and will be removed from module cmn_pwm.
+WARNING: [Synth 8-3332] Sequential element (i_brk_deadband/FSM_onehot_DB_STATE_reg[0]) is unused and will be removed from module cmn_pwm.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1822.250 ; gain = 782.871
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1963.664 ; gain = 922.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
+ROM: Preliminary Mapping Report
++---------------+------------+---------------+----------------+
+|Module Name    | RTL Object | Depth x Width | Implemented As | 
++---------------+------------+---------------+----------------+
+|ADC_ADS8864_IF | sdout_buf  | 32x1          | LUT            | 
+|ADC_ADS8864_IF | sdout_buf  | 32x1          | LUT            | 
++---------------+------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object          | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|adc_0       | data_in_ram/ram_reg | 1 K x 16(READ_FIRST)   | W |   | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
 Distributed RAM: Preliminary Mapping Report (see note below)
-+------------+---------------------------------------------------+-----------+----------------------+-------------+
-|Module Name | RTL Object                                        | Inference | Size (Depth x Width) | Primitives  | 
-+------------+---------------------------------------------------+-----------+----------------------+-------------+
-|top         | cmd_server_0/msg_buffer_inst/rx_fifo_inst/mem_reg | Implied   | 16 x 8               | RAM32M x 2  | 
-|top         | cmd_server_0/msg_buffer_inst/tx_fifo_inst/mem_reg | Implied   | 16 x 8               | RAM32M x 2  | 
-+------------+---------------------------------------------------+-----------+----------------------+-------------+
++-------------+--------------------------------------+-----------+----------------------+-------------+
+|Module Name  | RTL Object                           | Inference | Size (Depth x Width) | Primitives  | 
++-------------+--------------------------------------+-----------+----------------------+-------------+
+|dac_0        | data_in_ram/ram_reg                  | Implied   | 16 x 24              | RAM32M x 4  | 
+|dac_0        | opb_fifo_inst/mem_reg                | Implied   | 16 x 24              | RAM32M x 4  | 
+|cmd_server_0 | msg_buffer_inst/rx_fifo_inst/mem_reg | Implied   | 16 x 8               | RAM32M x 2  | 
+|cmd_server_0 | msg_buffer_inst/tx_fifo_inst/mem_reg | Implied   | 16 x 8               | RAM32M x 2  | 
++-------------+--------------------------------------+-----------+----------------------+-------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 ---------------------------------------------------------------------------------
@@ -291,19 +589,29 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1822.250 ; gain = 782.871
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 1963.664 ; gain = 922.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
+Block RAM: Final Mapping Report
++------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object          | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|adc_0       | data_in_ram/ram_reg | 1 K x 16(READ_FIRST)   | W |   | 1 K x 16(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++------------+---------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
 Distributed RAM: Final Mapping Report
-+------------+---------------------------------------------------+-----------+----------------------+-------------+
-|Module Name | RTL Object                                        | Inference | Size (Depth x Width) | Primitives  | 
-+------------+---------------------------------------------------+-----------+----------------------+-------------+
-|top         | cmd_server_0/msg_buffer_inst/rx_fifo_inst/mem_reg | Implied   | 16 x 8               | RAM32M x 2  | 
-|top         | cmd_server_0/msg_buffer_inst/tx_fifo_inst/mem_reg | Implied   | 16 x 8               | RAM32M x 2  | 
-+------------+---------------------------------------------------+-----------+----------------------+-------------+
++-------------+--------------------------------------+-----------+----------------------+-------------+
+|Module Name  | RTL Object                           | Inference | Size (Depth x Width) | Primitives  | 
++-------------+--------------------------------------+-----------+----------------------+-------------+
+|dac_0        | data_in_ram/ram_reg                  | Implied   | 16 x 24              | RAM32M x 4  | 
+|dac_0        | opb_fifo_inst/mem_reg                | Implied   | 16 x 24              | RAM32M x 4  | 
+|cmd_server_0 | msg_buffer_inst/rx_fifo_inst/mem_reg | Implied   | 16 x 8               | RAM32M x 2  | 
+|cmd_server_0 | msg_buffer_inst/tx_fifo_inst/mem_reg | Implied   | 16 x 8               | RAM32M x 2  | 
++-------------+--------------------------------------+-----------+----------------------+-------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -311,8 +619,9 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance adc_0/data_in_ram/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1822.250 ; gain = 782.871
+Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1963.664 ; gain = 922.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -329,139 +638,38 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3295] tying undriven pin i_2:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_3:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_4:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_5:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_6:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_7:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_8:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_9:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_10:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_11:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_12:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_13:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_14:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_15:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_16:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_17:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_18:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_19:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_20:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_21:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_22:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_23:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_24:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_25:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_26:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_27:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_28:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_29:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_30:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_31:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_32:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_33:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_98:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_99:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_100:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_101:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_102:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_103:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_104:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_105:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_106:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_107:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_108:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_109:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_110:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_111:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_112:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_113:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_114:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_115:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_116:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_117:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_118:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_119:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_120:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_121:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_122:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_123:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_124:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_125:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_126:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_127:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_128:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_129:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_130:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_131:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_132:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_133:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_134:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_135:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_136:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_137:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_138:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_139:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_140:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_141:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_142:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_143:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_144:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_145:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_146:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_147:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_148:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_149:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_150:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_151:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_152:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_153:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_154:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_155:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_156:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_157:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_158:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_159:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_160:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_161:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_162:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_163:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_164:a to constant 0
-WARNING: [Synth 8-3295] tying undriven pin i_165:a to constant 0
-INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1822.250 ; gain = 782.871
+Finished IO Insertion : Time (s): cpu = 00:00:53 ; elapsed = 00:00:54 . Memory (MB): peak = 1965.051 ; gain = 923.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1822.250 ; gain = 782.871
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:53 ; elapsed = 00:00:54 . Memory (MB): peak = 1965.051 ; gain = 923.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1822.250 ; gain = 782.871
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 1965.051 ; gain = 923.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1822.250 ; gain = 782.871
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 1965.051 ; gain = 923.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1822.250 ; gain = 782.871
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1965.051 ; gain = 923.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1822.250 ; gain = 782.871
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1965.051 ; gain = 923.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -477,59 +685,146 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |BUFG     |     1|
-|2     |LUT1     |     5|
-|3     |LUT2     |    24|
-|4     |LUT3     |    38|
-|5     |LUT4     |   161|
-|6     |LUT5     |    95|
-|7     |LUT6     |   194|
-|8     |RAM32M   |     2|
-|9     |RAM32X1D |     4|
-|10    |FDCE     |   290|
-|11    |FDPE     |    17|
-|12    |IBUF     |     3|
-|13    |OBUF     |     1|
-|14    |OBUFT    |     1|
+|1     |BUFG     |    12|
+|2     |CARRY4   |   382|
+|3     |LUT1     |   308|
+|4     |LUT2     |  1115|
+|5     |LUT3     |   593|
+|6     |LUT4     |  1101|
+|7     |LUT5     |  1004|
+|8     |LUT6     |  1684|
+|9     |MUXF7    |    83|
+|10    |RAM32M   |    10|
+|11    |RAM32X1D |     4|
+|12    |RAMB18E1 |     1|
+|13    |FDCE     |  4520|
+|14    |FDPE     |   228|
+|15    |FDRE     |   173|
+|16    |IBUF     |    60|
+|17    |OBUF     |    88|
 +------+---------+------+
 
 Report Instance Areas: 
-+------+------------------------+---------------+------+
-|      |Instance                |Module         |Cells |
-+------+------------------------+---------------+------+
-|1     |top                     |               |   836|
-|2     |  cmd_server_0          |cmd_server     |   830|
-|3     |    cmn_uart_inst       |cmn_uart       |    96|
-|4     |    msg_buffer_inst     |msg_buffer     |   139|
-|5     |      rx_fifo_inst      |afifo          |    68|
-|6     |      tx_fifo_inst      |afifo_0        |    70|
-|7     |    opb_emu_target_inst |opb_emu_target |   595|
-|8     |      msg_read_inst     |msg_read       |   487|
-|9     |      msg_write_inst    |msg_write      |   108|
-+------+------------------------+---------------+------+
++------+------------------------------------------------+-----------------------------+------+
+|      |Instance                                        |Module                       |Cells |
++------+------------------------------------------------+-----------------------------+------+
+|1     |top                                             |                             | 11366|
+|2     |  adc_0                                         |ADC_ADS8864_IF               |   430|
+|3     |    aqclkdiv                                    |CLOCK_DIV_61                 |    67|
+|4     |    data_in_ram                                 |DP_RAM_2R_1W                 |    14|
+|5     |    sclk                                        |CLOCK_DIV_62                 |    62|
+|6     |  adder_decode_0                                |AdderDecode                  |   320|
+|7     |  clk_gen_0                                     |ClkGen                       |   295|
+|8     |    pulse20khz_div                              |CLOCK_DIV_58                 |    61|
+|9     |    pulse2khz_div                               |CLOCK_DIV_59                 |    61|
+|10    |    wdclk_div                                   |CLOCK_DIV_60                 |    61|
+|11    |  clkgen_2khz                                   |CLOCK_DIV                    |    54|
+|12    |  cmd_server_0                                  |cmd_server                   |  1832|
+|13    |    cmn_uart_inst                               |cmn_uart                     |    99|
+|14    |    msg_buffer_inst                             |msg_buffer                   |   144|
+|15    |      rx_fifo_inst                              |afifo                        |    72|
+|16    |      tx_fifo_inst                              |afifo_57                     |    71|
+|17    |    opb_emu_target_inst                         |opb_emu_target               |  1589|
+|18    |      clkgen_1hz                                |CLOCK_DIV_56                 |    42|
+|19    |      msg_read_inst                             |msg_read                     |  1387|
+|20    |      msg_write_inst                            |msg_write                    |   144|
+|21    |  dac_0                                         |DAC_DACx0504_IF              |   242|
+|22    |    data_in_ram                                 |DP_RAM_2R_1W__parameterized0 |     9|
+|23    |    opb_fifo_inst                               |afifo__parameterized1        |    95|
+|24    |    sclk                                        |CLOCK_DIV_55                 |    42|
+|25    |  eeprom_0                                      |EEPROM_OPB_IF                |   200|
+|26    |    eeprom_if_0                                 |serial_eeprom_if             |   143|
+|27    |  fpga_wdi_0                                    |FPGA_WDI                     |    11|
+|28    |  gantry_brk1_if_0                              |cmn_pwm_wrapper              |   742|
+|29    |    clk_16khz_div                               |CLOCK_DIV_49                 |    56|
+|30    |    pwm_0                                       |cmn_pwm_50                   |   238|
+|31    |      i_brk_deadband                            |CMN_DEADBAND_51              |    27|
+|32    |      i_brk_filt                                |cmn_debouncer_52             |   113|
+|33    |      i_brk_pwm                                 |PH_PWM_53                    |    47|
+|34    |      i_mot_pwm                                 |PH_PWM_54                    |    51|
+|35    |  gantry_brk1_ret_if_0                          |cmn_pwm_wrapper_0            |   742|
+|36    |    clk_16khz_div                               |CLOCK_DIV_43                 |    56|
+|37    |    pwm_0                                       |cmn_pwm_44                   |   238|
+|38    |      i_brk_deadband                            |CMN_DEADBAND_45              |    27|
+|39    |      i_brk_filt                                |cmn_debouncer_46             |   113|
+|40    |      i_brk_pwm                                 |PH_PWM_47                    |    47|
+|41    |      i_mot_pwm                                 |PH_PWM_48                    |    51|
+|42    |  gantry_brk2_if_0                              |cmn_pwm_wrapper_1            |   759|
+|43    |    clk_16khz_div                               |CLOCK_DIV_37                 |    56|
+|44    |    pwm_0                                       |cmn_pwm_38                   |   242|
+|45    |      i_brk_deadband                            |CMN_DEADBAND_39              |    27|
+|46    |      i_brk_filt                                |cmn_debouncer_40             |   115|
+|47    |      i_brk_pwm                                 |PH_PWM_41                    |    47|
+|48    |      i_mot_pwm                                 |PH_PWM_42                    |    49|
+|49    |  gantry_brk2_ret_if_0                          |cmn_pwm_wrapper_2            |   742|
+|50    |    clk_16khz_div                               |CLOCK_DIV_31                 |    56|
+|51    |    pwm_0                                       |cmn_pwm_32                   |   238|
+|52    |      i_brk_deadband                            |CMN_DEADBAND_33              |    27|
+|53    |      i_brk_filt                                |cmn_debouncer_34             |   113|
+|54    |      i_brk_pwm                                 |PH_PWM_35                    |    47|
+|55    |      i_mot_pwm                                 |PH_PWM_36                    |    51|
+|56    |  gantry_brk3_if_0                              |cmn_pwm_wrapper_3            |   762|
+|57    |    clk_16khz_div                               |CLOCK_DIV_25                 |    56|
+|58    |    pwm_0                                       |cmn_pwm_26                   |   244|
+|59    |      i_brk_deadband                            |CMN_DEADBAND_27              |    27|
+|60    |      i_brk_filt                                |cmn_debouncer_28             |   117|
+|61    |      i_brk_pwm                                 |PH_PWM_29                    |    47|
+|62    |      i_mot_pwm                                 |PH_PWM_30                    |    49|
+|63    |  gantry_brk3_ret_if_0                          |cmn_pwm_wrapper_4            |   741|
+|64    |    clk_16khz_div                               |CLOCK_DIV_19                 |    56|
+|65    |    pwm_0                                       |cmn_pwm_20                   |   237|
+|66    |      i_brk_deadband                            |CMN_DEADBAND_21              |    27|
+|67    |      i_brk_filt                                |cmn_debouncer_22             |   112|
+|68    |      i_brk_pwm                                 |PH_PWM_23                    |    47|
+|69    |      i_mot_pwm                                 |PH_PWM_24                    |    51|
+|70    |  gantry_mot_if_0                               |cmn_pwm_wrapper_5            |   896|
+|71    |    clk_16khz_div                               |CLOCK_DIV_12                 |    56|
+|72    |    pwm_0                                       |cmn_pwm_13                   |   379|
+|73    |      \gen_dead_band_col_pwm[1].i_mot_deadband  |CMN_DEADBAND_14              |    27|
+|74    |      \gen_dead_band_col_pwm[2].i_mot_deadband  |CMN_DEADBAND_15              |    27|
+|75    |      \gen_dead_band_col_pwm[3].i_mot_deadband  |CMN_DEADBAND_16              |    27|
+|76    |      i_mot_filt                                |cmn_debouncer_17             |   113|
+|77    |      i_mot_pwm                                 |PH_PWM_18                    |    97|
+|78    |  gpio_0                                        |GPIO                         |   379|
+|79    |  lift_mot_if_0                                 |cmn_pwm_wrapper_6            |   897|
+|80    |    clk_16khz_div                               |CLOCK_DIV_9                  |    56|
+|81    |    pwm_0                                       |cmn_pwm                      |   380|
+|82    |      \gen_dead_band_col_pwm[1].i_mot_deadband  |CMN_DEADBAND                 |    27|
+|83    |      \gen_dead_band_col_pwm[2].i_mot_deadband  |CMN_DEADBAND_10              |    27|
+|84    |      \gen_dead_band_col_pwm[3].i_mot_deadband  |CMN_DEADBAND_11              |    27|
+|85    |      i_mot_filt                                |cmn_debouncer                |   114|
+|86    |      i_mot_pwm                                 |PH_PWM                       |    97|
+|87    |  mssb_if_0                                     |MSSB_IF                      |   461|
+|88    |    cmn_uart_inst                               |cmn_uart__parameterized0_8   |   185|
+|89    |  mssb_if_1                                     |MSSB_IF_7                    |   461|
+|90    |    cmn_uart_inst                               |cmn_uart__parameterized0     |   185|
+|91    |  osc_counter_0                                 |OSCILLATOR_COUNTER           |   112|
+|92    |    opb_fifo_inst                               |afifo__parameterized0        |    39|
+|93    |  scratch_pad_0                                 |SCRATCH_PAD_REGISTER         |   128|
++------+------------------------------------------------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1822.250 ; gain = 782.871
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1965.051 ; gain = 923.887
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 311 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1822.250 ; gain = 782.871
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1822.250 ; gain = 782.871
+Synthesis finished with 0 errors, 0 critical warnings and 224 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1965.051 ; gain = 923.887
+Synthesis Optimization Complete : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1965.051 ; gain = 923.887
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1834.348 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.141 . Memory (MB): peak = 1977.105 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 480 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1943.547 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2012.383 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 6 instances were transformed.
-  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+  A total of 14 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
   RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
 
-Synth Design complete, checksum: bc75c78c
+Synth Design complete, checksum: f492ab9c
 INFO: [Common 17-83] Releasing license: Synthesis
-47 Infos, 187 Warnings, 0 Critical Warnings and 0 Errors encountered.
+108 Infos, 174 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1943.547 ; gain = 917.062
-INFO: [Common 17-1381] The checkpoint 'C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.runs/synth_1/top.dcp' has been generated.
+synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 2012.383 ; gain = 984.055
+INFO: [Common 17-1381] The checkpoint 'C:/repo2/gpb/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Apr 21 21:18:50 2025...
+INFO: [Common 17-206] Exiting Vivado at Sun May 11 17:01:24 2025...

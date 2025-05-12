@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.runs/synth_1'
+HD_PWD='C:/repo2/gpb/dmd/P1060973_FPGA/hdl/dmd_vivado/dmd_vivado.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

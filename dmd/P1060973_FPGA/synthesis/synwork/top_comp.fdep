@@ -1,26 +1,36 @@
-#OPTIONS:"|-mixedhdl|-modhint|C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\synthesis\\synwork\\_verilog_hintfile|-top|top|-layerid|0|-orig_srs|C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\synthesis\\synwork\\top_comp.srs|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-I|C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\synthesis\\|-I|C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib|-sysv|-devicelib|C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\generic\\acg5.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
+#OPTIONS:"|-mixedhdl|-modhint|C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\synthesis\\synwork\\_verilog_hintfile|-top|top|-layerid|0|-orig_srs|C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\synthesis\\synwork\\top_comp.srs|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-I|C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl|-I|C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\synthesis\\|-I|C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib|-sysv|-devicelib|C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\generic\\acg5.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\bin64\\c_ver.exe":1721969592
-#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\synthesis\\synwork\\_verilog_hintfile":1745416175
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\synthesis\\synwork\\_verilog_hintfile":1747013943
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\generic\\acg5.v":1721920354
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\hypermods.v":1721919828
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\scemi_objects.v":1721919828
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\scemi_pipes.svh":1721919828
-#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\component\\polarfire_syn_comps.v":1745583878
-#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\ADDR_DECODER.v":1745503423
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\component\\polarfire_syn_comps.v":1747031806
 #CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\CLK_DIV.V":1745416052
-#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\CLK_GEN.v":1745416052
-#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\Timer_Counter.v":1745416052
-#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\FREQ_COUNTER.v":1745416052
-#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\ScratchPadRegister.v":1745416052
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\dual_port_ram.v":1745416052
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\ADC_ADS8864_IF.v":1746520293
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\ADDR_DECODER.v":1746953186
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\Addr_definition.v":1746952077
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\CLK_GEN.v":1746866263
 #CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\afifo.v":1745416052
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\DAC_DACx0504_IF.v":1746079675
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\EEPROM_OPB_IF.v":1745914703
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\FPGA_WD.v":1745977508
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\GPIO.v":1746089617
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\MSSB_IF.v":1746774355
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\OSCILLATOR_COUNTER.v":1745988133
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\ScratchPadRegister.v":1745637890
 #CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\msg_buffer.v":1745416052
-#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\msg_read.v":1745416052
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\msg_read.v":1745889155
 #CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\msg_write.v":1745416052
-#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\opb_emu_target.v":1745579717
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\opb_emu_target.v":1745634123
 #CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\cmd_server.v":1745416052
-#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\top.v":1745583807
-#CUR:"afifo_8s_4s_8s_4s_mem_8640_initial_block":1745583880
-#OPTIONS:"|-mixedhdl|-top|work.cmn_uart|-mpparams|C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\synthesis\\synwork\\_mh_params|-layerid|1|-orig_srs|C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\synthesis\\synwork\\top_comp.srs|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-work_is_curlib|1|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-vhdl2008|-work_is_curlib|1|-ignore_undefined_lib|-lib|work"
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\cmn_pwm_wrapper.v":1747016778
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\top.v":1747016558
+#CUR:"afifo_8s_4s_8s_4s_mem_14560_initial_block":1747031808
+#CUR:"afifo_8s_2s_8s_2s_mem_14560_initial_block":1747031809
+#CUR:"afifo_24s_4s_24s_4s_mem_14560_initial_block":1747031810
+#OPTIONS:"|-mixedhdl|-top|work.cmn_pwm|-top|work.cmn_uart|-top|work.serial_eeprom_if|-top|work.cmn_uart|-mpparams|C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\synthesis\\synwork\\_mh_params|-layerid|1|-orig_srs|C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\synthesis\\synwork\\top_comp.srs|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-work_is_curlib|1|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-vhdl2008|-work_is_curlib|1|-ignore_undefined_lib|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\bin64\\c_vhdl.exe":1721969626
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\location.map":1721919830
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\std.vhd":1721919856
@@ -32,71 +42,132 @@
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\arith.vhd":1721919830
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\unsigned.vhd":1721919830
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd\\hyperents.vhd":1721919830
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\serial_eeprom_if.vhd":1745894298
 #CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\cmn_uart.vhd":1745416052
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd\\math_real.vhd":1721921372
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\PH_PWM.vhd":1474197791
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\cmn_deadband.vhd":1474197791
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\cmn_debouncer.vhd":1747013917
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\cmn_pwm.vhd":1746862649
 0			"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v" verilog
-1			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v" verilog
-2			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_DIV.V" verilog
-3			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_GEN.v" verilog
-4			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\Timer_Counter.v" verilog
-5			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FREQ_COUNTER.v" verilog
-6			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v" verilog
+1			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_DIV.V" verilog
+2			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\dual_port_ram.v" verilog
+3			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v" verilog
+4			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v" verilog
+5		*	"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\Addr_definition.v" verilog
+6			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_GEN.v" verilog
 7			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v" verilog
-8			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_buffer.v" verilog
-9			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v" verilog
-10			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v" verilog
-11			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\opb_emu_target.v" verilog
-12			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmd_server.v" verilog
-13			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v" verilog
-14			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd" vhdl
+8			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\DAC_DACx0504_IF.v" verilog
+9			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\EEPROM_OPB_IF.v" verilog
+10			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FPGA_WD.v" verilog
+11			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v" verilog
+12			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v" verilog
+13			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v" verilog
+14			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v" verilog
+15			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_buffer.v" verilog
+16			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v" verilog
+17			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v" verilog
+18			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\opb_emu_target.v" verilog
+19			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmd_server.v" verilog
+20			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v" verilog
+21			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v" verilog
+22			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd" vhdl
+23			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd" vhdl
+24			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\PH_PWM.vhd" vhdl
+25			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_deadband.vhd" vhdl
+26			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd" vhdl
+27			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd" vhdl
 #Dependency Lists(Uses List)
 0 -1
 1 -1
 2 -1
-3 2
-4 -1
-5 4
-6 -1
+3 2 1
+4 5
+5 -1
+6 1
 7 -1
-8 7
-9 -1
+8 7 2 1
+9 22
 10 -1
-11 2 10 9
-12 14 11 8
-13 6 5 3 1 12 2
+11 -1
+12 23
+13 7
 14 -1
+15 7
+16 -1
+17 -1
+18 1 17 16
+19 23 18 15
+20 27 1
+21 20 12 11 10 8 3 9 14 13 6 5 4 19 1
+22 -1
+23 -1
+24 -1
+25 -1
+26 -1
+27 25 24 26
 #Dependency Lists(Users Of)
 0 -1
-1 13
-2 13 11 3
-3 13
-4 5
-5 13
-6 13
-7 8
-8 12
-9 11
-10 11
-11 12
-12 13
-13 -1
-14 12
+1 21 20 18 8 6 3
+2 8 3
+3 21
+4 21
+5 21 4
+6 21
+7 15 13 8
+8 21
+9 21
+10 21
+11 21
+12 21
+13 21
+14 21
+15 19
+16 18
+17 18
+18 19
+19 21
+20 21
+21 -1
+22 9
+23 19 12
+24 27
+25 27
+26 27
+27 20
 #Design Unit to File Association
-module work cmn_uart 14
-arch work cmn_uart rtl 14
-module work top 13
-module work cmd_server 12
-module work opb_emu_target 11
-module work msg_write 10
-module work msg_read 9
-module work msg_buffer 8
+module work cmn_pwm 27
+arch work cmn_pwm rtl 27
+module work cmn_debouncer 26
+arch work cmn_debouncer rtl 26
+module work cmn_deadband 25
+arch work cmn_deadband rtl 25
+module work ph_pwm 24
+arch work ph_pwm behavioral 24
+module work cmn_uart 23
+arch work cmn_uart rtl 23
+module work serial_eeprom_if 22
+arch work serial_eeprom_if rtl 22
+module work top 21
+module work cmn_pwm_wrapper 20
+module work cmd_server 19
+module work opb_emu_target 18
+module work msg_write 17
+module work msg_read 16
+module work msg_buffer 15
+module work SCRATCH_PAD_REGISTER 14
+module work OSCILLATOR_COUNTER 13
+module work MSSB_IF 12
+module work GPIO 11
+module work FPGA_WDI 10
+module work EEPROM_OPB_IF 9
+module work DAC_DACx0504_IF 8
 module work afifo 7
-module work SCRATCH_PAD_REGISTER 6
-module work OSCILLATOR_COUNTER 5
-module work TIMER_COUNTER 4
-module work ClkGen 3
-module work CLOCK_DIV 2
-module work AdderDecode 1
+module work ClkGen 6
+module work AdderDecode 4
+module work ADC_ADS8864_IF 3
+module work DP_RAM_2R_1W 2
+module work CLOCK_DIV 1
 module work CLKBUF_DIFF_ODT 0
 module work CLKBUF_DIFF 0
 module work PFSOC_SCSM 0

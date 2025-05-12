@@ -15,15 +15,75 @@ Max Top 5 critical clocks will be reported. For rest user needs to refer to Deta
 <data tcl_name="slack">Slack</data>
 </row>
 <row>
-<data>top|DBUG_HEADER10</data>
+<data>ADC_ADS8864_IF|ram_wr_clk_inferred_clock</data>
 <data>100.0 MHz</data>
 <data>NA</data>
 <data>NA</data>
 </row>
 <row>
-<data>top|SYS_CLK</data>
+<data>CLOCK_DIV_9|N_17_inferred_clock</data>
 <data>100.0 MHz</data>
-<data>109.1 MHz</data>
-<data>0.417</data>
+<data>218.6 MHz</data>
+<data>2.712</data>
+</row>
+<row>
+<data>CLOCK_DIV_10|N_17_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>217.9 MHz</data>
+<data>5.411</data>
+</row>
+<row>
+<data>CLOCK_DIV_11_0|N_17_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>236.6 MHz</data>
+<data>5.773</data>
+</row>
+<row>
+<data>CLOCK_DIV_11_1|N_17_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>236.6 MHz</data>
+<data>5.773</data>
+</row>
+<row>
+<data>CLOCK_DIV_11_2|N_17_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>236.6 MHz</data>
+<data>5.773</data>
+</row>
+<row>
+<data>CLOCK_DIV_11_3|N_17_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>236.6 MHz</data>
+<data>5.773</data>
+</row>
+<row>
+<data>CLOCK_DIV_11_4|N_17_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>236.6 MHz</data>
+<data>5.773</data>
+</row>
+<row>
+<data>CLOCK_DIV_11_5|N_17_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>236.6 MHz</data>
+<data>5.773</data>
+</row>
+<row>
+<data>CLOCK_DIV_11_6|N_17_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>217.9 MHz</data>
+<data>5.411</data>
+</row>
+<row>
+<data>top|DBUG_HEADER10</data>
+<data>100.0 MHz</data>
+<data>405.1 MHz</data>
+<data>7.531</data>
+</row>
+<row>
+<data>top|FPGA_100M_CLK</data>
+<data>100.0 MHz</data>
+<data>113.6 MHz</data>
+<data>0.597</data>
 </row>
 </report_table>

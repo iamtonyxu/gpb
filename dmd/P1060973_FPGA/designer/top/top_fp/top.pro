@@ -17,6 +17,14 @@
     <ProgrammingInterface>
         JTAGMode
     </ProgrammingInterface>
+    <programmer status="enable" type="FlashPro4" revision="UndefRev" connection="UndefConn">
+        <name>
+            04404
+        </name>
+        <id>
+            04404
+        </id>
+    </programmer>
     <Servers>
     </Servers>
     <configuration>

@@ -3,16 +3,29 @@
 File                                                                    Type     IN_PROJECT/INCLUDED/LIBRARY
 
 "C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v"                           verilog                      IN PROJECT
-"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v"            verilog                      IN PROJECT
-"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FREQ_COUNTER.v"                  verilog                      IN PROJECT
-"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\Timer_Counter.v"                 verilog                      IN PROJECT
-"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_GEN.v"                       verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v"               verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd"                        vhdl                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_deadband.vhd"                   vhdl                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\PH_PWM.vhd"                         vhdl                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd"                  vhdl                      IN PROJECT
 "C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_DIV.V"                       verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v"                       verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd"                       vhdl                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v"                          verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FPGA_WD.v"                       verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\DAC_DACx0504_IF.v"               verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v"                         verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\dual_port_ram.v"                 verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v"                verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\EEPROM_OPB_IF.v"                 verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd"               vhdl                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v"            verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v"            verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_GEN.v"                       verilog                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\Addr_definition.v"               verilog                        INCLUDED
 "C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v"                  verilog                      IN PROJECT
 "C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmd_server.v"                    verilog                      IN PROJECT
-"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd"                       vhdl                      IN PROJECT
 "C:\repo2\gpb\dmd\P1060973_FPGA\hdl\opb_emu_target.v"                verilog                      IN PROJECT
 "C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v"                     verilog                      IN PROJECT
 "C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v"                      verilog                      IN PROJECT
 "C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_buffer.v"                    verilog                      IN PROJECT
-"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v"                         verilog                      IN PROJECT

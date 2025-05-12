@@ -23,42 +23,142 @@ Part:			MPF100TFCG484STD (Microchip)
 SEQUENTIAL ELEMENTS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-SLE      523                100 %                
+SLE      4778               100 %                
 =================================================
-Total SEQUENTIAL ELEMENTS in the block top:	523 (40.64 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block top:	4778 (43.40 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-CFG      590                100 %                
-ARI1     126                100 %                
+CFG      3679               100 %                
+ARI1     2197               100 %                
 =================================================
-Total COMBINATIONAL LOGIC in the block top:	716 (55.63 % Utilization)
+Total COMBINATIONAL LOGIC in the block top:	5876 (53.37 % Utilization)
 
 
 MEMORY ELEMENTS
 Name         Total elements     Utilization     Notes
 -----------------------------------------------------
-RAM64X12     2                  100 %                
+RAM1K20      1                  100 %                
+RAM64X12     6                  100 %                
 =====================================================
-Total MEMORY ELEMENTS in the block top:	2 (0.16 % Utilization)
+Total MEMORY ELEMENTS in the block top:	7 (0.06 % Utilization)
 
 
 GLOBAL BUFFERS
 Name       Total elements     Utilization     Notes
 ---------------------------------------------------
-GLOBAL     2                  100 %                
+GLOBAL     15                 100 %                
 ===================================================
-Total GLOBAL BUFFERS in the block top:	2 (0.16 % Utilization)
+Total GLOBAL BUFFERS in the block top:	15 (0.14 % Utilization)
 
 
 IO PADS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-IO       8                  100 %                
+IO       148                100 %                
 =================================================
-Total IO PADS in the block top:	8 (0.62 % Utilization)
+Total IO PADS in the block top:	148 (1.34 % Utilization)
+
+--------------------------------------------------------------------
+########   Utilization report for  cell:   ADC_ADS8864_IF   ########
+Instance path:   top.ADC_ADS8864_IF                                 
+====================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      182                3.81 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top.ADC_ADS8864_IF:	182 (1.65 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      192                5.22 %               
+ARI1     106                4.82 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block top.ADC_ADS8864_IF:	298 (2.71 % Utilization)
+
+
+MEMORY ELEMENTS
+Name        Total elements     Utilization     Notes
+----------------------------------------------------
+RAM1K20     1                  100 %                
+====================================================
+Total MEMORY ELEMENTS in the block top.ADC_ADS8864_IF:	1 (0.01 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  6.67 %               
+===================================================
+Total GLOBAL BUFFERS in the block top.ADC_ADS8864_IF:	1 (0.01 % Utilization)
+
+-------------------------------------------------------------------
+########   Utilization report for  cell:   CLOCK_DIV_2_0   ########
+Instance path:   ADC_ADS8864_IF.CLOCK_DIV_2_0                      
+===================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      17                 0.3560 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block ADC_ADS8864_IF.CLOCK_DIV_2_0:	17 (0.15 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      10                 0.2720 %             
+ARI1     32                 1.46 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block ADC_ADS8864_IF.CLOCK_DIV_2_0:	42 (0.38 % Utilization)
+
+-----------------------------------------------------------------
+########   Utilization report for  cell:   CLOCK_DIV_4   ########
+Instance path:   ADC_ADS8864_IF.CLOCK_DIV_4                      
+=================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      17                 0.3560 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block ADC_ADS8864_IF.CLOCK_DIV_4:	17 (0.15 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      10                 0.2720 %             
+ARI1     32                 1.46 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block ADC_ADS8864_IF.CLOCK_DIV_4:	42 (0.38 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  6.67 %               
+===================================================
+Total GLOBAL BUFFERS in the block ADC_ADS8864_IF.CLOCK_DIV_4:	1 (0.01 % Utilization)
+
+--------------------------------------------------------------------------
+########   Utilization report for  cell:   DP_RAM_2R_1W_16s_10s   ########
+Instance path:   ADC_ADS8864_IF.DP_RAM_2R_1W_16s_10s                      
+==========================================================================
+
+MEMORY ELEMENTS
+Name        Total elements     Utilization     Notes
+----------------------------------------------------
+RAM1K20     1                  100 %                
+====================================================
+Total MEMORY ELEMENTS in the block ADC_ADS8864_IF.DP_RAM_2R_1W_16s_10s:	1 (0.01 % Utilization)
 
 -----------------------------------------------------------------
 ########   Utilization report for  cell:   AdderDecode   ########
@@ -68,38 +168,38 @@ Instance path:   top.AdderDecode
 SEQUENTIAL ELEMENTS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-SLE      16                 3.06 %               
+SLE      16                 0.3350 %             
 =================================================
-Total SEQUENTIAL ELEMENTS in the block top.AdderDecode:	16 (1.24 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block top.AdderDecode:	16 (0.15 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-CFG      86                 14.6 %               
+CFG      231                6.28 %               
 =================================================
-Total COMBINATIONAL LOGIC in the block top.AdderDecode:	86 (6.68 % Utilization)
+Total COMBINATIONAL LOGIC in the block top.AdderDecode:	231 (2.10 % Utilization)
 
------------------------------------------------------------------
-########   Utilization report for  cell:   CLOCK_DIV_7   ########
-Instance path:   top.CLOCK_DIV_7                                 
-=================================================================
+--------------------------------------------------------------------
+########   Utilization report for  cell:   CLOCK_DIV_11_7   ########
+Instance path:   top.CLOCK_DIV_11_7                                 
+====================================================================
 
 SEQUENTIAL ELEMENTS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-SLE      17                 3.25 %               
+SLE      17                 0.3560 %             
 =================================================
-Total SEQUENTIAL ELEMENTS in the block top.CLOCK_DIV_7:	17 (1.32 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block top.CLOCK_DIV_11_7:	17 (0.15 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-CFG      6                  1.02 %               
-ARI1     16                 12.7 %               
+CFG      6                  0.1630 %             
+ARI1     16                 0.7280 %             
 =================================================
-Total COMBINATIONAL LOGIC in the block top.CLOCK_DIV_7:	22 (1.71 % Utilization)
+Total COMBINATIONAL LOGIC in the block top.CLOCK_DIV_11_7:	22 (0.20 % Utilization)
 
 ------------------------------------------------------------
 ########   Utilization report for  cell:   ClkGen   ########
@@ -109,76 +209,374 @@ Instance path:   top.ClkGen
 SEQUENTIAL ELEMENTS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-SLE      35                 6.69 %               
+SLE      52                 1.09 %               
 =================================================
-Total SEQUENTIAL ELEMENTS in the block top.ClkGen:	35 (2.72 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block top.ClkGen:	52 (0.47 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-CFG      46                 7.8 %                
-ARI1     59                 46.8 %               
+CFG      15                 0.4080 %             
+ARI1     88                 4.01 %               
 =================================================
-Total COMBINATIONAL LOGIC in the block top.ClkGen:	105 (8.16 % Utilization)
+Total COMBINATIONAL LOGIC in the block top.ClkGen:	103 (0.94 % Utilization)
 
 
 GLOBAL BUFFERS
 Name       Total elements     Utilization     Notes
 ---------------------------------------------------
-GLOBAL     1                  50 %                 
+GLOBAL     2                  13.3 %               
 ===================================================
-Total GLOBAL BUFFERS in the block top.ClkGen:	1 (0.08 % Utilization)
+Total GLOBAL BUFFERS in the block top.ClkGen:	2 (0.02 % Utilization)
 
------------------------------------------------------------------
-########   Utilization report for  cell:   CLOCK_DIV_4   ########
-Instance path:   ClkGen.CLOCK_DIV_4                              
-=================================================================
+---------------------------------------------------------------
+########   Utilization report for  cell:   CLOCK_DIV   ########
+Instance path:   ClkGen.CLOCK_DIV                              
+===============================================================
 
 SEQUENTIAL ELEMENTS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-SLE      17                 3.25 %               
+SLE      17                 0.3560 %             
 =================================================
-Total SEQUENTIAL ELEMENTS in the block ClkGen.CLOCK_DIV_4:	17 (1.32 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ClkGen.CLOCK_DIV:	17 (0.15 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-CFG      5                  0.8470 %             
-ARI1     29                 23 %                 
+CFG      5                  0.1360 %             
+ARI1     29                 1.32 %               
 =================================================
-Total COMBINATIONAL LOGIC in the block ClkGen.CLOCK_DIV_4:	34 (2.64 % Utilization)
+Total COMBINATIONAL LOGIC in the block ClkGen.CLOCK_DIV:	34 (0.31 % Utilization)
 
 
 GLOBAL BUFFERS
 Name       Total elements     Utilization     Notes
 ---------------------------------------------------
-GLOBAL     1                  50 %                 
+GLOBAL     1                  6.67 %               
 ===================================================
-Total GLOBAL BUFFERS in the block ClkGen.CLOCK_DIV_4:	1 (0.08 % Utilization)
+Total GLOBAL BUFFERS in the block ClkGen.CLOCK_DIV:	1 (0.01 % Utilization)
 
 -----------------------------------------------------------------
-########   Utilization report for  cell:   CLOCK_DIV_5   ########
-Instance path:   ClkGen.CLOCK_DIV_5                              
+########   Utilization report for  cell:   CLOCK_DIV_2   ########
+Instance path:   ClkGen.CLOCK_DIV_2                              
 =================================================================
 
 SEQUENTIAL ELEMENTS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-SLE      17                 3.25 %               
+SLE      17                 0.3560 %             
 =================================================
-Total SEQUENTIAL ELEMENTS in the block ClkGen.CLOCK_DIV_5:	17 (1.32 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block ClkGen.CLOCK_DIV_2:	17 (0.15 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-CFG      5                  0.8470 %             
-ARI1     30                 23.8 %               
+CFG      5                  0.1360 %             
+ARI1     30                 1.37 %               
 =================================================
-Total COMBINATIONAL LOGIC in the block ClkGen.CLOCK_DIV_5:	35 (2.72 % Utilization)
+Total COMBINATIONAL LOGIC in the block ClkGen.CLOCK_DIV_2:	35 (0.32 % Utilization)
+
+-----------------------------------------------------------------
+########   Utilization report for  cell:   CLOCK_DIV_3   ########
+Instance path:   ClkGen.CLOCK_DIV_3                              
+=================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      17                 0.3560 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block ClkGen.CLOCK_DIV_3:	17 (0.15 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      5                  0.1360 %             
+ARI1     29                 1.32 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block ClkGen.CLOCK_DIV_3:	34 (0.31 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  6.67 %               
+===================================================
+Total GLOBAL BUFFERS in the block ClkGen.CLOCK_DIV_3:	1 (0.01 % Utilization)
+
+---------------------------------------------------------------------
+########   Utilization report for  cell:   DAC_DACx0504_IF   ########
+Instance path:   top.DAC_DACx0504_IF                                 
+=====================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      114                2.39 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top.DAC_DACx0504_IF:	114 (1.04 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      110                2.99 %               
+ARI1     16                 0.7280 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block top.DAC_DACx0504_IF:	126 (1.14 % Utilization)
+
+
+MEMORY ELEMENTS
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM64X12     4                  66.7 %               
+=====================================================
+Total MEMORY ELEMENTS in the block top.DAC_DACx0504_IF:	4 (0.04 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  6.67 %               
+===================================================
+Total GLOBAL BUFFERS in the block top.DAC_DACx0504_IF:	1 (0.01 % Utilization)
+
+-----------------------------------------------------------------
+########   Utilization report for  cell:   CLOCK_DIV_9   ########
+Instance path:   DAC_DACx0504_IF.CLOCK_DIV_9                     
+=================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      17                 0.3560 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block DAC_DACx0504_IF.CLOCK_DIV_9:	17 (0.15 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      8                  0.2170 %             
+ARI1     16                 0.7280 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block DAC_DACx0504_IF.CLOCK_DIV_9:	24 (0.22 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  6.67 %               
+===================================================
+Total GLOBAL BUFFERS in the block DAC_DACx0504_IF.CLOCK_DIV_9:	1 (0.01 % Utilization)
+
+-------------------------------------------------------------------------
+########   Utilization report for  cell:   DP_RAM_2R_1W_24s_4s   ########
+Instance path:   DAC_DACx0504_IF.DP_RAM_2R_1W_24s_4s                     
+=========================================================================
+
+MEMORY ELEMENTS
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM64X12     2                  33.3 %               
+=====================================================
+Total MEMORY ELEMENTS in the block DAC_DACx0504_IF.DP_RAM_2R_1W_24s_4s:	2 (0.02 % Utilization)
+
+-------------------------------------------------------------------------
+########   Utilization report for  cell:   afifo_24s_4s_24s_4s   ########
+Instance path:   DAC_DACx0504_IF.afifo_24s_4s_24s_4s                     
+=========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      40                 0.8370 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block DAC_DACx0504_IF.afifo_24s_4s_24s_4s:	40 (0.36 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      42                 1.14 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block DAC_DACx0504_IF.afifo_24s_4s_24s_4s:	42 (0.38 % Utilization)
+
+
+MEMORY ELEMENTS
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM64X12     2                  33.3 %               
+=====================================================
+Total MEMORY ELEMENTS in the block DAC_DACx0504_IF.afifo_24s_4s_24s_4s:	2 (0.02 % Utilization)
+
+-------------------------------------------------------------------
+########   Utilization report for  cell:   EEPROM_OPB_IF   ########
+Instance path:   top.EEPROM_OPB_IF                                 
+===================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      110                2.3 %                
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top.EEPROM_OPB_IF:	110 (1.00 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      94                 2.56 %               
+ARI1     8                  0.3640 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block top.EEPROM_OPB_IF:	102 (0.93 % Utilization)
+
+----------------------------------------------------------------------
+########   Utilization report for  cell:   serial_eeprom_if   ########
+Instance path:   EEPROM_OPB_IF.serial_eeprom_if                       
+======================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      65                 1.36 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block EEPROM_OPB_IF.serial_eeprom_if:	65 (0.59 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      86                 2.34 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block EEPROM_OPB_IF.serial_eeprom_if:	86 (0.78 % Utilization)
+
+--------------------------------------------------------------
+########   Utilization report for  cell:   FPGA_WDI   ########
+Instance path:   top.FPGA_WDI                                 
+==============================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      5                  0.1050 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top.FPGA_WDI:	5 (0.05 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      5                  0.1360 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block top.FPGA_WDI:	5 (0.05 % Utilization)
+
+----------------------------------------------------------
+########   Utilization report for  cell:   GPIO   ########
+Instance path:   top.GPIO                                 
+==========================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      331                6.93 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top.GPIO:	331 (3.01 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      341                9.27 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block top.GPIO:	341 (3.10 % Utilization)
+
+-------------------------------------------------------------
+########   Utilization report for  cell:   MSSB_IF   ########
+Instance path:   top.MSSB_IF                                 
+=============================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      216                4.52 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top.MSSB_IF:	216 (1.96 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      149                4.05 %               
+ARI1     157                7.15 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block top.MSSB_IF:	306 (2.78 % Utilization)
+
+---------------------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY_1   ########
+Instance path:   MSSB_IF.work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY_1                             
+===========================================================================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      47                 0.9840 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block MSSB_IF.work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY_1:	47 (0.43 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      59                 1.6 %                
+=================================================
+Total COMBINATIONAL LOGIC in the block MSSB_IF.work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY_1:	59 (0.54 % Utilization)
+
+---------------------------------------------------------------
+########   Utilization report for  cell:   MSSB_IF_1   ########
+Instance path:   top.MSSB_IF_1                                 
+===============================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      216                4.52 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top.MSSB_IF_1:	216 (1.96 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      121                3.29 %               
+ARI1     157                7.15 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block top.MSSB_IF_1:	278 (2.52 % Utilization)
+
+-----------------------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY_1_0   ########
+Instance path:   MSSB_IF_1.work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY_1_0                           
+=============================================================================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      47                 0.9840 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block MSSB_IF_1.work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY_1_0:	47 (0.43 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      57                 1.55 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block MSSB_IF_1.work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY_1_0:	57 (0.52 % Utilization)
 
 ------------------------------------------------------------------------
 ########   Utilization report for  cell:   OSCILLATOR_COUNTER   ########
@@ -188,38 +586,38 @@ Instance path:   top.OSCILLATOR_COUNTER
 SEQUENTIAL ELEMENTS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-SLE      51                 9.75 %               
+SLE      75                 1.57 %               
 =================================================
-Total SEQUENTIAL ELEMENTS in the block top.OSCILLATOR_COUNTER:	51 (3.96 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block top.OSCILLATOR_COUNTER:	75 (0.68 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-CFG      30                 5.08 %               
-ARI1     17                 13.5 %               
+CFG      51                 1.39 %               
+ARI1     17                 0.7740 %             
 =================================================
-Total COMBINATIONAL LOGIC in the block top.OSCILLATOR_COUNTER:	47 (3.65 % Utilization)
+Total COMBINATIONAL LOGIC in the block top.OSCILLATOR_COUNTER:	68 (0.62 % Utilization)
 
--------------------------------------------------------------------
-########   Utilization report for  cell:   TIMER_COUNTER   ########
-Instance path:   OSCILLATOR_COUNTER.TIMER_COUNTER                  
-===================================================================
+-----------------------------------------------------------------------
+########   Utilization report for  cell:   afifo_8s_2s_8s_2s   ########
+Instance path:   OSCILLATOR_COUNTER.afifo_8s_2s_8s_2s                  
+=======================================================================
 
 SEQUENTIAL ELEMENTS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-SLE      16                 3.06 %               
+SLE      24                 0.5020 %             
 =================================================
-Total SEQUENTIAL ELEMENTS in the block OSCILLATOR_COUNTER.TIMER_COUNTER:	16 (1.24 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block OSCILLATOR_COUNTER.afifo_8s_2s_8s_2s:	24 (0.22 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-ARI1     17                 13.5 %               
+CFG      23                 0.6250 %             
 =================================================
-Total COMBINATIONAL LOGIC in the block OSCILLATOR_COUNTER.TIMER_COUNTER:	17 (1.32 % Utilization)
+Total COMBINATIONAL LOGIC in the block OSCILLATOR_COUNTER.afifo_8s_2s_8s_2s:	23 (0.21 % Utilization)
 
 --------------------------------------------------------------------------
 ########   Utilization report for  cell:   SCRATCH_PAD_REGISTER   ########
@@ -229,17 +627,17 @@ Instance path:   top.SCRATCH_PAD_REGISTER
 SEQUENTIAL ELEMENTS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-SLE      48                 9.18 %               
+SLE      96                 2.01 %               
 =================================================
-Total SEQUENTIAL ELEMENTS in the block top.SCRATCH_PAD_REGISTER:	48 (3.73 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block top.SCRATCH_PAD_REGISTER:	96 (0.87 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-CFG      18                 3.05 %               
+CFG      33                 0.8970 %             
 =================================================
-Total COMBINATIONAL LOGIC in the block top.SCRATCH_PAD_REGISTER:	18 (1.40 % Utilization)
+Total COMBINATIONAL LOGIC in the block top.SCRATCH_PAD_REGISTER:	33 (0.30 % Utilization)
 
 ----------------------------------------------------------------
 ########   Utilization report for  cell:   cmd_server   ########
@@ -249,26 +647,26 @@ Instance path:   top.cmd_server
 SEQUENTIAL ELEMENTS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-SLE      356                68.1 %               
+SLE      348                7.28 %               
 =================================================
-Total SEQUENTIAL ELEMENTS in the block top.cmd_server:	356 (27.66 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block top.cmd_server:	348 (3.16 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-CFG      403                68.3 %               
-ARI1     34                 27 %                 
+CFG      630                17.1 %               
+ARI1     34                 1.55 %               
 =================================================
-Total COMBINATIONAL LOGIC in the block top.cmd_server:	437 (33.95 % Utilization)
+Total COMBINATIONAL LOGIC in the block top.cmd_server:	664 (6.03 % Utilization)
 
 
 MEMORY ELEMENTS
 Name         Total elements     Utilization     Notes
 -----------------------------------------------------
-RAM64X12     2                  100 %                
+RAM64X12     2                  33.3 %               
 =====================================================
-Total MEMORY ELEMENTS in the block top.cmd_server:	2 (0.16 % Utilization)
+Total MEMORY ELEMENTS in the block top.cmd_server:	2 (0.02 % Utilization)
 
 ----------------------------------------------------------------
 ########   Utilization report for  cell:   msg_buffer   ########
@@ -278,25 +676,25 @@ Instance path:   cmd_server.msg_buffer
 SEQUENTIAL ELEMENTS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-SLE      81                 15.5 %               
+SLE      81                 1.7 %                
 =================================================
-Total SEQUENTIAL ELEMENTS in the block cmd_server.msg_buffer:	81 (6.29 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block cmd_server.msg_buffer:	81 (0.74 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-CFG      52                 8.81 %               
+CFG      52                 1.41 %               
 =================================================
-Total COMBINATIONAL LOGIC in the block cmd_server.msg_buffer:	52 (4.04 % Utilization)
+Total COMBINATIONAL LOGIC in the block cmd_server.msg_buffer:	52 (0.47 % Utilization)
 
 
 MEMORY ELEMENTS
 Name         Total elements     Utilization     Notes
 -----------------------------------------------------
-RAM64X12     2                  100 %                
+RAM64X12     2                  33.3 %               
 =====================================================
-Total MEMORY ELEMENTS in the block cmd_server.msg_buffer:	2 (0.16 % Utilization)
+Total MEMORY ELEMENTS in the block cmd_server.msg_buffer:	2 (0.02 % Utilization)
 
 -------------------------------------------------------------------------
 ########   Utilization report for  cell:   afifo_8s_4s_8s_4s_1   ########
@@ -306,25 +704,25 @@ Instance path:   msg_buffer.afifo_8s_4s_8s_4s_1
 SEQUENTIAL ELEMENTS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-SLE      40                 7.65 %               
+SLE      40                 0.8370 %             
 =================================================
-Total SEQUENTIAL ELEMENTS in the block msg_buffer.afifo_8s_4s_8s_4s_1:	40 (3.11 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block msg_buffer.afifo_8s_4s_8s_4s_1:	40 (0.36 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-CFG      30                 5.08 %               
+CFG      29                 0.7880 %             
 =================================================
-Total COMBINATIONAL LOGIC in the block msg_buffer.afifo_8s_4s_8s_4s_1:	30 (2.33 % Utilization)
+Total COMBINATIONAL LOGIC in the block msg_buffer.afifo_8s_4s_8s_4s_1:	29 (0.26 % Utilization)
 
 
 MEMORY ELEMENTS
 Name         Total elements     Utilization     Notes
 -----------------------------------------------------
-RAM64X12     1                  50 %                 
+RAM64X12     1                  16.7 %               
 =====================================================
-Total MEMORY ELEMENTS in the block msg_buffer.afifo_8s_4s_8s_4s_1:	1 (0.08 % Utilization)
+Total MEMORY ELEMENTS in the block msg_buffer.afifo_8s_4s_8s_4s_1:	1 (0.01 % Utilization)
 
 ---------------------------------------------------------------------------
 ########   Utilization report for  cell:   afifo_8s_4s_8s_4s_1_0   ########
@@ -334,25 +732,25 @@ Instance path:   msg_buffer.afifo_8s_4s_8s_4s_1_0
 SEQUENTIAL ELEMENTS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-SLE      40                 7.65 %               
+SLE      40                 0.8370 %             
 =================================================
-Total SEQUENTIAL ELEMENTS in the block msg_buffer.afifo_8s_4s_8s_4s_1_0:	40 (3.11 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block msg_buffer.afifo_8s_4s_8s_4s_1_0:	40 (0.36 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-CFG      21                 3.56 %               
+CFG      22                 0.5980 %             
 =================================================
-Total COMBINATIONAL LOGIC in the block msg_buffer.afifo_8s_4s_8s_4s_1_0:	21 (1.63 % Utilization)
+Total COMBINATIONAL LOGIC in the block msg_buffer.afifo_8s_4s_8s_4s_1_0:	22 (0.20 % Utilization)
 
 
 MEMORY ELEMENTS
 Name         Total elements     Utilization     Notes
 -----------------------------------------------------
-RAM64X12     1                  50 %                 
+RAM64X12     1                  16.7 %               
 =====================================================
-Total MEMORY ELEMENTS in the block msg_buffer.afifo_8s_4s_8s_4s_1_0:	1 (0.08 % Utilization)
+Total MEMORY ELEMENTS in the block msg_buffer.afifo_8s_4s_8s_4s_1_0:	1 (0.01 % Utilization)
 
 --------------------------------------------------------------------
 ########   Utilization report for  cell:   opb_emu_target   ########
@@ -362,18 +760,18 @@ Instance path:   cmd_server.opb_emu_target
 SEQUENTIAL ELEMENTS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-SLE      225                43 %                 
+SLE      217                4.54 %               
 =================================================
-Total SEQUENTIAL ELEMENTS in the block cmd_server.opb_emu_target:	225 (17.48 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block cmd_server.opb_emu_target:	217 (1.97 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-CFG      282                47.8 %               
-ARI1     34                 27 %                 
+CFG      509                13.8 %               
+ARI1     34                 1.55 %               
 =================================================
-Total COMBINATIONAL LOGIC in the block cmd_server.opb_emu_target:	316 (24.55 % Utilization)
+Total COMBINATIONAL LOGIC in the block cmd_server.opb_emu_target:	543 (4.93 % Utilization)
 
 -----------------------------------------------------------------
 ########   Utilization report for  cell:   CLOCK_DIV_0   ########
@@ -383,18 +781,18 @@ Instance path:   opb_emu_target.CLOCK_DIV_0
 SEQUENTIAL ELEMENTS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-SLE      17                 3.25 %               
+SLE      17                 0.3560 %             
 =================================================
-Total SEQUENTIAL ELEMENTS in the block opb_emu_target.CLOCK_DIV_0:	17 (1.32 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block opb_emu_target.CLOCK_DIV_0:	17 (0.15 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-CFG      7                  1.19 %               
-ARI1     16                 12.7 %               
+CFG      7                  0.190 %              
+ARI1     16                 0.7280 %             
 =================================================
-Total COMBINATIONAL LOGIC in the block opb_emu_target.CLOCK_DIV_0:	23 (1.79 % Utilization)
+Total COMBINATIONAL LOGIC in the block opb_emu_target.CLOCK_DIV_0:	23 (0.21 % Utilization)
 
 --------------------------------------------------------------
 ########   Utilization report for  cell:   msg_read   ########
@@ -404,18 +802,18 @@ Instance path:   opb_emu_target.msg_read
 SEQUENTIAL ELEMENTS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-SLE      106                20.3 %               
+SLE      97                 2.03 %               
 =================================================
-Total SEQUENTIAL ELEMENTS in the block opb_emu_target.msg_read:	106 (8.24 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block opb_emu_target.msg_read:	97 (0.88 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-CFG      129                21.9 %               
-ARI1     9                  7.14 %               
+CFG      128                3.48 %               
+ARI1     9                  0.410 %              
 =================================================
-Total COMBINATIONAL LOGIC in the block opb_emu_target.msg_read:	138 (10.72 % Utilization)
+Total COMBINATIONAL LOGIC in the block opb_emu_target.msg_read:	137 (1.24 % Utilization)
 
 ---------------------------------------------------------------
 ########   Utilization report for  cell:   msg_write   ########
@@ -425,18 +823,18 @@ Instance path:   opb_emu_target.msg_write
 SEQUENTIAL ELEMENTS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-SLE      94                 18 %                 
+SLE      94                 1.97 %               
 =================================================
-Total SEQUENTIAL ELEMENTS in the block opb_emu_target.msg_write:	94 (7.30 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block opb_emu_target.msg_write:	94 (0.85 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-CFG      122                20.7 %               
-ARI1     9                  7.14 %               
+CFG      349                9.49 %               
+ARI1     9                  0.410 %              
 =================================================
-Total COMBINATIONAL LOGIC in the block opb_emu_target.msg_write:	131 (10.18 % Utilization)
+Total COMBINATIONAL LOGIC in the block opb_emu_target.msg_write:	358 (3.25 % Utilization)
 
 -------------------------------------------------------------------------------------------------------------------------
 ########   Utilization report for  cell:   work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY   ########
@@ -446,17 +844,1351 @@ Instance path:   cmd_server.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATE
 SEQUENTIAL ELEMENTS
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-SLE      50                 9.56 %               
+SLE      50                 1.05 %               
 =================================================
-Total SEQUENTIAL ELEMENTS in the block cmd_server.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY:	50 (3.89 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block cmd_server.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY:	50 (0.45 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name     Total elements     Utilization     Notes
 -------------------------------------------------
-CFG      69                 11.7 %               
+CFG      69                 1.88 %               
 =================================================
-Total COMBINATIONAL LOGIC in the block cmd_server.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY:	69 (5.36 % Utilization)
+Total COMBINATIONAL LOGIC in the block cmd_server.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY:	69 (0.63 % Utilization)
+
+-----------------------------------------------------------------------
+########   Utilization report for  cell:   cmn_pwm_wrapper_0   ########
+Instance path:   top.cmn_pwm_wrapper_0                                 
+=======================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      426                8.92 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top.cmn_pwm_wrapper_0:	426 (3.87 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      236                6.41 %               
+ARI1     205                9.33 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block top.cmn_pwm_wrapper_0:	441 (4.01 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  6.67 %               
+===================================================
+Total GLOBAL BUFFERS in the block top.cmn_pwm_wrapper_0:	1 (0.01 % Utilization)
+
+--------------------------------------------------------------------
+########   Utilization report for  cell:   CLOCK_DIV_11_6   ########
+Instance path:   cmn_pwm_wrapper_0.CLOCK_DIV_11_6                   
+====================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      17                 0.3560 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_wrapper_0.CLOCK_DIV_11_6:	17 (0.15 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      8                  0.2170 %             
+ARI1     16                 0.7280 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_wrapper_0.CLOCK_DIV_11_6:	24 (0.22 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  6.67 %               
+===================================================
+Total GLOBAL BUFFERS in the block cmn_pwm_wrapper_0.CLOCK_DIV_11_6:	1 (0.01 % Utilization)
+
+---------------------------------------------------------------
+########   Utilization report for  cell:   cmn_pwm_7   ########
+Instance path:   cmn_pwm_wrapper_0.cmn_pwm_7                   
+===============================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      132                2.76 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_wrapper_0.cmn_pwm_7:	132 (1.20 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      80                 2.17 %               
+ARI1     67                 3.05 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_wrapper_0.cmn_pwm_7:	147 (1.34 % Utilization)
+
+--------------------------------------------------------------------
+########   Utilization report for  cell:   CMN_DEADBAND_5   ########
+Instance path:   cmn_pwm_7.CMN_DEADBAND_5                           
+====================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      11                 0.230 %              
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_7.CMN_DEADBAND_5:	11 (0.10 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      14                 0.3810 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_7.CMN_DEADBAND_5:	14 (0.13 % Utilization)
+
+----------------------------------------------------------------------
+########   Utilization report for  cell:   CMN_DEADBAND_5_3   ########
+Instance path:   cmn_pwm_7.CMN_DEADBAND_5_3                           
+======================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      11                 0.230 %              
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_7.CMN_DEADBAND_5_3:	11 (0.10 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      14                 0.3810 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_7.CMN_DEADBAND_5_3:	14 (0.13 % Utilization)
+
+----------------------------------------------------------------------
+########   Utilization report for  cell:   CMN_DEADBAND_5_4   ########
+Instance path:   cmn_pwm_7.CMN_DEADBAND_5_4                           
+======================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      11                 0.230 %              
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_7.CMN_DEADBAND_5_4:	11 (0.10 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      14                 0.3810 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_7.CMN_DEADBAND_5_4:	14 (0.13 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   PH_PWM_625_0_80_3_1_7   ########
+Instance path:   cmn_pwm_7.PH_PWM_625_0_80_3_1_7                           
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      15                 0.3140 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_7.PH_PWM_625_0_80_3_1_7:	15 (0.14 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      21                 0.5710 %             
+ARI1     38                 1.73 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_7.PH_PWM_625_0_80_3_1_7:	59 (0.54 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   cmn_debouncer_8_8_1_7   ########
+Instance path:   cmn_pwm_7.cmn_debouncer_8_8_1_7                           
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      30                 0.6280 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_7.cmn_debouncer_8_8_1_7:	30 (0.27 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      11                 0.2990 %             
+ARI1     29                 1.32 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_7.cmn_debouncer_8_8_1_7:	40 (0.36 % Utilization)
+
+-----------------------------------------------------------------------
+########   Utilization report for  cell:   cmn_pwm_wrapper_1   ########
+Instance path:   top.cmn_pwm_wrapper_1                                 
+=======================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      358                7.49 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top.cmn_pwm_wrapper_1:	358 (3.25 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      205                5.57 %               
+ARI1     198                9.01 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block top.cmn_pwm_wrapper_1:	403 (3.66 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  6.67 %               
+===================================================
+Total GLOBAL BUFFERS in the block top.cmn_pwm_wrapper_1:	1 (0.01 % Utilization)
+
+--------------------------------------------------------------------
+########   Utilization report for  cell:   CLOCK_DIV_11_5   ########
+Instance path:   cmn_pwm_wrapper_1.CLOCK_DIV_11_5                   
+====================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      17                 0.3560 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_wrapper_1.CLOCK_DIV_11_5:	17 (0.15 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      8                  0.2170 %             
+ARI1     16                 0.7280 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_wrapper_1.CLOCK_DIV_11_5:	24 (0.22 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  6.67 %               
+===================================================
+Total GLOBAL BUFFERS in the block cmn_pwm_wrapper_1.CLOCK_DIV_11_5:	1 (0.01 % Utilization)
+
+---------------------------------------------------------------
+########   Utilization report for  cell:   cmn_pwm_6   ########
+Instance path:   cmn_pwm_wrapper_1.cmn_pwm_6                   
+===============================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      64                 1.34 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_wrapper_1.cmn_pwm_6:	64 (0.58 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      48                 1.3 %                
+ARI1     60                 2.73 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_wrapper_1.cmn_pwm_6:	108 (0.98 % Utilization)
+
+------------------------------------------------------------------------
+########   Utilization report for  cell:   CMN_DEADBAND_5_0_6   ########
+Instance path:   cmn_pwm_6.CMN_DEADBAND_5_0_6                           
+========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      11                 0.230 %              
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_6.CMN_DEADBAND_5_0_6:	11 (0.10 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      14                 0.3810 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_6.CMN_DEADBAND_5_0_6:	14 (0.13 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   PH_PWM_625_0_80_3_0_6   ########
+Instance path:   cmn_pwm_6.PH_PWM_625_0_80_3_0_6                           
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      13                 0.2720 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_6.PH_PWM_625_0_80_3_0_6:	13 (0.12 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      14                 0.3810 %             
+ARI1     20                 0.910 %              
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_6.PH_PWM_625_0_80_3_0_6:	34 (0.31 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   PH_PWM_625_0_80_3_1_6   ########
+Instance path:   cmn_pwm_6.PH_PWM_625_0_80_3_1_6                           
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      10                 0.2090 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_6.PH_PWM_625_0_80_3_1_6:	10 (0.09 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      7                  0.190 %              
+ARI1     11                 0.5010 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_6.PH_PWM_625_0_80_3_1_6:	18 (0.16 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   cmn_debouncer_8_8_0_6   ########
+Instance path:   cmn_pwm_6.cmn_debouncer_8_8_0_6                           
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      30                 0.6280 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_6.cmn_debouncer_8_8_0_6:	30 (0.27 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      11                 0.2990 %             
+ARI1     29                 1.32 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_6.cmn_debouncer_8_8_0_6:	40 (0.36 % Utilization)
+
+-----------------------------------------------------------------------
+########   Utilization report for  cell:   cmn_pwm_wrapper_2   ########
+Instance path:   top.cmn_pwm_wrapper_2                                 
+=======================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      358                7.49 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top.cmn_pwm_wrapper_2:	358 (3.25 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      204                5.54 %               
+ARI1     198                9.01 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block top.cmn_pwm_wrapper_2:	402 (3.65 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  6.67 %               
+===================================================
+Total GLOBAL BUFFERS in the block top.cmn_pwm_wrapper_2:	1 (0.01 % Utilization)
+
+--------------------------------------------------------------------
+########   Utilization report for  cell:   CLOCK_DIV_11_4   ########
+Instance path:   cmn_pwm_wrapper_2.CLOCK_DIV_11_4                   
+====================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      17                 0.3560 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_wrapper_2.CLOCK_DIV_11_4:	17 (0.15 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      8                  0.2170 %             
+ARI1     16                 0.7280 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_wrapper_2.CLOCK_DIV_11_4:	24 (0.22 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  6.67 %               
+===================================================
+Total GLOBAL BUFFERS in the block cmn_pwm_wrapper_2.CLOCK_DIV_11_4:	1 (0.01 % Utilization)
+
+---------------------------------------------------------------
+########   Utilization report for  cell:   cmn_pwm_5   ########
+Instance path:   cmn_pwm_wrapper_2.cmn_pwm_5                   
+===============================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      64                 1.34 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_wrapper_2.cmn_pwm_5:	64 (0.58 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      48                 1.3 %                
+ARI1     60                 2.73 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_wrapper_2.cmn_pwm_5:	108 (0.98 % Utilization)
+
+------------------------------------------------------------------------
+########   Utilization report for  cell:   CMN_DEADBAND_5_0_5   ########
+Instance path:   cmn_pwm_5.CMN_DEADBAND_5_0_5                           
+========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      11                 0.230 %              
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_5.CMN_DEADBAND_5_0_5:	11 (0.10 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      14                 0.3810 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_5.CMN_DEADBAND_5_0_5:	14 (0.13 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   PH_PWM_625_0_80_3_0_5   ########
+Instance path:   cmn_pwm_5.PH_PWM_625_0_80_3_0_5                           
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      13                 0.2720 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_5.PH_PWM_625_0_80_3_0_5:	13 (0.12 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      14                 0.3810 %             
+ARI1     20                 0.910 %              
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_5.PH_PWM_625_0_80_3_0_5:	34 (0.31 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   PH_PWM_625_0_80_3_1_5   ########
+Instance path:   cmn_pwm_5.PH_PWM_625_0_80_3_1_5                           
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      10                 0.2090 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_5.PH_PWM_625_0_80_3_1_5:	10 (0.09 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      7                  0.190 %              
+ARI1     11                 0.5010 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_5.PH_PWM_625_0_80_3_1_5:	18 (0.16 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   cmn_debouncer_8_8_0_5   ########
+Instance path:   cmn_pwm_5.cmn_debouncer_8_8_0_5                           
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      30                 0.6280 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_5.cmn_debouncer_8_8_0_5:	30 (0.27 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      11                 0.2990 %             
+ARI1     29                 1.32 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_5.cmn_debouncer_8_8_0_5:	40 (0.36 % Utilization)
+
+-----------------------------------------------------------------------
+########   Utilization report for  cell:   cmn_pwm_wrapper_3   ########
+Instance path:   top.cmn_pwm_wrapper_3                                 
+=======================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      358                7.49 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top.cmn_pwm_wrapper_3:	358 (3.25 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      204                5.54 %               
+ARI1     198                9.01 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block top.cmn_pwm_wrapper_3:	402 (3.65 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  6.67 %               
+===================================================
+Total GLOBAL BUFFERS in the block top.cmn_pwm_wrapper_3:	1 (0.01 % Utilization)
+
+--------------------------------------------------------------------
+########   Utilization report for  cell:   CLOCK_DIV_11_3   ########
+Instance path:   cmn_pwm_wrapper_3.CLOCK_DIV_11_3                   
+====================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      17                 0.3560 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_wrapper_3.CLOCK_DIV_11_3:	17 (0.15 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      8                  0.2170 %             
+ARI1     16                 0.7280 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_wrapper_3.CLOCK_DIV_11_3:	24 (0.22 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  6.67 %               
+===================================================
+Total GLOBAL BUFFERS in the block cmn_pwm_wrapper_3.CLOCK_DIV_11_3:	1 (0.01 % Utilization)
+
+---------------------------------------------------------------
+########   Utilization report for  cell:   cmn_pwm_4   ########
+Instance path:   cmn_pwm_wrapper_3.cmn_pwm_4                   
+===============================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      64                 1.34 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_wrapper_3.cmn_pwm_4:	64 (0.58 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      48                 1.3 %                
+ARI1     60                 2.73 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_wrapper_3.cmn_pwm_4:	108 (0.98 % Utilization)
+
+------------------------------------------------------------------------
+########   Utilization report for  cell:   CMN_DEADBAND_5_0_4   ########
+Instance path:   cmn_pwm_4.CMN_DEADBAND_5_0_4                           
+========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      11                 0.230 %              
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_4.CMN_DEADBAND_5_0_4:	11 (0.10 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      14                 0.3810 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_4.CMN_DEADBAND_5_0_4:	14 (0.13 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   PH_PWM_625_0_80_3_0_4   ########
+Instance path:   cmn_pwm_4.PH_PWM_625_0_80_3_0_4                           
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      13                 0.2720 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_4.PH_PWM_625_0_80_3_0_4:	13 (0.12 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      14                 0.3810 %             
+ARI1     20                 0.910 %              
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_4.PH_PWM_625_0_80_3_0_4:	34 (0.31 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   PH_PWM_625_0_80_3_1_4   ########
+Instance path:   cmn_pwm_4.PH_PWM_625_0_80_3_1_4                           
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      10                 0.2090 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_4.PH_PWM_625_0_80_3_1_4:	10 (0.09 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      7                  0.190 %              
+ARI1     11                 0.5010 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_4.PH_PWM_625_0_80_3_1_4:	18 (0.16 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   cmn_debouncer_8_8_0_4   ########
+Instance path:   cmn_pwm_4.cmn_debouncer_8_8_0_4                           
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      30                 0.6280 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_4.cmn_debouncer_8_8_0_4:	30 (0.27 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      11                 0.2990 %             
+ARI1     29                 1.32 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_4.cmn_debouncer_8_8_0_4:	40 (0.36 % Utilization)
+
+-----------------------------------------------------------------------
+########   Utilization report for  cell:   cmn_pwm_wrapper_4   ########
+Instance path:   top.cmn_pwm_wrapper_4                                 
+=======================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      358                7.49 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top.cmn_pwm_wrapper_4:	358 (3.25 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      209                5.68 %               
+ARI1     198                9.01 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block top.cmn_pwm_wrapper_4:	407 (3.70 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  6.67 %               
+===================================================
+Total GLOBAL BUFFERS in the block top.cmn_pwm_wrapper_4:	1 (0.01 % Utilization)
+
+--------------------------------------------------------------------
+########   Utilization report for  cell:   CLOCK_DIV_11_2   ########
+Instance path:   cmn_pwm_wrapper_4.CLOCK_DIV_11_2                   
+====================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      17                 0.3560 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_wrapper_4.CLOCK_DIV_11_2:	17 (0.15 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      8                  0.2170 %             
+ARI1     16                 0.7280 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_wrapper_4.CLOCK_DIV_11_2:	24 (0.22 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  6.67 %               
+===================================================
+Total GLOBAL BUFFERS in the block cmn_pwm_wrapper_4.CLOCK_DIV_11_2:	1 (0.01 % Utilization)
+
+---------------------------------------------------------------
+########   Utilization report for  cell:   cmn_pwm_3   ########
+Instance path:   cmn_pwm_wrapper_4.cmn_pwm_3                   
+===============================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      64                 1.34 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_wrapper_4.cmn_pwm_3:	64 (0.58 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      55                 1.49 %               
+ARI1     60                 2.73 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_wrapper_4.cmn_pwm_3:	115 (1.04 % Utilization)
+
+------------------------------------------------------------------------
+########   Utilization report for  cell:   CMN_DEADBAND_5_0_3   ########
+Instance path:   cmn_pwm_3.CMN_DEADBAND_5_0_3                           
+========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      11                 0.230 %              
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_3.CMN_DEADBAND_5_0_3:	11 (0.10 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      14                 0.3810 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_3.CMN_DEADBAND_5_0_3:	14 (0.13 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   PH_PWM_625_0_80_3_0_3   ########
+Instance path:   cmn_pwm_3.PH_PWM_625_0_80_3_0_3                           
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      13                 0.2720 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_3.PH_PWM_625_0_80_3_0_3:	13 (0.12 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      14                 0.3810 %             
+ARI1     20                 0.910 %              
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_3.PH_PWM_625_0_80_3_0_3:	34 (0.31 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   PH_PWM_625_0_80_3_1_3   ########
+Instance path:   cmn_pwm_3.PH_PWM_625_0_80_3_1_3                           
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      10                 0.2090 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_3.PH_PWM_625_0_80_3_1_3:	10 (0.09 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      7                  0.190 %              
+ARI1     11                 0.5010 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_3.PH_PWM_625_0_80_3_1_3:	18 (0.16 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   cmn_debouncer_8_8_0_3   ########
+Instance path:   cmn_pwm_3.cmn_debouncer_8_8_0_3                           
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      30                 0.6280 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_3.cmn_debouncer_8_8_0_3:	30 (0.27 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      18                 0.4890 %             
+ARI1     29                 1.32 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_3.cmn_debouncer_8_8_0_3:	47 (0.43 % Utilization)
+
+-----------------------------------------------------------------------
+########   Utilization report for  cell:   cmn_pwm_wrapper_5   ########
+Instance path:   top.cmn_pwm_wrapper_5                                 
+=======================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      358                7.49 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top.cmn_pwm_wrapper_5:	358 (3.25 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      204                5.54 %               
+ARI1     198                9.01 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block top.cmn_pwm_wrapper_5:	402 (3.65 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  6.67 %               
+===================================================
+Total GLOBAL BUFFERS in the block top.cmn_pwm_wrapper_5:	1 (0.01 % Utilization)
+
+--------------------------------------------------------------------
+########   Utilization report for  cell:   CLOCK_DIV_11_1   ########
+Instance path:   cmn_pwm_wrapper_5.CLOCK_DIV_11_1                   
+====================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      17                 0.3560 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_wrapper_5.CLOCK_DIV_11_1:	17 (0.15 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      8                  0.2170 %             
+ARI1     16                 0.7280 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_wrapper_5.CLOCK_DIV_11_1:	24 (0.22 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  6.67 %               
+===================================================
+Total GLOBAL BUFFERS in the block cmn_pwm_wrapper_5.CLOCK_DIV_11_1:	1 (0.01 % Utilization)
+
+---------------------------------------------------------------
+########   Utilization report for  cell:   cmn_pwm_2   ########
+Instance path:   cmn_pwm_wrapper_5.cmn_pwm_2                   
+===============================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      64                 1.34 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_wrapper_5.cmn_pwm_2:	64 (0.58 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      48                 1.3 %                
+ARI1     60                 2.73 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_wrapper_5.cmn_pwm_2:	108 (0.98 % Utilization)
+
+------------------------------------------------------------------------
+########   Utilization report for  cell:   CMN_DEADBAND_5_0_2   ########
+Instance path:   cmn_pwm_2.CMN_DEADBAND_5_0_2                           
+========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      11                 0.230 %              
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_2.CMN_DEADBAND_5_0_2:	11 (0.10 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      14                 0.3810 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_2.CMN_DEADBAND_5_0_2:	14 (0.13 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   PH_PWM_625_0_80_3_0_2   ########
+Instance path:   cmn_pwm_2.PH_PWM_625_0_80_3_0_2                           
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      13                 0.2720 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_2.PH_PWM_625_0_80_3_0_2:	13 (0.12 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      14                 0.3810 %             
+ARI1     20                 0.910 %              
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_2.PH_PWM_625_0_80_3_0_2:	34 (0.31 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   PH_PWM_625_0_80_3_1_2   ########
+Instance path:   cmn_pwm_2.PH_PWM_625_0_80_3_1_2                           
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      10                 0.2090 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_2.PH_PWM_625_0_80_3_1_2:	10 (0.09 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      7                  0.190 %              
+ARI1     11                 0.5010 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_2.PH_PWM_625_0_80_3_1_2:	18 (0.16 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   cmn_debouncer_8_8_0_2   ########
+Instance path:   cmn_pwm_2.cmn_debouncer_8_8_0_2                           
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      30                 0.6280 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_2.cmn_debouncer_8_8_0_2:	30 (0.27 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      11                 0.2990 %             
+ARI1     29                 1.32 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_2.cmn_debouncer_8_8_0_2:	40 (0.36 % Utilization)
+
+-----------------------------------------------------------------------
+########   Utilization report for  cell:   cmn_pwm_wrapper_6   ########
+Instance path:   top.cmn_pwm_wrapper_6                                 
+=======================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      358                7.49 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top.cmn_pwm_wrapper_6:	358 (3.25 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      204                5.54 %               
+ARI1     198                9.01 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block top.cmn_pwm_wrapper_6:	402 (3.65 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  6.67 %               
+===================================================
+Total GLOBAL BUFFERS in the block top.cmn_pwm_wrapper_6:	1 (0.01 % Utilization)
+
+--------------------------------------------------------------------
+########   Utilization report for  cell:   CLOCK_DIV_11_0   ########
+Instance path:   cmn_pwm_wrapper_6.CLOCK_DIV_11_0                   
+====================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      17                 0.3560 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_wrapper_6.CLOCK_DIV_11_0:	17 (0.15 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      8                  0.2170 %             
+ARI1     16                 0.7280 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_wrapper_6.CLOCK_DIV_11_0:	24 (0.22 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  6.67 %               
+===================================================
+Total GLOBAL BUFFERS in the block cmn_pwm_wrapper_6.CLOCK_DIV_11_0:	1 (0.01 % Utilization)
+
+---------------------------------------------------------------
+########   Utilization report for  cell:   cmn_pwm_1   ########
+Instance path:   cmn_pwm_wrapper_6.cmn_pwm_1                   
+===============================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      64                 1.34 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_wrapper_6.cmn_pwm_1:	64 (0.58 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      49                 1.33 %               
+ARI1     60                 2.73 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_wrapper_6.cmn_pwm_1:	109 (0.99 % Utilization)
+
+------------------------------------------------------------------------
+########   Utilization report for  cell:   CMN_DEADBAND_5_0_1   ########
+Instance path:   cmn_pwm_1.CMN_DEADBAND_5_0_1                           
+========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      11                 0.230 %              
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_1.CMN_DEADBAND_5_0_1:	11 (0.10 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      14                 0.3810 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_1.CMN_DEADBAND_5_0_1:	14 (0.13 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   PH_PWM_625_0_80_3_0_1   ########
+Instance path:   cmn_pwm_1.PH_PWM_625_0_80_3_0_1                           
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      13                 0.2720 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_1.PH_PWM_625_0_80_3_0_1:	13 (0.12 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      14                 0.3810 %             
+ARI1     20                 0.910 %              
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_1.PH_PWM_625_0_80_3_0_1:	34 (0.31 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   PH_PWM_625_0_80_3_1_1   ########
+Instance path:   cmn_pwm_1.PH_PWM_625_0_80_3_1_1                           
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      10                 0.2090 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_1.PH_PWM_625_0_80_3_1_1:	10 (0.09 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      7                  0.190 %              
+ARI1     11                 0.5010 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_1.PH_PWM_625_0_80_3_1_1:	18 (0.16 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   cmn_debouncer_8_8_0_1   ########
+Instance path:   cmn_pwm_1.cmn_debouncer_8_8_0_1                           
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      30                 0.6280 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_1.cmn_debouncer_8_8_0_1:	30 (0.27 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      11                 0.2990 %             
+ARI1     29                 1.32 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_1.cmn_debouncer_8_8_0_1:	40 (0.36 % Utilization)
+
+-----------------------------------------------------------------------
+########   Utilization report for  cell:   cmn_pwm_wrapper_7   ########
+Instance path:   top.cmn_pwm_wrapper_7                                 
+=======================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      426                8.92 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top.cmn_pwm_wrapper_7:	426 (3.87 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      234                6.36 %               
+ARI1     205                9.33 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block top.cmn_pwm_wrapper_7:	439 (3.99 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  6.67 %               
+===================================================
+Total GLOBAL BUFFERS in the block top.cmn_pwm_wrapper_7:	1 (0.01 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   CLOCK_DIV_10   ########
+Instance path:   cmn_pwm_wrapper_7.CLOCK_DIV_10                   
+==================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      17                 0.3560 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_wrapper_7.CLOCK_DIV_10:	17 (0.15 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      8                  0.2170 %             
+ARI1     16                 0.7280 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_wrapper_7.CLOCK_DIV_10:	24 (0.22 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  6.67 %               
+===================================================
+Total GLOBAL BUFFERS in the block cmn_pwm_wrapper_7.CLOCK_DIV_10:	1 (0.01 % Utilization)
+
+---------------------------------------------------------------
+########   Utilization report for  cell:   cmn_pwm_0   ########
+Instance path:   cmn_pwm_wrapper_7.cmn_pwm_0                   
+===============================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      132                2.76 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_wrapper_7.cmn_pwm_0:	132 (1.20 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      80                 2.17 %               
+ARI1     67                 3.05 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_wrapper_7.cmn_pwm_0:	147 (1.34 % Utilization)
+
+----------------------------------------------------------------------
+########   Utilization report for  cell:   CMN_DEADBAND_5_0   ########
+Instance path:   cmn_pwm_0.CMN_DEADBAND_5_0                           
+======================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      11                 0.230 %              
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_0.CMN_DEADBAND_5_0:	11 (0.10 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      14                 0.3810 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_0.CMN_DEADBAND_5_0:	14 (0.13 % Utilization)
+
+------------------------------------------------------------------------
+########   Utilization report for  cell:   CMN_DEADBAND_5_0_8   ########
+Instance path:   cmn_pwm_0.CMN_DEADBAND_5_0_8                           
+========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      11                 0.230 %              
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_0.CMN_DEADBAND_5_0_8:	11 (0.10 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      14                 0.3810 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_0.CMN_DEADBAND_5_0_8:	14 (0.13 % Utilization)
+
+------------------------------------------------------------------------
+########   Utilization report for  cell:   CMN_DEADBAND_5_0_9   ########
+Instance path:   cmn_pwm_0.CMN_DEADBAND_5_0_9                           
+========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      11                 0.230 %              
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_0.CMN_DEADBAND_5_0_9:	11 (0.10 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      14                 0.3810 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_0.CMN_DEADBAND_5_0_9:	14 (0.13 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   PH_PWM_625_0_80_3_1_0   ########
+Instance path:   cmn_pwm_0.PH_PWM_625_0_80_3_1_0                           
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      15                 0.3140 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_0.PH_PWM_625_0_80_3_1_0:	15 (0.14 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      21                 0.5710 %             
+ARI1     38                 1.73 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_0.PH_PWM_625_0_80_3_1_0:	59 (0.54 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   cmn_debouncer_8_8_1_0   ########
+Instance path:   cmn_pwm_0.cmn_debouncer_8_8_1_0                           
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      30                 0.6280 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmn_pwm_0.cmn_debouncer_8_8_1_0:	30 (0.27 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      11                 0.2990 %             
+ARI1     29                 1.32 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmn_pwm_0.cmn_debouncer_8_8_1_0:	40 (0.36 % Utilization)
 
 
 ##### END OF AREA REPORT #####]
