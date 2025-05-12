@@ -22,16 +22,22 @@
 #modelsim files
 ######################
 work/
+*.mti
 *.wlf
 
 ######################
 #libero temp files
 ######################
 dmd_vivado/
-simulation/
-synthesis/
-tooldata/
-viewdraw/
+*component/
+*designer/
+*simulation/
+*smartgen/
+*stimulus/
+*synthesis/
+*tooldata/
+*viewdraw/
+
 
 ######################
 # referrence doc
