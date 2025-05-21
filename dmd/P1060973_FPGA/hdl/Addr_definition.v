@@ -20,6 +20,7 @@
 `define ADCSELMUX_IF_ADDR       32'h0005000D        /* ADCSELMUX IF address */
 `define DEBUG_IF_ADDR           32'h0005000E        /* DEBUG IF address */
 `define GPIO_FREE_IF_ADDR       32'h0005000F        /* GPIO FREE IF address */
+`define SHUNT_EN_CNT_ADDR       32'h00050010        /* SHUNT EN CNT address */
 `define ADC_ADDR                32'h00060000        /* Analog to Digital converter address */
 `define GANTRY_MOT_ADDR         32'h00070000        /* Gantry Motor address */
 `define GANTRY_BRK1_ADDR        32'h00071000        /* Gantry Brake1 address */

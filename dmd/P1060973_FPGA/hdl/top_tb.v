@@ -8,8 +8,8 @@ module top_tb;
     integer DAC_TEST               = 0;    // Enable DAC Test
     integer EEPROM_TEST            = 0;    // Enable EEPROM Test
     integer OSC_COUNTER_TEST       = 0;    // Enable Oscillator Counter Test
-    integer GPIO_TEST              = 0;    // Enable GPIO Test
-    integer MSSB_TEST              = 1;    // Enable MSSB Test
+    integer GPIO_TEST              = 1;    // Enable GPIO Test
+    integer MSSB_TEST              = 0;    // Enable MSSB Test
     integer GANTRY_MOT_TEST        = 0;    // Enable Gantry Motor Test
     integer LIFT_MOT_TEST          = 0;    // Enable Lift Motor Test
     integer GANTRY_BRK_TEST        = 0;    // Enable Gantry Brake Test
@@ -84,6 +84,9 @@ module top_tb;
 
     wire ST_MSSB_TX;
     wire ST_SRV_MSSB_TX;
+
+    wire GNT_SHUNT_EN;
+    wire LFT_SHUNT_EN;
 
     // UART Data
     reg [7:0] uart_tdata;
@@ -170,7 +173,11 @@ module top_tb;
 
     // SERVICNE_MSSB
     .ST_SRV_MSSB_TX(ST_SRV_MSSB_TX),
-    .SRV_MSSB_RX(ST_SRV_MSSB_TX)
+    .SRV_MSSB_RX(ST_SRV_MSSB_TX),
+
+    // GPIO
+    .GNT_SHUNT_EN(GNT_SHUNT_EN),
+    .LFT_SHUNT_EN(LFT_SHUNT_EN)
 
     );
 
@@ -431,6 +438,37 @@ module top_tb;
         if (GPIO_TEST == 1) begin
             $display("GPIO Test Start...");
 
+            // OPB_WRITE: SHUNT_EN_CNT = 16'H1000
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h05); uart_send(8'h00); uart_send(8'h10);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h10); uart_send(8'h00); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+            #100000; // Wait 100us
+            // OPB_READ: SHUNT_EN_CNT
+            uart_send(8'h5B); uart_send(8'h00); uart_send(8'h05); uart_send(8'h00); uart_send(8'h10);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
+            repeat(10) uart_recv(uart_tdata);
+            #100000; // Wait 100us
+            
+            // OPB_WRITE: GANTRY_96V_IF Write all 1 to GPIO[15:0], SHUNT PULSE ENABLE = 1
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h05); uart_send(8'h00); uart_send(8'h02);
+            uart_send(8'h80); uart_send(8'h00); uart_send(8'hFF); uart_send(8'hFF); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+            // OPB_WRITE: LIFT_96V_IF Write all 1 to GPIO[15:0], SHUNT PULSE ENABLE = 1
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h05); uart_send(8'h00); uart_send(8'h07);
+            uart_send(8'h80); uart_send(8'h00); uart_send(8'hFF); uart_send(8'hFF); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+            #1000000;    // Wait 1ms
+
+            // OPB_WRITE: GANTRY_96V_IF Write all 1 to GPIO[15:0], SHUNT PULSE ENABLE = 0
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h05); uart_send(8'h00); uart_send(8'h02);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'hFF); uart_send(8'hFF); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+            // OPB_WRITE: LIFT_96V_IF Write all 1 to GPIO[15:0], SHUNT PULSE ENABLE = 1
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h05); uart_send(8'h00); uart_send(8'h07);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'hFF); uart_send(8'hFF); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+            #1000000;    // Wait 1ms
+/*
             // OPB READ: GPIO Read
             ii = 0;
             for (ii = 0; ii < 16; ii = ii + 1) begin
@@ -475,7 +513,7 @@ module top_tb;
                 repeat(10) uart_recv(uart_tdata);
                 #1000000;    // Wait 1us
             end
-
+*/
             $display("GPIO Test End.");
         end
 
@@ -809,5 +847,13 @@ end
     initial begin
         $monitor("Time: %0t, UART Data: %h", $time, uart_tdata);
     end
+
+    // monitoring GNT_SHUNT_EN and LFT_SHUNT_EN
+    initial begin
+        if(GPIO_TEST == 1) begin
+            $monitor("Time: %0t, GNT_SHUNT_EN: %b, LFT_SHUNT_EN: %b", $time, GNT_SHUNT_EN, LFT_SHUNT_EN);
+        end
+    end
+
 
 endmodule

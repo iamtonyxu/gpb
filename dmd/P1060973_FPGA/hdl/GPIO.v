@@ -52,6 +52,8 @@ module GPIO (
     input               DEBUG_IF_WE,
     input               GPIO_FREE_IF_RE,
     input               GPIO_FREE_IF_WE,
+    input               SHUNT_EN_CNT_RE,
+    input               SHUNT_EN_CNT_WE,
 
     // POWER_IF
     output              FAN_EN,
@@ -184,6 +186,9 @@ module GPIO (
     output              GPIO5  // TP98
 );
 
+    // delay 2.5s for GNT_SHUNT_EN pulse width with 100MHz clock
+    parameter SHUNT_EN_CNT_MAX = 32'd250000000; // 2.5s
+
     /* GPIO Registers */
     // Bit 15:0 are for GPIO output, and set unused bits as 0 
     // Bit 31:16 are for GPIO input, and set unused bits as 0
@@ -203,6 +208,10 @@ module GPIO (
     reg [31:0]  ADCSELMUX_IF_REG;
     reg [31:0]  DEBUG_IF_REG;
     reg [31:0]  GPIO_FREE_IF_REG;
+    reg [31:0]  SHUNT_EN_CNT_MAX_REG;
+
+    reg [31:0] GNT_SHUNT_EN_CNT;
+    reg [31:0] LFT_SHUNT_EN_CNT;
 
     // GPIO Outputs
     assign FAN_EN               = POWER_IF_REG[0];
@@ -299,6 +308,7 @@ module GPIO (
             GANTRY_96V_IF_REG <= 32'b0;
         end else if (GANTRY_96V_IF_WE) begin
             GANTRY_96V_IF_REG[15:0] <= OPB_DI[15:0];
+            GANTRY_96V_IF_REG[31] <= OPB_DI[31]; // GNT_SHUNT_EN Mode: output pulse with 2.5s
         end else begin
             GANTRY_96V_IF_REG[16] <= OC_V_GNT_MOT_DRV;
             GANTRY_96V_IF_REG[17] <= OC_V_GNT_BRK_DRV;
@@ -308,8 +318,45 @@ module GPIO (
             GANTRY_96V_IF_REG[21] <= P5V_ISO_MON_GNT;
             GANTRY_96V_IF_REG[22] <= GNT_SHUNT_ON;
             GANTRY_96V_IF_REG[23] <= P5V_ISO_MON_LFT;
+
+            if(GNT_SHUNT_EN_CNT >= SHUNT_EN_CNT_MAX_REG) begin
+                GANTRY_96V_IF_REG[2] <= 0; // GNT_SHUNT_EN goes to 0 after 2.5s
+            end
+
         end
     end
+
+    /* if GANTRY_96V_IF_REG[2]==1 and GANTRY_96V_IF_REG[31]==1, GNT_SHUNT_EN goes to 1 for 2.5s then goes to 0
+     * if GANTRY_96V_IF_REG[2]==1 and GANTRY_96V_IF_REG[31]==0, GNT_SHUNT_EN goes to 1
+     * if GANTRY_96V_IF_REG[2]==0, GNT_SHUNT_EN goes to 0
+    */
+    // GNT_SHUNT_EN_CNT
+    always @(posedge OPB_CLK or posedge OPB_RST) begin
+        if (OPB_RST) begin
+            GNT_SHUNT_EN_CNT <= 0;
+        end else if (GANTRY_96V_IF_REG[2] && GANTRY_96V_IF_REG[31]) begin
+            if (GNT_SHUNT_EN_CNT < SHUNT_EN_CNT_MAX_REG) begin
+                GNT_SHUNT_EN_CNT <= GNT_SHUNT_EN_CNT + 1'b1;
+            end
+        end else begin
+            GNT_SHUNT_EN_CNT <= 0;
+        end
+    end
+
+    // LFT_SHUNT_EN_CNT
+    always @(posedge OPB_CLK or posedge OPB_RST) begin
+        if (OPB_RST) begin
+            LFT_SHUNT_EN_CNT <= 0;
+        end else if (LIFT_96V_IF_REG[1] && LIFT_96V_IF_REG[31]) begin
+            if (LFT_SHUNT_EN_CNT < SHUNT_EN_CNT_MAX_REG) begin
+                LFT_SHUNT_EN_CNT <= LFT_SHUNT_EN_CNT + 1'b1;
+            end
+        end else begin
+            LFT_SHUNT_EN_CNT <= 0;
+        end
+    end
+
+
 
     // GANTRY_BRAKE_IF_REG
     always @(negedge OPB_CLK or posedge OPB_RST) begin
@@ -379,12 +426,16 @@ module GPIO (
             LIFT_96V_IF_REG <= 32'b0;
         end else if (LIFT_96V_IF_WE) begin
             LIFT_96V_IF_REG[15:0] <= OPB_DI[15:0];
+            LIFT_96V_IF_REG[31] <= OPB_DI[31]; // LFT_SHUNT_EN Mode: output pulse with 2.5s
         end else begin
             LIFT_96V_IF_REG[16] <= P24V_LFT_EMOPS_PG;
             LIFT_96V_IF_REG[17] <= OC_V_LFT_MOT_DRV;
             LIFT_96V_IF_REG[18] <= LFT_SHUNT_ON;
             LIFT_96V_IF_REG[19] <= LFT_EMOPS_OV_L;
             LIFT_96V_IF_REG[20] <= LFT_MOT_PWR_FLT_N;
+            if(LFT_SHUNT_EN_CNT >= SHUNT_EN_CNT_MAX_REG) begin
+                LIFT_96V_IF_REG[1] <= 0; // LFT_SHUNT_EN goes to 0 after 2.5s
+            end
         end
     end
 
@@ -473,6 +524,15 @@ module GPIO (
             GPIO_FREE_IF_REG <= 32'b0;
         end else if (GPIO_FREE_IF_WE) begin
             GPIO_FREE_IF_REG[15:0] <= OPB_DI[15:0];
+        end
+    end
+
+    // SHUNT_EN_CNT_MAX_REG
+    always @(negedge OPB_CLK or posedge OPB_RST) begin
+        if (OPB_RST) begin
+            SHUNT_EN_CNT_MAX_REG <= SHUNT_EN_CNT_MAX;
+        end else if (SHUNT_EN_CNT_WE) begin
+            SHUNT_EN_CNT_MAX_REG[31:0] <= OPB_DI[31:0];
         end
     end
 

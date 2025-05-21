@@ -113,7 +113,9 @@ module AdderDecode(
     output          DEBUG_IF_RE,
     output          DEBUG_IF_WE,
     output          GPIO_FREE_IF_RE,
-    output          GPIO_FREE_IF_WE
+    output          GPIO_FREE_IF_WE,
+    output          SHUNT_EN_CNT_RE,
+    output          SHUNT_EN_CNT_WE
 );
 
     // xxx_RE_d1
@@ -150,6 +152,7 @@ module AdderDecode(
     reg ADCSELMUX_IF_RE_d1;
     reg DEBUG_IF_RE_d1;
     reg GPIO_FREE_IF_RE_d1;
+    reg SHUNT_EN_CNT_RE_d1;
 
     // RE/WE signals
     assign COUNTER_RE           = DEC_RE & (DEC_ADDR >= `COUNTER_ADDR) & (DEC_ADDR < (`COUNTER_ADDR + `COUNTER_SIZE));	
@@ -255,6 +258,9 @@ module AdderDecode(
     assign GPIO_FREE_IF_RE      = DEC_RE & (DEC_ADDR == `GPIO_FREE_IF_ADDR);
     assign GPIO_FREE_IF_WE      = DEC_WE & (DEC_ADDR == `GPIO_FREE_IF_ADDR);
 
+    assign SHUNT_EN_CNT_RE      = DEC_RE & (DEC_ADDR == `SHUNT_EN_CNT_ADDR);
+    assign SHUNT_EN_CNT_WE      = DEC_WE & (DEC_ADDR == `SHUNT_EN_CNT_ADDR);
+
     // RE_d1 registers
     always @(posedge OPB_CLK or posedge OPB_RST) begin
         if (OPB_RST) begin
@@ -291,6 +297,7 @@ module AdderDecode(
             ADCSELMUX_IF_RE_d1      <= 0;
             DEBUG_IF_RE_d1          <= 0;
             GPIO_FREE_IF_RE_d1      <= 0;
+            SHUNT_EN_CNT_RE_d1      <= 0;
         end else begin
             COUNTER_RE_d1           <= COUNTER_RE;
             SP1_RE_d1               <= SP1_RE;
@@ -326,6 +333,7 @@ module AdderDecode(
             ADCSELMUX_IF_RE_d1      <= ADCSELMUX_IF_RE;
             DEBUG_IF_RE_d1          <= DEBUG_IF_RE;
             GPIO_FREE_IF_RE_d1      <= GPIO_FREE_IF_RE;
+            SHUNT_EN_CNT_RE_d1      <= SHUNT_EN_CNT_RE;
         end
     end
 
@@ -363,6 +371,7 @@ module AdderDecode(
                     (ADCSELMUX_IF_RE_d1)         ? GPIO_IN         :
                     (DEBUG_IF_RE_d1)             ? GPIO_IN         :
                     (GPIO_FREE_IF_RE_d1)         ? GPIO_IN         :
+                    (SHUNT_EN_CNT_RE_d1)         ? GPIO_IN         :
                                                   32'bz;
 
 endmodule

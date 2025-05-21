@@ -320,6 +320,8 @@ module top(
     wire          DEBUG_IF_WE;        // Debug interface write enable
     wire          GPIO_FREE_IF_RE;    // GPIO free interface read enable
     wire          GPIO_FREE_IF_WE;    // GPIO free interface write enable
+    wire          SHUNT_EN_CNT_RE;    // Shunt enable counter read enable
+    wire          SHUNT_EN_CNT_WE;    // Shunt enable counter write enable
 
     wire    [5:0] gantry_mot_pwm;
     wire    [5:0] lift_mot_pwm;
@@ -507,7 +509,9 @@ module top(
         .DEBUG_IF_RE(DEBUG_IF_RE),       // Debug interface read enable
         .DEBUG_IF_WE(DEBUG_IF_WE),       // Debug interface write enable
         .GPIO_FREE_IF_RE(GPIO_FREE_IF_RE), // GPIO free interface read enable
-        .GPIO_FREE_IF_WE(GPIO_FREE_IF_WE)  // GPIO free interface write enable
+        .GPIO_FREE_IF_WE(GPIO_FREE_IF_WE), // GPIO free interface write enable
+        .SHUNT_EN_CNT_RE(SHUNT_EN_CNT_RE), // Shunt enable counter read enable
+        .SHUNT_EN_CNT_WE(SHUNT_EN_CNT_WE)  // Shunt enable counter write enable
     );
 
     // CLK_GEN module instantiation
@@ -642,6 +646,8 @@ DAC_DACx0504_IF dac_0 (
         .DEBUG_IF_WE(DEBUG_IF_WE),
         .GPIO_FREE_IF_RE(GPIO_FREE_IF_RE),
         .GPIO_FREE_IF_WE(GPIO_FREE_IF_WE),
+        .SHUNT_EN_CNT_RE(SHUNT_EN_CNT_RE),
+        .SHUNT_EN_CNT_WE(SHUNT_EN_CNT_WE),
 
         // POWER_IF
         .FAN_EN(FAN_EN),
