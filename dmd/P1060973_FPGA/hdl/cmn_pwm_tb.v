@@ -68,7 +68,7 @@ module cmn_pwm_tb;
     // Clock generation
     initial begin
         clk = 0;
-        forever #(5) clk = ~clk; // 100 MHz clock
+        forever #(20) clk = ~clk; // 25MHz clock
     end
 
     // pulse_200us generation

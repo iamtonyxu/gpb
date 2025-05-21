@@ -40,7 +40,8 @@ module MSSB_IF (
 
     parameter BAUD_RATE = 921600; // 921.6K bps
     parameter CLOCK_FREQUENCY = 100000000; // 100MHz
-    parameter MAX_TRANSMIT_BYTES = 20'hF4240; // 1M bytes
+    //parameter MAX_TRANSMIT_BYTES = 20'hF4240; // 1M bytes
+    parameter MAX_TRANSMIT_BYTES = 20'h2710; // 10K bytes
     parameter MIN_TRANSMIT_BYTES = 20'h7A120; // 500K bytes
 
     // state machine for MSSB transmission

@@ -125,31 +125,41 @@ begin
      ------------------------------------------------------------------
      -- PWM generation for motor
      ------------------------------------------------------------------
-     i_mot_pwm: entity work.PH_PWM
-     generic map (
-          MOTOR_PWM_PERIODE   => CLK_RATE_MHZ * 25 * RESOLUTION,
-          PHASE_SHIFT         => PHASE_SHIFT,
-          PWM_CNTR_MAX        => PWM_CNTR_MAX,
-          MAX_CUR_SAMPLE_TIME => MAX_CUR_SAMPLE_TIME,
-          ENABLE_CNTR_MAX     => ENABLE_CNTR_MAX,
-          FAULT_CNTR_MAX      => FAULT_CNTR_MAX
-     )
-     port map
-     (
-          clk                 => clk,
-          reset               => reset,
-          sync                => sync,
-          clk_en              => '1',
-          t1                  => conv_integer(sync_mot_pwm_param01),
-          t2                  => conv_integer(sync_mot_pwm_param23),
-          t3                  => conv_integer(sync_mot_pwm_param45),
-          enable              => mot_en_in,
-          pd_fault            => '0',             -- there is no fault signal from pwm driver
-          pwm                 => mot_pwm_raw,
-          cur_sl              => open,            -- there is no switch
-          fault               => open,            -- no fault output needed     
-          start_period        => start_pwm_period
-     );
+
+     --     i_mot_pwm: entity work.PH_PWM
+     --     generic map (
+     --          MOTOR_PWM_PERIODE   => CLK_RATE_MHZ * 25 * RESOLUTION,
+     --          PHASE_SHIFT         => PHASE_SHIFT,
+     --          PWM_CNTR_MAX        => PWM_CNTR_MAX,
+     --          MAX_CUR_SAMPLE_TIME => MAX_CUR_SAMPLE_TIME,
+     --          ENABLE_CNTR_MAX     => ENABLE_CNTR_MAX,
+     --          FAULT_CNTR_MAX      => FAULT_CNTR_MAX
+     --     )
+     --     port map
+     --     (
+     --          clk                 => clk,
+     --          reset               => reset,
+     --          sync                => sync,
+     --          clk_en              => '1',
+     --          t1                  => conv_integer(sync_mot_pwm_param01),
+     --          t2                  => conv_integer(sync_mot_pwm_param23),
+     --          t3                  => conv_integer(sync_mot_pwm_param45),
+     --          enable              => mot_en_in,
+     --          pd_fault            => '0',             -- there is no fault signal from pwm driver
+     --          pwm                 => mot_pwm_raw,
+     --          cur_sl              => open,            -- there is no switch
+     --          fault               => open,            -- no fault output needed     
+     --          start_period        => start_pwm_period
+     --     );
+
+-- Instance PH_PWM_SIMPLE
+i_mot_pwm_simple : entity work.PH_PWM_SIMPLE
+port map (
+     CLK    => clk,
+     RESET  => reset,
+     ENABLE => mot_en_in,
+     PWM    => mot_pwm_raw
+);
 
      -- - limit the motor & brake PWM parameter to the maximum valid value
      -- - latch in the value only in the next 200 us servo period whose beginning is indicated by the "pulse_200us".
@@ -247,7 +257,8 @@ begin
           pwm(2)              => unused2,
           pwm(3)              => unused3,
           cur_sl              => open,     
-          fault               => open
+          fault               => open,
+          start_period        => start_pwm_period
      );     
 
      -- brake pwm is inverted
