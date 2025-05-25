@@ -152,8 +152,8 @@ begin
      --          start_period        => start_pwm_period
      --     );
 
--- Instance PH_PWM_SIMPLE
-i_mot_pwm_simple : entity work.PH_PWM_SIMPLE
+-- Instance SIMPLE_PH_PWM
+i_mot_pwm_simple : entity work.SIMPLE_PH_PWM
 port map (
      CLK    => clk,
      RESET  => reset,

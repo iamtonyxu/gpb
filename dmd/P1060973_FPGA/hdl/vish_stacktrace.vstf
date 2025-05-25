@@ -55,3 +55,60 @@ Exception c0000005 has occurred at address 4029ba57. Traceback:
 StackWalk failed 0
 # End of Stack Trace
 
+# Current time Wed May 21 21:02:10 2025
+# ModelSim Stack Trace
+# Program = vish
+# Id = "10.2c"
+# Version = "2013.07"
+# Date = "Jul 19 2013"
+# Platform = win64
+
+Exception c0000005 has occurred at address 4029ba57. Traceback:
+# 0    0x4029ba57: 'Ucdb_Init + 0x8a47'
+# 1    0x401ce9ca: 'Mtirpc_Init + 0xe681a'
+# 2    0x401b4117: 'Mtirpc_Init + 0xcbf67'
+# 3    0x401b41c3: 'Mtirpc_Init + 0xcc013'
+# 4    0x40144ced: 'Mtirpc_Init + 0x5cb3d'
+# 5    0x401a9ff2: 'Mtirpc_Init + 0xc1e42'
+# 6    0x401ab02b: 'Mtirpc_Init + 0xc2e7b'
+# 7    0x100b9a1c: 'TclServiceIdle + 0x6c'
+# 8    0x100954c1: 'Tcl_DoOneEvent + 0x181'
+# 9    0x10056d71: 'TclInThreadExit + 0x121'
+# 10   0x10011461: 'Tcl_ListMathFuncs + 0x591'
+# 11   0x1005931a: 'Tcl_ExprObj + 0x1baa'
+# 12   0x100a62b4: 'TclObjInterpProcCore + 0x74'
+# 13   0x10011461: 'Tcl_ListMathFuncs + 0x591'
+# 14   0x10012405: 'Tcl_EvalEx + 0x9c5'
+# 15   0x10012f19: 'TclEvalObjEx + 0x249'
+# 16   0x1001af97: 'Tcl_DbCkrealloc + 0x33d7'
+# 17   0x10011461: 'Tcl_ListMathFuncs + 0x591'
+# 18   0x1005931a: 'Tcl_ExprObj + 0x1baa'
+# 19   0x100a62b4: 'TclObjInterpProcCore + 0x74'
+# 20   0x10011461: 'Tcl_ListMathFuncs + 0x591'
+# 21   0x1005931a: 'Tcl_ExprObj + 0x1baa'
+# 22   0x10057f0a: 'Tcl_ExprObj + 0x79a'
+# 23   0x100130b0: 'TclEvalObjEx + 0x3e0'
+# 24   0x10012cbd: 'Tcl_EvalObjEx + 0x1d'
+# 25   0x10011461: 'Tcl_ListMathFuncs + 0x591'
+# 26   0x1005931a: 'Tcl_ExprObj + 0x1baa'
+# 27   0x100a62b4: 'TclObjInterpProcCore + 0x74'
+# 28   0x10011461: 'Tcl_ListMathFuncs + 0x591'
+# 29   0x1005931a: 'Tcl_ExprObj + 0x1baa'
+# 30   0x100a62b4: 'TclObjInterpProcCore + 0x74'
+# 31   0x10011461: 'Tcl_ListMathFuncs + 0x591'
+# 32   0x1005931a: 'Tcl_ExprObj + 0x1baa'
+# 33   0x10057f0a: 'Tcl_ExprObj + 0x79a'
+# 34   0x100130b0: 'TclEvalObjEx + 0x3e0'
+# 35   0x100ba41c: 'TclServiceIdle + 0xa6c'
+# 36   0x100b9a1c: 'TclServiceIdle + 0x6c'
+# 37   0x100954c1: 'Tcl_DoOneEvent + 0x181'
+# 38   0x102e21a5: 'Tk_MainLoop + 0x25'
+# 39   0x102ae12b: 'Tk_MainEx + 0x91b'
+# 40   0x401084bd: 'Mtirpc_Init + 0x2030d'
+# 41   0x4010a017: 'Mtirpc_Init + 0x21e67'
+# 42   0x405727fe: 'Sqlite_Unload + 0x3d2ae'
+# 43   0xff81e8d7: 'BaseThreadInitThunk + 0x17'
+# 44   0x00ffc5dc: 'RtlUserThreadStart + 0x2c'
+StackWalk failed 0
+# End of Stack Trace
+

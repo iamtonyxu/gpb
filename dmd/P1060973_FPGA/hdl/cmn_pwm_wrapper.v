@@ -105,7 +105,7 @@ module cmn_pwm_wrapper
         if (OPB_RST) begin
             pwm_config <= {8'h00, DEFAULT_TEST_DURATION, 8'h00};
         end else if (OPB_WE && OPB_ADDR[3:0] == `ADDR_PWM_CONFIG) begin
-            pwm_config <= OPB_DI;
+            pwm_config[7:0] <= OPB_DI[7:0];
             if(pwm_config[23:8] > MAX_TEST_DURATION) begin
                 pwm_config[23:8] <= MAX_TEST_DURATION; // set test duration to max value if it exceeds the limit
             end

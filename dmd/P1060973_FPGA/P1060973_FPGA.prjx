@@ -70,13 +70,13 @@ SIZE="2977"
 ENDFILE
 VALUE "<project>\hdl\ADDR_DECODER.v,hdl"
 STATE="utd"
-TIME="1746953186"
-SIZE="17335"
+TIME="1747557379"
+SIZE="17768"
 ENDFILE
 VALUE "<project>\hdl\Addr_definition.v,hdl"
 STATE="utd"
-TIME="1746952077"
-SIZE="3273"
+TIME="1747556962"
+SIZE="3353"
 ENDFILE
 VALUE "<project>\hdl\afifo.v,hdl"
 STATE="utd"
@@ -125,13 +125,13 @@ SIZE="3941"
 ENDFILE
 VALUE "<project>\hdl\cmn_pwm.vhd,hdl"
 STATE="utd"
-TIME="1746862649"
-SIZE="11556"
+TIME="1747833248"
+SIZE="12262"
 ENDFILE
 VALUE "<project>\hdl\cmn_pwm_wrapper.v,hdl"
 STATE="utd"
-TIME="1747013864"
-SIZE="13065"
+TIME="1747800171"
+SIZE="13100"
 ENDFILE
 VALUE "<project>\hdl\cmn_uart.vhd,hdl"
 STATE="utd"
@@ -185,8 +185,8 @@ SIZE="1449"
 ENDFILE
 VALUE "<project>\hdl\GPIO.v,hdl"
 STATE="utd"
-TIME="1746089617"
-SIZE="19226"
+TIME="1747557463"
+SIZE="21513"
 ENDFILE
 VALUE "<project>\hdl\msg_buffer.v,hdl"
 STATE="utd"
@@ -215,8 +215,8 @@ SIZE="2599"
 ENDFILE
 VALUE "<project>\hdl\MSSB_IF.v,hdl"
 STATE="utd"
-TIME="1746774355"
-SIZE="13234"
+TIME="1748141018"
+SIZE="13240"
 ENDFILE
 VALUE "<project>\hdl\opb_emu_target.v,hdl"
 STATE="utd"
@@ -240,7 +240,7 @@ SIZE="4681"
 ENDFILE
 VALUE "<project>\hdl\PH_PWM.vhd,hdl"
 STATE="utd"
-TIME="1474197791"
+TIME="1747789079"
 SIZE="8374"
 ENDFILE
 VALUE "<project>\hdl\ScratchPadRegister.v,hdl"
@@ -260,13 +260,13 @@ SIZE="12526"
 ENDFILE
 VALUE "<project>\hdl\top.v,hdl"
 STATE="utd"
-TIME="1746953968"
-SIZE="43055"
+TIME="1747557324"
+SIZE="43455"
 ENDFILE
 VALUE "<project>\hdl\top_tb.v,hdl"
 STATE="utd"
-TIME="1746754609"
-SIZE="17270"
+TIME="1747833455"
+SIZE="33542"
 ENDFILE
 VALUE "<project>\synthesis\synwork\layer0.so,so"
 STATE="utd"
@@ -275,22 +275,22 @@ SIZE="159"
 ENDFILE
 VALUE "<project>\synthesis\top.so,so"
 STATE="utd"
-TIME="1746954270"
+TIME="1747833890"
 SIZE="211"
 ENDFILE
 VALUE "<project>\synthesis\top.vm,syn_vm"
-STATE="utd"
-TIME="1746954269"
-SIZE="2718788"
+STATE="ood"
+TIME="1747833889"
+SIZE="2848228"
 ENDFILE
 VALUE "<project>\synthesis\top_syn.prj,prj"
 STATE="utd"
-TIME="1747013289"
-SIZE="4213"
+TIME="1747833891"
+SIZE="4927"
 ENDFILE
 VALUE "<project>\synthesis\top_vm.sdc,syn_sdc"
 STATE="utd"
-TIME="1746954269"
+TIME="1747833889"
 SIZE="5023"
 ENDFILE
 ENDLIST
@@ -403,8 +403,8 @@ NAME="synplify_Pro"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\bin\synplify_pro.exe"
-PARAM=""
-BATCH=0
+PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
+BATCH=1
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -467,11 +467,9 @@ LIST OpenedFileList
 ORIENTATION;HORIZONTAL
 Reports;Reports;0
 ReportsCurrentItem;synthesis:synplify.log
-HDL;hdl\top.v;0
-HDL;hdl\cmn_pwm_wrapper.v;0
-HDL;hdl\cmn_debouncer.vhd;0
-HDL;libero_setup_info.txt;0
-ACTIVEVIEW;hdl\cmn_debouncer.vhd
+HDL;hdl\cmn_pwm.vhd;0
+StartPage;StartPage;0
+ACTIVEVIEW;Reports
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADC_ADS8864_IF::work","hdl\ADC_ADS8864_IF.v","FALSE","FALSE"
@@ -502,15 +500,14 @@ ENDLIST
 LIST "cmd_server_tb::work","hdl\cmd_server_tb.v","FALSE","FALSE"
 SUBBLOCK "cmd_server::work","hdl\cmd_server.v","FALSE","FALSE"
 ENDLIST
-LIST "cmn_debouncer::work","","FALSE","FALSE"
-ENDLIST
 LIST "cmn_latch_over_curr::work","hdl\cmn_latch_over_curr.vhd","FALSE","FALSE"
-SUBBLOCK "cmn_debouncer::work","","FALSE","FALSE"
+SUBBLOCK "cmn_debouncer::work","hdl\cmn_debouncer.vhd","FALSE","FALSE"
 ENDLIST
 LIST "cmn_pwm::work","hdl\cmn_pwm.vhd","FALSE","FALSE"
 SUBBLOCK "PH_PWM::work","hdl\PH_PWM.vhd","FALSE","FALSE"
-SUBBLOCK "cmn_debouncer::work","","FALSE","FALSE"
 SUBBLOCK "CMN_DEADBAND::work","hdl\cmn_deadband.vhd","FALSE","FALSE"
+SUBBLOCK "cmn_debouncer::work","hdl\cmn_debouncer.vhd","FALSE","FALSE"
+SUBBLOCK "ph_pwm_simple::work","","FALSE","FALSE"
 ENDLIST
 LIST "cmn_pwm_wrapper::work","hdl\cmn_pwm_wrapper.v","FALSE","FALSE"
 SUBBLOCK "CLOCK_DIV::work","hdl\CLK_DIV.V","FALSE","FALSE"
@@ -543,11 +540,15 @@ LIST "afifo::work","hdl\afifo.v","FALSE","FALSE"
 ENDLIST
 LIST "CMN_DEADBAND::work","hdl\cmn_deadband.vhd","FALSE","FALSE"
 ENDLIST
+LIST "cmn_debouncer::work","hdl\cmn_debouncer.vhd","FALSE","FALSE"
+ENDLIST
 LIST "cmn_uart::work","hdl\cmn_uart.vhd","FALSE","FALSE"
 ENDLIST
 LIST "DP_RAM_2R_1W::work","hdl\dual_port_ram.v","FALSE","FALSE"
 ENDLIST
 LIST "afifo::work","hdl\afifo.v","FALSE","FALSE"
+ENDLIST
+LIST "cmn_debouncer::work","hdl\cmn_debouncer.vhd","FALSE","FALSE"
 ENDLIST
 LIST "cmn_uart::work","hdl\cmn_uart.vhd","FALSE","FALSE"
 ENDLIST
@@ -589,6 +590,8 @@ ENDLIST
 LIST "PCI_EMU_TARGET::work","hdl\pci_emu_target.v","FALSE","FALSE"
 ENDLIST
 LIST "PH_PWM::work","hdl\PH_PWM.vhd","FALSE","FALSE"
+ENDLIST
+LIST "ph_pwm_simple::work","","FALSE","FALSE"
 ENDLIST
 LIST "SCRATCH_PAD_REGISTER::work","hdl\ScratchPadRegister.v","FALSE","FALSE"
 ENDLIST

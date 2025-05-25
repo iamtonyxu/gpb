@@ -1,7 +1,7 @@
 #--  Synopsys, Inc.
 #--  Version V-2023.09M-3
 #--  Project file C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\run_options.txt
-#--  Written on Mon May 12 14:36:47 2025
+#--  Written on Sun May 25 18:05:11 2025
 
 
 #project files
@@ -28,6 +28,7 @@ add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_write.v"
 add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/opb_emu_target.v"
 add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmd_server.v"
 add_file -vhdl -lib work "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM.vhd"
+add_file -vhdl -lib work "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/SIMPLE_PH_PWM.vhd"
 add_file -vhdl -lib work "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_deadband.vhd"
 add_file -vhdl -lib work "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_debouncer.vhd"
 add_file -vhdl -lib work "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm.vhd"

@@ -5,6 +5,13 @@ Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 Top level modules:
 	MSSB_IF_tb
 
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM_SIMPLE_tb.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM_SIMPLE_tb.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module PH_PWM_SIMPLE_tb
+
+Top level modules:
+	PH_PWM_SIMPLE_tb
+
 } {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/serial_eeprom_if.vhd {1 {vcom -work work -2002 -explicit -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/serial_eeprom_if.vhd
 Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 19 2013
 -- Loading package STANDARD
@@ -64,6 +71,20 @@ Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 Top level modules:
 	ClkGen
 
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DAC_DACx0504_tb.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DAC_DACx0504_tb.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module DAC_DACx0504_tb
+
+Top level modules:
+	DAC_DACx0504_tb
+
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/afifo.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/afifo.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module afifo
+
+Top level modules:
+	afifo
+
 } {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm.vhd {1 {vcom -work work -2002 -explicit -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm.vhd
 Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 19 2013
 -- Loading package STANDARD
@@ -74,8 +95,10 @@ Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 19 2013
 -- Compiling entity cmn_pwm
 -- Compiling architecture rtl of cmn_pwm
 -- Loading entity cmn_debouncer
--- Loading entity PH_PWM
+-- Loading package NUMERIC_STD
+-- Loading entity PH_PWM_SIMPLE
 -- Loading entity CMN_DEADBAND
+-- Loading entity PH_PWM
 
 } {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_uart.vhd {1 {vcom -work work -2002 -explicit -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_uart.vhd
 Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 19 2013
@@ -86,27 +109,6 @@ Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 19 2013
 -- Loading package MATH_REAL
 -- Compiling entity cmn_uart
 -- Compiling architecture RTL of cmn_uart
-
-} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/afifo.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/afifo.v
-Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
--- Compiling module afifo
-
-Top level modules:
-	afifo
-
-} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DAC_DACx0504_tb.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DAC_DACx0504_tb.v
-Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
--- Compiling module DAC_DACx0504_tb
-
-Top level modules:
-	DAC_DACx0504_tb
-
-} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm_tb.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm_tb.v
-Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
--- Compiling module cmn_pwm_tb
-
-Top level modules:
-	cmn_pwm_tb
 
 } {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DAC_DACx0504_IF.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DAC_DACx0504_IF.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
@@ -129,6 +131,20 @@ Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 Top level modules:
 	cmn_pwm_wrapper_tb
 
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm_tb.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm_tb.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module cmn_pwm_tb
+
+Top level modules:
+	cmn_pwm_tb
+
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmd_server_tb.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmd_server_tb.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module cmd_server_tb
+
+Top level modules:
+	cmd_server_tb
+
 } {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM.vhd {1 {vcom -work work -2002 -explicit -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM.vhd
 Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 19 2013
 -- Loading package STANDARD
@@ -139,12 +155,12 @@ Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 19 2013
 -- Compiling entity PH_PWM
 -- Compiling architecture Behavioral of PH_PWM
 
-} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmd_server_tb.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmd_server_tb.v
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/top_tb.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/top_tb.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
--- Compiling module cmd_server_tb
+-- Compiling module top_tb
 
 Top level modules:
-	cmd_server_tb
+	top_tb
 
 } {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
@@ -176,6 +192,15 @@ Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 19 2013
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity cmn_debouncer
 -- Compiling architecture rtl of cmn_debouncer
+
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM_SIMPLE.vhd {1 {vcom -work work -2002 -explicit -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM_SIMPLE.vhd
+Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 19 2013
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity PH_PWM_SIMPLE
+-- Compiling architecture Behavioral of PH_PWM_SIMPLE
 
 } {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm_wrapper.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm_wrapper.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
@@ -288,6 +313,13 @@ Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 Top level modules:
 	DUT_ADS8864
 
+} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/GPIO.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/GPIO.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module GPIO
+
+Top level modules:
+	GPIO
+
 } {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADC_ADS8864_IF.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADC_ADS8864_IF.v
 Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 -- Compiling module ADC_ADS8864_IF
@@ -301,12 +333,5 @@ Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 
 Top level modules:
 	msg_read_tb
-
-} {} {}} C:/repo2/gpb/dmd/P1060973_FPGA/hdl/GPIO.v {1 {vlog -work work -vopt C:/repo2/gpb/dmd/P1060973_FPGA/hdl/GPIO.v
-Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
--- Compiling module GPIO
-
-Top level modules:
-	GPIO
 
 } {} {}}

@@ -52,15 +52,14 @@ L0 53
 R5
 R6
 n@a@d@c_@a@d@s8864_@i@f
+!s85 0
 !s100 TK_EF6g0QN`je;[ZD^M:Y2
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADC_ADS8864_IF.v|
-!s108 1747026552.555000
+!s108 1747833465.943000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADC_ADS8864_IF.v|
-!s85 0
 !i10b 1
 !i111 0
 vADC_ADS8864_tb
-Z7 !s110 1747026552
 IQn?JLRl>RDigjG3UEBME;2
 R2
 R3
@@ -73,9 +72,10 @@ r1
 31
 R6
 n@a@d@c_@a@d@s8864_tb
+Z7 !s110 1747833466
 !s100 1Z98]m3f4oGB`;m4cF7fE0
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADC_ADS8864_tb.v|
-!s108 1747026552.600000
+!s108 1747833466.006000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADC_ADS8864_tb.v|
 !i10b 1
 !s85 0
@@ -84,20 +84,20 @@ vAdderDecode
 R2
 r1
 31
-I?JkZ0T;gRK7gW5gEglD4R3
+I=>G4TZE6NBA5o][9n]kAg0
 R3
-w1746953186
+w1747557379
 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v
 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v
 L0 21
 R5
 R6
 n@adder@decode
-!s100 ?0zaeGmoz@TZjOJDI8^e31
-!s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v|
-!s108 1747026552.463000
-!s107 Addr_definition.v|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v|
 !s85 0
+!s100 >lO<;IJRz^keaCEV<d?RN1
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v|
+!s108 1747833465.766000
+!s107 Addr_definition.v|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v|
 !i10b 1
 !i111 0
 vafifo
@@ -112,15 +112,15 @@ FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/afifo.v
 L0 62
 R5
 R6
+!s85 0
 !s100 =QRHl[mW:d]fcH=:A8i6f2
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/afifo.v|
-!s108 1747026551.671000
+!s108 1747833464.989000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/afifo.v|
-!s85 0
 !i10b 1
 !i111 0
 vafifo_tb
-Z9 !s110 1747026551
+Z9 !s110 1747833465
 ILm<gCabFM@9EDza90>7:`0
 R2
 R3
@@ -134,7 +134,7 @@ r1
 R6
 !s100 9Jh08_i0@=^Q2E?B<3EB93
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/afifo_tb.v|
-!s108 1747026551.724000
+!s108 1747833465.039000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/afifo_tb.v|
 !i10b 1
 !s85 0
@@ -152,11 +152,11 @@ L0 32
 R5
 R6
 n@clk@gen
+!s85 0
 !s100 ho7@f8BAJdKMUG`0i_3On2
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/CLK_GEN.v|
-!s108 1747026551.814000
+!s108 1747833465.129000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/CLK_GEN.v|
-!s85 0
 !i10b 1
 !i111 0
 vCLOCK_DIV
@@ -172,11 +172,11 @@ L0 21
 R5
 R6
 n@c@l@o@c@k_@d@i@v
+!s85 0
 !s100 PKOR]fhUIOT4<^j]Rh1LT0
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/CLK_DIV.V|
-!s108 1747026551.769000
+!s108 1747833465.083000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/CLK_DIV.V|
-!s85 0
 !i10b 1
 !i111 0
 vcmd_server
@@ -191,11 +191,11 @@ FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmd_server.v
 L0 3
 R5
 R6
+!s85 0
 !s100 o`O5R_mc>2A>jkL=0ZNjA3
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmd_server.v|
-!s108 1747026551.859000
+!s108 1747833465.181000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmd_server.v|
-!s85 0
 !i10b 1
 !i111 0
 vcmd_server_tb
@@ -213,7 +213,7 @@ r1
 R6
 !s100 [b]cGm6^G2@NjLjQO[G_^3
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmd_server_tb.v|
-!s108 1747026551.903000
+!s108 1747833465.240000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmd_server_tb.v|
 !i10b 1
 !s85 0
@@ -232,12 +232,12 @@ L45
 VDehl_Ki05:@;Olj?ZP=AU2
 Z17 OL;C;10.2c;57
 32
-Z18 !s110 1747026553
-Z19 !s108 1747026553.532000
-Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_deadband.vhd|
-Z21 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_deadband.vhd|
-Z22 o-work work -2002 -explicit
-Z23 tExplicit 1
+R7
+Z18 !s108 1747833466.871000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_deadband.vhd|
+Z20 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_deadband.vhd|
+Z21 o-work work -2002 -explicit
+Z22 tExplicit 1
 !s100 7`26LJUL83VdX8<3T>BJW0
 !i10b 1
 !i111 0
@@ -246,41 +246,41 @@ R11
 R12
 R13
 R14
-Z24 DEx4 work 12 cmn_deadband 0 22 Dehl_Ki05:@;Olj?ZP=AU2
+Z23 DEx4 work 12 cmn_deadband 0 22 Dehl_Ki05:@;Olj?ZP=AU2
 32
-R18
+R7
 l83
 L64
 V5Edbo^WK=a6UTA[aSP8z93
 R17
+R18
 R19
 R20
 R21
 R22
-R23
 !s100 7QN85IH?:OO8i9]0^Kk0P1
 !i10b 1
 !i111 0
 Ecmn_debouncer
-Z25 w1747013917
+Z24 w1747013917
 R11
 R12
 R13
 R14
 R3
-Z26 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_debouncer.vhd
-Z27 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_debouncer.vhd
+Z25 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_debouncer.vhd
+Z26 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_debouncer.vhd
 l0
 L22
 VELWKZoZVbd>YINhWa2ST[1
 R17
 32
-R18
-Z28 !s108 1747026553.586000
-Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_debouncer.vhd|
-Z30 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_debouncer.vhd|
+R7
+Z27 !s108 1747833466.923000
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_debouncer.vhd|
+Z29 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_debouncer.vhd|
+R21
 R22
-R23
 !s100 6IZSPRHD_N;_nQhD7fjT12
 !i10b 1
 !i111 0
@@ -289,18 +289,18 @@ R11
 R12
 R13
 R14
-Z31 DEx4 work 13 cmn_debouncer 0 22 ELWKZoZVbd>YINhWa2ST[1
+Z30 DEx4 work 13 cmn_debouncer 0 22 ELWKZoZVbd>YINhWa2ST[1
 32
-R18
+R7
 l45
 L39
 V^LSEL9<6`WhQo<kVKU==@1
 R17
+R27
 R28
 R29
-R30
+R21
 R22
-R23
 !s100 BET2OGm4zTgRkIM0FTcfW3
 !i10b 1
 !i111 0
@@ -311,24 +311,24 @@ R12
 R13
 R14
 R3
-Z32 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_latch_over_curr.vhd
-Z33 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_latch_over_curr.vhd
+Z31 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_latch_over_curr.vhd
+Z32 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_latch_over_curr.vhd
 l0
 L20
 V?>f>INMHCdooURbd1ZG090
 R17
 32
-R18
-Z34 !s108 1747026553.476000
-Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_latch_over_curr.vhd|
-Z36 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_latch_over_curr.vhd|
+R7
+Z33 !s108 1747833466.817000
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_latch_over_curr.vhd|
+Z35 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_latch_over_curr.vhd|
+R21
 R22
-R23
 !s100 >lE:bTVSgNg:Z=N4iEXSg0
 !i10b 1
 !i111 0
 Abehavioral
-R31
+R30
 R11
 R12
 R13
@@ -339,67 +339,69 @@ L42
 VQdzf@eSg2NUSO7gQi@R>@2
 R17
 32
-R18
+R7
+R33
 R34
 R35
-R36
+R21
 R22
-R23
 !s100 OzG0j_a6^Z2VU?LeWMdG53
 !i10b 1
 !i111 0
 Ecmn_pwm
-Z37 w1746862649
+Z36 w1747833248
 R11
 R12
 R13
 R14
 R3
-Z38 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm.vhd
-Z39 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm.vhd
+Z37 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm.vhd
+Z38 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm.vhd
 l0
 L24
 VZPU8c1bn?;HfaB0P0fIlH0
 R17
 32
-R18
-Z40 !s108 1747026553.374000
-Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm.vhd|
-Z42 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm.vhd|
+R7
+Z39 !s108 1747833466.713000
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm.vhd|
+Z41 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm.vhd|
+R21
 R22
-R23
 !s100 :HA_<kXJQJ7Vcbk`iA1Km3
 !i10b 1
 !i111 0
 Artl
-R24
-Z43 DEx4 work 6 ph_pwm 0 22 5Tf?mU7Ql[F9B15;LD_oI2
-R31
+Z42 DEx4 work 6 ph_pwm 0 22 5Tf?mU7Ql[F9B15;LD_oI2
+R23
+Z43 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
+Z44 DEx4 work 13 ph_pwm_simple 0 22 XiMnaiEOOYZM0[>J@:VHG0
+R30
 R11
 R12
 R13
 R14
 DEx4 work 7 cmn_pwm 0 22 ZPU8c1bn?;HfaB0P0fIlH0
 32
-R18
+R7
 l90
 L61
-VUPbg?D<dke0G05SYd>QEo1
+VoVTg?Z[a=9gi^kCaQO5g90
 R17
+R39
 R40
 R41
-R42
+R21
 R22
-R23
-!s100 WFkg`8`4:UoSi:Ao<dai23
+!s100 7M5DT;d`kcdaP4MojReFM2
 !i10b 1
 !i111 0
 vcmn_pwm_tb
-R18
-I33dKgEGl<DV?h2iYgn9N`1
+R7
+IPH=`0DgPh7BI:efo0e5Lm0
 R2
 R3
-w1746883983
+w1747797117
 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm_tb.v
 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm_tb.v
 L0 3
@@ -407,9 +409,9 @@ R5
 r1
 31
 R6
-!s100 YG7T>NT[_FaZISH?ohmmi0
+!s100 @eLYo^4C[_9_11mCDGD500
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm_tb.v|
-!s108 1747026553.429000
+!s108 1747833466.769000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm_tb.v|
 !i10b 1
 !s85 0
@@ -420,25 +422,24 @@ r1
 31
 IN<1Ld0U6JfHZE;8]b<G@V2
 R3
-w1747016778
+w1747800171
 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm_wrapper.v
 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm_wrapper.v
 L0 26
 R5
 R6
+!s85 0
 !s100 JmNH]]RA^mcB1nbgJiGz;2
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm_wrapper.v|
-!s108 1747026553.642000
+!s108 1747833466.978000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm_wrapper.v|
-!s85 0
 !i10b 1
 !i111 0
 vcmn_pwm_wrapper_tb
-R18
 I9:^4RSP>Y7oa];@X43`LP0
 R2
 R3
-w1747012213
+w1747789591
 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm_wrapper_tb.v
 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm_wrapper_tb.v
 L0 11
@@ -446,39 +447,40 @@ R5
 r1
 31
 R6
+Z45 !s110 1747833467
 !s100 Vc03dGHn8K_N:>EB=1OHj2
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm_wrapper_tb.v|
-!s108 1747026553.687000
+!s108 1747833467.024000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm_wrapper_tb.v|
 !i10b 1
 !s85 0
 !i111 0
 Ecmn_uart
 R8
-Z44 DPx4 ieee 9 math_real 0 22 X1eFklFj<NHn@4Wz7P8j:2
-Z45 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
+Z46 DPx4 ieee 9 math_real 0 22 X1eFklFj<NHn@4Wz7P8j:2
+R43
 R13
 R14
 R3
-Z46 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_uart.vhd
-Z47 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_uart.vhd
+Z47 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_uart.vhd
+Z48 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_uart.vhd
 l0
 L42
 VWKB>o7VI:Z``]gRTZ:l?P3
 R17
 32
 R9
-Z48 !s108 1747026551.953000
-Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_uart.vhd|
-Z50 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_uart.vhd|
+Z49 !s108 1747833465.289000
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_uart.vhd|
+Z51 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_uart.vhd|
+R21
 R22
-R23
 !s100 0M0^lDlU>;ObL[fO]aX2;3
 !i10b 1
 !i111 0
 Artl
-R44
-R45
+R46
+R43
 R13
 R14
 DEx4 work 8 cmn_uart 0 22 WKB>o7VI:Z``]gRTZ:l?P3
@@ -488,11 +490,11 @@ l178
 L93
 V<Kj[gL1:WN;R52^Jn@FRE1
 R17
-R48
 R49
 R50
+R51
+R21
 R22
-R23
 !s100 LN;aO>RKRM_4D5TzGjV8K2
 !i10b 1
 !i111 0
@@ -509,7 +511,7 @@ r1
 31
 R6
 n@d@a@c_@a@d8803@a@r
-Z51 !s110 1745464719
+Z52 !s110 1745464719
 !s100 XhI;5<f6^N[Fkmi^99CiP2
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/DAC_AD8803AR.v|
 !s108 1745464719.074000
@@ -522,16 +524,16 @@ IM]=zh8K9^5QMKdP[fKF3k1
 R2
 R3
 w1745937831
-Z52 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DAC_DACx0504_IF.v
-Z53 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/DAC_DACx0504_IF.v
+Z53 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DAC_DACx0504_IF.v
+Z54 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/DAC_DACx0504_IF.v
 L0 16
 R5
 r1
 31
 R6
 n@d@a@c_@d@a@cx0504
-Z54 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DAC_DACx0504_IF.v|
-Z55 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DAC_DACx0504_IF.v|
+Z55 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DAC_DACx0504_IF.v|
+Z56 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DAC_DACx0504_IF.v|
 !s110 1745938180
 !s100 L:6OOklRCNe`@C=kQFNh10
 !s108 1745938180.871000
@@ -545,17 +547,17 @@ r1
 IVGYVUN?f6Z5EGbC?_GBF73
 R3
 w1746079675
-R52
 R53
+R54
 L0 16
 R5
-R55
+R56
 R6
 n@d@a@c_@d@a@cx0504_@i@f
-R54
-!s100 4=]znAZ1BD8Zj]]4^HhDF0
-!s108 1747026552.913000
+R55
 !s85 0
+!s100 4=]znAZ1BD8Zj]]4^HhDF0
+!s108 1747833466.298000
 !i10b 1
 !i111 0
 vDAC_DACx0504_tb
@@ -574,7 +576,7 @@ R6
 n@d@a@c_@d@a@cx0504_tb
 !s100 dI9:V@A4AjfI_6Nf<^U7i2
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DAC_DACx0504_tb.v|
-!s108 1747026552.962000
+!s108 1747833466.345000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DAC_DACx0504_tb.v|
 !i10b 1
 !s85 0
@@ -592,11 +594,11 @@ L0 19
 R5
 R6
 n@d@p_@r@a@m_2@r_1@w
+!s85 0
 !s100 f@k2DRzjCGNW2UQDWFmjO3
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/dual_port_ram.v|
-!s108 1747026552.007000
+!s108 1747833465.343000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/dual_port_ram.v|
-!s85 0
 !i10b 1
 !i111 0
 vDUT_ADS8864
@@ -612,11 +614,11 @@ L0 3
 R5
 R6
 n@d@u@t_@a@d@s8864
+!s85 0
 !s100 Z2UUa3ig`1]zEkOKRDS[l1
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DUT_ADS8864.v|
-!s108 1747026552.510000
+!s108 1747833465.814000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DUT_ADS8864.v|
-!s85 0
 !i10b 1
 !i111 0
 vDUT_DACx0504
@@ -632,11 +634,11 @@ L0 16
 R5
 R6
 n@d@u@t_@d@a@cx0504
+!s85 0
 !s100 GQz;zRUfbbLe?Zf;>j2]`1
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DUT_DACx0504.v|
-!s108 1747026552.867000
+!s108 1747833466.248000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DUT_DACx0504.v|
-!s85 0
 !i10b 1
 !i111 0
 vEEPROM_OPB_IF
@@ -652,11 +654,11 @@ L0 3
 R5
 R6
 n@e@e@p@r@o@m_@o@p@b_@i@f
+!s85 0
 !s100 3;bc1<>MHX>oIPSmfEO>k1
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/EEPROM_OPB_IF.v|
-!s108 1747026552.766000
+!s108 1747833466.158000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/EEPROM_OPB_IF.v|
-!s85 0
 !i10b 1
 !i111 0
 vEEPROM_OPB_IF_tb
@@ -665,18 +667,18 @@ IlbV3G5>kBIjn4kB5foBng0
 R2
 R3
 w1745907234
-Z56 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/EEPROM_OPB_IF_tb.v
-Z57 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/EEPROM_OPB_IF_tb.v
+Z57 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/EEPROM_OPB_IF_tb.v
+Z58 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/EEPROM_OPB_IF_tb.v
 L0 3
 R5
 r1
 31
-Z58 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/EEPROM_OPB_IF_tb.v|
+Z59 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/EEPROM_OPB_IF_tb.v|
 R6
 n@e@e@p@r@o@m_@o@p@b_@i@f_tb
-Z59 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/EEPROM_OPB_IF_tb.v|
+Z60 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/EEPROM_OPB_IF_tb.v|
 !s100 gGQomJJ4UmZlZ=Xfz96Vc0
-!s108 1747026552.822000
+!s108 1747833466.203000
 !i10b 1
 !s85 0
 !i111 0
@@ -693,11 +695,11 @@ L0 19
 R5
 R6
 n@f@p@g@a_@w@d@i
+!s85 0
 !s100 RoLCOEZX:;4llPTc`a@JU3
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/FPGA_WD.v|
-!s108 1747026553.051000
+!s108 1747833466.440000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/FPGA_WD.v|
-!s85 0
 !i10b 1
 !i111 0
 vGANTRY_MOT_IF
@@ -713,7 +715,7 @@ r1
 31
 R6
 n@g@a@n@t@r@y_@m@o@t_@i@f
-Z60 !s110 1746922378
+Z61 !s110 1746922378
 !s100 7WBic3WVgYYdKjJgG7;m92
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/GANTRY_MOT_IF.v|
 !s108 1746922378.472000
@@ -722,7 +724,7 @@ Z60 !s110 1746922378
 !s85 0
 !i111 0
 vGantry_Motor
-R51
+R52
 IQzoNi@?JgW=_Ol^?YZ:?60
 R2
 R3
@@ -746,24 +748,24 @@ vGPIO
 R2
 r1
 31
-I5eA@JoXDdl8kKGJTGIWX93
+I=g2>JMCbjPFBWZh3iF7E=3
 R3
-w1746089617
+w1747557463
 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/GPIO.v
 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/GPIO.v
 L0 15
 R5
 R6
 n@g@p@i@o
-!s100 >4zI`<To;BJ@>Y5IB^jgg0
-!s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/GPIO.v|
-!s108 1747026553.134000
-!s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/GPIO.v|
 !s85 0
+!s100 kCM6]9<6>]Kl>Mbf[N`_D1
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/GPIO.v|
+!s108 1747833466.523000
+!s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/GPIO.v|
 !i10b 1
 !i111 0
 vLIFT_MOT_IF
-R60
+R61
 IdzD=MJD<z7S:8MEKli<hP3
 R2
 R3
@@ -784,7 +786,7 @@ n@l@i@f@t_@m@o@t_@i@f
 !s85 0
 !i111 0
 vLift_Motor
-R51
+R52
 IgN?IkbbP1O1?:BM_n^4V=2
 R2
 R3
@@ -816,11 +818,11 @@ FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_buffer.v
 L0 3
 R5
 R6
+!s85 0
 !s100 HcEz__eI:EohJ?EEEVzz33
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_buffer.v|
-!s108 1747026552.052000
+!s108 1747833465.388000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_buffer.v|
-!s85 0
 !i10b 1
 !i111 0
 vmsg_read
@@ -835,15 +837,15 @@ FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_read.v
 L0 21
 R5
 R6
+!s85 0
 !s100 O0gSoVl_8OOlJEo6o:1=f0
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_read.v|
-!s108 1747026552.096000
+!s108 1747833465.435000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_read.v|
-!s85 0
 !i10b 1
 !i111 0
 vmsg_read_tb
-R7
+R9
 Iom9Q7A_D?NDcA4f7QZJch3
 R2
 R3
@@ -857,7 +859,7 @@ r1
 R6
 !s100 Z4jHgTVFk?eSTz:1TP:h03
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_read_tb.v|
-!s108 1747026552.140000
+!s108 1747833465.481000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_read_tb.v|
 !i10b 1
 !s85 0
@@ -874,15 +876,15 @@ FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_write.v
 L0 21
 R5
 R6
+!s85 0
 !s100 g@nlTW]hWiOY:ofHmlmd^3
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_write.v|
-!s108 1747026552.185000
+!s108 1747833465.524000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_write.v|
-!s85 0
 !i10b 1
 !i111 0
 vmsg_write_tb
-R7
+R9
 IlL2;^=_=YVcWSckJN2n_B2
 R2
 R3
@@ -896,7 +898,7 @@ r1
 R6
 !s100 CWifoTb;hnObAMCW@iHoW1
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_write_tb.v|
-!s108 1747026552.230000
+!s108 1747833465.576000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_write_tb.v|
 !i10b 1
 !s85 0
@@ -905,41 +907,42 @@ vMSSB_IF
 R2
 r1
 31
-I51TcGQ9nH7HN?NdUA9X790
+IheT7=[PSlXicQZ]@1j<4j0
 R3
-w1746774355
+w1747799178
 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/MSSB_IF.v
 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/MSSB_IF.v
 L0 26
 R5
 R6
 n@m@s@s@b_@i@f
-!s100 SQ0hQE9W95HP4cXE0iU@@2
-!s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/MSSB_IF.v|
-!s108 1747026553.226000
-!s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/MSSB_IF.v|
 !s85 0
+!s100 R7C4^7Fe^17VP1^g:;M>c2
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/MSSB_IF.v|
+!s108 1747833466.555000
+!s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/MSSB_IF.v|
 !i10b 1
 !i111 0
 vMSSB_IF_tb
-R2
-r1
-31
+R7
 ImTUP`jfQRE:QGlBC5aLL:2
+R2
 R3
 w1746774955
 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/MSSB_IF_tb.v
 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/MSSB_IF_tb.v
 L0 9
 R5
+r1
+31
 R6
 n@m@s@s@b_@i@f_tb
 !s100 moY8[H@7JdA[JOSGY5a=K0
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/MSSB_IF_tb.v|
-!s108 1747026553.274000
+!s108 1747833466.615000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/MSSB_IF_tb.v|
-!s85 0
 !i10b 1
+!s85 0
 !i111 0
 vopb_emu_target
 R2
@@ -953,11 +956,11 @@ FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/opb_emu_target.v
 L0 3
 R5
 R6
+!s85 0
 !s100 l<B[Dh3eOdT@[?VE@djkM2
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/opb_emu_target.v|
-!s108 1747026552.274000
+!s108 1747833465.620000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/opb_emu_target.v|
-!s85 0
 !i10b 1
 !i111 0
 vOSCILLATOR_COUNTER
@@ -973,33 +976,33 @@ L0 22
 R5
 R6
 n@o@s@c@i@l@l@a@t@o@r_@c@o@u@n@t@e@r
+!s85 0
 !s100 ;X2O4;YEfI5[jkokaERAR2
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/OSCILLATOR_COUNTER.v|
-!s108 1747026553.006000
+!s108 1747833466.392000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/OSCILLATOR_COUNTER.v|
-!s85 0
 !i10b 1
 !i111 0
 Eph_pwm
-R10
+Z62 w1747789079
 R11
 R12
 R13
 R14
 R3
-Z61 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM.vhd
-Z62 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM.vhd
+Z63 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM.vhd
+Z64 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM.vhd
 l0
 L23
 V5Tf?mU7Ql[F9B15;LD_oI2
 R17
 32
-R18
-Z63 !s108 1747026553.320000
-Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM.vhd|
-Z65 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM.vhd|
+R7
+Z65 !s108 1747833466.660000
+Z66 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM.vhd|
+Z67 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM.vhd|
+R21
 R22
-R23
 !s100 [_IU[HZf4N7O<1JZSlNfT0
 !i10b 1
 !i111 0
@@ -1008,20 +1011,102 @@ R11
 R12
 R13
 R14
-R43
+R42
 32
-R18
+R7
 l71
 L56
 VcjYmz>eZN`e>CCNkI0_c=3
 R17
-R63
-R64
 R65
+R66
+R67
+R21
 R22
-R23
 !s100 n5W@EUnRdb<;DIMjZ7UG02
 !i10b 1
+!i111 0
+Eph_pwm_simple
+Z68 w1747832055
+R43
+R13
+R14
+R3
+Z69 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM_SIMPLE.vhd
+Z70 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM_SIMPLE.vhd
+l0
+L5
+VXiMnaiEOOYZM0[>J@:VHG0
+R17
+32
+R45
+Z71 !s108 1747833467.137000
+Z72 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM_SIMPLE.vhd|
+Z73 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM_SIMPLE.vhd|
+R21
+R22
+!s100 ZlfI;EW;oHE2CR2Q@TiBW0
+!i10b 1
+!i111 0
+Abehavioral
+R43
+R13
+R14
+R44
+32
+R45
+l28
+L14
+V4O6cd<ffG@0DIDKUM6cG10
+R17
+R71
+R72
+R73
+R21
+R22
+!s100 ;VRgg=k1nJQ0gYzgRI[3f0
+!i10b 1
+!i111 0
+vPH_PWM_SIMPLE
+R2
+r1
+31
+IkR=9F]04S[13DKd^[lF^[2
+R3
+w1747795847
+8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM_SIMPLE.v
+FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM_SIMPLE.v
+L0 9
+R5
+R6
+n@p@h_@p@w@m_@s@i@m@p@l@e
+!s100 L2aN[hCOd3zIP5Rdd7`Xe0
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM_SIMPLE.v|
+!s108 1747796735.015000
+!s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM_SIMPLE.v|
+!s85 0
+!i10b 1
+!i111 0
+vPH_PWM_SIMPLE_tb
+R45
+IbC5FkHWEjAF8VG[=o0j>H3
+R2
+R3
+w1747795297
+8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM_SIMPLE_tb.v
+FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM_SIMPLE_tb.v
+L0 3
+R5
+r1
+31
+R6
+n@p@h_@p@w@m_@s@i@m@p@l@e_tb
+!s100 :68F@[>?ze]dKPcW__D=:2
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM_SIMPLE_tb.v|
+!i10b 1
+!s85 0
+!s108 1747833467.081000
+!s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM_SIMPLE_tb.v|
 !i111 0
 vSCRATCH_PAD_REGISTER
 R2
@@ -1036,33 +1121,33 @@ L0 20
 R5
 R6
 n@s@c@r@a@t@c@h_@p@a@d_@r@e@g@i@s@t@e@r
+!s85 0
 !s100 C]NFLfDIne_J4MSNMTU4?3
 !s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ScratchPadRegister.v|
-!s108 1747026552.319000
+!s108 1747833465.672000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ScratchPadRegister.v|
-!s85 0
 !i10b 1
 !i111 0
 Eser_eeprom_sim
-Z66 w1474197500
+Z74 w1474197500
 R11
 R12
 R13
 R14
 R3
-Z67 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/SER_EEPROM_SIM.vhd
-Z68 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/SER_EEPROM_SIM.vhd
+Z75 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/SER_EEPROM_SIM.vhd
+Z76 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/SER_EEPROM_SIM.vhd
 l0
 L28
 VbbJGi3[E;9ENWbJ[8:Fkd1
 R17
 32
 R7
-Z69 !s108 1747026552.645000
-Z70 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/SER_EEPROM_SIM.vhd|
-Z71 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/SER_EEPROM_SIM.vhd|
+Z77 !s108 1747833466.052000
+Z78 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/SER_EEPROM_SIM.vhd|
+Z79 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/SER_EEPROM_SIM.vhd|
+R21
 R22
-R23
 !s100 =HaD<lHd^E1Y3BP_hn>OZ2
 !i10b 1
 !i111 0
@@ -1078,34 +1163,34 @@ l69
 L40
 V@K_F_jbl4l^X[mD[PlRkV2
 R17
-R69
-R70
-R71
+R77
+R78
+R79
+R21
 R22
-R23
 !s100 6L`V]<8GnB09Xa5:aaOm70
 !i10b 1
 !i111 0
 Eserial_eeprom_if
-Z72 w1745894298
+Z80 w1745894298
 R12
 R11
 R13
 R14
 R3
-Z73 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/serial_eeprom_if.vhd
-Z74 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/serial_eeprom_if.vhd
+Z81 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/serial_eeprom_if.vhd
+Z82 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/serial_eeprom_if.vhd
 l0
 L28
 VL<Q_jS`PMnHmhZ]VK2]b?1
 R17
 32
 R7
-Z75 !s108 1747026552.699000
-Z76 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/serial_eeprom_if.vhd|
-Z77 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/serial_eeprom_if.vhd|
+Z83 !s108 1747833466.106000
+Z84 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/serial_eeprom_if.vhd|
+Z85 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/serial_eeprom_if.vhd|
+R21
 R22
-R23
 !s100 ]@_IZ:6>G6E;H31lBZn:N3
 !i10b 1
 !i111 0
@@ -1121,11 +1206,11 @@ l93
 L51
 V@lzI;F6Vo9Gb:OhOn0gBh1
 R17
-R75
-R76
-R77
+R83
+R84
+R85
+R21
 R22
-R23
 !s100 Idn0K0:<F<S4g:f<9f^280
 !i10b 1
 !i111 0
@@ -1134,16 +1219,16 @@ I>7d6f1hceGg2kR];^]9W]3
 R2
 R3
 w1745900714
-R56
 R57
+R58
 L0 3
 R5
 r1
 31
 R6
 ntb_@e@e@p@r@o@m_@o@p@b_@i@f
+R60
 R59
-R58
 !s110 1745900744
 !s100 T^=OMbO^XNH_TPYEo;`W<0
 !s108 1745900744.535000
@@ -1175,37 +1260,37 @@ vtop
 R2
 r1
 31
-IkbeSXNQ8;<Z4TAS_^ADa@1
+IRBhLcG@2j60CP?Xfjd7iQ1
 R3
-w1747016558
+w1747557324
 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/top.v
 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/top.v
 L0 3
 R5
 R6
-!s100 ]f8MLS4;L0ggYH52WgD533
-!s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/top.v|
-!s108 1747026551.626000
-!s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/top.v|
 !s85 0
+!s100 H2JBfCAe2_6oFcWFKJlf:2
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/top.v|
+!s108 1747833464.940000
+!s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/top.v|
 !i10b 1
 !i111 0
 vtop_tb
 R2
 r1
-!s85 0
 31
-IM8hhgS8:;gHDC>OAc`gfh1
+Icc:zA2=ia2=iF?3Sj8O@=0
 R3
-w1747037487
+w1747833455
 8C:/repo2/gpb/dmd/P1060973_FPGA/hdl/top_tb.v
 FC:/repo2/gpb/dmd/P1060973_FPGA/hdl/top_tb.v
 L0 3
 R5
-!s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/top_tb.v|
 R6
-!i10b 1
-!s100 888fT;YDc6FQGlzGzeS940
-!s108 1747037503.728000
+!s85 0
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo2/gpb/dmd/P1060973_FPGA/hdl/top_tb.v|
+!s100 7bU6<2I`8jKbi^N4[j]zg0
+!s108 1747833465.717000
 !s107 C:/repo2/gpb/dmd/P1060973_FPGA/hdl/top_tb.v|
+!i10b 1
 !i111 0

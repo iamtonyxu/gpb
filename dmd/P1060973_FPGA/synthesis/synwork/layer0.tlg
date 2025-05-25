@@ -9,7 +9,7 @@ Finished optimization stage 1 on CLOCK_DIV (CPU Time 0h:00m:00s, Memory Used cur
 	DW=32'b00000000000000000000000000001000
 	AW=32'b00000000000000000000000000000100
    Generated name = afifo_8s_4s_8s_4s
-Opening data file afifo_8s_4s_8s_4s_mem_14560_initial_block from directory .
+Opening data file afifo_8s_4s_8s_4s_mem_39420_initial_block from directory .
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":93:4:93:10|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":110:1:110:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":127:1:127:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
@@ -47,11 +47,11 @@ Running optimization stage 1 on cmd_server .......
 Finished optimization stage 1 on cmd_server (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
 @N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v":21:7:21:17|Synthesizing module AdderDecode in library work.
 Running optimization stage 1 on AdderDecode .......
-Finished optimization stage 1 on AdderDecode (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 103MB)
+Finished optimization stage 1 on AdderDecode (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 103MB)
 @N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_GEN.v":32:7:32:12|Synthesizing module ClkGen in library work.
 Running optimization stage 1 on ClkGen .......
 @W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_GEN.v":152:1:152:6|Pruning unused register clk2meghz_div[15:0]. Make sure that there are no unused intermediate registers.
-Finished optimization stage 1 on ClkGen (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 103MB)
+Finished optimization stage 1 on ClkGen (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 103MB)
 @N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":62:7:62:11|Synthesizing module afifo in library work.
 
 	DSIZE=32'b00000000000000000000000000001000
@@ -59,7 +59,7 @@ Finished optimization stage 1 on ClkGen (CPU Time 0h:00m:00s, Memory Used curren
 	DW=32'b00000000000000000000000000001000
 	AW=32'b00000000000000000000000000000010
    Generated name = afifo_8s_2s_8s_2s
-Opening data file afifo_8s_2s_8s_2s_mem_14560_initial_block from directory .
+Opening data file afifo_8s_2s_8s_2s_mem_39420_initial_block from directory .
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":93:4:93:10|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":110:1:110:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":127:1:127:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
@@ -71,7 +71,7 @@ Running optimization stage 1 on afifo_8s_2s_8s_2s .......
 @N: CL134 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":149:1:149:6|Found RAM mem, depth=4, width=8
 @W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":128:1:128:6|Pruning register bit 2 of wgray[2:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
 @W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":186:1:186:6|Pruning register bit 2 of rgray[2:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-Finished optimization stage 1 on afifo_8s_2s_8s_2s (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 103MB)
+Finished optimization stage 1 on afifo_8s_2s_8s_2s (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 104MB)
 @N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":22:7:22:24|Synthesizing module OSCILLATOR_COUNTER in library work.
 Running optimization stage 1 on OSCILLATOR_COUNTER .......
 @W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":149:1:149:6|Pruning unused register startb_d1. Make sure that there are no unused intermediate registers.
@@ -145,7 +145,7 @@ Finished optimization stage 1 on DP_RAM_2R_1W_24s_4s (CPU Time 0h:00m:00s, Memor
 	DW=32'b00000000000000000000000000011000
 	AW=32'b00000000000000000000000000000100
    Generated name = afifo_24s_4s_24s_4s
-Opening data file afifo_24s_4s_24s_4s_mem_14560_initial_block from directory .
+Opening data file afifo_24s_4s_24s_4s_mem_39420_initial_block from directory .
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":93:4:93:10|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":110:1:110:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":127:1:127:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
@@ -166,84 +166,83 @@ Running optimization stage 1 on FPGA_WDI .......
 Finished optimization stage 1 on FPGA_WDI (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 105MB)
 @N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":15:7:15:10|Synthesizing module GPIO in library work.
 Running optimization stage 1 on GPIO .......
-@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":471:4:471:9|Feedback mux created for signal GPIO_FREE_IF_REG[31:16]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
-@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":457:4:457:9|Feedback mux created for signal DEBUG_IF_REG[31:20]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
-@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":448:4:448:9|Feedback mux created for signal ADCSELMUX_IF_REG[31:16]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
-@W: CL177 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":448:4:448:9|Sharing sequential element ADCSELMUX_IF_REG and merging GPIO_FREE_IF_REG. Add a syn_preserve attribute to the element to prevent sharing.
-@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":433:4:433:9|Feedback mux created for signal CCHL_IF_REG[31:21]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
-@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":424:4:424:9|Feedback mux created for signal EXT_BRAKE_IF_REG[31:16]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
-@W: CL177 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":424:4:424:9|Sharing sequential element EXT_BRAKE_IF_REG and merging GPIO_FREE_IF_REG. Add a syn_preserve attribute to the element to prevent sharing.
-@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":413:4:413:9|Feedback mux created for signal MAINS_LEVEL_IF_REG[31:17]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
-@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":404:4:404:9|Feedback mux created for signal SERVICE_PENDANT_IF_REG[31:16]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
-@W: CL177 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":404:4:404:9|Sharing sequential element SERVICE_PENDANT_IF_REG and merging GPIO_FREE_IF_REG. Add a syn_preserve attribute to the element to prevent sharing.
-@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":392:4:392:9|Feedback mux created for signal STAND_IF_REG[31:18]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
-@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":377:4:377:9|Feedback mux created for signal LIFT_96V_IF_REG[31:21]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
-@W: CL177 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":377:4:377:9|Sharing sequential element LIFT_96V_IF_REG and merging CCHL_IF_REG. Add a syn_preserve attribute to the element to prevent sharing.
-@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":363:4:363:9|Feedback mux created for signal LIFT_MOTOR_SENSOR_IF_REG[31:20]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
-@W: CL177 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":363:4:363:9|Sharing sequential element LIFT_MOTOR_SENSOR_IF_REG and merging DEBUG_IF_REG. Add a syn_preserve attribute to the element to prevent sharing.
-@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":345:4:345:9|Feedback mux created for signal SPD_EMOPS_IF_REG[31:24]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
-@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":329:4:329:9|Feedback mux created for signal SPD_DMD_IF_REG[31:22]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
-@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":315:4:315:9|Feedback mux created for signal GANTRY_BRAKE_IF_REG[31:20]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
-@W: CL177 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":315:4:315:9|Sharing sequential element GANTRY_BRAKE_IF_REG and merging DEBUG_IF_REG. Add a syn_preserve attribute to the element to prevent sharing.
-@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":297:4:297:9|Feedback mux created for signal GANTRY_96V_IF_REG[31:24]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
-@W: CL177 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":297:4:297:9|Sharing sequential element GANTRY_96V_IF_REG and merging SPD_EMOPS_IF_REG. Add a syn_preserve attribute to the element to prevent sharing.
-@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":285:4:285:9|Feedback mux created for signal GANTRY_EMOPS_IF_REG[31:18]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
-@W: CL177 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":285:4:285:9|Sharing sequential element GANTRY_EMOPS_IF_REG and merging STAND_IF_REG. Add a syn_preserve attribute to the element to prevent sharing.
-@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":272:4:272:9|Feedback mux created for signal POWER_IF_REG[31:18]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
-@W: CL177 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":272:4:272:9|Sharing sequential element POWER_IF_REG and merging STAND_IF_REG. Add a syn_preserve attribute to the element to prevent sharing.
-@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":329:4:329:9|All reachable assignments to SPD_DMD_IF_REG[31:22] assign 0, register removed by optimization
-@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":345:4:345:9|All reachable assignments to SPD_EMOPS_IF_REG[31:24] assign 0, register removed by optimization
-@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":392:4:392:9|All reachable assignments to STAND_IF_REG[31:18] assign 0, register removed by optimization
-@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":413:4:413:9|All reachable assignments to MAINS_LEVEL_IF_REG[31:17] assign 0, register removed by optimization
-@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":433:4:433:9|All reachable assignments to CCHL_IF_REG[31:21] assign 0, register removed by optimization
-@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":457:4:457:9|All reachable assignments to DEBUG_IF_REG[31:20] assign 0, register removed by optimization
-@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":471:4:471:9|All reachable assignments to GPIO_FREE_IF_REG[31:16] assign 0, register removed by optimization
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":480:4:480:9|Optimizing register bit OPB_DO[24] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":480:4:480:9|Optimizing register bit OPB_DO[25] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":480:4:480:9|Optimizing register bit OPB_DO[26] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":480:4:480:9|Optimizing register bit OPB_DO[27] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":480:4:480:9|Optimizing register bit OPB_DO[28] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":480:4:480:9|Optimizing register bit OPB_DO[29] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":480:4:480:9|Optimizing register bit OPB_DO[30] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":480:4:480:9|Optimizing register bit OPB_DO[31] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":480:4:480:9|Pruning register bits 31 to 24 of OPB_DO[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-Finished optimization stage 1 on GPIO (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 105MB)
-@W: CG238 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":261:6:261:18|Instantiation will not be bound to the VHDL entity. For mixed HDL, only integer/real/string generics on the VHDL side are supported.  Change VHDL generic types to one of the supported types for mixed HDL usage.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":522:4:522:9|Feedback mux created for signal GPIO_FREE_IF_REG[31:16]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":508:4:508:9|Feedback mux created for signal DEBUG_IF_REG[31:20]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":499:4:499:9|Feedback mux created for signal ADCSELMUX_IF_REG[31:16]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL177 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":499:4:499:9|Sharing sequential element ADCSELMUX_IF_REG and merging GPIO_FREE_IF_REG. Add a syn_preserve attribute to the element to prevent sharing.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":484:4:484:9|Feedback mux created for signal CCHL_IF_REG[31:21]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":475:4:475:9|Feedback mux created for signal EXT_BRAKE_IF_REG[31:16]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL177 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":475:4:475:9|Sharing sequential element EXT_BRAKE_IF_REG and merging GPIO_FREE_IF_REG. Add a syn_preserve attribute to the element to prevent sharing.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":464:4:464:9|Feedback mux created for signal MAINS_LEVEL_IF_REG[31:17]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":455:4:455:9|Feedback mux created for signal SERVICE_PENDANT_IF_REG[31:16]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL177 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":455:4:455:9|Sharing sequential element SERVICE_PENDANT_IF_REG and merging GPIO_FREE_IF_REG. Add a syn_preserve attribute to the element to prevent sharing.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":443:4:443:9|Feedback mux created for signal STAND_IF_REG[31:18]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":424:4:424:9|Feedback mux created for signal LIFT_96V_IF_REG[30:21]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":410:4:410:9|Feedback mux created for signal LIFT_MOTOR_SENSOR_IF_REG[31:20]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL177 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":410:4:410:9|Sharing sequential element LIFT_MOTOR_SENSOR_IF_REG and merging DEBUG_IF_REG. Add a syn_preserve attribute to the element to prevent sharing.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":392:4:392:9|Feedback mux created for signal SPD_EMOPS_IF_REG[31:24]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":376:4:376:9|Feedback mux created for signal SPD_DMD_IF_REG[31:22]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":362:4:362:9|Feedback mux created for signal GANTRY_BRAKE_IF_REG[31:20]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL177 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":362:4:362:9|Sharing sequential element GANTRY_BRAKE_IF_REG and merging DEBUG_IF_REG. Add a syn_preserve attribute to the element to prevent sharing.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":306:4:306:9|Feedback mux created for signal GANTRY_96V_IF_REG[30:24]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":294:4:294:9|Feedback mux created for signal GANTRY_EMOPS_IF_REG[31:18]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL177 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":294:4:294:9|Sharing sequential element GANTRY_EMOPS_IF_REG and merging STAND_IF_REG. Add a syn_preserve attribute to the element to prevent sharing.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":281:4:281:9|Feedback mux created for signal POWER_IF_REG[31:18]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL177 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":281:4:281:9|Sharing sequential element POWER_IF_REG and merging STAND_IF_REG. Add a syn_preserve attribute to the element to prevent sharing.
+@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":306:4:306:9|All reachable assignments to GANTRY_96V_IF_REG[30:24] assign 0, register removed by optimization
+@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":376:4:376:9|All reachable assignments to SPD_DMD_IF_REG[31:22] assign 0, register removed by optimization
+@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":392:4:392:9|All reachable assignments to SPD_EMOPS_IF_REG[31:24] assign 0, register removed by optimization
+@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":424:4:424:9|All reachable assignments to LIFT_96V_IF_REG[30:21] assign 0, register removed by optimization
+@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":443:4:443:9|All reachable assignments to STAND_IF_REG[31:18] assign 0, register removed by optimization
+@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":464:4:464:9|All reachable assignments to MAINS_LEVEL_IF_REG[31:17] assign 0, register removed by optimization
+@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":484:4:484:9|All reachable assignments to CCHL_IF_REG[31:21] assign 0, register removed by optimization
+@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":508:4:508:9|All reachable assignments to DEBUG_IF_REG[31:20] assign 0, register removed by optimization
+@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":522:4:522:9|All reachable assignments to GPIO_FREE_IF_REG[31:16] assign 0, register removed by optimization
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":540:4:540:9|Optimizing register bit OPB_DO[24] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":540:4:540:9|Optimizing register bit OPB_DO[25] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":540:4:540:9|Optimizing register bit OPB_DO[26] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":540:4:540:9|Optimizing register bit OPB_DO[27] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":540:4:540:9|Optimizing register bit OPB_DO[28] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":540:4:540:9|Optimizing register bit OPB_DO[29] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":540:4:540:9|Optimizing register bit OPB_DO[30] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":540:4:540:9|Pruning register bits 30 to 24 of OPB_DO[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 1 on GPIO (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 107MB)
+@W: CG238 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":262:6:262:18|Instantiation will not be bound to the VHDL entity. For mixed HDL, only integer/real/string generics on the VHDL side are supported.  Change VHDL generic types to one of the supported types for mixed HDL usage.
 @N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":26:7:26:13|Synthesizing module MSSB_IF in library work.
-@N: CG794 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":261:6:261:18|Using module cmn_uart from library work
+@N: CG794 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":262:6:262:18|Using module cmn_uart from library work
 Running optimization stage 1 on MSSB_IF .......
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[2] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[3] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[4] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[5] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[9] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[10] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[11] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[12] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[13] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[14] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[15] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[16] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[17] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[18] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[19] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[20] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[21] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[22] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[23] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[24] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[25] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[26] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[27] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[28] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[29] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[30] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Optimizing register bit mssb_status[31] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":209:4:209:9|Pruning register bits 31 to 2 of mssb_status[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-Finished optimization stage 1 on MSSB_IF (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 105MB)
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[2] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[3] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[4] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[5] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[9] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[10] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[11] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[12] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[13] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[14] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[15] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[16] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[17] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[18] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[19] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[20] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[21] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[22] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[23] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[24] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[25] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[26] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[27] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[28] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[29] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[30] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[31] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Pruning register bits 31 to 2 of mssb_status[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 1 on MSSB_IF (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 107MB)
 @N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":26:7:26:21|Synthesizing module cmn_pwm_wrapper in library work.
 @N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":131:31:131:45|Removing redundant assignment.
 @N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":132:31:132:45|Removing redundant assignment.
@@ -251,6 +250,8 @@ Finished optimization stage 1 on MSSB_IF (CPU Time 0h:00m:00s, Memory Used curre
 @N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":134:29:134:41|Removing redundant assignment.
 @N: CG794 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":303:12:303:16|Using module cmn_pwm from library work
 Running optimization stage 1 on cmn_pwm_wrapper .......
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":104:4:104:9|Feedback mux created for signal pwm_config[31:24]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":104:4:104:9|All reachable assignments to pwm_config[31:24] assign 0, register removed by optimization
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[2] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[3] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[4] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
@@ -267,12 +268,12 @@ Running optimization stage 1 on cmn_pwm_wrapper .......
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[31] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Pruning register bits 31 to 24 of pwm_status[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
 @W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Pruning register bits 7 to 2 of pwm_status[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-Finished optimization stage 1 on cmn_pwm_wrapper (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 105MB)
+Finished optimization stage 1 on cmn_pwm_wrapper (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 107MB)
 @N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v":3:7:3:9|Synthesizing module top in library work.
 Running optimization stage 1 on top .......
-Finished optimization stage 1 on top (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 105MB)
+Finished optimization stage 1 on top (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 107MB)
 Running optimization stage 2 on top .......
-Finished optimization stage 2 on top (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 105MB)
+Finished optimization stage 2 on top (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 107MB)
 Running optimization stage 2 on cmn_pwm_wrapper .......
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":238:4:238:9|Optimizing register bit sync_cntr[2] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":238:4:238:9|Optimizing register bit sync_cntr[3] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
@@ -291,7 +292,7 @@ State machine has 3 reachable states with original encodings of:
 @W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":33:28:33:35|Input port bits 31 to 4 of OPB_ADDR[31:0] are unused. Assign logic for all port bits or change the input port size.
 Finished optimization stage 2 on cmn_pwm_wrapper (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 110MB)
 Running optimization stage 2 on MSSB_IF .......
-@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":91:4:91:9|Trying to extract state machine for register state.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":92:4:92:9|Trying to extract state machine for register state.
 Extracted state machine for register state
 State machine has 2 reachable states with original encodings of:
    00
@@ -299,13 +300,13 @@ State machine has 2 reachable states with original encodings of:
 @W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":30:28:30:35|Input port bits 31 to 4 of OPB_ADDR[31:0] are unused. Assign logic for all port bits or change the input port size.
 Finished optimization stage 2 on MSSB_IF (CPU Time 0h:00m:00s, Memory Used current: 106MB peak: 110MB)
 Running optimization stage 2 on GPIO .......
-@W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":19:24:19:29|Input port bits 31 to 16 of OPB_DI[31:0] are unused. Assign logic for all port bits or change the input port size.
-Finished optimization stage 2 on GPIO (CPU Time 0h:00m:00s, Memory Used current: 107MB peak: 110MB)
+@N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":55:24:55:38|Input SHUNT_EN_CNT_RE is unused.
+Finished optimization stage 2 on GPIO (CPU Time 0h:00m:00s, Memory Used current: 107MB peak: 115MB)
 Running optimization stage 2 on FPGA_WDI .......
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FPGA_WD.v":31:1:31:6|Optimizing register bit watchdog_time_100us[4] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FPGA_WD.v":31:1:31:6|Pruning register bit 4 of watchdog_time_100us[4:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
 @N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FPGA_WD.v":20:12:20:18|Input OPB_CLK is unused.
-Finished optimization stage 2 on FPGA_WDI (CPU Time 0h:00m:00s, Memory Used current: 107MB peak: 110MB)
+Finished optimization stage 2 on FPGA_WDI (CPU Time 0h:00m:00s, Memory Used current: 107MB peak: 115MB)
 Running optimization stage 2 on DAC_DACx0504_IF .......
 @N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\DAC_DACx0504_IF.v":127:4:127:9|Trying to extract state machine for register state.
 Extracted state machine for register state
@@ -316,11 +317,11 @@ State machine has 4 reachable states with original encodings of:
    100
 @W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\DAC_DACx0504_IF.v":19:24:19:31|Input port bits 31 to 4 of OPB_ADDR[31:0] are unused. Assign logic for all port bits or change the input port size.
 @W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\DAC_DACx0504_IF.v":20:24:20:29|Input port bits 31 to 16 of OPB_DI[31:0] are unused. Assign logic for all port bits or change the input port size.
-Finished optimization stage 2 on DAC_DACx0504_IF (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 110MB)
+Finished optimization stage 2 on DAC_DACx0504_IF (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 115MB)
 Running optimization stage 2 on afifo_24s_4s_24s_4s .......
-Finished optimization stage 2 on afifo_24s_4s_24s_4s (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 110MB)
+Finished optimization stage 2 on afifo_24s_4s_24s_4s (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 115MB)
 Running optimization stage 2 on DP_RAM_2R_1W_24s_4s .......
-Finished optimization stage 2 on DP_RAM_2R_1W_24s_4s (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 110MB)
+Finished optimization stage 2 on DP_RAM_2R_1W_24s_4s (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 115MB)
 Running optimization stage 2 on ADC_ADS8864_IF .......
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":130:1:130:6|Optimizing register bit conv_count[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":130:1:130:6|Optimizing register bit conv_count[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
@@ -374,27 +375,27 @@ State machine has 23 reachable states with original encodings of:
 @W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":147:4:147:9|Pruning unused register time_out_count[5:0]. Make sure that there are no unused intermediate registers.
 @W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":58:25:58:32|Input port bits 31 to 12 of OPB_ADDR[31:0] are unused. Assign logic for all port bits or change the input port size.
 @W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":60:25:60:30|Input port bits 31 to 16 of OPB_DI[31:0] are unused. Assign logic for all port bits or change the input port size.
-Finished optimization stage 2 on ADC_ADS8864_IF (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 110MB)
+Finished optimization stage 2 on ADC_ADS8864_IF (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 115MB)
 Running optimization stage 2 on DP_RAM_2R_1W_16s_10s .......
-Finished optimization stage 2 on DP_RAM_2R_1W_16s_10s (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 110MB)
+Finished optimization stage 2 on DP_RAM_2R_1W_16s_10s (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 115MB)
 Running optimization stage 2 on EEPROM_OPB_IF .......
 @W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\EEPROM_OPB_IF.v":7:24:7:29|Input port bits 27 to 24 of EEP_DI[31:0] are unused. Assign logic for all port bits or change the input port size.
 @N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\EEPROM_OPB_IF.v":8:24:8:29|Input EEP_RE is unused.
-Finished optimization stage 2 on EEPROM_OPB_IF (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 110MB)
+Finished optimization stage 2 on EEPROM_OPB_IF (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 115MB)
 Running optimization stage 2 on SCRATCH_PAD_REGISTER .......
-Finished optimization stage 2 on SCRATCH_PAD_REGISTER (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 110MB)
+Finished optimization stage 2 on SCRATCH_PAD_REGISTER (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 115MB)
 Running optimization stage 2 on OSCILLATOR_COUNTER .......
 @W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":29:24:29:32|Input port bits 31 to 16 of OSC_CT_DI[31:0] are unused. Assign logic for all port bits or change the input port size.
-Finished optimization stage 2 on OSCILLATOR_COUNTER (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 110MB)
+Finished optimization stage 2 on OSCILLATOR_COUNTER (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 115MB)
 Running optimization stage 2 on afifo_8s_2s_8s_2s .......
-Finished optimization stage 2 on afifo_8s_2s_8s_2s (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 110MB)
+Finished optimization stage 2 on afifo_8s_2s_8s_2s (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 115MB)
 Running optimization stage 2 on ClkGen .......
 @W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_GEN.v":34:17:34:26|Input port bits 31 to 16 of CLK_GEN_DI[31:0] are unused. Assign logic for all port bits or change the input port size.
-Finished optimization stage 2 on ClkGen (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 110MB)
+Finished optimization stage 2 on ClkGen (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 115MB)
 Running optimization stage 2 on AdderDecode .......
-Finished optimization stage 2 on AdderDecode (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 116MB)
+Finished optimization stage 2 on AdderDecode (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 117MB)
 Running optimization stage 2 on cmd_server .......
-Finished optimization stage 2 on cmd_server (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 116MB)
+Finished optimization stage 2 on cmd_server (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 117MB)
 Running optimization stage 2 on opb_emu_target .......
 @N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\opb_emu_target.v":130:4:130:9|Trying to extract state machine for register state.
 Extracted state machine for register state
@@ -402,8 +403,9 @@ State machine has 3 reachable states with original encodings of:
    00
    01
    10
-Finished optimization stage 2 on opb_emu_target (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 116MB)
+Finished optimization stage 2 on opb_emu_target (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 117MB)
 Running optimization stage 2 on msg_write .......
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
 Only the first 100 messages of id 'CL190' are reported. To see all messages use 'report_messages -log C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\synlog\top_compiler.srr -id CL190' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {CL190} -count unlimited' in the Tcl shell.
 @W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Pruning register bits 15 to 8 of timeout_cnt[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
@@ -417,18 +419,18 @@ State machine has 7 reachable states with original encodings of:
    00000100
    00000101
    00000110
-Finished optimization stage 2 on msg_write (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 116MB)
+Finished optimization stage 2 on msg_write (CPU Time 0h:00m:00s, Memory Used current: 117MB peak: 117MB)
 Running optimization stage 2 on msg_read .......
 @W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Pruning register bits 15 to 8 of timeout_cnt[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
 @N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Trying to extract state machine for register state.
 @W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Pruning register bits 7 to 3 of state[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-Finished optimization stage 2 on msg_read (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 116MB)
+Finished optimization stage 2 on msg_read (CPU Time 0h:00m:00s, Memory Used current: 117MB peak: 122MB)
 Running optimization stage 2 on msg_buffer .......
-Finished optimization stage 2 on msg_buffer (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 116MB)
+Finished optimization stage 2 on msg_buffer (CPU Time 0h:00m:00s, Memory Used current: 117MB peak: 122MB)
 Running optimization stage 2 on afifo_8s_4s_8s_4s .......
-Finished optimization stage 2 on afifo_8s_4s_8s_4s (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 116MB)
+Finished optimization stage 2 on afifo_8s_4s_8s_4s (CPU Time 0h:00m:00s, Memory Used current: 117MB peak: 122MB)
 Running optimization stage 2 on CLOCK_DIV .......
-Finished optimization stage 2 on CLOCK_DIV (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 116MB)
+Finished optimization stage 2 on CLOCK_DIV (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 122MB)
 
 For a summary of runtime per design unit, please see file:
 ==========================================================

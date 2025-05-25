@@ -40,9 +40,9 @@ module MSSB_IF (
 
     parameter BAUD_RATE = 921600; // 921.6K bps
     parameter CLOCK_FREQUENCY = 100000000; // 100MHz
-    //parameter MAX_TRANSMIT_BYTES = 20'hF4240; // 1M bytes
-    parameter MAX_TRANSMIT_BYTES = 20'h2710; // 10K bytes
-    parameter MIN_TRANSMIT_BYTES = 20'h7A120; // 500K bytes
+    parameter MAX_TRANSMIT_BYTES = 20'hF4240; // 1M bytes
+    //parameter MAX_TRANSMIT_BYTES = 20'h2710; // 10K bytes
+    parameter MIN_TRANSMIT_BYTES = 20'h2710; // 10K bytes
 
     // state machine for MSSB transmission
     // The state machine has two states: ST_IDLE and ST_MSSB_TX
@@ -222,7 +222,7 @@ module MSSB_IF (
     always @(posedge OPB_CLK or posedge OPB_RST) begin
         if (OPB_RST) begin
             mssb_config[31:20] <= 0; // Reset the configuration register
-            mssb_config[19:0] <= 20'h7A120; // Set the default transmit bytes count to 500K
+            mssb_config[19:0] <= MIN_TRANSMIT_BYTES; // Set the default transmit bytes count to 10K
         end else if (MSSB_IF_WE && (OPB_ADDR[3:0] == `ADDR_MSSB_CONFIG)) begin
             mssb_config <= OPB_DI; // Update the configuration register with OPB data input
             if(OPB_DI[19:0] > MAX_TRANSMIT_BYTES) begin

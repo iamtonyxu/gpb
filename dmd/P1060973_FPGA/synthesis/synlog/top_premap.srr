@@ -1,4 +1,4 @@
-# Mon May 12 14:36:59 2025
+# Sun May 25 18:05:23 2025
 
 
 Copyright (C) 1994-2023 Synopsys, Inc.
@@ -33,7 +33,7 @@ See clock summary report "C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\top_scck.rpt"
 Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 202MB peak: 202MB)
 
 
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 202MB peak: 202MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 202MB peak: 203MB)
 
 
 Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 203MB peak: 203MB)
@@ -91,19 +91,26 @@ NConnInternalConnection caching is on
 @W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|User-specified initial value defined for instance mssb_if_1.cmn_uart_inst.uart_rx_sync_clock[3:0] is being ignored due to limitations in architecture. 
 @W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":300:6:300:7|User-specified initial value defined for instance mssb_if_1.cmn_uart_inst.oversample_baud_tick is being ignored due to limitations in architecture. 
 @W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":222:6:222:7|User-specified initial value defined for instance mssb_if_1.cmn_uart_inst.uart_rx_data_in_ack is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\simple_ph_pwm.vhd":87:8:87:9|User-specified initial value defined for instance lift_mot_if_0.pwm_0.i_mot_pwm_simple.counter3[15:0] is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\simple_ph_pwm.vhd":60:8:60:9|User-specified initial value defined for instance lift_mot_if_0.pwm_0.i_mot_pwm_simple.counter2[15:0] is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\simple_ph_pwm.vhd":33:8:33:9|User-specified initial value defined for instance lift_mot_if_0.pwm_0.i_mot_pwm_simple.counter1[15:0] is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\simple_ph_pwm.vhd":87:8:87:9|User-specified initial value defined for instance lift_mot_if_0.pwm_0.i_mot_pwm_simple.direction3 is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\simple_ph_pwm.vhd":60:8:60:9|User-specified initial value defined for instance lift_mot_if_0.pwm_0.i_mot_pwm_simple.direction2 is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\simple_ph_pwm.vhd":33:8:33:9|User-specified initial value defined for instance lift_mot_if_0.pwm_0.i_mot_pwm_simple.direction1 is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\simple_ph_pwm.vhd":114:8:114:9|User-specified initial value defined for instance lift_mot_if_0.pwm_0.i_mot_pwm_simple.pwm_out[2:0] is being ignored due to limitations in architecture. 
 @N: FX1171 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Found instance lift_mot_if_0.pwm_0.i_brk_pwm.start_timer[1:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
 
-Starting HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 272MB peak: 272MB)
+Starting HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 271MB peak: 271MB)
 
 
-Finished HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 272MB peak: 273MB)
+Finished HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 271MB peak: 272MB)
 
 @W: MO156 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\dual_port_ram.v":53:1:53:6|RAM ram_1[15:0] removed due to constant propagation. 
 
-Started DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 272MB peak: 273MB)
+Started DisTri Cleanup (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 272MB peak: 272MB)
 
 
-Finished DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 272MB peak: 273MB)
+Finished DisTri Cleanup (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 272MB peak: 272MB)
 
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\dual_port_ram.v":53:1:53:6|Removing sequential instance PA_RADDR[9:0] (in view: work.DP_RAM_2R_1W_16s_10s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":476:8:476:9|Removing sequential instance next_command_ready (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
@@ -112,102 +119,96 @@ Finished DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:0
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\dual_port_ram.v":53:1:53:6|Removing sequential instance ram_1[23:0] (in view: work.DP_RAM_2R_1W_24s_4s(verilog)) of type view:PrimLib.ram1(prim) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":476:8:476:9|Removing sequential instance next_command_ready (in view: work.work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY_0(rtl)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":476:8:476:9|Removing sequential instance next_command_ready (in view: work.work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY_1(rtl)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_1_0(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_1_0(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_0_0(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_0_0(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_1_1(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_1_1(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_0_1(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_0_1(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_1_2(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_1_2(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_0_2(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_0_2(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_1_3(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_1_3(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_0_3(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_0_3(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_1_4(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_1_4(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_0_4(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_0_4(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_1_5(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_1_5(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_0_5(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_0_5(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_1_6(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_1_6(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_0_6(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_0_6(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_1_7(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_1_7(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_0_7(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_0_7(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_3_0(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_3_0(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_3_1(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_3_1(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_3_2(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_3_2(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_3_3(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_3_3(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_3_4(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_3_4(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_3_5(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_3_5(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_3_6(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_3_6(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_3_7(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_3_7(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
 @N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":79:11:79:25|Removing instance pulse200khz_div (in view: work.ClkGen(verilog)) because it does not drive other instances.
 @N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":131:11:131:23|Removing instance clk_16khz_div (in view: work.ClkGen(verilog)) because it does not drive other instances.
 @N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":101:11:101:23|Removing instance pulse2mhz_div (in view: work.ClkGen(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\dual_port_ram.v":53:1:53:6|Removing sequential instance PA_RADDR[3:0] (in view: work.DP_RAM_2R_1W_24s_4s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":259:29:259:45|Removing instance i_brk_deadband (in view: work.cmn_pwm_0(rtl)) because it does not drive other instances.
-@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":203:34:203:50|Removing instance gen_dead_band_col_pwm\.1\.i_mot_deadband (in view: work.cmn_pwm_1(rtl)) because it does not drive other instances.
-@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":203:34:203:50|Removing instance gen_dead_band_col_pwm\.2\.i_mot_deadband (in view: work.cmn_pwm_1(rtl)) because it does not drive other instances.
-@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":203:34:203:50|Removing instance gen_dead_band_col_pwm\.3\.i_mot_deadband (in view: work.cmn_pwm_1(rtl)) because it does not drive other instances.
-@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":203:34:203:50|Removing instance gen_dead_band_col_pwm\.1\.i_mot_deadband (in view: work.cmn_pwm_2(rtl)) because it does not drive other instances.
-@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":203:34:203:50|Removing instance gen_dead_band_col_pwm\.2\.i_mot_deadband (in view: work.cmn_pwm_2(rtl)) because it does not drive other instances.
-@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":203:34:203:50|Removing instance gen_dead_band_col_pwm\.3\.i_mot_deadband (in view: work.cmn_pwm_2(rtl)) because it does not drive other instances.
-@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":203:34:203:50|Removing instance gen_dead_band_col_pwm\.1\.i_mot_deadband (in view: work.cmn_pwm_3(rtl)) because it does not drive other instances.
-@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":203:34:203:50|Removing instance gen_dead_band_col_pwm\.2\.i_mot_deadband (in view: work.cmn_pwm_3(rtl)) because it does not drive other instances.
-@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":203:34:203:50|Removing instance gen_dead_band_col_pwm\.3\.i_mot_deadband (in view: work.cmn_pwm_3(rtl)) because it does not drive other instances.
-@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":203:34:203:50|Removing instance gen_dead_band_col_pwm\.1\.i_mot_deadband (in view: work.cmn_pwm_4(rtl)) because it does not drive other instances.
-@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":203:34:203:50|Removing instance gen_dead_band_col_pwm\.2\.i_mot_deadband (in view: work.cmn_pwm_4(rtl)) because it does not drive other instances.
-@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":203:34:203:50|Removing instance gen_dead_band_col_pwm\.3\.i_mot_deadband (in view: work.cmn_pwm_4(rtl)) because it does not drive other instances.
-@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":203:34:203:50|Removing instance gen_dead_band_col_pwm\.1\.i_mot_deadband (in view: work.cmn_pwm_5(rtl)) because it does not drive other instances.
-@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":203:34:203:50|Removing instance gen_dead_band_col_pwm\.2\.i_mot_deadband (in view: work.cmn_pwm_5(rtl)) because it does not drive other instances.
-@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":203:34:203:50|Removing instance gen_dead_band_col_pwm\.3\.i_mot_deadband (in view: work.cmn_pwm_5(rtl)) because it does not drive other instances.
-@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":203:34:203:50|Removing instance gen_dead_band_col_pwm\.1\.i_mot_deadband (in view: work.cmn_pwm_6(rtl)) because it does not drive other instances.
-@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":203:34:203:50|Removing instance gen_dead_band_col_pwm\.2\.i_mot_deadband (in view: work.cmn_pwm_6(rtl)) because it does not drive other instances.
-@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":203:34:203:50|Removing instance gen_dead_band_col_pwm\.3\.i_mot_deadband (in view: work.cmn_pwm_6(rtl)) because it does not drive other instances.
-@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":259:29:259:45|Removing instance i_brk_deadband (in view: work.cmn_pwm_7(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":270:29:270:45|Removing instance i_brk_deadband (in view: work.cmn_pwm_0(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.1\.i_mot_deadband (in view: work.cmn_pwm_1(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.2\.i_mot_deadband (in view: work.cmn_pwm_1(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.3\.i_mot_deadband (in view: work.cmn_pwm_1(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.1\.i_mot_deadband (in view: work.cmn_pwm_2(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.2\.i_mot_deadband (in view: work.cmn_pwm_2(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.3\.i_mot_deadband (in view: work.cmn_pwm_2(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.1\.i_mot_deadband (in view: work.cmn_pwm_3(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.2\.i_mot_deadband (in view: work.cmn_pwm_3(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.3\.i_mot_deadband (in view: work.cmn_pwm_3(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.1\.i_mot_deadband (in view: work.cmn_pwm_4(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.2\.i_mot_deadband (in view: work.cmn_pwm_4(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.3\.i_mot_deadband (in view: work.cmn_pwm_4(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.1\.i_mot_deadband (in view: work.cmn_pwm_5(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.2\.i_mot_deadband (in view: work.cmn_pwm_5(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.3\.i_mot_deadband (in view: work.cmn_pwm_5(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.1\.i_mot_deadband (in view: work.cmn_pwm_6(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.2\.i_mot_deadband (in view: work.cmn_pwm_6(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.3\.i_mot_deadband (in view: work.cmn_pwm_6(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":270:29:270:45|Removing instance i_brk_deadband (in view: work.cmn_pwm_7(rtl)) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_0_0(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_3_1(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_2_1(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_1_1(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_2_1(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_3_2(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_2_2(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_1_2(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_2_2(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_3_3(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_2_3(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_1_3(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_2_3(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_3_4(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_2_4(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_1_4(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_2_4(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_3_5(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_2_5(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_1_5(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_2_5(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_3_6(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_2_6(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_1_6(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_2_6(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_0_7(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":226:23:226:33|Removing instance i_brk_pwm (in view: work.cmn_pwm_0(rtl)) because it does not drive other instances.
 @N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":108:25:108:42|Removing instance i_brk_filt (in view: work.cmn_pwm_0(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":156:26:156:43|Removing instance i_mot_pwm_simple (in view: work.cmn_pwm_1(rtl)) because it does not drive other instances.
 @N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":92:25:92:42|Removing instance i_mot_filt (in view: work.cmn_pwm_1(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":156:26:156:43|Removing instance i_mot_pwm_simple (in view: work.cmn_pwm_2(rtl)) because it does not drive other instances.
 @N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":92:25:92:42|Removing instance i_mot_filt (in view: work.cmn_pwm_2(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":156:26:156:43|Removing instance i_mot_pwm_simple (in view: work.cmn_pwm_3(rtl)) because it does not drive other instances.
 @N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":92:25:92:42|Removing instance i_mot_filt (in view: work.cmn_pwm_3(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":156:26:156:43|Removing instance i_mot_pwm_simple (in view: work.cmn_pwm_4(rtl)) because it does not drive other instances.
 @N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":92:25:92:42|Removing instance i_mot_filt (in view: work.cmn_pwm_4(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":156:26:156:43|Removing instance i_mot_pwm_simple (in view: work.cmn_pwm_5(rtl)) because it does not drive other instances.
 @N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":92:25:92:42|Removing instance i_mot_filt (in view: work.cmn_pwm_5(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":156:26:156:43|Removing instance i_mot_pwm_simple (in view: work.cmn_pwm_6(rtl)) because it does not drive other instances.
 @N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":92:25:92:42|Removing instance i_mot_filt (in view: work.cmn_pwm_6(rtl)) because it does not drive other instances.
-@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":226:23:226:33|Removing instance i_brk_pwm (in view: work.cmn_pwm_7(rtl)) because it does not drive other instances.
 @N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":108:25:108:42|Removing instance i_brk_filt (in view: work.cmn_pwm_7(rtl)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\simple_ph_pwm.vhd":114:8:114:9|Removing sequential instance pwm_out[2:0] (in view: work.SIMPLE_PH_PWM_1(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\simple_ph_pwm.vhd":114:8:114:9|Removing sequential instance pwm_out[2:0] (in view: work.SIMPLE_PH_PWM_2(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\simple_ph_pwm.vhd":114:8:114:9|Removing sequential instance pwm_out[2:0] (in view: work.SIMPLE_PH_PWM_3(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\simple_ph_pwm.vhd":114:8:114:9|Removing sequential instance pwm_out[2:0] (in view: work.SIMPLE_PH_PWM_4(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\simple_ph_pwm.vhd":114:8:114:9|Removing sequential instance pwm_out[2:0] (in view: work.SIMPLE_PH_PWM_5(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\simple_ph_pwm.vhd":114:8:114:9|Removing sequential instance pwm_out[2:0] (in view: work.SIMPLE_PH_PWM_6(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
 @N: FP130 |Promoting Net RESET_N_arst on CLKINT  I_1 
 @N: FP130 |Promoting Net FPGA_100M_CLK on CLKINT  I_2 
-@N: FP130 |Promoting Net gantry_brk3_if_0.clk_16khz_div.clkout on CLKINT  I_2 
-@N: FP130 |Promoting Net gantry_brk2_ret_if_0.clk_16khz_div.clkout on CLKINT  I_2 
-@N: FP130 |Promoting Net gantry_brk1_ret_if_0.clk_16khz_div.clkout on CLKINT  I_2 
-@N: FP130 |Promoting Net gantry_brk3_ret_if_0.clk_16khz_div.clkout on CLKINT  I_2 
-@N: FP130 |Promoting Net gantry_brk1_if_0.clk_16khz_div.clkout on CLKINT  I_2 
-@N: FP130 |Promoting Net gantry_brk2_if_0.clk_16khz_div.clkout on CLKINT  I_2 
 @N: FP130 |Promoting Net lift_mot_if_0.clk_16khz_div.clkout on CLKINT  I_2 
 @N: FP130 |Promoting Net gantry_mot_if_0.clk_16khz_div.clkout on CLKINT  I_2 
+@N: FP130 |Promoting Net gantry_brk2_ret_if_0.clk_16khz_div.clkout on CLKINT  I_2 
+@N: FP130 |Promoting Net gantry_brk3_if_0.clk_16khz_div.clkout on CLKINT  I_2 
+@N: FP130 |Promoting Net gantry_brk3_ret_if_0.clk_16khz_div.clkout on CLKINT  I_2 
+@N: FP130 |Promoting Net gantry_brk1_if_0.clk_16khz_div.clkout on CLKINT  I_2 
+@N: FP130 |Promoting Net gantry_brk1_ret_if_0.clk_16khz_div.clkout on CLKINT  I_2 
+@N: FP130 |Promoting Net gantry_brk2_if_0.clk_16khz_div.clkout on CLKINT  I_2 
 @N: FP130 |Promoting Net dac_0.sclk.clkout on CLKINT  I_2 
 @N: FP130 |Promoting Net adc_0.sclk.CLK_OUT on CLKINT  I_2 
 @N: FP130 |Promoting Net clk_gen_0.pulse2khz_div.CLK_OUT on CLKINT  I_2 
@@ -215,7 +216,7 @@ Finished DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:0
 @N: FP130 |Promoting Net clk_gen_0.wdclk_div.CLK_OUT on CLKINT  I_2 
 @N: FX1184 |Applying syn_allowed_resources blockrams=352 on top level netlist top 
 
-Finished netlist restructuring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 277MB peak: 277MB)
+Finished netlist restructuring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 276MB peak: 276MB)
 
 
 
@@ -225,23 +226,23 @@ Clock Summary
           Start                                        Requested     Requested     Clock        Clock          Clock
 Level     Clock                                        Frequency     Period        Type         Group          Load 
 --------------------------------------------------------------------------------------------------------------------
-0 -       top|FPGA_100M_CLK                            100.0 MHz     10.000        inferred     (multiple)     3976 
-                                                                                                                    
-0 -       CLOCK_DIV_11_0|N_17_inferred_clock           100.0 MHz     10.000        inferred     (multiple)     188  
-                                                                                                                    
-0 -       CLOCK_DIV_11_1|N_17_inferred_clock           100.0 MHz     10.000        inferred     (multiple)     188  
-                                                                                                                    
-0 -       CLOCK_DIV_11_2|N_17_inferred_clock           100.0 MHz     10.000        inferred     (multiple)     188  
-                                                                                                                    
-0 -       CLOCK_DIV_11_3|N_17_inferred_clock           100.0 MHz     10.000        inferred     (multiple)     188  
-                                                                                                                    
-0 -       CLOCK_DIV_11_4|N_17_inferred_clock           100.0 MHz     10.000        inferred     (multiple)     188  
-                                                                                                                    
-0 -       CLOCK_DIV_11_5|N_17_inferred_clock           100.0 MHz     10.000        inferred     (multiple)     188  
+0 -       top|FPGA_100M_CLK                            100.0 MHz     10.000        inferred     (multiple)     4012 
                                                                                                                     
 0 -       CLOCK_DIV_10|N_17_inferred_clock             100.0 MHz     10.000        inferred     (multiple)     183  
                                                                                                                     
 0 -       CLOCK_DIV_11_6|N_17_inferred_clock           100.0 MHz     10.000        inferred     (multiple)     183  
+                                                                                                                    
+0 -       CLOCK_DIV_11_0|N_17_inferred_clock           100.0 MHz     10.000        inferred     (multiple)     105  
+                                                                                                                    
+0 -       CLOCK_DIV_11_1|N_17_inferred_clock           100.0 MHz     10.000        inferred     (multiple)     105  
+                                                                                                                    
+0 -       CLOCK_DIV_11_2|N_17_inferred_clock           100.0 MHz     10.000        inferred     (multiple)     105  
+                                                                                                                    
+0 -       CLOCK_DIV_11_3|N_17_inferred_clock           100.0 MHz     10.000        inferred     (multiple)     105  
+                                                                                                                    
+0 -       CLOCK_DIV_11_4|N_17_inferred_clock           100.0 MHz     10.000        inferred     (multiple)     105  
+                                                                                                                    
+0 -       CLOCK_DIV_11_5|N_17_inferred_clock           100.0 MHz     10.000        inferred     (multiple)     105  
                                                                                                                     
 0 -       CLOCK_DIV_9|N_17_inferred_clock              100.0 MHz     10.000        inferred     (multiple)     102  
                                                                                                                     
@@ -258,23 +259,23 @@ Clock Load Summary
                                              Clock     Source                                                    Clock Pin                                 Non-clock Pin                                      Non-clock Pin                                        
 Clock                                        Load      Pin                                                       Seq Example                               Seq Example                                        Comb Example                                         
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-top|FPGA_100M_CLK                            3976      FPGA_100M_CLK(port)                                       lift_mot_if_0.pwm_status[23:8].C          adc_0.clk_aq_high[1:0].D[1]                        I_2.A(CLKINT)                                        
-                                                                                                                                                                                                                                                                   
-CLOCK_DIV_11_0|N_17_inferred_clock           188       gantry_brk1_if_0.clk_16khz_div.clkout.Q[0](dffre)         gantry_brk1_if_0.sync_cntr[1:0].C         gantry_brk1_if_0.clk_16khz_div.clkout.D[0]         gantry_brk1_if_0.clk_16khz_div.clkout_2.I[0](inv)    
-                                                                                                                                                                                                                                                                   
-CLOCK_DIV_11_1|N_17_inferred_clock           188       gantry_brk2_if_0.clk_16khz_div.clkout.Q[0](dffre)         gantry_brk2_if_0.sync_cntr[1:0].C         gantry_brk2_if_0.clk_16khz_div.clkout.D[0]         gantry_brk2_if_0.clk_16khz_div.clkout_2.I[0](inv)    
-                                                                                                                                                                                                                                                                   
-CLOCK_DIV_11_2|N_17_inferred_clock           188       gantry_brk3_if_0.clk_16khz_div.clkout.Q[0](dffre)         gantry_brk3_if_0.sync_cntr[1:0].C         gantry_brk3_if_0.clk_16khz_div.clkout.D[0]         gantry_brk3_if_0.clk_16khz_div.clkout_2.I[0](inv)    
-                                                                                                                                                                                                                                                                   
-CLOCK_DIV_11_3|N_17_inferred_clock           188       gantry_brk1_ret_if_0.clk_16khz_div.clkout.Q[0](dffre)     gantry_brk1_ret_if_0.sync_cntr[1:0].C     gantry_brk1_ret_if_0.clk_16khz_div.clkout.D[0]     gantry_brk1_ret_if_0.clk_16khz_div.clkout_2.I[0](inv)
-                                                                                                                                                                                                                                                                   
-CLOCK_DIV_11_4|N_17_inferred_clock           188       gantry_brk2_ret_if_0.clk_16khz_div.clkout.Q[0](dffre)     gantry_brk2_ret_if_0.sync_cntr[1:0].C     gantry_brk2_ret_if_0.clk_16khz_div.clkout.D[0]     gantry_brk2_ret_if_0.clk_16khz_div.clkout_2.I[0](inv)
-                                                                                                                                                                                                                                                                   
-CLOCK_DIV_11_5|N_17_inferred_clock           188       gantry_brk3_ret_if_0.clk_16khz_div.clkout.Q[0](dffre)     gantry_brk3_ret_if_0.sync_cntr[1:0].C     gantry_brk3_ret_if_0.clk_16khz_div.clkout.D[0]     gantry_brk3_ret_if_0.clk_16khz_div.clkout_2.I[0](inv)
+top|FPGA_100M_CLK                            4012      FPGA_100M_CLK(port)                                       lift_mot_if_0.pwm_status[23:8].C          adc_0.clk_aq_high[1:0].D[1]                        I_2.A(CLKINT)                                        
                                                                                                                                                                                                                                                                    
 CLOCK_DIV_10|N_17_inferred_clock             183       gantry_mot_if_0.clk_16khz_div.clkout.Q[0](dffre)          gantry_mot_if_0.sync_cntr[1:0].C          gantry_mot_if_0.clk_16khz_div.clkout.D[0]          gantry_mot_if_0.clk_16khz_div.clkout_2.I[0](inv)     
                                                                                                                                                                                                                                                                    
 CLOCK_DIV_11_6|N_17_inferred_clock           183       lift_mot_if_0.clk_16khz_div.clkout.Q[0](dffre)            lift_mot_if_0.sync_cntr[1:0].C            lift_mot_if_0.clk_16khz_div.clkout.D[0]            lift_mot_if_0.clk_16khz_div.clkout_2.I[0](inv)       
+                                                                                                                                                                                                                                                                   
+CLOCK_DIV_11_0|N_17_inferred_clock           105       gantry_brk1_if_0.clk_16khz_div.clkout.Q[0](dffre)         gantry_brk1_if_0.sync_cntr[1:0].C         gantry_brk1_if_0.clk_16khz_div.clkout.D[0]         gantry_brk1_if_0.clk_16khz_div.clkout_2.I[0](inv)    
+                                                                                                                                                                                                                                                                   
+CLOCK_DIV_11_1|N_17_inferred_clock           105       gantry_brk2_if_0.clk_16khz_div.clkout.Q[0](dffre)         gantry_brk2_if_0.sync_cntr[1:0].C         gantry_brk2_if_0.clk_16khz_div.clkout.D[0]         gantry_brk2_if_0.clk_16khz_div.clkout_2.I[0](inv)    
+                                                                                                                                                                                                                                                                   
+CLOCK_DIV_11_2|N_17_inferred_clock           105       gantry_brk3_if_0.clk_16khz_div.clkout.Q[0](dffre)         gantry_brk3_if_0.sync_cntr[1:0].C         gantry_brk3_if_0.clk_16khz_div.clkout.D[0]         gantry_brk3_if_0.clk_16khz_div.clkout_2.I[0](inv)    
+                                                                                                                                                                                                                                                                   
+CLOCK_DIV_11_3|N_17_inferred_clock           105       gantry_brk1_ret_if_0.clk_16khz_div.clkout.Q[0](dffre)     gantry_brk1_ret_if_0.sync_cntr[1:0].C     gantry_brk1_ret_if_0.clk_16khz_div.clkout.D[0]     gantry_brk1_ret_if_0.clk_16khz_div.clkout_2.I[0](inv)
+                                                                                                                                                                                                                                                                   
+CLOCK_DIV_11_4|N_17_inferred_clock           105       gantry_brk2_ret_if_0.clk_16khz_div.clkout.Q[0](dffre)     gantry_brk2_ret_if_0.sync_cntr[1:0].C     gantry_brk2_ret_if_0.clk_16khz_div.clkout.D[0]     gantry_brk2_ret_if_0.clk_16khz_div.clkout_2.I[0](inv)
+                                                                                                                                                                                                                                                                   
+CLOCK_DIV_11_5|N_17_inferred_clock           105       gantry_brk3_ret_if_0.clk_16khz_div.clkout.Q[0](dffre)     gantry_brk3_ret_if_0.sync_cntr[1:0].C     gantry_brk3_ret_if_0.clk_16khz_div.clkout.D[0]     gantry_brk3_ret_if_0.clk_16khz_div.clkout_2.I[0](inv)
                                                                                                                                                                                                                                                                    
 CLOCK_DIV_9|N_17_inferred_clock              102       dac_0.sclk.clkout.Q[0](dffre)                             dac_0.data_in[23:0].C                     dac_0.sclk.clkout.D[0]                             dac_0.un1_clk_sd.I[0](inv)                           
                                                                                                                                                                                                                                                                    
@@ -283,14 +284,14 @@ ADC_ADS8864_IF|ram_wr_clk_inferred_clock     16        adc_0.ram_wr_clk.Q[0](dff
 top|DBUG_HEADER10                            13        DBUG_HEADER10(port)                                       osc_counter_0.cntr_trig.C                 -                                                  I_3.A(CLKINT)                                        
 ===================================================================================================================================================================================================================================================================
 
-@W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_div.v":37:1:37:6|Found inferred clock top|FPGA_100M_CLK which controls 3976 sequential elements including clkgen_2khz.cntr[15:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_div.v":37:1:37:6|Found inferred clock top|FPGA_100M_CLK which controls 4012 sequential elements including clkgen_2khz.cntr[15:0]. This clock has no specified timing constraint which may adversely impact design performance. 
 @W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found inferred clock CLOCK_DIV_11_6|N_17_inferred_clock which controls 183 sequential elements including lift_mot_if_0.pwm_0.i_mot_filt.debounce_cntr[27:0]. This clock has no specified timing constraint which may adversely impact design performance. 
-@W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found inferred clock CLOCK_DIV_11_5|N_17_inferred_clock which controls 188 sequential elements including gantry_brk3_ret_if_0.pwm_0.i_brk_filt.debounce_cntr[27:0]. This clock has no specified timing constraint which may adversely impact design performance. 
-@W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found inferred clock CLOCK_DIV_11_4|N_17_inferred_clock which controls 188 sequential elements including gantry_brk2_ret_if_0.pwm_0.i_brk_filt.debounce_cntr[27:0]. This clock has no specified timing constraint which may adversely impact design performance. 
-@W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found inferred clock CLOCK_DIV_11_3|N_17_inferred_clock which controls 188 sequential elements including gantry_brk1_ret_if_0.pwm_0.i_brk_filt.debounce_cntr[27:0]. This clock has no specified timing constraint which may adversely impact design performance. 
-@W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found inferred clock CLOCK_DIV_11_2|N_17_inferred_clock which controls 188 sequential elements including gantry_brk3_if_0.pwm_0.i_brk_filt.debounce_cntr[27:0]. This clock has no specified timing constraint which may adversely impact design performance. 
-@W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found inferred clock CLOCK_DIV_11_1|N_17_inferred_clock which controls 188 sequential elements including gantry_brk2_if_0.pwm_0.i_brk_filt.debounce_cntr[27:0]. This clock has no specified timing constraint which may adversely impact design performance. 
-@W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found inferred clock CLOCK_DIV_11_0|N_17_inferred_clock which controls 188 sequential elements including gantry_brk1_if_0.pwm_0.i_brk_filt.debounce_cntr[27:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found inferred clock CLOCK_DIV_11_5|N_17_inferred_clock which controls 105 sequential elements including gantry_brk3_ret_if_0.pwm_0.i_brk_filt.debounce_cntr[27:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found inferred clock CLOCK_DIV_11_4|N_17_inferred_clock which controls 105 sequential elements including gantry_brk2_ret_if_0.pwm_0.i_brk_filt.debounce_cntr[27:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found inferred clock CLOCK_DIV_11_3|N_17_inferred_clock which controls 105 sequential elements including gantry_brk1_ret_if_0.pwm_0.i_brk_filt.debounce_cntr[27:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found inferred clock CLOCK_DIV_11_2|N_17_inferred_clock which controls 105 sequential elements including gantry_brk3_if_0.pwm_0.i_brk_filt.debounce_cntr[27:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found inferred clock CLOCK_DIV_11_1|N_17_inferred_clock which controls 105 sequential elements including gantry_brk2_if_0.pwm_0.i_brk_filt.debounce_cntr[27:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found inferred clock CLOCK_DIV_11_0|N_17_inferred_clock which controls 105 sequential elements including gantry_brk1_if_0.pwm_0.i_brk_filt.debounce_cntr[27:0]. This clock has no specified timing constraint which may adversely impact design performance. 
 @W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found inferred clock CLOCK_DIV_10|N_17_inferred_clock which controls 183 sequential elements including gantry_mot_if_0.pwm_0.i_mot_filt.debounce_cntr[27:0]. This clock has no specified timing constraint which may adversely impact design performance. 
 @W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\dual_port_ram.v":53:1:53:6|Found inferred clock CLOCK_DIV_9|N_17_inferred_clock which controls 102 sequential elements including dac_0.data_in_ram.ram[23:0]. This clock has no specified timing constraint which may adversely impact design performance. 
 @W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\dual_port_ram.v":53:1:53:6|Found inferred clock ADC_ADS8864_IF|ram_wr_clk_inferred_clock which controls 16 sequential elements including adc_0.data_in_ram.ram[15:0]. This clock has no specified timing constraint which may adversely impact design performance. 
@@ -300,7 +301,7 @@ top|DBUG_HEADER10                            13        DBUG_HEADER10(port)      
 Finished Pre Mapping Phase.
 @N: BN225 |Writing default property annotation file C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\top.sap.
 
-Starting constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 270MB peak: 278MB)
+Starting constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 270MB peak: 277MB)
 
 Encoding state machine eeprom_cycle_state[0:11] (in view: work.serial_eeprom_if(rtl))
 original code -> new code
@@ -374,7 +375,7 @@ Encoding state machine state[1:0] (in view: work.MSSB_IF_1(verilog))
 original code -> new code
    00 -> 0
    01 -> 1
-@N: MO225 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\mssb_if.v":91:4:91:9|There are no possible illegal states for state machine state[1:0] (in view: work.MSSB_IF_1(verilog)); safe FSM implementation is not required.
+@N: MO225 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\mssb_if.v":92:4:92:9|There are no possible illegal states for state machine state[1:0] (in view: work.MSSB_IF_1(verilog)); safe FSM implementation is not required.
 Encoding state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY_1(rtl))
 original code -> new code
    00 -> 00
@@ -393,7 +394,7 @@ Encoding state machine state[1:0] (in view: work.MSSB_IF_0(verilog))
 original code -> new code
    00 -> 0
    01 -> 1
-@N: MO225 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\mssb_if.v":91:4:91:9|There are no possible illegal states for state machine state[1:0] (in view: work.MSSB_IF_0(verilog)); safe FSM implementation is not required.
+@N: MO225 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\mssb_if.v":92:4:92:9|There are no possible illegal states for state machine state[1:0] (in view: work.MSSB_IF_0(verilog)); safe FSM implementation is not required.
 Encoding state machine DB_STATE[0:4] (in view: work.CMN_DEADBAND_5_0_8(rtl))
 original code -> new code
    00001 -> 00001
@@ -559,16 +560,16 @@ original code -> new code
    01000 -> 01000
    10000 -> 10000
 
-Finished constraint checker preprocessing (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 279MB peak: 279MB)
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 278MB peak: 278MB)
 
 
-Finished constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 283MB peak: 283MB)
+Finished constraint checker (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 282MB peak: 282MB)
 
 Pre-mapping successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 189MB peak: 284MB)
+At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 188MB peak: 282MB)
 
-Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Mon May 12 14:37:01 2025
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+# Sun May 25 18:05:25 2025
 
 ###########################################################]

@@ -13,13 +13,13 @@ The file contains the job information from mapper to be displayed as part of the
 </job_status>
 <job_info>
 <info name="Notes">
-<data>135</data>
+<data>129</data>
 <report_link name="more">
 <data>C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\synlog\report\top_premap_notes.txt</data>
 </report_link>
 </info>
 <info name="Warnings">
-<data>60</data>
+<data>67</data>
 <report_link name="more">
 <data>C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\synlog\report\top_premap_warnings.txt</data>
 </report_link>
@@ -31,16 +31,16 @@ The file contains the job information from mapper to be displayed as part of the
 </report_link>
 </info>
 <info name="CPU Time">
-<data>0h:00m:01s</data>
+<data>0h:00m:02s</data>
 </info>
 <info name="Real Time">
-<data>0h:00m:01s</data>
+<data>0h:00m:02s</data>
 </info>
 <info name="Peak Memory">
-<data>284MB</data>
+<data>282MB</data>
 </info>
 <info name="Date &amp; Time">
-<data type="timestamp">1747031821</data>
+<data type="timestamp">1748167525</data>
 </info>
 </job_info>
 </job_run_status>

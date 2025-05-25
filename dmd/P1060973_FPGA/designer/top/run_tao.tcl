@@ -21,6 +21,7 @@ read_verilog -mode system_verilog {C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.
 read_verilog -mode system_verilog {C:\repo2\gpb\dmd\P1060973_FPGA\hdl\opb_emu_target.v}
 read_verilog -mode system_verilog {C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmd_server.v}
 read_vhdl -mode vhdl_2008 {C:\repo2\gpb\dmd\P1060973_FPGA\hdl\PH_PWM.vhd}
+read_vhdl -mode vhdl_2008 {C:\repo2\gpb\dmd\P1060973_FPGA\hdl\SIMPLE_PH_PWM.vhd}
 read_vhdl -mode vhdl_2008 {C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_deadband.vhd}
 read_vhdl -mode vhdl_2008 {C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd}
 read_vhdl -mode vhdl_2008 {C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd}

@@ -5,8 +5,9 @@ File                                                                    Type    
 "C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v"                           verilog                      IN PROJECT
 "C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v"               verilog                      IN PROJECT
 "C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd"                        vhdl                      IN PROJECT
-"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_deadband.vhd"                   vhdl                      IN PROJECT
 "C:\repo2\gpb\dmd\P1060973_FPGA\hdl\PH_PWM.vhd"                         vhdl                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_deadband.vhd"                   vhdl                      IN PROJECT
+"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\SIMPLE_PH_PWM.vhd"                  vhdl                      IN PROJECT
 "C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd"                  vhdl                      IN PROJECT
 "C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_DIV.V"                       verilog                      IN PROJECT
 "C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v"                       verilog                      IN PROJECT
