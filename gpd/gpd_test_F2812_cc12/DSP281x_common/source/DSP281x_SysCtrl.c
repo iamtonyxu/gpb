@@ -145,7 +145,7 @@ void InitPll(Uint16 val)
 
       EALLOW;
       //CLKIN=XCLKIN*10/DIV
-      SysCtrlRegs.PLLCR.bit.DIV = val;    //CLKIN=30*10/10=30MHZ
+      SysCtrlRegs.PLLCR.bit.DIV = val;    //CLKIN=30*10/2=150MHZ
       EDIS;
 
    // Optional: Wait for PLL to lock.

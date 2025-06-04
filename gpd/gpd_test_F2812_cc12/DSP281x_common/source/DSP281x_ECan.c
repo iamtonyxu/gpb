@@ -103,7 +103,7 @@ void InitECan(void)
     ECanaRegs.CANMC.bit.CCR = 1;        // Set CCR = 1
     while(ECanaRegs.CANES.bit.CCE != 1) {} // Wait for CCE bit to be set...
 
-    ECanaRegs.CANBTC.bit.BRPREG = 7;
+    ECanaRegs.CANBTC.bit.BRPREG = 9; // 1 Mbps @ 150 MHz SYSCLKOUT
     ECanaRegs.CANBTC.bit.TSEG2REG = 2;
     ECanaRegs.CANBTC.bit.TSEG1REG = 10;
 
