@@ -597,7 +597,7 @@ DAC_DACx0504_IF dac_0 (
     .DAC_SDO(DAC_SDO)
 );
 
-/*
+
     // FPGA_WDI module instantiation
     FPGA_WDI fpga_wdi_0 (
         .OPB_CLK(OPB_CLK),                 // OPB clock
@@ -605,7 +605,7 @@ DAC_DACx0504_IF dac_0 (
         .OPB_RST(OPB_RST),                 // OPB reset
         .WD_TRIG(WD_TRIG)                  // Watchdog output
     );
-*/
+
 
     // GPIO module instantiation
     GPIO gpio_0 (
@@ -654,7 +654,6 @@ DAC_DACx0504_IF dac_0 (
         // POWER_IF
         .FAN_EN(FAN_EN),
         .P12V_ISO_EN(P12V_ISO_EN),
-        .WD_TRIG(WD_TRIG),
         .P24V_GOOD_N(P24V_GOOD_N),
         .FAN_FAIL_N(FAN_FAIL_N),
 

@@ -8,9 +8,9 @@ module top_tb;
     integer DAC_TEST               = 0;    // Enable DAC Test
     integer EEPROM_TEST            = 0;    // Enable EEPROM Test
     integer OSC_COUNTER_TEST       = 0;    // Enable Oscillator Counter Test
-    integer GPIO_TEST              = 1;    // Enable GPIO Test
+    integer GPIO_TEST              = 0;    // Enable GPIO Test
     integer MSSB_TEST              = 0;    // Enable MSSB Test
-    integer GANTRY_MOT_TEST        = 0;    // Enable Gantry Motor Test
+    integer GANTRY_MOT_TEST        = 1;    // Enable Gantry Motor Test
     integer LIFT_MOT_TEST          = 0;    // Enable Lift Motor Test
     integer GANTRY_BRK_TEST        = 0;    // Enable Gantry Brake Test
 
@@ -438,18 +438,6 @@ module top_tb;
         if (GPIO_TEST == 1) begin
             $display("GPIO Test Start...");
 
-            // Write WD_TRIG as 1
-            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h05); uart_send(8'h00); uart_send(00);
-            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h04); uart_send(8'hA5);
-            repeat(10) uart_recv(uart_tdata);
-            #1000000;    // Wait 1us
-
-            // Write WD_TRIG as 0
-            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h05); uart_send(8'h00); uart_send(00);
-            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA5);
-            repeat(10) uart_recv(uart_tdata);
-            #1000000;    // Wait 1us
-
 /*
             // OPB_WRITE: SHUNT_EN_CNT = 16'H1000
             uart_send(8'h5A); uart_send(8'h00); uart_send(8'h05); uart_send(8'h00); uart_send(8'h10);
@@ -565,6 +553,12 @@ module top_tb;
         // Gantry Motor Test
         if (GANTRY_MOT_TEST == 1) begin
             $display("Gantry Motor Test Start...");
+
+            // OPB WRITE: adjust WD_TRIG Freq, from default 1kHz to 20kHz
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h03); uart_send(8'h00); uart_send(8'h04);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hFA); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+            #1000000;    // Wait 1us
 
             // OPB WRITE: Gantry Motor Write
             // Write to PWM configuration register, test_mode = 0
