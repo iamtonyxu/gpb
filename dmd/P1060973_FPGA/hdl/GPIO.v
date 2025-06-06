@@ -58,6 +58,7 @@ module GPIO (
     // POWER_IF
     output              FAN_EN,
     output              P12V_ISO_EN,
+    output              WD_TRIG,
     input               P24V_GOOD_N,
     input               FAN_FAIL_N,
 
@@ -216,6 +217,7 @@ module GPIO (
     // GPIO Outputs
     assign FAN_EN               = POWER_IF_REG[0];
     assign P12V_ISO_EN          = POWER_IF_REG[1];
+    assign WD_TRIG              = POWER_IF_REG[2];
 
     assign P24V_GNT_EMOPS_EN    = GANTRY_EMOPS_IF_REG[0];
     assign GNT_EMOPS_EN         = GANTRY_EMOPS_IF_REG[1];

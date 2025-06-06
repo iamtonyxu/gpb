@@ -8,10 +8,10 @@ module top_tb;
     integer DAC_TEST               = 0;    // Enable DAC Test
     integer EEPROM_TEST            = 0;    // Enable EEPROM Test
     integer OSC_COUNTER_TEST       = 0;    // Enable Oscillator Counter Test
-    integer GPIO_TEST              = 0;    // Enable GPIO Test
+    integer GPIO_TEST              = 1;    // Enable GPIO Test
     integer MSSB_TEST              = 0;    // Enable MSSB Test
     integer GANTRY_MOT_TEST        = 0;    // Enable Gantry Motor Test
-    integer LIFT_MOT_TEST          = 1;    // Enable Lift Motor Test
+    integer LIFT_MOT_TEST          = 0;    // Enable Lift Motor Test
     integer GANTRY_BRK_TEST        = 0;    // Enable Gantry Brake Test
 
     // System Clock and Reset
@@ -438,6 +438,19 @@ module top_tb;
         if (GPIO_TEST == 1) begin
             $display("GPIO Test Start...");
 
+            // Write WD_TRIG as 1
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h05); uart_send(8'h00); uart_send(00);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h04); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+            #1000000;    // Wait 1us
+
+            // Write WD_TRIG as 0
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h05); uart_send(8'h00); uart_send(00);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+            #1000000;    // Wait 1us
+
+/*
             // OPB_WRITE: SHUNT_EN_CNT = 16'H1000
             uart_send(8'h5A); uart_send(8'h00); uart_send(8'h05); uart_send(8'h00); uart_send(8'h10);
             uart_send(8'h00); uart_send(8'h00); uart_send(8'h10); uart_send(8'h00); uart_send(8'hA5);
@@ -468,6 +481,7 @@ module top_tb;
             uart_send(8'h00); uart_send(8'h00); uart_send(8'hFF); uart_send(8'hFF); uart_send(8'hA5);
             repeat(10) uart_recv(uart_tdata);
             #1000000;    // Wait 1ms
+*/
 /*
             // OPB READ: GPIO Read
             ii = 0;
@@ -687,7 +701,7 @@ end
         // Gantry Brake Test
         if (GANTRY_BRK_TEST == 1) begin
             $display("Gantry Brake Test Start...");
-            ii = 6; // ii = 1,2,3,4,5,6
+            ii = 1; // ii = 1,2,3,4,5,6
 
             // OPB WRITE: Gantry Motor Write
             // Write to PWM configuration register, test_mode = 0
@@ -697,7 +711,7 @@ end
 
             // Write motor PWM parameters: ADDR_BRK_PWM_PARAM
             uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h10*ii); uart_send(8'h04);
-            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h80); uart_send(8'hA5);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA0); uart_send(8'hA5);
             repeat(10) uart_recv(uart_tdata);
 
             // Write motor start: ADDR_PWM_CONTROL, pwm_start = 1
