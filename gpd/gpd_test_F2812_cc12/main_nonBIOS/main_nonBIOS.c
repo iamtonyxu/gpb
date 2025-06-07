@@ -656,7 +656,7 @@ int main(void)
                 CpuTimer0Regs.PRD.all = 39000000;                   // Change period betweed edges to 325mS
                 TxMessage.sMsgStruct.Length = 0;
                 break;
-            case 'v':   /* Get DSP Firmware Version */
+            case 'V':   /* Get DSP Firmware Version */
                     TxMessage.sMsgStruct.Parm3 = 0x01;
                     TxMessage.sMsgStruct.Parm2 = 0x05;
                     TxMessage.sMsgStruct.Length = 2;

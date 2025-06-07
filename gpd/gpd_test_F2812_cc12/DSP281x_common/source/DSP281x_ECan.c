@@ -109,7 +109,10 @@ void InitECan(void)
 
     ECanaRegs.CANMC.bit.CCR = 0;        // Set CCR = 0
     ECanaRegs.CANMC.bit.PDR = 0;        // Set PDR = 0
-    ECanaRegs.CANMC.bit.DBO = 1;        // Set DBO = 1
+    // DBO determines the ordering of stored data
+    // DBO = 0, Byte-0, Byte-1, Byte-2, Byte-3, Byte-4, Byte-5, Byte-6, Byte-7
+    // DBO = 1, Byte-3, Byte-2, Byte-1, Byte-0, Byte-7, Byte-6, Byte-5, Byte-4
+    ECanaRegs.CANMC.bit.DBO = 0;        // Set DBO = 0
     ECanaRegs.CANMC.bit.WUBA = 0;       // Set WUBA = 0
     ECanaRegs.CANMC.bit.CDR = 0;        // Set CDR = 0
     ECanaRegs.CANMC.bit.ABO = 0;        // Set ABO = 0
@@ -344,7 +347,7 @@ Uint32 CheckRxMailBoxes(void)
 
     return (ECanaRegs.CANRMP.all & 0xffff0000);
 
-} /* CheckRxMailBoxes() */
+} /* CheckRxMailBoxes() */  
 
 
 
