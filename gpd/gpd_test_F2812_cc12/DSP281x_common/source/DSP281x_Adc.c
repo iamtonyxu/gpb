@@ -125,8 +125,8 @@ void GetAdcCalibrationFactors(float *Gain, int32 *OffSet)
 
     for(idx = 0; idx < 1024; idx++) { // Acquire 1024 Samples
         StartConversion();
-        Vref += ((ResltReg[ADCIN5] >> 4) & 0x0fff);
-        Vagnd += ((ResltReg[ADCIN6] >> 4) & 0x0fff);
+        Vref += ((ResltReg[ADCIN10] >> 4) & 0x0fff);
+        Vagnd += ((ResltReg[ADCIN12] >> 4) & 0x0fff);
         DELAY_US(8000); // Delay for 10mS
     }
 

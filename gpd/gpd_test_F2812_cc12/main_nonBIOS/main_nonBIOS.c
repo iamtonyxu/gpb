@@ -80,11 +80,13 @@ int main(void)
     SetDBGIER(IER);                     // Configure the DBGIER for realtime debug
     asm(" CLRC INTM, DBGM");            // Enable global interrupts and realtime debug
 
-    /* Toggle D20, D21, and D27 to indicate successful boot */
+    /* Toggle D11, D12, D13, D14 and D15 to indicate successful boot */
     for(Cnt = 0; Cnt < 3*2; Cnt++) {
         GpioDataRegs.GPATOGGLE.bit.GPIOA0 = 1;
         GpioDataRegs.GPATOGGLE.bit.GPIOA1 = 1;
         GpioDataRegs.GPATOGGLE.bit.GPIOA2 = 1;
+        GpioDataRegs.GPBTOGGLE.bit.GPIOB6 = 1;
+        GpioDataRegs.GPBTOGGLE.bit.GPIOB7 = 1;
         for(idx = 0; idx < 20; idx++) /* Total Delay ~ 1-sec */
             DELAY_US(40000); /* Delay 50mS */
     }
@@ -121,53 +123,53 @@ int main(void)
         GpioDataRegs.GPATOGGLE.bit.GPIOA1 = 1;
         GpioDataRegs.GPATOGGLE.bit.GPIOA2 = 1;
         switch(RxMessage.sMsgStruct.Cmd) {
-            case 'A':   /* Acquire and Convert the selected DSP-ADC Channel */
+            case 'A':   /* 0x41: Acquire and Convert the selected DSP-ADC Channel */
                 StartConversion();
                 TxMessage.sMsgStruct.Parm1 = RxMessage.sMsgStruct.Parm1;
                 switch(RxMessage.sMsgStruct.Parm1) {
                     case 0: /* ADCIN0 : 1.8V */
                         AdcChnlResult = GetAdcConversion(ADCIN0, GainCalErr, OffsCalErr);
                         break;
-                    case 1: /* ADCIN1 : MTR3 */
+                    case 1: /* ADCIN1 : AO_MF_TST1 */
                         AdcChnlResult = GetAdcConversion(ADCIN1, GainCalErr, OffsCalErr);
                         break;
-                    case 2: /* ADCIN2 : MTR5 */
+                    case 2: /* ADCIN2 : MTR3 */
                         AdcChnlResult = GetAdcConversion(ADCIN2, GainCalErr, OffsCalErr);
                         break;
-                    case 3: /* ADCIN3 : MTR24 */
+                    case 3: /* ADCIN3 : AO_MF_TST2 */
                         AdcChnlResult = GetAdcConversion(ADCIN3, GainCalErr, OffsCalErr);
                         break;
-                    case 4: /* ADCIN4 : REF0.9 */
+                    case 4: /* ADCIN4 : MTR5 */
                         AdcChnlResult = GetAdcConversion(ADCIN4, GainCalErr, OffsCalErr);
                         break;
-                    case 5: /* ADCIN5 : REF2.5 */
+                    case 5: /* ADCIN5 : AO_MF_TST3 */
                         AdcChnlResult = GetAdcConversion(ADCIN5, GainCalErr, OffsCalErr);
                         break;
-                    case 6: /* ADCIN6 : 0.1908V */
+                    case 6: /* ADCIN6 : MTR24 */
                         AdcChnlResult = GetAdcConversion(ADCIN6, GainCalErr, OffsCalErr);
                         break;
-                    case 7: /* ADCIN7 : AO_MF_TST0 */
+                    case 7: /* ADCIN7 : ADCIN_B3 */
                         AdcChnlResult = GetAdcConversion(ADCIN7, GainCalErr, OffsCalErr);
                         break;
-                    case 8: /* ADCIN8 : AO_MF_TST1 */
+                    case 8: /* ADCIN8 : REF0.9 */
                         AdcChnlResult = GetAdcConversion(ADCIN8, GainCalErr, OffsCalErr);
                         break;
-                    case 9: /* ADCIN9 : AO_MF_TST2 */
+                    case 9: /* ADCIN9 : PEL_MON */
                         AdcChnlResult = GetAdcConversion(ADCIN9, GainCalErr, OffsCalErr);
                         break;
-                    case 10: /* ADCIN10 : AO_MF_TST3 */
+                    case 10: /* ADCIN10 : REF2.5 */
                         AdcChnlResult = GetAdcConversion(ADCIN10, GainCalErr, OffsCalErr);
                         break;
-                    case 11: /* ADCIN11 : AGND */
+                    case 11: /* ADCIN11 : MEL_MON */
                         AdcChnlResult = GetAdcConversion(ADCIN11, GainCalErr, OffsCalErr);
                         break;
-                    case 12: /* ADCIN12 : PEL_MON */
+                    case 12: /* ADCIN12 : 0.1908V */
                         AdcChnlResult = GetAdcConversion(ADCIN12, GainCalErr, OffsCalErr);
                         break;
-                    case 13: /* ADCIN13 : MEL_MON */
+                    case 13: /* ADCIN13 : BEL_MON */
                         AdcChnlResult = GetAdcConversion(ADCIN13, GainCalErr, OffsCalErr);
                         break;
-                    case 14: /* ADCIN14 : BEL_MON */
+                    case 14: /* ADCIN14 : AO_MF_TST0 */
                         AdcChnlResult = GetAdcConversion(ADCIN14, GainCalErr, OffsCalErr);
                         break;
                     case 15: /* ADCIN15 : TEMP_MON */
@@ -192,7 +194,7 @@ int main(void)
                     TxMessage.sMsgStruct.Length = 2;
                 }
                 break;
-            case 'B':   /* Construct EEPROM Structure and write structure to EEPROM */
+            case 'B':   /* 0x41: Construct EEPROM Structure and write structure to EEPROM */
                 switch(RxMessage.sMsgStruct.Parm1) {
                     case 0: /* Get PCB Hardware Version and Model Number */
                         /* Construct Assembly Number Field (pcbModel) */
@@ -315,12 +317,12 @@ int main(void)
                         break;
                 }
                 break;
-            case 'C':   /* Read the Version Code of the CPLD (U41) */
+            case 'C':   /* 0x43: Read the Version Code of the CPLD (U41) */
                 TxMessage.sMsgStruct.Parm1 = ReadCpld(6);       // Read CPLD_VERSION1
                 TxMessage.sMsgStruct.Parm2 = ReadCpld(5);       // Read CPLD_VERSION0
                 TxMessage.sMsgStruct.Length = 2;
                 break;
-            case 'D':   /* Program DAC (A through D) Output. Note: Expected data is in IQ32 format */
+            case 'D':   /* 0x44: Program DAC (A through D) Output. Note: Expected data is in IQ32 format */
                 if(SpiMode != 1) {
                     ConfigDacInterface();
                     SpiMode = 1;
@@ -334,7 +336,7 @@ int main(void)
                 TxDacData(RxMessage.sMsgStruct.Parm1, DacOut);
                 TxMessage.sMsgStruct.Length = 0;
                 break;
-            case 'E':   /* Test Serial EEPROM */
+            case 'E':   /* 0x45: Test Serial EEPROM */
                 if(SpiMode != 2) {
                     ConfigEepromInterface();
                     SpiMode = 2;
@@ -472,7 +474,7 @@ int main(void)
                         break;
                 }
                 break;
-            case 'G':   /* Toggle D7 and D8 ON and OFF */
+            case 'G':   /* 0x47: Toggle D7 and D8 ON and OFF */
                     GpioDataRegs.GPBSET.bit.GPIOB6 = 1;
                     GpioDataRegs.GPBCLEAR.bit.GPIOB7 = 1;
                     for(idx = 0; idx < 20; idx++) /* Total Delay ~ 1-sec */
@@ -487,7 +489,7 @@ int main(void)
                     GpioDataRegs.GPBSET.bit.GPIOB6 = 1;
                     GpioDataRegs.GPBSET.bit.GPIOB7 = 1;
                 break;
-            case 'I':   /* Read Digital Inputs DI_A[27..0], ID_A[3..0], and SYNC_I */
+            case 'I':   /* 0x49: Read Digital Inputs DI_A[27..0], ID_A[3..0], and SYNC_I */
                 TxMessage.sMsgStruct.Parm1 = ReadDspDI_B(); // Read DI_A[27..24]
                 TxMessage.sMsgStruct.Parm2 = ReadCpld(0x2); // Read DI_A[23..16]
                 TxMessage.sMsgStruct.Parm3 = ReadCpld(0x1); // Read DI_A[15..8]
@@ -498,7 +500,7 @@ int main(void)
                 TxMessage.sMsgStruct.Parm6 |= GpioDataRegs.GPGDAT.bit.GPIOG5;       // SERIAL_IN
                 TxMessage.sMsgStruct.Length = 6;
                 break;
-            case 'J':   /* Write/Read from external SPI BUS */
+            case 'J':   /* 0x4A: Write/Read from external SPI BUS */
                 if(SpiMode != 3) {
                     ConfigMax7301Interface();
                     SpiMode = 3;
@@ -548,7 +550,7 @@ int main(void)
                         break;
                 }
                 break;
-            case 'N':   /* Acquire and convert the selected On-Board ADC channel */
+            case 'N':   /* 0x4E: Acquire and convert the selected On-Board ADC channel */
                 if(SpiMode != 4) {
                     ConfigTlv1570Interface();
                     SpiMode = 4;
@@ -594,7 +596,7 @@ int main(void)
                 TxMessage.sMsgStruct.Parm2 = 0x00;
                 TxMessage.sMsgStruct.Length = 6;
                 break;
-            case 'O':   /* Write to Digital Outputs DO[23..0] and DMO[31..24] */
+            case 'O':   /* 0x4F: Write to Digital Outputs DO[23..0] and DMO[31..24] */
                 HighWord = (RxMessage.sMsgStruct.Parm1 << 8) | RxMessage.sMsgStruct.Parm2;
                 WriteCpld(0x8, RxMessage.sMsgStruct.Parm4); // Set DO_A[7..0]
                 WriteCpld(0x9, RxMessage.sMsgStruct.Parm3); // Set DO_A[15..8]
@@ -615,19 +617,19 @@ int main(void)
                 }
                 TxMessage.sMsgStruct.Length = 0;
                 break;
-            case 'P':   /* Query BEL_SNS, MEL_SNS, and PEL_SNS */
+            case 'P':   /* 0x50: Query BEL_SNS, MEL_SNS, and PEL_SNS */
                 TxMessage.sMsgStruct.Parm1 = ReadCpld(0x4); // Read CPLD Loop Enable Sense inputs
                 TxMessage.sMsgStruct.Length = 1;
                 break;
-            case 'Q':   /* Query CPLD Fault sub-system */
+            case 'Q':   /* 0x51: Query CPLD Fault sub-system */
                 TxMessage.sMsgStruct.Parm1 = ReadCpld(0x3); // Read CPLD Faults
                 TxMessage.sMsgStruct.Length = 1;
                 break;
-            case 'R':   /* Test The External SRAM (U43) */
+            case 'R':   /* 0x52: Test The External SRAM (U43) */
                 TxMessage.sMsgStruct.Parm1 = TestRam();
                 TxMessage.sMsgStruct.Length = 1;
                 break;
-            case 'S':   /* Set or Clear V5_ON, AD_TEST, and DSPTEST */
+            case 'S':   /* 0x53: Set or Clear V5_ON, AD_TEST, and DSPTEST */
                 if(RxMessage.sMsgStruct.Parm1 & 0x01) { // Set V5_ON
                     CpldRd = ReadCpld(0xb);
                     WriteCpld(0xb, (CpldRd | 0x01));    // Bit field 1 at addr(0xb) is defined as V5_ON
@@ -651,18 +653,18 @@ int main(void)
                     GpioDataRegs.GPECLEAR.bit.GPIOE2 = 1;
                 }
                 break;
-            case 'T':   /* Change Watchdog timer period to 325mS: Force Watchdog timer to time out */
+            case 'T':   /* 0x54: Change Watchdog timer period to 325mS: Force Watchdog timer to time out */
                 while(CpuTimer0Regs.TIM.all < (11400000 - 100)) {;} // Change close to the last dog kik
                 CpuTimer0Regs.PRD.all = 39000000;                   // Change period betweed edges to 325mS
                 TxMessage.sMsgStruct.Length = 0;
                 break;
-            case 'V':   /* Get DSP Firmware Version */
+            case 'V':   /* 0x55: Get DSP Firmware Version */
                     TxMessage.sMsgStruct.Parm3 = 0x01;
                     TxMessage.sMsgStruct.Parm2 = 0x05;
                     TxMessage.sMsgStruct.Length = 2;
                 break;
             default:    /* Unrecognized Command */
-                TxMessage.sMsgStruct.Cmd = '~';
+                TxMessage.sMsgStruct.Cmd = '~'; // ‘~’ (0x7E) = Unrecognized Command
                 TxMessage.sMsgStruct.Length = 0;
         }
         DELAY_US(65535); /* Delay approximately 82mS */
