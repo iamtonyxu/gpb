@@ -82,11 +82,11 @@ int main(void)
 
     /* Toggle D11, D12, D13, D14 and D15 to indicate successful boot */
     for(Cnt = 0; Cnt < 3*2; Cnt++) {
-        GpioDataRegs.GPATOGGLE.bit.GPIOA0 = 1;
-        GpioDataRegs.GPATOGGLE.bit.GPIOA1 = 1;
-        GpioDataRegs.GPATOGGLE.bit.GPIOA2 = 1;
-        GpioDataRegs.GPBTOGGLE.bit.GPIOB6 = 1;
-        GpioDataRegs.GPBTOGGLE.bit.GPIOB7 = 1;
+        GpioDataRegs.GPATOGGLE.bit.GPIOA0 = 1; // Toggle GPIOA0 (D13)
+        GpioDataRegs.GPATOGGLE.bit.GPIOA1 = 1; // Toggle GPIOA1 (D14)
+        GpioDataRegs.GPATOGGLE.bit.GPIOA2 = 1; // Toggle GPIOA2 (D15)
+        GpioDataRegs.GPBTOGGLE.bit.GPIOB6 = 1; // Toggle GPIOB6 (D12)
+        GpioDataRegs.GPBTOGGLE.bit.GPIOB7 = 1; // Toggle GPIOB7 (D11)
         for(idx = 0; idx < 20; idx++) /* Total Delay ~ 1-sec */
             DELAY_US(40000); /* Delay 50mS */
     }
@@ -97,7 +97,7 @@ int main(void)
     a 10mS sample rate. */
     GetAdcCalibrationFactors(&GainCalErr, &OffsCalErr);
 
-    TxMessage.sMsgStruct.Cmd = 'P';
+    TxMessage.sMsgStruct.Cmd = 'P'; //'P' = 0x50
     TxMessage.sMsgStruct.Length = 6;
     TxMessage.sMsgStruct.Parm1 = 0xaa;
     TxMessage.sMsgStruct.Parm2 = 0x55;
@@ -119,9 +119,9 @@ int main(void)
         TxMessage.sMsgStruct.Parm4 = 0x00;
         TxMessage.sMsgStruct.Parm5 = 0x00;
         TxMessage.sMsgStruct.Parm6 = 0x00;
-        GpioDataRegs.GPATOGGLE.bit.GPIOA0 = 1;
-        GpioDataRegs.GPATOGGLE.bit.GPIOA1 = 1;
-        GpioDataRegs.GPATOGGLE.bit.GPIOA2 = 1;
+        GpioDataRegs.GPATOGGLE.bit.GPIOA0 = 1; // Toggle GPIOA0 (D13)
+        GpioDataRegs.GPATOGGLE.bit.GPIOA1 = 1; // Toggle GPIOA1 (D14)
+        GpioDataRegs.GPATOGGLE.bit.GPIOA2 = 1; // Toggle GPIOA2 (D15)
         switch(RxMessage.sMsgStruct.Cmd) {
             case 'A':   /* 0x41: Acquire and Convert the selected DSP-ADC Channel */
                 StartConversion();
