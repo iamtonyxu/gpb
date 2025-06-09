@@ -97,7 +97,7 @@ void Max7301Write(Byte Reg, Byte Data)
 
 	while(SpiTxNotReady()) {} 	// Wait for any SPI Transmissions in progress 
 	
-	Max7301ChipSel(TRUE);		// Assert Chip select 
+	Max7301ChipSel(TRUE);		// Assert Chip select, SPIEX_EN, P35-5 -> J35-5, TP_D20
 	
 	TxSpi(Packet);
 	while(SpiRxNotReady()) {} 	// Wait for complete SPI Transmission 

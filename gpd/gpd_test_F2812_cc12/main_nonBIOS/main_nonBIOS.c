@@ -194,7 +194,7 @@ int main(void)
                     TxMessage.sMsgStruct.Length = 2;
                 }
                 break;
-            case 'B':   /* 0x41: Construct EEPROM Structure and write structure to EEPROM */
+            case 'B':   /* 0x42: Construct EEPROM Structure and write structure to EEPROM */
                 switch(RxMessage.sMsgStruct.Parm1) {
                     case 0: /* Get PCB Hardware Version and Model Number */
                         /* Construct Assembly Number Field (pcbModel) */
@@ -275,11 +275,11 @@ int main(void)
                         EepromWriteByte(0x1ff4, 0xa5);  // CAN ID Password
                         EepromWriteByte(0x1ff5, 0x77);  // CAN ID Password
                         EepromWriteByte(0x1ff6, 0x88);  // CAN ID Password
-                        //EepromWriteByte(0x1ff7, 0x94);    // CAN_ID
+                        EepromWriteByte(0x1ff7, 0x94);    // CAN_ID
                         TxMessage.sMsgStruct.Parm2 = 0x00;
                         TxMessage.sMsgStruct.Parm3 = 0x00;
                         TxMessage.sMsgStruct.Parm4 = 0x00;
-                        for(idx = 0x00; idx < 0x2c; idx++) {
+                        for(idx = 0x00; idx < 0x1c; idx++) {
                             if(EepromArray[idx] != EepromReadByte(idx))
                                 TxMessage.sMsgStruct.Parm2++;
                             if(EepromArray[idx] != EepromReadByte(idx + 0x200))
@@ -344,7 +344,7 @@ int main(void)
                 TxMessage.sMsgStruct.Parm1 = EepromTest(); /* This test can take up to 3 minutes to complete */
                 TxMessage.sMsgStruct.Length = 1;
                 break;
-            case 'F':   /* Test external Power Distribution Board Serial EEPROM */
+            case 'F':   /* 0x46: Test external Power Distribution Board Serial EEPROM */
                 ConfigEepromInterface();
                 SpiMode = 2;
                 switch (RxMessage.sMsgStruct.Parm1) {
@@ -474,8 +474,9 @@ int main(void)
                         break;
                 }
                 break;
-            case 'G':   /* 0x47: Toggle D7 and D8 ON and OFF */
-                    GpioDataRegs.GPBSET.bit.GPIOB6 = 1;
+            case 'G':   /* 0x47: Toggle D11 and D12 ON and OFF */
+                    GpioDataRegs.GPBSET.bit.GPIOB6 = 1; // Set GPIOB6 (D12) HIGH
+                    GpioDataRegs.GPBSET.bit.GPIOB7 = 1; // Set GPIOB7 (D11) HIGH
                     GpioDataRegs.GPBCLEAR.bit.GPIOB7 = 1;
                     for(idx = 0; idx < 20; idx++) /* Total Delay ~ 1-sec */
                         DELAY_US(40000); /* Delay 50mS */
@@ -489,8 +490,8 @@ int main(void)
                     GpioDataRegs.GPBSET.bit.GPIOB6 = 1;
                     GpioDataRegs.GPBSET.bit.GPIOB7 = 1;
                 break;
-            case 'I':   /* 0x49: Read Digital Inputs DI_A[27..0], ID_A[3..0], and SYNC_I */
-                TxMessage.sMsgStruct.Parm1 = ReadDspDI_B(); // Read DI_A[27..24]
+            case 'I':   /* 0x49: Read Digital Inputs DI_B[3..0], DI_A[27..0], ID_A[3..0], and SYNC_I */
+                TxMessage.sMsgStruct.Parm1 = ReadDspDI_B(); // Read DI_B[3..0]
                 TxMessage.sMsgStruct.Parm2 = ReadCpld(0x2); // Read DI_A[23..16]
                 TxMessage.sMsgStruct.Parm3 = ReadCpld(0x1); // Read DI_A[15..8]
                 TxMessage.sMsgStruct.Parm4 = ReadCpld(0x0); // Read DI_A[7..0]
@@ -593,7 +594,7 @@ int main(void)
                 TxMessage.sMsgStruct.Parm5 = ((Iq32 >> 8) & 0xff);
                 TxMessage.sMsgStruct.Parm4 = ((Iq32 >> 16) & 0xff);
                 TxMessage.sMsgStruct.Parm3 = ((Iq32 >> 24) & 0xff);
-                TxMessage.sMsgStruct.Parm2 = 0x00;
+                TxMessage.sMsgStruct.Parm1 = RxMessage.sMsgStruct.Parm1;
                 TxMessage.sMsgStruct.Length = 6;
                 break;
             case 'O':   /* 0x4F: Write to Digital Outputs DO[23..0] and DMO[31..24] */
@@ -625,18 +626,18 @@ int main(void)
                 TxMessage.sMsgStruct.Parm1 = ReadCpld(0x3); // Read CPLD Faults
                 TxMessage.sMsgStruct.Length = 1;
                 break;
-            case 'R':   /* 0x52: Test The External SRAM (U43) */
+            case 'R':   /* 0x52: Test The External SRAM (U30) */
                 TxMessage.sMsgStruct.Parm1 = TestRam();
                 TxMessage.sMsgStruct.Length = 1;
                 break;
-            case 'S':   /* 0x53: Set or Clear V5_ON, AD_TEST, and DSPTEST */
-                if(RxMessage.sMsgStruct.Parm1 & 0x01) { // Set V5_ON
+            case 'S':   /* 0x53: Set or Clear 5V_ON, AD_TEST, and DSPTEST */
+                if(RxMessage.sMsgStruct.Parm1 & 0x01) { // Set 5V_ON
                     CpldRd = ReadCpld(0xb);
-                    WriteCpld(0xb, (CpldRd | 0x01));    // Bit field 1 at addr(0xb) is defined as V5_ON
+                    WriteCpld(0xb, (CpldRd | 0x01));    // Bit field 1 at addr(0xb) is defined as 5V_ON
                 }
-                else {                                  // Clear V5_ON
+                else {                                  // Clear 5V_ON
                     CpldRd = ReadCpld(0xb);
-                    WriteCpld(0xb, (CpldRd & 0xfe));    // Bit field 1 at addr(0xb) is defined as V5_ON
+                    WriteCpld(0xb, (CpldRd & 0xfe));    // Bit field 1 at addr(0xb) is defined as 5V_ON
                 }
                 if(RxMessage.sMsgStruct.Parm1 & 0x02) { // Set AD_TEST
                     CpldRd = ReadCpld(0xb);
@@ -660,7 +661,7 @@ int main(void)
                 break;
             case 'V':   /* 0x55: Get DSP Firmware Version */
                     TxMessage.sMsgStruct.Parm3 = 0x01;
-                    TxMessage.sMsgStruct.Parm2 = 0x05;
+                    TxMessage.sMsgStruct.Parm2 = 0x06; // Version 6.1
                     TxMessage.sMsgStruct.Length = 2;
                 break;
             default:    /* Unrecognized Command */
