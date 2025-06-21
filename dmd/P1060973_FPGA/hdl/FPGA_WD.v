@@ -20,13 +20,13 @@ module FPGA_WDI(
     input   OPB_CLK,
     input   PULSE_100US,
     input   OPB_RST,
-    output  WD_OUT
+    output  WD_TRIG
 );
     reg [4:0] watchdog_time_100us;
 
  
     reg wdi; 
-    assign WD_OUT = wdi;
+    assign WD_TRIG = wdi;
    
 	always@(posedge PULSE_100US or posedge OPB_RST) begin
         if(OPB_RST) begin

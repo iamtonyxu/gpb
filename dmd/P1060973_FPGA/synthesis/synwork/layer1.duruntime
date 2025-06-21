@@ -5,3 +5,17 @@ Runtime Summary:
 	=====================================================
 		*Library: work, Entity: work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY, Architecture: rtl
 			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
+		*Library: work, Entity: serial_eeprom_if, Architecture: rtl
+			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
+		*Library: work, Entity: work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY, Architecture: rtl
+			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
+		*Library: work, Entity: cmn_debouncer_8_8, Architecture: rtl
+			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
+		*Library: work, Entity: SIMPLE_PH_PWM, Architecture: behavioral
+			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
+		*Library: work, Entity: PH_PWM_625_0_80_128_3_3, Architecture: behavioral
+			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
+		*Library: work, Entity: CMN_DEADBAND_5, Architecture: rtl
+			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
+		*Library: work, Entity: cmn_pwm, Architecture: rtl
+			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time

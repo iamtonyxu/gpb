@@ -179,7 +179,7 @@ module msg_read(
         end else begin
             if (state == IDLE) begin
                 timeout_cnt <= 16'd0; // reset timeout counter to 0 in idle state
-            end else if (state == ADDR || state == DATA || state == TAIL) begin
+            end else if (state == HEAD || state == ADDR || state == DATA || state == TAIL) begin
                 if (timeout_cnt < TIMEOUT_LIMIT) begin
                     timeout_cnt <= timeout_cnt + 1; // increment timeout counter
                 end

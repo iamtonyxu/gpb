@@ -1,43 +1,116 @@
 @N|Running in 64-bit mode
 @N|Running in 64-bit mode
-@N:"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":42:7:42:14|Top entity is set to cmn_uart.
-@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd'.
+@N:"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":24:7:24:13|Top entity is set to cmn_pwm.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\PH_PWM.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\SIMPLE_PH_PWM.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_deadband.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd'.
 @N: CD231 :"C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd2008\std1164.vhd":889:16:889:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
 @N|Running in 64-bit mode
 @N: CG1349 :	| Running Verilog Compiler in System Verilog mode
 @N: CG1349 :	| Running Verilog Compiler in System Verilog mode
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":62:7:62:11|Synthesizing module afifo in library work.
-@N: CL134 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":149:1:149:6|Found RAM mem, depth=16, width=8
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_buffer.v":3:7:3:16|Synthesizing module msg_buffer in library work.
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":21:7:21:14|Synthesizing module msg_read in library work.
-@N: CG179 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":187:31:187:41|Removing redundant assignment.
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":21:7:21:15|Synthesizing module msg_write in library work.
-@N: CG179 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":143:32:143:39|Removing redundant assignment.
-@N: CG179 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":164:29:164:37|Removing redundant assignment.
-@N: CG179 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":165:27:165:33|Removing redundant assignment.
-@N: CG179 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":180:27:180:33|Removing redundant assignment.
-@N: CG179 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":197:27:197:33|Removing redundant assignment.
-@N: CG179 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":246:31:246:41|Removing redundant assignment.
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\opb_emu_target.v":3:7:3:20|Synthesizing module opb_emu_target in library work.
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmd_server.v":3:7:3:16|Synthesizing module cmd_server in library work.
-@N: CG794 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmd_server.v":48:6:48:18|Using module cmn_uart from library work
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v":51:7:51:17|Synthesizing module AdderDecode in library work.
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":20:7:20:26|Synthesizing module SCRATCH_PAD_REGISTER in library work.
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":3:7:3:9|Synthesizing module top in library work.
-@N: CL201 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":74:4:74:9|Trying to extract state machine for register state.
-@N: CL201 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Trying to extract state machine for register state.
-@N:"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":42:7:42:14|Top entity is set to cmn_uart.
-@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd'.
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_DIV.V":21:7:21:15|Synthesizing module CLOCK_DIV in library work.
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":62:7:62:11|Synthesizing module afifo in library work.
+@N: CL134 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":149:1:149:6|Found RAM mem, depth=16, width=8
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_buffer.v":3:7:3:16|Synthesizing module msg_buffer in library work.
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":21:7:21:14|Synthesizing module msg_read in library work.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":187:31:187:41|Removing redundant assignment.
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":21:7:21:15|Synthesizing module msg_write in library work.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":143:32:143:39|Removing redundant assignment.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":164:29:164:37|Removing redundant assignment.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":165:27:165:33|Removing redundant assignment.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":180:27:180:33|Removing redundant assignment.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":197:27:197:33|Removing redundant assignment.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":246:31:246:41|Removing redundant assignment.
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\opb_emu_target.v":3:7:3:20|Synthesizing module opb_emu_target in library work.
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmd_server.v":3:7:3:16|Synthesizing module cmd_server in library work.
+@N: CG794 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmd_server.v":48:6:48:18|Using module cmn_uart from library work
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v":21:7:21:17|Synthesizing module AdderDecode in library work.
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_GEN.v":32:7:32:12|Synthesizing module ClkGen in library work.
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":62:7:62:11|Synthesizing module afifo in library work.
+@N: CL134 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":149:1:149:6|Found RAM mem, depth=4, width=8
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":22:7:22:24|Synthesizing module OSCILLATOR_COUNTER in library work.
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":20:7:20:26|Synthesizing module SCRATCH_PAD_REGISTER in library work.
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\EEPROM_OPB_IF.v":3:7:3:19|Synthesizing module EEPROM_OPB_IF in library work.
+@N: CG794 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\EEPROM_OPB_IF.v":99:21:99:31|Using module serial_eeprom_if from library work
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\dual_port_ram.v":19:7:19:18|Synthesizing module DP_RAM_2R_1W in library work.
+@N: CL134 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\dual_port_ram.v":53:1:53:6|Found RAM ram, depth=1024, width=16
+@N: CL134 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\dual_port_ram.v":53:1:53:6|Found RAM ram, depth=1024, width=16
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":53:7:53:20|Synthesizing module ADC_ADS8864_IF in library work.
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\dual_port_ram.v":19:7:19:18|Synthesizing module DP_RAM_2R_1W in library work.
+@N: CL134 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\dual_port_ram.v":53:1:53:6|Found RAM ram, depth=16, width=24
+@N: CL134 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\dual_port_ram.v":53:1:53:6|Found RAM ram, depth=16, width=24
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":62:7:62:11|Synthesizing module afifo in library work.
+@N: CL134 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":149:1:149:6|Found RAM mem, depth=16, width=24
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\DAC_DACx0504_IF.v":16:7:16:21|Synthesizing module DAC_DACx0504_IF in library work.
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FPGA_WD.v":19:7:19:14|Synthesizing module FPGA_WDI in library work.
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":15:7:15:10|Synthesizing module GPIO in library work.
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":26:7:26:13|Synthesizing module MSSB_IF in library work.
+@N: CG794 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":262:6:262:18|Using module cmn_uart from library work
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":26:7:26:21|Synthesizing module cmn_pwm_wrapper in library work.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":131:31:131:45|Removing redundant assignment.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":132:31:132:45|Removing redundant assignment.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":133:31:133:45|Removing redundant assignment.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":134:29:134:41|Removing redundant assignment.
+@N: CG794 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":303:12:303:16|Using module cmn_pwm from library work
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v":3:7:3:9|Synthesizing module top in library work.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":200:4:200:9|Trying to extract state machine for register state.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":92:4:92:9|Trying to extract state machine for register state.
+@N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":55:24:55:38|Input SHUNT_EN_CNT_RE is unused.
+@N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FPGA_WD.v":20:12:20:18|Input OPB_CLK is unused.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\DAC_DACx0504_IF.v":127:4:127:9|Trying to extract state machine for register state.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":147:4:147:9|Trying to extract state machine for register status.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":147:4:147:9|Trying to extract state machine for register state.
+@N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\EEPROM_OPB_IF.v":8:24:8:29|Input EEP_RE is unused.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\opb_emu_target.v":130:4:130:9|Trying to extract state machine for register state.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":74:4:74:9|Trying to extract state machine for register state.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Trying to extract state machine for register state.
+@N:"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":42:7:42:14|Top entity is set to cmn_uart.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\PH_PWM.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\SIMPLE_PH_PWM.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_deadband.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd'.
 @N: CD231 :"C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd2008\std1164.vhd":889:16:889:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
+@N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":24:7:24:13|Synthesizing work.cmn_pwm.rtl.
+@N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_deadband.vhd":45:7:45:18|Synthesizing work.cmn_deadband.rtl.
+@N: CD231 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_deadband.vhd":66:24:66:25|Using onehot encoding for type db_state_type. For example, enumeration db_state_00 is mapped to "10000".
+@N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\PH_PWM.vhd":23:7:23:12|Synthesizing work.ph_pwm.behavioral.
+@N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\SIMPLE_PH_PWM.vhd":5:7:5:19|Synthesizing work.simple_ph_pwm.behavioral.
+@N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":22:7:22:19|Synthesizing work.cmn_debouncer.rtl.
+@N: Setting default value for generic baud_rate to 921600;
+@N: Setting default value for generic clock_frequency to 100000000;
+@N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":42:7:42:14|Synthesizing work.cmn_uart.rtl.
+@N: CD231 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":127:27:127:28|Using onehot encoding for type uart_tx_states. For example, enumeration idle is mapped to "10000".
+@N: CD233 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":142:27:142:28|Using sequential encoding for type uart_rx_states.
+@N: CD604 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":280:20:280:33|OTHERS clause is not synthesized.
+@N: CD604 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":468:20:468:33|OTHERS clause is not synthesized.
+@N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd":28:7:28:22|Synthesizing work.serial_eeprom_if.rtl.
+@N: CD231 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd":53:34:53:35|Using onehot encoding for type eeprom_cycle_state_type. For example, enumeration idle is mapped to "100000000000".
+@N: CD604 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd":298:20:298:33|OTHERS clause is not synthesized.
 @N: Setting default value for generic baud_rate to 115200;
 @N: Setting default value for generic clock_frequency to 100000000;
-@N: CD630 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":42:7:42:14|Synthesizing work.cmn_uart.rtl.
-@N: CD231 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":127:27:127:28|Using onehot encoding for type uart_tx_states. For example, enumeration idle is mapped to "10000".
-@N: CD233 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":142:27:142:28|Using sequential encoding for type uart_rx_states.
-@N: CD604 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":280:20:280:33|OTHERS clause is not synthesized.
-@N: CD604 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":468:20:468:33|OTHERS clause is not synthesized.
-@N: CL201 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":353:6:353:7|Trying to extract state machine for register uart_rx_state.
-@N: CL201 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":222:6:222:7|Trying to extract state machine for register uart_tx_state.
-@N: CL159 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":67:12:67:22|Input uart_active is unused.
+@N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":42:7:42:14|Synthesizing work.cmn_uart.rtl.
+@N: CD231 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":127:27:127:28|Using onehot encoding for type uart_tx_states. For example, enumeration idle is mapped to "10000".
+@N: CD233 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":142:27:142:28|Using sequential encoding for type uart_rx_states.
+@N: CD604 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":280:20:280:33|OTHERS clause is not synthesized.
+@N: CD604 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":468:20:468:33|OTHERS clause is not synthesized.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":353:6:353:7|Trying to extract state machine for register uart_rx_state.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":222:6:222:7|Trying to extract state machine for register uart_tx_state.
+@N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":67:12:67:22|Input uart_active is unused.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd":100:10:100:11|Trying to extract state machine for register eeprom_cycle_state.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":353:6:353:7|Trying to extract state machine for register uart_rx_state.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":222:6:222:7|Trying to extract state machine for register uart_tx_state.
+@N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":67:12:67:22|Input uart_active is unused.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_deadband.vhd":91:10:91:11|Trying to extract state machine for register DB_STATE.
+@N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":39:5:39:15|Input pulse_200us is unused.
+@N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":46:5:46:19|Input mot_pwm_param01 is unused.
+@N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":47:5:47:19|Input mot_pwm_param23 is unused.
+@N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":48:5:48:19|Input mot_pwm_param45 is unused.
 @N|Running in 64-bit mode
 

@@ -1,5 +1,5 @@
 `timescale 1ns/100ps
-
+/*
 `define NOP_ADDR        4'h0
 `define DEVICE_ID_ADDR  4'h1
 `define SYNC_ADDR       4'h2
@@ -12,8 +12,8 @@
 `define DAC1_ADDR       4'h9
 `define DAC2_ADDR       4'hA
 `define DAC3_ADDR       4'hB
-
-module DAC_DACx0504(
+*/
+module DAC_DACx0504_IF(
     input               OPB_CLK,
     input               OPB_RST,
     input       [31:0]  OPB_ADDR,
@@ -23,7 +23,7 @@ module DAC_DACx0504(
     output      [31:0]  OPB_DO,
     output              DAC_CLK,
     output              DAC_SDI,
-    output reg          DAC_CS,
+    output reg          DAC_CS_N,
     input               DAC_SDO
 );
 
@@ -49,18 +49,16 @@ module DAC_DACx0504(
     reg opb_dummy_re;
 
     /* DAC Access State Machine
-     * IDLE: DAC_CS = 0, any valid OPB Write/Read will trigger state from IDLE to CS_HIGH
-     * CS_HIGH: DAC_CS = 1, CS high duration min = 15ns
-     * CS_LOW: DAC_CS = 0, CS low duration min = 20ns
+     * IDLE: DAC_CS_N = 1, any valid OPB Write/Read will trigger state from IDLE to CS_LOW
+     * CS_LOW: DAC_CS_N = 0, CS low duration min = 20ns
      * BIT_SHIFT: Shift out data_out[23:0] from MSB to LSB with clk_sd rising edge, DAC_SDI = data_out[23];
      * BIT_SHIFT: Shift in data_in[23:0] from MSB to LSB with clk_sd falling edge, data_in[23] = DAC_SDO;
-     * DONE: DAC_CS = 1, Done state, DAC_CS = 1, CS high duration min = 15ns
+     * DONE: DAC_CS_N = 1, Done state, DAC_CS_N = 1, CS high duration min = 15ns
      * After DONE, state machine will go back to IDLE state
     */
     parameter IDLE = 3'b000;
-    parameter CS_HIGH = 3'b001;
-    parameter CS_LOW = 3'b010;
-    parameter BIT_SHIFT = 3'b011;
+    parameter CS_LOW = 3'b001;
+    parameter BIT_SHIFT = 3'b010;
     parameter DONE = 3'b100;
 
     reg [2:0] state; // Current state of the state machine
@@ -75,7 +73,7 @@ module DAC_DACx0504(
 		.CLK_OUT(clk_sd)
 	);
 
-    // Passing data from ADC to OPB Read
+    // Passing data from DAC to OPB Read
     DP_RAM_2R_1W #(
         .ADDR_WIDTH(4),                // 16 samples of data
         .DATA_WIDTH(24)                // 24-bit samples
@@ -131,27 +129,27 @@ module DAC_DACx0504(
             state <= IDLE;
             bit_count <= 0;
             data_out <= 0;
-            DAC_CS <= 1'b1; // CS high
+            DAC_CS_N <= 1'b1; // CS high
         end else begin
             case (state)
                 IDLE: begin
                     bit_count <= 0;
                     if (opb_fifo_rd) begin
                         data_out <= opb_fifo_rdata; 
-                        DAC_CS <= 1'b0; // CS low
+                        DAC_CS_N <= 1'b0; // CS low
                         state <= CS_LOW;
                     end else begin
-                        DAC_CS <= 1'b1; // CS high
+                        DAC_CS_N <= 1'b1; // CS high
                         state <= IDLE;
                     end
                 end
                 CS_LOW: begin
-                    DAC_CS <= 1'b0; // CS low
+                    DAC_CS_N <= 1'b0; // CS low
                     state <= BIT_SHIFT;
                 end
                 BIT_SHIFT: begin
                     if (bit_count == 23) begin
-                        DAC_CS <= 1'b1; // CS high
+                        DAC_CS_N <= 1'b1; // CS high
                         bit_count <= 0; // Reset bit count
                         state <= DONE; // Last bit shifted out, go to DONE state
                     end else begin

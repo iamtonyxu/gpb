@@ -16,7 +16,7 @@
 </header>
 <row>
  <cell>0.1</cell>
- <cell>Mon Apr 21 22:06:53 2025</cell>
+ <cell>Sat Jun  7 03:06:12 2025</cell>
  <cell>Designer</cell>
  <cell>v2024.2</cell>
  <cell>2024.2.0.13</cell>
@@ -82,33 +82,33 @@
 </row>
 <row>
  <cell>A2</cell>
- <cell>---</cell>
+ <cell>EXT_BRK3_DRV_EN</cell>
  <cell>GPIO145PB2/CLKIN_S_2/CCC_SW_CLKIN_S_2/CCC_SW_PLL1_OUT0</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>EXT_BRK3_DRV_EN</cell>
 </row>
 <row>
  <cell>A3</cell>
- <cell>UART_RXD</cell>
+ <cell>DBUG_HEADER2</cell>
  <cell>GPIO145NB2</cell>
  <cell>Bank2</cell>
  <cell>Fixed</cell>
@@ -130,7 +130,7 @@
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>UART_RXD</cell>
+ <cell>DBUG_HEADER2</cell>
 </row>
 <row>
  <cell>A4</cell>
@@ -160,107 +160,107 @@
 </row>
 <row>
  <cell>A5</cell>
- <cell>---</cell>
+ <cell>GNT_MOT_PWR_EN</cell>
  <cell>GPIO3NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_MOT_PWR_EN</cell>
 </row>
 <row>
  <cell>A6</cell>
- <cell>---</cell>
+ <cell>P5V_ISO_MON_LFT</cell>
  <cell>GPIO9PB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>P5V_ISO_MON_LFT</cell>
 </row>
 <row>
  <cell>A7</cell>
- <cell>---</cell>
+ <cell>GNT_PWM_PHA_HI</cell>
  <cell>GPIO9NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_PWM_PHA_HI</cell>
 </row>
 <row>
  <cell>A8</cell>
- <cell>---</cell>
+ <cell>GNT_PWM_PHC_HI</cell>
  <cell>GPIO11NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_PWM_PHC_HI</cell>
 </row>
 <row>
  <cell>A9</cell>
@@ -290,22 +290,22 @@
 </row>
 <row>
  <cell>A10</cell>
- <cell>---</cell>
+ <cell>SPD2_24V_STATUS_N</cell>
  <cell>GPIO16PB2/LPRB_A</cell>
  <cell>Bank2</cell>
- <cell>User Reserved</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
@@ -316,22 +316,22 @@
 </row>
 <row>
  <cell>A11</cell>
- <cell>---</cell>
+ <cell>LFT_ST_DISB</cell>
  <cell>GPIO16NB2/LPRB_B</cell>
  <cell>Bank2</cell>
- <cell>User Reserved</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
@@ -342,55 +342,55 @@
 </row>
 <row>
  <cell>A12</cell>
- <cell>---</cell>
+ <cell>LFT_HW_EN_N</cell>
  <cell>GPIO17PB2/CLKIN_S_7</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>LFT_HW_EN_N</cell>
 </row>
 <row>
  <cell>A13</cell>
- <cell>---</cell>
+ <cell>GNT_ST_DISB</cell>
  <cell>GPIO17NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>GNT_ST_DISB</cell>
 </row>
 <row>
  <cell>A14</cell>
@@ -420,81 +420,81 @@
 </row>
 <row>
  <cell>A15</cell>
- <cell>---</cell>
+ <cell>CCH_LAT_LNG_FLOAT_N</cell>
  <cell>GPIO35PB2/CLKIN_S_9/CCC_SE_CLKIN_S_9</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>CCH_LAT_LNG_FLOAT_N</cell>
 </row>
 <row>
  <cell>A16</cell>
- <cell>---</cell>
+ <cell>EMO_GOOD_N</cell>
  <cell>GPIO35NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>EMO_GOOD_N</cell>
 </row>
 <row>
  <cell>A17</cell>
- <cell>---</cell>
+ <cell>LFT_ROT_BRK_RLS</cell>
  <cell>GPIO32PB2/DQS/CCC_SE_PLL0_OUT0</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>LFT_ROT_BRK_RLS</cell>
 </row>
 <row>
  <cell>A18</cell>
@@ -1772,133 +1772,133 @@
 </row>
 <row>
  <cell>B1</cell>
- <cell>---</cell>
+ <cell>EXT_BRK2_DRV_EN</cell>
  <cell>GPIO144NB2/DQS</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>EXT_BRK2_DRV_EN</cell>
 </row>
 <row>
  <cell>B2</cell>
- <cell>---</cell>
+ <cell>DBUG_HEADER8</cell>
  <cell>GPIO147PB2/CLKIN_S_3/CCC_SW_CLKIN_S_3</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>DBUG_HEADER8</cell>
 </row>
 <row>
  <cell>B3</cell>
- <cell>---</cell>
+ <cell>DBUG_HEADER10</cell>
  <cell>GPIO147NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>DBUG_HEADER10</cell>
 </row>
 <row>
  <cell>B4</cell>
- <cell>---</cell>
+ <cell>GNT_EMOPS_EN</cell>
  <cell>GPIO3PB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_EMOPS_EN</cell>
 </row>
 <row>
  <cell>B5</cell>
- <cell>---</cell>
+ <cell>OC_V_GNT_BRK_DRV</cell>
  <cell>GPIO5NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OC_V_GNT_BRK_DRV</cell>
 </row>
 <row>
  <cell>B6</cell>
@@ -1928,107 +1928,107 @@
 </row>
 <row>
  <cell>B7</cell>
- <cell>---</cell>
+ <cell>P5V_ISO_MON_GNT</cell>
  <cell>GPIO7NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>P5V_ISO_MON_GNT</cell>
 </row>
 <row>
  <cell>B8</cell>
- <cell>---</cell>
+ <cell>GNT_PWM_PHB_LO</cell>
  <cell>GPIO11PB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_PWM_PHB_LO</cell>
 </row>
 <row>
  <cell>B9</cell>
- <cell>---</cell>
+ <cell>GNT_ST_DISB_MON</cell>
  <cell>GPIO14PB2/DQS</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_ST_DISB_MON</cell>
 </row>
 <row>
  <cell>B10</cell>
- <cell>---</cell>
+ <cell>DMD_PWR_OK</cell>
  <cell>GPIO14NB2/DQS</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>DMD_PWR_OK</cell>
 </row>
 <row>
  <cell>B11</cell>
@@ -2058,107 +2058,107 @@
 </row>
 <row>
  <cell>B12</cell>
- <cell>---</cell>
+ <cell>GNT_PWM_PHC_LO</cell>
  <cell>GPIO12PB2/CLKIN_S_4</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_PWM_PHC_LO</cell>
 </row>
 <row>
  <cell>B13</cell>
- <cell>---</cell>
+ <cell>GNT_HW_EN_MON</cell>
  <cell>GPIO12NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_HW_EN_MON</cell>
 </row>
 <row>
  <cell>B14</cell>
- <cell>---</cell>
+ <cell>EM_DOWN_LIMIT</cell>
  <cell>GPIO33PB2/CLKIN_S_8/CCC_SE_CLKIN_S_8/CCC_SE_PLL0_OUT0</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>EM_DOWN_LIMIT</cell>
 </row>
 <row>
  <cell>B15</cell>
- <cell>---</cell>
+ <cell>EM_UP_LIMIT</cell>
  <cell>GPIO33NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>EM_UP_LIMIT</cell>
 </row>
 <row>
  <cell>B16</cell>
@@ -2188,29 +2188,29 @@
 </row>
 <row>
  <cell>B17</cell>
- <cell>---</cell>
+ <cell>LAT_LNG_BRK_RLS</cell>
  <cell>GPIO32NB2/DQS</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>LAT_LNG_BRK_RLS</cell>
 </row>
 <row>
  <cell>B18</cell>
@@ -2344,55 +2344,55 @@
 </row>
 <row>
  <cell>C1</cell>
- <cell>---</cell>
+ <cell>EXT_BRK1_DRV_EN</cell>
  <cell>GPIO144PB2/DQS/CCC_SW_PLL1_OUT0</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>EXT_BRK1_DRV_EN</cell>
 </row>
 <row>
  <cell>C2</cell>
- <cell>---</cell>
+ <cell>HSWAP_FAULT</cell>
  <cell>GPIO143NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>HSWAP_FAULT</cell>
 </row>
 <row>
  <cell>C3</cell>
@@ -2422,107 +2422,107 @@
 </row>
 <row>
  <cell>C4</cell>
- <cell>---</cell>
+ <cell>P12V_ISO_EN</cell>
  <cell>GPIO1NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>P12V_ISO_EN</cell>
 </row>
 <row>
  <cell>C5</cell>
- <cell>---</cell>
+ <cell>OC_V_GNT_MOT_DRV</cell>
  <cell>GPIO5PB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OC_V_GNT_MOT_DRV</cell>
 </row>
 <row>
  <cell>C6</cell>
- <cell>---</cell>
+ <cell>GNT_EMOPS_OV_L</cell>
  <cell>GPIO7PB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>GNT_EMOPS_OV_L</cell>
 </row>
 <row>
  <cell>C7</cell>
- <cell>---</cell>
+ <cell>GNT_BRK_PWR_FLT_N</cell>
  <cell>GPIO6NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>GNT_BRK_PWR_FLT_N</cell>
 </row>
 <row>
  <cell>C8</cell>
@@ -2552,107 +2552,107 @@
 </row>
 <row>
  <cell>C9</cell>
- <cell>---</cell>
+ <cell>LFT_ST_DISB_MON</cell>
  <cell>GPIO13PB2/CLKIN_S_5</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>LFT_ST_DISB_MON</cell>
 </row>
 <row>
  <cell>C10</cell>
- <cell>---</cell>
+ <cell>LFT_HW_EN_MON</cell>
  <cell>GPIO13NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>LFT_HW_EN_MON</cell>
 </row>
 <row>
  <cell>C11</cell>
- <cell>---</cell>
+ <cell>SPARE_MON</cell>
  <cell>GPIO15PB2/CLKIN_S_6</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>SPARE_MON</cell>
 </row>
 <row>
  <cell>C12</cell>
- <cell>---</cell>
+ <cell>SPDIO_FLT_N</cell>
  <cell>GPIO15NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>SPDIO_FLT_N</cell>
 </row>
 <row>
  <cell>C13</cell>
@@ -2682,107 +2682,107 @@
 </row>
 <row>
  <cell>C14</cell>
- <cell>---</cell>
+ <cell>EMOPS_STAT1</cell>
  <cell>GPIO31PB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>EMOPS_STAT1</cell>
 </row>
 <row>
  <cell>C15</cell>
- <cell>---</cell>
+ <cell>EMOPS_STAT2</cell>
  <cell>GPIO31NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>EMOPS_STAT2</cell>
 </row>
 <row>
  <cell>C16</cell>
- <cell>---</cell>
+ <cell>CCH_LFT_MOT_EN_N</cell>
  <cell>GPIO34PB2/CCC_SE_PLL0_OUT1</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>CCH_LFT_MOT_EN_N</cell>
 </row>
 <row>
  <cell>C17</cell>
- <cell>---</cell>
+ <cell>CCH_LFT_DWN_N</cell>
  <cell>GPIO34NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>CCH_LFT_DWN_N</cell>
 </row>
 <row>
  <cell>C18</cell>
@@ -2942,81 +2942,81 @@
 </row>
 <row>
  <cell>D2</cell>
- <cell>---</cell>
+ <cell>MSSB_COMM_FAULT</cell>
  <cell>GPIO143PB2/CCC_SW_CLKIN_S_1</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>12</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>MSSB_COMM_FAULT</cell>
 </row>
 <row>
  <cell>D3</cell>
- <cell>---</cell>
+ <cell>DBUG_HEADER6</cell>
  <cell>GPIO146NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>DBUG_HEADER6</cell>
 </row>
 <row>
  <cell>D4</cell>
- <cell>---</cell>
+ <cell>FAN_EN</cell>
  <cell>GPIO1PB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>FAN_EN</cell>
 </row>
 <row>
  <cell>D5</cell>
@@ -3046,107 +3046,107 @@
 </row>
 <row>
  <cell>D6</cell>
- <cell>---</cell>
+ <cell>WD_TRIG</cell>
  <cell>GPIO4NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>WD_TRIG</cell>
 </row>
 <row>
  <cell>D7</cell>
- <cell>---</cell>
+ <cell>GNT_MOT_PWR_FLT_N</cell>
  <cell>GPIO6PB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>GNT_MOT_PWR_FLT_N</cell>
 </row>
 <row>
  <cell>D8</cell>
- <cell>---</cell>
+ <cell>GNT_SHUNT_ON</cell>
  <cell>GPIO8NB2/DQS</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>GNT_SHUNT_ON</cell>
 </row>
 <row>
  <cell>D9</cell>
- <cell>---</cell>
+ <cell>GNT_PWM_PHB_HI</cell>
  <cell>GPIO10NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_PWM_PHB_HI</cell>
 </row>
 <row>
  <cell>D10</cell>
@@ -3176,107 +3176,107 @@
 </row>
 <row>
  <cell>D11</cell>
- <cell>---</cell>
+ <cell>LFT_HALL_SNS2_N</cell>
  <cell>GPIO26PB2/DQS</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>LFT_HALL_SNS2_N</cell>
 </row>
 <row>
  <cell>D12</cell>
- <cell>---</cell>
+ <cell>LFT_HALL_SNS3_N</cell>
  <cell>GPIO26NB2/DQS</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>LFT_HALL_SNS3_N</cell>
 </row>
 <row>
  <cell>D13</cell>
- <cell>---</cell>
+ <cell>LFT_EMOPS_OV_L</cell>
  <cell>GPIO29PB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>LFT_EMOPS_OV_L</cell>
 </row>
 <row>
  <cell>D14</cell>
- <cell>---</cell>
+ <cell>LFT_MOT_PWR_EN</cell>
  <cell>GPIO30PB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>LFT_MOT_PWR_EN</cell>
 </row>
 <row>
  <cell>D15</cell>
@@ -3306,55 +3306,55 @@
 </row>
 <row>
  <cell>D16</cell>
- <cell>---</cell>
+ <cell>EXOPS_GNT_24V_EN</cell>
  <cell>GPIO38PB2/DQS/CCC_SE_PLL1_OUT0</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>EXOPS_GNT_24V_EN</cell>
 </row>
 <row>
  <cell>D17</cell>
- <cell>---</cell>
+ <cell>GNT_CCW_LIMIT</cell>
  <cell>GPIO38NB2/DQS</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>GNT_CCW_LIMIT</cell>
 </row>
 <row>
  <cell>D18</cell>
@@ -3488,29 +3488,29 @@
 </row>
 <row>
  <cell>E1</cell>
- <cell>---</cell>
+ <cell>MAINS_LEVEL_FB</cell>
  <cell>GPIO142PB2/CCC_SW_CLKIN_S_0</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>MAINS_LEVEL_FB</cell>
 </row>
 <row>
  <cell>E2</cell>
@@ -3540,7 +3540,7 @@
 </row>
 <row>
  <cell>E3</cell>
- <cell>UART_TXD</cell>
+ <cell>DBUG_HEADER4</cell>
  <cell>GPIO146PB2/CCC_SW_PLL1_OUT1</cell>
  <cell>Bank2</cell>
  <cell>Fixed</cell>
@@ -3562,85 +3562,85 @@
  <cell>5</cell>
  <cell>---</cell>
  <cell>OFF</cell>
- <cell>UART_TXD</cell>
+ <cell>DBUG_HEADER4</cell>
 </row>
 <row>
  <cell>E4</cell>
- <cell>---</cell>
+ <cell>P24V_GNT_EMOPS_EN</cell>
  <cell>GPIO2NB2/DQS</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>P24V_GNT_EMOPS_EN</cell>
 </row>
 <row>
  <cell>E5</cell>
- <cell>---</cell>
+ <cell>FAN_FAIL_N</cell>
  <cell>GPIO0NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>FAN_FAIL_N</cell>
 </row>
 <row>
  <cell>E6</cell>
- <cell>---</cell>
+ <cell>GNT_BRK_PWR_EN</cell>
  <cell>GPIO4PB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_BRK_PWR_EN</cell>
 </row>
 <row>
  <cell>E7</cell>
@@ -3670,107 +3670,107 @@
 </row>
 <row>
  <cell>E8</cell>
- <cell>---</cell>
+ <cell>GNT_SHUNT_EN</cell>
  <cell>GPIO8PB2/DQS</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_SHUNT_EN</cell>
 </row>
 <row>
  <cell>E9</cell>
- <cell>---</cell>
+ <cell>GNT_PWM_PHA_LO</cell>
  <cell>GPIO10PB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_PWM_PHA_LO</cell>
 </row>
 <row>
  <cell>E10</cell>
- <cell>---</cell>
+ <cell>LFT_HALL_SNS1_N</cell>
  <cell>GPIO25NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>LFT_HALL_SNS1_N</cell>
 </row>
 <row>
  <cell>E11</cell>
- <cell>---</cell>
+ <cell>LFT_SHUNT_EN</cell>
  <cell>GPIO28PB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>LFT_SHUNT_EN</cell>
 </row>
 <row>
  <cell>E12</cell>
@@ -3800,107 +3800,107 @@
 </row>
 <row>
  <cell>E13</cell>
- <cell>---</cell>
+ <cell>LFT_EMOPS_EN</cell>
  <cell>GPIO29NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>LFT_EMOPS_EN</cell>
 </row>
 <row>
  <cell>E14</cell>
- <cell>---</cell>
+ <cell>LFT_MOT_PWR_FLT_N</cell>
  <cell>GPIO30NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>LFT_MOT_PWR_FLT_N</cell>
 </row>
 <row>
  <cell>E15</cell>
- <cell>---</cell>
+ <cell>GNT_CW_LIMIT</cell>
  <cell>GPIO39PB2/CCC_SE_CLKIN_S_10/CCC_SE_PLL1_OUT0</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>GNT_CW_LIMIT</cell>
 </row>
 <row>
  <cell>E16</cell>
- <cell>---</cell>
+ <cell>ST_MSSB_TX</cell>
  <cell>GPIO39NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>ST_MSSB_TX</cell>
 </row>
 <row>
  <cell>E17</cell>
@@ -4060,81 +4060,81 @@
 </row>
 <row>
  <cell>F1</cell>
- <cell>---</cell>
+ <cell>AD_MUX4_N</cell>
  <cell>GPIO134NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>AD_MUX4_N</cell>
 </row>
 <row>
  <cell>F2</cell>
- <cell>---</cell>
+ <cell>AD_MUX3_N</cell>
  <cell>GPIO134PB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>AD_MUX3_N</cell>
 </row>
 <row>
  <cell>F3</cell>
- <cell>---</cell>
+ <cell>P24V_GNT_EMOPS_PG</cell>
  <cell>GPIO2PB2/DQS</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>P24V_GNT_EMOPS_PG</cell>
 </row>
 <row>
  <cell>F4</cell>
@@ -4164,29 +4164,29 @@
 </row>
 <row>
  <cell>F5</cell>
- <cell>---</cell>
+ <cell>P24V_GOOD_N</cell>
  <cell>GPIO0PB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>P24V_GOOD_N</cell>
 </row>
 <row>
  <cell>F6</cell>
@@ -4294,107 +4294,107 @@
 </row>
 <row>
  <cell>F10</cell>
- <cell>---</cell>
+ <cell>LFT_HALL_PWR_OK</cell>
  <cell>GPIO25PB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>LFT_HALL_PWR_OK</cell>
 </row>
 <row>
  <cell>F11</cell>
- <cell>---</cell>
+ <cell>LFT_SHUNT_ON</cell>
  <cell>GPIO28NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>LFT_SHUNT_ON</cell>
 </row>
 <row>
  <cell>F12</cell>
- <cell>---</cell>
+ <cell>OC_V_LFT_MOT_DRV</cell>
  <cell>GPIO27NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OC_V_LFT_MOT_DRV</cell>
 </row>
 <row>
  <cell>F13</cell>
- <cell>---</cell>
+ <cell>P24V_LFT_EMOPS_EN</cell>
  <cell>GPIO27PB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>P24V_LFT_EMOPS_EN</cell>
 </row>
 <row>
  <cell>F14</cell>
@@ -4424,81 +4424,81 @@
 </row>
 <row>
  <cell>F15</cell>
- <cell>---</cell>
+ <cell>SRV_MSSB_RX</cell>
  <cell>GPIO41PB2/CCC_SE_CLKIN_S_11</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>SRV_MSSB_RX</cell>
 </row>
 <row>
  <cell>F16</cell>
- <cell>---</cell>
+ <cell>PAN_24V_SW</cell>
  <cell>GPIO41NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>PAN_24V_SW</cell>
 </row>
 <row>
  <cell>F17</cell>
- <cell>---</cell>
+ <cell>ST_SRV_MSSB_TX</cell>
  <cell>GPIO40NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>ST_SRV_MSSB_TX</cell>
 </row>
 <row>
  <cell>F18</cell>
@@ -4658,29 +4658,29 @@
 </row>
 <row>
  <cell>G2</cell>
- <cell>---</cell>
+ <cell>AD_MUX5_N</cell>
  <cell>GPIO135PB4/CLKIN_W_3/CCC_SW_CLKIN_W_3</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>AD_MUX5_N</cell>
 </row>
 <row>
  <cell>G3</cell>
@@ -4918,107 +4918,107 @@
 </row>
 <row>
  <cell>G12</cell>
- <cell>---</cell>
+ <cell>GNT_HW_EN_N</cell>
  <cell>GPIO24PB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>GNT_HW_EN_N</cell>
 </row>
 <row>
  <cell>G13</cell>
- <cell>---</cell>
+ <cell>LFT_HALL_PWR_EN_N</cell>
  <cell>GPIO24NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>LFT_HALL_PWR_EN_N</cell>
 </row>
 <row>
  <cell>G14</cell>
- <cell>---</cell>
+ <cell>SITE_24V_PWR_OK_N</cell>
  <cell>GPIO36PB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>SITE_24V_PWR_OK_N</cell>
 </row>
 <row>
  <cell>G15</cell>
- <cell>---</cell>
+ <cell>SPD_EMOPS_FLT_N</cell>
  <cell>GPIO37NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>SPD_EMOPS_FLT_N</cell>
 </row>
 <row>
  <cell>G16</cell>
@@ -5048,29 +5048,29 @@
 </row>
 <row>
  <cell>G17</cell>
- <cell>---</cell>
+ <cell>MSSB_RX</cell>
  <cell>GPIO40PB2/CCC_SE_PLL1_OUT1</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>MSSB_RX</cell>
 </row>
 <row>
  <cell>G18</cell>
@@ -5204,55 +5204,55 @@
 </row>
 <row>
  <cell>H1</cell>
- <cell>---</cell>
+ <cell>AD_MUX1_N</cell>
  <cell>GPIO133PB4/DQS</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>AD_MUX1_N</cell>
 </row>
 <row>
  <cell>H2</cell>
- <cell>---</cell>
+ <cell>ST_DAC_CLK</cell>
  <cell>GPIO135NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>ST_DAC_CLK</cell>
 </row>
 <row>
  <cell>H3</cell>
@@ -5282,107 +5282,107 @@
 </row>
 <row>
  <cell>H4</cell>
- <cell>---</cell>
+ <cell>ADC_CNVST</cell>
  <cell>GPIO139PB4/DQS/CCC_SW_PLL0_OUT0</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>ADC_CNVST</cell>
 </row>
 <row>
  <cell>H5</cell>
- <cell>---</cell>
+ <cell>DBUG_CS_N</cell>
  <cell>GPIO140NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>DBUG_CS_N</cell>
 </row>
 <row>
  <cell>H6</cell>
- <cell>---</cell>
+ <cell>DBUG_MOSI</cell>
  <cell>GPIO140PB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>DBUG_MOSI</cell>
 </row>
 <row>
  <cell>H7</cell>
- <cell>---</cell>
+ <cell>DAC_SDO</cell>
  <cell>GPIO137PB4/CLKIN_W_2/CCC_SW_CLKIN_W_2/CCC_SW_PLL0_OUT0</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>DAC_SDO</cell>
 </row>
 <row>
  <cell>H8</cell>
@@ -5516,29 +5516,29 @@
 </row>
 <row>
  <cell>H13</cell>
- <cell>---</cell>
+ <cell>SRVC_CCH_GNT_N</cell>
  <cell>GPIO36NB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>SRVC_CCH_GNT_N</cell>
 </row>
 <row>
  <cell>H14</cell>
@@ -5568,29 +5568,29 @@
 </row>
 <row>
  <cell>H15</cell>
- <cell>---</cell>
+ <cell>EM_CCH_24V_EN</cell>
  <cell>GPIO37PB2</cell>
  <cell>Bank2</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>EM_CCH_24V_EN</cell>
 </row>
 <row>
  <cell>H16</cell>
@@ -5776,107 +5776,107 @@
 </row>
 <row>
  <cell>J1</cell>
- <cell>---</cell>
+ <cell>AD_MUX2_N</cell>
  <cell>GPIO133NB4/DQS</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>AD_MUX2_N</cell>
 </row>
 <row>
  <cell>J2</cell>
- <cell>---</cell>
+ <cell>AD_SEL0</cell>
  <cell>GPIO131NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>AD_SEL0</cell>
 </row>
 <row>
  <cell>J3</cell>
- <cell>---</cell>
+ <cell>LFT_UP_LIMIT</cell>
  <cell>GPIO131PB4/CLKIN_W_5/CCC_NW_CLKIN_W_5</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>LFT_UP_LIMIT</cell>
 </row>
 <row>
  <cell>J4</cell>
- <cell>---</cell>
+ <cell>DBUG_MISO</cell>
  <cell>GPIO139NB4/DQS</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>DBUG_MISO</cell>
 </row>
 <row>
  <cell>J5</cell>
@@ -5906,107 +5906,107 @@
 </row>
 <row>
  <cell>J6</cell>
- <cell>---</cell>
+ <cell>DAC_SDI</cell>
  <cell>GPIO136PB4/CCC_SW_PLL0_OUT1</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>DAC_SDI</cell>
 </row>
 <row>
  <cell>J7</cell>
- <cell>---</cell>
+ <cell>ADC_SDOUT</cell>
  <cell>GPIO137NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>ADC_SDOUT</cell>
 </row>
 <row>
  <cell>J8</cell>
- <cell>---</cell>
+ <cell>P12V_ACT_DIODE_ON_N</cell>
  <cell>GPIO138PB4/CLKIN_W_1/CCC_SW_CLKIN_W_1</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>P12V_ACT_DIODE_ON_N</cell>
 </row>
 <row>
  <cell>J9</cell>
- <cell>---</cell>
+ <cell>DBUG_SCLK</cell>
  <cell>GPIO141PB4/CLKIN_W_0/CCC_SW_CLKIN_W_0</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>DBUG_SCLK</cell>
 </row>
 <row>
  <cell>J10</cell>
@@ -6348,29 +6348,29 @@
 </row>
 <row>
  <cell>K1</cell>
- <cell>---</cell>
+ <cell>LFT_SER_PAGE_SEL_N</cell>
  <cell>GPIO130PB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>LFT_SER_PAGE_SEL_N</cell>
 </row>
 <row>
  <cell>K2</cell>
@@ -6400,107 +6400,107 @@
 </row>
 <row>
  <cell>K3</cell>
- <cell>---</cell>
+ <cell>AD_SEL1</cell>
  <cell>GPIO132PB4/CLKIN_W_4/CCC_NW_CLKIN_W_4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>AD_SEL1</cell>
 </row>
 <row>
  <cell>K4</cell>
- <cell>---</cell>
+ <cell>LFT_SER_SYNC</cell>
  <cell>GPIO127NB4/DQS</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>LFT_SER_SYNC</cell>
 </row>
 <row>
  <cell>K5</cell>
- <cell>---</cell>
+ <cell>LFT_SER_CLK</cell>
  <cell>GPIO127PB4/DQS</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>LFT_SER_CLK</cell>
 </row>
 <row>
  <cell>K6</cell>
- <cell>---</cell>
+ <cell>DAC_CS_N</cell>
  <cell>GPIO136NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>DAC_CS_N</cell>
 </row>
 <row>
  <cell>K7</cell>
@@ -6530,55 +6530,55 @@
 </row>
 <row>
  <cell>K8</cell>
- <cell>---</cell>
+ <cell>ST_ADC_CLK</cell>
  <cell>GPIO138NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>ST_ADC_CLK</cell>
 </row>
 <row>
  <cell>K9</cell>
- <cell>---</cell>
+ <cell>DBUG_ACTIVE</cell>
  <cell>GPIO141NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>DBUG_ACTIVE</cell>
 </row>
 <row>
  <cell>K10</cell>
@@ -6920,81 +6920,81 @@
 </row>
 <row>
  <cell>L1</cell>
- <cell>---</cell>
+ <cell>LFT_DOWN_LIMIT</cell>
  <cell>GPIO130NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>LFT_DOWN_LIMIT</cell>
 </row>
 <row>
  <cell>L2</cell>
- <cell>---</cell>
+ <cell>AD_SEL2</cell>
  <cell>GPIO132NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>AD_SEL2</cell>
 </row>
 <row>
  <cell>L3</cell>
- <cell>---</cell>
+ <cell>LFT_SER_DATA0</cell>
  <cell>GPIO128PB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>LFT_SER_DATA0</cell>
 </row>
 <row>
  <cell>L4</cell>
@@ -7024,29 +7024,29 @@
 </row>
 <row>
  <cell>L5</cell>
- <cell>---</cell>
+ <cell>LFT_SERIO_FLT_N</cell>
  <cell>GPIO129PB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>LFT_SERIO_FLT_N</cell>
 </row>
 <row>
  <cell>L6</cell>
@@ -7076,55 +7076,55 @@
 </row>
 <row>
  <cell>L7</cell>
- <cell>---</cell>
+ <cell>EEP_SCK</cell>
  <cell>GPIO125PB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>EEP_SCK</cell>
 </row>
 <row>
  <cell>L8</cell>
- <cell>---</cell>
+ <cell>EEP_SO</cell>
  <cell>GPIO125NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>EEP_SO</cell>
 </row>
 <row>
  <cell>L9</cell>
@@ -7518,107 +7518,107 @@
 </row>
 <row>
  <cell>M2</cell>
- <cell>---</cell>
+ <cell>EEP_SI</cell>
  <cell>GPIO124NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>EEP_SI</cell>
 </row>
 <row>
  <cell>M3</cell>
- <cell>---</cell>
+ <cell>EEP_CS_N</cell>
  <cell>GPIO124PB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>EEP_CS_N</cell>
 </row>
 <row>
  <cell>M4</cell>
- <cell>---</cell>
+ <cell>LFT_SER_DATA1</cell>
  <cell>GPIO128NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>LFT_SER_DATA1</cell>
 </row>
 <row>
  <cell>M5</cell>
- <cell>---</cell>
+ <cell>LFT_MTN_EN_N</cell>
  <cell>GPIO129NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>LFT_MTN_EN_N</cell>
 </row>
 <row>
  <cell>M6</cell>
@@ -7648,81 +7648,81 @@
 </row>
 <row>
  <cell>M7</cell>
- <cell>---</cell>
+ <cell>GPIO5</cell>
  <cell>GPIO126NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GPIO5</cell>
 </row>
 <row>
  <cell>M8</cell>
- <cell>---</cell>
+ <cell>GPIO2</cell>
  <cell>GPIO123PB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GPIO2</cell>
 </row>
 <row>
  <cell>M9</cell>
- <cell>---</cell>
+ <cell>GPIO3</cell>
  <cell>GPIO123NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GPIO3</cell>
 </row>
 <row>
  <cell>M10</cell>
@@ -8064,55 +8064,55 @@
 </row>
 <row>
  <cell>N1</cell>
- <cell>---</cell>
+ <cell>GNT_BRK_EXT_EN</cell>
  <cell>GPIO109PB4/DQS</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_BRK_EXT_EN</cell>
 </row>
 <row>
  <cell>N2</cell>
- <cell>---</cell>
+ <cell>GNT_BRK1_FB_N</cell>
  <cell>GPIO112PB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>GNT_BRK1_FB_N</cell>
 </row>
 <row>
  <cell>N3</cell>
@@ -8142,133 +8142,133 @@
 </row>
 <row>
  <cell>N4</cell>
- <cell>---</cell>
+ <cell>GNT_BRK2_PWM_LO</cell>
  <cell>GPIO116PB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_BRK2_PWM_LO</cell>
 </row>
 <row>
  <cell>N5</cell>
- <cell>---</cell>
+ <cell>LFT_PWM_PHC_LO</cell>
  <cell>GPIO122NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>LFT_PWM_PHC_LO</cell>
 </row>
 <row>
  <cell>N6</cell>
- <cell>---</cell>
+ <cell>LFT_PWM_PHC_HI</cell>
  <cell>GPIO122PB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>LFT_PWM_PHC_HI</cell>
 </row>
 <row>
  <cell>N7</cell>
- <cell>---</cell>
+ <cell>LFT_PWM_PHB_HI</cell>
  <cell>GPIO121PB4/DQS</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>LFT_PWM_PHB_HI</cell>
 </row>
 <row>
  <cell>N8</cell>
- <cell>---</cell>
+ <cell>LFT_PWM_PHB_LO</cell>
  <cell>GPIO121NB4/DQS</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>LFT_PWM_PHB_LO</cell>
 </row>
 <row>
  <cell>N9</cell>
@@ -8636,107 +8636,107 @@
 </row>
 <row>
  <cell>P1</cell>
- <cell>---</cell>
+ <cell>GNT_BRK_SW_MON</cell>
  <cell>GPIO109NB4/DQS</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_BRK_SW_MON</cell>
 </row>
 <row>
  <cell>P2</cell>
- <cell>---</cell>
+ <cell>GNT_BRK2_FB_N</cell>
  <cell>GPIO112NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>GNT_BRK2_FB_N</cell>
 </row>
 <row>
  <cell>P3</cell>
- <cell>---</cell>
+ <cell>GNT_BRK2_RET_PWM_HI</cell>
  <cell>GPIO116NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_BRK2_RET_PWM_HI</cell>
 </row>
 <row>
  <cell>P4</cell>
- <cell>---</cell>
+ <cell>GNT_BRK1_PWM_LO</cell>
  <cell>GPIO114PB4/CLKIN_W_6/CCC_NW_CLKIN_W_6/CCC_NW_PLL0_OUT1</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_BRK1_PWM_LO</cell>
 </row>
 <row>
  <cell>P5</cell>
@@ -8766,107 +8766,107 @@
 </row>
 <row>
  <cell>P6</cell>
- <cell>---</cell>
+ <cell>GNT_BRK3_RET_PWM_LO</cell>
  <cell>GPIO119PB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_BRK3_RET_PWM_LO</cell>
 </row>
 <row>
  <cell>P7</cell>
- <cell>---</cell>
+ <cell>LFT_PWM_PHA_HI</cell>
  <cell>GPIO120PB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>LFT_PWM_PHA_HI</cell>
 </row>
 <row>
  <cell>P8</cell>
- <cell>---</cell>
+ <cell>LFT_PWM_PHA_LO</cell>
  <cell>GPIO120NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>LFT_PWM_PHA_LO</cell>
 </row>
 <row>
  <cell>P9</cell>
- <cell>---</cell>
+ <cell>GNT_BRK3_PWM_LO</cell>
  <cell>GPIO118PB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_BRK3_PWM_LO</cell>
 </row>
 <row>
  <cell>P10</cell>
@@ -9208,7 +9208,7 @@
 </row>
 <row>
  <cell>R1</cell>
- <cell>SYS_CLK</cell>
+ <cell>FPGA_100M_CLK</cell>
  <cell>GPIO108PB4/CLKIN_W_7/CCC_NW_CLKIN_W_7/CCC_NW_PLL0_OUT0</cell>
  <cell>Bank4</cell>
  <cell>Fixed</cell>
@@ -9230,7 +9230,7 @@
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>SYS_CLK</cell>
+ <cell>FPGA_100M_CLK</cell>
 </row>
 <row>
  <cell>R2</cell>
@@ -9260,107 +9260,107 @@
 </row>
 <row>
  <cell>R3</cell>
- <cell>---</cell>
+ <cell>GNT_BRK1_RET_PWM_HI</cell>
  <cell>GPIO114NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_BRK1_RET_PWM_HI</cell>
 </row>
 <row>
  <cell>R4</cell>
- <cell>---</cell>
+ <cell>GNT_BRK3_PWM_HI</cell>
  <cell>GPIO117NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_BRK3_PWM_HI</cell>
 </row>
 <row>
  <cell>R5</cell>
- <cell>---</cell>
+ <cell>GNT_BRK2_RET_PWM_LO</cell>
  <cell>GPIO117PB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_BRK2_RET_PWM_LO</cell>
 </row>
 <row>
  <cell>R6</cell>
- <cell>---</cell>
+ <cell>P24V_LFT_EMOPS_PG</cell>
  <cell>GPIO119NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>P24V_LFT_EMOPS_PG</cell>
 </row>
 <row>
  <cell>R7</cell>
@@ -9390,29 +9390,29 @@
 </row>
 <row>
  <cell>R8</cell>
- <cell>---</cell>
+ <cell>GNT_BRK3_RET_PWM_HI</cell>
  <cell>GPIO118NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_BRK3_RET_PWM_HI</cell>
 </row>
 <row>
  <cell>R9</cell>
@@ -9780,81 +9780,81 @@
 </row>
 <row>
  <cell>T1</cell>
- <cell>---</cell>
+ <cell>PWM_BRK_EXT_FAULT</cell>
  <cell>GPIO108NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>PWM_BRK_EXT_FAULT</cell>
 </row>
 <row>
  <cell>T2</cell>
- <cell>---</cell>
+ <cell>GNT_BRK1_RET_PWM_LO</cell>
  <cell>GPIO115PB4/DQS/CCC_NW_PLL0_OUT0</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_BRK1_RET_PWM_LO</cell>
 </row>
 <row>
  <cell>T3</cell>
- <cell>---</cell>
+ <cell>GNT_BRK2_PWM_HI</cell>
  <cell>GPIO115NB4/DQS</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_BRK2_PWM_HI</cell>
 </row>
 <row>
  <cell>T4</cell>
@@ -9884,55 +9884,55 @@
 </row>
 <row>
  <cell>T5</cell>
- <cell>---</cell>
+ <cell>GNT_BRK3_FB_N</cell>
  <cell>GPIO113PB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Input</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>Up</cell>
+ <cell>No</cell>
+ <cell>OFF</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>---</cell>
+ <cell>OFF</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>GNT_BRK3_FB_N</cell>
 </row>
 <row>
  <cell>T6</cell>
- <cell>---</cell>
+ <cell>GNT_BRK1_PWM_HI</cell>
  <cell>GPIO113NB4</cell>
  <cell>Bank4</cell>
- <cell>Unassigned</cell>
+ <cell>Fixed</cell>
+ <cell>LVCMOS33</cell>
+ <cell>Output</cell>
+ <cell>None</cell>
+ <cell>No</cell>
+ <cell>ON</cell>
+ <cell>None</cell>
+ <cell>No</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
  <cell>---</cell>
+ <cell>OFF</cell>
+ <cell>8</cell>
  <cell>---</cell>
+ <cell>5</cell>
  <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>---</cell>
- <cell>DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF</cell>
+ <cell>OFF</cell>
+ <cell>GNT_BRK1_PWM_HI</cell>
 </row>
 <row>
  <cell>T7</cell>

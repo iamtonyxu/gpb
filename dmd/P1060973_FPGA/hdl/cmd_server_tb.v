@@ -39,7 +39,8 @@ module cmd_server_tb;
     );
 
     parameter CLOCK_PERIOD = 10; // 100M SYS_Clock in ns
-    parameter PULSE_PERIOD = 500000; // 2 kHz pulse period in ns
+    //parameter PULSE_PERIOD = 500000; // 2 kHz pulse period in ns
+    parameter PULSE_PERIOD = 5000; // 200 kHz pulse to accelerate simulation
 
 // Task to send a byte using UART protocol
 task uart_send;
@@ -115,7 +116,7 @@ endtask
         // Reset the system
         #100;
         SYS_RST = 0; 
-        #1000;
+        #(PULSE_PERIOD*4000); // wait 2s
 
         // Uart send cmd of OPB write operation
         uart_send(8'h5A);

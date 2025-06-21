@@ -1,80 +1,47 @@
-#########
+######################
 #Source files:
-#########
+######################
 #Do NOT ignore VHDL, Verilog, block diagrams or EDIF files.
 !*.vhd
 !*.v
 !*.sv
 !*.vh
-!*.bd
-!*.edif
-#########
-#IP files
-#########
-#.xci: synthesis and implemented not possible - you need to return back to the previous version to generate output products
-#.xci + .dcp: implementation possible but not re-synthesis
-#*.xci(www.spiritconsortium.org)
-!*.xci
-#*.dcp(checkpoint files)
-!*.dcp
-!*.vds
-!*.pb
-#All bd comments and layout coordinates are stored within .ui
-!*.ui
-!*.ooc
-#########
-#System Generator
-#########
-!*.mdl
-!*.slx
-!*.bxml
-#########
-#Simulation logic analyzer
-#########
-!*.wcfg
-!*.coe
-!*.do
-!*.sh
-#########
-#MIG
-#########
-!*.prj
-!*.mem
-#########
+
+######################
 #Constraint files
-#########
-#Do NOT ignore *.xdc files
-!*.xdc
+######################
+#Do NOT ignore *.pdc files
+!*.pdc
+
+######################
+#top_fp files
+######################
+#Do NOT ignore fpga image files
+!top_fp/
+
+######################
+#modelsim files
+######################
+work/
+*.mti
+*.wlf
+
+######################
+#libero temp files
+######################
+dmd_vivado/
+*component/
+*designer/
+*simulation/
+*smartgen/
+*stimulus/
+*synthesis/
+*tooldata/
+*viewdraw/
 
 
-# Compiled source #
-###################
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.obj
-*.so
-*.mexw64
-*.asv
-
-
-# Packages #
-############
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-.vscode
-
-# Logs and databases #
+######################
+# referrence doc
 ######################
 *.log
 *.sql
@@ -89,9 +56,21 @@
 *.jxbrowser.userdata
 *dvt
 RemoteSystemsTempFiles
-Debug
 
+######################
+# Compiled source #
+######################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.obj
+*.so
+*.mexw64
+*.asv
 
+######################
 # Libero SoC V2024 - ignore build and generated output directories
 ###################### 
 /jbuild/  
@@ -100,13 +79,17 @@ Debug
 /output/  
 /ipcache/  
 
-# Ignore project intermediate files  
+######################
+# Ignore project intermediate files
+######################  
 *.bit  
 *.svf  
 *.sof  
-*.rpd  
+*.rpd 
 
-# Ignore simulation, synthesis and timing logs and reports  
+######################
+# Ignore simulation, synthesis and timing logs and reports
+######################
 *.log  
 *.jou  
 *.wlf  
@@ -116,17 +99,23 @@ Debug
 *.ngr  
 *.sdf  
 
+######################
 # Ignore user-specific and workspace files  
+######################
 *.user  
 *.prefs  
 *.vscode/  
 
+######################
 # Backup and temporary files  
+######################
 *.bak  
 *.tmp  
 *.swp  
 *.cache  
 
+######################
 # OS generated files  
+######################
 .DS_Store  
 Thumbs.db  

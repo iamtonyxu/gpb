@@ -30,37 +30,36 @@ module SCRATCH_PAD_REGISTER(
 
     /*  Scratch Pads */
   
-    reg  [15:0] dev_sp1;    //Register1
-    reg  [15:0] dev_sp2;    //Register2
+    reg  [31:0] dev_sp1;    //Register1
+    reg  [31:0] dev_sp2;    //Register2
 
     
 
     //WRITE
-    always@(negedge OPB_CLK or posedge OPB_RST) begin
+    always@(posedge OPB_CLK or posedge OPB_RST) begin
         if(OPB_RST) begin   
-            dev_sp1 <= 16'h55aa; 
-            dev_sp2 <= 16'haa55;
- 
+            dev_sp1 <= 32'h12345678; 
+            dev_sp2 <= 32'h9abcbeef;
         end
         else if(SP1_WE) begin
-            dev_sp1 <= SP_DI[15:0]; 
+            dev_sp1 <= SP_DI[31:0]; 
         end
         else if(SP2_WE) begin
-            dev_sp2 <= SP_DI[15:0];
+            dev_sp2 <= SP_DI[31:0];
         end
     end
     //READ
     always@(posedge OPB_CLK or posedge OPB_RST) begin
         if(OPB_RST) begin   
-           SP_DO <= 32'b0;
+           SP_DO <= 32'h0;
  
         end
         else if(SP1_RE) begin
-            SP_DO <= {16'b0, dev_sp1};
+            SP_DO <= dev_sp1;
             
         end
         else if(SP2_RE) begin
-            SP_DO <= {16'b0, dev_sp2};
+            SP_DO <= dev_sp2;
         end
     end
 

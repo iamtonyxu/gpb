@@ -3,9 +3,9 @@ set_device \
     -die PA5M100T \
     -pkg fcg484
 set_proj_dir \
-    -path {C:\repo\jabil2025\dmd\P1060973_FPGA}
+    -path {C:\repo2\gpb\dmd\P1060973_FPGA}
 set_impl_dir \
-    -path {C:\repo\jabil2025\dmd\P1060973_FPGA\designer\top}
+    -path {C:\repo2\gpb\dmd\P1060973_FPGA\designer\top}
 set_is_relative_path \
     -value {FALSE}
 set_root_path_dir \
@@ -25,6 +25,6 @@ set_override_file \
 set_auto_calib_timeout \
     -value {3000}
 defvar_set -name PA5_PRINT_DEVICE_SELECTION_INIT_DATA_FILE -value 1
-defvar_set -name RESTRICTPROBEPINS                         -value 1
+defvar_set -name RESTRICTPROBEPINS                         -value 0
 defvar_set -name SYSTEM_CONTROLLER_SUSPEND_MODE            -value 0
 defvar_set -name FHB_FLOW                                  -value 0

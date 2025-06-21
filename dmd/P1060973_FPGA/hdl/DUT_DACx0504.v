@@ -19,7 +19,7 @@ module DUT_DACx0504(
 
     input              DAC_CLK, // 12.5MHz clock
     input              DAC_SDI,
-    input              DAC_CS,
+    input              DAC_CS_N,
     output             DAC_SDO
 );
 
@@ -53,7 +53,7 @@ module DUT_DACx0504(
     always @(posedge DAC_CLK or posedge SYS_RST) begin
         if (SYS_RST) begin
             bit_count <= 5'd0; // Reset bit counter
-        end else if(~DAC_CS)begin
+        end else if(~DAC_CS_N)begin
             bit_count <= bit_count + 1;
         end else begin
             bit_count <= 5'd0; // Reset bit counter when CS is high
@@ -65,7 +65,7 @@ module DUT_DACx0504(
         if (SYS_RST) begin
             shift_in <= 24'h0; // Reset shift register
             shift_out <= 24'h0; // Reset shift register
-        end else if(~DAC_CS)begin
+        end else if(~DAC_CS_N)begin
             if(bit_count > 0) begin
                 shift_in <= {shift_in[22:0], DAC_SDI}; // Shift in data from DAC_SDI
                 shift_out <= {shift_out[22:0], 1'b0}; // Shift out data to DAC_SDO
@@ -118,6 +118,115 @@ module DUT_DACx0504(
             end
         end
     end
+
+    // REG_NOP
+    always@(posedge SYS_CLK or posedge SYS_RST) begin
+        if(SYS_RST) begin
+            REG_NOP <= 16'h0;
+        end else if(bit_count == 5'h19 && shift_in[19:16] == `NOP_ADDR) begin
+            REG_NOP <= shift_in[15:0];
+        end
+    end
+
+    // REG_DEVICE_ID
+    always@(posedge SYS_CLK or posedge SYS_RST) begin
+        if(SYS_RST) begin
+            REG_DEVICE_ID <= 16'hABCD;
+        end else if(bit_count == 5'h19 && shift_in[19:16] == `DEVICE_ID_ADDR) begin
+            REG_DEVICE_ID <= shift_in[15:0];
+        end
+    end
+
+    // REG_SYNC
+    always@(posedge SYS_CLK or posedge SYS_RST) begin
+        if(SYS_RST) begin
+            REG_SYNC <= 16'h0;
+        end else if(bit_count == 5'h19 && shift_in[19:16] == `SYNC_ADDR) begin
+            REG_SYNC <= shift_in[15:0];
+        end
+    end
+
+    // REG_CONFIG
+    always@(posedge SYS_CLK or posedge SYS_RST) begin
+        if(SYS_RST) begin
+            REG_CONFIG <= 16'h0;
+        end else if(bit_count == 5'h19 && shift_in[19:16] == `CONFIG_ADDR) begin
+            REG_CONFIG <= shift_in[15:0];
+        end
+    end
+
+    // REG_GAIN
+    always@(posedge SYS_CLK or posedge SYS_RST) begin
+        if(SYS_RST) begin
+            REG_GAIN <= 16'h1;
+        end else if(bit_count == 5'h19 && shift_in[19:16] == `GAIN_ADDR) begin
+            REG_GAIN <= shift_in[15:0];
+        end
+    end
+
+    // REG_TRIGGER
+    always@(posedge SYS_CLK or posedge SYS_RST) begin
+        if(SYS_RST) begin
+            REG_TRIGGER <= 16'h0;
+        end else if(bit_count == 5'h19 && shift_in[19:16] == `TRIGGER_ADDR) begin
+            REG_TRIGGER <= shift_in[15:0];
+        end
+    end
+
+    // REG_BRDCAST
+    always@(posedge SYS_CLK or posedge SYS_RST) begin
+        if(SYS_RST) begin
+            REG_BRDCAST <= 16'h0;
+        end else if(bit_count == 5'h19 && shift_in[19:16] == `BRDCAST_ADDR) begin
+            REG_BRDCAST <= shift_in[15:0];
+        end
+    end
+
+    // REG_STATUS
+    always@(posedge SYS_CLK or posedge SYS_RST) begin
+        if(SYS_RST) begin
+            REG_STATUS <= 16'h0;
+        end else if(bit_count == 5'h19 && shift_in[19:16] == `STATUS_ADDR) begin
+            REG_STATUS <= shift_in[15:0];
+        end
+    end
+
+    // REG_DAC0
+    always@(posedge SYS_CLK or posedge SYS_RST) begin
+        if(SYS_RST) begin
+            REG_DAC0 <= 16'h1122;
+        end else if(bit_count == 5'h19 && shift_in[19:16] == `DAC0_ADDR) begin
+            REG_DAC0 <= shift_in[15:0];
+        end
+    end
+
+    // REG_DAC1
+    always@(posedge SYS_CLK or posedge SYS_RST) begin
+        if(SYS_RST) begin
+            REG_DAC1 <= 16'h3344;
+        end else if(bit_count == 5'h19 && shift_in[19:16] == `DAC1_ADDR) begin
+            REG_DAC1 <= shift_in[15:0];
+        end
+    end
+
+    // REG_DAC2
+    always@(posedge SYS_CLK or posedge SYS_RST) begin
+        if(SYS_RST) begin
+            REG_DAC2 <= 16'h5566;
+        end else if(bit_count == 5'h19 && shift_in[19:16] == `DAC2_ADDR) begin
+            REG_DAC2 <= shift_in[15:0];
+        end
+    end
+
+    // REG_DAC3
+    always@(posedge SYS_CLK or posedge SYS_RST) begin
+        if(SYS_RST) begin
+            REG_DAC3 <= 16'h7788;
+        end else if(bit_count == 5'h19 && shift_in[19:16] == `DAC3_ADDR) begin
+            REG_DAC3 <= shift_in[15:0];
+        end
+    end
+
 
     // DAC_SDO is the output data from DAC
     assign DAC_SDO = shift_out[23]; // Output the MSB of shift_out to DAC_SDO

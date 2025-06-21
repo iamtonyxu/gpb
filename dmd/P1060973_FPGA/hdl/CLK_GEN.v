@@ -139,14 +139,14 @@ module ClkGen(
 
 
   
-    assign CLK_GEN_DO = (CLK_GEN_RE && (OPB_ADDR == `PULSE_5US_ADDR))   ?  {16'b0, pulse5us_div}                : 32'bz;
-    assign CLK_GEN_DO = (CLK_GEN_RE && (OPB_ADDR == `PULSE_50US_ADDR))  ?  {16'b0, pulse50us_div}               : 32'bz;
-    assign CLK_GEN_DO = (CLK_GEN_RE && (OPB_ADDR == `PULSE_500US_ADDR)) ?  {16'b0, pulse500us_div}              : 32'bz;
-    assign CLK_GEN_DO = (CLK_GEN_RE && (OPB_ADDR == `PULSE_100US_ADDR)) ?  {16'b0, pulse100us_div}              : 32'bz;
+    assign CLK_GEN_DO = (CLK_GEN_RE && (OPB_ADDR[3:0] == `PULSE_5US_ADDR))   ?  {16'b0, pulse5us_div}                : 32'bz;
+    assign CLK_GEN_DO = (CLK_GEN_RE && (OPB_ADDR[3:0] == `PULSE_50US_ADDR))  ?  {16'b0, pulse50us_div}               : 32'bz;
+    assign CLK_GEN_DO = (CLK_GEN_RE && (OPB_ADDR[3:0] == `PULSE_500US_ADDR)) ?  {16'b0, pulse500us_div}              : 32'bz;
+    assign CLK_GEN_DO = (CLK_GEN_RE && (OPB_ADDR[3:0] == `PULSE_100US_ADDR)) ?  {16'b0, pulse100us_div}              : 32'bz;
     //assign CLK_GEN_DO = (CLK_GEN_RE && (OPB_ADDR == `CLK_10HZ_ADDR))    ?  {16'b0, clk_10hz_div}                : 32'bz;
     //assign CLK_GEN_DO = (CLK_GEN_RE && (OPB_ADDR == `CLK_DIV_AQ_ADDR))  ?  {16'b0, aq_div}                      : 32'bz;
     //assign CLK_GEN_DO = (CLK_GEN_RE && (OPB_ADDR == `CLK_DIV_SD_ADDR))  ?  {16'b0, sd_div}                      : 32'bz;
-    assign CLK_GEN_DO = (CLK_GEN_RE && (OPB_ADDR == `CLK_16KHZ_ADDR))   ?  {16'b0, clk16khz_div}                : 32'bz;	
+    assign CLK_GEN_DO = (CLK_GEN_RE && (OPB_ADDR[3:0] == `CLK_16KHZ_ADDR))   ?  {16'b0, clk16khz_div}                : 32'bz;	
 
 
 	always@(posedge OPB_CLK or posedge OPB_RST) begin	
@@ -162,15 +162,15 @@ module ClkGen(
 
 		end	
 		else if(CLK_GEN_WE) begin
-			case(OPB_ADDR)          		
-                `PULSE_5US_ADDR:        pulse5us_div        <= CLK_GEN_DI;
-                `PULSE_50US_ADDR:       pulse50us_div       <= CLK_GEN_DI;
-                `PULSE_500US_ADDR:      pulse500us_div      <= CLK_GEN_DI;
-                `PULSE_100US_ADDR:      pulse100us_div      <= CLK_GEN_DI;
-                `CLK_2MHZ_ADDR:         clk2meghz_div        <= CLK_GEN_DI;
-                //`CLK_DIV_AQ_ADDR:       aq_div              <= CLK_GEN_DI;            
-				//`CLK_DIV_SD_ADDR:       sd_div              <= CLK_GEN_DI;
-                `CLK_16KHZ_ADDR:        clk16khz_div        <= CLK_GEN_DI;          
+			case(OPB_ADDR[3:0])          		
+                `PULSE_5US_ADDR:        pulse5us_div        <= CLK_GEN_DI[15:0];
+                `PULSE_50US_ADDR:       pulse50us_div       <= CLK_GEN_DI[15:0];
+                `PULSE_500US_ADDR:      pulse500us_div      <= CLK_GEN_DI[15:0];
+                `PULSE_100US_ADDR:      pulse100us_div      <= CLK_GEN_DI[15:0];
+                `CLK_2MHZ_ADDR:         clk2meghz_div        <= CLK_GEN_DI[15:0];
+                //`CLK_DIV_AQ_ADDR:       aq_div              <= CLK_GEN_DI[15:0];            
+				//`CLK_DIV_SD_ADDR:       sd_div              <= CLK_GEN_DI[15:0];
+                `CLK_16KHZ_ADDR:        clk16khz_div        <= CLK_GEN_DI[15:0];          
 			endcase
 		end
 	end

@@ -16,196 +16,362 @@
 //
 /////////////////////////////////////////////////////////////////////////////////////////////////// 
 `timescale 1ns / 1ps
-`define COUNTER_ADDR	        32'h00000000		/* COUNTER address */
-`define COUNTER_SIZE	        32'h00000040		/* COUNTER size */
-`define SP1_ADDR		        32'h00010000		/* Scratch Pad 1 address */
-`define SP2_ADDR		        32'h00020000		/* Scratch Pad 2 address */
-`define CLOCK_ADDR		        32'h00030000		/* CLOCK module address */
-`define CLOCK_SIZE		        32'h00000028		/* CLOCK module size */
-`define ILIM_DAC_ADDR           32'h00040000        /* ILIM address */
-`define ILIM_DAC_SIZE           32'h00000020        /* ILIM size */
-`define STD_CONT_ADDR           32'h00050000        /* Stand Cont IF - Digital Input address */
-`define CCHL_IF_ADDR            32'h00050100        /* CCHL_IF - Digital Input address */
-`define SER_PENDANT_ADDR        32'h00050200        /* Service Pendant - Digital Input address */
-`define PWR_IF_ADDR             32'h00050300        /* Power IF - Digital Input address */
-`define LIFT_MOT_SENS_ADDR      32'h00050400        /* Lift Motor Hall Sensor IF - Digital Input address */
-`define SPD_DMD_IF_ADDR         32'h00050500        /* SPD_DMD_IF - Digital Input address */
-`define GANTRY_MOT_SENS_ADDR    32'h00050600        /* Gantry Motor Sensor IF - Digital Input address */
-`define SPD_EMOPS_IF            32'h00050700        /* SPD EMOPS IF - Digital Input address */
-`define GPO_ADDR                32'h00060000        /* Digital Output address */
-`define ADMUX_ADDR		        32'h00060100		/* AD_MUX ADDR */
-`define ADSEL_ADDR		        32'h00060200		/* AD_SEL ADDR */
-`define STS_ADDR		        32'h00060300        /* STS ADDR */
-`define GANTRY_96V_IF_ADDR      32'h00060400        /* GANTRY 96V IF ADDR */
-`define LIFT_96V_IF_ADDR  	    32'h00060500        /* LIFT 96V IF ADDR */
-`define MOT_GPO_WE_ADDR         32'h00070000        /* MOT_GPO_WE_ADDR Addr */
-`define ADC_ADDR		        32'h00080000		/* Analog to Digital converter address */
-`define ADC_SIZE			    32'h00006000		/* Analog to Digital converter size */
-`define GANTRY_MOT_ADDR         32'h00090000        /* Gantry Motor address */
-`define GANTRY_MOT_SIZE         32'h00000004        /* Gantry Motor size    */
-`define LIFT_MOT_ADDR           32'h000a0000        /* Lift Motor address */
-`define LIFT_MOT_SIZE           32'h00000008        /* Lift Motor size */
-
-
+`include "Addr_definition.v"
 
 module AdderDecode(
+    // OPB signals
     input           OPB_CLK,
     input           OPB_RST,
-	input           DEC_RE,
-	input           DEC_WE,
+    input           DEC_RE,
+    input           DEC_WE,
     input   [31:0]  DEC_ADDR,
-    input   [31:0]  SP_IN,
-    input   [31:0]  GPIO_IN,
+    output  [31:0]  DEC_DO,
+
+    // OPB Output from other modules
     input   [31:0]  OSC_CT_IN,
+    input   [31:0]  SP_IN,
     input   [31:0]  CLK_GEN_IN,
     input   [31:0]  ILIM_DAC_IN,
     input   [31:0]  ADC_IN,
-    input   [31:0]  GANT_MOT_IN,
+    input   [31:0]  GANTRY_MOT_IN,
+    input   [31:0]  GANTRY_BRK1_IN,
+    input   [31:0]  GANTRY_BRK2_IN,
+    input   [31:0]  GANTRY_BRK3_IN,
+    input   [31:0]  GANTRY_BRK1_RET_IN,
+    input   [31:0]  GANTRY_BRK2_RET_IN,
+    input   [31:0]  GANTRY_BRK3_RET_IN,
     input   [31:0]  LIFT_MOT_IN,
-	output          SP1_RE,
-	output          SP1_WE,
-	output          SP2_RE,
-	output          SP2_WE,
-    output          STD_CONT_RE,
-    output          CCHL_IF_RE,
-    output          SER_PENDANT_RE,
-    output          PWR_IF_RE,
-    output          LIFT_MOT_SENS_RE,
-    output          SPD_DMD_IF_RE,
-    output          GANTRY_MOT_SENS_RE,
-    output          SPD_EMOPS_RE,
-    output          GPO_RE,
-    output          GPO_WE,
-    output          ADMUX_RE,
-    output          ADMUX_WE,
-    output          ADSEL_RE,
-    output          ADSEL_WE,
-    output          STS_RE,
-    output          STS_WE,
-    output          GANTRY_96V_IF_RE,
-    output          GANTRY_96V_IF_WE,
-    output          LIFT_96V_IF_RE,
-    output          LIFT_96V_IF_WE,
-    output          MOT_GPO_WE,
+    input   [31:0]  MSSB_STN_IN,
+    input   [31:0]  MSSB_SRV_IN,
+    input   [31:0]  EEP_IN,
+    input   [31:0]  GPIO_IN,
+
+    // OPB RE/WE signals
     output          COUNTER_WE,
     output          COUNTER_RE,
-    output          ILIM_DAC_WE,
-    output          ILIM_DAC_RE,
+    output          SP1_RE,
+    output          SP1_WE,
+    output          SP2_RE,
+    output          SP2_WE,
     output          CLOCK_WE,
     output          CLOCK_RE,
+    output          ILIM_DAC_WE,
+    output          ILIM_DAC_RE,
     output          ADC_RE,
     output          ADC_WE,
-    output          GANT_MOT_RE,
-    output          GANT_MOT_WE,
-    output          LIFT_MOT_RE,
-    output          LIFT_MOT_WE,
-    //output          WE_OUT,
-    //output          RE_OUT,
-    output  [5:0]   DATA_OUT,
-    output  [31:0]  DEC_DO
-    
-   
+    output          GANTRY_MOT_IF_RE,
+    output          GANTRY_MOT_IF_WE,
+    output          GANTRY_BRK1_IF_RE,
+    output          GANTRY_BRK1_IF_WE,
+    output          GANTRY_BRK2_IF_RE,
+    output          GANTRY_BRK2_IF_WE,
+    output          GANTRY_BRK3_IF_RE,
+    output          GANTRY_BRK3_IF_WE,
+    output          GANTRY_BRK1_RET_IF_RE,
+    output          GANTRY_BRK1_RET_IF_WE,
+    output          GANTRY_BRK2_RET_IF_RE,
+    output          GANTRY_BRK2_RET_IF_WE,
+    output          GANTRY_BRK3_RET_IF_RE,
+    output          GANTRY_BRK3_RET_IF_WE,
+    output          LIFT_MOT_IF_RE,
+    output          LIFT_MOT_IF_WE,
+    output          MSSB_STN_RE,
+    output          MSSB_STN_WE,
+    output          MSSB_SRV_RE,
+    output          MSSB_SRV_WE,
+    output          EEP_RE,
+    output          EEP_WE,
+
+    output          PWR_IF_RE,
+    output          PWR_IF_WE,
+    output          GANTRY_EMOPS_IF_RE,
+    output          GANTRY_EMOPS_IF_WE,
+    output          GANTRY_96V_IF_RE,
+    output          GANTRY_96V_IF_WE,
+    output          GANTRY_BRAKE_IF_RE,
+    output          GANTRY_BRAKE_IF_WE,
+    output          SPD_DMD_IF_RE,
+    output          SPD_DMD_IF_WE,
+    output          SPD_EMOPS_IF_RE,
+    output          SPD_EMOPS_IF_WE,
+    output          LIFT_MOTOR_SENSOR_IF_RE,
+    output          LIFT_MOTOR_SENSOR_IF_WE,
+    output          LIFT_96V_IF_RE,
+    output          LIFT_96V_IF_WE,
+    output          STAND_IF_RE,
+    output          STAND_IF_WE,
+    output          SERVICE_PENDANT_IF_RE,
+    output          SERVICE_PENDANT_IF_WE,
+    output          MAINS_LEVEL_IF_RE,
+    output          MAINS_LEVEL_IF_WE,
+    output          EXT_BRAKE_IF_RE,
+    output          EXT_BRAKE_IF_WE,
+    output          CCHL_IF_RE,
+    output          CCHL_IF_WE,
+    output          ADCSELMUX_IF_RE,
+    output          ADCSELMUX_IF_WE,
+    output          DEBUG_IF_RE,
+    output          DEBUG_IF_WE,
+    output          GPIO_FREE_IF_RE,
+    output          GPIO_FREE_IF_WE,
+    output          SHUNT_EN_CNT_RE,
+    output          SHUNT_EN_CNT_WE
 );
 
-    //Debug
-    //reg         reout;
-    reg [5:0]   dataout;
-    //assign RE_OUT = reout;
-    assign DATA_OUT = dataout;
-    //End Debug
+    // xxx_RE_d1
+    reg COUNTER_RE_d1;
+    reg SP1_RE_d1;
+    reg SP2_RE_d1;
+    reg CLOCK_RE_d1;
+    reg ILIM_DAC_RE_d1;
+    reg ADC_RE_d1;
+    reg GANTRY_MOT_IF_RE_d1;
+    reg LIFT_MOT_IF_RE_d1;
+    reg GANTRY_BRK1_IF_RE_d1;
+    reg GANTRY_BRK2_IF_RE_d1;
+    reg GANTRY_BRK3_IF_RE_d1;
+    reg GANTRY_BRK1_RET_IF_RE_d1;
+    reg GANTRY_BRK2_RET_IF_RE_d1;
+    reg GANTRY_BRK3_RET_IF_RE_d1;
+    reg MSSB_STN_RE_d1;
+    reg MSSB_SRV_RE_d1;
+    reg EEP_RE_d1;
+    reg PWR_IF_RE_d1;
+    reg GANTRY_EMOPS_IF_RE_d1;
+    reg GANTRY_96V_IF_RE_d1;
+    reg GANTRY_BRAKE_IF_RE_d1;
+    reg SPD_DMD_IF_RE_d1;
+    reg SPD_EMOPS_IF_RE_d1;
+    reg LIFT_MOTOR_SENSOR_IF_RE_d1;
+    reg LIFT_96V_IF_RE_d1;
+    reg STAND_IF_RE_d1;
+    reg SERVICE_PENDANT_IF_RE_d1;
+    reg MAINS_LEVEL_IF_RE_d1;
+    reg EXT_BRAKE_IF_RE_d1;
+    reg CCHL_IF_RE_d1;
+    reg ADCSELMUX_IF_RE_d1;
+    reg DEBUG_IF_RE_d1;
+    reg GPIO_FREE_IF_RE_d1;
+    reg SHUNT_EN_CNT_RE_d1;
 
-    wire [19:0] dec_addr;
-    assign dec_addr = DEC_ADDR;
+    // RE/WE signals
+    assign COUNTER_RE           = DEC_RE & (DEC_ADDR >= `COUNTER_ADDR) & (DEC_ADDR < (`COUNTER_ADDR + `COUNTER_SIZE));	
+    assign COUNTER_WE           = DEC_WE & (DEC_ADDR >= `COUNTER_ADDR) & (DEC_ADDR < (`COUNTER_ADDR + `COUNTER_SIZE));
 
-    
-  
+    assign SP1_RE               = DEC_RE & (DEC_ADDR == `SP1_ADDR);
+    assign SP1_WE               = DEC_WE & (DEC_ADDR == `SP1_ADDR);
 
-	assign COUNTER_RE           = DEC_RE & (dec_addr >= `COUNTER_ADDR) & (dec_addr < (`COUNTER_ADDR+`COUNTER_SIZE));	
-	assign COUNTER_WE           = DEC_WE & (dec_addr >= `COUNTER_ADDR) & (dec_addr < (`COUNTER_ADDR+`COUNTER_SIZE));
+    assign SP2_RE               = DEC_RE & (DEC_ADDR == `SP2_ADDR);
+    assign SP2_WE               = DEC_WE & (DEC_ADDR == `SP2_ADDR);
 
-    
-	assign CLOCK_WE             = DEC_WE & (dec_addr >= `CLOCK_ADDR) & (dec_addr < (`CLOCK_ADDR + `CLOCK_SIZE));
-	assign CLOCK_RE             = DEC_RE & (dec_addr >= `CLOCK_ADDR) & (dec_addr < (`CLOCK_ADDR + `CLOCK_SIZE));
+    assign CLOCK_RE             = DEC_RE & (DEC_ADDR >= `CLOCK_ADDR) & (DEC_ADDR < (`CLOCK_ADDR + `CLOCK_SIZE));
+    assign CLOCK_WE             = DEC_WE & (DEC_ADDR >= `CLOCK_ADDR) & (DEC_ADDR < (`CLOCK_ADDR + `CLOCK_SIZE));
 
-    
-	assign ILIM_DAC_WE          = DEC_WE  & (dec_addr >= `ILIM_DAC_ADDR) & (dec_addr < (`ILIM_DAC_ADDR + `ILIM_DAC_SIZE));
-	assign ILIM_DAC_RE          = DEC_RE  & (dec_addr >= `ILIM_DAC_ADDR) & (dec_addr < (`ILIM_DAC_ADDR + `ILIM_DAC_SIZE));
+    assign ILIM_DAC_RE          = DEC_RE & (DEC_ADDR >= `ILIM_DAC_ADDR) & (DEC_ADDR < (`ILIM_DAC_ADDR + `ILIM_DAC_SIZE));
+    assign ILIM_DAC_WE          = DEC_WE & (DEC_ADDR >= `ILIM_DAC_ADDR) & (DEC_ADDR < (`ILIM_DAC_ADDR + `ILIM_DAC_SIZE));
 
-    
-	assign SP1_RE               = DEC_RE & (dec_addr == `SP1_ADDR);
-	assign SP1_WE               = DEC_WE & (dec_addr == `SP1_ADDR);
+    assign ADC_RE               = DEC_RE & (DEC_ADDR >= `ADC_ADDR) & (DEC_ADDR < (`ADC_ADDR + `ADC_SIZE));
+    assign ADC_WE               = DEC_WE & (DEC_ADDR >= `ADC_ADDR) & (DEC_ADDR < (`ADC_ADDR + `ADC_SIZE));
 
-	assign SP2_RE               = DEC_RE & (dec_addr == `SP2_ADDR);
-	assign SP2_WE               = DEC_WE & (dec_addr == `SP2_ADDR);
+    assign GANTRY_MOT_IF_RE   = DEC_RE & (DEC_ADDR >= `GANTRY_MOT_ADDR) & (DEC_ADDR < (`GANTRY_MOT_ADDR + `GANTRY_MOT_SIZE));
+    assign GANTRY_MOT_IF_WE   = DEC_WE & (DEC_ADDR >= `GANTRY_MOT_ADDR) & (DEC_ADDR < (`GANTRY_MOT_ADDR + `GANTRY_MOT_SIZE));
 
-	assign ADC_RE               = DEC_RE & (dec_addr >= `ADC_ADDR) & (dec_addr < (`ADC_ADDR + `ADC_SIZE));
-	assign ADC_WE               = DEC_WE & (dec_addr >= `ADC_ADDR) & (dec_addr < (`ADC_ADDR + `ADC_SIZE));
+    assign GANTRY_BRK1_IF_RE   = DEC_RE & (DEC_ADDR >= `GANTRY_BRK1_ADDR) & (DEC_ADDR < (`GANTRY_BRK1_ADDR + `GANTRY_MOT_SIZE));
+    assign GANTRY_BRK1_IF_WE   = DEC_WE & (DEC_ADDR >= `GANTRY_BRK1_ADDR) & (DEC_ADDR < (`GANTRY_BRK1_ADDR + `GANTRY_MOT_SIZE));
 
-    assign GANT_MOT_RE          = DEC_RE & (dec_addr >= `GANTRY_MOT_ADDR) & (dec_addr < (`GANTRY_MOT_ADDR + `GANTRY_MOT_SIZE));
-    assign GANT_MOT_WE          = DEC_WE & (dec_addr >= `GANTRY_MOT_ADDR) & (dec_addr < (`GANTRY_MOT_ADDR + `GANTRY_MOT_SIZE));
+    assign GANTRY_BRK2_IF_RE = DEC_RE & (DEC_ADDR >= `GANTRY_BRK2_ADDR) & (DEC_ADDR < (`GANTRY_BRK2_ADDR + `GANTRY_MOT_SIZE));
+    assign GANTRY_BRK2_IF_WE = DEC_WE & (DEC_ADDR >= `GANTRY_BRK2_ADDR) & (DEC_ADDR < (`GANTRY_BRK2_ADDR + `GANTRY_MOT_SIZE));
 
-    assign LIFT_MOT_RE          = DEC_RE & (dec_addr >= `LIFT_MOT_ADDR) & (dec_addr < (`LIFT_MOT_ADDR + `LIFT_MOT_SIZE));
-    assign LIFT_MOT_WE          = DEC_WE & (dec_addr >= `LIFT_MOT_ADDR) & (dec_addr < (`LIFT_MOT_ADDR + `LIFT_MOT_SIZE));
-    
-    assign STD_CONT_RE          = DEC_RE & (dec_addr == `STD_CONT_ADDR);
-    assign CCHL_IF_RE           = DEC_RE & (dec_addr == `CCHL_IF_ADDR);
-    assign SER_PENDANT_RE       = DEC_RE & (dec_addr == `SER_PENDANT_ADDR);
-    assign PWR_IF_RE            = DEC_RE & (dec_addr == `PWR_IF_ADDR);
-    assign LIFT_MOT_SENS_RE     = DEC_RE & (dec_addr == `LIFT_MOT_SENS_ADDR);
-    assign SPD_DMD_IF_RE        = DEC_RE & (dec_addr == `SPD_DMD_IF_ADDR);
-    assign GANTRY_MOT_SENS_RE   = DEC_RE & (dec_addr == `GANTRY_MOT_SENS_ADDR);
-    assign SPD_EMOPS_RE         = DEC_RE & (dec_addr == `SPD_EMOPS_IF);
+    assign GANTRY_BRK3_IF_RE = DEC_RE & (DEC_ADDR >= `GANTRY_BRK3_ADDR) & (DEC_ADDR < (`GANTRY_BRK3_ADDR + `GANTRY_MOT_SIZE));
+    assign GANTRY_BRK3_IF_WE = DEC_WE & (DEC_ADDR >= `GANTRY_BRK3_ADDR) & (DEC_ADDR < (`GANTRY_BRK3_ADDR + `GANTRY_MOT_SIZE));
 
-	assign GPO_RE               = DEC_RE & (dec_addr == `GPO_ADDR); 
-	assign GPO_WE               = DEC_WE & (dec_addr == `GPO_ADDR);
+    // RE/WE signals for GANTRY_BRK1_RET
+    assign GANTRY_BRK1_RET_IF_RE = DEC_RE & (DEC_ADDR >= `GANTRY_BRK1_RET_ADDR) & (DEC_ADDR < (`GANTRY_BRK1_RET_ADDR + `GANTRY_MOT_SIZE));
+    assign GANTRY_BRK1_RET_IF_WE = DEC_WE & (DEC_ADDR >= `GANTRY_BRK1_RET_ADDR) & (DEC_ADDR < (`GANTRY_BRK1_RET_ADDR + `GANTRY_MOT_SIZE));
 
-    assign MOT_GPO_WE           = DEC_WE & (dec_addr == `MOT_GPO_WE_ADDR);
+    // RE/WE signals for GANTRY_BRK2_RET
+    assign GANTRY_BRK2_RET_IF_RE = DEC_RE & (DEC_ADDR >= `GANTRY_BRK2_RET_ADDR) & (DEC_ADDR < (`GANTRY_BRK2_RET_ADDR + `GANTRY_MOT_SIZE));
+    assign GANTRY_BRK2_RET_IF_WE = DEC_WE & (DEC_ADDR >= `GANTRY_BRK2_RET_ADDR) & (DEC_ADDR < (`GANTRY_BRK2_RET_ADDR + `GANTRY_MOT_SIZE));
 
-	assign ADMUX_RE             = DEC_RE & (dec_addr == `ADMUX_ADDR);
-	assign ADMUX_WE             = DEC_WE & (dec_addr == `ADMUX_ADDR);
+    // RE/WE signals for GANTRY_BRK3_RET
+    assign GANTRY_BRK3_RET_IF_RE = DEC_RE & (DEC_ADDR >= `GANTRY_BRK3_RET_ADDR) & (DEC_ADDR < (`GANTRY_BRK3_RET_ADDR + `GANTRY_MOT_SIZE));
+    assign GANTRY_BRK3_RET_IF_WE = DEC_WE & (DEC_ADDR >= `GANTRY_BRK3_RET_ADDR) & (DEC_ADDR < (`GANTRY_BRK3_RET_ADDR + `GANTRY_MOT_SIZE));
 
-    
-	assign ADSEL_RE             = DEC_RE & (dec_addr == `ADSEL_ADDR);
-	assign ADSEL_WE             = DEC_WE & (dec_addr == `ADSEL_ADDR);
- 
-	assign STS_RE               = DEC_RE & (dec_addr == `STS_ADDR);
-	assign STS_WE               = DEC_WE & (dec_addr == `STS_ADDR);
 
-   
-	assign GANTRY_96V_IF_RE     = DEC_RE & (dec_addr == `GANTRY_96V_IF_ADDR);
-	assign GANTRY_96V_IF_WE     = DEC_WE & (dec_addr == `GANTRY_96V_IF_ADDR);
+    assign LIFT_MOT_IF_RE       = DEC_RE & (DEC_ADDR >= `LIFT_MOT_ADDR) & (DEC_ADDR < (`LIFT_MOT_ADDR + `LIFT_MOT_SIZE));
+    assign LIFT_MOT_IF_WE       = DEC_WE & (DEC_ADDR >= `LIFT_MOT_ADDR) & (DEC_ADDR < (`LIFT_MOT_ADDR + `LIFT_MOT_SIZE));
 
-   
-	assign LIFT_96V_IF_RE       = DEC_RE & (dec_addr == `LIFT_96V_IF_ADDR);
-	assign LIFT_96V_IF_WE       = DEC_WE & (dec_addr == `LIFT_96V_IF_ADDR);
+    assign MSSB_STN_RE          = DEC_RE & (DEC_ADDR >= `MSSB_STN_ADDR) & (DEC_ADDR < (`MSSB_STN_ADDR + `MSSB_SIZE));
+    assign MSSB_STN_WE          = DEC_WE & (DEC_ADDR >= `MSSB_STN_ADDR) & (DEC_ADDR < (`MSSB_STN_ADDR + `MSSB_SIZE));
 
-	
-    always@(negedge OPB_CLK or posedge OPB_RST) begin
-        if(OPB_RST) begin   
-           dataout  <= 6'b0;
-           //reout    <= 1'b0;           
- 
+    assign MSSB_SRV_RE          = DEC_RE & (DEC_ADDR >= `MSSB_SRV_ADDR) & (DEC_ADDR < (`MSSB_SRV_ADDR + `MSSB_SIZE));
+    assign MSSB_SRV_WE          = DEC_WE & (DEC_ADDR >= `MSSB_SRV_ADDR) & (DEC_ADDR < (`MSSB_SRV_ADDR + `MSSB_SIZE));
+
+    assign EEP_RE               = DEC_RE & (DEC_ADDR == `EEP_ADDR);
+    assign EEP_WE               = DEC_WE & (DEC_ADDR == `EEP_ADDR);
+
+    assign PWR_IF_RE            = DEC_RE & (DEC_ADDR == `PWR_IF_ADDR);
+    assign PWR_IF_WE            = DEC_WE & (DEC_ADDR == `PWR_IF_ADDR);
+
+    assign GANTRY_EMOPS_IF_RE   = DEC_RE & (DEC_ADDR == `GANTRY_EMOPS_ADDR);
+    assign GANTRY_EMOPS_IF_WE   = DEC_WE & (DEC_ADDR == `GANTRY_EMOPS_ADDR);
+
+    assign GANTRY_96V_IF_RE     = DEC_RE & (DEC_ADDR == `GANTRY_96V_IF_ADDR);
+    assign GANTRY_96V_IF_WE     = DEC_WE & (DEC_ADDR == `GANTRY_96V_IF_ADDR);
+
+    assign GANTRY_BRAKE_IF_RE   = DEC_RE & (DEC_ADDR == `GANTRY_BRAKE_IF_ADDR);
+    assign GANTRY_BRAKE_IF_WE   = DEC_WE & (DEC_ADDR == `GANTRY_BRAKE_IF_ADDR);
+
+    assign SPD_DMD_IF_RE        = DEC_RE & (DEC_ADDR == `SPD_DMD_IF_ADDR);
+    assign SPD_DMD_IF_WE        = DEC_WE & (DEC_ADDR == `SPD_DMD_IF_ADDR);
+
+    assign SPD_EMOPS_IF_RE      = DEC_RE & (DEC_ADDR == `SPD_EMOPS_IF_ADDR);
+    assign SPD_EMOPS_IF_WE      = DEC_WE & (DEC_ADDR == `SPD_EMOPS_IF_ADDR);
+
+    assign LIFT_MOTOR_SENSOR_IF_RE = DEC_RE & (DEC_ADDR == `LIFT_MOTOR_SENSOR_IF_ADDR);
+    assign LIFT_MOTOR_SENSOR_IF_WE = DEC_WE & (DEC_ADDR == `LIFT_MOTOR_SENSOR_IF_ADDR);
+
+    assign LIFT_96V_IF_RE       = DEC_RE & (DEC_ADDR == `LIFT_96V_IF_ADDR);
+    assign LIFT_96V_IF_WE       = DEC_WE & (DEC_ADDR == `LIFT_96V_IF_ADDR);
+
+    assign STAND_IF_RE          = DEC_RE & (DEC_ADDR == `STAND_IF_ADDR);
+    assign STAND_IF_WE          = DEC_WE & (DEC_ADDR == `STAND_IF_ADDR);
+
+    assign SERVICE_PENDANT_IF_RE = DEC_RE & (DEC_ADDR == `SERVICE_PENDANT_IF_ADDR);
+    assign SERVICE_PENDANT_IF_WE = DEC_WE & (DEC_ADDR == `SERVICE_PENDANT_IF_ADDR);
+
+    assign MAINS_LEVEL_IF_RE    = DEC_RE & (DEC_ADDR == `MAINS_LEVEL_IF_ADDR);
+    assign MAINS_LEVEL_IF_WE    = DEC_WE & (DEC_ADDR == `MAINS_LEVEL_IF_ADDR);
+
+    assign EXT_BRAKE_IF_RE      = DEC_RE & (DEC_ADDR == `EXT_BRAKE_IF_ADDR);
+    assign EXT_BRAKE_IF_WE      = DEC_WE & (DEC_ADDR == `EXT_BRAKE_IF_ADDR);
+
+    assign CCHL_IF_RE           = DEC_RE & (DEC_ADDR == `CCHL_IF_ADDR);
+    assign CCHL_IF_WE           = DEC_WE & (DEC_ADDR == `CCHL_IF_ADDR);
+
+    assign ADCSELMUX_IF_RE      = DEC_RE & (DEC_ADDR == `ADCSELMUX_IF_ADDR);
+    assign ADCSELMUX_IF_WE      = DEC_WE & (DEC_ADDR == `ADCSELMUX_IF_ADDR);
+
+    assign DEBUG_IF_RE          = DEC_RE & (DEC_ADDR == `DEBUG_IF_ADDR);
+    assign DEBUG_IF_WE          = DEC_WE & (DEC_ADDR == `DEBUG_IF_ADDR);
+
+    assign GPIO_FREE_IF_RE      = DEC_RE & (DEC_ADDR == `GPIO_FREE_IF_ADDR);
+    assign GPIO_FREE_IF_WE      = DEC_WE & (DEC_ADDR == `GPIO_FREE_IF_ADDR);
+
+    assign SHUNT_EN_CNT_RE      = DEC_RE & (DEC_ADDR == `SHUNT_EN_CNT_ADDR);
+    assign SHUNT_EN_CNT_WE      = DEC_WE & (DEC_ADDR == `SHUNT_EN_CNT_ADDR);
+
+    // RE_d1 registers
+    always @(posedge OPB_CLK or posedge OPB_RST) begin
+        if (OPB_RST) begin
+            COUNTER_RE_d1           <= 0;
+            SP1_RE_d1               <= 0;
+            SP2_RE_d1               <= 0;
+            CLOCK_RE_d1             <= 0;
+            ILIM_DAC_RE_d1          <= 0;
+            ADC_RE_d1               <= 0;
+            GANTRY_MOT_IF_RE_d1     <= 0;
+            GANTRY_BRK1_IF_RE_d1    <= 0;
+            GANTRY_BRK2_IF_RE_d1    <= 0;
+            GANTRY_BRK3_IF_RE_d1    <= 0;
+            GANTRY_BRK1_RET_IF_RE_d1 <= 0;
+            GANTRY_BRK2_RET_IF_RE_d1 <= 0;
+            GANTRY_BRK3_RET_IF_RE_d1 <= 0;
+            LIFT_MOT_IF_RE_d1       <= 0;
+            MSSB_STN_RE_d1          <= 0;
+            MSSB_SRV_RE_d1          <= 0;
+            EEP_RE_d1               <= 0;
+            PWR_IF_RE_d1            <= 0;
+            GANTRY_EMOPS_IF_RE_d1   <= 0;
+            GANTRY_96V_IF_RE_d1     <= 0;
+            GANTRY_BRAKE_IF_RE_d1   <= 0;
+            SPD_DMD_IF_RE_d1        <= 0;
+            SPD_EMOPS_IF_RE_d1      <= 0;
+            LIFT_MOTOR_SENSOR_IF_RE_d1 <= 0;
+            LIFT_96V_IF_RE_d1       <= 0;
+            STAND_IF_RE_d1          <= 0;
+            SERVICE_PENDANT_IF_RE_d1 <= 0;
+            MAINS_LEVEL_IF_RE_d1    <= 0;
+            EXT_BRAKE_IF_RE_d1      <= 0;
+            CCHL_IF_RE_d1           <= 0;
+            ADCSELMUX_IF_RE_d1      <= 0;
+            DEBUG_IF_RE_d1          <= 0;
+            GPIO_FREE_IF_RE_d1      <= 0;
+            SHUNT_EN_CNT_RE_d1      <= 0;
+        end else begin
+            COUNTER_RE_d1           <= COUNTER_RE;
+            SP1_RE_d1               <= SP1_RE;
+            SP2_RE_d1               <= SP2_RE;
+            CLOCK_RE_d1             <= CLOCK_RE;
+            ILIM_DAC_RE_d1          <= ILIM_DAC_RE;
+            ADC_RE_d1               <= ADC_RE;
+            GANTRY_MOT_IF_RE_d1   <= GANTRY_MOT_IF_RE;
+            GANTRY_BRK1_IF_RE_d1    <= GANTRY_BRK1_IF_RE;
+            GANTRY_BRK2_IF_RE_d1    <= GANTRY_BRK2_IF_RE;
+            GANTRY_BRK3_IF_RE_d1    <= GANTRY_BRK3_IF_RE;
+            GANTRY_BRK1_RET_IF_RE_d1 <= GANTRY_BRK1_RET_IF_RE;
+            GANTRY_BRK2_RET_IF_RE_d1 <= GANTRY_BRK2_RET_IF_RE;
+            GANTRY_BRK3_RET_IF_RE_d1 <= GANTRY_BRK3_RET_IF_RE;
+            LIFT_MOT_IF_RE_d1       <= LIFT_MOT_IF_RE;
+            MSSB_STN_RE_d1          <= MSSB_STN_RE;
+            MSSB_SRV_RE_d1          <= MSSB_SRV_RE;
+            EEP_RE_d1               <= EEP_RE;
+
+            PWR_IF_RE_d1            <= PWR_IF_RE;
+            GANTRY_EMOPS_IF_RE_d1   <= GANTRY_EMOPS_IF_RE;
+            GANTRY_96V_IF_RE_d1     <= GANTRY_96V_IF_RE;
+            GANTRY_BRAKE_IF_RE_d1   <= GANTRY_BRAKE_IF_RE;
+            SPD_DMD_IF_RE_d1        <= SPD_DMD_IF_RE;
+            SPD_EMOPS_IF_RE_d1      <= SPD_EMOPS_IF_RE;
+            LIFT_MOTOR_SENSOR_IF_RE_d1 <= LIFT_MOTOR_SENSOR_IF_RE;
+            LIFT_96V_IF_RE_d1       <= LIFT_96V_IF_RE;
+            STAND_IF_RE_d1          <= STAND_IF_RE;
+            SERVICE_PENDANT_IF_RE_d1 <= SERVICE_PENDANT_IF_RE;
+            MAINS_LEVEL_IF_RE_d1    <= MAINS_LEVEL_IF_RE;
+            EXT_BRAKE_IF_RE_d1      <= EXT_BRAKE_IF_RE;
+            CCHL_IF_RE_d1           <= CCHL_IF_RE;
+            ADCSELMUX_IF_RE_d1      <= ADCSELMUX_IF_RE;
+            DEBUG_IF_RE_d1          <= DEBUG_IF_RE;
+            GPIO_FREE_IF_RE_d1      <= GPIO_FREE_IF_RE;
+            SHUNT_EN_CNT_RE_d1      <= SHUNT_EN_CNT_RE;
         end
-        else if(SP1_RE) begin
-            //reout <= SP1_RE;
-            dataout <= GPIO_IN[5:0];
-            
-        end
-        else if(SP2_RE) begin
-            //reout <= SP2_RE;
-            dataout <= GPIO_IN[5:0];
-        end
+    end
 
-    end	
-    
-    assign DEC_DO               = (ILIM_DAC_RE) ? ILIM_DAC_IN[31:0]         : 32'bz;
-    assign DEC_DO               = (GANT_MOT_RE) ? GANT_MOT_IN[31:0]         : 32'bz;
-    assign DEC_DO               = (LIFT_MOT_RE) ? LIFT_MOT_IN[31:0]         : 32'bz;
-    assign DEC_DO               = (ADC_RE)      ? ADC_IN[31:0]              : 32'bz;
-    assign DEC_DO               = (COUNTER_RE)  ? OSC_CT_IN[31:0]           : 32'bz; 
-    assign DEC_DO               = (CLOCK_RE)    ? CLK_GEN_IN[31:0]          : 32'bz; 
-    assign DEC_DO               = (SP1_RE)      ? SP_IN[31:0]               : 32'bz; 
-    assign DEC_DO               = (SP2_RE)      ? SP_IN[31:0]               : 32'bz;
-    assign DEC_DO               = ((GPO_RE) || (GANTRY_96V_IF_RE) || (LIFT_96V_IF_RE) || (STD_CONT_RE) || (CCHL_IF_RE) || (SER_PENDANT_RE) || (PWR_IF_RE) || (LIFT_MOT_SENS_RE) || (SPD_DMD_IF_RE ) || (GANTRY_MOT_SENS_RE) || (SPD_EMOPS_RE) || (STS_RE) || (ADMUX_RE ) || (ADSEL_RE)) ? GPIO_IN[31:0]      : 32'bz;
+    // DEC_DO
+    assign DEC_DO = (COUNTER_RE_d1)              ? OSC_CT_IN       :
+                    (SP1_RE_d1)                  ? SP_IN           :
+                    (SP2_RE_d1)                  ? SP_IN           :
+                    (CLOCK_RE_d1)                ? CLK_GEN_IN      :
+                    (ILIM_DAC_RE_d1)             ? ILIM_DAC_IN     :
+                    (ADC_RE_d1)                  ? ADC_IN          :
+                    (GANTRY_MOT_IF_RE_d1)        ? GANTRY_MOT_IN   :
+                    (GANTRY_BRK1_IF_RE_d1)       ? GANTRY_BRK1_IN  :
+                    (GANTRY_BRK2_IF_RE_d1)       ? GANTRY_BRK2_IN  :
+                    (GANTRY_BRK3_IF_RE_d1)       ? GANTRY_BRK3_IN  :
+                    (GANTRY_BRK1_RET_IF_RE_d1)   ? GANTRY_BRK1_RET_IN :
+                    (GANTRY_BRK2_RET_IF_RE_d1)   ? GANTRY_BRK2_RET_IN :
+                    (GANTRY_BRK3_RET_IF_RE_d1)   ? GANTRY_BRK3_RET_IN :
+                    (LIFT_MOT_IF_RE_d1)          ? LIFT_MOT_IN     :
+                    (MSSB_STN_RE_d1)             ? MSSB_STN_IN     :
+                    (MSSB_SRV_RE_d1)             ? MSSB_SRV_IN     :
+                    (EEP_RE_d1)                  ? EEP_IN          :
+                    (PWR_IF_RE_d1)               ? GPIO_IN         :
+                    (GANTRY_EMOPS_IF_RE_d1)      ? GPIO_IN         :
+                    (GANTRY_96V_IF_RE_d1)        ? GPIO_IN         :
+                    (GANTRY_BRAKE_IF_RE_d1)      ? GPIO_IN         :
+                    (SPD_DMD_IF_RE_d1)           ? GPIO_IN         :
+                    (SPD_EMOPS_IF_RE_d1)         ? GPIO_IN         :
+                    (LIFT_MOTOR_SENSOR_IF_RE_d1) ? GPIO_IN         :
+                    (LIFT_96V_IF_RE_d1)          ? GPIO_IN         :
+                    (STAND_IF_RE_d1)             ? GPIO_IN         :
+                    (SERVICE_PENDANT_IF_RE_d1)   ? GPIO_IN         :
+                    (MAINS_LEVEL_IF_RE_d1)       ? GPIO_IN         :
+                    (EXT_BRAKE_IF_RE_d1)         ? GPIO_IN         :
+                    (CCHL_IF_RE_d1)              ? GPIO_IN         :
+                    (ADCSELMUX_IF_RE_d1)         ? GPIO_IN         :
+                    (DEBUG_IF_RE_d1)             ? GPIO_IN         :
+                    (GPIO_FREE_IF_RE_d1)         ? GPIO_IN         :
+                    (SHUNT_EN_CNT_RE_d1)         ? GPIO_IN         :
+                                                  32'bz;
 
 endmodule

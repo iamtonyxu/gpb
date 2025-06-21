@@ -3,14 +3,127 @@
 @N: MF916 |Option synthesis_strategy=base is enabled. 
 @N: MF248 |Running in 64-bit mode.
 @N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
-@N: MO111 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\top.v":109:20:109:29|Tristate driver PULSE_2KHZ (in view: work.top(verilog)) on net PULSE_2KHZ (in view: work.top(verilog)) has its enable tied to GND.
-@N: MO111 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\top.v":121:17:121:22|Tristate driver SP1_RE (in view: work.top(verilog)) on net SP1_RE (in view: work.top(verilog)) has its enable tied to GND.
-@N: MO111 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\top.v":122:17:122:22|Tristate driver SP1_WE (in view: work.top(verilog)) on net SP1_WE (in view: work.top(verilog)) has its enable tied to GND.
-@N: MO111 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\top.v":123:17:123:22|Tristate driver SP2_RE (in view: work.top(verilog)) on net SP2_RE (in view: work.top(verilog)) has its enable tied to GND.
-@N: MO111 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\top.v":124:17:124:22|Tristate driver SP2_WE (in view: work.top(verilog)) on net SP2_WE (in view: work.top(verilog)) has its enable tied to GND.
-@N: BN362 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\cmn_uart.vhd":476:8:476:9|Removing sequential instance next_command_ready (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: FP130 |Promoting Net SYS_CLK on CLKINT  I_1 
+@N: FX1171 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Found instance lift_mot_if_0.pwm_0.i_brk_pwm.start_timer[1:0] with reset/set having higher priority than enable. Selected technology supports register with enable having higher priority than reset/set. Adding glue logic to resolve priority. 
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\dual_port_ram.v":53:1:53:6|Removing sequential instance PA_RADDR[9:0] (in view: work.DP_RAM_2R_1W_16s_10s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":476:8:476:9|Removing sequential instance next_command_ready (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Removing sequential instance mem[7:0] (in view: work.afifo_8s_2s_8s_2s(verilog)) of type view:PrimLib.ram1(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\dual_port_ram.v":53:1:53:6|Removing sequential instance ram_1_reg[15:0] (in view: work.DP_RAM_2R_1W_16s_10s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\dual_port_ram.v":53:1:53:6|Removing sequential instance ram_1[23:0] (in view: work.DP_RAM_2R_1W_24s_4s(verilog)) of type view:PrimLib.ram1(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":476:8:476:9|Removing sequential instance next_command_ready (in view: work.work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY_0(rtl)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":476:8:476:9|Removing sequential instance next_command_ready (in view: work.work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY_1(rtl)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_3_0(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_3_0(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_3_1(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_3_1(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_3_2(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_3_2(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_3_3(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_3_3(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_3_4(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_3_4(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_3_5(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_3_5(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_3_6(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_3_6(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance CUR_SL (in view: work.PH_PWM_625_0_80_3_3_7(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":240:6:240:7|Removing sequential instance half_period_strobe (in view: work.PH_PWM_625_0_80_3_3_7(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":79:11:79:25|Removing instance pulse200khz_div (in view: work.ClkGen(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":131:11:131:23|Removing instance clk_16khz_div (in view: work.ClkGen(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_gen.v":101:11:101:23|Removing instance pulse2mhz_div (in view: work.ClkGen(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\dual_port_ram.v":53:1:53:6|Removing sequential instance PA_RADDR[3:0] (in view: work.DP_RAM_2R_1W_24s_4s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":270:29:270:45|Removing instance i_brk_deadband (in view: work.cmn_pwm_0(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.1\.i_mot_deadband (in view: work.cmn_pwm_1(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.2\.i_mot_deadband (in view: work.cmn_pwm_1(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.3\.i_mot_deadband (in view: work.cmn_pwm_1(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.1\.i_mot_deadband (in view: work.cmn_pwm_2(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.2\.i_mot_deadband (in view: work.cmn_pwm_2(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.3\.i_mot_deadband (in view: work.cmn_pwm_2(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.1\.i_mot_deadband (in view: work.cmn_pwm_3(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.2\.i_mot_deadband (in view: work.cmn_pwm_3(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.3\.i_mot_deadband (in view: work.cmn_pwm_3(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.1\.i_mot_deadband (in view: work.cmn_pwm_4(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.2\.i_mot_deadband (in view: work.cmn_pwm_4(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.3\.i_mot_deadband (in view: work.cmn_pwm_4(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.1\.i_mot_deadband (in view: work.cmn_pwm_5(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.2\.i_mot_deadband (in view: work.cmn_pwm_5(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.3\.i_mot_deadband (in view: work.cmn_pwm_5(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.1\.i_mot_deadband (in view: work.cmn_pwm_6(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.2\.i_mot_deadband (in view: work.cmn_pwm_6(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":213:34:213:50|Removing instance gen_dead_band_col_pwm\.3\.i_mot_deadband (in view: work.cmn_pwm_6(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":270:29:270:45|Removing instance i_brk_deadband (in view: work.cmn_pwm_7(rtl)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_0_0(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_3_1(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_1_1(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_2_1(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_3_2(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_1_2(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_2_2(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_3_3(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_1_3(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_2_3(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_3_4(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_1_4(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_2_4(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_3_5(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_1_5(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_2_5(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_3_6(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_1_6(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_2_6(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance ACTUAL_PWM[1:0] (in view: work.CMN_DEADBAND_5_0_7(rtl)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":108:25:108:42|Removing instance i_brk_filt (in view: work.cmn_pwm_0(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":156:26:156:43|Removing instance i_mot_pwm_simple (in view: work.cmn_pwm_1(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":92:25:92:42|Removing instance i_mot_filt (in view: work.cmn_pwm_1(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":156:26:156:43|Removing instance i_mot_pwm_simple (in view: work.cmn_pwm_2(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":92:25:92:42|Removing instance i_mot_filt (in view: work.cmn_pwm_2(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":156:26:156:43|Removing instance i_mot_pwm_simple (in view: work.cmn_pwm_3(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":92:25:92:42|Removing instance i_mot_filt (in view: work.cmn_pwm_3(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":156:26:156:43|Removing instance i_mot_pwm_simple (in view: work.cmn_pwm_4(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":92:25:92:42|Removing instance i_mot_filt (in view: work.cmn_pwm_4(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":156:26:156:43|Removing instance i_mot_pwm_simple (in view: work.cmn_pwm_5(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":92:25:92:42|Removing instance i_mot_filt (in view: work.cmn_pwm_5(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":156:26:156:43|Removing instance i_mot_pwm_simple (in view: work.cmn_pwm_6(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":92:25:92:42|Removing instance i_mot_filt (in view: work.cmn_pwm_6(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm.vhd":108:25:108:42|Removing instance i_brk_filt (in view: work.cmn_pwm_7(rtl)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\simple_ph_pwm.vhd":114:8:114:9|Removing sequential instance pwm_out[2:0] (in view: work.SIMPLE_PH_PWM_1(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\simple_ph_pwm.vhd":114:8:114:9|Removing sequential instance pwm_out[2:0] (in view: work.SIMPLE_PH_PWM_2(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\simple_ph_pwm.vhd":114:8:114:9|Removing sequential instance pwm_out[2:0] (in view: work.SIMPLE_PH_PWM_3(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\simple_ph_pwm.vhd":114:8:114:9|Removing sequential instance pwm_out[2:0] (in view: work.SIMPLE_PH_PWM_4(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\simple_ph_pwm.vhd":114:8:114:9|Removing sequential instance pwm_out[2:0] (in view: work.SIMPLE_PH_PWM_5(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\simple_ph_pwm.vhd":114:8:114:9|Removing sequential instance pwm_out[2:0] (in view: work.SIMPLE_PH_PWM_6(behavioral)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: FP130 |Promoting Net RESET_N_arst on CLKINT  I_1 
+@N: FP130 |Promoting Net FPGA_100M_CLK on CLKINT  I_2 
+@N: FP130 |Promoting Net lift_mot_if_0.clk_16khz_div.clkout on CLKINT  I_2 
+@N: FP130 |Promoting Net gantry_mot_if_0.clk_16khz_div.clkout on CLKINT  I_2 
+@N: FP130 |Promoting Net gantry_brk2_ret_if_0.clk_16khz_div.clkout on CLKINT  I_2 
+@N: FP130 |Promoting Net gantry_brk3_if_0.clk_16khz_div.clkout on CLKINT  I_2 
+@N: FP130 |Promoting Net gantry_brk3_ret_if_0.clk_16khz_div.clkout on CLKINT  I_2 
+@N: FP130 |Promoting Net gantry_brk1_if_0.clk_16khz_div.clkout on CLKINT  I_2 
+@N: FP130 |Promoting Net gantry_brk1_ret_if_0.clk_16khz_div.clkout on CLKINT  I_2 
+@N: FP130 |Promoting Net gantry_brk2_if_0.clk_16khz_div.clkout on CLKINT  I_2 
+@N: FP130 |Promoting Net dac_0.sclk.clkout on CLKINT  I_2 
+@N: FP130 |Promoting Net adc_0.sclk.CLK_OUT on CLKINT  I_2 
+@N: FP130 |Promoting Net clk_gen_0.pulse2khz_div.CLK_OUT on CLKINT  I_2 
+@N: FP130 |Promoting Net DBUG_HEADER10 on CLKINT  I_3 
+@N: FP130 |Promoting Net clk_gen_0.wdclk_div.CLK_OUT on CLKINT  I_2 
 @N: FX1184 |Applying syn_allowed_resources blockrams=352 on top level netlist top 
 @N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
-@N: BN225 |Writing default property annotation file C:\repo\jabil2025\dmd\P1060973_FPGA\synthesis\top.sap.
-@N: MO225 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|There are no possible illegal states for state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl)); safe FSM implementation is not required.
+@N: BN225 |Writing default property annotation file C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\top.sap.
+@N: MO225 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\dac_dacx0504_if.v":127:4:127:9|There are no possible illegal states for state machine state[3:0] (in view: work.DAC_DACx0504_IF(verilog)); safe FSM implementation is not required.
+@N: MO225 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|There are no possible illegal states for state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY_0(rtl)); safe FSM implementation is not required.
+@N: MO225 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\mssb_if.v":92:4:92:9|There are no possible illegal states for state machine state[1:0] (in view: work.MSSB_IF_1(verilog)); safe FSM implementation is not required.
+@N: MO225 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|There are no possible illegal states for state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY_1(rtl)); safe FSM implementation is not required.
+@N: MO225 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\mssb_if.v":92:4:92:9|There are no possible illegal states for state machine state[1:0] (in view: work.MSSB_IF_0(verilog)); safe FSM implementation is not required.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance DB_STATE[4] (in view: work.CMN_DEADBAND_5_0_8(rtl)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance DB_STATE[4] (in view: work.CMN_DEADBAND_5_0_7(rtl)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance DB_STATE[4] (in view: work.CMN_DEADBAND_5_0_0(rtl)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance DB_STATE[4] (in view: work.CMN_DEADBAND_5_0_1(rtl)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance DB_STATE[4] (in view: work.CMN_DEADBAND_5_0_2(rtl)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance DB_STATE[4] (in view: work.CMN_DEADBAND_5_0_3(rtl)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance DB_STATE[4] (in view: work.CMN_DEADBAND_5_0_4(rtl)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance DB_STATE[4] (in view: work.CMN_DEADBAND_5_0_5(rtl)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance DB_STATE[4] (in view: work.CMN_DEADBAND_5_0_6(rtl)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance DB_STATE[4] (in view: work.CMN_DEADBAND_5_3(rtl)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance DB_STATE[4] (in view: work.CMN_DEADBAND_5_2(rtl)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance DB_STATE[4] (in view: work.CMN_DEADBAND_5_1(rtl)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: MO225 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|There are no possible illegal states for state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl)); safe FSM implementation is not required.

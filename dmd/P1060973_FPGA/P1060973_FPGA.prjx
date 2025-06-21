@@ -20,7 +20,7 @@ KEY VendorTechnology_OPCONR ""
 KEY VendorTechnology_PLL_SUPPLY ""
 KEY VendorTechnology_RAD_EXPOSURE ""
 KEY VendorTechnology_RESERVEMIGRATIONPINS "1"
-KEY VendorTechnology_RESTRICTPROBEPINS "1"
+KEY VendorTechnology_RESTRICTPROBEPINS "0"
 KEY VendorTechnology_RESTRICTSPIPINS "0"
 KEY VendorTechnology_SYSTEM_CONTROLLER_SUSPEND_MODE "0"
 KEY VendorTechnology_TARGETDEVICESFORMIGRATION "MPF100TL;"
@@ -32,7 +32,7 @@ KEY VendorTechnology_VCCI_1.8_VOLTR "EXT"
 KEY VendorTechnology_VCCI_2.5_VOLTR "EXT"
 KEY VendorTechnology_VCCI_3.3_VOLTR "EXT"
 KEY VendorTechnology_VOLTR "EXT"
-KEY ProjectLocation "C:\repo\jabil2025\dmd\P1060973_FPGA"
+KEY ProjectLocation "C:\repo2\gpb\dmd\P1060973_FPGA"
 KEY ProjectDescription ""
 KEY UseRootLocationForLinkedFiles "FALSE"
 KEY RootLocationENVForLinkedFiles ""
@@ -47,175 +47,276 @@ KEY Vendor "Actel"
 KEY ActiveRoot "top::work"
 LIST REVISIONS
 VALUE="Impl1",NUM=1
-CURREV=1
+VALUE="Impl2",NUM=2
+CURREV=2
 ENDLIST
 LIST GlobalIncludeFileList
 ENDLIST
 LIST FileManager
 VALUE "<project>\constraint\io\top.pdc,io_pdc"
 STATE="utd"
-TIME="1745243661"
-SIZE="3879"
+TIME="1746519939"
+SIZE="16586"
 ENDFILE
-VALUE "<project>\hdl\ADC_AD7663AS.V,hdl"
+VALUE "<project>\hdl\ADC_ADS8864_IF.v,hdl"
 STATE="utd"
-TIME="1740808091"
-SIZE="10967"
+TIME="1746520293"
+SIZE="12817"
+ENDFILE
+VALUE "<project>\hdl\ADC_ADS8864_tb.v,hdl"
+STATE="utd"
+TIME="1746517320"
+SIZE="2977"
 ENDFILE
 VALUE "<project>\hdl\ADDR_DECODER.v,hdl"
 STATE="utd"
-TIME="1740808091"
-SIZE="9540"
+TIME="1747557379"
+SIZE="17768"
+ENDFILE
+VALUE "<project>\hdl\Addr_definition.v,hdl"
+STATE="utd"
+TIME="1747556962"
+SIZE="3353"
 ENDFILE
 VALUE "<project>\hdl\afifo.v,hdl"
 STATE="utd"
-TIME="1730446225"
+TIME="1745416052"
 SIZE="20479"
 ENDFILE
 VALUE "<project>\hdl\afifo_tb.v,hdl"
 STATE="utd"
-TIME="1744870953"
+TIME="1745416052"
 SIZE="1401"
 ENDFILE
 VALUE "<project>\hdl\CLK_DIV.V,hdl"
 STATE="utd"
-TIME="1740808091"
-SIZE="1268"
+TIME="1745416052"
+SIZE="1308"
 ENDFILE
 VALUE "<project>\hdl\CLK_GEN.v,hdl"
 STATE="utd"
-TIME="1740808091"
-SIZE="5399"
+TIME="1749236150"
+SIZE="5493"
 ENDFILE
 VALUE "<project>\hdl\cmd_server.v,hdl"
 STATE="utd"
-TIME="1744973417"
+TIME="1745416052"
 SIZE="3117"
 ENDFILE
 VALUE "<project>\hdl\cmd_server_tb.v,hdl"
 STATE="utd"
-TIME="1745130222"
-SIZE="4871"
+TIME="1745582761"
+SIZE="4977"
+ENDFILE
+VALUE "<project>\hdl\cmn_deadband.vhd,hdl"
+STATE="utd"
+TIME="1474197791"
+SIZE="6022"
+ENDFILE
+VALUE "<project>\hdl\cmn_debouncer.vhd,hdl"
+STATE="utd"
+TIME="1747013917"
+SIZE="5109"
+ENDFILE
+VALUE "<project>\hdl\cmn_latch_over_curr.vhd,hdl"
+STATE="utd"
+TIME="1474197791"
+SIZE="3941"
+ENDFILE
+VALUE "<project>\hdl\cmn_pwm.vhd,hdl"
+STATE="utd"
+TIME="1748142528"
+SIZE="12262"
+ENDFILE
+VALUE "<project>\hdl\cmn_pwm_tb.v,hdl"
+STATE="utd"
+TIME="1747797117"
+SIZE="3894"
+ENDFILE
+VALUE "<project>\hdl\cmn_pwm_wrapper.v,hdl"
+STATE="utd"
+TIME="1748179875"
+SIZE="13100"
+ENDFILE
+VALUE "<project>\hdl\cmn_pwm_wrapper_tb.v,hdl"
+STATE="utd"
+TIME="1747789591"
+SIZE="4615"
 ENDFILE
 VALUE "<project>\hdl\cmn_uart.vhd,hdl"
 STATE="utd"
-TIME="1474197791"
+TIME="1745416052"
 SIZE="25394"
 ENDFILE
-VALUE "<project>\hdl\DAC_AD8803AR.v,hdl"
+VALUE "<project>\hdl\DAC_DACx0504_IF.v,hdl"
 STATE="utd"
-TIME="1740808091"
-SIZE="3868"
+TIME="1746079675"
+SIZE="6652"
+ENDFILE
+VALUE "<project>\hdl\DAC_DACx0504_tb.v,hdl"
+STATE="utd"
+TIME="1745938163"
+SIZE="3795"
 ENDFILE
 VALUE "<project>\hdl\dual_port_ram.v,hdl"
 STATE="utd"
-TIME="1740808091"
-SIZE="1535"
+TIME="1745416052"
+SIZE="1602"
+ENDFILE
+VALUE "<project>\hdl\DUT_ADS8864.v,hdl"
+STATE="utd"
+TIME="1745936061"
+SIZE="4682"
+ENDFILE
+VALUE "<project>\hdl\DUT_DACx0504.v,hdl"
+STATE="utd"
+TIME="1746014655"
+SIZE="8198"
+ENDFILE
+VALUE "<project>\hdl\EEPROM_OPB_IF.v,hdl"
+STATE="utd"
+TIME="1745914703"
+SIZE="3605"
+ENDFILE
+VALUE "<project>\hdl\EEPROM_OPB_IF_tb.v,hdl"
+STATE="utd"
+TIME="1745907234"
+SIZE="4231"
+ENDFILE
+VALUE "<project>\hdl\eep_self_test.vhd,hdl"
+STATE="utd"
+TIME="1474197501"
+SIZE="7850"
 ENDFILE
 VALUE "<project>\hdl\FPGA_WD.v,hdl"
 STATE="utd"
-TIME="1740808091"
-SIZE="1428"
-ENDFILE
-VALUE "<project>\hdl\FREQ_COUNTER.v,hdl"
-STATE="utd"
-TIME="1740808091"
-SIZE="3008"
-ENDFILE
-VALUE "<project>\hdl\GANTRY_MOT.v,hdl"
-STATE="utd"
-TIME="1740808091"
-SIZE="5477"
+TIME="1745977508"
+SIZE="1449"
 ENDFILE
 VALUE "<project>\hdl\GPIO.v,hdl"
 STATE="utd"
-TIME="1745059399"
-SIZE="10161"
-ENDFILE
-VALUE "<project>\hdl\LIFT_MOT.v,hdl"
-STATE="utd"
-TIME="1740808091"
-SIZE="5475"
-ENDFILE
-VALUE "<project>\hdl\MOT_PWM_GEN.v,hdl"
-STATE="utd"
-TIME="1740808091"
-SIZE="3181"
+TIME="1749233589"
+SIZE="21513"
 ENDFILE
 VALUE "<project>\hdl\msg_buffer.v,hdl"
 STATE="utd"
-TIME="1744962480"
-SIZE="2181"
+TIME="1745416052"
+SIZE="2269"
 ENDFILE
 VALUE "<project>\hdl\msg_read.v,hdl"
 STATE="utd"
-TIME="1745062887"
-SIZE="10300"
+TIME="1745889155"
+SIZE="10591"
 ENDFILE
 VALUE "<project>\hdl\msg_read_tb.v,hdl"
 STATE="utd"
-TIME="1744972059"
+TIME="1745416052"
 SIZE="5572"
 ENDFILE
 VALUE "<project>\hdl\msg_write.v,hdl"
 STATE="utd"
-TIME="1745061472"
+TIME="1745416052"
 SIZE="10004"
 ENDFILE
 VALUE "<project>\hdl\msg_write_tb.v,hdl"
 STATE="utd"
-TIME="1744936760"
+TIME="1745416052"
 SIZE="2599"
+ENDFILE
+VALUE "<project>\hdl\MSSB_IF.v,hdl"
+STATE="utd"
+TIME="1748143582"
+SIZE="13301"
+ENDFILE
+VALUE "<project>\hdl\MSSB_IF_tb.v,hdl"
+STATE="utd"
+TIME="1746774955"
+SIZE="3222"
 ENDFILE
 VALUE "<project>\hdl\opb_emu_target.v,hdl"
 STATE="utd"
-TIME="1744968756"
-SIZE="1979"
+TIME="1745634123"
+SIZE="5613"
+ENDFILE
+VALUE "<project>\hdl\OSCILLATOR_COUNTER.v,hdl"
+STATE="utd"
+TIME="1745988133"
+SIZE="4791"
+ENDFILE
+VALUE "<project>\hdl\over_curr.vhd,hdl"
+STATE="utd"
+TIME="1474197791"
+SIZE="5244"
 ENDFILE
 VALUE "<project>\hdl\pci_emu_target.v,hdl"
 STATE="utd"
-TIME="1740808091"
-SIZE="4665"
+TIME="1745416052"
+SIZE="4681"
+ENDFILE
+VALUE "<project>\hdl\PH_PWM.vhd,hdl"
+STATE="utd"
+TIME="1747789079"
+SIZE="8374"
 ENDFILE
 VALUE "<project>\hdl\ScratchPadRegister.v,hdl"
 STATE="utd"
-TIME="1740808091"
-SIZE="1627"
+TIME="1745637890"
+SIZE="1633"
 ENDFILE
-VALUE "<project>\hdl\Timer_Counter.v,hdl"
+VALUE "<project>\hdl\serial_eeprom_if.vhd,hdl"
 STATE="utd"
-TIME="1740808091"
-SIZE="1139"
+TIME="1745894298"
+SIZE="15011"
+ENDFILE
+VALUE "<project>\hdl\SER_EEPROM_SIM.vhd,hdl"
+STATE="utd"
+TIME="1474197500"
+SIZE="12526"
+ENDFILE
+VALUE "<project>\hdl\SIMPLE_PH_PWM.vhd,hdl"
+STATE="utd"
+TIME="1748142462"
+SIZE="4287"
+ENDFILE
+VALUE "<project>\hdl\SIMPLE_PH_PWM_tb.v,hdl"
+STATE="utd"
+TIME="1748142586"
+SIZE="947"
 ENDFILE
 VALUE "<project>\hdl\top.v,hdl"
 STATE="utd"
-TIME="1745241738"
-SIZE="26032"
+TIME="1749233631"
+SIZE="43459"
 ENDFILE
 VALUE "<project>\hdl\top_tb.v,hdl"
 STATE="utd"
-TIME="1745117617"
-SIZE="5405"
+TIME="1749235672"
+SIZE="33918"
+ENDFILE
+VALUE "<project>\synthesis\synwork\layer0.so,so"
+STATE="utd"
+TIME="1747013293"
+SIZE="159"
 ENDFILE
 VALUE "<project>\synthesis\top.so,so"
 STATE="utd"
-TIME="1745242743"
-SIZE="216"
+TIME="1749173917"
+SIZE="211"
 ENDFILE
 VALUE "<project>\synthesis\top.vm,syn_vm"
 STATE="utd"
-TIME="1745242742"
-SIZE="135393"
+TIME="1749173914"
+SIZE="2803502"
 ENDFILE
 VALUE "<project>\synthesis\top_syn.prj,prj"
 STATE="utd"
-TIME="1745242743"
-SIZE="3669"
+TIME="1749173918"
+SIZE="4861"
 ENDFILE
 VALUE "<project>\synthesis\top_vm.sdc,syn_sdc"
 STATE="utd"
-TIME="1745242742"
-SIZE="969"
+TIME="1749173915"
+SIZE="5023"
 ENDFILE
 ENDLIST
 LIST UsedFile
@@ -237,9 +338,16 @@ ENDLIST
 Used_File_List
 ENDUsed_File_List
 ENDLIST
+LIST Impl2
+ideSYNTHESIS(<project>\synthesis\top.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
 ENDLIST
-LIST synthesis_implementations
-VALUE "synthesis"
+Used_File_List
+ENDUsed_File_List
+ENDLIST
 ENDLIST
 ENDLIST
 ENDLIST
@@ -354,6 +462,16 @@ ENDLIST
 Used_File_List
 ENDUsed_File_List
 ENDLIST
+LIST Impl2
+ideSYNTHESIS(<project>\synthesis\top.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
 ENDLIST
 ENDLIST
 LIST ExcludePackageForSimulation
@@ -369,17 +487,23 @@ ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
 Reports;Reports;0
-ReportsCurrentItem;Place and Route:top_layout_log.log
+ReportsCurrentItem;Export FlashPro Express Job:top_exportJob.log
+HDL;hdl\PH_PWM_SIMPLE.vhd;0
+HDL;hdl\cmn_pwm.vhd;0
+HDL;hdl\MSSB_IF.v;0
+HDL;synthesis\top.srr;0
 HDL;hdl\top.v;0
-HDL;constraint\io\top.pdc;0
-Constraint Manager;Constraint Manager;0
 StartPage;StartPage;0
-ACTIVEVIEW;Constraint Manager
+ACTIVEVIEW;Reports
 ENDLIST
 LIST ModuleSubBlockList
-LIST "ADC_AD7663AS::work","hdl\ADC_AD7663AS.V","FALSE","FALSE"
+LIST "ADC_ADS8864_IF::work","hdl\ADC_ADS8864_IF.v","FALSE","FALSE"
 SUBBLOCK "CLOCK_DIV::work","hdl\CLK_DIV.V","FALSE","FALSE"
 SUBBLOCK "DP_RAM_2R_1W::work","hdl\dual_port_ram.v","FALSE","FALSE"
+ENDLIST
+LIST "ADC_ADS8864_tb::work","hdl\ADC_ADS8864_tb.v","FALSE","FALSE"
+SUBBLOCK "ADC_ADS8864_IF::work","hdl\ADC_ADS8864_IF.v","FALSE","FALSE"
+SUBBLOCK "DUT_ADS8864::work","hdl\DUT_ADS8864.v","FALSE","FALSE"
 ENDLIST
 LIST "AdderDecode::work","hdl\ADDR_DECODER.v","FALSE","FALSE"
 ENDLIST
@@ -401,24 +525,71 @@ ENDLIST
 LIST "cmd_server_tb::work","hdl\cmd_server_tb.v","FALSE","FALSE"
 SUBBLOCK "cmd_server::work","hdl\cmd_server.v","FALSE","FALSE"
 ENDLIST
-LIST "DAC_AD8803AR::work","hdl\DAC_AD8803AR.v","FALSE","FALSE"
+LIST "cmn_latch_over_curr::work","hdl\cmn_latch_over_curr.vhd","FALSE","FALSE"
+SUBBLOCK "cmn_debouncer::work","hdl\cmn_debouncer.vhd","FALSE","FALSE"
+ENDLIST
+LIST "cmn_pwm::work","hdl\cmn_pwm.vhd","FALSE","FALSE"
+SUBBLOCK "PH_PWM::work","hdl\PH_PWM.vhd","FALSE","FALSE"
+SUBBLOCK "SIMPLE_PH_PWM::work","hdl\SIMPLE_PH_PWM.vhd","FALSE","FALSE"
+SUBBLOCK "CMN_DEADBAND::work","hdl\cmn_deadband.vhd","FALSE","FALSE"
+SUBBLOCK "cmn_debouncer::work","hdl\cmn_debouncer.vhd","FALSE","FALSE"
+ENDLIST
+LIST "cmn_pwm_tb::work","hdl\cmn_pwm_tb.v","FALSE","FALSE"
+SUBBLOCK "cmn_pwm::work","hdl\cmn_pwm.vhd","FALSE","FALSE"
+ENDLIST
+LIST "cmn_pwm_wrapper::work","hdl\cmn_pwm_wrapper.v","FALSE","FALSE"
+SUBBLOCK "CLOCK_DIV::work","hdl\CLK_DIV.V","FALSE","FALSE"
+SUBBLOCK "cmn_pwm::work","hdl\cmn_pwm.vhd","FALSE","FALSE"
+ENDLIST
+LIST "cmn_pwm_wrapper_tb::work","hdl\cmn_pwm_wrapper_tb.v","FALSE","FALSE"
+SUBBLOCK "cmn_pwm_wrapper::work","hdl\cmn_pwm_wrapper.v","FALSE","FALSE"
+ENDLIST
+LIST "DAC_DACx0504_IF::work","hdl\DAC_DACx0504_IF.v","FALSE","FALSE"
+SUBBLOCK "CLOCK_DIV::work","hdl\CLK_DIV.V","FALSE","FALSE"
+SUBBLOCK "DP_RAM_2R_1W::work","hdl\dual_port_ram.v","FALSE","FALSE"
+SUBBLOCK "afifo::work","hdl\afifo.v","FALSE","FALSE"
+ENDLIST
+LIST "DAC_DACx0504_tb::work","hdl\DAC_DACx0504_tb.v","FALSE","FALSE"
+SUBBLOCK "DAC_DACx0504_IF::work","hdl\DAC_DACx0504_IF.v","FALSE","FALSE"
+SUBBLOCK "DUT_DACx0504::work","hdl\DUT_DACx0504.v","FALSE","FALSE"
+ENDLIST
+LIST "DUT_ADS8864::work","hdl\DUT_ADS8864.v","FALSE","FALSE"
 SUBBLOCK "CLOCK_DIV::work","hdl\CLK_DIV.V","FALSE","FALSE"
 ENDLIST
+LIST "DUT_DACx0504::work","hdl\DUT_DACx0504.v","FALSE","FALSE"
+ENDLIST
+LIST "eep_self_test::work","hdl\eep_self_test.vhd","FALSE","FALSE"
+ENDLIST
+LIST "EEPROM_OPB_IF::work","hdl\EEPROM_OPB_IF.v","FALSE","FALSE"
+SUBBLOCK "serial_eeprom_if::work","hdl\serial_eeprom_if.vhd","FALSE","FALSE"
+ENDLIST
+LIST "EEPROM_OPB_IF_tb::work","hdl\EEPROM_OPB_IF_tb.v","FALSE","FALSE"
+SUBBLOCK "EEPROM_OPB_IF::work","hdl\EEPROM_OPB_IF.v","FALSE","FALSE"
+SUBBLOCK "SER_EEPROM_SIM::work","hdl\SER_EEPROM_SIM.vhd","FALSE","FALSE"
+ENDLIST
 LIST "afifo::work","hdl\afifo.v","FALSE","FALSE"
+ENDLIST
+LIST "CMN_DEADBAND::work","hdl\cmn_deadband.vhd","FALSE","FALSE"
+ENDLIST
+LIST "cmn_debouncer::work","hdl\cmn_debouncer.vhd","FALSE","FALSE"
 ENDLIST
 LIST "cmn_uart::work","hdl\cmn_uart.vhd","FALSE","FALSE"
 ENDLIST
 LIST "DP_RAM_2R_1W::work","hdl\dual_port_ram.v","FALSE","FALSE"
 ENDLIST
+LIST "afifo::work","hdl\afifo.v","FALSE","FALSE"
+ENDLIST
+LIST "cmn_debouncer::work","hdl\cmn_debouncer.vhd","FALSE","FALSE"
+ENDLIST
+LIST "cmn_uart::work","hdl\cmn_uart.vhd","FALSE","FALSE"
+ENDLIST
+LIST "DP_RAM_2R_1W::work","hdl\dual_port_ram.v","FALSE","FALSE"
+ENDLIST
+LIST "afifo::work","hdl\afifo.v","FALSE","FALSE"
+ENDLIST
 LIST "FPGA_WDI::work","hdl\FPGA_WD.v","FALSE","FALSE"
 ENDLIST
-LIST "Gantry_Motor::work","hdl\GANTRY_MOT.v","FALSE","FALSE"
-ENDLIST
 LIST "GPIO::work","hdl\GPIO.v","FALSE","FALSE"
-ENDLIST
-LIST "Lift_Motor::work","hdl\LIFT_MOT.v","FALSE","FALSE"
-ENDLIST
-LIST "MotCtrl::work","hdl\MOT_PWM_GEN.v","FALSE","FALSE"
 ENDLIST
 LIST "msg_buffer::work","hdl\msg_buffer.v","FALSE","FALSE"
 SUBBLOCK "afifo::work","hdl\afifo.v","FALSE","FALSE"
@@ -434,23 +605,57 @@ ENDLIST
 LIST "msg_write_tb::work","hdl\msg_write_tb.v","FALSE","FALSE"
 SUBBLOCK "msg_write::work","hdl\msg_write.v","FALSE","FALSE"
 ENDLIST
+LIST "MSSB_IF::work","hdl\MSSB_IF.v","FALSE","FALSE"
+SUBBLOCK "cmn_uart::work","hdl\cmn_uart.vhd","FALSE","FALSE"
+ENDLIST
+LIST "MSSB_IF_tb::work","hdl\MSSB_IF_tb.v","FALSE","FALSE"
+SUBBLOCK "MSSB_IF::work","hdl\MSSB_IF.v","FALSE","FALSE"
+ENDLIST
 LIST "opb_emu_target::work","hdl\opb_emu_target.v","FALSE","FALSE"
+SUBBLOCK "CLOCK_DIV::work","hdl\CLK_DIV.V","FALSE","FALSE"
 SUBBLOCK "msg_read::work","hdl\msg_read.v","FALSE","FALSE"
 SUBBLOCK "msg_write::work","hdl\msg_write.v","FALSE","FALSE"
 ENDLIST
-LIST "OSCILLATOR_COUNTER::work","hdl\FREQ_COUNTER.v","FALSE","FALSE"
-SUBBLOCK "TIMER_COUNTER::work","hdl\Timer_Counter.v","FALSE","FALSE"
+LIST "OSCILLATOR_COUNTER::work","hdl\OSCILLATOR_COUNTER.v","FALSE","FALSE"
+SUBBLOCK "afifo::work","hdl\afifo.v","FALSE","FALSE"
+ENDLIST
+LIST "OVER_CURR::work","hdl\over_curr.vhd","FALSE","FALSE"
 ENDLIST
 LIST "PCI_EMU_TARGET::work","hdl\pci_emu_target.v","FALSE","FALSE"
 ENDLIST
+LIST "PH_PWM::work","hdl\PH_PWM.vhd","FALSE","FALSE"
+ENDLIST
+LIST "PH_PWM_SIMPLE_tb::work","hdl\SIMPLE_PH_PWM_tb.v","FALSE","FALSE"
+SUBBLOCK "SIMPLE_PH_PWM::work","hdl\SIMPLE_PH_PWM.vhd","FALSE","FALSE"
+ENDLIST
 LIST "SCRATCH_PAD_REGISTER::work","hdl\ScratchPadRegister.v","FALSE","FALSE"
 ENDLIST
-LIST "TIMER_COUNTER::work","hdl\Timer_Counter.v","FALSE","FALSE"
+LIST "SER_EEPROM_SIM::work","hdl\SER_EEPROM_SIM.vhd","FALSE","FALSE"
+ENDLIST
+LIST "serial_eeprom_if::work","hdl\serial_eeprom_if.vhd","FALSE","FALSE"
+ENDLIST
+LIST "SIMPLE_PH_PWM::work","hdl\SIMPLE_PH_PWM.vhd","FALSE","FALSE"
 ENDLIST
 LIST "top::work","hdl\top.v","FALSE","FALSE"
+SUBBLOCK "ADC_ADS8864_IF::work","hdl\ADC_ADS8864_IF.v","FALSE","FALSE"
 SUBBLOCK "AdderDecode::work","hdl\ADDR_DECODER.v","FALSE","FALSE"
+SUBBLOCK "CLOCK_DIV::work","hdl\CLK_DIV.V","FALSE","FALSE"
+SUBBLOCK "ClkGen::work","hdl\CLK_GEN.v","FALSE","FALSE"
+SUBBLOCK "DAC_DACx0504_IF::work","hdl\DAC_DACx0504_IF.v","FALSE","FALSE"
+SUBBLOCK "EEPROM_OPB_IF::work","hdl\EEPROM_OPB_IF.v","FALSE","FALSE"
+SUBBLOCK "FPGA_WDI::work","hdl\FPGA_WD.v","FALSE","FALSE"
+SUBBLOCK "GPIO::work","hdl\GPIO.v","FALSE","FALSE"
+SUBBLOCK "MSSB_IF::work","hdl\MSSB_IF.v","FALSE","FALSE"
+SUBBLOCK "OSCILLATOR_COUNTER::work","hdl\OSCILLATOR_COUNTER.v","FALSE","FALSE"
 SUBBLOCK "SCRATCH_PAD_REGISTER::work","hdl\ScratchPadRegister.v","FALSE","FALSE"
 SUBBLOCK "cmd_server::work","hdl\cmd_server.v","FALSE","FALSE"
+SUBBLOCK "cmn_pwm_wrapper::work","hdl\cmn_pwm_wrapper.v","FALSE","FALSE"
+ENDLIST
+LIST "top_tb::work","hdl\top_tb.v","FALSE","FALSE"
+SUBBLOCK "DUT_ADS8864::work","hdl\DUT_ADS8864.v","FALSE","FALSE"
+SUBBLOCK "DUT_DACx0504::work","hdl\DUT_DACx0504.v","FALSE","FALSE"
+SUBBLOCK "SER_EEPROM_SIM::work","hdl\SER_EEPROM_SIM.vhd","FALSE","FALSE"
+SUBBLOCK "top::work","hdl\top.v","FALSE","FALSE"
 ENDLIST
 ENDLIST
 LIST ActiveTestBenchList

@@ -1,5 +1,5 @@
 %%% protect protected_file
-#OPTIONS:"|-bldtbl|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-work_is_curlib|1|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-vhdl2008|-work_is_curlib|1|-ignore_undefined_lib|-lib|work"
+#OPTIONS:"|-bldtbl|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-work_is_curlib|1|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-vhdl2008|-work_is_curlib|1|-ignore_undefined_lib|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\bin64\\c_vhdl.exe":1721969626
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\location.map":1721919830
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\std.vhd":1721919856
@@ -10,9 +10,96 @@
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd\\umr_capim.vhd":1721919830
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\arith.vhd":1721919830
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\unsigned.vhd":1721919830
-#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\hdl\\cmn_uart.vhd":1474197791
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\serial_eeprom_if.vhd":1745894298
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\cmn_uart.vhd":1745416052
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd\\math_real.vhd":1721921372
-@E8lFkRDCO_lMk0Ns
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\PH_PWM.vhd":1747789079
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\SIMPLE_PH_PWM.vhd":1748142462
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\cmn_deadband.vhd":1474197791
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\cmn_debouncer.vhd":1747013917
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\cmn_pwm.vhd":1748142528
+@E8lFkRDCO_lMb
+IlDsHLNRs$I	Fs
+sbNN0lCCBsRp)i_q_a vR]ZHCM0o
+CsbNNslCC0s R)1zmpahQmR0HMCsoC
+sbNN0lCCusR] q1_Q1]wHaRMo0CCbs
+NlsNCs0CRXvq_)Bz_v1qu_p a QvR0HMCsoC
+sbNN0lCC sRhpqA h_Bav)_qHXRMo0CCbs
+NlsNCs0CRzwqpBa_h_a)vRqXHCM0o
+CsbNNslCC0s R7qq7Aha7_QRv HCM0o
+CsbNNslCC0s R7AhmzBa _QRv HCM0o
+CsHkMb0CRs#RC0-H4
+M0bkR	ODR
+-4HkMb0$R#M-OR4M
+HbRk0b#kDCj_.jRk#-F4
+kk0b0FRl0I_bl4R-
+0FkbRk0L_s	bRIl-F4
+kk0b0FRl0M_C_0FkR
+-4Fbk0kL0RsC	_Mk_F04R-
+bHMkl0RFF0_P_CsOsksR
+-4HkMb0sRL	P_FCOs_kRss-H4
+M0bkR0lF_lbI_sbNN4ljR
+-4HkMb0FRl0I_blN_bs.Nld4R-
+bHMkl0RFb0_Ibl_NlsNc-6R4M
+HbRk0L_s	b_IlbNNsl4R-
+bHMkl0RFC0_MM_HR
+-4HkMb0sRL	M_C_RHM-H4
+M0bkRDlC_sO0D4R-
+0FkbRk0#s0N0I_blC_bs8HF_0FkR
+-4ClM8FD8kCF
+l8CkDRMOl_L8CFOkMCDs
+HNLssI$RF
+s	bNNslCC0s R7AhmzBa _Q_v p]amR0HMCsoC
+sbNN0lCC7sR zAmh_B a Qv_m]apMRH0CCosM
+HbRk0ORD	-H4
+M0bkR#sCC-0R4M
+HbRk0O_D	C-MR4M
+HbRk0LN$b#-#R4M
+HbRk0#_HoH-MR4k
+F00bkRo#H_0FkR
+-4ClM8FD8kCF
+l8CkDRhBv_q7 7hAq7H
+DLssN$FRIsb	
+NlsNCs0CRq7 7hAq7Q_avH RMo0CCHs
+M0bkR1)  -aR4M
+HbRk0BRpi-H4
+M0bkRvuW]h_QR
+-4HkMb0WRuvQp_h4R-
+bHMkB0Rp i_h4R-
+0FkbRk0u]Wv_amzR
+-4Fbk0ku0RW_vpmRza-C4
+MF8l8CkD
+8lFkRDC1uQvpu _]W_uvH
+DLssN$FRIsH	
+M0bkRiBpRH4
+M0bkR1)  4aR
+bHMk 0RhpqA 
+R4Fbk0ku0RWdvR
+8CMlkF8DlC
+FD8kC]Ru_vuW
+LDHs$NsRsIF	N
+bsCNl0RCsvmma)W_uv _u)7Qm MRH0CCosN
+bsCNl0RCsu1]q ]_1QRwaHCM0o
+CsbNNslCC0sWRuvh_Bav)_qHXRMo0CCbs
+NlsNCs0CRXvq_)Bz_v1qu_p a QvR0HMCsoC
+sbNN0lCC sRhpqA h_Bav)_qHXRMo0CCbs
+NlsNCs0CRzwqpBa_h_a)vRqXHCM0o
+CsHkMb0pRBi4R-
+bHMk)0R a1 R
+-4HkMb0YR1h-BR4M
+HbRk0B_pi -hR4M
+HbRk0a-4R4M
+HbRk0a-.R4M
+HbRk0a-dR4M
+HbRk0 Ahqp- R4M
+HbRk0uw7_qazpR
+-4Fbk0ku0RW-vR4k
+F00bkR)Bz_R1p-F4
+kk0b0qRwzRpa-F4
+kk0b0NREDbV_CFsH80_#sCFLR
+-4Fbk0k#0R00Ns_sbCHRF8-C4
+MF8l8CkD
+8lFkRDCO_lMk0Ns
 LDHs$NsRsIF	N
 bsCNl0RCs1  eh__h.FRLFNDCMN
 bsCNl0RCsA7qz_a)q MRH0CCosN
@@ -30,9 +117,24 @@ bHMk70Rq_aq1 a)qmv_zqa_B-iR4k
 F00bkRRaX-H4
 M0bkRR)X-F4
 kk0b0CR8L_kok0Ns_$bER
--4ClM8FD8kC
-
-
-
+-4ClM8FD8kCF
+l8CkDRs#CH_NDCsCbFHl_VH
+DLssN$FRIsH	
+M0bkR#sCC40R
+bHMkO0RD4	R
+bHMk#0R0LsFCk_4#
+R4HkMb0CRCblsF_N#0s40R
+bHMkC0RCFbsl8_N84sRnM
+HbRk0CsCbFIl_s08NN
+RUFbk0kC0RCFbsl8_s8NN0RFU
+kk0b0CRCblsF_M8FC
+R4HkMb0CRCblsF_#HM0
+RcHkMb0CRCblsF_RCM4M
+HbRk0C_Cb#R8F4k
+F00bkRbCC_H#8RF4
+kk0b0CRCbO_#D4	R
+0FkbRk0C_CbOR#M4M
+C88lFk
+DC
 
 @ 

@@ -3,7 +3,7 @@
 <doc>
 <title>Compile Report</title>
 <text>Microchip Technology Inc. - Microchip Libero Software Release v2024.2 (Version 2024.2.0.13)</text>
-<text>Date: Mon Apr 21 21:58:34 2025
+<text>Date: Sat Jun  7 03:04:34 2025
 </text>
 <section><name>Device Selection</name></section>
 <table>
@@ -52,7 +52,7 @@
 </row>
 <row>
  <cell>Source</cell>
- <cell>C:\repo\jabil2025\dmd\P1060973_FPGA\synthesis\top.vm</cell>
+ <cell>C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\top.vm</cell>
 </row>
 </table>
 <section><name>Options</name></section>
@@ -74,15 +74,15 @@
 </header>
 <row>
  <cell>4LUT</cell>
- <cell>360</cell>
+ <cell>6327</cell>
  <cell>108600</cell>
- <cell>0.33</cell>
+ <cell>5.83</cell>
 </row>
 <row>
  <cell>DFF</cell>
- <cell>329</cell>
+ <cell>5012</cell>
  <cell>108600</cell>
- <cell>0.30</cell>
+ <cell>4.62</cell>
 </row>
 <row>
  <cell>I/O Register</cell>
@@ -92,15 +92,15 @@
 </row>
 <row>
  <cell>User I/O</cell>
- <cell>5</cell>
+ <cell>148</cell>
  <cell>244</cell>
- <cell>2.05</cell>
+ <cell>60.66</cell>
 </row>
 <row>
  <cell>-- Single-ended I/O</cell>
- <cell>5</cell>
+ <cell>148</cell>
  <cell>244</cell>
- <cell>2.05</cell>
+ <cell>60.66</cell>
 </row>
 <row>
  <cell>-- Differential I/O Pairs</cell>
@@ -110,15 +110,15 @@
 </row>
 <row>
  <cell>uSRAM</cell>
- <cell>2</cell>
+ <cell>6</cell>
  <cell>1008</cell>
- <cell>0.20</cell>
+ <cell>0.60</cell>
 </row>
 <row>
  <cell>LSRAM</cell>
- <cell>0</cell>
+ <cell>1</cell>
  <cell>352</cell>
- <cell>0.00</cell>
+ <cell>0.28</cell>
 </row>
 <row>
  <cell>Math</cell>
@@ -128,9 +128,9 @@
 </row>
 <row>
  <cell>H-Chip Global</cell>
- <cell>1</cell>
+ <cell>15</cell>
  <cell>48</cell>
- <cell>2.08</cell>
+ <cell>31.25</cell>
 </row>
 <row>
  <cell>PLL</cell>
@@ -166,18 +166,18 @@
 </header>
 <row>
  <cell>Fabric Logic</cell>
- <cell>336</cell>
- <cell>305</cell>
+ <cell>6219</cell>
+ <cell>4904</cell>
 </row>
 <row>
  <cell>uSRAM Interface Logic</cell>
- <cell>24</cell>
- <cell>24</cell>
+ <cell>72</cell>
+ <cell>72</cell>
 </row>
 <row>
  <cell>LSRAM Interface Logic</cell>
- <cell>0</cell>
- <cell>0</cell>
+ <cell>36</cell>
+ <cell>36</cell>
 </row>
 <row>
  <cell>Math Interface Logic</cell>
@@ -186,8 +186,94 @@
 </row>
 <row>
  <cell>Total Used</cell>
- <cell>360</cell>
- <cell>329</cell>
+ <cell>6327</cell>
+ <cell>5012</cell>
+</row>
+</table>
+<section><name>Detailed Carry Chains Resource Usage</name></section>
+<table>
+<header>
+</header>
+<row>
+ <cell>Length</cell>
+ <cell>Used</cell>
+</row>
+<row>
+ <cell>7</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>8</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>9</cell>
+ <cell>6</cell>
+</row>
+<row>
+ <cell>10</cell>
+ <cell>14</cell>
+</row>
+<row>
+ <cell>11</cell>
+ <cell>9</cell>
+</row>
+<row>
+ <cell>12</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>13</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>16</cell>
+ <cell>28</cell>
+</row>
+<row>
+ <cell>17</cell>
+ <cell>24</cell>
+</row>
+<row>
+ <cell>21</cell>
+ <cell>4</cell>
+</row>
+<row>
+ <cell>29</cell>
+ <cell>8</cell>
+</row>
+<row>
+ <cell>32</cell>
+ <cell>2</cell>
+</row>
+<row>
+ <cell>33</cell>
+ <cell>8</cell>
+</row>
+<row>
+ <cell>Total</cell>
+ <cell>107</cell>
+</row>
+</table>
+<section><name>Detailed 4LUT Groups Resource Usage</name></section>
+<table>
+<header>
+</header>
+<row>
+ <cell>Length</cell>
+ <cell>Used</cell>
+</row>
+<row>
+ <cell>2</cell>
+ <cell>222</cell>
+</row>
+<row>
+ <cell>5</cell>
+ <cell>25</cell>
+</row>
+<row>
+ <cell>Total</cell>
+ <cell>247</cell>
 </row>
 </table>
 <section><name>I/O Function</name></section>
@@ -200,13 +286,13 @@
 </header>
 <row>
  <cell>Input I/O</cell>
- <cell>3</cell>
+ <cell>60</cell>
  <cell>0</cell>
  <cell>0</cell>
 </row>
 <row>
  <cell>Output I/O</cell>
- <cell>2</cell>
+ <cell>88</cell>
  <cell>0</cell>
  <cell>0</cell>
 </row>
@@ -237,14 +323,224 @@
  <cell>Name</cell>
 </header>
 <row>
- <cell>307</cell>
+ <cell>4805</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : RESET_N_arst</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: I_1/U0_RGB1</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Source: NETLIST</cell>
+</row>
+<row>
+ <cell>3839</cell>
  <cell>INT_NET</cell>
  <cell>Net   : NN_1</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: I_1/U0_RGB1</cell>
+ <cell>Driver: I_2/U0_RGB1</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Source: NETLIST</cell>
+</row>
+<row>
+ <cell>161</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : gantry_mot_if_0/clk_25MHz</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: gantry_mot_if_0/clk_16khz_div/N_17_inferred_clock_RNIQJ1U5/U0_RGB1</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Source: NETLIST</cell>
+</row>
+<row>
+ <cell>161</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : lift_mot_if_0/clk_25MHz</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: lift_mot_if_0/clk_16khz_div/N_17_inferred_clock_RNIKR217/U0_RGB1</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Source: NETLIST</cell>
+</row>
+<row>
+ <cell>88</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : gantry_brk2_if_0/clk_25MHz</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: gantry_brk2_if_0/clk_16khz_div/N_17_inferred_clock_RNIRRMG/U0_RGB1</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Source: NETLIST</cell>
+</row>
+<row>
+ <cell>88</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : gantry_brk3_ret_if_0/clk_25MHz</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: gantry_brk3_ret_if_0/clk_16khz_div/N_17_inferred_clock_RNI6KF44/U0_RGB1</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Source: NETLIST</cell>
+</row>
+<row>
+ <cell>88</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : gantry_brk1_if_0/clk_25MHz</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: gantry_brk1_if_0/clk_16khz_div/N_17_inferred_clock_RNIQKG67/U0_RGB1</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Source: NETLIST</cell>
+</row>
+<row>
+ <cell>88</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : gantry_brk3_if_0/clk_25MHz</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: gantry_brk3_if_0/clk_16khz_div/N_17_inferred_clock_RNIS2TQ1/U0_RGB1</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Source: NETLIST</cell>
+</row>
+<row>
+ <cell>88</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : gantry_brk2_ret_if_0/clk_25MHz</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: gantry_brk2_ret_if_0/clk_16khz_div/N_17_inferred_clock_RNI597J7/U0_RGB1</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Source: NETLIST</cell>
+</row>
+<row>
+ <cell>88</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : gantry_brk1_ret_if_0/clk_25MHz</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: gantry_brk1_ret_if_0/clk_16khz_div/N_17_inferred_clock_RNI4UU13/U0_RGB1</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Source: NETLIST</cell>
+</row>
+<row>
+ <cell>84</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : adc_0/clk_sd</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: adc_0/sclk/CLK_OUT_RNIHMSU6/U0_RGB1</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Source: NETLIST</cell>
+</row>
+<row>
+ <cell>78</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : dac_0/clk_sd</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: dac_0/sclk/N_17_inferred_clock_RNIE7TP2/U0_RGB1</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Source: NETLIST</cell>
+</row>
+<row>
+ <cell>51</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : DBUG_HEADER6_c</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: clk_gen_0/pulse2khz_div/CLK_OUT_RNIP6F97/U0_RGB1</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Source: NETLIST</cell>
+</row>
+<row>
+ <cell>13</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : NN_2</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: I_3/U0_RGB1</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Source: NETLIST</cell>
+</row>
+<row>
+ <cell>5</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : PULSE_100US</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: clk_gen_0/wdclk_div/CLK_OUT_RNI6ELQ2/U0_RGB1</cell>
 </row>
 <row>
  <cell></cell>
@@ -268,104 +564,104 @@
  <cell>Name</cell>
 </header>
 <row>
- <cell>307</cell>
+ <cell>658</cell>
  <cell>INT_NET</cell>
- <cell>Net   : RESET_N_c</cell>
+ <cell>Net   : OPB_ADDR[0]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: RESET_N_ibuf</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[0]</cell>
 </row>
 <row>
- <cell>60</cell>
+ <cell>652</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_write_inst/N_334</cell>
+ <cell>Net   : OPB_ADDR[1]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_write_inst/next_state6_i_0_o2_i_o2</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[1]</cell>
 </row>
 <row>
- <cell>37</cell>
+ <cell>113</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/OPB_WE</cell>
+ <cell>Net   : gantry_mot_if_0_OPB_ADDR[2]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_WE</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[2]</cell>
 </row>
 <row>
- <cell>33</cell>
+ <cell>97</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_371</cell>
+ <cell>Net   : lift_mot_if_0_OPB_ADDR[2]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/byte_cnt_RNIMB08O[0]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_2_rep2</cell>
 </row>
 <row>
- <cell>32</cell>
+ <cell>87</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_276</cell>
+ <cell>Net   : OPB_DO[6]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/state_RNIODBNS[1]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[6]</cell>
 </row>
 <row>
- <cell>32</cell>
+ <cell>83</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_278</cell>
+ <cell>Net   : OPB_DO[15]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/state_RNIEPBVK1[1]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[15]</cell>
 </row>
 <row>
- <cell>32</cell>
+ <cell>83</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_write_inst/un1_OPB_WE_2_i</cell>
+ <cell>Net   : OPB_DO[1]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_write_inst/state_RNIIAPS6[3]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[1]</cell>
 </row>
 <row>
- <cell>32</cell>
+ <cell>83</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_write_inst/un1_OPB_WE_3_i</cell>
+ <cell>Net   : OPB_DO[0]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_write_inst/state_RNIH9PS6[2]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[0]</cell>
 </row>
 <row>
- <cell>18</cell>
+ <cell>82</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/state_Z[2]</cell>
+ <cell>Net   : OPB_DO[14]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/state[2]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[14]</cell>
 </row>
 <row>
- <cell>16</cell>
+ <cell>82</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/byte_cnt_Z[2]</cell>
+ <cell>Net   : OPB_DO[11]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/byte_cnt[2]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[11]</cell>
 </row>
 </table>
 <section><name>High fanout nets (through buffer trees)</name></section>
@@ -376,104 +672,104 @@
  <cell>Name</cell>
 </header>
 <row>
- <cell>307</cell>
+ <cell>658</cell>
  <cell>INT_NET</cell>
- <cell>Net   : RESET_N_c</cell>
+ <cell>Net   : OPB_ADDR[0]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: RESET_N_ibuf</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[0]</cell>
 </row>
 <row>
- <cell>60</cell>
+ <cell>652</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_write_inst/N_334</cell>
+ <cell>Net   : OPB_ADDR[1]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_write_inst/next_state6_i_0_o2_i_o2</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[1]</cell>
 </row>
 <row>
- <cell>37</cell>
+ <cell>113</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/OPB_WE</cell>
+ <cell>Net   : gantry_mot_if_0_OPB_ADDR[2]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_WE</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[2]</cell>
 </row>
 <row>
- <cell>33</cell>
+ <cell>97</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_371</cell>
+ <cell>Net   : lift_mot_if_0_OPB_ADDR[2]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/byte_cnt_RNIMB08O[0]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_2_rep2</cell>
 </row>
 <row>
- <cell>32</cell>
+ <cell>87</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_276</cell>
+ <cell>Net   : OPB_DO[6]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/state_RNIODBNS[1]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[6]</cell>
 </row>
 <row>
- <cell>32</cell>
+ <cell>83</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_278</cell>
+ <cell>Net   : OPB_DO[15]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/state_RNIEPBVK1[1]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[15]</cell>
 </row>
 <row>
- <cell>32</cell>
+ <cell>83</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_write_inst/un1_OPB_WE_2_i</cell>
+ <cell>Net   : OPB_DO[1]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_write_inst/state_RNIIAPS6[3]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[1]</cell>
 </row>
 <row>
- <cell>32</cell>
+ <cell>83</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_write_inst/un1_OPB_WE_3_i</cell>
+ <cell>Net   : OPB_DO[0]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_write_inst/state_RNIH9PS6[2]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[0]</cell>
 </row>
 <row>
- <cell>18</cell>
+ <cell>82</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/state_Z[2]</cell>
+ <cell>Net   : OPB_DO[14]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/state[2]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[14]</cell>
 </row>
 <row>
- <cell>16</cell>
+ <cell>82</cell>
  <cell>INT_NET</cell>
- <cell>Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/byte_cnt_Z[2]</cell>
+ <cell>Net   : OPB_DO[11]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/byte_cnt[2]</cell>
+ <cell>Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[11]</cell>
 </row>
 </table>
 </doc>

@@ -12,10 +12,10 @@ Hostname: LAPTOP-6FQD1N4B
 
 Implementation : synthesis
 
-# Written on Mon Apr 21 21:58:21 2025
+# Written on Sat Jun  7 03:03:27 2025
 
 ##### FILES SYNTAX CHECKED ##############################################
-Constraint File(s):      "C:\repo\jabil2025\dmd\P1060973_FPGA\designer\top\synthesis.fdc"
+Constraint File(s):      "C:\repo2\gpb\dmd\P1060973_FPGA\designer\top\synthesis.fdc"
 
 #Run constraint checker to find more issues with constraints.
 #########################################################################
@@ -29,18 +29,62 @@ No issues found in constraint syntax.
 Clock Summary
 *************
 
-          Start           Requested     Requested     Clock        Clock          Clock
-Level     Clock           Frequency     Period        Type         Group          Load 
----------------------------------------------------------------------------------------
-0 -       top|SYS_CLK     100.0 MHz     10.000        inferred     (multiple)     386  
-=======================================================================================
+          Start                                        Requested     Requested     Clock        Clock          Clock
+Level     Clock                                        Frequency     Period        Type         Group          Load 
+--------------------------------------------------------------------------------------------------------------------
+0 -       top|FPGA_100M_CLK                            100.0 MHz     10.000        inferred     (multiple)     4076 
+                                                                                                                    
+0 -       CLOCK_DIV_10|N_17_inferred_clock             100.0 MHz     10.000        inferred     (multiple)     183  
+                                                                                                                    
+0 -       CLOCK_DIV_11_6|N_17_inferred_clock           100.0 MHz     10.000        inferred     (multiple)     183  
+                                                                                                                    
+0 -       CLOCK_DIV_11_0|N_17_inferred_clock           100.0 MHz     10.000        inferred     (multiple)     105  
+                                                                                                                    
+0 -       CLOCK_DIV_11_1|N_17_inferred_clock           100.0 MHz     10.000        inferred     (multiple)     105  
+                                                                                                                    
+0 -       CLOCK_DIV_11_2|N_17_inferred_clock           100.0 MHz     10.000        inferred     (multiple)     105  
+                                                                                                                    
+0 -       CLOCK_DIV_11_3|N_17_inferred_clock           100.0 MHz     10.000        inferred     (multiple)     105  
+                                                                                                                    
+0 -       CLOCK_DIV_11_4|N_17_inferred_clock           100.0 MHz     10.000        inferred     (multiple)     105  
+                                                                                                                    
+0 -       CLOCK_DIV_11_5|N_17_inferred_clock           100.0 MHz     10.000        inferred     (multiple)     105  
+                                                                                                                    
+0 -       CLOCK_DIV_9|N_17_inferred_clock              100.0 MHz     10.000        inferred     (multiple)     102  
+                                                                                                                    
+0 -       ADC_ADS8864_IF|ram_wr_clk_inferred_clock     100.0 MHz     10.000        inferred     (multiple)     16   
+                                                                                                                    
+0 -       top|DBUG_HEADER10                            100.0 MHz     10.000        inferred     (multiple)     13   
+====================================================================================================================
 
 
 Clock Load Summary
 ******************
 
-                Clock     Source            Clock Pin                         Non-clock Pin     Non-clock Pin
-Clock           Load      Pin               Seq Example                       Seq Example       Comb Example 
--------------------------------------------------------------------------------------------------------------
-top|SYS_CLK     386       SYS_CLK(port)     scratch_pad_0.dev_sp1[15:0].C     -                 I_1.A(CLKINT)
-=============================================================================================================
+                                             Clock     Source                                                    Clock Pin                                 Non-clock Pin                                      Non-clock Pin                                        
+Clock                                        Load      Pin                                                       Seq Example                               Seq Example                                        Comb Example                                         
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+top|FPGA_100M_CLK                            4076      FPGA_100M_CLK(port)                                       lift_mot_if_0.pwm_status[23:8].C          adc_0.clk_aq_high[1:0].D[1]                        I_2.A(CLKINT)                                        
+                                                                                                                                                                                                                                                                   
+CLOCK_DIV_10|N_17_inferred_clock             183       gantry_mot_if_0.clk_16khz_div.clkout.Q[0](dffre)          gantry_mot_if_0.sync_cntr[1:0].C          gantry_mot_if_0.clk_16khz_div.clkout.D[0]          gantry_mot_if_0.clk_16khz_div.clkout_2.I[0](inv)     
+                                                                                                                                                                                                                                                                   
+CLOCK_DIV_11_6|N_17_inferred_clock           183       lift_mot_if_0.clk_16khz_div.clkout.Q[0](dffre)            lift_mot_if_0.sync_cntr[1:0].C            lift_mot_if_0.clk_16khz_div.clkout.D[0]            lift_mot_if_0.clk_16khz_div.clkout_2.I[0](inv)       
+                                                                                                                                                                                                                                                                   
+CLOCK_DIV_11_0|N_17_inferred_clock           105       gantry_brk1_if_0.clk_16khz_div.clkout.Q[0](dffre)         gantry_brk1_if_0.sync_cntr[1:0].C         gantry_brk1_if_0.clk_16khz_div.clkout.D[0]         gantry_brk1_if_0.clk_16khz_div.clkout_2.I[0](inv)    
+                                                                                                                                                                                                                                                                   
+CLOCK_DIV_11_1|N_17_inferred_clock           105       gantry_brk2_if_0.clk_16khz_div.clkout.Q[0](dffre)         gantry_brk2_if_0.sync_cntr[1:0].C         gantry_brk2_if_0.clk_16khz_div.clkout.D[0]         gantry_brk2_if_0.clk_16khz_div.clkout_2.I[0](inv)    
+                                                                                                                                                                                                                                                                   
+CLOCK_DIV_11_2|N_17_inferred_clock           105       gantry_brk3_if_0.clk_16khz_div.clkout.Q[0](dffre)         gantry_brk3_if_0.sync_cntr[1:0].C         gantry_brk3_if_0.clk_16khz_div.clkout.D[0]         gantry_brk3_if_0.clk_16khz_div.clkout_2.I[0](inv)    
+                                                                                                                                                                                                                                                                   
+CLOCK_DIV_11_3|N_17_inferred_clock           105       gantry_brk1_ret_if_0.clk_16khz_div.clkout.Q[0](dffre)     gantry_brk1_ret_if_0.sync_cntr[1:0].C     gantry_brk1_ret_if_0.clk_16khz_div.clkout.D[0]     gantry_brk1_ret_if_0.clk_16khz_div.clkout_2.I[0](inv)
+                                                                                                                                                                                                                                                                   
+CLOCK_DIV_11_4|N_17_inferred_clock           105       gantry_brk2_ret_if_0.clk_16khz_div.clkout.Q[0](dffre)     gantry_brk2_ret_if_0.sync_cntr[1:0].C     gantry_brk2_ret_if_0.clk_16khz_div.clkout.D[0]     gantry_brk2_ret_if_0.clk_16khz_div.clkout_2.I[0](inv)
+                                                                                                                                                                                                                                                                   
+CLOCK_DIV_11_5|N_17_inferred_clock           105       gantry_brk3_ret_if_0.clk_16khz_div.clkout.Q[0](dffre)     gantry_brk3_ret_if_0.sync_cntr[1:0].C     gantry_brk3_ret_if_0.clk_16khz_div.clkout.D[0]     gantry_brk3_ret_if_0.clk_16khz_div.clkout_2.I[0](inv)
+                                                                                                                                                                                                                                                                   
+CLOCK_DIV_9|N_17_inferred_clock              102       dac_0.sclk.clkout.Q[0](dffre)                             dac_0.data_in[23:0].C                     dac_0.sclk.clkout.D[0]                             dac_0.un1_clk_sd.I[0](inv)                           
+                                                                                                                                                                                                                                                                   
+ADC_ADS8864_IF|ram_wr_clk_inferred_clock     16        adc_0.ram_wr_clk.Q[0](dffre)                              adc_0.data_in_ram.ram[15:0].CLK           -                                                  -                                                    
+                                                                                                                                                                                                                                                                   
+top|DBUG_HEADER10                            13        DBUG_HEADER10(port)                                       osc_counter_0.cntr_trig.C                 -                                                  I_3.A(CLKINT)                                        
+===================================================================================================================================================================================================================================================================

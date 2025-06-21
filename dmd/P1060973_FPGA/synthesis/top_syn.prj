@@ -1,22 +1,40 @@
 #--  Synopsys, Inc.
 #--  Version V-2023.09M-3
-#--  Project file C:\repo\jabil2025\dmd\P1060973_FPGA\synthesis\top_syn.prj
-#--  Written on Mon Apr 21 21:58:28 2025
+#--  Project file C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\top_syn.prj
+#--  Written on Sat Jun  7 03:04:25 2025
 
 
 #project files
 add_file -verilog "../component/polarfire_syn_comps.v"
-add_file -verilog "C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v"
-add_file -verilog "C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ScratchPadRegister.v"
-add_file -vhdl -lib work "C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmn_uart.vhd"
-add_file -verilog "C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/afifo.v"
-add_file -verilog "C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_buffer.v"
-add_file -verilog "C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_read.v"
-add_file -verilog "C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_write.v"
-add_file -verilog "C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/opb_emu_target.v"
-add_file -verilog "C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmd_server.v"
-add_file -verilog "C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v"
-add_file -fpga_constraint "C:/repo/jabil2025/dmd/P1060973_FPGA/designer/top/synthesis.fdc"
+add_file -include "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/Addr_definition.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/CLK_DIV.V"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/dual_port_ram.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADC_ADS8864_IF.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/CLK_GEN.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/afifo.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/DAC_DACx0504_IF.v"
+add_file -vhdl -lib work "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/serial_eeprom_if.vhd"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/EEPROM_OPB_IF.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/FPGA_WD.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/GPIO.v"
+add_file -vhdl -lib work "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_uart.vhd"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/MSSB_IF.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/OSCILLATOR_COUNTER.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/ScratchPadRegister.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_buffer.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_read.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/msg_write.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/opb_emu_target.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmd_server.v"
+add_file -vhdl -lib work "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/PH_PWM.vhd"
+add_file -vhdl -lib work "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/SIMPLE_PH_PWM.vhd"
+add_file -vhdl -lib work "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_deadband.vhd"
+add_file -vhdl -lib work "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_debouncer.vhd"
+add_file -vhdl -lib work "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm.vhd"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/cmn_pwm_wrapper.v"
+add_file -verilog "C:/repo2/gpb/dmd/P1060973_FPGA/hdl/top.v"
+add_file -fpga_constraint "C:/repo2/gpb/dmd/P1060973_FPGA/designer/top/synthesis.fdc"
 
 
 #implementation: "synthesis"

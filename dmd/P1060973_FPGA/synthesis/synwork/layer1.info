@@ -1,1 +1,4 @@
 |cmn_uart|parameter BAUD_RATE 115200;,parameter CLOCK_FREQUENCY 100000000;|
+serial_eeprom_if
+|cmn_uart|parameter BAUD_RATE 921600;,parameter CLOCK_FREQUENCY 100000000;|
+cmn_pwm

@@ -1,55 +1,105 @@
-#OPTIONS:"|-mixedhdl|-modhint|C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\synthesis\\synwork\\_verilog_hintfile|-top|top|-layerid|0|-orig_srs|C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\synthesis\\synwork\\top_comp.srs|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-I|C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\synthesis\\|-I|C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib|-sysv|-devicelib|C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\generic\\acg5.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
+#OPTIONS:"|-mixedhdl|-modhint|C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\synthesis\\synwork\\_verilog_hintfile|-top|top|-layerid|0|-orig_srs|C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\synthesis\\synwork\\top_comp.srs|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-I|C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl|-I|C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\synthesis\\|-I|C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib|-sysv|-devicelib|C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\generic\\acg5.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\bin64\\c_ver.exe":1721969592
-#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\synthesis\\synwork\\_verilog_hintfile":1745242717
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\synthesis\\synwork\\_verilog_hintfile":1748142613
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\generic\\acg5.v":1721920354
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\hypermods.v":1721919828
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\scemi_objects.v":1721919828
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\scemi_pipes.svh":1721919828
-#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\component\\polarfire_syn_comps.v":1745243890
-#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\hdl\\ADDR_DECODER.v":1740808091
-#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\hdl\\ScratchPadRegister.v":1740808091
-#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\hdl\\afifo.v":1730446225
-#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\hdl\\msg_buffer.v":1744962480
-#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\hdl\\msg_read.v":1745062887
-#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\hdl\\msg_write.v":1745061472
-#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\hdl\\opb_emu_target.v":1744968756
-#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\hdl\\cmd_server.v":1744973417
-#CUR:"C:\\repo\\jabil2025\\dmd\\P1060973_FPGA\\hdl\\top.v":1745241738
-#CUR:"afifo_8s_4s_8s_4s_mem_27512_initial_block":1745243894
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\component\\polarfire_syn_comps.v":1749236594
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\CLK_DIV.V":1745416052
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\dual_port_ram.v":1745416052
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\ADC_ADS8864_IF.v":1746520293
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\ADDR_DECODER.v":1747557379
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\Addr_definition.v":1747556962
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\CLK_GEN.v":1749236150
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\afifo.v":1745416052
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\DAC_DACx0504_IF.v":1746079675
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\EEPROM_OPB_IF.v":1745914703
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\FPGA_WD.v":1745977508
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\GPIO.v":1749233589
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\MSSB_IF.v":1748143582
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\OSCILLATOR_COUNTER.v":1745988133
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\ScratchPadRegister.v":1745637890
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\msg_buffer.v":1745416052
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\msg_read.v":1745889155
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\msg_write.v":1745416052
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\opb_emu_target.v":1745634123
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\cmd_server.v":1745416052
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\cmn_pwm_wrapper.v":1748179875
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\top.v":1749233631
+#CUR:"afifo_8s_4s_8s_4s_mem_9640_initial_block":1749236596
+#CUR:"afifo_8s_2s_8s_2s_mem_9640_initial_block":1749236597
+#CUR:"afifo_24s_4s_24s_4s_mem_9640_initial_block":1749236597
 #numinternalfiles:4
 #defaultlanguage:verilog
-0			"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v" verilog
-1			"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v" verilog
-2			"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v" verilog
-3			"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v" verilog
-4			"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_buffer.v" verilog
-5			"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v" verilog
-6			"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v" verilog
-7			"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\opb_emu_target.v" verilog
-8			"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmd_server.v" verilog
-9			"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v" verilog
+0			"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v" verilog
+1			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_DIV.V" verilog
+2			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\dual_port_ram.v" verilog
+3			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v" verilog
+4			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v" verilog
+5		*	"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\Addr_definition.v" verilog
+6			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_GEN.v" verilog
+7			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v" verilog
+8			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\DAC_DACx0504_IF.v" verilog
+9			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\EEPROM_OPB_IF.v" verilog
+10			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FPGA_WD.v" verilog
+11			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v" verilog
+12			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v" verilog
+13			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v" verilog
+14			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v" verilog
+15			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_buffer.v" verilog
+16			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v" verilog
+17			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v" verilog
+18			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\opb_emu_target.v" verilog
+19			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmd_server.v" verilog
+20			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v" verilog
+21			"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v" verilog
 #Dependency Lists(Uses List)
 0 -1
 1 -1
 2 -1
-3 -1
-4 3
+3 1 2
+4 5
 5 -1
-6 -1
-7 5 6
-8 4 7
-9 8 1 2
+6 1
+7 -1
+8 1 2 7
+9 -1
+10 -1
+11 -1
+12 -1
+13 7
+14 -1
+15 7
+16 -1
+17 -1
+18 16 17 1
+19 15 18
+20 1
+21 1 19 4 5 6 13 14 9 3 8 10 11 12 20
 #Dependency Lists(Users Of)
 0 -1
-1 9
-2 9
-3 4
-4 8
-5 7
-6 7
-7 8
-8 9
-9 -1
+1 3 6 8 18 20 21
+2 3 8
+3 21
+4 21
+5 4 21
+6 21
+7 8 13 15
+8 21
+9 21
+10 21
+11 21
+12 21
+13 21
+14 21
+15 19
+16 18
+17 18
+18 19
+19 21
+20 21
+21 -1
 #Design Unit to File Association
 module work APBM 0
 module work APBS 0
@@ -122,18 +172,35 @@ module work CORELNKTMR_V 0
 module work PFSOC_SCSM 0
 module work CLKBUF_DIFF 0
 module work CLKBUF_DIFF_ODT 0
-module work AdderDecode 1
-module work SCRATCH_PAD_REGISTER 2
-module work afifo 3
-module work msg_buffer 4
-module work msg_read 5
-module work msg_write 6
-module work opb_emu_target 7
-module work cmd_server 8
-module work top 9
+module work CLOCK_DIV 1
+module work DP_RAM_2R_1W 2
+module work ADC_ADS8864_IF 3
+module work AdderDecode 4
+module work ClkGen 6
+module work afifo 7
+module work DAC_DACx0504_IF 8
+module work EEPROM_OPB_IF 9
+module work FPGA_WDI 10
+module work GPIO 11
+module work MSSB_IF 12
+module work OSCILLATOR_COUNTER 13
+module work SCRATCH_PAD_REGISTER 14
+module work msg_buffer 15
+module work msg_read 16
+module work msg_write 17
+module work opb_emu_target 18
+module work cmd_server 19
+module work cmn_pwm_wrapper 20
+module work top 21
 #Unbound instances to file Association.
-inst work cmd_server cmn_uart 8
-inst work cmd_server cmn_uart 8
+inst work cmn_pwm_wrapper cmn_pwm 20
+inst work cmn_pwm_wrapper cmn_pwm 20
+inst work cmd_server cmn_uart 19
+inst work cmd_server cmn_uart 19
+inst work MSSB_IF cmn_uart 12
+inst work MSSB_IF cmn_uart 12
+inst work EEPROM_OPB_IF serial_eeprom_if 9
+inst work EEPROM_OPB_IF serial_eeprom_if 9
 
 #identified top module
 top_module top

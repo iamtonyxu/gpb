@@ -31,16 +31,22 @@ Implementation : synthesis
 Synopsys VHDL Compiler, Version comp202309synp1, Build 280R, Built Jun 20 2024 08:13:40, @
 
 @N|Running in 64-bit mode
-@N:"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":42:7:42:14|Top entity is set to cmn_uart.
-@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd'.
+@N:"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":24:7:24:13|Top entity is set to cmn_pwm.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\PH_PWM.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\SIMPLE_PH_PWM.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_deadband.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd'.
 VHDL syntax check successful!
 @N: CD231 :"C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd2008\std1164.vhd":889:16:889:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
 
-At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 93MB)
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 93MB peak: 93MB)
 
 
 Process completed successfully.
-# Mon Apr 21 21:58:13 2025
+# Sat Jun  7 03:03:15 2025
 
 ###########################################################]
 ###########################################################[
@@ -64,165 +70,177 @@ Synopsys Verilog Compiler, Version comp202309synp1, Build 280R, Built Jun 20 202
 
 @I::"C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\generic\acg5.v" (library work)
 @I::"C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vlog\hypermods.v" (library __hyper__lib__)
-@I::"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v" (library work)
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":21:13:21:25|User defined pragma syn_black_box detected
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v" (library work)
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":21:13:21:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":61:13:61:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":61:13:61:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":88:13:88:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":88:13:88:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":118:13:118:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":118:13:118:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":168:13:168:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":168:13:168:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":213:13:213:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":213:13:213:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":232:13:232:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":232:13:232:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":281:13:281:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":281:13:281:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":335:13:335:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":335:13:335:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":657:13:657:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":657:13:657:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":761:13:761:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":761:13:761:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":795:13:795:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":795:13:795:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1059:13:1059:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1059:13:1059:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1369:13:1369:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1369:13:1369:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1396:13:1396:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1396:13:1396:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1441:13:1441:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1441:13:1441:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1474:13:1474:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1474:13:1474:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1492:13:1492:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1492:13:1492:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1518:13:1518:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1518:13:1518:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1559:13:1559:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1559:13:1559:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1581:13:1581:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1581:13:1581:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1599:13:1599:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1599:13:1599:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1616:13:1616:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1616:13:1616:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1635:13:1635:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1635:13:1635:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1652:13:1652:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1652:13:1652:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1681:13:1681:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1681:13:1681:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1712:13:1712:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1712:13:1712:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1802:13:1802:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1802:13:1802:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2026:13:2026:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2026:13:2026:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2187:13:2187:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2187:13:2187:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2203:13:2203:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2203:13:2203:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2219:13:2219:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2219:13:2219:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2235:13:2235:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2235:13:2235:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2267:13:2267:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2267:13:2267:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2648:13:2648:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2648:13:2648:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3661:13:3661:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3661:13:3661:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3732:13:3732:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3732:13:3732:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3861:13:3861:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3861:13:3861:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3879:13:3879:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3879:13:3879:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3896:13:3896:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3896:13:3896:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3911:13:3911:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3911:13:3911:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3926:13:3926:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3926:13:3926:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3953:13:3953:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3953:13:3953:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4067:13:4067:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4067:13:4067:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4098:13:4098:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4098:13:4098:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4144:13:4144:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4144:13:4144:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4255:13:4255:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4255:13:4255:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4439:13:4439:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4439:13:4439:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4480:13:4480:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4480:13:4480:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4506:13:4506:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4506:13:4506:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4523:13:4523:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4523:13:4523:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4600:13:4600:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4600:13:4600:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":5364:13:5364:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":5364:13:5364:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":6174:13:6174:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":6174:13:6174:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":6283:13:6283:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":6283:13:6283:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":6321:13:6321:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":6321:13:6321:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":6394:13:6394:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":6394:13:6394:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":7283:13:7283:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":7283:13:7283:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":8340:13:8340:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":8340:13:8340:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":9299:13:9299:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":9299:13:9299:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10035:13:10035:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10035:13:10035:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10750:13:10750:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10750:13:10750:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10784:13:10784:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10784:13:10784:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10820:13:10820:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10820:13:10820:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10867:13:10867:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10867:13:10867:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10901:13:10901:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10901:13:10901:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":11767:13:11767:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":11767:13:11767:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":12810:13:12810:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":12810:13:12810:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":12822:15:12822:27|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":12822:15:12822:27|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":12833:13:12833:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":12833:13:12833:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":12846:13:12846:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":12846:13:12846:25|User defined pragma syn_black_box detected
 
-@I::"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v" (library work)
-@I::"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v" (library work)
-@I::"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v" (library work)
-@I::"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_buffer.v" (library work)
-@I::"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v" (library work)
-@I::"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v" (library work)
-@I::"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\opb_emu_target.v" (library work)
-@I::"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmd_server.v" (library work)
-@I::"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_DIV.V" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\dual_port_ram.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v" (library work)
+@I:"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v":"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\Addr_definition.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_GEN.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\DAC_DACx0504_IF.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\EEPROM_OPB_IF.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FPGA_WD.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_buffer.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\opb_emu_target.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmd_server.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v" (library work)
 Verilog syntax check successful!
 
-At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 93MB peak: 94MB)
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 94MB peak: 95MB)
 
 
 Process completed successfully.
-# Mon Apr 21 21:58:14 2025
+# Sat Jun  7 03:03:16 2025
 
 ###########################################################]
 ###########################################################[
@@ -230,315 +248,583 @@ Process completed successfully.
 
 @I::"C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\generic\acg5.v" (library work)
 @I::"C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vlog\hypermods.v" (library __hyper__lib__)
-@I::"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v" (library work)
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":21:13:21:25|User defined pragma syn_black_box detected
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v" (library work)
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":21:13:21:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":61:13:61:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":61:13:61:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":88:13:88:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":88:13:88:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":118:13:118:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":118:13:118:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":168:13:168:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":168:13:168:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":213:13:213:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":213:13:213:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":232:13:232:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":232:13:232:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":281:13:281:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":281:13:281:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":335:13:335:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":335:13:335:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":657:13:657:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":657:13:657:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":761:13:761:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":761:13:761:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":795:13:795:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":795:13:795:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1059:13:1059:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1059:13:1059:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1369:13:1369:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1369:13:1369:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1396:13:1396:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1396:13:1396:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1441:13:1441:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1441:13:1441:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1474:13:1474:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1474:13:1474:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1492:13:1492:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1492:13:1492:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1518:13:1518:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1518:13:1518:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1559:13:1559:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1559:13:1559:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1581:13:1581:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1581:13:1581:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1599:13:1599:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1599:13:1599:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1616:13:1616:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1616:13:1616:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1635:13:1635:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1635:13:1635:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1652:13:1652:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1652:13:1652:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1681:13:1681:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1681:13:1681:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1712:13:1712:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1712:13:1712:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1802:13:1802:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":1802:13:1802:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2026:13:2026:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2026:13:2026:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2187:13:2187:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2187:13:2187:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2203:13:2203:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2203:13:2203:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2219:13:2219:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2219:13:2219:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2235:13:2235:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2235:13:2235:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2267:13:2267:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2267:13:2267:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2648:13:2648:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":2648:13:2648:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3661:13:3661:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3661:13:3661:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3732:13:3732:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3732:13:3732:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3861:13:3861:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3861:13:3861:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3879:13:3879:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3879:13:3879:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3896:13:3896:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3896:13:3896:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3911:13:3911:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3911:13:3911:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3926:13:3926:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3926:13:3926:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3953:13:3953:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":3953:13:3953:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4067:13:4067:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4067:13:4067:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4098:13:4098:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4098:13:4098:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4144:13:4144:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4144:13:4144:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4255:13:4255:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4255:13:4255:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4439:13:4439:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4439:13:4439:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4480:13:4480:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4480:13:4480:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4506:13:4506:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4506:13:4506:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4523:13:4523:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4523:13:4523:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4600:13:4600:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":4600:13:4600:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":5364:13:5364:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":5364:13:5364:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":6174:13:6174:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":6174:13:6174:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":6283:13:6283:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":6283:13:6283:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":6321:13:6321:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":6321:13:6321:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":6394:13:6394:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":6394:13:6394:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":7283:13:7283:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":7283:13:7283:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":8340:13:8340:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":8340:13:8340:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":9299:13:9299:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":9299:13:9299:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10035:13:10035:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10035:13:10035:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10750:13:10750:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10750:13:10750:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10784:13:10784:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10784:13:10784:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10820:13:10820:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10820:13:10820:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10867:13:10867:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10867:13:10867:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10901:13:10901:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":10901:13:10901:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":11767:13:11767:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":11767:13:11767:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":12810:13:12810:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":12810:13:12810:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":12822:15:12822:27|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":12822:15:12822:27|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":12833:13:12833:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":12833:13:12833:25|User defined pragma syn_black_box detected
 
-@W: CG100 :"C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":12846:13:12846:25|User defined pragma syn_black_box detected
+@W: CG100 :"C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v":12846:13:12846:25|User defined pragma syn_black_box detected
 
-@I::"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v" (library work)
-@I::"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v" (library work)
-@I::"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v" (library work)
-@I::"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_buffer.v" (library work)
-@I::"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v" (library work)
-@I::"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v" (library work)
-@I::"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\opb_emu_target.v" (library work)
-@I::"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmd_server.v" (library work)
-@I::"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_DIV.V" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\dual_port_ram.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v" (library work)
+@I:"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v":"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\Addr_definition.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_GEN.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\DAC_DACx0504_IF.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\EEPROM_OPB_IF.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FPGA_WD.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_buffer.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\opb_emu_target.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmd_server.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v" (library work)
+@I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v" (library work)
 Verilog syntax check successful!
-File C:\repo\jabil2025\dmd\P1060973_FPGA\component\polarfire_syn_comps.v changed - recompiling
-File afifo_8s_4s_8s_4s_mem_7964_initial_block changed - recompiling
-@W: CG238 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmd_server.v":48:6:48:18|Instantiation will not be bound to the VHDL entity. For mixed HDL, only integer/real/string generics on the VHDL side are supported.  Change VHDL generic types to one of the supported types for mixed HDL usage.
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":62:7:62:11|Synthesizing module afifo in library work.
+Options changed - recompiling
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_DIV.V":21:7:21:15|Synthesizing module CLOCK_DIV in library work.
+Running optimization stage 1 on CLOCK_DIV .......
+Finished optimization stage 1 on CLOCK_DIV (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+@W: CG238 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmd_server.v":48:6:48:18|Instantiation will not be bound to the VHDL entity. For mixed HDL, only integer/real/string generics on the VHDL side are supported.  Change VHDL generic types to one of the supported types for mixed HDL usage.
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":62:7:62:11|Synthesizing module afifo in library work.
 
 	DSIZE=32'b00000000000000000000000000001000
 	ASIZE=32'b00000000000000000000000000000100
 	DW=32'b00000000000000000000000000001000
 	AW=32'b00000000000000000000000000000100
    Generated name = afifo_8s_4s_8s_4s
-Opening data file afifo_8s_4s_8s_4s_mem_27512_initial_block from directory .
-@W: CG532 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":93:4:93:10|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
-@W: CG532 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":110:1:110:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
-@W: CG532 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":127:1:127:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
-@W: CG532 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":140:1:140:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
-@W: CG532 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":169:1:169:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
-@W: CG532 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":185:1:185:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
-@W: CG532 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":198:1:198:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+Opening data file afifo_8s_4s_8s_4s_mem_9640_initial_block from directory .
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":93:4:93:10|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":110:1:110:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":127:1:127:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":140:1:140:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":169:1:169:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":185:1:185:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":198:1:198:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 Running optimization stage 1 on afifo_8s_4s_8s_4s .......
-@N: CL134 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":149:1:149:6|Found RAM mem, depth=16, width=8
-@W: CL260 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":128:1:128:6|Pruning register bit 4 of wgray[4:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-@W: CL260 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v":186:1:186:6|Pruning register bit 4 of rgray[4:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-Finished optimization stage 1 on afifo_8s_4s_8s_4s (CPU Time 0h:00m:00s, Memory Used current: 96MB peak: 97MB)
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_buffer.v":3:7:3:16|Synthesizing module msg_buffer in library work.
+@N: CL134 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":149:1:149:6|Found RAM mem, depth=16, width=8
+@W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":128:1:128:6|Pruning register bit 4 of wgray[4:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":186:1:186:6|Pruning register bit 4 of rgray[4:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+Finished optimization stage 1 on afifo_8s_4s_8s_4s (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_buffer.v":3:7:3:16|Synthesizing module msg_buffer in library work.
 Running optimization stage 1 on msg_buffer .......
-Finished optimization stage 1 on msg_buffer (CPU Time 0h:00m:00s, Memory Used current: 96MB peak: 97MB)
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":21:7:21:14|Synthesizing module msg_read in library work.
-@N: CG179 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":187:31:187:41|Removing redundant assignment.
+Finished optimization stage 1 on msg_buffer (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":21:7:21:14|Synthesizing module msg_read in library work.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":187:31:187:41|Removing redundant assignment.
 Running optimization stage 1 on msg_read .......
-Finished optimization stage 1 on msg_read (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":21:7:21:15|Synthesizing module msg_write in library work.
-@N: CG179 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":143:32:143:39|Removing redundant assignment.
-@N: CG179 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":164:29:164:37|Removing redundant assignment.
-@N: CG179 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":165:27:165:33|Removing redundant assignment.
-@N: CG179 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":180:27:180:33|Removing redundant assignment.
-@N: CG179 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":197:27:197:33|Removing redundant assignment.
-@N: CG179 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":246:31:246:41|Removing redundant assignment.
+Finished optimization stage 1 on msg_read (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":21:7:21:15|Synthesizing module msg_write in library work.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":143:32:143:39|Removing redundant assignment.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":164:29:164:37|Removing redundant assignment.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":165:27:165:33|Removing redundant assignment.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":180:27:180:33|Removing redundant assignment.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":197:27:197:33|Removing redundant assignment.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":246:31:246:41|Removing redundant assignment.
 Running optimization stage 1 on msg_write .......
-Finished optimization stage 1 on msg_write (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\opb_emu_target.v":3:7:3:20|Synthesizing module opb_emu_target in library work.
+Finished optimization stage 1 on msg_write (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\opb_emu_target.v":3:7:3:20|Synthesizing module opb_emu_target in library work.
 Running optimization stage 1 on opb_emu_target .......
-Finished optimization stage 1 on opb_emu_target (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmd_server.v":3:7:3:16|Synthesizing module cmd_server in library work.
-@N: CG794 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmd_server.v":48:6:48:18|Using module cmn_uart from library work
+Finished optimization stage 1 on opb_emu_target (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmd_server.v":3:7:3:16|Synthesizing module cmd_server in library work.
+@N: CG794 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmd_server.v":48:6:48:18|Using module cmn_uart from library work
 Running optimization stage 1 on cmd_server .......
-Finished optimization stage 1 on cmd_server (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v":51:7:51:17|Synthesizing module AdderDecode in library work.
+Finished optimization stage 1 on cmd_server (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v":21:7:21:17|Synthesizing module AdderDecode in library work.
 Running optimization stage 1 on AdderDecode .......
-Finished optimization stage 1 on AdderDecode (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":20:7:20:26|Synthesizing module SCRATCH_PAD_REGISTER in library work.
+Finished optimization stage 1 on AdderDecode (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 103MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_GEN.v":32:7:32:12|Synthesizing module ClkGen in library work.
+Running optimization stage 1 on ClkGen .......
+@W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_GEN.v":152:1:152:6|Pruning unused register clk2meghz_div[15:0]. Make sure that there are no unused intermediate registers.
+Finished optimization stage 1 on ClkGen (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 103MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":62:7:62:11|Synthesizing module afifo in library work.
+
+	DSIZE=32'b00000000000000000000000000001000
+	ASIZE=32'b00000000000000000000000000000010
+	DW=32'b00000000000000000000000000001000
+	AW=32'b00000000000000000000000000000010
+   Generated name = afifo_8s_2s_8s_2s
+Opening data file afifo_8s_2s_8s_2s_mem_9640_initial_block from directory .
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":93:4:93:10|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":110:1:110:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":127:1:127:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":140:1:140:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":169:1:169:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":185:1:185:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":198:1:198:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+Running optimization stage 1 on afifo_8s_2s_8s_2s .......
+@N: CL134 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":149:1:149:6|Found RAM mem, depth=4, width=8
+@W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":128:1:128:6|Pruning register bit 2 of wgray[2:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":186:1:186:6|Pruning register bit 2 of rgray[2:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+Finished optimization stage 1 on afifo_8s_2s_8s_2s (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 103MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":22:7:22:24|Synthesizing module OSCILLATOR_COUNTER in library work.
+Running optimization stage 1 on OSCILLATOR_COUNTER .......
+@W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":149:1:149:6|Pruning unused register startb_d1. Make sure that there are no unused intermediate registers.
+@W: CL271 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":124:4:124:9|Pruning unused bits 31 to 16 of sp[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":111:4:111:9|Optimizing register bit OSC_CT_DO[16] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":111:4:111:9|Optimizing register bit OSC_CT_DO[17] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":111:4:111:9|Optimizing register bit OSC_CT_DO[18] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":111:4:111:9|Optimizing register bit OSC_CT_DO[19] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":111:4:111:9|Optimizing register bit OSC_CT_DO[20] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":111:4:111:9|Optimizing register bit OSC_CT_DO[21] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":111:4:111:9|Optimizing register bit OSC_CT_DO[22] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":111:4:111:9|Optimizing register bit OSC_CT_DO[23] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":111:4:111:9|Optimizing register bit OSC_CT_DO[24] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":111:4:111:9|Optimizing register bit OSC_CT_DO[25] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":111:4:111:9|Optimizing register bit OSC_CT_DO[26] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":111:4:111:9|Optimizing register bit OSC_CT_DO[27] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":111:4:111:9|Optimizing register bit OSC_CT_DO[28] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":111:4:111:9|Optimizing register bit OSC_CT_DO[29] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":111:4:111:9|Optimizing register bit OSC_CT_DO[30] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":111:4:111:9|Optimizing register bit OSC_CT_DO[31] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":111:4:111:9|Pruning register bits 31 to 16 of OSC_CT_DO[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 1 on OSCILLATOR_COUNTER (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 104MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":20:7:20:26|Synthesizing module SCRATCH_PAD_REGISTER in library work.
 Running optimization stage 1 on SCRATCH_PAD_REGISTER .......
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[16] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[17] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[18] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[19] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[20] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[21] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[22] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[23] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[24] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[25] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[26] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[27] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[28] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[29] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[30] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Optimizing register bit SP_DO[31] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL279 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":53:4:53:9|Pruning register bits 31 to 16 of SP_DO[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-Finished optimization stage 1 on SCRATCH_PAD_REGISTER (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
-@N: CG364 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":3:7:3:9|Synthesizing module top in library work.
-@W: CG781 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":178:16:178:29|Input GPIO_IN on instance adder_decode_0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":178:16:178:29|Input OSC_CT_IN on instance adder_decode_0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":178:16:178:29|Input CLK_GEN_IN on instance adder_decode_0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":178:16:178:29|Input ILIM_DAC_IN on instance adder_decode_0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":178:16:178:29|Input ADC_IN on instance adder_decode_0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":178:16:178:29|Input GANT_MOT_IN on instance adder_decode_0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG781 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":178:16:178:29|Input LIFT_MOT_IN on instance adder_decode_0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":107:20:107:31|Removing wire PULSE_200KHZ, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":108:20:108:30|Removing wire PULSE_20KHZ, as there is no assignment to it.
-@W: CG184 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":109:20:109:29|Removing wire PULSE_2KHZ, as it has the load but no drivers.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":110:20:110:30|Removing wire PULSE_100US, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":111:20:111:27|Removing wire CLK_2MHZ, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":114:20:114:26|Removing wire GPIO_IN, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":115:20:115:28|Removing wire OSC_CT_IN, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":116:20:116:29|Removing wire CLK_GEN_IN, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":117:20:117:30|Removing wire ILIM_DAC_IN, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":118:20:118:25|Removing wire ADC_IN, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":119:20:119:30|Removing wire GANT_MOT_IN, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":120:20:120:30|Removing wire LIFT_MOT_IN, as there is no assignment to it.
-@W: CG184 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":121:17:121:22|Removing wire SP1_RE, as it has the load but no drivers.
-@W: CG184 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":122:17:122:22|Removing wire SP1_WE, as it has the load but no drivers.
-@W: CG184 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":123:17:123:22|Removing wire SP2_RE, as it has the load but no drivers.
-@W: CG184 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":124:17:124:22|Removing wire SP2_WE, as it has the load but no drivers.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":125:20:125:30|Removing wire STD_CONT_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":126:20:126:29|Removing wire CCHL_IF_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":127:20:127:33|Removing wire SER_PENDANT_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":128:20:128:28|Removing wire PWR_IF_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":129:20:129:35|Removing wire LIFT_MOT_SENS_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":130:20:130:32|Removing wire SPD_DMD_IF_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":131:20:131:37|Removing wire GANTRY_MOT_SENS_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":132:20:132:31|Removing wire SPD_EMOPS_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":133:20:133:25|Removing wire GPO_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":134:20:134:25|Removing wire GPO_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":135:20:135:27|Removing wire ADMUX_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":136:20:136:27|Removing wire ADMUX_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":137:20:137:27|Removing wire ADSEL_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":138:20:138:27|Removing wire ADSEL_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":139:20:139:25|Removing wire STS_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":140:20:140:25|Removing wire STS_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":141:20:141:35|Removing wire GANTRY_96V_IF_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":142:20:142:35|Removing wire GANTRY_96V_IF_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":143:20:143:33|Removing wire LIFT_96V_IF_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":144:20:144:33|Removing wire LIFT_96V_IF_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":145:20:145:29|Removing wire MOT_GPO_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":146:20:146:29|Removing wire COUNTER_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":147:20:147:29|Removing wire COUNTER_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":148:20:148:30|Removing wire ILIM_DAC_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":149:20:149:30|Removing wire ILIM_DAC_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":150:20:150:27|Removing wire CLOCK_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":151:20:151:27|Removing wire CLOCK_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":152:20:152:25|Removing wire ADC_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":153:20:153:25|Removing wire ADC_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":154:20:154:30|Removing wire GANT_MOT_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":155:20:155:30|Removing wire GANT_MOT_WE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":156:20:156:30|Removing wire LIFT_MOT_RE, as there is no assignment to it.
-@W: CG360 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":157:20:157:30|Removing wire LIFT_MOT_WE, as there is no assignment to it.
+Finished optimization stage 1 on SCRATCH_PAD_REGISTER (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 104MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\EEPROM_OPB_IF.v":3:7:3:19|Synthesizing module EEPROM_OPB_IF in library work.
+@N: CG794 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\EEPROM_OPB_IF.v":99:21:99:31|Using module serial_eeprom_if from library work
+Running optimization stage 1 on EEPROM_OPB_IF .......
+Finished optimization stage 1 on EEPROM_OPB_IF (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 104MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\dual_port_ram.v":19:7:19:18|Synthesizing module DP_RAM_2R_1W in library work.
+
+	DATA_WIDTH=32'b00000000000000000000000000010000
+	ADDR_WIDTH=32'b00000000000000000000000000001010
+   Generated name = DP_RAM_2R_1W_16s_10s
+Running optimization stage 1 on DP_RAM_2R_1W_16s_10s .......
+@N: CL134 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\dual_port_ram.v":53:1:53:6|Found RAM ram, depth=1024, width=16
+@N: CL134 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\dual_port_ram.v":53:1:53:6|Found RAM ram, depth=1024, width=16
+Finished optimization stage 1 on DP_RAM_2R_1W_16s_10s (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 105MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":53:7:53:20|Synthesizing module ADC_ADS8864_IF in library work.
+Running optimization stage 1 on ADC_ADS8864_IF .......
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":336:1:336:6|Optimizing register bit OPB_DO[16] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":336:1:336:6|Optimizing register bit OPB_DO[17] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":336:1:336:6|Optimizing register bit OPB_DO[18] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":336:1:336:6|Optimizing register bit OPB_DO[19] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":336:1:336:6|Optimizing register bit OPB_DO[20] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":336:1:336:6|Optimizing register bit OPB_DO[21] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":336:1:336:6|Optimizing register bit OPB_DO[22] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":336:1:336:6|Optimizing register bit OPB_DO[23] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":336:1:336:6|Optimizing register bit OPB_DO[24] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":336:1:336:6|Optimizing register bit OPB_DO[25] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":336:1:336:6|Optimizing register bit OPB_DO[26] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":336:1:336:6|Optimizing register bit OPB_DO[27] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":336:1:336:6|Optimizing register bit OPB_DO[28] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":336:1:336:6|Optimizing register bit OPB_DO[29] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":336:1:336:6|Optimizing register bit OPB_DO[30] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":336:1:336:6|Pruning register bits 30 to 16 of OPB_DO[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 1 on ADC_ADS8864_IF (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 106MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\dual_port_ram.v":19:7:19:18|Synthesizing module DP_RAM_2R_1W in library work.
+
+	DATA_WIDTH=32'b00000000000000000000000000011000
+	ADDR_WIDTH=32'b00000000000000000000000000000100
+   Generated name = DP_RAM_2R_1W_24s_4s
+Running optimization stage 1 on DP_RAM_2R_1W_24s_4s .......
+@N: CL134 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\dual_port_ram.v":53:1:53:6|Found RAM ram, depth=16, width=24
+@N: CL134 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\dual_port_ram.v":53:1:53:6|Found RAM ram, depth=16, width=24
+Finished optimization stage 1 on DP_RAM_2R_1W_24s_4s (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 106MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":62:7:62:11|Synthesizing module afifo in library work.
+
+	DSIZE=32'b00000000000000000000000000011000
+	ASIZE=32'b00000000000000000000000000000100
+	DW=32'b00000000000000000000000000011000
+	AW=32'b00000000000000000000000000000100
+   Generated name = afifo_24s_4s_24s_4s
+Opening data file afifo_24s_4s_24s_4s_mem_9640_initial_block from directory .
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":93:4:93:10|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":110:1:110:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":127:1:127:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":140:1:140:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":169:1:169:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":185:1:185:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":198:1:198:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+Running optimization stage 1 on afifo_24s_4s_24s_4s .......
+@N: CL134 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":149:1:149:6|Found RAM mem, depth=16, width=24
+@W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":128:1:128:6|Pruning register bit 4 of wgray[4:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":186:1:186:6|Pruning register bit 4 of rgray[4:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+Finished optimization stage 1 on afifo_24s_4s_24s_4s (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 106MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\DAC_DACx0504_IF.v":16:7:16:21|Synthesizing module DAC_DACx0504_IF in library work.
+Running optimization stage 1 on DAC_DACx0504_IF .......
+Finished optimization stage 1 on DAC_DACx0504_IF (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 106MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FPGA_WD.v":19:7:19:14|Synthesizing module FPGA_WDI in library work.
+Running optimization stage 1 on FPGA_WDI .......
+Finished optimization stage 1 on FPGA_WDI (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 106MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":15:7:15:10|Synthesizing module GPIO in library work.
+Running optimization stage 1 on GPIO .......
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":522:4:522:9|Feedback mux created for signal GPIO_FREE_IF_REG[31:16]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":508:4:508:9|Feedback mux created for signal DEBUG_IF_REG[31:20]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":499:4:499:9|Feedback mux created for signal ADCSELMUX_IF_REG[31:16]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL177 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":499:4:499:9|Sharing sequential element ADCSELMUX_IF_REG and merging GPIO_FREE_IF_REG. Add a syn_preserve attribute to the element to prevent sharing.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":484:4:484:9|Feedback mux created for signal CCHL_IF_REG[31:21]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":475:4:475:9|Feedback mux created for signal EXT_BRAKE_IF_REG[31:16]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL177 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":475:4:475:9|Sharing sequential element EXT_BRAKE_IF_REG and merging GPIO_FREE_IF_REG. Add a syn_preserve attribute to the element to prevent sharing.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":464:4:464:9|Feedback mux created for signal MAINS_LEVEL_IF_REG[31:17]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":455:4:455:9|Feedback mux created for signal SERVICE_PENDANT_IF_REG[31:16]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL177 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":455:4:455:9|Sharing sequential element SERVICE_PENDANT_IF_REG and merging GPIO_FREE_IF_REG. Add a syn_preserve attribute to the element to prevent sharing.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":443:4:443:9|Feedback mux created for signal STAND_IF_REG[31:18]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":424:4:424:9|Feedback mux created for signal LIFT_96V_IF_REG[30:21]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":410:4:410:9|Feedback mux created for signal LIFT_MOTOR_SENSOR_IF_REG[31:20]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL177 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":410:4:410:9|Sharing sequential element LIFT_MOTOR_SENSOR_IF_REG and merging DEBUG_IF_REG. Add a syn_preserve attribute to the element to prevent sharing.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":392:4:392:9|Feedback mux created for signal SPD_EMOPS_IF_REG[31:24]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":376:4:376:9|Feedback mux created for signal SPD_DMD_IF_REG[31:22]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":362:4:362:9|Feedback mux created for signal GANTRY_BRAKE_IF_REG[31:20]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL177 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":362:4:362:9|Sharing sequential element GANTRY_BRAKE_IF_REG and merging DEBUG_IF_REG. Add a syn_preserve attribute to the element to prevent sharing.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":306:4:306:9|Feedback mux created for signal GANTRY_96V_IF_REG[30:24]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":294:4:294:9|Feedback mux created for signal GANTRY_EMOPS_IF_REG[31:18]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL177 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":294:4:294:9|Sharing sequential element GANTRY_EMOPS_IF_REG and merging STAND_IF_REG. Add a syn_preserve attribute to the element to prevent sharing.
+@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":281:4:281:9|Feedback mux created for signal POWER_IF_REG[31:18]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
+@W: CL177 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":281:4:281:9|Sharing sequential element POWER_IF_REG and merging STAND_IF_REG. Add a syn_preserve attribute to the element to prevent sharing.
+@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":306:4:306:9|All reachable assignments to GANTRY_96V_IF_REG[30:24] assign 0, register removed by optimization
+@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":376:4:376:9|All reachable assignments to SPD_DMD_IF_REG[31:22] assign 0, register removed by optimization
+@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":392:4:392:9|All reachable assignments to SPD_EMOPS_IF_REG[31:24] assign 0, register removed by optimization
+@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":424:4:424:9|All reachable assignments to LIFT_96V_IF_REG[30:21] assign 0, register removed by optimization
+@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":443:4:443:9|All reachable assignments to STAND_IF_REG[31:18] assign 0, register removed by optimization
+@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":464:4:464:9|All reachable assignments to MAINS_LEVEL_IF_REG[31:17] assign 0, register removed by optimization
+@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":484:4:484:9|All reachable assignments to CCHL_IF_REG[31:21] assign 0, register removed by optimization
+@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":508:4:508:9|All reachable assignments to DEBUG_IF_REG[31:20] assign 0, register removed by optimization
+@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":522:4:522:9|All reachable assignments to GPIO_FREE_IF_REG[31:16] assign 0, register removed by optimization
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":540:4:540:9|Optimizing register bit OPB_DO[24] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":540:4:540:9|Optimizing register bit OPB_DO[25] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":540:4:540:9|Optimizing register bit OPB_DO[26] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":540:4:540:9|Optimizing register bit OPB_DO[27] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":540:4:540:9|Optimizing register bit OPB_DO[28] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":540:4:540:9|Optimizing register bit OPB_DO[29] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":540:4:540:9|Optimizing register bit OPB_DO[30] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":540:4:540:9|Pruning register bits 30 to 24 of OPB_DO[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 1 on GPIO (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 107MB)
+@W: CG238 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":262:6:262:18|Instantiation will not be bound to the VHDL entity. For mixed HDL, only integer/real/string generics on the VHDL side are supported.  Change VHDL generic types to one of the supported types for mixed HDL usage.
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":26:7:26:13|Synthesizing module MSSB_IF in library work.
+@N: CG794 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":262:6:262:18|Using module cmn_uart from library work
+Running optimization stage 1 on MSSB_IF .......
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[2] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[3] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[4] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[5] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[9] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[10] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[11] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[12] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[13] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[14] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[15] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[16] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[17] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[18] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[19] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[20] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[21] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[22] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[23] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[24] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[25] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[26] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[27] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[28] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[29] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[30] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[31] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Pruning register bits 31 to 2 of mssb_status[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 1 on MSSB_IF (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 107MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":26:7:26:21|Synthesizing module cmn_pwm_wrapper in library work.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":131:31:131:45|Removing redundant assignment.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":132:31:132:45|Removing redundant assignment.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":133:31:133:45|Removing redundant assignment.
+@N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":134:29:134:41|Removing redundant assignment.
+@N: CG794 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":303:12:303:16|Using module cmn_pwm from library work
+Running optimization stage 1 on cmn_pwm_wrapper .......
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[2] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[3] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[4] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[5] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[24] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[25] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[26] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[27] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[28] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[29] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[30] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[31] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Pruning register bits 31 to 24 of pwm_status[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Pruning register bits 7 to 2 of pwm_status[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 1 on cmn_pwm_wrapper (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 107MB)
+@N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v":3:7:3:9|Synthesizing module top in library work.
 Running optimization stage 1 on top .......
-Finished optimization stage 1 on top (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+Finished optimization stage 1 on top (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 107MB)
 Running optimization stage 2 on top .......
-@W: CL156 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":109:20:109:29|*Input PULSE_2KHZ to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
-@W: CL156 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":121:17:121:22|*Input SP1_RE to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
-@W: CL156 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":122:17:122:22|*Input SP1_WE to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
-@W: CL156 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":123:17:123:22|*Input SP2_RE to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
-@W: CL156 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v":124:17:124:22|*Input SP2_WE to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
-Finished optimization stage 2 on top (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 99MB)
+Finished optimization stage 2 on top (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 107MB)
+Running optimization stage 2 on cmn_pwm_wrapper .......
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":238:4:238:9|Optimizing register bit sync_cntr[2] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":238:4:238:9|Optimizing register bit sync_cntr[3] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":238:4:238:9|Optimizing register bit sync_cntr[4] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":238:4:238:9|Optimizing register bit sync_cntr[5] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":238:4:238:9|Optimizing register bit sync_cntr[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":238:4:238:9|Optimizing register bit sync_cntr[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":238:4:238:9|Pruning register bits 7 to 2 of sync_cntr[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":200:4:200:9|Trying to extract state machine for register state.
+Extracted state machine for register state
+State machine has 3 reachable states with original encodings of:
+   00
+   01
+   10
+@W: CL249 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":200:4:200:9|Initial value is not supported on state machine state
+@W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":33:28:33:35|Input port bits 31 to 4 of OPB_ADDR[31:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on cmn_pwm_wrapper (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 110MB)
+Running optimization stage 2 on MSSB_IF .......
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":92:4:92:9|Trying to extract state machine for register state.
+Extracted state machine for register state
+State machine has 2 reachable states with original encodings of:
+   00
+   01
+@W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":30:28:30:35|Input port bits 31 to 4 of OPB_ADDR[31:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on MSSB_IF (CPU Time 0h:00m:00s, Memory Used current: 106MB peak: 110MB)
+Running optimization stage 2 on GPIO .......
+@N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":55:24:55:38|Input SHUNT_EN_CNT_RE is unused.
+Finished optimization stage 2 on GPIO (CPU Time 0h:00m:00s, Memory Used current: 107MB peak: 115MB)
+Running optimization stage 2 on FPGA_WDI .......
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FPGA_WD.v":31:1:31:6|Optimizing register bit watchdog_time_100us[4] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FPGA_WD.v":31:1:31:6|Pruning register bit 4 of watchdog_time_100us[4:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FPGA_WD.v":20:12:20:18|Input OPB_CLK is unused.
+Finished optimization stage 2 on FPGA_WDI (CPU Time 0h:00m:00s, Memory Used current: 107MB peak: 115MB)
+Running optimization stage 2 on DAC_DACx0504_IF .......
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\DAC_DACx0504_IF.v":127:4:127:9|Trying to extract state machine for register state.
+Extracted state machine for register state
+State machine has 4 reachable states with original encodings of:
+   000
+   001
+   010
+   100
+@W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\DAC_DACx0504_IF.v":19:24:19:31|Input port bits 31 to 4 of OPB_ADDR[31:0] are unused. Assign logic for all port bits or change the input port size.
+@W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\DAC_DACx0504_IF.v":20:24:20:29|Input port bits 31 to 16 of OPB_DI[31:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on DAC_DACx0504_IF (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 115MB)
+Running optimization stage 2 on afifo_24s_4s_24s_4s .......
+Finished optimization stage 2 on afifo_24s_4s_24s_4s (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 115MB)
+Running optimization stage 2 on DP_RAM_2R_1W_24s_4s .......
+Finished optimization stage 2 on DP_RAM_2R_1W_24s_4s (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 115MB)
+Running optimization stage 2 on ADC_ADS8864_IF .......
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":130:1:130:6|Optimizing register bit conv_count[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":130:1:130:6|Optimizing register bit conv_count[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":147:4:147:9|Optimizing register bit time_out_count[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":147:4:147:9|Optimizing register bit time_out_count[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":147:4:147:9|Pruning register bits 7 to 6 of time_out_count[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":130:1:130:6|Pruning register bits 7 to 6 of conv_count[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":147:4:147:9|Trying to extract state machine for register status.
+Extracted state machine for register status
+State machine has 6 reachable states with original encodings of:
+   0000
+   0001
+   0010
+   0100
+   0101
+   0110
+@W: CL249 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":147:4:147:9|Initial value is not supported on state machine status
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":147:4:147:9|Trying to extract state machine for register state.
+Extracted state machine for register state
+State machine has 23 reachable states with original encodings of:
+   00000
+   00001
+   00010
+   00110
+   00111
+   01000
+   01001
+   01010
+   01011
+   01100
+   01101
+   01110
+   01111
+   10000
+   10001
+   10010
+   10011
+   10100
+   10101
+   10110
+   10111
+   11000
+   11001
+@W: CL249 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":147:4:147:9|Initial value is not supported on state machine state
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":147:4:147:9|Optimizing register bit time_out_count[0] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":147:4:147:9|Optimizing register bit time_out_count[1] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":147:4:147:9|Optimizing register bit time_out_count[2] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":147:4:147:9|Optimizing register bit time_out_count[3] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":147:4:147:9|Optimizing register bit time_out_count[4] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":147:4:147:9|Optimizing register bit time_out_count[5] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":147:4:147:9|Pruning unused register time_out_count[5:0]. Make sure that there are no unused intermediate registers.
+@W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":58:25:58:32|Input port bits 31 to 12 of OPB_ADDR[31:0] are unused. Assign logic for all port bits or change the input port size.
+@W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":60:25:60:30|Input port bits 31 to 16 of OPB_DI[31:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on ADC_ADS8864_IF (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 115MB)
+Running optimization stage 2 on DP_RAM_2R_1W_16s_10s .......
+Finished optimization stage 2 on DP_RAM_2R_1W_16s_10s (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 115MB)
+Running optimization stage 2 on EEPROM_OPB_IF .......
+@W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\EEPROM_OPB_IF.v":7:24:7:29|Input port bits 27 to 24 of EEP_DI[31:0] are unused. Assign logic for all port bits or change the input port size.
+@N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\EEPROM_OPB_IF.v":8:24:8:29|Input EEP_RE is unused.
+Finished optimization stage 2 on EEPROM_OPB_IF (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 115MB)
 Running optimization stage 2 on SCRATCH_PAD_REGISTER .......
-@W: CL246 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v":23:20:23:24|Input port bits 31 to 16 of SP_DI[31:0] are unused. Assign logic for all port bits or change the input port size.
-Finished optimization stage 2 on SCRATCH_PAD_REGISTER (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+Finished optimization stage 2 on SCRATCH_PAD_REGISTER (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 115MB)
+Running optimization stage 2 on OSCILLATOR_COUNTER .......
+@W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":29:24:29:32|Input port bits 31 to 16 of OSC_CT_DI[31:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on OSCILLATOR_COUNTER (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 115MB)
+Running optimization stage 2 on afifo_8s_2s_8s_2s .......
+Finished optimization stage 2 on afifo_8s_2s_8s_2s (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 115MB)
+Running optimization stage 2 on ClkGen .......
+@W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_GEN.v":34:17:34:26|Input port bits 31 to 16 of CLK_GEN_DI[31:0] are unused. Assign logic for all port bits or change the input port size.
+@W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_GEN.v":35:17:35:24|Input port bits 31 to 4 of OPB_ADDR[31:0] are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on ClkGen (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 115MB)
 Running optimization stage 2 on AdderDecode .......
-@W: CL246 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v":56:20:56:27|Input port bits 31 to 20 of DEC_ADDR[31:0] are unused. Assign logic for all port bits or change the input port size.
-Finished optimization stage 2 on AdderDecode (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+Finished optimization stage 2 on AdderDecode (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 116MB)
 Running optimization stage 2 on cmd_server .......
-Finished optimization stage 2 on cmd_server (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+Finished optimization stage 2 on cmd_server (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 116MB)
 Running optimization stage 2 on opb_emu_target .......
-Finished optimization stage 2 on opb_emu_target (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\opb_emu_target.v":130:4:130:9|Trying to extract state machine for register state.
+Extracted state machine for register state
+State machine has 3 reachable states with original encodings of:
+   00
+   01
+   10
+Finished optimization stage 2 on opb_emu_target (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 116MB)
 Running optimization stage 2 on msg_write .......
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[9] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[10] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[11] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[12] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[13] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[14] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[15] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL279 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Pruning register bits 15 to 8 of timeout_cnt[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-@N: CL201 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v":74:4:74:9|Trying to extract state machine for register state.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Only the first 100 messages of id 'CL190' are reported. To see all messages use 'report_messages -log C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\synlog\top_compiler.srr -id CL190' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {CL190} -count unlimited' in the Tcl shell.
+@W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Pruning register bits 15 to 8 of timeout_cnt[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":74:4:74:9|Trying to extract state machine for register state.
 Extracted state machine for register state
 State machine has 7 reachable states with original encodings of:
    00000000
@@ -548,71 +834,122 @@ State machine has 7 reachable states with original encodings of:
    00000100
    00000101
    00000110
-Finished optimization stage 2 on msg_write (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 100MB)
+Finished optimization stage 2 on msg_write (CPU Time 0h:00m:00s, Memory Used current: 117MB peak: 117MB)
 Running optimization stage 2 on msg_read .......
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[9] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[10] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[11] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[12] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[13] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[14] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Optimizing register bit timeout_cnt[15] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL279 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Pruning register bits 15 to 8 of timeout_cnt[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-@N: CL201 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Trying to extract state machine for register state.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Optimizing register bit state[3] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Optimizing register bit state[4] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Optimizing register bit state[5] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Optimizing register bit state[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Optimizing register bit state[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL279 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Pruning register bits 7 to 3 of state[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-Finished optimization stage 2 on msg_read (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 105MB)
+@W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Pruning register bits 15 to 8 of timeout_cnt[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Trying to extract state machine for register state.
+@W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":74:4:74:9|Pruning register bits 7 to 3 of state[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 2 on msg_read (CPU Time 0h:00m:00s, Memory Used current: 117MB peak: 122MB)
 Running optimization stage 2 on msg_buffer .......
-Finished optimization stage 2 on msg_buffer (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 105MB)
+Finished optimization stage 2 on msg_buffer (CPU Time 0h:00m:00s, Memory Used current: 117MB peak: 122MB)
 Running optimization stage 2 on afifo_8s_4s_8s_4s .......
-Finished optimization stage 2 on afifo_8s_4s_8s_4s (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 105MB)
+Finished optimization stage 2 on afifo_8s_4s_8s_4s (CPU Time 0h:00m:00s, Memory Used current: 117MB peak: 122MB)
+Running optimization stage 2 on CLOCK_DIV .......
+Finished optimization stage 2 on CLOCK_DIV (CPU Time 0h:00m:00s, Memory Used current: 117MB peak: 122MB)
 
 For a summary of runtime per design unit, please see file:
 ==========================================================
-@L: C:\repo\jabil2025\dmd\P1060973_FPGA\synthesis\synwork\layer0.duruntime
+@L: C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\synwork\layer0.duruntime
 
 
 
-At c_ver Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 100MB peak: 105MB)
+At c_ver Exit (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 117MB peak: 122MB)
 
 
 Process completed successfully.
-# Mon Apr 21 21:58:17 2025
+# Sat Jun  7 03:03:22 2025
 
 ###########################################################]
 ###########################################################[
-@N:"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":42:7:42:14|Top entity is set to cmn_uart.
+@N:"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":42:7:42:14|Top entity is set to cmn_uart.
 File C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd\math_real.vhd changed - recompiling
-@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd'.
+File C:\repo2\gpb\dmd\P1060973_FPGA\hdl\PH_PWM.vhd changed - recompiling
+File C:\repo2\gpb\dmd\P1060973_FPGA\hdl\SIMPLE_PH_PWM.vhd changed - recompiling
+File C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_deadband.vhd changed - recompiling
+File C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd changed - recompiling
+File C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd changed - recompiling
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\PH_PWM.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\SIMPLE_PH_PWM.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_deadband.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd'.
 VHDL syntax check successful!
 @N: CD231 :"C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd2008\std1164.vhd":889:16:889:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
+@N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":24:7:24:13|Synthesizing work.cmn_pwm.rtl.
+@W: CD326 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":236:23:236:33|Port half_period_strobe of entity work.ph_pwm is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD638 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":63:14:63:19|Signal enable is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":64:14:64:24|Signal pd_pwm6_out is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":65:14:65:26|Signal pd_pwm6_out_n is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":66:14:66:27|Signal en_pd_pwm6_out is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":67:14:67:21|Signal not_used is undriven. Either assign the signal a value or remove the signal declaration.
+@N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_deadband.vhd":45:7:45:18|Synthesizing work.cmn_deadband.rtl.
+@N: CD231 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_deadband.vhd":66:24:66:25|Using onehot encoding for type db_state_type. For example, enumeration db_state_00 is mapped to "10000".
+Post processing for work.cmn_deadband.rtl
+Running optimization stage 1 on CMN_DEADBAND .......
+Finished optimization stage 1 on CMN_DEADBAND (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+@N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\PH_PWM.vhd":23:7:23:12|Synthesizing work.ph_pwm.behavioral.
+Post processing for work.ph_pwm.behavioral
+Running optimization stage 1 on PH_PWM .......
+Finished optimization stage 1 on PH_PWM (CPU Time 0h:00m:00s, Memory Used current: 96MB peak: 97MB)
+@N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\SIMPLE_PH_PWM.vhd":5:7:5:19|Synthesizing work.simple_ph_pwm.behavioral.
+Post processing for work.simple_ph_pwm.behavioral
+Running optimization stage 1 on SIMPLE_PH_PWM .......
+Finished optimization stage 1 on SIMPLE_PH_PWM (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 97MB)
+@N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":22:7:22:19|Synthesizing work.cmn_debouncer.rtl.
+Post processing for work.cmn_debouncer.rtl
+Running optimization stage 1 on cmn_debouncer .......
+Finished optimization stage 1 on cmn_debouncer (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 97MB)
+Post processing for work.cmn_pwm.rtl
+Running optimization stage 1 on cmn_pwm .......
+@W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":195:9:195:10|Pruning unused register sync_mot_pwm_param45_3(9 downto 0). Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":195:9:195:10|Pruning unused register sync_mot_pwm_param23_3(9 downto 0). Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":195:9:195:10|Pruning unused register sync_mot_pwm_param01_3(9 downto 0). Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":167:9:167:10|Pruning unused register valid_mot_pwm_param45_4(9 downto 0). Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":167:9:167:10|Pruning unused register valid_mot_pwm_param23_4(9 downto 0). Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":167:9:167:10|Pruning unused register valid_mot_pwm_param01_6(9 downto 0). Make sure that there are no unused intermediate registers.
+Finished optimization stage 1 on cmn_pwm (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 97MB)
+@N: Setting default value for generic baud_rate to 921600;
+@N: Setting default value for generic clock_frequency to 100000000;
+@N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":42:7:42:14|Synthesizing work.cmn_uart.rtl.
+@N: CD231 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":127:27:127:28|Using onehot encoding for type uart_tx_states. For example, enumeration idle is mapped to "10000".
+@N: CD233 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":142:27:142:28|Using sequential encoding for type uart_rx_states.
+@N: CD604 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":280:20:280:33|OTHERS clause is not synthesized.
+@N: CD604 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":468:20:468:33|OTHERS clause is not synthesized.
+Post processing for work.cmn_uart.rtl
+Running optimization stage 1 on work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY .......
+@W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":353:6:353:7|Pruning unused register uart_rx_stop_count_1(31 downto 0). Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":222:6:222:7|Pruning unused register uart_tx_stop_count_2(31 downto 0). Make sure that there are no unused intermediate registers.
+Finished optimization stage 1 on work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 99MB)
+@N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd":28:7:28:22|Synthesizing work.serial_eeprom_if.rtl.
+@N: CD231 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd":53:34:53:35|Using onehot encoding for type eeprom_cycle_state_type. For example, enumeration idle is mapped to "100000000000".
+@N: CD604 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd":298:20:298:33|OTHERS clause is not synthesized.
+Post processing for work.serial_eeprom_if.rtl
+Running optimization stage 1 on serial_eeprom_if .......
+Finished optimization stage 1 on serial_eeprom_if (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 99MB)
 @N: Setting default value for generic baud_rate to 115200;
 @N: Setting default value for generic clock_frequency to 100000000;
-@N: CD630 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":42:7:42:14|Synthesizing work.cmn_uart.rtl.
-@N: CD231 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":127:27:127:28|Using onehot encoding for type uart_tx_states. For example, enumeration idle is mapped to "10000".
-@N: CD233 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":142:27:142:28|Using sequential encoding for type uart_rx_states.
-@N: CD604 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":280:20:280:33|OTHERS clause is not synthesized.
-@N: CD604 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":468:20:468:33|OTHERS clause is not synthesized.
+@N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":42:7:42:14|Synthesizing work.cmn_uart.rtl.
+@N: CD231 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":127:27:127:28|Using onehot encoding for type uart_tx_states. For example, enumeration idle is mapped to "10000".
+@N: CD233 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":142:27:142:28|Using sequential encoding for type uart_rx_states.
+@N: CD604 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":280:20:280:33|OTHERS clause is not synthesized.
+@N: CD604 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":468:20:468:33|OTHERS clause is not synthesized.
 Post processing for work.cmn_uart.rtl
 Running optimization stage 1 on work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY .......
-@W: CL169 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":353:6:353:7|Pruning unused register uart_rx_stop_count_1(31 downto 0). Make sure that there are no unused intermediate registers.
-@W: CL169 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":222:6:222:7|Pruning unused register uart_tx_stop_count_2(31 downto 0). Make sure that there are no unused intermediate registers.
-Finished optimization stage 1 on work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
+@W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":353:6:353:7|Pruning unused register uart_rx_stop_count_1(31 downto 0). Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":222:6:222:7|Pruning unused register uart_tx_stop_count_2(31 downto 0). Make sure that there are no unused intermediate registers.
+Finished optimization stage 1 on work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
 Running optimization stage 2 on work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY .......
-@N: CL201 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":353:6:353:7|Trying to extract state machine for register uart_rx_state.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":353:6:353:7|Trying to extract state machine for register uart_rx_state.
 Extracted state machine for register uart_rx_state
 State machine has 4 reachable states with original encodings of:
    00
    01
    10
    11
-@W: CL249 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":353:6:353:7|Initial value is not supported on state machine uart_rx_state
-@N: CL201 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":222:6:222:7|Trying to extract state machine for register uart_tx_state.
+@W: CL249 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":353:6:353:7|Initial value is not supported on state machine uart_rx_state
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":222:6:222:7|Trying to extract state machine for register uart_tx_state.
 Extracted state machine for register uart_tx_state
 State machine has 5 reachable states with original encodings of:
    00001
@@ -620,21 +957,92 @@ State machine has 5 reachable states with original encodings of:
    00100
    01000
    10000
-@W: CL249 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":222:6:222:7|Initial value is not supported on state machine uart_tx_state
-@N: CL159 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":67:12:67:22|Input uart_active is unused.
-Finished optimization stage 2 on work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY (CPU Time 0h:00m:00s, Memory Used current: 96MB peak: 98MB)
+@W: CL249 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":222:6:222:7|Initial value is not supported on state machine uart_tx_state
+@N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":67:12:67:22|Input uart_active is unused.
+Finished optimization stage 2 on work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Running optimization stage 2 on serial_eeprom_if .......
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd":100:10:100:11|Optimizing register bit bit_cntr(4) to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd":100:10:100:11|Pruning register bit 4 of bit_cntr(4 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd":100:10:100:11|Trying to extract state machine for register eeprom_cycle_state.
+Extracted state machine for register eeprom_cycle_state
+State machine has 12 reachable states with original encodings of:
+   000000000001
+   000000000010
+   000000000100
+   000000001000
+   000000010000
+   000000100000
+   000001000000
+   000010000000
+   000100000000
+   001000000000
+   010000000000
+   100000000000
+@W: CL249 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd":100:10:100:11|Initial value is not supported on state machine eeprom_cycle_state
+@W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd":40:10:40:20|Input port bits 3 to 2 of eeprom_inst(3 downto 0) are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on serial_eeprom_if (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Running optimization stage 2 on work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY .......
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":353:6:353:7|Trying to extract state machine for register uart_rx_state.
+Extracted state machine for register uart_rx_state
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11
+@W: CL249 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":353:6:353:7|Initial value is not supported on state machine uart_rx_state
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":222:6:222:7|Trying to extract state machine for register uart_tx_state.
+Extracted state machine for register uart_tx_state
+State machine has 5 reachable states with original encodings of:
+   00001
+   00010
+   00100
+   01000
+   10000
+@W: CL249 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":222:6:222:7|Initial value is not supported on state machine uart_tx_state
+@N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":67:12:67:22|Input uart_active is unused.
+Finished optimization stage 2 on work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 100MB)
+Running optimization stage 2 on cmn_debouncer_8_8 .......
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Optimizing register bit debounce_cntr(31) to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Pruning register bit 31 of debounce_cntr(31 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Optimizing register bit debounce_cntr(30) to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Pruning register bit 30 of debounce_cntr(30 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Optimizing register bit debounce_cntr(29) to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Pruning register bit 29 of debounce_cntr(29 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Optimizing register bit debounce_cntr(28) to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Pruning register bit 28 of debounce_cntr(28 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+Finished optimization stage 2 on cmn_debouncer_8_8 (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 102MB)
+Running optimization stage 2 on SIMPLE_PH_PWM .......
+Finished optimization stage 2 on SIMPLE_PH_PWM (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 102MB)
+Running optimization stage 2 on PH_PWM_625_0_80_128_3_3 .......
+Finished optimization stage 2 on PH_PWM_625_0_80_128_3_3 (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 104MB)
+Running optimization stage 2 on CMN_DEADBAND_5 .......
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_deadband.vhd":91:10:91:11|Trying to extract state machine for register DB_STATE.
+Extracted state machine for register DB_STATE
+State machine has 5 reachable states with original encodings of:
+   00001
+   00010
+   00100
+   01000
+   10000
+Finished optimization stage 2 on CMN_DEADBAND_5 (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 104MB)
+Running optimization stage 2 on cmn_pwm .......
+@N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":39:5:39:15|Input pulse_200us is unused.
+@N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":46:5:46:19|Input mot_pwm_param01 is unused.
+@N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":47:5:47:19|Input mot_pwm_param23 is unused.
+@N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":48:5:48:19|Input mot_pwm_param45 is unused.
+Finished optimization stage 2 on cmn_pwm (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 104MB)
 
 For a summary of runtime per design unit, please see file:
 ==========================================================
-@L: C:\repo\jabil2025\dmd\P1060973_FPGA\synthesis\synwork\layer1.duruntime
+@L: C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\synwork\layer1.duruntime
 
 
 
-At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 95MB peak: 98MB)
+At c_vhdl Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 102MB peak: 104MB)
 
 
 Process completed successfully.
-# Mon Apr 21 21:58:18 2025
+# Sat Jun  7 03:03:24 2025
 
 ###########################################################]
 ###########################################################[
@@ -654,35 +1062,35 @@ Implementation : synthesis
 Synopsys Synopsys Netlist Linker, Version comp202309synp1, Build 307R, Built Jul 25 2024 08:18:25, @
 
 @N|Running in 64-bit mode
-File C:\repo\jabil2025\dmd\P1060973_FPGA\synthesis\synwork\layer0.srs changed - recompiling
-File C:\repo\jabil2025\dmd\P1060973_FPGA\synthesis\synwork\layer1.srs changed - recompiling
+File C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\synwork\layer0.srs changed - recompiling
+File C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\synwork\layer1.srs changed - recompiling
 
 =======================================================================================
 For a summary of linker messages for components that did not bind, please see log file:
-@L: C:\repo\jabil2025\dmd\P1060973_FPGA\synthesis\synwork\top_comp.linkerlog
+@L: C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\synwork\top_comp.linkerlog
 =======================================================================================
 
 
-At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 93MB peak: 94MB)
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 97MB peak: 98MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Mon Apr 21 21:58:18 2025
+# Sat Jun  7 03:03:25 2025
 
 ###########################################################]
 
 For a summary of runtime and memory usage for all design units, please see file:
 ==========================================================
-@L: C:\repo\jabil2025\dmd\P1060973_FPGA\synthesis\synwork\top_comp.rt.csv
+@L: C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\synwork\top_comp.rt.csv
 
 @END
 
-At c_hdl Exit (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:03s; Memory used current: 24MB peak: 25MB)
+At c_hdl Exit (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 24MB peak: 25MB)
 
-Process took 0h:00m:06s realtime, 0h:00m:03s cputime
+Process took 0h:00m:09s realtime, 0h:00m:09s cputime
 
 Process completed successfully.
-# Mon Apr 21 21:58:18 2025
+# Sat Jun  7 03:03:25 2025
 
 ###########################################################]

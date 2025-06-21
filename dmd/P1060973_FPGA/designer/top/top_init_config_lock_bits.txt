@@ -1,6 +1,6 @@
 ;----------------------------------------------------------------------------------
 ; Register Lock Bits Configuration File for peripheral blocks
-; Date:    Mon Apr 21 22:07:34 2025
+; Date:    Sat Jun  7 03:06:20 2025
 ; Version: 2024.2 2024.2.0.13
 ; Design:  top
 ; Family:  PolarFire

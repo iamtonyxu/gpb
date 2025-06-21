@@ -59,13 +59,13 @@ set_compile_info \
 set_compile_info \
     -category {"Source Files"} \
     -name {"Source"} \
-    -value {"C:\repo\jabil2025\dmd\P1060973_FPGA\synthesis\top.vm"}
+    -value {"C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\top.vm"}
 set_compile_info \
     -category {"Options"} \
     -name {"Limit the number of high fanout nets to display to"} \
     -value {"10"}
 compile \
-    -desdir {C:\repo\jabil2025\dmd\P1060973_FPGA\designer\top} \
+    -desdir {C:\repo2\gpb\dmd\P1060973_FPGA\designer\top} \
     -design top \
     -fam PolarFire \
     -die PA5M100T \
