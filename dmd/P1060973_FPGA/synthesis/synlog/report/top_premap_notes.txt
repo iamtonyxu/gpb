@@ -1,0 +1,16 @@
+@N: MF472 |Synthesis running in Automatic Compile Point mode
+@N: MF474 |No compile point is identified in Automatic Compile Point mode
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+@N: MO111 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\top.v":109:20:109:29|Tristate driver PULSE_2KHZ (in view: work.top(verilog)) on net PULSE_2KHZ (in view: work.top(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\top.v":121:17:121:22|Tristate driver SP1_RE (in view: work.top(verilog)) on net SP1_RE (in view: work.top(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\top.v":122:17:122:22|Tristate driver SP1_WE (in view: work.top(verilog)) on net SP1_WE (in view: work.top(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\top.v":123:17:123:22|Tristate driver SP2_RE (in view: work.top(verilog)) on net SP2_RE (in view: work.top(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\top.v":124:17:124:22|Tristate driver SP2_WE (in view: work.top(verilog)) on net SP2_WE (in view: work.top(verilog)) has its enable tied to GND.
+@N: BN362 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\cmn_uart.vhd":476:8:476:9|Removing sequential instance next_command_ready (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: FP130 |Promoting Net SYS_CLK on CLKINT  I_1 
+@N: FX1184 |Applying syn_allowed_resources blockrams=352 on top level netlist top 
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+@N: BN225 |Writing default property annotation file C:\repo\jabil2025\dmd\P1060973_FPGA\synthesis\top.sap.
+@N: MO225 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|There are no possible illegal states for state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl)); safe FSM implementation is not required.

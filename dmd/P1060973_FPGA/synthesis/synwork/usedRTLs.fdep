@@ -1,0 +1,14 @@
+#List of actual used RTLs.
+
+File                                                                         Type     IN_PROJECT/INCLUDED/LIBRARY
+
+"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\top.v"                           verilog                      IN PROJECT
+"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ScratchPadRegister.v"            verilog                      IN PROJECT
+"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\ADDR_DECODER.v"                  verilog                      IN PROJECT
+"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmd_server.v"                    verilog                      IN PROJECT
+"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd"                       vhdl                      IN PROJECT
+"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\opb_emu_target.v"                verilog                      IN PROJECT
+"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_write.v"                     verilog                      IN PROJECT
+"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_read.v"                      verilog                      IN PROJECT
+"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\msg_buffer.v"                    verilog                      IN PROJECT
+"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\afifo.v"                         verilog                      IN PROJECT

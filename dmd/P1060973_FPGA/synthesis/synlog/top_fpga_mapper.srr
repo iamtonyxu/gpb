@@ -1,0 +1,354 @@
+# Mon Apr 21 21:58:23 2025
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-3
+Install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: LAPTOP-6FQD1N4B
+
+Implementation : synthesis
+Synopsys Microchip Technology Mapper, Version map202309actp1, Build 008R, Built Jul 25 2024 08:49:59, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 185MB peak: 185MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 188MB peak: 200MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 188MB peak: 200MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 190MB peak: 200MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 191MB peak: 200MB)
+
+
+Vector Gate Optimization Enabled: Optimizing  Partial Hanging Logic. 
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 250MB peak: 250MB)
+
+@N: BN362 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\scratchpadregister.v":39:4:39:9|Removing sequential instance scratch_pad_0.dev_sp2[15:0] (in view: work.top(verilog)) of type view:PrimLib.dffpatre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\scratchpadregister.v":53:4:53:9|Removing sequential instance scratch_pad_0.SP_DO_1[15:0] (in view: work.top(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\scratchpadregister.v":39:4:39:9|Removing sequential instance scratch_pad_0.dev_sp1[15:0] (in view: work.top(verilog)) of type view:PrimLib.dffpatre(prim) because it does not drive other instances.
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 254MB peak: 254MB)
+
+@W: FX107 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|RAM mem[7:0] (in view: work.afifo_8s_4s_8s_4s_1(verilog)) does not have a read/write conflict check. Possible simulation mismatch. To resolve a read/write conflict, either set syn_ramstyle = rw_check, or enable the "Read Write Check on RAM" Implementation Option. For more information, search for "read/write conflict check" in Online Help.
+@N: FX702 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0] (in view: work.afifo_8s_4s_8s_4s_1(verilog)).
+@N: FX702 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0]
+@W: FX107 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|RAM mem[7:0] (in view: work.afifo_8s_4s_8s_4s_0(verilog)) does not have a read/write conflict check. Possible simulation mismatch. To resolve a read/write conflict, either set syn_ramstyle = rw_check, or enable the "Read Write Check on RAM" Implementation Option. For more information, search for "read/write conflict check" in Online Help.
+@N: FX702 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0] (in view: work.afifo_8s_4s_8s_4s_0(verilog)).
+@N: FX702 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0]
+Encoding state machine state[6:0] (in view: work.msg_write(verilog))
+original code -> new code
+   00000000 -> 0000001
+   00000001 -> 0000010
+   00000010 -> 0000100
+   00000011 -> 0001000
+   00000100 -> 0010000
+   00000101 -> 0100000
+   00000110 -> 1000000
+@W: MO129 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\msg_write.v":74:4:74:9|Sequential instance cmd_server_0.opb_emu_target_inst.msg_write_inst.state[6] is reduced to a combinational gate by constant propagation.
+Encoding state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N: MO225 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|There are no possible illegal states for state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl)); safe FSM implementation is not required.
+Encoding state machine uart_tx_state[0:4] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl))
+original code -> new code
+   00001 -> 00001
+   00010 -> 00010
+   00100 -> 00100
+   01000 -> 01000
+   10000 -> 10000
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 256MB peak: 256MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 265MB peak: 265MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+NConnInternalConnection caching is on
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 265MB peak: 266MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 265MB peak: 266MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 265MB peak: 266MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 265MB peak: 266MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 266MB peak: 266MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 268MB peak: 268MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:02s		     5.06ns		 357 /       305
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 269MB peak: 269MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 269MB peak: 270MB)
+
+
+Starting CDBProcessSetClockGroups... (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 269MB peak: 270MB)
+
+
+Finished with CDBProcessSetClockGroups (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 269MB peak: 270MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 218MB peak: 270MB)
+
+Writing Analyst data base C:\repo\jabil2025\dmd\P1060973_FPGA\synthesis\synwork\top_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 266MB peak: 270MB)
+
+Writing Verilog Simulation files
+@N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
+@N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
+@W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
+
+Finished Writing Verilog Simulation files (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 267MB peak: 270MB)
+
+
+Finished Writing Netlists (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 267MB peak: 270MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 265MB peak: 270MB)
+
+@W: MT420 |Found inferred clock top|SYS_CLK with period 10.00ns. Please declare a user-defined clock on port SYS_CLK.
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Mon Apr 21 21:58:27 2025
+#
+
+
+Top view:               top
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    C:\repo\jabil2025\dmd\P1060973_FPGA\designer\top\synthesis.fdc
+                       
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: 5.661
+
+                   Requested     Estimated     Requested     Estimated               Clock        Clock     
+Starting Clock     Frequency     Frequency     Period        Period        Slack     Type         Group     
+------------------------------------------------------------------------------------------------------------
+top|SYS_CLK        100.0 MHz     230.4 MHz     10.000        4.339         5.661     inferred     (multiple)
+============================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                    |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+----------------------------------------------------------------------------------------------------------------
+Starting     Ending       |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+----------------------------------------------------------------------------------------------------------------
+top|SYS_CLK  top|SYS_CLK  |  10.000      5.661  |  No paths    -      |  No paths    -      |  No paths    -    
+================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: top|SYS_CLK
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                               Starting                                                 Arrival          
+Instance                                                       Reference       Type     Pin     Net                     Time        Slack
+                                                               Clock                                                                     
+-----------------------------------------------------------------------------------------------------------------------------------------
+cmd_server_0.opb_emu_target_inst.msg_read_inst.state[1]        top|SYS_CLK     SLE      Q       state[1]                0.257       5.661
+cmd_server_0.opb_emu_target_inst.msg_read_inst.state[2]        top|SYS_CLK     SLE      Q       state[2]                0.257       5.702
+cmd_server_0.opb_emu_target_inst.msg_read_inst.state[0]        top|SYS_CLK     SLE      Q       state[0]                0.257       5.760
+cmd_server_0.opb_emu_target_inst.msg_read_inst.byte_cnt[1]     top|SYS_CLK     SLE      Q       byte_cnt[1]             0.237       5.880
+cmd_server_0.opb_emu_target_inst.msg_read_inst.byte_cnt[0]     top|SYS_CLK     SLE      Q       byte_cnt[0]             0.237       5.915
+cmd_server_0.opb_emu_target_inst.msg_read_inst.byte_cnt[2]     top|SYS_CLK     SLE      Q       byte_cnt[2]             0.257       6.467
+cmd_server_0.opb_emu_target_inst.msg_read_inst.byte_cnt[3]     top|SYS_CLK     SLE      Q       byte_cnt[3]             0.237       6.474
+cmd_server_0.msg_buffer_inst.DATA_STREAM_OUT_ACK               top|SYS_CLK     SLE      Q       DATA_STREAM_OUT_ACK     0.257       6.481
+cmd_server_0.msg_buffer_inst.tx_fifo_inst.rbin[0]              top|SYS_CLK     SLE      Q       rbin[0]                 0.257       6.519
+cmd_server_0.cmn_uart_inst.uart_rx_data_out_stb                top|SYS_CLK     SLE      Q       DATA_STREAM_OUT_STB     0.257       6.558
+=========================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                             Starting                                              Required          
+Instance                                                     Reference       Type     Pin     Net                  Time         Slack
+                                                             Clock                                                                   
+-------------------------------------------------------------------------------------------------------------------------------------
+cmd_server_0.msg_buffer_inst.rx_fifo_inst.o_rempty           top|SYS_CLK     SLE      D       rempty_next_NE_i     10.000       5.661
+cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_DO[0]     top|SYS_CLK     SLE      EN      N_278                9.850        5.880
+cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_DO[1]     top|SYS_CLK     SLE      EN      N_278                9.850        5.880
+cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_DO[2]     top|SYS_CLK     SLE      EN      N_278                9.850        5.880
+cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_DO[3]     top|SYS_CLK     SLE      EN      N_278                9.850        5.880
+cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_DO[4]     top|SYS_CLK     SLE      EN      N_278                9.850        5.880
+cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_DO[5]     top|SYS_CLK     SLE      EN      N_278                9.850        5.880
+cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_DO[6]     top|SYS_CLK     SLE      EN      N_278                9.850        5.880
+cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_DO[7]     top|SYS_CLK     SLE      EN      N_278                9.850        5.880
+cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_DO[8]     top|SYS_CLK     SLE      EN      N_278                9.850        5.880
+=====================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         10.000
+
+    - Propagation time:                      4.339
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     5.661
+
+    Number of logic level(s):                5
+    Starting point:                          cmd_server_0.opb_emu_target_inst.msg_read_inst.state[1] / Q
+    Ending point:                            cmd_server_0.msg_buffer_inst.rx_fifo_inst.o_rempty / D
+    The start point is clocked by            top|SYS_CLK [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
+    The end   point is clocked by            top|SYS_CLK [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
+
+Instance / Net                                                                      Pin      Pin               Arrival     No. of    
+Name                                                                       Type     Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------------------------------
+cmd_server_0.opb_emu_target_inst.msg_read_inst.state[1]                    SLE      Q        Out     0.257     0.257 r     -         
+state[1]                                                                   Net      -        -       0.751     -           9         
+cmd_server_0.opb_emu_target_inst.msg_read_inst.state_RNI22BF4_0[1]         CFG3     C        In      -         1.009 r     -         
+cmd_server_0.opb_emu_target_inst.msg_read_inst.state_RNI22BF4_0[1]         CFG3     Y        Out     0.175     1.183 f     -         
+N_335                                                                      Net      -        -       0.701     -           6         
+cmd_server_0.msg_buffer_inst.rx_fifo_inst.rgraynext_1_i_o3_i_0_o2[1]       CFG3     C        In      -         1.885 f     -         
+cmd_server_0.msg_buffer_inst.rx_fifo_inst.rgraynext_1_i_o3_i_0_o2[1]       CFG3     Y        Out     0.154     2.038 r     -         
+N_716                                                                      Net      -        -       0.683     -           5         
+cmd_server_0.msg_buffer_inst.rx_fifo_inst.rgraynext_1_i_o3_i_0_o2_0[2]     CFG3     C        In      -         2.722 r     -         
+cmd_server_0.msg_buffer_inst.rx_fifo_inst.rgraynext_1_i_o3_i_0_o2_0[2]     CFG3     Y        Out     0.175     2.897 r     -         
+N_188                                                                      Net      -        -       0.665     -           4         
+cmd_server_0.msg_buffer_inst.rx_fifo_inst.rempty_next_4_i                  CFG4     D        In      -         3.561 r     -         
+cmd_server_0.msg_buffer_inst.rx_fifo_inst.rempty_next_4_i                  CFG4     Y        Out     0.274     3.835 f     -         
+rempty_next_4_i                                                            Net      -        -       0.139     -           1         
+cmd_server_0.msg_buffer_inst.rx_fifo_inst.o_rempty_RNO                     CFG4     D        In      -         3.974 f     -         
+cmd_server_0.msg_buffer_inst.rx_fifo_inst.o_rempty_RNO                     CFG4     Y        Out     0.226     4.200 f     -         
+rempty_next_NE_i                                                           Net      -        -       0.139     -           1         
+cmd_server_0.msg_buffer_inst.rx_fifo_inst.o_rempty                         SLE      D        In      -         4.339 f     -         
+=====================================================================================================================================
+Total path delay (propagation time + setup) of 4.339 is 1.260(29.0%) logic and 3.079(71.0%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+
+Finished final timing analysis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 266MB peak: 270MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 266MB peak: 270MB)
+
+---------------------------------------
+Resource Usage Report for top 
+
+Mapping to part: mpf100tfcg484std
+Cell usage:
+CLKINT          1 use
+CFG1           4 uses
+CFG2           58 uses
+CFG3           100 uses
+CFG4           175 uses
+
+
+Sequential Cells: 
+SLE            305 uses
+
+DSP Blocks:    0 of 336 (0%)
+
+I/O ports: 5
+I/O primitives: 5
+INBUF          3 uses
+OUTBUF         2 uses
+
+
+Global Clock Buffers: 1
+
+RAM/ROM usage summary
+Total Block RAMs (RAM64x12) : 2 of 1008 (0%)
+
+Total LUTs:    337
+
+Extra resources required for RAM and MACC_PA interface logic during P&R:
+
+RAM64X12 Interface Logic : SLEs = 24; LUTs = 24;
+RAM1K20  Interface Logic : SLEs = 0; LUTs = 0;
+MACC_PA     Interface Logic : SLEs = 0; LUTs = 0;
+MACC_PA_BC_ROM     Interface Logic : SLEs = 0; LUTs = 0;
+
+Total number of SLEs after P&R:  305 + 24 + 0 + 0 = 329;
+Total number of LUTs after P&R:  337 + 24 + 0 + 0 = 361;
+
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 131MB peak: 270MB)
+
+Process took 0h:00m:04s realtime, 0h:00m:04s cputime
+# Mon Apr 21 21:58:28 2025
+
+###########################################################]

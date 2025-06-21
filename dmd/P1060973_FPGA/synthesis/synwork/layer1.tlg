@@ -1,0 +1,39 @@
+@N: CD231 :"C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd2008\std1164.vhd":889:16:889:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
+@N: Setting default value for generic baud_rate to 115200;
+@N: Setting default value for generic clock_frequency to 100000000;
+@N: CD630 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":42:7:42:14|Synthesizing work.cmn_uart.rtl.
+@N: CD231 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":127:27:127:28|Using onehot encoding for type uart_tx_states. For example, enumeration idle is mapped to "10000".
+@N: CD233 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":142:27:142:28|Using sequential encoding for type uart_rx_states.
+@N: CD604 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":280:20:280:33|OTHERS clause is not synthesized.
+@N: CD604 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":468:20:468:33|OTHERS clause is not synthesized.
+Post processing for work.cmn_uart.rtl
+Running optimization stage 1 on work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY .......
+@W: CL169 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":353:6:353:7|Pruning unused register uart_rx_stop_count_1(31 downto 0). Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":222:6:222:7|Pruning unused register uart_tx_stop_count_2(31 downto 0). Make sure that there are no unused intermediate registers.
+Finished optimization stage 1 on work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
+Running optimization stage 2 on work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY .......
+@N: CL201 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":353:6:353:7|Trying to extract state machine for register uart_rx_state.
+Extracted state machine for register uart_rx_state
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11
+@W: CL249 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":353:6:353:7|Initial value is not supported on state machine uart_rx_state
+@N: CL201 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":222:6:222:7|Trying to extract state machine for register uart_tx_state.
+Extracted state machine for register uart_tx_state
+State machine has 5 reachable states with original encodings of:
+   00001
+   00010
+   00100
+   01000
+   10000
+@W: CL249 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":222:6:222:7|Initial value is not supported on state machine uart_tx_state
+@N: CL159 :"C:\repo\jabil2025\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":67:12:67:22|Input uart_active is unused.
+Finished optimization stage 2 on work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY (CPU Time 0h:00m:00s, Memory Used current: 96MB peak: 98MB)
+
+For a summary of runtime per design unit, please see file:
+==========================================================
+@L: C:\repo\jabil2025\dmd\P1060973_FPGA\synthesis\synwork\layer1.duruntime
+
+

@@ -1,52 +1,132 @@
-# Prerequisites
-*.d
+#########
+#Source files:
+#########
+#Do NOT ignore VHDL, Verilog, block diagrams or EDIF files.
+!*.vhd
+!*.v
+!*.sv
+!*.vh
+!*.bd
+!*.edif
+#########
+#IP files
+#########
+#.xci: synthesis and implemented not possible - you need to return back to the previous version to generate output products
+#.xci + .dcp: implementation possible but not re-synthesis
+#*.xci(www.spiritconsortium.org)
+!*.xci
+#*.dcp(checkpoint files)
+!*.dcp
+!*.vds
+!*.pb
+#All bd comments and layout coordinates are stored within .ui
+!*.ui
+!*.ooc
+#########
+#System Generator
+#########
+!*.mdl
+!*.slx
+!*.bxml
+#########
+#Simulation logic analyzer
+#########
+!*.wcfg
+!*.coe
+!*.do
+!*.sh
+#########
+#MIG
+#########
+!*.prj
+!*.mem
+#########
+#Constraint files
+#########
+#Do NOT ignore *.xdc files
+!*.xdc
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
 
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
+# Compiled source #
+###################
+*.com
+*.class
 *.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
 *.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+*.o
+*.obj
+*.so
+*.mexw64
+*.asv
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+.vscode
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+*F2812开发板
+*100046950_DSP
+*100046950_FPGA
+*F2812_example_ccs3
+*libero_setup
+*png
+*.metadata
+*.jxbrowser.userdata
+*dvt
+RemoteSystemsTempFiles
+Debug
+
+
+# Libero SoC V2024 - ignore build and generated output directories
+###################### 
+/jbuild/  
+/db/  
+/libero_work/  
+/output/  
+/ipcache/  
+
+# Ignore project intermediate files  
+*.bit  
+*.svf  
+*.sof  
+*.rpd  
+
+# Ignore simulation, synthesis and timing logs and reports  
+*.log  
+*.jou  
+*.wlf  
+*.rep  
+*.sta  
+*.sdc  
+*.ngr  
+*.sdf  
+
+# Ignore user-specific and workspace files  
+*.user  
+*.prefs  
+*.vscode/  
+
+# Backup and temporary files  
+*.bak  
+*.tmp  
+*.swp  
+*.cache  
+
+# OS generated files  
+.DS_Store  
+Thumbs.db  

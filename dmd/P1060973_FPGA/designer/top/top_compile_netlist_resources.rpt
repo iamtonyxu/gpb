@@ -1,0 +1,136 @@
+Compile Report
+Microchip Technology Inc. - Microchip Libero Software Release v2024.2 (Version 2024.2.0.13)
+Date: Mon Apr 21 21:58:34 2025
+
+Device Selection
++------------------------+-------------+
+| Family                 | PolarFire   |
+| Device                 | MPF100T     |
+| Package                | FCG484      |
+| Speed Grade            | STD         |
+| Core Voltage           | 1.0V        |
+| Part Range             | EXT         |
+| Default I/O technology | LVCMOS 1.8V |
++------------------------+-------------+
+
+Source Files
++---------+------------------------------------------------------+
+| Topcell | top                                                  |
+| Format  | Verilog                                              |
+| Source  | C:\repo\jabil2025\dmd\P1060973_FPGA\synthesis\top.vm |
++---------+------------------------------------------------------+
+
+Options
++----------------------------------------------------+----+
+| Limit the number of high fanout nets to display to | 10 |
++----------------------------------------------------+----+
+
+Resource Usage
++---------------------------+------+--------+------------+
+| Type                      | Used | Total  | Percentage |
++---------------------------+------+--------+------------+
+| 4LUT                      | 360  | 108600 | 0.33       |
+| DFF                       | 329  | 108600 | 0.30       |
+| I/O Register              | 0    | 732    | 0.00       |
+| User I/O                  | 5    | 244    | 2.05       |
+| -- Single-ended I/O       | 5    | 244    | 2.05       |
+| -- Differential I/O Pairs | 0    | 122    | 0.00       |
+| uSRAM                     | 2    | 1008   | 0.20       |
+| LSRAM                     | 0    | 352    | 0.00       |
+| Math                      | 0    | 336    | 0.00       |
+| H-Chip Global             | 1    | 48     | 2.08       |
+| PLL                       | 0    | 8      | 0.00       |
+| DLL                       | 0    | 8      | 0.00       |
+| Transceiver Lanes         | 0    | 8      | 0.00       |
+| Transceiver PCIe          | 0    | 2      | 0.00       |
++---------------------------+------+--------+------------+
+
+Detailed Logic Resource Usage
++-----------------------+------+-----+
+| Type                  | 4LUT | DFF |
++-----------------------+------+-----+
+| Fabric Logic          | 336  | 305 |
+| uSRAM Interface Logic | 24   | 24  |
+| LSRAM Interface Logic | 0    | 0   |
+| Math Interface Logic  | 0    | 0   |
+| Total Used            | 360  | 329 |
++-----------------------+------+-----+
+
+I/O Function
++-------------------------------+--------------+-------------+-----------------+
+| Type                          | w/o register | w/ register | w/ DDR register |
++-------------------------------+--------------+-------------+-----------------+
+| Input I/O                     | 3            | 0           | 0               |
+| Output I/O                    | 2            | 0           | 0               |
+| Bidirectional I/O             | 0            | 0           | 0               |
+| Differential Input I/O Pairs  | 0            | 0           | 0               |
+| Differential Output I/O Pairs | 0            | 0           | 0               |
++-------------------------------+--------------+-------------+-----------------+
+
+Nets assigned to chip global resources
++--------+---------+---------------------+
+| Fanout | Type    | Name                |
++--------+---------+---------------------+
+| 307    | INT_NET | Net   : NN_1        |
+|        |         | Driver: I_1/U0_RGB1 |
+|        |         | Source: NETLIST     |
++--------+---------+---------------------+
+
+Nets assigned to row global resources
++--------+------+------+
+| Fanout | Type | Name |
++--------+------+------+
++--------+------+------+
+
+High fanout nets
++--------+---------+---------------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                            |
++--------+---------+---------------------------------------------------------------------------------+
+| 307    | INT_NET | Net   : RESET_N_c                                                               |
+|        |         | Driver: RESET_N_ibuf                                                            |
+| 60     | INT_NET | Net   : cmd_server_0/opb_emu_target_inst/msg_write_inst/N_334                   |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_write_inst/next_state6_i_0_o2_i_o2 |
+| 37     | INT_NET | Net   : cmd_server_0/opb_emu_target_inst/OPB_WE                                 |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_WE                   |
+| 33     | INT_NET | Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_371                    |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/byte_cnt_RNIMB08O[0]     |
+| 32     | INT_NET | Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_276                    |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/state_RNIODBNS[1]        |
+| 32     | INT_NET | Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_278                    |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/state_RNIEPBVK1[1]       |
+| 32     | INT_NET | Net   : cmd_server_0/opb_emu_target_inst/msg_write_inst/un1_OPB_WE_2_i          |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_write_inst/state_RNIIAPS6[3]       |
+| 32     | INT_NET | Net   : cmd_server_0/opb_emu_target_inst/msg_write_inst/un1_OPB_WE_3_i          |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_write_inst/state_RNIH9PS6[2]       |
+| 18     | INT_NET | Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/state_Z[2]               |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/state[2]                 |
+| 16     | INT_NET | Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/byte_cnt_Z[2]            |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/byte_cnt[2]              |
++--------+---------+---------------------------------------------------------------------------------+
+
+High fanout nets (through buffer trees)
++--------+---------+---------------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                            |
++--------+---------+---------------------------------------------------------------------------------+
+| 307    | INT_NET | Net   : RESET_N_c                                                               |
+|        |         | Driver: RESET_N_ibuf                                                            |
+| 60     | INT_NET | Net   : cmd_server_0/opb_emu_target_inst/msg_write_inst/N_334                   |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_write_inst/next_state6_i_0_o2_i_o2 |
+| 37     | INT_NET | Net   : cmd_server_0/opb_emu_target_inst/OPB_WE                                 |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_WE                   |
+| 33     | INT_NET | Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_371                    |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/byte_cnt_RNIMB08O[0]     |
+| 32     | INT_NET | Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_276                    |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/state_RNIODBNS[1]        |
+| 32     | INT_NET | Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/N_278                    |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/state_RNIEPBVK1[1]       |
+| 32     | INT_NET | Net   : cmd_server_0/opb_emu_target_inst/msg_write_inst/un1_OPB_WE_2_i          |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_write_inst/state_RNIIAPS6[3]       |
+| 32     | INT_NET | Net   : cmd_server_0/opb_emu_target_inst/msg_write_inst/un1_OPB_WE_3_i          |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_write_inst/state_RNIH9PS6[2]       |
+| 18     | INT_NET | Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/state_Z[2]               |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/state[2]                 |
+| 16     | INT_NET | Net   : cmd_server_0/opb_emu_target_inst/msg_read_inst/byte_cnt_Z[2]            |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/byte_cnt[2]              |
++--------+---------+---------------------------------------------------------------------------------+
+

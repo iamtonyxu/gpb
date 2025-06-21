@@ -1,0 +1,260 @@
+<html><body><samp><pre>
+<!@TC:1745243892>
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-3
+Install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: LAPTOP-6FQD1N4B
+
+Implementation : synthesis
+
+#### START OF AREA REPORT #####[
+
+Part:			MPF100TFCG484STD (Microchip)
+
+-------------------------------------------------------------------
+########   Utilization report for  Top level view:   top   ########
+===================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      305                100 %                
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top:	305 (45.66 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      337                100 %                
+=================================================
+Total COMBINATIONAL LOGIC in the block top:	337 (50.45 % Utilization)
+
+
+MEMORY ELEMENTS
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM64X12     2                  100 %                
+=====================================================
+Total MEMORY ELEMENTS in the block top:	2 (0.30 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  100 %                
+===================================================
+Total GLOBAL BUFFERS in the block top:	1 (0.15 % Utilization)
+
+
+IO PADS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+IO       5                  100 %                
+=================================================
+Total IO PADS in the block top:	5 (0.75 % Utilization)
+
+----------------------------------------------------------------
+########   Utilization report for  cell:   cmd_server   ########
+Instance path:   top.cmd_server                                 
+================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      305                100 %                
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top.cmd_server:	305 (45.66 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      337                100 %                
+=================================================
+Total COMBINATIONAL LOGIC in the block top.cmd_server:	337 (50.45 % Utilization)
+
+
+MEMORY ELEMENTS
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM64X12     2                  100 %                
+=====================================================
+Total MEMORY ELEMENTS in the block top.cmd_server:	2 (0.30 % Utilization)
+
+----------------------------------------------------------------
+########   Utilization report for  cell:   msg_buffer   ########
+Instance path:   cmd_server.msg_buffer                          
+================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      81                 26.6 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmd_server.msg_buffer:	81 (12.13 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      61                 18.1 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmd_server.msg_buffer:	61 (9.13 % Utilization)
+
+
+MEMORY ELEMENTS
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM64X12     2                  100 %                
+=====================================================
+Total MEMORY ELEMENTS in the block cmd_server.msg_buffer:	2 (0.30 % Utilization)
+
+-------------------------------------------------------------------------
+########   Utilization report for  cell:   afifo_8s_4s_8s_4s_1   ########
+Instance path:   msg_buffer.afifo_8s_4s_8s_4s_1                          
+=========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      40                 13.1 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block msg_buffer.afifo_8s_4s_8s_4s_1:	40 (5.99 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      29                 8.61 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block msg_buffer.afifo_8s_4s_8s_4s_1:	29 (4.34 % Utilization)
+
+
+MEMORY ELEMENTS
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM64X12     1                  50 %                 
+=====================================================
+Total MEMORY ELEMENTS in the block msg_buffer.afifo_8s_4s_8s_4s_1:	1 (0.15 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   afifo_8s_4s_8s_4s_1_0   ########
+Instance path:   msg_buffer.afifo_8s_4s_8s_4s_1_0                          
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      40                 13.1 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block msg_buffer.afifo_8s_4s_8s_4s_1_0:	40 (5.99 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      31                 9.2 %                
+=================================================
+Total COMBINATIONAL LOGIC in the block msg_buffer.afifo_8s_4s_8s_4s_1_0:	31 (4.64 % Utilization)
+
+
+MEMORY ELEMENTS
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM64X12     1                  50 %                 
+=====================================================
+Total MEMORY ELEMENTS in the block msg_buffer.afifo_8s_4s_8s_4s_1_0:	1 (0.15 % Utilization)
+
+--------------------------------------------------------------------
+########   Utilization report for  cell:   opb_emu_target   ########
+Instance path:   cmd_server.opb_emu_target                          
+====================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      174                57 %                 
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmd_server.opb_emu_target:	174 (26.05 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      217                64.4 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmd_server.opb_emu_target:	217 (32.49 % Utilization)
+
+--------------------------------------------------------------
+########   Utilization report for  cell:   msg_read   ########
+Instance path:   opb_emu_target.msg_read                      
+==============================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      89                 29.2 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block opb_emu_target.msg_read:	89 (13.32 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      115                34.1 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block opb_emu_target.msg_read:	115 (17.22 % Utilization)
+
+---------------------------------------------------------------
+########   Utilization report for  cell:   msg_write   ########
+Instance path:   opb_emu_target.msg_write                      
+===============================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      85                 27.9 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block opb_emu_target.msg_write:	85 (12.72 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      102                30.3 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block opb_emu_target.msg_write:	102 (15.27 % Utilization)
+
+-------------------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY   ########
+Instance path:   cmd_server.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY                          
+=========================================================================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      50                 16.4 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmd_server.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY:	50 (7.49 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      59                 17.5 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmd_server.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY:	59 (8.83 % Utilization)
+
+
+##### END OF AREA REPORT #####]
+
+
+</pre></samp></body></html>

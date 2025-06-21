@@ -1,0 +1,544 @@
+m255
+K4
+z2
+13
+cModel Technology
+dC:/repo/hdl/library/axi_dpd_capture_sync_ctrl
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+vADC_AD7663AS
+Z0 V`JN@9S9cnhjKRR_L]QIcM3
+r1
+31
+IjYJm<I>dE2K[jK>^<2bD<0
+Z1 dC:/repo/jabil2025/dmd/P1060973_FPGA/hdl
+Z2 w1740808091
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ADC_AD7663AS.V
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ADC_AD7663AS.V
+L0 59
+Z3 OL;L;10.2c;57
+Z4 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+n@a@d@c_@a@d7663@a@s
+!s100 j6E0NH:G=R62Ha1Ldz6NY1
+!s108 1745116969.458000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ADC_AD7663AS.V|
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ADC_AD7663AS.V|
+!s85 0
+!i10b 1
+!i111 0
+vAdderDecode
+Z5 V`JN@9S9cnhjKRR_L]QIcM3
+r1
+31
+IdPkXeYE@8]oa@kWSzHZFj1
+R1
+R2
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v
+L0 51
+R3
+R4
+n@adder@decode
+!s100 WPdbVeXWg0OLIfVPUQ3OL2
+!s108 1745116969.508000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ADDR_DECODER.v|
+!s85 0
+!i10b 1
+!i111 0
+vafifo
+R5
+r1
+31
+IV`YGBaQ3DicRnNCPz0B_[0
+R1
+w1730446225
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/afifo.v
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/afifo.v
+L0 62
+R3
+R4
+!s100 =QRHl[mW:d]fcH=:A8i6f2
+!s108 1745116969.550000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/afifo.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/afifo.v|
+!s85 0
+!i10b 1
+!i111 0
+vafifo_tb
+Z6 !s110 1745116969
+IJ>>QoIEUVEIOBEUzD6]6o0
+R5
+R1
+w1744870953
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/afifo_tb.v
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/afifo_tb.v
+L0 3
+R3
+r1
+31
+R4
+!s100 9Jh08_i0@=^Q2E?B<3EB93
+!s108 1745116969.597000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/afifo_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/afifo_tb.v|
+!i10b 1
+!s85 0
+!i111 0
+vClkGen
+R5
+r1
+31
+IVQC]0:Y_izE7bLjgfAnHV1
+R1
+R2
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/CLK_GEN.v
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/CLK_GEN.v
+L0 32
+R3
+R4
+n@clk@gen
+!s100 ho7@f8BAJdKMUG`0i_3On2
+!s108 1745116969.681000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/CLK_GEN.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/CLK_GEN.v|
+!s85 0
+!i10b 1
+!i111 0
+vCLOCK_DIV
+R5
+r1
+31
+IQETX=3Y41dZga;?@c=TLE3
+R1
+R2
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/CLK_DIV.V
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/CLK_DIV.V
+L0 21
+R3
+R4
+n@c@l@o@c@k_@d@i@v
+!s100 PKOR]fhUIOT4<^j]Rh1LT0
+!s108 1745116969.638000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/CLK_DIV.V|
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/CLK_DIV.V|
+!s85 0
+!i10b 1
+!i111 0
+vcmd_server
+R5
+r1
+31
+I<5@LWiUa4V?D6JJW[^9d50
+R1
+w1744973417
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmd_server.v
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmd_server.v
+L0 3
+R3
+R4
+!s100 o`O5R_mc>2A>jkL=0ZNjA3
+!s108 1745116969.724000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmd_server.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmd_server.v|
+!s85 0
+!i10b 1
+!i111 0
+vcmd_server_tb
+R5
+r1
+!s85 0
+31
+IXdzB@[H<<ek?lW6Q2<m<M1
+R1
+w1745130173
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmd_server_tb.v
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmd_server_tb.v
+L0 3
+R3
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmd_server_tb.v|
+R4
+!i10b 1
+!s100 DC_^94khM8lEYCH^@V?U>1
+!s108 1745130182.261000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmd_server_tb.v|
+!i111 0
+Ecmn_uart
+Z7 w1474197791
+Z8 DPx4 ieee 9 math_real 0 22 X1eFklFj<NHn@4Wz7P8j:2
+Z9 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
+Z10 DPx3 std 6 textio 0 22 Y8d?=bLj9m4jiPLbo;>GT0
+Z11 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
+R1
+Z12 8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmn_uart.vhd
+Z13 FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmn_uart.vhd
+l0
+L42
+VWKB>o7VI:Z``]gRTZ:l?P3
+Z14 OL;C;10.2c;57
+32
+R6
+Z15 !s108 1745116969.818000
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmn_uart.vhd|
+Z17 !s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/cmn_uart.vhd|
+Z18 o-work work -2002 -explicit
+Z19 tExplicit 1
+!s100 0M0^lDlU>;ObL[fO]aX2;3
+!i10b 1
+!i111 0
+Artl
+R8
+R9
+R10
+R11
+DEx4 work 8 cmn_uart 0 22 WKB>o7VI:Z``]gRTZ:l?P3
+32
+R6
+l178
+L93
+V<Kj[gL1:WN;R52^Jn@FRE1
+R14
+R15
+R16
+R17
+R18
+R19
+!s100 LN;aO>RKRM_4D5TzGjV8K2
+!i10b 1
+!i111 0
+vDAC_AD8803AR
+R5
+r1
+31
+I<YN=HP:cVfU7nJG:5i8=j2
+R1
+R2
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/DAC_AD8803AR.v
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/DAC_AD8803AR.v
+L0 30
+R3
+R4
+n@d@a@c_@a@d8803@a@r
+!s100 XhI;5<f6^N[Fkmi^99CiP2
+!s108 1745116969.868000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/DAC_AD8803AR.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/DAC_AD8803AR.v|
+!s85 0
+!i10b 1
+!i111 0
+vDP_RAM_2R_1W
+R5
+r1
+31
+IOo==4RgnSI;L5MMRbO5UJ0
+R1
+R2
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/dual_port_ram.v
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/dual_port_ram.v
+L0 19
+R3
+R4
+n@d@p_@r@a@m_2@r_1@w
+!s100 f@k2DRzjCGNW2UQDWFmjO3
+!s108 1745116969.914000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/dual_port_ram.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/dual_port_ram.v|
+!s85 0
+!i10b 1
+!i111 0
+vFPGA_WDI
+R5
+r1
+31
+I5LYKPz6n95TSSE:?Tz4DO2
+R1
+R2
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/FPGA_WD.v
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/FPGA_WD.v
+L0 19
+R3
+R4
+n@f@p@g@a_@w@d@i
+!s100 ZGd=OiFAHjf:6[mn8X=nJ1
+!s108 1745116969.956000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/FPGA_WD.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/FPGA_WD.v|
+!s85 0
+!i10b 1
+!i111 0
+vGantry_Motor
+R5
+r1
+31
+IQzoNi@?JgW=_Ol^?YZ:?60
+R1
+R2
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/GANTRY_MOT.v
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/GANTRY_MOT.v
+L0 31
+R3
+R4
+n@gantry_@motor
+!s100 LL0NIzObF_c>Vn2hRJ];b3
+!s108 1745116970.044000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/GANTRY_MOT.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/GANTRY_MOT.v|
+!s85 0
+!i10b 1
+!i111 0
+vGPIO
+R5
+r1
+31
+IZ6g>9C9VPdP71E5d0]Xcj3
+R1
+w1745059399
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/GPIO.v
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/GPIO.v
+L0 19
+R3
+R4
+n@g@p@i@o
+!s100 i25hJeO_YYlCfMh=h6CkU0
+!s108 1745116970.084000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/GPIO.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/GPIO.v|
+!s85 0
+!i10b 1
+!i111 0
+vLift_Motor
+R5
+r1
+31
+IgN?IkbbP1O1?:BM_n^4V=2
+R1
+R2
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/LIFT_MOT.v
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/LIFT_MOT.v
+L0 31
+R3
+R4
+n@lift_@motor
+!s100 :WQLHDfROjMKEZbIDZKJ53
+!s108 1745116970.128000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/LIFT_MOT.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/LIFT_MOT.v|
+!s85 0
+!i10b 1
+!i111 0
+vmsg_buffer
+R5
+r1
+31
+Ie]OLEdUI7b_9oZ68D45>22
+R1
+w1744962480
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_buffer.v
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_buffer.v
+L0 3
+R3
+R4
+!s100 HcEz__eI:EohJ?EEEVzz33
+!s108 1745116970.171000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_buffer.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_buffer.v|
+!s85 0
+!i10b 1
+!i111 0
+vmsg_read
+R5
+r1
+31
+IV?<1KF23j;02f9hmIRO4T2
+R1
+w1745062887
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_read.v
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_read.v
+L0 21
+R3
+R4
+!s100 iPNFUQ6A7CQ`P<DoB?mfS2
+!s108 1745116970.214000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_read.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_read.v|
+!s85 0
+!i10b 1
+!i111 0
+vmsg_read_tb
+Z20 !s110 1745116970
+IW?F?5EO1AdccLNiLeThHB3
+R5
+R1
+w1744972059
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_read_tb.v
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_read_tb.v
+L0 3
+R3
+r1
+31
+R4
+!s100 Z4jHgTVFk?eSTz:1TP:h03
+!s108 1745116970.254000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_read_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_read_tb.v|
+!i10b 1
+!s85 0
+!i111 0
+vmsg_write
+R5
+r1
+31
+IYNW>nHklTFUmadjLgXzUT1
+R1
+w1745061472
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_write.v
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_write.v
+L0 21
+R3
+R4
+!s100 g@nlTW]hWiOY:ofHmlmd^3
+!s108 1745116970.298000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_write.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_write.v|
+!s85 0
+!i10b 1
+!i111 0
+vmsg_write_tb
+R20
+IJ]>O@SSIl9kORMo^lHEXk1
+R5
+R1
+w1744936760
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_write_tb.v
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_write_tb.v
+L0 3
+R3
+r1
+31
+R4
+!s100 CWifoTb;hnObAMCW@iHoW1
+!s108 1745116970.342000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_write_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/msg_write_tb.v|
+!i10b 1
+!s85 0
+!i111 0
+vopb_emu_target
+R5
+r1
+31
+IHm]nGBOm2L]Qb3SnP=;cU0
+R1
+w1744968756
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/opb_emu_target.v
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/opb_emu_target.v
+L0 3
+R3
+R4
+!s100 1d3cOJTEL@JHZXDHM>?zC0
+!s108 1745116970.388000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/opb_emu_target.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/opb_emu_target.v|
+!s85 0
+!i10b 1
+!i111 0
+vOSCILLATOR_COUNTER
+R5
+r1
+31
+I5SZe42aA:LRTO<:M=HCof0
+R1
+R2
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/FREQ_COUNTER.v
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/FREQ_COUNTER.v
+L0 24
+R3
+R4
+n@o@s@c@i@l@l@a@t@o@r_@c@o@u@n@t@e@r
+!s100 2`zzJ9jeEdLoEe3Ae_27>0
+!s108 1745116970.001000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/FREQ_COUNTER.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/FREQ_COUNTER.v|
+!s85 0
+!i10b 1
+!i111 0
+vSCRATCH_PAD_REGISTER
+R5
+r1
+31
+IB80U83AW3j9J9AdY<=WYV1
+R1
+R2
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ScratchPadRegister.v
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ScratchPadRegister.v
+L0 20
+R3
+R4
+n@s@c@r@a@t@c@h_@p@a@d_@r@e@g@i@s@t@e@r
+!s100 SJoI72Z?R=YkNVIKj9]cW1
+!s108 1745116970.429000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ScratchPadRegister.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/ScratchPadRegister.v|
+!s85 0
+!i10b 1
+!i111 0
+vTIMER_COUNTER
+R5
+r1
+31
+I6ckG`anb28QTAQXzTjKDQ0
+R1
+R2
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/Timer_Counter.v
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/Timer_Counter.v
+L0 19
+R3
+R4
+n@t@i@m@e@r_@c@o@u@n@t@e@r
+!s100 j<Cm5>m2LWk=;?gcJ]4ZW2
+!s108 1745116970.514000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/Timer_Counter.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/Timer_Counter.v|
+!s85 0
+!i10b 1
+!i111 0
+vtop
+R5
+r1
+31
+I>eVPV3Y`4Qkg?T^44@USU1
+R1
+w1745063410
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v
+L0 3
+R3
+R4
+!s100 A`RlDLNgkB<aOJ_M0MJR[3
+!s108 1745116969.415000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top.v|
+!s85 0
+!i10b 1
+!i111 0
+vtop_tb
+R5
+r1
+31
+I@C[ePKHelj3iL3DHA5lO;1
+R1
+w1745117227
+8C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top_tb.v
+FC:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top_tb.v
+L0 3
+R3
+R4
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top_tb.v|
+!s100 oo>`l6LKZ>WzoNa:17Z`A1
+!s108 1745117254.685000
+!s107 C:/repo/jabil2025/dmd/P1060973_FPGA/hdl/top_tb.v|
+!s85 0
+!i10b 1
+!i111 0

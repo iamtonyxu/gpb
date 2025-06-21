@@ -1,0 +1,2194 @@
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE    1
+
+       1              ;***************************************************************
+       2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
+       3              ;* Date/Time created: Tue Apr  8 10:05:53 2025                 *
+       4              ;***************************************************************
+       5                      .compiler_opts --abi=coffabi --diag_wrap=off --float_support=softlib --hll_source=on --mem_model:code
+       6                      .asg    XAR2, FP
+       7              
+       8              $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       9                      .dwattr $C$DW$CU, DW_AT_name("C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c")
+      10                      .dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v22.6.2.LTS Copyright (c) 1996-2
+      11                      .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      12                      .dwattr $C$DW$CU, DW_AT_comp_dir("C:\repo\jabil2025\gpb\gpb_project_v3\projects\example_nonBIOS_ram\D
+      13              $C$DW$1 .dwtag  DW_TAG_variable
+      14                      .dwattr $C$DW$1, DW_AT_name("XintfRegs")
+      15                      .dwattr $C$DW$1, DW_AT_TI_symbol_name("_XintfRegs")
+      16                      .dwattr $C$DW$1, DW_AT_type(*$C$DW$T$35)
+      17                      .dwattr $C$DW$1, DW_AT_declaration
+      18                      .dwattr $C$DW$1, DW_AT_external
+      19              
+      20              ;       C:\ti\ccs1281\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\ac2000.exe -@C:\\Users\\fgjlb01\\AppData
+      21 00000000               .sect   ".text"
+      22                      .clink
+      23                      .global _InitXintf
+      24              
+      25              $C$DW$2 .dwtag  DW_TAG_subprogram
+      26                      .dwattr $C$DW$2, DW_AT_name("InitXintf")
+      27                      .dwattr $C$DW$2, DW_AT_low_pc(_InitXintf)
+      28                      .dwattr $C$DW$2, DW_AT_high_pc(0x00)
+      29                      .dwattr $C$DW$2, DW_AT_TI_symbol_name("_InitXintf")
+      30                      .dwattr $C$DW$2, DW_AT_external
+      31                      .dwattr $C$DW$2, DW_AT_TI_begin_file("C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c")
+      32                      .dwattr $C$DW$2, DW_AT_TI_begin_line(0x1f)
+      33                      .dwattr $C$DW$2, DW_AT_TI_begin_column(0x06)
+      34                      .dwattr $C$DW$2, DW_AT_TI_max_frame_size(-2)
+      35                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 32,column 1,is_stmt,address _InitXin
+      36              
+      37                      .dwfde $C$DW$CIE, _InitXintf
+      38              ;----------------------------------------------------------------------
+      39              ;  31 | void InitXintf(void)                                                   
+      40              ;----------------------------------------------------------------------
+      41              
+      42              ;***************************************************************
+      43              ;* FNAME: _InitXintf                    FR SIZE:   0           *
+      44              ;*                                                             *
+      45              ;* FUNCTION ENVIRONMENT                                        *
+      46              ;*                                                             *
+      47              ;* FUNCTION PROPERTIES                                         *
+      48              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+      49              ;***************************************************************
+      50              
+      51 00000000       _InitXintf:
+      52                      .dwcfi  cfa_offset, -2
+      53                      .dwcfi  save_reg_to_mem, 26, 0
+      54                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 35,column 2,is_stmt,isa 0
+      55              ;----------------------------------------------------------------------
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE    2
+
+      56              ;  35 | XintfRegs.XINTCNF2.bit.XTIMCLK = 0;                     // XTIMCLK=SYSC
+      57              ;     | LKOUT/1                                                                
+      58              ;----------------------------------------------------------------------
+      59 00000000 761F!         MOVW      DP,#_XintfRegs+21     ; [CPU_ARAU] 
+         00000001 0000 
+      60 00000002 1815!         AND       @$BLOCKED(_XintfRegs)+21,#0xfff8 ; [CPU_ALU] |35| 
+         00000003 FFF8 
+      61                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 36,column 2,is_stmt,isa 0
+      62              ;----------------------------------------------------------------------
+      63              ;  36 | XintfRegs.XINTCNF2.bit.CLKOFF = 0;                      // XCLKOUT is e
+      64              ;     | nabled                                                                 
+      65              ;----------------------------------------------------------------------
+      66 00000004 1814!         AND       @$BLOCKED(_XintfRegs)+20,#0xfff7 ; [CPU_ALU] |36| 
+         00000005 FFF7 
+      67                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 37,column 2,is_stmt,isa 0
+      68              ;----------------------------------------------------------------------
+      69              ;  37 | XintfRegs.XINTCNF2.bit.CLKMODE = 1;                     // XCLKOUT = XT
+      70              ;     | IMCLK/2                                                                
+      71              ;  39 | // Make sure write buffer is empty before configuring buffering depth  
+      72              ;----------------------------------------------------------------------
+      73 00000006 1A14!         OR        @$BLOCKED(_XintfRegs)+20,#0x0004 ; [CPU_ALU] |37| 
+         00000007 0004 
+      74                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 40,column 2,is_stmt,isa 0
+      75              ;----------------------------------------------------------------------
+      76              ;  40 | while(XintfRegs.XINTCNF2.bit.WLEVEL != 0);      // poll the WLEVEL bit 
+      77              ;----------------------------------------------------------------------
+      78 00000008       $C$L1:    
+      79                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 40,column 8,is_stmt,isa 0
+      80 00000008 CC14!         AND       AL,@$BLOCKED(_XintfRegs)+20,#0x00c0 ; [CPU_ALU] |40| 
+         00000009 00C0 
+      81 0000000a FFC5          LSR       AL,6                  ; [CPU_ALU] |40| 
+      82 0000000b 60FD          B         $C$L1,NEQ             ; [CPU_ALU] |40| 
+      83                      ; branchcc occurs ; [] |40| 
+      84                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 41,column 2,is_stmt,isa 0
+      85              ;----------------------------------------------------------------------
+      86              ;  41 | XintfRegs.XINTCNF2.bit.WRBUFF = 0;                      // No write buf
+      87              ;     | fering                                                                 
+      88              ;  44 | // Example: Assume Zone 7 is slow, so add additional BCYC cycles whenev
+      89              ;     | er                                                                     
+      90              ;  45 | // switching from Zone 7 to another Zone.  This will help avoid bus con
+      91              ;     | tention.                                                               
+      92              ;----------------------------------------------------------------------
+      93 0000000c 1814!         AND       @$BLOCKED(_XintfRegs)+20,#0xfffc ; [CPU_ALU] |41| 
+         0000000d FFFC 
+      94                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 46,column 2,is_stmt,isa 0
+      95              ;----------------------------------------------------------------------
+      96              ;  46 | XintfRegs.XBANK.bit.BCYC = 7;                           // Add 7 cycles
+      97              ;----------------------------------------------------------------------
+      98 0000000e 1A18!         OR        @$BLOCKED(_XintfRegs)+24,#0x0038 ; [CPU_ALU] |46| 
+         0000000f 0038 
+      99                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 47,column 2,is_stmt,isa 0
+     100              ;----------------------------------------------------------------------
+     101              ;  47 | XintfRegs.XBANK.bit.BANK = 7;                           // select zone
+     102              ;     | 7                                                                      
+     103              ;----------------------------------------------------------------------
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE    3
+
+     104 00000010 1A18!         OR        @$BLOCKED(_XintfRegs)+24,#0x0007 ; [CPU_ALU] |47| 
+         00000011 0007 
+     105                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 50,column 2,is_stmt,isa 0
+     106              ;----------------------------------------------------------------------
+     107              ;  50 | XintfRegs.XTIMING0.bit.X2TIMING = 0;    // Timing scale factor = 1     
+     108              ;----------------------------------------------------------------------
+     109 00000012 1801!         AND       @$BLOCKED(_XintfRegs)+1,#0xffbf ; [CPU_ALU] |50| 
+         00000013 FFBF 
+     110                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 51,column 2,is_stmt,isa 0
+     111              ;----------------------------------------------------------------------
+     112              ;  51 | XintfRegs.XTIMING0.bit.XSIZE = 3;               // Always write as 11b 
+     113              ;----------------------------------------------------------------------
+     114 00000014 1A01!         OR        @$BLOCKED(_XintfRegs)+1,#0x0003 ; [CPU_ALU] |51| 
+         00000015 0003 
+     115                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 52,column 2,is_stmt,isa 0
+     116              ;----------------------------------------------------------------------
+     117              ;  52 | XintfRegs.XTIMING0.bit.READYMODE = 1;   // XREADY is asynchronous      
+     118              ;----------------------------------------------------------------------
+     119 00000016 1A00!         OR        @$BLOCKED(_XintfRegs),#0x8000 ; [CPU_ALU] |52| 
+         00000017 8000 
+     120                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 53,column 2,is_stmt,isa 0
+     121              ;----------------------------------------------------------------------
+     122              ;  53 | XintfRegs.XTIMING0.bit.USEREADY = 0;    // Disable XREADY              
+     123              ;----------------------------------------------------------------------
+     124 00000018 1800!         AND       @$BLOCKED(_XintfRegs),#0xbfff ; [CPU_ALU] |53| 
+         00000019 BFFF 
+     125                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 54,column 2,is_stmt,isa 0
+     126              ;----------------------------------------------------------------------
+     127              ;  54 | XintfRegs.XTIMING0.bit.XRDLEAD = 1;             // Read lead time      
+     128              ;----------------------------------------------------------------------
+     129 0000001a CC00!         AND       AL,@$BLOCKED(_XintfRegs),#0xcfff ; [CPU_ALU] |54| 
+         0000001b CFFF 
+     130 0000001c 1AA9          OR        AL,#0x1000            ; [CPU_ALU] |54| 
+         0000001d 1000 
+     131 0000001e 9600!         MOV       @$BLOCKED(_XintfRegs),AL ; [CPU_ALU] |54| 
+     132                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 55,column 2,is_stmt,isa 0
+     133              ;----------------------------------------------------------------------
+     134              ;  55 | XintfRegs.XTIMING0.bit.XRDACTIVE = 2;   // Read active time            
+     135              ;----------------------------------------------------------------------
+     136 0000001f CC00!         AND       AL,@$BLOCKED(_XintfRegs),#0xf1ff ; [CPU_ALU] |55| 
+         00000020 F1FF 
+     137 00000021 1AA9          OR        AL,#0x0400            ; [CPU_ALU] |55| 
+         00000022 0400 
+     138 00000023 9600!         MOV       @$BLOCKED(_XintfRegs),AL ; [CPU_ALU] |55| 
+     139                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 56,column 2,is_stmt,isa 0
+     140              ;----------------------------------------------------------------------
+     141              ;  56 | XintfRegs.XTIMING0.bit.XRDTRAIL = 0;    // Read trail time             
+     142              ;----------------------------------------------------------------------
+     143 00000024 1800!         AND       @$BLOCKED(_XintfRegs),#0xfe7f ; [CPU_ALU] |56| 
+         00000025 FE7F 
+     144                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 57,column 2,is_stmt,isa 0
+     145              ;----------------------------------------------------------------------
+     146              ;  57 | XintfRegs.XTIMING0.bit.XWRLEAD = 1;             // Write lead time     
+     147              ;----------------------------------------------------------------------
+     148 00000026 CC00!         AND       AL,@$BLOCKED(_XintfRegs),#0xff9f ; [CPU_ALU] |57| 
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE    4
+
+         00000027 FF9F 
+     149 00000028 5020          ORB       AL,#0x20              ; [CPU_ALU] |57| 
+     150 00000029 9600!         MOV       @$BLOCKED(_XintfRegs),AL ; [CPU_ALU] |57| 
+     151                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 58,column 2,is_stmt,isa 0
+     152              ;----------------------------------------------------------------------
+     153              ;  58 | XintfRegs.XTIMING0.bit.XWRACTIVE = 2;   // Write active time           
+     154              ;----------------------------------------------------------------------
+     155 0000002a CC00!         AND       AL,@$BLOCKED(_XintfRegs),#0xffe3 ; [CPU_ALU] |58| 
+         0000002b FFE3 
+     156 0000002c 5008          ORB       AL,#0x08              ; [CPU_ALU] |58| 
+     157 0000002d 9600!         MOV       @$BLOCKED(_XintfRegs),AL ; [CPU_ALU] |58| 
+     158                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 59,column 2,is_stmt,isa 0
+     159              ;----------------------------------------------------------------------
+     160              ;  59 | XintfRegs.XTIMING0.bit.XWRTRAIL = 0;    // Write trail time            
+     161              ;----------------------------------------------------------------------
+     162 0000002e 1800!         AND       @$BLOCKED(_XintfRegs),#0xfffc ; [CPU_ALU] |59| 
+         0000002f FFFC 
+     163                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 62,column 2,is_stmt,isa 0
+     164              ;----------------------------------------------------------------------
+     165              ;  62 | XintfRegs.XTIMING1.bit.X2TIMING = 0;    // Timing scale factor = 1     
+     166              ;----------------------------------------------------------------------
+     167 00000030 1803!         AND       @$BLOCKED(_XintfRegs)+3,#0xffbf ; [CPU_ALU] |62| 
+         00000031 FFBF 
+     168                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 63,column 2,is_stmt,isa 0
+     169              ;----------------------------------------------------------------------
+     170              ;  63 | XintfRegs.XTIMING1.bit.XSIZE = 3;               // Always write as 11b 
+     171              ;----------------------------------------------------------------------
+     172 00000032 1A03!         OR        @$BLOCKED(_XintfRegs)+3,#0x0003 ; [CPU_ALU] |63| 
+         00000033 0003 
+     173                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 64,column 2,is_stmt,isa 0
+     174              ;----------------------------------------------------------------------
+     175              ;  64 | XintfRegs.XTIMING1.bit.READYMODE = 1;   // XREADY is asynchronous      
+     176              ;----------------------------------------------------------------------
+     177 00000034 1A02!         OR        @$BLOCKED(_XintfRegs)+2,#0x8000 ; [CPU_ALU] |64| 
+         00000035 8000 
+     178                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 65,column 2,is_stmt,isa 0
+     179              ;----------------------------------------------------------------------
+     180              ;  65 | XintfRegs.XTIMING1.bit.USEREADY = 0;    // Disable XREADY              
+     181              ;----------------------------------------------------------------------
+     182 00000036 1802!         AND       @$BLOCKED(_XintfRegs)+2,#0xbfff ; [CPU_ALU] |65| 
+         00000037 BFFF 
+     183                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 66,column 2,is_stmt,isa 0
+     184              ;----------------------------------------------------------------------
+     185              ;  66 | XintfRegs.XTIMING1.bit.XRDLEAD = 1;             // Read lead time      
+     186              ;----------------------------------------------------------------------
+     187 00000038 CC02!         AND       AL,@$BLOCKED(_XintfRegs)+2,#0xcfff ; [CPU_ALU] |66| 
+         00000039 CFFF 
+     188 0000003a 1AA9          OR        AL,#0x1000            ; [CPU_ALU] |66| 
+         0000003b 1000 
+     189 0000003c 9602!         MOV       @$BLOCKED(_XintfRegs)+2,AL ; [CPU_ALU] |66| 
+     190                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 67,column 2,is_stmt,isa 0
+     191              ;----------------------------------------------------------------------
+     192              ;  67 | XintfRegs.XTIMING1.bit.XRDACTIVE = 2;   // Read active time            
+     193              ;----------------------------------------------------------------------
+     194 0000003d CC02!         AND       AL,@$BLOCKED(_XintfRegs)+2,#0xf1ff ; [CPU_ALU] |67| 
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE    5
+
+         0000003e F1FF 
+     195 0000003f 1AA9          OR        AL,#0x0400            ; [CPU_ALU] |67| 
+         00000040 0400 
+     196 00000041 9602!         MOV       @$BLOCKED(_XintfRegs)+2,AL ; [CPU_ALU] |67| 
+     197                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 68,column 2,is_stmt,isa 0
+     198              ;----------------------------------------------------------------------
+     199              ;  68 | XintfRegs.XTIMING1.bit.XRDTRAIL = 0;    // Read trail time             
+     200              ;----------------------------------------------------------------------
+     201 00000042 1802!         AND       @$BLOCKED(_XintfRegs)+2,#0xfe7f ; [CPU_ALU] |68| 
+         00000043 FE7F 
+     202                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 69,column 2,is_stmt,isa 0
+     203              ;----------------------------------------------------------------------
+     204              ;  69 | XintfRegs.XTIMING1.bit.XWRLEAD = 1;             // Write lead time     
+     205              ;----------------------------------------------------------------------
+     206 00000044 CC02!         AND       AL,@$BLOCKED(_XintfRegs)+2,#0xff9f ; [CPU_ALU] |69| 
+         00000045 FF9F 
+     207 00000046 5020          ORB       AL,#0x20              ; [CPU_ALU] |69| 
+     208 00000047 9602!         MOV       @$BLOCKED(_XintfRegs)+2,AL ; [CPU_ALU] |69| 
+     209                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 70,column 2,is_stmt,isa 0
+     210              ;----------------------------------------------------------------------
+     211              ;  70 | XintfRegs.XTIMING1.bit.XWRACTIVE = 2;   // Write active time           
+     212              ;----------------------------------------------------------------------
+     213 00000048 CC02!         AND       AL,@$BLOCKED(_XintfRegs)+2,#0xffe3 ; [CPU_ALU] |70| 
+         00000049 FFE3 
+     214 0000004a 5008          ORB       AL,#0x08              ; [CPU_ALU] |70| 
+     215 0000004b 9602!         MOV       @$BLOCKED(_XintfRegs)+2,AL ; [CPU_ALU] |70| 
+     216                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 71,column 2,is_stmt,isa 0
+     217              ;----------------------------------------------------------------------
+     218              ;  71 | XintfRegs.XTIMING1.bit.XWRTRAIL = 0;    // Write trail time            
+     219              ;----------------------------------------------------------------------
+     220 0000004c 1802!         AND       @$BLOCKED(_XintfRegs)+2,#0xfffc ; [CPU_ALU] |71| 
+         0000004d FFFC 
+     221                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 74,column 2,is_stmt,isa 0
+     222              ;----------------------------------------------------------------------
+     223              ;  74 | XintfRegs.XTIMING2.bit.X2TIMING = 0;    // Timing scale factor = 1     
+     224              ;----------------------------------------------------------------------
+     225 0000004e 1805!         AND       @$BLOCKED(_XintfRegs)+5,#0xffbf ; [CPU_ALU] |74| 
+         0000004f FFBF 
+     226                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 75,column 2,is_stmt,isa 0
+     227              ;----------------------------------------------------------------------
+     228              ;  75 | XintfRegs.XTIMING2.bit.XSIZE = 3;               // Always write as 11b 
+     229              ;----------------------------------------------------------------------
+     230 00000050 1A05!         OR        @$BLOCKED(_XintfRegs)+5,#0x0003 ; [CPU_ALU] |75| 
+         00000051 0003 
+     231                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 76,column 2,is_stmt,isa 0
+     232              ;----------------------------------------------------------------------
+     233              ;  76 | XintfRegs.XTIMING2.bit.READYMODE = 1;   // XREADY is asynchronous      
+     234              ;----------------------------------------------------------------------
+     235 00000052 1A04!         OR        @$BLOCKED(_XintfRegs)+4,#0x8000 ; [CPU_ALU] |76| 
+         00000053 8000 
+     236                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 77,column 2,is_stmt,isa 0
+     237              ;----------------------------------------------------------------------
+     238              ;  77 | XintfRegs.XTIMING2.bit.USEREADY = 0;    // Disable XREADY              
+     239              ;----------------------------------------------------------------------
+     240 00000054 1804!         AND       @$BLOCKED(_XintfRegs)+4,#0xbfff ; [CPU_ALU] |77| 
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE    6
+
+         00000055 BFFF 
+     241                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 78,column 2,is_stmt,isa 0
+     242              ;----------------------------------------------------------------------
+     243              ;  78 | XintfRegs.XTIMING2.bit.XRDLEAD = 1;             // Read lead time      
+     244              ;----------------------------------------------------------------------
+     245 00000056 CC04!         AND       AL,@$BLOCKED(_XintfRegs)+4,#0xcfff ; [CPU_ALU] |78| 
+         00000057 CFFF 
+     246 00000058 1AA9          OR        AL,#0x1000            ; [CPU_ALU] |78| 
+         00000059 1000 
+     247 0000005a 9604!         MOV       @$BLOCKED(_XintfRegs)+4,AL ; [CPU_ALU] |78| 
+     248                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 79,column 2,is_stmt,isa 0
+     249              ;----------------------------------------------------------------------
+     250              ;  79 | XintfRegs.XTIMING2.bit.XRDACTIVE = 2;   // Read active time            
+     251              ;----------------------------------------------------------------------
+     252 0000005b CC04!         AND       AL,@$BLOCKED(_XintfRegs)+4,#0xf1ff ; [CPU_ALU] |79| 
+         0000005c F1FF 
+     253 0000005d 1AA9          OR        AL,#0x0400            ; [CPU_ALU] |79| 
+         0000005e 0400 
+     254 0000005f 9604!         MOV       @$BLOCKED(_XintfRegs)+4,AL ; [CPU_ALU] |79| 
+     255                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 80,column 2,is_stmt,isa 0
+     256              ;----------------------------------------------------------------------
+     257              ;  80 | XintfRegs.XTIMING2.bit.XRDTRAIL = 0;    // Read trail time             
+     258              ;----------------------------------------------------------------------
+     259 00000060 1804!         AND       @$BLOCKED(_XintfRegs)+4,#0xfe7f ; [CPU_ALU] |80| 
+         00000061 FE7F 
+     260                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 81,column 2,is_stmt,isa 0
+     261              ;----------------------------------------------------------------------
+     262              ;  81 | XintfRegs.XTIMING2.bit.XWRLEAD = 1;             // Write lead time     
+     263              ;----------------------------------------------------------------------
+     264 00000062 CC04!         AND       AL,@$BLOCKED(_XintfRegs)+4,#0xff9f ; [CPU_ALU] |81| 
+         00000063 FF9F 
+     265 00000064 5020          ORB       AL,#0x20              ; [CPU_ALU] |81| 
+     266 00000065 9604!         MOV       @$BLOCKED(_XintfRegs)+4,AL ; [CPU_ALU] |81| 
+     267                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 82,column 2,is_stmt,isa 0
+     268              ;----------------------------------------------------------------------
+     269              ;  82 | XintfRegs.XTIMING2.bit.XWRACTIVE = 2;   // Write active time           
+     270              ;----------------------------------------------------------------------
+     271 00000066 CC04!         AND       AL,@$BLOCKED(_XintfRegs)+4,#0xffe3 ; [CPU_ALU] |82| 
+         00000067 FFE3 
+     272 00000068 5008          ORB       AL,#0x08              ; [CPU_ALU] |82| 
+     273 00000069 9604!         MOV       @$BLOCKED(_XintfRegs)+4,AL ; [CPU_ALU] |82| 
+     274                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 83,column 2,is_stmt,isa 0
+     275              ;----------------------------------------------------------------------
+     276              ;  83 | XintfRegs.XTIMING2.bit.XWRTRAIL = 0;    // Write trail time            
+     277              ;----------------------------------------------------------------------
+     278 0000006a 1804!         AND       @$BLOCKED(_XintfRegs)+4,#0xfffc ; [CPU_ALU] |83| 
+         0000006b FFFC 
+     279                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 86,column 2,is_stmt,isa 0
+     280              ;----------------------------------------------------------------------
+     281              ;  86 | XintfRegs.XTIMING6.bit.X2TIMING = 0;    // Timing scale factor = 1     
+     282              ;----------------------------------------------------------------------
+     283 0000006c 180D!         AND       @$BLOCKED(_XintfRegs)+13,#0xffbf ; [CPU_ALU] |86| 
+         0000006d FFBF 
+     284                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 87,column 2,is_stmt,isa 0
+     285              ;----------------------------------------------------------------------
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE    7
+
+     286              ;  87 | XintfRegs.XTIMING6.bit.XSIZE = 3;               // Always write as 11b 
+     287              ;----------------------------------------------------------------------
+     288 0000006e 1A0D!         OR        @$BLOCKED(_XintfRegs)+13,#0x0003 ; [CPU_ALU] |87| 
+         0000006f 0003 
+     289                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 88,column 2,is_stmt,isa 0
+     290              ;----------------------------------------------------------------------
+     291              ;  88 | XintfRegs.XTIMING6.bit.READYMODE = 1;   // XREADY is asynchronous      
+     292              ;----------------------------------------------------------------------
+     293 00000070 1A0C!         OR        @$BLOCKED(_XintfRegs)+12,#0x8000 ; [CPU_ALU] |88| 
+         00000071 8000 
+     294                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 89,column 2,is_stmt,isa 0
+     295              ;----------------------------------------------------------------------
+     296              ;  89 | XintfRegs.XTIMING6.bit.USEREADY = 0;    // Disable XREADY              
+     297              ;----------------------------------------------------------------------
+     298 00000072 180C!         AND       @$BLOCKED(_XintfRegs)+12,#0xbfff ; [CPU_ALU] |89| 
+         00000073 BFFF 
+     299                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 90,column 2,is_stmt,isa 0
+     300              ;----------------------------------------------------------------------
+     301              ;  90 | XintfRegs.XTIMING6.bit.XRDLEAD = 1;             // Read lead time      
+     302              ;----------------------------------------------------------------------
+     303 00000074 CC0C!         AND       AL,@$BLOCKED(_XintfRegs)+12,#0xcfff ; [CPU_ALU] |90| 
+         00000075 CFFF 
+     304 00000076 1AA9          OR        AL,#0x1000            ; [CPU_ALU] |90| 
+         00000077 1000 
+     305 00000078 960C!         MOV       @$BLOCKED(_XintfRegs)+12,AL ; [CPU_ALU] |90| 
+     306                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 91,column 2,is_stmt,isa 0
+     307              ;----------------------------------------------------------------------
+     308              ;  91 | XintfRegs.XTIMING6.bit.XRDACTIVE = 2;   // Read active time            
+     309              ;----------------------------------------------------------------------
+     310 00000079 CC0C!         AND       AL,@$BLOCKED(_XintfRegs)+12,#0xf1ff ; [CPU_ALU] |91| 
+         0000007a F1FF 
+     311 0000007b 1AA9          OR        AL,#0x0400            ; [CPU_ALU] |91| 
+         0000007c 0400 
+     312 0000007d 960C!         MOV       @$BLOCKED(_XintfRegs)+12,AL ; [CPU_ALU] |91| 
+     313                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 92,column 2,is_stmt,isa 0
+     314              ;----------------------------------------------------------------------
+     315              ;  92 | XintfRegs.XTIMING6.bit.XRDTRAIL = 0;    // Read trail time             
+     316              ;----------------------------------------------------------------------
+     317 0000007e 180C!         AND       @$BLOCKED(_XintfRegs)+12,#0xfe7f ; [CPU_ALU] |92| 
+         0000007f FE7F 
+     318                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 93,column 2,is_stmt,isa 0
+     319              ;----------------------------------------------------------------------
+     320              ;  93 | XintfRegs.XTIMING6.bit.XWRLEAD = 1;             // Write lead time     
+     321              ;----------------------------------------------------------------------
+     322 00000080 CC0C!         AND       AL,@$BLOCKED(_XintfRegs)+12,#0xff9f ; [CPU_ALU] |93| 
+         00000081 FF9F 
+     323 00000082 5020          ORB       AL,#0x20              ; [CPU_ALU] |93| 
+     324 00000083 960C!         MOV       @$BLOCKED(_XintfRegs)+12,AL ; [CPU_ALU] |93| 
+     325                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 94,column 2,is_stmt,isa 0
+     326              ;----------------------------------------------------------------------
+     327              ;  94 | XintfRegs.XTIMING6.bit.XWRACTIVE = 2;   // Write active time           
+     328              ;----------------------------------------------------------------------
+     329 00000084 CC0C!         AND       AL,@$BLOCKED(_XintfRegs)+12,#0xffe3 ; [CPU_ALU] |94| 
+         00000085 FFE3 
+     330 00000086 5008          ORB       AL,#0x08              ; [CPU_ALU] |94| 
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE    8
+
+     331 00000087 960C!         MOV       @$BLOCKED(_XintfRegs)+12,AL ; [CPU_ALU] |94| 
+     332                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 95,column 2,is_stmt,isa 0
+     333              ;----------------------------------------------------------------------
+     334              ;  95 | XintfRegs.XTIMING6.bit.XWRTRAIL = 0;    // Write trail time            
+     335              ;----------------------------------------------------------------------
+     336 00000088 180C!         AND       @$BLOCKED(_XintfRegs)+12,#0xfffc ; [CPU_ALU] |95| 
+         00000089 FFFC 
+     337                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 98,column 2,is_stmt,isa 0
+     338              ;----------------------------------------------------------------------
+     339              ;  98 | XintfRegs.XTIMING7.bit.X2TIMING = 0;    // Timing scale factor = 1     
+     340              ;----------------------------------------------------------------------
+     341 0000008a 180F!         AND       @$BLOCKED(_XintfRegs)+15,#0xffbf ; [CPU_ALU] |98| 
+         0000008b FFBF 
+     342                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 99,column 2,is_stmt,isa 0
+     343              ;----------------------------------------------------------------------
+     344              ;  99 | XintfRegs.XTIMING7.bit.XSIZE = 3;               // Always write as 11b 
+     345              ;----------------------------------------------------------------------
+     346 0000008c 1A0F!         OR        @$BLOCKED(_XintfRegs)+15,#0x0003 ; [CPU_ALU] |99| 
+         0000008d 0003 
+     347                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 100,column 2,is_stmt,isa 0
+     348              ;----------------------------------------------------------------------
+     349              ; 100 | XintfRegs.XTIMING7.bit.READYMODE = 1;   // XREADY is asynchronous      
+     350              ;----------------------------------------------------------------------
+     351 0000008e 1A0E!         OR        @$BLOCKED(_XintfRegs)+14,#0x8000 ; [CPU_ALU] |100| 
+         0000008f 8000 
+     352                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 101,column 2,is_stmt,isa 0
+     353              ;----------------------------------------------------------------------
+     354              ; 101 | XintfRegs.XTIMING7.bit.USEREADY = 0;    // Disable XREADY              
+     355              ;----------------------------------------------------------------------
+     356 00000090 180E!         AND       @$BLOCKED(_XintfRegs)+14,#0xbfff ; [CPU_ALU] |101| 
+         00000091 BFFF 
+     357                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 102,column 2,is_stmt,isa 0
+     358              ;----------------------------------------------------------------------
+     359              ; 102 | XintfRegs.XTIMING7.bit.XRDLEAD = 1;             // Read lead time      
+     360              ;----------------------------------------------------------------------
+     361 00000092 CC0E!         AND       AL,@$BLOCKED(_XintfRegs)+14,#0xcfff ; [CPU_ALU] |102| 
+         00000093 CFFF 
+     362 00000094 1AA9          OR        AL,#0x1000            ; [CPU_ALU] |102| 
+         00000095 1000 
+     363 00000096 960E!         MOV       @$BLOCKED(_XintfRegs)+14,AL ; [CPU_ALU] |102| 
+     364                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 103,column 2,is_stmt,isa 0
+     365              ;----------------------------------------------------------------------
+     366              ; 103 | XintfRegs.XTIMING7.bit.XRDACTIVE = 2;   // Read active time            
+     367              ;----------------------------------------------------------------------
+     368 00000097 CC0E!         AND       AL,@$BLOCKED(_XintfRegs)+14,#0xf1ff ; [CPU_ALU] |103| 
+         00000098 F1FF 
+     369 00000099 1AA9          OR        AL,#0x0400            ; [CPU_ALU] |103| 
+         0000009a 0400 
+     370 0000009b 960E!         MOV       @$BLOCKED(_XintfRegs)+14,AL ; [CPU_ALU] |103| 
+     371                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 104,column 2,is_stmt,isa 0
+     372              ;----------------------------------------------------------------------
+     373              ; 104 | XintfRegs.XTIMING7.bit.XRDTRAIL = 0;    // Read trail time             
+     374              ;----------------------------------------------------------------------
+     375 0000009c 180E!         AND       @$BLOCKED(_XintfRegs)+14,#0xfe7f ; [CPU_ALU] |104| 
+         0000009d FE7F 
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE    9
+
+     376                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 105,column 2,is_stmt,isa 0
+     377              ;----------------------------------------------------------------------
+     378              ; 105 | XintfRegs.XTIMING7.bit.XWRLEAD = 1;             // Write lead time     
+     379              ;----------------------------------------------------------------------
+     380 0000009e CC0E!         AND       AL,@$BLOCKED(_XintfRegs)+14,#0xff9f ; [CPU_ALU] |105| 
+         0000009f FF9F 
+     381 000000a0 5020          ORB       AL,#0x20              ; [CPU_ALU] |105| 
+     382 000000a1 960E!         MOV       @$BLOCKED(_XintfRegs)+14,AL ; [CPU_ALU] |105| 
+     383                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 106,column 2,is_stmt,isa 0
+     384              ;----------------------------------------------------------------------
+     385              ; 106 | XintfRegs.XTIMING7.bit.XWRACTIVE = 2;   // Write active time           
+     386              ;----------------------------------------------------------------------
+     387 000000a2 CC0E!         AND       AL,@$BLOCKED(_XintfRegs)+14,#0xffe3 ; [CPU_ALU] |106| 
+         000000a3 FFE3 
+     388 000000a4 5008          ORB       AL,#0x08              ; [CPU_ALU] |106| 
+     389 000000a5 960E!         MOV       @$BLOCKED(_XintfRegs)+14,AL ; [CPU_ALU] |106| 
+     390                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 107,column 2,is_stmt,isa 0
+     391              ;----------------------------------------------------------------------
+     392              ; 107 | XintfRegs.XTIMING7.bit.XWRTRAIL = 0;    // Write trail time            
+     393              ;----------------------------------------------------------------------
+     394 000000a6 180E!         AND       @$BLOCKED(_XintfRegs)+14,#0xfffc ; [CPU_ALU] |107| 
+         000000a7 FFFC 
+     395                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 112,column 2,is_stmt,isa 0
+     396              ;----------------------------------------------------------------------
+     397              ; 112 | asm(" RPT #6 || NOP");                                                 
+     398              ;----------------------------------------------------------------------
+     399 000000a8 F606   RPT #6 || NOP
+         000000a9 7700 
+     400                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 115,column 1,is_stmt,isa 0
+     401              ;----------------------------------------------------------------------
+     402              ; 115 | } //end of InitXintf()                                                 
+     403              ;----------------------------------------------------------------------
+     404 000000aa FF69          SPM       #0                    ; [CPU_ALU] 
+     405              $C$DW$3 .dwtag  DW_TAG_TI_branch
+     406                      .dwattr $C$DW$3, DW_AT_low_pc(0x00)
+     407                      .dwattr $C$DW$3, DW_AT_TI_return
+     408              
+     409 000000ab 0006          LRETR     ; [CPU_ALU] 
+     410                      ; return occurs ; [] 
+     411                      .dwattr $C$DW$2, DW_AT_TI_end_file("C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c")
+     412                      .dwattr $C$DW$2, DW_AT_TI_end_line(0x73)
+     413                      .dwattr $C$DW$2, DW_AT_TI_end_column(0x01)
+     414                      .dwendentry
+     415                      .dwendtag $C$DW$2
+     416              
+     417 000000ac               .sect   ".text"
+     418                      .clink
+     419                      .global _TestRam
+     420              
+     421              $C$DW$4 .dwtag  DW_TAG_subprogram
+     422                      .dwattr $C$DW$4, DW_AT_name("TestRam")
+     423                      .dwattr $C$DW$4, DW_AT_low_pc(_TestRam)
+     424                      .dwattr $C$DW$4, DW_AT_high_pc(0x00)
+     425                      .dwattr $C$DW$4, DW_AT_TI_symbol_name("_TestRam")
+     426                      .dwattr $C$DW$4, DW_AT_external
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   10
+
+     427                      .dwattr $C$DW$4, DW_AT_type(*$C$DW$T$19)
+     428                      .dwattr $C$DW$4, DW_AT_TI_begin_file("C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c")
+     429                      .dwattr $C$DW$4, DW_AT_TI_begin_line(0x8b)
+     430                      .dwattr $C$DW$4, DW_AT_TI_begin_column(0x08)
+     431                      .dwattr $C$DW$4, DW_AT_TI_max_frame_size(-10)
+     432                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 140,column 1,is_stmt,address _TestRa
+     433              
+     434                      .dwfde $C$DW$CIE, _TestRam
+     435              ;----------------------------------------------------------------------
+     436              ; 139 | Uint16 TestRam(void)                                                   
+     437              ; 141 | Uint32 idx, Cnt;                                                       
+     438              ;----------------------------------------------------------------------
+     439              
+     440              ;***************************************************************
+     441              ;* FNAME: _TestRam                      FR SIZE:   8           *
+     442              ;*                                                             *
+     443              ;* FUNCTION ENVIRONMENT                                        *
+     444              ;*                                                             *
+     445              ;* FUNCTION PROPERTIES                                         *
+     446              ;*                            0 Parameter,  7 Auto,  0 SOE     *
+     447              ;***************************************************************
+     448              
+     449 000000ac       _TestRam:
+     450                      .dwcfi  cfa_offset, -2
+     451                      .dwcfi  save_reg_to_mem, 26, 0
+     452 000000ac FE08          ADDB      SP,#8                 ; [CPU_ARAU] 
+     453                      .dwcfi  cfa_offset, -10
+     454              $C$DW$5 .dwtag  DW_TAG_variable
+     455                      .dwattr $C$DW$5, DW_AT_name("idx")
+     456                      .dwattr $C$DW$5, DW_AT_TI_symbol_name("_idx")
+     457                      .dwattr $C$DW$5, DW_AT_type(*$C$DW$T$23)
+     458                      .dwattr $C$DW$5, DW_AT_location[DW_OP_breg20 -2]
+     459              
+     460              $C$DW$6 .dwtag  DW_TAG_variable
+     461                      .dwattr $C$DW$6, DW_AT_name("Cnt")
+     462                      .dwattr $C$DW$6, DW_AT_TI_symbol_name("_Cnt")
+     463                      .dwattr $C$DW$6, DW_AT_type(*$C$DW$T$23)
+     464                      .dwattr $C$DW$6, DW_AT_location[DW_OP_breg20 -4]
+     465              
+     466              $C$DW$7 .dwtag  DW_TAG_variable
+     467                      .dwattr $C$DW$7, DW_AT_name("ExMem")
+     468                      .dwattr $C$DW$7, DW_AT_TI_symbol_name("_ExMem")
+     469                      .dwattr $C$DW$7, DW_AT_type(*$C$DW$T$45)
+     470                      .dwattr $C$DW$7, DW_AT_location[DW_OP_breg20 -6]
+     471              
+     472              $C$DW$8 .dwtag  DW_TAG_variable
+     473                      .dwattr $C$DW$8, DW_AT_name("ErrCnt")
+     474                      .dwattr $C$DW$8, DW_AT_TI_symbol_name("_ErrCnt")
+     475                      .dwattr $C$DW$8, DW_AT_type(*$C$DW$T$19)
+     476                      .dwattr $C$DW$8, DW_AT_location[DW_OP_breg20 -7]
+     477              
+     478                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 142,column 16,is_stmt,isa 0
+     479              ;----------------------------------------------------------------------
+     480              ; 142 | Uint16 ErrCnt = 0;                                                     
+     481              ;----------------------------------------------------------------------
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   11
+
+     482 000000ad 2B47          MOV       *-SP[7],#0            ; [CPU_ALU] |142| 
+     483                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 143,column 26,is_stmt,isa 0
+     484              ;----------------------------------------------------------------------
+     485              ; 143 | volatile Uint16 * ExMem = &XINTF_ZONE6;                                
+     486              ;----------------------------------------------------------------------
+     487 000000ae 8F10          MOVL      XAR4,#1048576         ; [CPU_ARAU] |143| 
+         000000af 0000 
+     488 000000b0 A846          MOVL      *-SP[6],XAR4          ; [CPU_ALU] |143| 
+     489                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 146,column 2,is_stmt,isa 0
+     490              ;----------------------------------------------------------------------
+     491              ; 146 | Cnt = 0;                                                               
+     492              ;----------------------------------------------------------------------
+     493 000000b1 0200          MOVB      ACC,#0                ; [CPU_ALU] |146| 
+     494 000000b2 1E44          MOVL      *-SP[4],ACC           ; [CPU_ALU] |146| 
+     495                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 147,column 6,is_stmt,isa 0
+     496              ;----------------------------------------------------------------------
+     497              ; 147 | for(idx = 1; idx <= MAX_RAM_SIZE; idx <<= 1)                           
+     498              ;----------------------------------------------------------------------
+     499 000000b3 0201          MOVB      ACC,#1                ; [CPU_ALU] |147| 
+     500 000000b4 1E42          MOVL      *-SP[2],ACC           ; [CPU_ALU] |147| 
+     501                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 147,column 15,is_stmt,isa 0
+     502 000000b5 8F04          MOVL      XAR4,#262144          ; [CPU_ARAU] |147| 
+         000000b6 0000 
+     503 000000b7 A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |147| 
+     504 000000b8 0F42          CMPL      ACC,*-SP[2]           ; [CPU_ALU] |147| 
+     505 000000b9 6811          B         $C$L3,LO              ; [CPU_ALU] |147| 
+     506                      ; branchcc occurs ; [] |147| 
+     507 000000ba       $C$L2:    
+     508                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 148,column 3,is_stmt,isa 0
+     509              ;----------------------------------------------------------------------
+     510              ; 148 | ExMem[idx] = Cnt++;                                                    
+     511              ;----------------------------------------------------------------------
+     512 000000ba C444          MOVL      XAR6,*-SP[4]          ; [CPU_ALU] |148| 
+     513 000000bb 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] |148| 
+     514 000000bc 0901          ADDB      ACC,#1                ; [CPU_ALU] |148| 
+     515 000000bd 1E44          MOVL      *-SP[4],ACC           ; [CPU_ALU] |148| 
+     516 000000be 0642          MOVL      ACC,*-SP[2]           ; [CPU_ALU] |148| 
+     517 000000bf 0746          ADDL      ACC,*-SP[6]           ; [CPU_ALU] |148| 
+     518 000000c0 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |148| 
+     519 000000c1 7EC4          MOV       *+XAR4[0],AR6         ; [CPU_ALU] |148| 
+     520                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 147,column 36,is_stmt,isa 0
+     521 000000c2 0642          MOVL      ACC,*-SP[2]           ; [CPU_ALU] |147| 
+     522 000000c3 FF30          LSL       ACC,1                 ; [CPU_ALU] |147| 
+     523 000000c4 1E42          MOVL      *-SP[2],ACC           ; [CPU_ALU] |147| 
+     524                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 147,column 15,is_stmt,isa 0
+     525 000000c5 8F04          MOVL      XAR4,#262144          ; [CPU_ARAU] |147| 
+         000000c6 0000 
+     526 000000c7 A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |147| 
+     527 000000c8 0F42          CMPL      ACC,*-SP[2]           ; [CPU_ALU] |147| 
+     528 000000c9 67F1          B         $C$L2,HIS             ; [CPU_ALU] |147| 
+     529                      ; branchcc occurs ; [] |147| 
+     530 000000ca       $C$L3:    
+     531                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 150,column 2,is_stmt,isa 0
+     532              ;----------------------------------------------------------------------
+     533              ; 150 | Cnt = 0;                                                               
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   12
+
+     534              ;----------------------------------------------------------------------
+     535 000000ca 0200          MOVB      ACC,#0                ; [CPU_ALU] |150| 
+     536 000000cb 1E44          MOVL      *-SP[4],ACC           ; [CPU_ALU] |150| 
+     537                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 151,column 6,is_stmt,isa 0
+     538              ;----------------------------------------------------------------------
+     539              ; 151 | for(idx = 1; idx <= MAX_RAM_SIZE; idx <<= 1) {                         
+     540              ;----------------------------------------------------------------------
+     541 000000cc 0201          MOVB      ACC,#1                ; [CPU_ALU] |151| 
+     542 000000cd 1E42          MOVL      *-SP[2],ACC           ; [CPU_ALU] |151| 
+     543                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 151,column 15,is_stmt,isa 0
+     544 000000ce A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |151| 
+     545 000000cf 0F42          CMPL      ACC,*-SP[2]           ; [CPU_ALU] |151| 
+     546 000000d0 6817          B         $C$L6,LO              ; [CPU_ALU] |151| 
+     547                      ; branchcc occurs ; [] |151| 
+     548 000000d1       $C$L4:    
+     549                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 152,column 3,is_stmt,isa 0
+     550              ;----------------------------------------------------------------------
+     551              ; 152 | if(ExMem[idx] != Cnt++) {                                              
+     552              ;----------------------------------------------------------------------
+     553 000000d1 C444          MOVL      XAR6,*-SP[4]          ; [CPU_ALU] |152| 
+     554 000000d2 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] |152| 
+     555 000000d3 0901          ADDB      ACC,#1                ; [CPU_ALU] |152| 
+     556 000000d4 1E44          MOVL      *-SP[4],ACC           ; [CPU_ALU] |152| 
+     557 000000d5 0642          MOVL      ACC,*-SP[2]           ; [CPU_ALU] |152| 
+     558 000000d6 0746          ADDL      ACC,*-SP[6]           ; [CPU_ALU] |152| 
+     559 000000d7 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |152| 
+     560 000000d8 80C4          MOVZ      AR7,*+XAR4[0]         ; [CPU_ALU] |152| 
+     561 000000d9 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] |152| 
+     562 000000da 0FA7          CMPL      ACC,XAR7              ; [CPU_ALU] |152| 
+     563 000000db 6104          B         $C$L5,EQ              ; [CPU_ALU] |152| 
+     564                      ; branchcc occurs ; [] |152| 
+     565                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 153,column 4,is_stmt,isa 0
+     566              ;----------------------------------------------------------------------
+     567              ; 153 | ErrCnt |= 0x0001;                                                      
+     568              ;----------------------------------------------------------------------
+     569 000000dc 1A47          OR        *-SP[7],#0x0001       ; [CPU_ALU] |153| 
+         000000dd 0001 
+     570                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 154,column 4,is_stmt,isa 0
+     571              ;----------------------------------------------------------------------
+     572              ; 154 | break;                                                                 
+     573              ;----------------------------------------------------------------------
+     574 000000de 6F09          B         $C$L6,UNC             ; [CPU_ALU] |154| 
+     575                      ; branch occurs ; [] |154| 
+     576 000000df       $C$L5:    
+     577                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 151,column 36,is_stmt,isa 0
+     578 000000df 0642          MOVL      ACC,*-SP[2]           ; [CPU_ALU] |151| 
+     579 000000e0 FF30          LSL       ACC,1                 ; [CPU_ALU] |151| 
+     580 000000e1 1E42          MOVL      *-SP[2],ACC           ; [CPU_ALU] |151| 
+     581                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 151,column 15,is_stmt,isa 0
+     582 000000e2 8F04          MOVL      XAR4,#262144          ; [CPU_ARAU] |151| 
+         000000e3 0000 
+     583 000000e4 A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |151| 
+     584 000000e5 0F42          CMPL      ACC,*-SP[2]           ; [CPU_ALU] |151| 
+     585 000000e6 67EB          B         $C$L4,HIS             ; [CPU_ALU] |151| 
+     586                      ; branchcc occurs ; [] |151| 
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   13
+
+     587 000000e7       $C$L6:    
+     588                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 159,column 2,is_stmt,isa 0
+     589              ;----------------------------------------------------------------------
+     590              ; 159 | Cnt = 0;                                                               
+     591              ;----------------------------------------------------------------------
+     592 000000e7 0200          MOVB      ACC,#0                ; [CPU_ALU] |159| 
+     593 000000e8 1E44          MOVL      *-SP[4],ACC           ; [CPU_ALU] |159| 
+     594                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 160,column 6,is_stmt,isa 0
+     595              ;----------------------------------------------------------------------
+     596              ; 160 | for(idx = 1; idx < MAX_RAM_SIZE/4; idx <<= 1)                          
+     597              ;----------------------------------------------------------------------
+     598 000000e9 0201          MOVB      ACC,#1                ; [CPU_ALU] |160| 
+     599 000000ea 1E42          MOVL      *-SP[2],ACC           ; [CPU_ALU] |160| 
+     600                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 160,column 15,is_stmt,isa 0
+     601 000000eb 8F01          MOVL      XAR4,#65536           ; [CPU_ARAU] |160| 
+         000000ec 0000 
+     602 000000ed A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |160| 
+     603 000000ee 0F42          CMPL      ACC,*-SP[2]           ; [CPU_ALU] |160| 
+     604 000000ef 6911          B         $C$L8,LOS             ; [CPU_ALU] |160| 
+     605                      ; branchcc occurs ; [] |160| 
+     606 000000f0       $C$L7:    
+     607                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 161,column 3,is_stmt,isa 0
+     608              ;----------------------------------------------------------------------
+     609              ; 161 | ExMem[Cnt++] = idx;                                                    
+     610              ;----------------------------------------------------------------------
+     611 000000f0 0644          MOVL      ACC,*-SP[4]           ; [CPU_ALU] |161| 
+     612 000000f1 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |161| 
+     613 000000f2 0746          ADDL      ACC,*-SP[6]           ; [CPU_ALU] |161| 
+     614 000000f3 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |161| 
+     615 000000f4 DE01          ADDB      XAR6,#1               ; [CPU_ALU] |161| 
+     616 000000f5 C244          MOVL      *-SP[4],XAR6          ; [CPU_ALU] |161| 
+     617 000000f6 8842          MOVZ      AR6,*-SP[2]           ; [CPU_ALU] |161| 
+     618 000000f7 7EC4          MOV       *+XAR4[0],AR6         ; [CPU_ALU] |161| 
+     619                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 160,column 37,is_stmt,isa 0
+     620 000000f8 0642          MOVL      ACC,*-SP[2]           ; [CPU_ALU] |160| 
+     621 000000f9 FF30          LSL       ACC,1                 ; [CPU_ALU] |160| 
+     622 000000fa 1E42          MOVL      *-SP[2],ACC           ; [CPU_ALU] |160| 
+     623                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 160,column 15,is_stmt,isa 0
+     624 000000fb 8F01          MOVL      XAR4,#65536           ; [CPU_ARAU] |160| 
+         000000fc 0000 
+     625 000000fd A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |160| 
+     626 000000fe 0F42          CMPL      ACC,*-SP[2]           ; [CPU_ALU] |160| 
+     627 000000ff 66F1          B         $C$L7,HI              ; [CPU_ALU] |160| 
+     628                      ; branchcc occurs ; [] |160| 
+     629 00000100       $C$L8:    
+     630                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 163,column 2,is_stmt,isa 0
+     631              ;----------------------------------------------------------------------
+     632              ; 163 | Cnt = 0;                                                               
+     633              ;----------------------------------------------------------------------
+     634 00000100 0200          MOVB      ACC,#0                ; [CPU_ALU] |163| 
+     635 00000101 1E44          MOVL      *-SP[4],ACC           ; [CPU_ALU] |163| 
+     636                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 164,column 6,is_stmt,isa 0
+     637              ;----------------------------------------------------------------------
+     638              ; 164 | for(idx = 1; idx < MAX_RAM_SIZE/4; idx <<= 1) {                        
+     639              ;----------------------------------------------------------------------
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   14
+
+     640 00000102 0201          MOVB      ACC,#1                ; [CPU_ALU] |164| 
+     641 00000103 1E42          MOVL      *-SP[2],ACC           ; [CPU_ALU] |164| 
+     642                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 164,column 15,is_stmt,isa 0
+     643 00000104 A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |164| 
+     644 00000105 0F42          CMPL      ACC,*-SP[2]           ; [CPU_ALU] |164| 
+     645 00000106 6915          B         $C$L11,LOS            ; [CPU_ALU] |164| 
+     646                      ; branchcc occurs ; [] |164| 
+     647 00000107       $C$L9:    
+     648                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 165,column 3,is_stmt,isa 0
+     649              ;----------------------------------------------------------------------
+     650              ; 165 | if(ExMem[Cnt++] != idx) {                                              
+     651              ;----------------------------------------------------------------------
+     652 00000107 0644          MOVL      ACC,*-SP[4]           ; [CPU_ALU] |165| 
+     653 00000108 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |165| 
+     654 00000109 0746          ADDL      ACC,*-SP[6]           ; [CPU_ALU] |165| 
+     655 0000010a 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |165| 
+     656 0000010b DE01          ADDB      XAR6,#1               ; [CPU_ALU] |165| 
+     657 0000010c C244          MOVL      *-SP[4],XAR6          ; [CPU_ALU] |165| 
+     658 0000010d 0EC4          MOVU      ACC,*+XAR4[0]         ; [CPU_ALU] |165| 
+     659 0000010e 0F42          CMPL      ACC,*-SP[2]           ; [CPU_ALU] |165| 
+     660 0000010f 6104          B         $C$L10,EQ             ; [CPU_ALU] |165| 
+     661                      ; branchcc occurs ; [] |165| 
+     662                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 166,column 4,is_stmt,isa 0
+     663              ;----------------------------------------------------------------------
+     664              ; 166 | ErrCnt|= 0x0002;                                                       
+     665              ;----------------------------------------------------------------------
+     666 00000110 1A47          OR        *-SP[7],#0x0002       ; [CPU_ALU] |166| 
+         00000111 0002 
+     667                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 167,column 4,is_stmt,isa 0
+     668              ;----------------------------------------------------------------------
+     669              ; 167 | break;                                                                 
+     670              ;----------------------------------------------------------------------
+     671 00000112 6F09          B         $C$L11,UNC            ; [CPU_ALU] |167| 
+     672                      ; branch occurs ; [] |167| 
+     673 00000113       $C$L10:    
+     674                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 164,column 37,is_stmt,isa 0
+     675 00000113 0642          MOVL      ACC,*-SP[2]           ; [CPU_ALU] |164| 
+     676 00000114 FF30          LSL       ACC,1                 ; [CPU_ALU] |164| 
+     677 00000115 1E42          MOVL      *-SP[2],ACC           ; [CPU_ALU] |164| 
+     678                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 164,column 15,is_stmt,isa 0
+     679 00000116 8F01          MOVL      XAR4,#65536           ; [CPU_ARAU] |164| 
+         00000117 0000 
+     680 00000118 A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |164| 
+     681 00000119 0F42          CMPL      ACC,*-SP[2]           ; [CPU_ALU] |164| 
+     682 0000011a 66ED          B         $C$L9,HI              ; [CPU_ALU] |164| 
+     683                      ; branchcc occurs ; [] |164| 
+     684 0000011b       $C$L11:    
+     685                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 172,column 6,is_stmt,isa 0
+     686              ;----------------------------------------------------------------------
+     687              ; 172 | for(idx = 0; idx < MAX_RAM_SIZE; idx++) {                              
+     688              ;----------------------------------------------------------------------
+     689 0000011b 0200          MOVB      ACC,#0                ; [CPU_ALU] |172| 
+     690 0000011c 1E42          MOVL      *-SP[2],ACC           ; [CPU_ALU] |172| 
+     691                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 172,column 15,is_stmt,isa 0
+     692 0000011d 8F04          MOVL      XAR4,#262144          ; [CPU_ARAU] |172| 
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   15
+
+         0000011e 0000 
+     693 0000011f A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |172| 
+     694 00000120 0F42          CMPL      ACC,*-SP[2]           ; [CPU_ALU] |172| 
+     695 00000121 690E          B         $C$L13,LOS            ; [CPU_ALU] |172| 
+     696                      ; branchcc occurs ; [] |172| 
+     697 00000122       $C$L12:    
+     698                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 173,column 3,is_stmt,isa 0
+     699              ;----------------------------------------------------------------------
+     700              ; 173 | ExMem[idx] = 0xaaaa;                                                   
+     701              ;----------------------------------------------------------------------
+     702 00000122 0642          MOVL      ACC,*-SP[2]           ; [CPU_ALU] |173| 
+     703 00000123 0746          ADDL      ACC,*-SP[6]           ; [CPU_ALU] |173| 
+     704 00000124 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |173| 
+     705 00000125 28C4          MOV       *+XAR4[0],#43690      ; [CPU_ALU] |173| 
+         00000126 AAAA 
+     706                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 172,column 35,is_stmt,isa 0
+     707 00000127 0201          MOVB      ACC,#1                ; [CPU_ALU] |172| 
+     708 00000128 0742          ADDL      ACC,*-SP[2]           ; [CPU_ALU] |172| 
+     709 00000129 1E42          MOVL      *-SP[2],ACC           ; [CPU_ALU] |172| 
+     710                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 172,column 15,is_stmt,isa 0
+     711 0000012a 8F04          MOVL      XAR4,#262144          ; [CPU_ARAU] |172| 
+         0000012b 0000 
+     712 0000012c A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |172| 
+     713 0000012d 0F42          CMPL      ACC,*-SP[2]           ; [CPU_ALU] |172| 
+     714 0000012e 66F4          B         $C$L12,HI             ; [CPU_ALU] |172| 
+     715                      ; branchcc occurs ; [] |172| 
+     716 0000012f       $C$L13:    
+     717                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 176,column 6,is_stmt,isa 0
+     718              ;----------------------------------------------------------------------
+     719              ; 176 | for(idx = 0; idx < MAX_RAM_SIZE; idx++) {                              
+     720              ;----------------------------------------------------------------------
+     721 0000012f 0200          MOVB      ACC,#0                ; [CPU_ALU] |176| 
+     722 00000130 1E42          MOVL      *-SP[2],ACC           ; [CPU_ALU] |176| 
+     723                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 176,column 15,is_stmt,isa 0
+     724 00000131 A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |176| 
+     725 00000132 0F42          CMPL      ACC,*-SP[2]           ; [CPU_ALU] |176| 
+     726 00000133 6915          B         $C$L16,LOS            ; [CPU_ALU] |176| 
+     727                      ; branchcc occurs ; [] |176| 
+     728 00000134 2901          CLRC      SXM                   ; [CPU_ALU] 
+     729 00000135 8F04          MOVL      XAR4,#262144          ; [CPU_ARAU] |176| 
+         00000136 0000 
+     730 00000137       $C$L14:    
+     731                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 177,column 3,is_stmt,isa 0
+     732              ;----------------------------------------------------------------------
+     733              ; 177 | if(ExMem[idx] != 0xaaaa) {                                             
+     734              ;----------------------------------------------------------------------
+     735 00000137 0642          MOVL      ACC,*-SP[2]           ; [CPU_ALU] |177| 
+     736 00000138 0746          ADDL      ACC,*-SP[6]           ; [CPU_ALU] |177| 
+     737 00000139 83A9          MOVL      XAR5,ACC              ; [CPU_ALU] |177| 
+     738 0000013a 88C5          MOVZ      AR6,*+XAR5[0]         ; [CPU_ALU] |177| 
+     739 0000013b FF20          MOV       ACC,#43690            ; [CPU_ALU] |177| 
+         0000013c AAAA 
+     740 0000013d 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |177| 
+     741 0000013e 6104          B         $C$L15,EQ             ; [CPU_ALU] |177| 
+     742                      ; branchcc occurs ; [] |177| 
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   16
+
+     743                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 178,column 4,is_stmt,isa 0
+     744              ;----------------------------------------------------------------------
+     745              ; 178 | ErrCnt |= 0x0004;                                                      
+     746              ;----------------------------------------------------------------------
+     747 0000013f 1A47          OR        *-SP[7],#0x0004       ; [CPU_ALU] |178| 
+         00000140 0004 
+     748                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 179,column 4,is_stmt,isa 0
+     749              ;----------------------------------------------------------------------
+     750              ; 179 | break;                                                                 
+     751              ;----------------------------------------------------------------------
+     752 00000141 6F07          B         $C$L16,UNC            ; [CPU_ALU] |179| 
+     753                      ; branch occurs ; [] |179| 
+     754 00000142       $C$L15:    
+     755                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 176,column 35,is_stmt,isa 0
+     756 00000142 0201          MOVB      ACC,#1                ; [CPU_ALU] |176| 
+     757 00000143 0742          ADDL      ACC,*-SP[2]           ; [CPU_ALU] |176| 
+     758 00000144 1E42          MOVL      *-SP[2],ACC           ; [CPU_ALU] |176| 
+     759                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 176,column 15,is_stmt,isa 0
+     760 00000145 A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |176| 
+     761 00000146 0F42          CMPL      ACC,*-SP[2]           ; [CPU_ALU] |176| 
+     762 00000147 66F0          B         $C$L14,HI             ; [CPU_ALU] |176| 
+     763                      ; branchcc occurs ; [] |176| 
+     764 00000148       $C$L16:    
+     765                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 182,column 6,is_stmt,isa 0
+     766              ;----------------------------------------------------------------------
+     767              ; 182 | for(idx = 0; idx < MAX_RAM_SIZE; idx++) {                              
+     768              ;----------------------------------------------------------------------
+     769 00000148 0200          MOVB      ACC,#0                ; [CPU_ALU] |182| 
+     770 00000149 1E42          MOVL      *-SP[2],ACC           ; [CPU_ALU] |182| 
+     771                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 182,column 15,is_stmt,isa 0
+     772 0000014a 8F04          MOVL      XAR4,#262144          ; [CPU_ARAU] |182| 
+         0000014b 0000 
+     773 0000014c A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |182| 
+     774 0000014d 0F42          CMPL      ACC,*-SP[2]           ; [CPU_ALU] |182| 
+     775 0000014e 690E          B         $C$L18,LOS            ; [CPU_ALU] |182| 
+     776                      ; branchcc occurs ; [] |182| 
+     777 0000014f       $C$L17:    
+     778                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 183,column 3,is_stmt,isa 0
+     779              ;----------------------------------------------------------------------
+     780              ; 183 | ExMem[idx] = 0x5555;                                                   
+     781              ;----------------------------------------------------------------------
+     782 0000014f 0642          MOVL      ACC,*-SP[2]           ; [CPU_ALU] |183| 
+     783 00000150 0746          ADDL      ACC,*-SP[6]           ; [CPU_ALU] |183| 
+     784 00000151 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |183| 
+     785 00000152 28C4          MOV       *+XAR4[0],#21845      ; [CPU_ALU] |183| 
+         00000153 5555 
+     786                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 182,column 35,is_stmt,isa 0
+     787 00000154 0201          MOVB      ACC,#1                ; [CPU_ALU] |182| 
+     788 00000155 0742          ADDL      ACC,*-SP[2]           ; [CPU_ALU] |182| 
+     789 00000156 1E42          MOVL      *-SP[2],ACC           ; [CPU_ALU] |182| 
+     790                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 182,column 15,is_stmt,isa 0
+     791 00000157 8F04          MOVL      XAR4,#262144          ; [CPU_ARAU] |182| 
+         00000158 0000 
+     792 00000159 A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |182| 
+     793 0000015a 0F42          CMPL      ACC,*-SP[2]           ; [CPU_ALU] |182| 
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   17
+
+     794 0000015b 66F4          B         $C$L17,HI             ; [CPU_ALU] |182| 
+     795                      ; branchcc occurs ; [] |182| 
+     796 0000015c       $C$L18:    
+     797                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 186,column 6,is_stmt,isa 0
+     798              ;----------------------------------------------------------------------
+     799              ; 186 | for(idx = 0; idx < MAX_RAM_SIZE; idx++) {                              
+     800              ;----------------------------------------------------------------------
+     801 0000015c 0200          MOVB      ACC,#0                ; [CPU_ALU] |186| 
+     802 0000015d 1E42          MOVL      *-SP[2],ACC           ; [CPU_ALU] |186| 
+     803                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 186,column 15,is_stmt,isa 0
+     804 0000015e A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |186| 
+     805 0000015f 0F42          CMPL      ACC,*-SP[2]           ; [CPU_ALU] |186| 
+     806 00000160 6913          B         $C$L21,LOS            ; [CPU_ALU] |186| 
+     807                      ; branchcc occurs ; [] |186| 
+     808 00000161       $C$L19:    
+     809                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 187,column 3,is_stmt,isa 0
+     810              ;----------------------------------------------------------------------
+     811              ; 187 | if(ExMem[idx] != 0x5555) {                                             
+     812              ;----------------------------------------------------------------------
+     813 00000161 0642          MOVL      ACC,*-SP[2]           ; [CPU_ALU] |187| 
+     814 00000162 0746          ADDL      ACC,*-SP[6]           ; [CPU_ALU] |187| 
+     815 00000163 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |187| 
+     816 00000164 28A9          MOV       AL,#21845             ; [CPU_ALU] |187| 
+         00000165 5555 
+     817 00000166 54C4          CMP       AL,*+XAR4[0]          ; [CPU_ALU] |187| 
+     818 00000167 6104          B         $C$L20,EQ             ; [CPU_ALU] |187| 
+     819                      ; branchcc occurs ; [] |187| 
+     820                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 188,column 4,is_stmt,isa 0
+     821              ;----------------------------------------------------------------------
+     822              ; 188 | ErrCnt |= 0x0008;                                                      
+     823              ;----------------------------------------------------------------------
+     824 00000168 1A47          OR        *-SP[7],#0x0008       ; [CPU_ALU] |188| 
+         00000169 0008 
+     825                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 189,column 4,is_stmt,isa 0
+     826              ;----------------------------------------------------------------------
+     827              ; 189 | break;                                                                 
+     828              ;----------------------------------------------------------------------
+     829 0000016a 6F09          B         $C$L21,UNC            ; [CPU_ALU] |189| 
+     830                      ; branch occurs ; [] |189| 
+     831 0000016b       $C$L20:    
+     832                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 186,column 35,is_stmt,isa 0
+     833 0000016b 0201          MOVB      ACC,#1                ; [CPU_ALU] |186| 
+     834 0000016c 0742          ADDL      ACC,*-SP[2]           ; [CPU_ALU] |186| 
+     835 0000016d 1E42          MOVL      *-SP[2],ACC           ; [CPU_ALU] |186| 
+     836                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 186,column 15,is_stmt,isa 0
+     837 0000016e 8F04          MOVL      XAR4,#262144          ; [CPU_ARAU] |186| 
+         0000016f 0000 
+     838 00000170 A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |186| 
+     839 00000171 0F42          CMPL      ACC,*-SP[2]           ; [CPU_ALU] |186| 
+     840 00000172 66EF          B         $C$L19,HI             ; [CPU_ALU] |186| 
+     841                      ; branchcc occurs ; [] |186| 
+     842 00000173       $C$L21:    
+     843                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 193,column 2,is_stmt,isa 0
+     844              ;----------------------------------------------------------------------
+     845              ; 193 | return ErrCnt;                                                         
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   18
+
+     846              ;----------------------------------------------------------------------
+     847 00000173 9247          MOV       AL,*-SP[7]            ; [CPU_ALU] |193| 
+     848                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 195,column 1,is_stmt,isa 0
+     849 00000174 FE88          SUBB      SP,#8                 ; [CPU_ARAU] 
+     850                      .dwcfi  cfa_offset, -2
+     851              $C$DW$9 .dwtag  DW_TAG_TI_branch
+     852                      .dwattr $C$DW$9, DW_AT_low_pc(0x00)
+     853                      .dwattr $C$DW$9, DW_AT_TI_return
+     854              
+     855 00000175 0006          LRETR     ; [CPU_ALU] 
+     856                      ; return occurs ; [] 
+     857                      .dwattr $C$DW$4, DW_AT_TI_end_file("C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c")
+     858                      .dwattr $C$DW$4, DW_AT_TI_end_line(0xc3)
+     859                      .dwattr $C$DW$4, DW_AT_TI_end_column(0x01)
+     860                      .dwendentry
+     861                      .dwendtag $C$DW$4
+     862              
+     863 00000176               .sect   ".text"
+     864                      .clink
+     865                      .global _ZeroRam
+     866              
+     867              $C$DW$10        .dwtag  DW_TAG_subprogram
+     868                      .dwattr $C$DW$10, DW_AT_name("ZeroRam")
+     869                      .dwattr $C$DW$10, DW_AT_low_pc(_ZeroRam)
+     870                      .dwattr $C$DW$10, DW_AT_high_pc(0x00)
+     871                      .dwattr $C$DW$10, DW_AT_TI_symbol_name("_ZeroRam")
+     872                      .dwattr $C$DW$10, DW_AT_external
+     873                      .dwattr $C$DW$10, DW_AT_TI_begin_file("C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c")
+     874                      .dwattr $C$DW$10, DW_AT_TI_begin_line(0xd4)
+     875                      .dwattr $C$DW$10, DW_AT_TI_begin_column(0x06)
+     876                      .dwattr $C$DW$10, DW_AT_TI_max_frame_size(-6)
+     877                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 213,column 1,is_stmt,address _ZeroRa
+     878              
+     879                      .dwfde $C$DW$CIE, _ZeroRam
+     880              ;----------------------------------------------------------------------
+     881              ; 212 | void ZeroRam(void)                                                     
+     882              ; 214 | Uint32 idx;                                                            
+     883              ;----------------------------------------------------------------------
+     884              
+     885              ;***************************************************************
+     886              ;* FNAME: _ZeroRam                      FR SIZE:   4           *
+     887              ;*                                                             *
+     888              ;* FUNCTION ENVIRONMENT                                        *
+     889              ;*                                                             *
+     890              ;* FUNCTION PROPERTIES                                         *
+     891              ;*                            0 Parameter,  4 Auto,  0 SOE     *
+     892              ;***************************************************************
+     893              
+     894 00000176       _ZeroRam:
+     895                      .dwcfi  cfa_offset, -2
+     896                      .dwcfi  save_reg_to_mem, 26, 0
+     897 00000176 FE04          ADDB      SP,#4                 ; [CPU_ARAU] 
+     898                      .dwcfi  cfa_offset, -6
+     899              $C$DW$11        .dwtag  DW_TAG_variable
+     900                      .dwattr $C$DW$11, DW_AT_name("idx")
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   19
+
+     901                      .dwattr $C$DW$11, DW_AT_TI_symbol_name("_idx")
+     902                      .dwattr $C$DW$11, DW_AT_type(*$C$DW$T$23)
+     903                      .dwattr $C$DW$11, DW_AT_location[DW_OP_breg20 -2]
+     904              
+     905              $C$DW$12        .dwtag  DW_TAG_variable
+     906                      .dwattr $C$DW$12, DW_AT_name("ExMem")
+     907                      .dwattr $C$DW$12, DW_AT_TI_symbol_name("_ExMem")
+     908                      .dwattr $C$DW$12, DW_AT_type(*$C$DW$T$45)
+     909                      .dwattr $C$DW$12, DW_AT_location[DW_OP_breg20 -4]
+     910              
+     911                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 215,column 26,is_stmt,isa 0
+     912              ;----------------------------------------------------------------------
+     913              ; 215 | volatile Uint16 * ExMem = &XINTF_ZONE6;                                
+     914              ;----------------------------------------------------------------------
+     915 00000177 8F10          MOVL      XAR4,#1048576         ; [CPU_ARAU] |215| 
+         00000178 0000 
+     916 00000179 A844          MOVL      *-SP[4],XAR4          ; [CPU_ALU] |215| 
+     917                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 217,column 6,is_stmt,isa 0
+     918              ;----------------------------------------------------------------------
+     919              ; 217 | for(idx = 0; idx < MAX_RAM_SIZE; idx++)                                
+     920              ;----------------------------------------------------------------------
+     921 0000017a 0200          MOVB      ACC,#0                ; [CPU_ALU] |217| 
+     922 0000017b 1E42          MOVL      *-SP[2],ACC           ; [CPU_ALU] |217| 
+     923                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 217,column 15,is_stmt,isa 0
+     924 0000017c 8F04          MOVL      XAR4,#262144          ; [CPU_ARAU] |217| 
+         0000017d 0000 
+     925 0000017e A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |217| 
+     926 0000017f 0F42          CMPL      ACC,*-SP[2]           ; [CPU_ALU] |217| 
+     927 00000180 690D          B         $C$L23,LOS            ; [CPU_ALU] |217| 
+     928                      ; branchcc occurs ; [] |217| 
+     929 00000181       $C$L22:    
+     930                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 218,column 3,is_stmt,isa 0
+     931              ;----------------------------------------------------------------------
+     932              ; 218 | ExMem[idx] = 0x0000;                                                   
+     933              ;----------------------------------------------------------------------
+     934 00000181 0642          MOVL      ACC,*-SP[2]           ; [CPU_ALU] |218| 
+     935 00000182 0744          ADDL      ACC,*-SP[4]           ; [CPU_ALU] |218| 
+     936 00000183 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |218| 
+     937 00000184 2BC4          MOV       *+XAR4[0],#0          ; [CPU_ALU] |218| 
+     938                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 217,column 35,is_stmt,isa 0
+     939 00000185 0201          MOVB      ACC,#1                ; [CPU_ALU] |217| 
+     940 00000186 0742          ADDL      ACC,*-SP[2]           ; [CPU_ALU] |217| 
+     941 00000187 1E42          MOVL      *-SP[2],ACC           ; [CPU_ALU] |217| 
+     942                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 217,column 15,is_stmt,isa 0
+     943 00000188 8F04          MOVL      XAR4,#262144          ; [CPU_ARAU] |217| 
+         00000189 0000 
+     944 0000018a A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |217| 
+     945 0000018b 0F42          CMPL      ACC,*-SP[2]           ; [CPU_ALU] |217| 
+     946 0000018c 66F5          B         $C$L22,HI             ; [CPU_ALU] |217| 
+     947                      ; branchcc occurs ; [] |217| 
+     948                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 220,column 1,is_stmt,isa 0
+     949              ;----------------------------------------------------------------------
+     950              ; 220 | } // ZeroRam()                                                         
+     951              ;----------------------------------------------------------------------
+     952 0000018d       $C$L23:    
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   20
+
+     953 0000018d FE84          SUBB      SP,#4                 ; [CPU_ARAU] 
+     954                      .dwcfi  cfa_offset, -2
+     955              $C$DW$13        .dwtag  DW_TAG_TI_branch
+     956                      .dwattr $C$DW$13, DW_AT_low_pc(0x00)
+     957                      .dwattr $C$DW$13, DW_AT_TI_return
+     958              
+     959 0000018e 0006          LRETR     ; [CPU_ALU] 
+     960                      ; return occurs ; [] 
+     961                      .dwattr $C$DW$10, DW_AT_TI_end_file("C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c")
+     962                      .dwattr $C$DW$10, DW_AT_TI_end_line(0xdc)
+     963                      .dwattr $C$DW$10, DW_AT_TI_end_column(0x01)
+     964                      .dwendentry
+     965                      .dwendtag $C$DW$10
+     966              
+     967 0000018f               .sect   ".text"
+     968                      .clink
+     969                      .global _WriteCpld
+     970              
+     971              $C$DW$14        .dwtag  DW_TAG_subprogram
+     972                      .dwattr $C$DW$14, DW_AT_name("WriteCpld")
+     973                      .dwattr $C$DW$14, DW_AT_low_pc(_WriteCpld)
+     974                      .dwattr $C$DW$14, DW_AT_high_pc(0x00)
+     975                      .dwattr $C$DW$14, DW_AT_TI_symbol_name("_WriteCpld")
+     976                      .dwattr $C$DW$14, DW_AT_external
+     977                      .dwattr $C$DW$14, DW_AT_TI_begin_file("C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c")
+     978                      .dwattr $C$DW$14, DW_AT_TI_begin_line(0xef)
+     979                      .dwattr $C$DW$14, DW_AT_TI_begin_column(0x06)
+     980                      .dwattr $C$DW$14, DW_AT_TI_max_frame_size(-6)
+     981                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 240,column 1,is_stmt,address _WriteC
+     982              
+     983                      .dwfde $C$DW$CIE, _WriteCpld
+     984              $C$DW$15        .dwtag  DW_TAG_formal_parameter
+     985                      .dwattr $C$DW$15, DW_AT_name("Addr")
+     986                      .dwattr $C$DW$15, DW_AT_TI_symbol_name("_Addr")
+     987                      .dwattr $C$DW$15, DW_AT_type(*$C$DW$T$19)
+     988                      .dwattr $C$DW$15, DW_AT_location[DW_OP_reg0]
+     989              
+     990              $C$DW$16        .dwtag  DW_TAG_formal_parameter
+     991                      .dwattr $C$DW$16, DW_AT_name("Data")
+     992                      .dwattr $C$DW$16, DW_AT_TI_symbol_name("_Data")
+     993                      .dwattr $C$DW$16, DW_AT_type(*$C$DW$T$39)
+     994                      .dwattr $C$DW$16, DW_AT_location[DW_OP_reg1]
+     995              
+     996              ;----------------------------------------------------------------------
+     997              ; 239 | void WriteCpld(Uint16 Addr, Byte Data)                                 
+     998              ;----------------------------------------------------------------------
+     999              
+    1000              ;***************************************************************
+    1001              ;* FNAME: _WriteCpld                    FR SIZE:   4           *
+    1002              ;*                                                             *
+    1003              ;* FUNCTION ENVIRONMENT                                        *
+    1004              ;*                                                             *
+    1005              ;* FUNCTION PROPERTIES                                         *
+    1006              ;*                            0 Parameter,  4 Auto,  0 SOE     *
+    1007              ;***************************************************************
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   21
+
+    1008              
+    1009 0000018f       _WriteCpld:
+    1010                      .dwcfi  cfa_offset, -2
+    1011                      .dwcfi  save_reg_to_mem, 26, 0
+    1012 0000018f FE04          ADDB      SP,#4                 ; [CPU_ARAU] 
+    1013                      .dwcfi  cfa_offset, -6
+    1014              $C$DW$17        .dwtag  DW_TAG_variable
+    1015                      .dwattr $C$DW$17, DW_AT_name("Cpld")
+    1016                      .dwattr $C$DW$17, DW_AT_TI_symbol_name("_Cpld")
+    1017                      .dwattr $C$DW$17, DW_AT_type(*$C$DW$T$42)
+    1018                      .dwattr $C$DW$17, DW_AT_location[DW_OP_breg20 -2]
+    1019              
+    1020              $C$DW$18        .dwtag  DW_TAG_variable
+    1021                      .dwattr $C$DW$18, DW_AT_name("Addr")
+    1022                      .dwattr $C$DW$18, DW_AT_TI_symbol_name("_Addr")
+    1023                      .dwattr $C$DW$18, DW_AT_type(*$C$DW$T$19)
+    1024                      .dwattr $C$DW$18, DW_AT_location[DW_OP_breg20 -3]
+    1025              
+    1026              $C$DW$19        .dwtag  DW_TAG_variable
+    1027                      .dwattr $C$DW$19, DW_AT_name("Data")
+    1028                      .dwattr $C$DW$19, DW_AT_TI_symbol_name("_Data")
+    1029                      .dwattr $C$DW$19, DW_AT_type(*$C$DW$T$39)
+    1030                      .dwattr $C$DW$19, DW_AT_location[DW_OP_breg20 -4]
+    1031              
+    1032 00000190 9744          MOV       *-SP[4],AH            ; [CPU_ALU] |240| 
+    1033 00000191 9643          MOV       *-SP[3],AL            ; [CPU_ALU] |240| 
+    1034                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 241,column 22,is_stmt,isa 0
+    1035              ;----------------------------------------------------------------------
+    1036              ; 241 | volatile Byte *Cpld = &XINTF_ZONE0;                                    
+    1037              ;----------------------------------------------------------------------
+    1038 00000192 8F00          MOVL      XAR4,#8192            ; [CPU_ARAU] |241| 
+         00000193 2000 
+    1039 00000194 A842          MOVL      *-SP[2],XAR4          ; [CPU_ALU] |241| 
+    1040                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 243,column 2,is_stmt,isa 0
+    1041              ;----------------------------------------------------------------------
+    1042              ; 243 | Cpld[Addr] = Data;                                                     
+    1043              ;----------------------------------------------------------------------
+    1044 00000195 5843          MOVZ      AR0,*-SP[3]           ; [CPU_ALU] |243| 
+    1045 00000196 9244          MOV       AL,*-SP[4]            ; [CPU_ALU] |243| 
+    1046 00000197 9694          MOV       *+XAR4[AR0],AL        ; [CPU_ALU] |243| 
+    1047                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 246,column 1,is_stmt,isa 0
+    1048              ;----------------------------------------------------------------------
+    1049              ; 246 | } // WriteCpld()                                                       
+    1050              ;----------------------------------------------------------------------
+    1051 00000198 FE84          SUBB      SP,#4                 ; [CPU_ARAU] 
+    1052                      .dwcfi  cfa_offset, -2
+    1053              $C$DW$20        .dwtag  DW_TAG_TI_branch
+    1054                      .dwattr $C$DW$20, DW_AT_low_pc(0x00)
+    1055                      .dwattr $C$DW$20, DW_AT_TI_return
+    1056              
+    1057 00000199 0006          LRETR     ; [CPU_ALU] 
+    1058                      ; return occurs ; [] 
+    1059                      .dwattr $C$DW$14, DW_AT_TI_end_file("C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c")
+    1060                      .dwattr $C$DW$14, DW_AT_TI_end_line(0xf6)
+    1061                      .dwattr $C$DW$14, DW_AT_TI_end_column(0x01)
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   22
+
+    1062                      .dwendentry
+    1063                      .dwendtag $C$DW$14
+    1064              
+    1065 0000019a               .sect   ".text"
+    1066                      .clink
+    1067                      .global _ReadCpld
+    1068              
+    1069              $C$DW$21        .dwtag  DW_TAG_subprogram
+    1070                      .dwattr $C$DW$21, DW_AT_name("ReadCpld")
+    1071                      .dwattr $C$DW$21, DW_AT_low_pc(_ReadCpld)
+    1072                      .dwattr $C$DW$21, DW_AT_high_pc(0x00)
+    1073                      .dwattr $C$DW$21, DW_AT_TI_symbol_name("_ReadCpld")
+    1074                      .dwattr $C$DW$21, DW_AT_external
+    1075                      .dwattr $C$DW$21, DW_AT_type(*$C$DW$T$39)
+    1076                      .dwattr $C$DW$21, DW_AT_TI_begin_file("C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c")
+    1077                      .dwattr $C$DW$21, DW_AT_TI_begin_line(0x108)
+    1078                      .dwattr $C$DW$21, DW_AT_TI_begin_column(0x06)
+    1079                      .dwattr $C$DW$21, DW_AT_TI_max_frame_size(-6)
+    1080                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 265,column 1,is_stmt,address _ReadCp
+    1081              
+    1082                      .dwfde $C$DW$CIE, _ReadCpld
+    1083              $C$DW$22        .dwtag  DW_TAG_formal_parameter
+    1084                      .dwattr $C$DW$22, DW_AT_name("Addr")
+    1085                      .dwattr $C$DW$22, DW_AT_TI_symbol_name("_Addr")
+    1086                      .dwattr $C$DW$22, DW_AT_type(*$C$DW$T$19)
+    1087                      .dwattr $C$DW$22, DW_AT_location[DW_OP_reg0]
+    1088              
+    1089              ;----------------------------------------------------------------------
+    1090              ; 264 | Byte ReadCpld(Uint16 Addr)                                             
+    1091              ;----------------------------------------------------------------------
+    1092              
+    1093              ;***************************************************************
+    1094              ;* FNAME: _ReadCpld                     FR SIZE:   4           *
+    1095              ;*                                                             *
+    1096              ;* FUNCTION ENVIRONMENT                                        *
+    1097              ;*                                                             *
+    1098              ;* FUNCTION PROPERTIES                                         *
+    1099              ;*                            0 Parameter,  3 Auto,  0 SOE     *
+    1100              ;***************************************************************
+    1101              
+    1102 0000019a       _ReadCpld:
+    1103                      .dwcfi  cfa_offset, -2
+    1104                      .dwcfi  save_reg_to_mem, 26, 0
+    1105 0000019a FE04          ADDB      SP,#4                 ; [CPU_ARAU] 
+    1106                      .dwcfi  cfa_offset, -6
+    1107              $C$DW$23        .dwtag  DW_TAG_variable
+    1108                      .dwattr $C$DW$23, DW_AT_name("Cpld")
+    1109                      .dwattr $C$DW$23, DW_AT_TI_symbol_name("_Cpld")
+    1110                      .dwattr $C$DW$23, DW_AT_type(*$C$DW$T$42)
+    1111                      .dwattr $C$DW$23, DW_AT_location[DW_OP_breg20 -2]
+    1112              
+    1113              $C$DW$24        .dwtag  DW_TAG_variable
+    1114                      .dwattr $C$DW$24, DW_AT_name("Addr")
+    1115                      .dwattr $C$DW$24, DW_AT_TI_symbol_name("_Addr")
+    1116                      .dwattr $C$DW$24, DW_AT_type(*$C$DW$T$19)
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   23
+
+    1117                      .dwattr $C$DW$24, DW_AT_location[DW_OP_breg20 -3]
+    1118              
+    1119 0000019b 9643          MOV       *-SP[3],AL            ; [CPU_ALU] |265| 
+    1120                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 266,column 22,is_stmt,isa 0
+    1121              ;----------------------------------------------------------------------
+    1122              ; 266 | volatile Byte *Cpld = &XINTF_ZONE0;                                    
+    1123              ;----------------------------------------------------------------------
+    1124 0000019c 8F00          MOVL      XAR4,#8192            ; [CPU_ARAU] |266| 
+         0000019d 2000 
+    1125 0000019e A842          MOVL      *-SP[2],XAR4          ; [CPU_ALU] |266| 
+    1126                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 268,column 2,is_stmt,isa 0
+    1127              ;----------------------------------------------------------------------
+    1128              ; 268 | return Cpld[Addr];                                                     
+    1129              ;----------------------------------------------------------------------
+    1130 0000019f 5843          MOVZ      AR0,*-SP[3]           ; [CPU_ALU] |268| 
+    1131 000001a0 9294          MOV       AL,*+XAR4[AR0]        ; [CPU_ALU] |268| 
+    1132                      .dwpsn  file "C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c",line 271,column 1,is_stmt,isa 0
+    1133              ;----------------------------------------------------------------------
+    1134              ; 271 | } // ReadCpld()                                                        
+    1135              ;----------------------------------------------------------------------
+    1136 000001a1 FE84          SUBB      SP,#4                 ; [CPU_ARAU] 
+    1137                      .dwcfi  cfa_offset, -2
+    1138              $C$DW$25        .dwtag  DW_TAG_TI_branch
+    1139                      .dwattr $C$DW$25, DW_AT_low_pc(0x00)
+    1140                      .dwattr $C$DW$25, DW_AT_TI_return
+    1141              
+    1142 000001a2 0006          LRETR     ; [CPU_ALU] 
+    1143                      ; return occurs ; [] 
+    1144                      .dwattr $C$DW$21, DW_AT_TI_end_file("C:/repo/jabil2025/gpb/gpb_project_v3/Xintf.c")
+    1145                      .dwattr $C$DW$21, DW_AT_TI_end_line(0x10f)
+    1146                      .dwattr $C$DW$21, DW_AT_TI_end_column(0x01)
+    1147                      .dwendentry
+    1148                      .dwendtag $C$DW$21
+    1149              
+    1150              ;**************************************************************
+    1151              ;* UNDEFINED EXTERNAL REFERENCES                              *
+    1152              ;**************************************************************
+    1153                      .global _XintfRegs
+    1154              
+    1155              ;***************************************************************
+    1156              ;* TYPE INFORMATION                                            *
+    1157              ;***************************************************************
+    1158              
+    1159              $C$DW$T$20      .dwtag  DW_TAG_structure_type
+    1160                      .dwattr $C$DW$T$20, DW_AT_name("XBANK_BITS")
+    1161                      .dwattr $C$DW$T$20, DW_AT_byte_size(0x01)
+    1162              $C$DW$26        .dwtag  DW_TAG_member
+    1163                      .dwattr $C$DW$26, DW_AT_type(*$C$DW$T$19)
+    1164                      .dwattr $C$DW$26, DW_AT_name("BANK")
+    1165                      .dwattr $C$DW$26, DW_AT_TI_symbol_name("_BANK")
+    1166                      .dwattr $C$DW$26, DW_AT_bit_offset(0x0d)
+    1167                      .dwattr $C$DW$26, DW_AT_bit_size(0x03)
+    1168                      .dwattr $C$DW$26, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1169                      .dwattr $C$DW$26, DW_AT_accessibility(DW_ACCESS_public)
+    1170              
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   24
+
+    1171              $C$DW$27        .dwtag  DW_TAG_member
+    1172                      .dwattr $C$DW$27, DW_AT_type(*$C$DW$T$19)
+    1173                      .dwattr $C$DW$27, DW_AT_name("BCYC")
+    1174                      .dwattr $C$DW$27, DW_AT_TI_symbol_name("_BCYC")
+    1175                      .dwattr $C$DW$27, DW_AT_bit_offset(0x0a)
+    1176                      .dwattr $C$DW$27, DW_AT_bit_size(0x03)
+    1177                      .dwattr $C$DW$27, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1178                      .dwattr $C$DW$27, DW_AT_accessibility(DW_ACCESS_public)
+    1179              
+    1180              $C$DW$28        .dwtag  DW_TAG_member
+    1181                      .dwattr $C$DW$28, DW_AT_type(*$C$DW$T$19)
+    1182                      .dwattr $C$DW$28, DW_AT_name("rsvd")
+    1183                      .dwattr $C$DW$28, DW_AT_TI_symbol_name("_rsvd")
+    1184                      .dwattr $C$DW$28, DW_AT_bit_offset(0x00)
+    1185                      .dwattr $C$DW$28, DW_AT_bit_size(0x0a)
+    1186                      .dwattr $C$DW$28, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1187                      .dwattr $C$DW$28, DW_AT_accessibility(DW_ACCESS_public)
+    1188              
+    1189                      .dwendtag $C$DW$T$20
+    1190              
+    1191              
+    1192              $C$DW$T$21      .dwtag  DW_TAG_union_type
+    1193                      .dwattr $C$DW$T$21, DW_AT_name("XBANK_REG")
+    1194                      .dwattr $C$DW$T$21, DW_AT_byte_size(0x01)
+    1195              $C$DW$29        .dwtag  DW_TAG_member
+    1196                      .dwattr $C$DW$29, DW_AT_type(*$C$DW$T$19)
+    1197                      .dwattr $C$DW$29, DW_AT_name("all")
+    1198                      .dwattr $C$DW$29, DW_AT_TI_symbol_name("_all")
+    1199                      .dwattr $C$DW$29, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1200                      .dwattr $C$DW$29, DW_AT_accessibility(DW_ACCESS_public)
+    1201              
+    1202              $C$DW$30        .dwtag  DW_TAG_member
+    1203                      .dwattr $C$DW$30, DW_AT_type(*$C$DW$T$20)
+    1204                      .dwattr $C$DW$30, DW_AT_name("bit")
+    1205                      .dwattr $C$DW$30, DW_AT_TI_symbol_name("_bit")
+    1206                      .dwattr $C$DW$30, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1207                      .dwattr $C$DW$30, DW_AT_accessibility(DW_ACCESS_public)
+    1208              
+    1209                      .dwendtag $C$DW$T$21
+    1210              
+    1211              
+    1212              $C$DW$T$22      .dwtag  DW_TAG_structure_type
+    1213                      .dwattr $C$DW$T$22, DW_AT_name("XINTCNF2_BITS")
+    1214                      .dwattr $C$DW$T$22, DW_AT_byte_size(0x02)
+    1215              $C$DW$31        .dwtag  DW_TAG_member
+    1216                      .dwattr $C$DW$31, DW_AT_type(*$C$DW$T$19)
+    1217                      .dwattr $C$DW$31, DW_AT_name("WRBUFF")
+    1218                      .dwattr $C$DW$31, DW_AT_TI_symbol_name("_WRBUFF")
+    1219                      .dwattr $C$DW$31, DW_AT_bit_offset(0x0e)
+    1220                      .dwattr $C$DW$31, DW_AT_bit_size(0x02)
+    1221                      .dwattr $C$DW$31, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1222                      .dwattr $C$DW$31, DW_AT_accessibility(DW_ACCESS_public)
+    1223              
+    1224              $C$DW$32        .dwtag  DW_TAG_member
+    1225                      .dwattr $C$DW$32, DW_AT_type(*$C$DW$T$19)
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   25
+
+    1226                      .dwattr $C$DW$32, DW_AT_name("CLKMODE")
+    1227                      .dwattr $C$DW$32, DW_AT_TI_symbol_name("_CLKMODE")
+    1228                      .dwattr $C$DW$32, DW_AT_bit_offset(0x0d)
+    1229                      .dwattr $C$DW$32, DW_AT_bit_size(0x01)
+    1230                      .dwattr $C$DW$32, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1231                      .dwattr $C$DW$32, DW_AT_accessibility(DW_ACCESS_public)
+    1232              
+    1233              $C$DW$33        .dwtag  DW_TAG_member
+    1234                      .dwattr $C$DW$33, DW_AT_type(*$C$DW$T$19)
+    1235                      .dwattr $C$DW$33, DW_AT_name("CLKOFF")
+    1236                      .dwattr $C$DW$33, DW_AT_TI_symbol_name("_CLKOFF")
+    1237                      .dwattr $C$DW$33, DW_AT_bit_offset(0x0c)
+    1238                      .dwattr $C$DW$33, DW_AT_bit_size(0x01)
+    1239                      .dwattr $C$DW$33, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1240                      .dwattr $C$DW$33, DW_AT_accessibility(DW_ACCESS_public)
+    1241              
+    1242              $C$DW$34        .dwtag  DW_TAG_member
+    1243                      .dwattr $C$DW$34, DW_AT_type(*$C$DW$T$19)
+    1244                      .dwattr $C$DW$34, DW_AT_name("rsvd1")
+    1245                      .dwattr $C$DW$34, DW_AT_TI_symbol_name("_rsvd1")
+    1246                      .dwattr $C$DW$34, DW_AT_bit_offset(0x0a)
+    1247                      .dwattr $C$DW$34, DW_AT_bit_size(0x02)
+    1248                      .dwattr $C$DW$34, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1249                      .dwattr $C$DW$34, DW_AT_accessibility(DW_ACCESS_public)
+    1250              
+    1251              $C$DW$35        .dwtag  DW_TAG_member
+    1252                      .dwattr $C$DW$35, DW_AT_type(*$C$DW$T$19)
+    1253                      .dwattr $C$DW$35, DW_AT_name("WLEVEL")
+    1254                      .dwattr $C$DW$35, DW_AT_TI_symbol_name("_WLEVEL")
+    1255                      .dwattr $C$DW$35, DW_AT_bit_offset(0x08)
+    1256                      .dwattr $C$DW$35, DW_AT_bit_size(0x02)
+    1257                      .dwattr $C$DW$35, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1258                      .dwattr $C$DW$35, DW_AT_accessibility(DW_ACCESS_public)
+    1259              
+    1260              $C$DW$36        .dwtag  DW_TAG_member
+    1261                      .dwattr $C$DW$36, DW_AT_type(*$C$DW$T$19)
+    1262                      .dwattr $C$DW$36, DW_AT_name("MPNMC")
+    1263                      .dwattr $C$DW$36, DW_AT_TI_symbol_name("_MPNMC")
+    1264                      .dwattr $C$DW$36, DW_AT_bit_offset(0x07)
+    1265                      .dwattr $C$DW$36, DW_AT_bit_size(0x01)
+    1266                      .dwattr $C$DW$36, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1267                      .dwattr $C$DW$36, DW_AT_accessibility(DW_ACCESS_public)
+    1268              
+    1269              $C$DW$37        .dwtag  DW_TAG_member
+    1270                      .dwattr $C$DW$37, DW_AT_type(*$C$DW$T$19)
+    1271                      .dwattr $C$DW$37, DW_AT_name("HOLD")
+    1272                      .dwattr $C$DW$37, DW_AT_TI_symbol_name("_HOLD")
+    1273                      .dwattr $C$DW$37, DW_AT_bit_offset(0x06)
+    1274                      .dwattr $C$DW$37, DW_AT_bit_size(0x01)
+    1275                      .dwattr $C$DW$37, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1276                      .dwattr $C$DW$37, DW_AT_accessibility(DW_ACCESS_public)
+    1277              
+    1278              $C$DW$38        .dwtag  DW_TAG_member
+    1279                      .dwattr $C$DW$38, DW_AT_type(*$C$DW$T$19)
+    1280                      .dwattr $C$DW$38, DW_AT_name("HOLDS")
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   26
+
+    1281                      .dwattr $C$DW$38, DW_AT_TI_symbol_name("_HOLDS")
+    1282                      .dwattr $C$DW$38, DW_AT_bit_offset(0x05)
+    1283                      .dwattr $C$DW$38, DW_AT_bit_size(0x01)
+    1284                      .dwattr $C$DW$38, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1285                      .dwattr $C$DW$38, DW_AT_accessibility(DW_ACCESS_public)
+    1286              
+    1287              $C$DW$39        .dwtag  DW_TAG_member
+    1288                      .dwattr $C$DW$39, DW_AT_type(*$C$DW$T$19)
+    1289                      .dwattr $C$DW$39, DW_AT_name("HOLDAS")
+    1290                      .dwattr $C$DW$39, DW_AT_TI_symbol_name("_HOLDAS")
+    1291                      .dwattr $C$DW$39, DW_AT_bit_offset(0x04)
+    1292                      .dwattr $C$DW$39, DW_AT_bit_size(0x01)
+    1293                      .dwattr $C$DW$39, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1294                      .dwattr $C$DW$39, DW_AT_accessibility(DW_ACCESS_public)
+    1295              
+    1296              $C$DW$40        .dwtag  DW_TAG_member
+    1297                      .dwattr $C$DW$40, DW_AT_type(*$C$DW$T$19)
+    1298                      .dwattr $C$DW$40, DW_AT_name("rsvd2")
+    1299                      .dwattr $C$DW$40, DW_AT_TI_symbol_name("_rsvd2")
+    1300                      .dwattr $C$DW$40, DW_AT_bit_offset(0x00)
+    1301                      .dwattr $C$DW$40, DW_AT_bit_size(0x04)
+    1302                      .dwattr $C$DW$40, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1303                      .dwattr $C$DW$40, DW_AT_accessibility(DW_ACCESS_public)
+    1304              
+    1305              $C$DW$41        .dwtag  DW_TAG_member
+    1306                      .dwattr $C$DW$41, DW_AT_type(*$C$DW$T$19)
+    1307                      .dwattr $C$DW$41, DW_AT_name("XTIMCLK")
+    1308                      .dwattr $C$DW$41, DW_AT_TI_symbol_name("_XTIMCLK")
+    1309                      .dwattr $C$DW$41, DW_AT_bit_offset(0x0d)
+    1310                      .dwattr $C$DW$41, DW_AT_bit_size(0x03)
+    1311                      .dwattr $C$DW$41, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1312                      .dwattr $C$DW$41, DW_AT_accessibility(DW_ACCESS_public)
+    1313              
+    1314              $C$DW$42        .dwtag  DW_TAG_member
+    1315                      .dwattr $C$DW$42, DW_AT_type(*$C$DW$T$19)
+    1316                      .dwattr $C$DW$42, DW_AT_name("rsvd3")
+    1317                      .dwattr $C$DW$42, DW_AT_TI_symbol_name("_rsvd3")
+    1318                      .dwattr $C$DW$42, DW_AT_bit_offset(0x00)
+    1319                      .dwattr $C$DW$42, DW_AT_bit_size(0x0d)
+    1320                      .dwattr $C$DW$42, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1321                      .dwattr $C$DW$42, DW_AT_accessibility(DW_ACCESS_public)
+    1322              
+    1323                      .dwendtag $C$DW$T$22
+    1324              
+    1325              
+    1326              $C$DW$T$24      .dwtag  DW_TAG_union_type
+    1327                      .dwattr $C$DW$T$24, DW_AT_name("XINTCNF2_REG")
+    1328                      .dwattr $C$DW$T$24, DW_AT_byte_size(0x02)
+    1329              $C$DW$43        .dwtag  DW_TAG_member
+    1330                      .dwattr $C$DW$43, DW_AT_type(*$C$DW$T$23)
+    1331                      .dwattr $C$DW$43, DW_AT_name("all")
+    1332                      .dwattr $C$DW$43, DW_AT_TI_symbol_name("_all")
+    1333                      .dwattr $C$DW$43, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1334                      .dwattr $C$DW$43, DW_AT_accessibility(DW_ACCESS_public)
+    1335              
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   27
+
+    1336              $C$DW$44        .dwtag  DW_TAG_member
+    1337                      .dwattr $C$DW$44, DW_AT_type(*$C$DW$T$22)
+    1338                      .dwattr $C$DW$44, DW_AT_name("bit")
+    1339                      .dwattr $C$DW$44, DW_AT_TI_symbol_name("_bit")
+    1340                      .dwattr $C$DW$44, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1341                      .dwattr $C$DW$44, DW_AT_accessibility(DW_ACCESS_public)
+    1342              
+    1343                      .dwendtag $C$DW$T$24
+    1344              
+    1345              
+    1346              $C$DW$T$28      .dwtag  DW_TAG_structure_type
+    1347                      .dwattr $C$DW$T$28, DW_AT_name("XINTF_REGS")
+    1348                      .dwattr $C$DW$T$28, DW_AT_byte_size(0x20)
+    1349              $C$DW$45        .dwtag  DW_TAG_member
+    1350                      .dwattr $C$DW$45, DW_AT_type(*$C$DW$T$30)
+    1351                      .dwattr $C$DW$45, DW_AT_name("XTIMING0")
+    1352                      .dwattr $C$DW$45, DW_AT_TI_symbol_name("_XTIMING0")
+    1353                      .dwattr $C$DW$45, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1354                      .dwattr $C$DW$45, DW_AT_accessibility(DW_ACCESS_public)
+    1355              
+    1356              $C$DW$46        .dwtag  DW_TAG_member
+    1357                      .dwattr $C$DW$46, DW_AT_type(*$C$DW$T$30)
+    1358                      .dwattr $C$DW$46, DW_AT_name("XTIMING1")
+    1359                      .dwattr $C$DW$46, DW_AT_TI_symbol_name("_XTIMING1")
+    1360                      .dwattr $C$DW$46, DW_AT_data_member_location[DW_OP_plus_uconst 0x2]
+    1361                      .dwattr $C$DW$46, DW_AT_accessibility(DW_ACCESS_public)
+    1362              
+    1363              $C$DW$47        .dwtag  DW_TAG_member
+    1364                      .dwattr $C$DW$47, DW_AT_type(*$C$DW$T$30)
+    1365                      .dwattr $C$DW$47, DW_AT_name("XTIMING2")
+    1366                      .dwattr $C$DW$47, DW_AT_TI_symbol_name("_XTIMING2")
+    1367                      .dwattr $C$DW$47, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    1368                      .dwattr $C$DW$47, DW_AT_accessibility(DW_ACCESS_public)
+    1369              
+    1370              $C$DW$48        .dwtag  DW_TAG_member
+    1371                      .dwattr $C$DW$48, DW_AT_type(*$C$DW$T$25)
+    1372                      .dwattr $C$DW$48, DW_AT_name("rsvd1")
+    1373                      .dwattr $C$DW$48, DW_AT_TI_symbol_name("_rsvd1")
+    1374                      .dwattr $C$DW$48, DW_AT_data_member_location[DW_OP_plus_uconst 0x6]
+    1375                      .dwattr $C$DW$48, DW_AT_accessibility(DW_ACCESS_public)
+    1376              
+    1377              $C$DW$49        .dwtag  DW_TAG_member
+    1378                      .dwattr $C$DW$49, DW_AT_type(*$C$DW$T$30)
+    1379                      .dwattr $C$DW$49, DW_AT_name("XTIMING6")
+    1380                      .dwattr $C$DW$49, DW_AT_TI_symbol_name("_XTIMING6")
+    1381                      .dwattr $C$DW$49, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+    1382                      .dwattr $C$DW$49, DW_AT_accessibility(DW_ACCESS_public)
+    1383              
+    1384              $C$DW$50        .dwtag  DW_TAG_member
+    1385                      .dwattr $C$DW$50, DW_AT_type(*$C$DW$T$30)
+    1386                      .dwattr $C$DW$50, DW_AT_name("XTIMING7")
+    1387                      .dwattr $C$DW$50, DW_AT_TI_symbol_name("_XTIMING7")
+    1388                      .dwattr $C$DW$50, DW_AT_data_member_location[DW_OP_plus_uconst 0xe]
+    1389                      .dwattr $C$DW$50, DW_AT_accessibility(DW_ACCESS_public)
+    1390              
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   28
+
+    1391              $C$DW$51        .dwtag  DW_TAG_member
+    1392                      .dwattr $C$DW$51, DW_AT_type(*$C$DW$T$26)
+    1393                      .dwattr $C$DW$51, DW_AT_name("rsvd2")
+    1394                      .dwattr $C$DW$51, DW_AT_TI_symbol_name("_rsvd2")
+    1395                      .dwattr $C$DW$51, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
+    1396                      .dwattr $C$DW$51, DW_AT_accessibility(DW_ACCESS_public)
+    1397              
+    1398              $C$DW$52        .dwtag  DW_TAG_member
+    1399                      .dwattr $C$DW$52, DW_AT_type(*$C$DW$T$24)
+    1400                      .dwattr $C$DW$52, DW_AT_name("XINTCNF2")
+    1401                      .dwattr $C$DW$52, DW_AT_TI_symbol_name("_XINTCNF2")
+    1402                      .dwattr $C$DW$52, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
+    1403                      .dwattr $C$DW$52, DW_AT_accessibility(DW_ACCESS_public)
+    1404              
+    1405              $C$DW$53        .dwtag  DW_TAG_member
+    1406                      .dwattr $C$DW$53, DW_AT_type(*$C$DW$T$23)
+    1407                      .dwattr $C$DW$53, DW_AT_name("rsvd3")
+    1408                      .dwattr $C$DW$53, DW_AT_TI_symbol_name("_rsvd3")
+    1409                      .dwattr $C$DW$53, DW_AT_data_member_location[DW_OP_plus_uconst 0x16]
+    1410                      .dwattr $C$DW$53, DW_AT_accessibility(DW_ACCESS_public)
+    1411              
+    1412              $C$DW$54        .dwtag  DW_TAG_member
+    1413                      .dwattr $C$DW$54, DW_AT_type(*$C$DW$T$21)
+    1414                      .dwattr $C$DW$54, DW_AT_name("XBANK")
+    1415                      .dwattr $C$DW$54, DW_AT_TI_symbol_name("_XBANK")
+    1416                      .dwattr $C$DW$54, DW_AT_data_member_location[DW_OP_plus_uconst 0x18]
+    1417                      .dwattr $C$DW$54, DW_AT_accessibility(DW_ACCESS_public)
+    1418              
+    1419              $C$DW$55        .dwtag  DW_TAG_member
+    1420                      .dwattr $C$DW$55, DW_AT_type(*$C$DW$T$19)
+    1421                      .dwattr $C$DW$55, DW_AT_name("rsvd4")
+    1422                      .dwattr $C$DW$55, DW_AT_TI_symbol_name("_rsvd4")
+    1423                      .dwattr $C$DW$55, DW_AT_data_member_location[DW_OP_plus_uconst 0x19]
+    1424                      .dwattr $C$DW$55, DW_AT_accessibility(DW_ACCESS_public)
+    1425              
+    1426              $C$DW$56        .dwtag  DW_TAG_member
+    1427                      .dwattr $C$DW$56, DW_AT_type(*$C$DW$T$19)
+    1428                      .dwattr $C$DW$56, DW_AT_name("XREVISION")
+    1429                      .dwattr $C$DW$56, DW_AT_TI_symbol_name("_XREVISION")
+    1430                      .dwattr $C$DW$56, DW_AT_data_member_location[DW_OP_plus_uconst 0x1a]
+    1431                      .dwattr $C$DW$56, DW_AT_accessibility(DW_ACCESS_public)
+    1432              
+    1433              $C$DW$57        .dwtag  DW_TAG_member
+    1434                      .dwattr $C$DW$57, DW_AT_type(*$C$DW$T$27)
+    1435                      .dwattr $C$DW$57, DW_AT_name("rsvd5")
+    1436                      .dwattr $C$DW$57, DW_AT_TI_symbol_name("_rsvd5")
+    1437                      .dwattr $C$DW$57, DW_AT_data_member_location[DW_OP_plus_uconst 0x1b]
+    1438                      .dwattr $C$DW$57, DW_AT_accessibility(DW_ACCESS_public)
+    1439              
+    1440                      .dwendtag $C$DW$T$28
+    1441              
+    1442              $C$DW$58        .dwtag  DW_TAG_TI_far_type
+    1443                      .dwattr $C$DW$58, DW_AT_type(*$C$DW$T$28)
+    1444              
+    1445              $C$DW$T$35      .dwtag  DW_TAG_volatile_type
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   29
+
+    1446                      .dwattr $C$DW$T$35, DW_AT_type(*$C$DW$58)
+    1447              
+    1448              
+    1449              $C$DW$T$29      .dwtag  DW_TAG_structure_type
+    1450                      .dwattr $C$DW$T$29, DW_AT_name("XTIMING_BITS")
+    1451                      .dwattr $C$DW$T$29, DW_AT_byte_size(0x02)
+    1452              $C$DW$59        .dwtag  DW_TAG_member
+    1453                      .dwattr $C$DW$59, DW_AT_type(*$C$DW$T$19)
+    1454                      .dwattr $C$DW$59, DW_AT_name("XWRTRAIL")
+    1455                      .dwattr $C$DW$59, DW_AT_TI_symbol_name("_XWRTRAIL")
+    1456                      .dwattr $C$DW$59, DW_AT_bit_offset(0x0e)
+    1457                      .dwattr $C$DW$59, DW_AT_bit_size(0x02)
+    1458                      .dwattr $C$DW$59, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1459                      .dwattr $C$DW$59, DW_AT_accessibility(DW_ACCESS_public)
+    1460              
+    1461              $C$DW$60        .dwtag  DW_TAG_member
+    1462                      .dwattr $C$DW$60, DW_AT_type(*$C$DW$T$19)
+    1463                      .dwattr $C$DW$60, DW_AT_name("XWRACTIVE")
+    1464                      .dwattr $C$DW$60, DW_AT_TI_symbol_name("_XWRACTIVE")
+    1465                      .dwattr $C$DW$60, DW_AT_bit_offset(0x0b)
+    1466                      .dwattr $C$DW$60, DW_AT_bit_size(0x03)
+    1467                      .dwattr $C$DW$60, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1468                      .dwattr $C$DW$60, DW_AT_accessibility(DW_ACCESS_public)
+    1469              
+    1470              $C$DW$61        .dwtag  DW_TAG_member
+    1471                      .dwattr $C$DW$61, DW_AT_type(*$C$DW$T$19)
+    1472                      .dwattr $C$DW$61, DW_AT_name("XWRLEAD")
+    1473                      .dwattr $C$DW$61, DW_AT_TI_symbol_name("_XWRLEAD")
+    1474                      .dwattr $C$DW$61, DW_AT_bit_offset(0x09)
+    1475                      .dwattr $C$DW$61, DW_AT_bit_size(0x02)
+    1476                      .dwattr $C$DW$61, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1477                      .dwattr $C$DW$61, DW_AT_accessibility(DW_ACCESS_public)
+    1478              
+    1479              $C$DW$62        .dwtag  DW_TAG_member
+    1480                      .dwattr $C$DW$62, DW_AT_type(*$C$DW$T$19)
+    1481                      .dwattr $C$DW$62, DW_AT_name("XRDTRAIL")
+    1482                      .dwattr $C$DW$62, DW_AT_TI_symbol_name("_XRDTRAIL")
+    1483                      .dwattr $C$DW$62, DW_AT_bit_offset(0x07)
+    1484                      .dwattr $C$DW$62, DW_AT_bit_size(0x02)
+    1485                      .dwattr $C$DW$62, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1486                      .dwattr $C$DW$62, DW_AT_accessibility(DW_ACCESS_public)
+    1487              
+    1488              $C$DW$63        .dwtag  DW_TAG_member
+    1489                      .dwattr $C$DW$63, DW_AT_type(*$C$DW$T$19)
+    1490                      .dwattr $C$DW$63, DW_AT_name("XRDACTIVE")
+    1491                      .dwattr $C$DW$63, DW_AT_TI_symbol_name("_XRDACTIVE")
+    1492                      .dwattr $C$DW$63, DW_AT_bit_offset(0x04)
+    1493                      .dwattr $C$DW$63, DW_AT_bit_size(0x03)
+    1494                      .dwattr $C$DW$63, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1495                      .dwattr $C$DW$63, DW_AT_accessibility(DW_ACCESS_public)
+    1496              
+    1497              $C$DW$64        .dwtag  DW_TAG_member
+    1498                      .dwattr $C$DW$64, DW_AT_type(*$C$DW$T$19)
+    1499                      .dwattr $C$DW$64, DW_AT_name("XRDLEAD")
+    1500                      .dwattr $C$DW$64, DW_AT_TI_symbol_name("_XRDLEAD")
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   30
+
+    1501                      .dwattr $C$DW$64, DW_AT_bit_offset(0x02)
+    1502                      .dwattr $C$DW$64, DW_AT_bit_size(0x02)
+    1503                      .dwattr $C$DW$64, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1504                      .dwattr $C$DW$64, DW_AT_accessibility(DW_ACCESS_public)
+    1505              
+    1506              $C$DW$65        .dwtag  DW_TAG_member
+    1507                      .dwattr $C$DW$65, DW_AT_type(*$C$DW$T$19)
+    1508                      .dwattr $C$DW$65, DW_AT_name("USEREADY")
+    1509                      .dwattr $C$DW$65, DW_AT_TI_symbol_name("_USEREADY")
+    1510                      .dwattr $C$DW$65, DW_AT_bit_offset(0x01)
+    1511                      .dwattr $C$DW$65, DW_AT_bit_size(0x01)
+    1512                      .dwattr $C$DW$65, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1513                      .dwattr $C$DW$65, DW_AT_accessibility(DW_ACCESS_public)
+    1514              
+    1515              $C$DW$66        .dwtag  DW_TAG_member
+    1516                      .dwattr $C$DW$66, DW_AT_type(*$C$DW$T$19)
+    1517                      .dwattr $C$DW$66, DW_AT_name("READYMODE")
+    1518                      .dwattr $C$DW$66, DW_AT_TI_symbol_name("_READYMODE")
+    1519                      .dwattr $C$DW$66, DW_AT_bit_offset(0x00)
+    1520                      .dwattr $C$DW$66, DW_AT_bit_size(0x01)
+    1521                      .dwattr $C$DW$66, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1522                      .dwattr $C$DW$66, DW_AT_accessibility(DW_ACCESS_public)
+    1523              
+    1524              $C$DW$67        .dwtag  DW_TAG_member
+    1525                      .dwattr $C$DW$67, DW_AT_type(*$C$DW$T$19)
+    1526                      .dwattr $C$DW$67, DW_AT_name("XSIZE")
+    1527                      .dwattr $C$DW$67, DW_AT_TI_symbol_name("_XSIZE")
+    1528                      .dwattr $C$DW$67, DW_AT_bit_offset(0x0e)
+    1529                      .dwattr $C$DW$67, DW_AT_bit_size(0x02)
+    1530                      .dwattr $C$DW$67, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1531                      .dwattr $C$DW$67, DW_AT_accessibility(DW_ACCESS_public)
+    1532              
+    1533              $C$DW$68        .dwtag  DW_TAG_member
+    1534                      .dwattr $C$DW$68, DW_AT_type(*$C$DW$T$19)
+    1535                      .dwattr $C$DW$68, DW_AT_name("rsvd1")
+    1536                      .dwattr $C$DW$68, DW_AT_TI_symbol_name("_rsvd1")
+    1537                      .dwattr $C$DW$68, DW_AT_bit_offset(0x0a)
+    1538                      .dwattr $C$DW$68, DW_AT_bit_size(0x04)
+    1539                      .dwattr $C$DW$68, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1540                      .dwattr $C$DW$68, DW_AT_accessibility(DW_ACCESS_public)
+    1541              
+    1542              $C$DW$69        .dwtag  DW_TAG_member
+    1543                      .dwattr $C$DW$69, DW_AT_type(*$C$DW$T$19)
+    1544                      .dwattr $C$DW$69, DW_AT_name("X2TIMING")
+    1545                      .dwattr $C$DW$69, DW_AT_TI_symbol_name("_X2TIMING")
+    1546                      .dwattr $C$DW$69, DW_AT_bit_offset(0x09)
+    1547                      .dwattr $C$DW$69, DW_AT_bit_size(0x01)
+    1548                      .dwattr $C$DW$69, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1549                      .dwattr $C$DW$69, DW_AT_accessibility(DW_ACCESS_public)
+    1550              
+    1551              $C$DW$70        .dwtag  DW_TAG_member
+    1552                      .dwattr $C$DW$70, DW_AT_type(*$C$DW$T$19)
+    1553                      .dwattr $C$DW$70, DW_AT_name("rsvd3")
+    1554                      .dwattr $C$DW$70, DW_AT_TI_symbol_name("_rsvd3")
+    1555                      .dwattr $C$DW$70, DW_AT_bit_offset(0x00)
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   31
+
+    1556                      .dwattr $C$DW$70, DW_AT_bit_size(0x09)
+    1557                      .dwattr $C$DW$70, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1558                      .dwattr $C$DW$70, DW_AT_accessibility(DW_ACCESS_public)
+    1559              
+    1560                      .dwendtag $C$DW$T$29
+    1561              
+    1562              
+    1563              $C$DW$T$30      .dwtag  DW_TAG_union_type
+    1564                      .dwattr $C$DW$T$30, DW_AT_name("XTIMING_REG")
+    1565                      .dwattr $C$DW$T$30, DW_AT_byte_size(0x02)
+    1566              $C$DW$71        .dwtag  DW_TAG_member
+    1567                      .dwattr $C$DW$71, DW_AT_type(*$C$DW$T$23)
+    1568                      .dwattr $C$DW$71, DW_AT_name("all")
+    1569                      .dwattr $C$DW$71, DW_AT_TI_symbol_name("_all")
+    1570                      .dwattr $C$DW$71, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1571                      .dwattr $C$DW$71, DW_AT_accessibility(DW_ACCESS_public)
+    1572              
+    1573              $C$DW$72        .dwtag  DW_TAG_member
+    1574                      .dwattr $C$DW$72, DW_AT_type(*$C$DW$T$29)
+    1575                      .dwattr $C$DW$72, DW_AT_name("bit")
+    1576                      .dwattr $C$DW$72, DW_AT_TI_symbol_name("_bit")
+    1577                      .dwattr $C$DW$72, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1578                      .dwattr $C$DW$72, DW_AT_accessibility(DW_ACCESS_public)
+    1579              
+    1580                      .dwendtag $C$DW$T$30
+    1581              
+    1582              $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+    1583                      .dwattr $C$DW$T$2, DW_AT_name("void")
+    1584              
+    1585              $C$DW$T$4       .dwtag  DW_TAG_base_type
+    1586                      .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+    1587                      .dwattr $C$DW$T$4, DW_AT_name("bool")
+    1588                      .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+    1589              
+    1590              $C$DW$T$5       .dwtag  DW_TAG_base_type
+    1591                      .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+    1592                      .dwattr $C$DW$T$5, DW_AT_name("signed char")
+    1593                      .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+    1594              
+    1595              $C$DW$T$6       .dwtag  DW_TAG_base_type
+    1596                      .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+    1597                      .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+    1598                      .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+    1599              
+    1600              $C$DW$T$7       .dwtag  DW_TAG_base_type
+    1601                      .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+    1602                      .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+    1603                      .dwattr $C$DW$T$7, DW_AT_byte_size(0x01)
+    1604              
+    1605              $C$DW$T$8       .dwtag  DW_TAG_base_type
+    1606                      .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+    1607                      .dwattr $C$DW$T$8, DW_AT_name("short")
+    1608                      .dwattr $C$DW$T$8, DW_AT_byte_size(0x01)
+    1609              
+    1610              $C$DW$T$9       .dwtag  DW_TAG_base_type
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   32
+
+    1611                      .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+    1612                      .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+    1613                      .dwattr $C$DW$T$9, DW_AT_byte_size(0x01)
+    1614              
+    1615              $C$DW$T$10      .dwtag  DW_TAG_base_type
+    1616                      .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+    1617                      .dwattr $C$DW$T$10, DW_AT_name("int")
+    1618                      .dwattr $C$DW$T$10, DW_AT_byte_size(0x01)
+    1619              
+    1620              $C$DW$T$11      .dwtag  DW_TAG_base_type
+    1621                      .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+    1622                      .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+    1623                      .dwattr $C$DW$T$11, DW_AT_byte_size(0x01)
+    1624              
+    1625              $C$DW$T$39      .dwtag  DW_TAG_typedef
+    1626                      .dwattr $C$DW$T$39, DW_AT_name("Byte")
+    1627                      .dwattr $C$DW$T$39, DW_AT_type(*$C$DW$T$11)
+    1628                      .dwattr $C$DW$T$39, DW_AT_language(DW_LANG_C)
+    1629              
+    1630              $C$DW$73        .dwtag  DW_TAG_TI_far_type
+    1631                      .dwattr $C$DW$73, DW_AT_type(*$C$DW$T$39)
+    1632              
+    1633              $C$DW$T$41      .dwtag  DW_TAG_volatile_type
+    1634                      .dwattr $C$DW$T$41, DW_AT_type(*$C$DW$73)
+    1635              
+    1636              $C$DW$T$42      .dwtag  DW_TAG_pointer_type
+    1637                      .dwattr $C$DW$T$42, DW_AT_type(*$C$DW$T$41)
+    1638                      .dwattr $C$DW$T$42, DW_AT_address_class(0x20)
+    1639              
+    1640              $C$DW$T$19      .dwtag  DW_TAG_typedef
+    1641                      .dwattr $C$DW$T$19, DW_AT_name("Uint16")
+    1642                      .dwattr $C$DW$T$19, DW_AT_type(*$C$DW$T$11)
+    1643                      .dwattr $C$DW$T$19, DW_AT_language(DW_LANG_C)
+    1644              
+    1645              $C$DW$74        .dwtag  DW_TAG_TI_far_type
+    1646                      .dwattr $C$DW$74, DW_AT_type(*$C$DW$T$19)
+    1647              
+    1648              $C$DW$T$44      .dwtag  DW_TAG_volatile_type
+    1649                      .dwattr $C$DW$T$44, DW_AT_type(*$C$DW$74)
+    1650              
+    1651              $C$DW$T$45      .dwtag  DW_TAG_pointer_type
+    1652                      .dwattr $C$DW$T$45, DW_AT_type(*$C$DW$T$44)
+    1653                      .dwattr $C$DW$T$45, DW_AT_address_class(0x20)
+    1654              
+    1655              
+    1656              $C$DW$T$27      .dwtag  DW_TAG_array_type
+    1657                      .dwattr $C$DW$T$27, DW_AT_type(*$C$DW$T$19)
+    1658                      .dwattr $C$DW$T$27, DW_AT_language(DW_LANG_C)
+    1659                      .dwattr $C$DW$T$27, DW_AT_byte_size(0x05)
+    1660              $C$DW$75        .dwtag  DW_TAG_subrange_type
+    1661                      .dwattr $C$DW$75, DW_AT_upper_bound(0x04)
+    1662              
+    1663                      .dwendtag $C$DW$T$27
+    1664              
+    1665              $C$DW$T$12      .dwtag  DW_TAG_base_type
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   33
+
+    1666                      .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+    1667                      .dwattr $C$DW$T$12, DW_AT_name("long")
+    1668                      .dwattr $C$DW$T$12, DW_AT_byte_size(0x02)
+    1669              
+    1670              $C$DW$T$13      .dwtag  DW_TAG_base_type
+    1671                      .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+    1672                      .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+    1673                      .dwattr $C$DW$T$13, DW_AT_byte_size(0x02)
+    1674              
+    1675              $C$DW$T$23      .dwtag  DW_TAG_typedef
+    1676                      .dwattr $C$DW$T$23, DW_AT_name("Uint32")
+    1677                      .dwattr $C$DW$T$23, DW_AT_type(*$C$DW$T$13)
+    1678                      .dwattr $C$DW$T$23, DW_AT_language(DW_LANG_C)
+    1679              
+    1680              
+    1681              $C$DW$T$25      .dwtag  DW_TAG_array_type
+    1682                      .dwattr $C$DW$T$25, DW_AT_type(*$C$DW$T$23)
+    1683                      .dwattr $C$DW$T$25, DW_AT_language(DW_LANG_C)
+    1684                      .dwattr $C$DW$T$25, DW_AT_byte_size(0x06)
+    1685              $C$DW$76        .dwtag  DW_TAG_subrange_type
+    1686                      .dwattr $C$DW$76, DW_AT_upper_bound(0x02)
+    1687              
+    1688                      .dwendtag $C$DW$T$25
+    1689              
+    1690              
+    1691              $C$DW$T$26      .dwtag  DW_TAG_array_type
+    1692                      .dwattr $C$DW$T$26, DW_AT_type(*$C$DW$T$23)
+    1693                      .dwattr $C$DW$T$26, DW_AT_language(DW_LANG_C)
+    1694                      .dwattr $C$DW$T$26, DW_AT_byte_size(0x04)
+    1695              $C$DW$77        .dwtag  DW_TAG_subrange_type
+    1696                      .dwattr $C$DW$77, DW_AT_upper_bound(0x01)
+    1697              
+    1698                      .dwendtag $C$DW$T$26
+    1699              
+    1700              $C$DW$T$14      .dwtag  DW_TAG_base_type
+    1701                      .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+    1702                      .dwattr $C$DW$T$14, DW_AT_name("long long")
+    1703                      .dwattr $C$DW$T$14, DW_AT_byte_size(0x04)
+    1704              
+    1705              $C$DW$T$15      .dwtag  DW_TAG_base_type
+    1706                      .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+    1707                      .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+    1708                      .dwattr $C$DW$T$15, DW_AT_byte_size(0x04)
+    1709              
+    1710              $C$DW$T$16      .dwtag  DW_TAG_base_type
+    1711                      .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+    1712                      .dwattr $C$DW$T$16, DW_AT_name("float")
+    1713                      .dwattr $C$DW$T$16, DW_AT_byte_size(0x02)
+    1714              
+    1715              $C$DW$T$17      .dwtag  DW_TAG_base_type
+    1716                      .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+    1717                      .dwattr $C$DW$T$17, DW_AT_name("double")
+    1718                      .dwattr $C$DW$T$17, DW_AT_byte_size(0x02)
+    1719              
+    1720              $C$DW$T$18      .dwtag  DW_TAG_base_type
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   34
+
+    1721                      .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+    1722                      .dwattr $C$DW$T$18, DW_AT_name("long double")
+    1723                      .dwattr $C$DW$T$18, DW_AT_byte_size(0x04)
+    1724              
+    1725                      .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+    1726              
+    1727              ;***************************************************************
+    1728              ;* DWARF CIE ENTRIES                                           *
+    1729              ;***************************************************************
+    1730              
+    1731              $C$DW$CIE       .dwcie 26
+    1732                      .dwcfi  cfa_register, 20
+    1733                      .dwcfi  cfa_offset, 0
+    1734                      .dwcfi  same_value, 28
+    1735                      .dwcfi  same_value, 6
+    1736                      .dwcfi  same_value, 7
+    1737                      .dwcfi  same_value, 8
+    1738                      .dwcfi  same_value, 9
+    1739                      .dwcfi  same_value, 10
+    1740                      .dwcfi  same_value, 11
+    1741                      .dwendentry
+    1742              
+    1743              ;***************************************************************
+    1744              ;* DWARF REGISTER MAP                                          *
+    1745              ;***************************************************************
+    1746              
+    1747              $C$DW$78        .dwtag  DW_TAG_TI_assign_register
+    1748                      .dwattr $C$DW$78, DW_AT_name("AL")
+    1749                      .dwattr $C$DW$78, DW_AT_location[DW_OP_reg0]
+    1750              
+    1751              $C$DW$79        .dwtag  DW_TAG_TI_assign_register
+    1752                      .dwattr $C$DW$79, DW_AT_name("AH")
+    1753                      .dwattr $C$DW$79, DW_AT_location[DW_OP_reg1]
+    1754              
+    1755              $C$DW$80        .dwtag  DW_TAG_TI_assign_register
+    1756                      .dwattr $C$DW$80, DW_AT_name("PL")
+    1757                      .dwattr $C$DW$80, DW_AT_location[DW_OP_reg2]
+    1758              
+    1759              $C$DW$81        .dwtag  DW_TAG_TI_assign_register
+    1760                      .dwattr $C$DW$81, DW_AT_name("PH")
+    1761                      .dwattr $C$DW$81, DW_AT_location[DW_OP_reg3]
+    1762              
+    1763              $C$DW$82        .dwtag  DW_TAG_TI_assign_register
+    1764                      .dwattr $C$DW$82, DW_AT_name("SP")
+    1765                      .dwattr $C$DW$82, DW_AT_location[DW_OP_reg20]
+    1766              
+    1767              $C$DW$83        .dwtag  DW_TAG_TI_assign_register
+    1768                      .dwattr $C$DW$83, DW_AT_name("XT")
+    1769                      .dwattr $C$DW$83, DW_AT_location[DW_OP_reg21]
+    1770              
+    1771              $C$DW$84        .dwtag  DW_TAG_TI_assign_register
+    1772                      .dwattr $C$DW$84, DW_AT_name("T")
+    1773                      .dwattr $C$DW$84, DW_AT_location[DW_OP_reg22]
+    1774              
+    1775              $C$DW$85        .dwtag  DW_TAG_TI_assign_register
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   35
+
+    1776                      .dwattr $C$DW$85, DW_AT_name("ST0")
+    1777                      .dwattr $C$DW$85, DW_AT_location[DW_OP_reg23]
+    1778              
+    1779              $C$DW$86        .dwtag  DW_TAG_TI_assign_register
+    1780                      .dwattr $C$DW$86, DW_AT_name("ST1")
+    1781                      .dwattr $C$DW$86, DW_AT_location[DW_OP_reg24]
+    1782              
+    1783              $C$DW$87        .dwtag  DW_TAG_TI_assign_register
+    1784                      .dwattr $C$DW$87, DW_AT_name("PC")
+    1785                      .dwattr $C$DW$87, DW_AT_location[DW_OP_reg25]
+    1786              
+    1787              $C$DW$88        .dwtag  DW_TAG_TI_assign_register
+    1788                      .dwattr $C$DW$88, DW_AT_name("RPC")
+    1789                      .dwattr $C$DW$88, DW_AT_location[DW_OP_reg26]
+    1790              
+    1791              $C$DW$89        .dwtag  DW_TAG_TI_assign_register
+    1792                      .dwattr $C$DW$89, DW_AT_name("FP")
+    1793                      .dwattr $C$DW$89, DW_AT_location[DW_OP_reg28]
+    1794              
+    1795              $C$DW$90        .dwtag  DW_TAG_TI_assign_register
+    1796                      .dwattr $C$DW$90, DW_AT_name("DP")
+    1797                      .dwattr $C$DW$90, DW_AT_location[DW_OP_reg29]
+    1798              
+    1799              $C$DW$91        .dwtag  DW_TAG_TI_assign_register
+    1800                      .dwattr $C$DW$91, DW_AT_name("SXM")
+    1801                      .dwattr $C$DW$91, DW_AT_location[DW_OP_reg30]
+    1802              
+    1803              $C$DW$92        .dwtag  DW_TAG_TI_assign_register
+    1804                      .dwattr $C$DW$92, DW_AT_name("PM")
+    1805                      .dwattr $C$DW$92, DW_AT_location[DW_OP_reg31]
+    1806              
+    1807              $C$DW$93        .dwtag  DW_TAG_TI_assign_register
+    1808                      .dwattr $C$DW$93, DW_AT_name("OVM")
+    1809                      .dwattr $C$DW$93, DW_AT_location[DW_OP_regx 0x20]
+    1810              
+    1811              $C$DW$94        .dwtag  DW_TAG_TI_assign_register
+    1812                      .dwattr $C$DW$94, DW_AT_name("PAGE0")
+    1813                      .dwattr $C$DW$94, DW_AT_location[DW_OP_regx 0x21]
+    1814              
+    1815              $C$DW$95        .dwtag  DW_TAG_TI_assign_register
+    1816                      .dwattr $C$DW$95, DW_AT_name("AMODE")
+    1817                      .dwattr $C$DW$95, DW_AT_location[DW_OP_regx 0x22]
+    1818              
+    1819              $C$DW$96        .dwtag  DW_TAG_TI_assign_register
+    1820                      .dwattr $C$DW$96, DW_AT_name("EALLOW")
+    1821                      .dwattr $C$DW$96, DW_AT_location[DW_OP_regx 0x4e]
+    1822              
+    1823              $C$DW$97        .dwtag  DW_TAG_TI_assign_register
+    1824                      .dwattr $C$DW$97, DW_AT_name("INTM")
+    1825                      .dwattr $C$DW$97, DW_AT_location[DW_OP_regx 0x23]
+    1826              
+    1827              $C$DW$98        .dwtag  DW_TAG_TI_assign_register
+    1828                      .dwattr $C$DW$98, DW_AT_name("IFR")
+    1829                      .dwattr $C$DW$98, DW_AT_location[DW_OP_regx 0x24]
+    1830              
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   36
+
+    1831              $C$DW$99        .dwtag  DW_TAG_TI_assign_register
+    1832                      .dwattr $C$DW$99, DW_AT_name("IER")
+    1833                      .dwattr $C$DW$99, DW_AT_location[DW_OP_regx 0x25]
+    1834              
+    1835              $C$DW$100       .dwtag  DW_TAG_TI_assign_register
+    1836                      .dwattr $C$DW$100, DW_AT_name("V")
+    1837                      .dwattr $C$DW$100, DW_AT_location[DW_OP_regx 0x26]
+    1838              
+    1839              $C$DW$101       .dwtag  DW_TAG_TI_assign_register
+    1840                      .dwattr $C$DW$101, DW_AT_name("PSEUDOH")
+    1841                      .dwattr $C$DW$101, DW_AT_location[DW_OP_regx 0x4c]
+    1842              
+    1843              $C$DW$102       .dwtag  DW_TAG_TI_assign_register
+    1844                      .dwattr $C$DW$102, DW_AT_name("VOL")
+    1845                      .dwattr $C$DW$102, DW_AT_location[DW_OP_regx 0x4d]
+    1846              
+    1847              $C$DW$103       .dwtag  DW_TAG_TI_assign_register
+    1848                      .dwattr $C$DW$103, DW_AT_name("AR0")
+    1849                      .dwattr $C$DW$103, DW_AT_location[DW_OP_reg4]
+    1850              
+    1851              $C$DW$104       .dwtag  DW_TAG_TI_assign_register
+    1852                      .dwattr $C$DW$104, DW_AT_name("XAR0")
+    1853                      .dwattr $C$DW$104, DW_AT_location[DW_OP_reg5]
+    1854              
+    1855              $C$DW$105       .dwtag  DW_TAG_TI_assign_register
+    1856                      .dwattr $C$DW$105, DW_AT_name("AR1")
+    1857                      .dwattr $C$DW$105, DW_AT_location[DW_OP_reg6]
+    1858              
+    1859              $C$DW$106       .dwtag  DW_TAG_TI_assign_register
+    1860                      .dwattr $C$DW$106, DW_AT_name("XAR1")
+    1861                      .dwattr $C$DW$106, DW_AT_location[DW_OP_reg7]
+    1862              
+    1863              $C$DW$107       .dwtag  DW_TAG_TI_assign_register
+    1864                      .dwattr $C$DW$107, DW_AT_name("AR2")
+    1865                      .dwattr $C$DW$107, DW_AT_location[DW_OP_reg8]
+    1866              
+    1867              $C$DW$108       .dwtag  DW_TAG_TI_assign_register
+    1868                      .dwattr $C$DW$108, DW_AT_name("XAR2")
+    1869                      .dwattr $C$DW$108, DW_AT_location[DW_OP_reg9]
+    1870              
+    1871              $C$DW$109       .dwtag  DW_TAG_TI_assign_register
+    1872                      .dwattr $C$DW$109, DW_AT_name("AR3")
+    1873                      .dwattr $C$DW$109, DW_AT_location[DW_OP_reg10]
+    1874              
+    1875              $C$DW$110       .dwtag  DW_TAG_TI_assign_register
+    1876                      .dwattr $C$DW$110, DW_AT_name("XAR3")
+    1877                      .dwattr $C$DW$110, DW_AT_location[DW_OP_reg11]
+    1878              
+    1879              $C$DW$111       .dwtag  DW_TAG_TI_assign_register
+    1880                      .dwattr $C$DW$111, DW_AT_name("AR4")
+    1881                      .dwattr $C$DW$111, DW_AT_location[DW_OP_reg12]
+    1882              
+    1883              $C$DW$112       .dwtag  DW_TAG_TI_assign_register
+    1884                      .dwattr $C$DW$112, DW_AT_name("XAR4")
+    1885                      .dwattr $C$DW$112, DW_AT_location[DW_OP_reg13]
+TMS320C2000 Assembler PC v22.6.2 Tue Apr  8 10:05:53 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+C:/repo/jabil2025/gpb/gpb_project_v3/projects/Debug/Xintf.asm        PAGE   37
+
+    1886              
+    1887              $C$DW$113       .dwtag  DW_TAG_TI_assign_register
+    1888                      .dwattr $C$DW$113, DW_AT_name("AR5")
+    1889                      .dwattr $C$DW$113, DW_AT_location[DW_OP_reg14]
+    1890              
+    1891              $C$DW$114       .dwtag  DW_TAG_TI_assign_register
+    1892                      .dwattr $C$DW$114, DW_AT_name("XAR5")
+    1893                      .dwattr $C$DW$114, DW_AT_location[DW_OP_reg15]
+    1894              
+    1895              $C$DW$115       .dwtag  DW_TAG_TI_assign_register
+    1896                      .dwattr $C$DW$115, DW_AT_name("AR6")
+    1897                      .dwattr $C$DW$115, DW_AT_location[DW_OP_reg16]
+    1898              
+    1899              $C$DW$116       .dwtag  DW_TAG_TI_assign_register
+    1900                      .dwattr $C$DW$116, DW_AT_name("XAR6")
+    1901                      .dwattr $C$DW$116, DW_AT_location[DW_OP_reg17]
+    1902              
+    1903              $C$DW$117       .dwtag  DW_TAG_TI_assign_register
+    1904                      .dwattr $C$DW$117, DW_AT_name("AR7")
+    1905                      .dwattr $C$DW$117, DW_AT_location[DW_OP_reg18]
+    1906              
+    1907              $C$DW$118       .dwtag  DW_TAG_TI_assign_register
+    1908                      .dwattr $C$DW$118, DW_AT_name("XAR7")
+    1909                      .dwattr $C$DW$118, DW_AT_location[DW_OP_reg19]
+    1910              
+    1911                      .dwendtag $C$DW$CU
+    1912              
+
+No Assembly Errors, No Assembly Warnings

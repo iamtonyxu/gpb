@@ -1,0 +1,12 @@
+@P:  Worst Slack : 5.661
+@P:  top|SYS_CLK - Estimated Frequency : 230.4 MHz
+@P:  top|SYS_CLK - Requested Frequency : 100.0 MHz
+@P:  top|SYS_CLK - Estimated Period : 4.339
+@P:  top|SYS_CLK - Requested Period : 10.000
+@P:  top|SYS_CLK - Slack : 5.661
+@P: top Part : mpf100tfcg484std
+@P: top Register bits  : 305 
+@P: top DSP Blocks  : 0
+@P: top I/O primitives : 5
+@P: top RAM64x12 :  2
+@P:  CPU Time : 0h:00m:04s

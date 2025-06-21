@@ -1,0 +1,506 @@
+Device Selection
+Report Version,Date,Product,Release,Version,Design Name,Family,Die,Package
+0.1,Mon Apr 21 22:06:53 2025,Designer,v2024.2,2024.2.0.13,top,PolarFire,MPF100T,FCG484
+Pin Report
+Pin,Port,Function,Bank,State,I/O Std,Direction,Used I/O Reg,User I/O Lock Down,Clamp Diode,Resistor Pull,Use I/O Calibration from the lane,Schmitt Trigger,Vcm Input Range,On Die Termination,Odt Value (Ohm),Input Delay,Slew,Output Drive (mA),Impedance (ohm),Output Load (pF),Source Termination (Ohm),Output Delay,Board Layout
+A1,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+A2,---,GPIO145PB2/CLKIN_S_2/CCC_SW_CLKIN_S_2/CCC_SW_PLL1_OUT0,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+A3,UART_RXD,GPIO145NB2,Bank2,Fixed,LVCMOS33,Input,None,No,ON,Up,No,OFF,---,---,---,OFF,---,---,---,---,---,---,UART_RXD
+A4,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+A5,---,GPIO3NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+A6,---,GPIO9PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+A7,---,GPIO9NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+A8,---,GPIO11NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+A9,---,VDDI2,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+A10,---,GPIO16PB2/LPRB_A,Bank2,User Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Probe A
+A11,---,GPIO16NB2/LPRB_B,Bank2,User Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Probe B
+A12,---,GPIO17PB2/CLKIN_S_7,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+A13,---,GPIO17NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+A14,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+A15,---,GPIO35PB2/CLKIN_S_9/CCC_SE_CLKIN_S_9,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+A16,---,GPIO35NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+A17,---,GPIO32PB2/DQS/CCC_SE_PLL0_OUT0,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+A18,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+A19,---,XCVR_1_RX0_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity"
+A20,---,XCVR_1_RX0_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity"
+A21,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+A22,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+AA1,---,HSIO102NB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AA2,---,HSIO98PB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AA3,---,HSIO100NB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AA4,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+AA5,---,HSIO93PB0/DQS,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AA6,---,HSIO94NB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AA7,---,HSIO91PB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AA8,---,HSIO90PB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AA9,---,VDDI1,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDI1 to 1.2v/1.5v/1.8v or to VSS through resistor (10K ohm)
+AA10,---,HSIO54PB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AA11,---,HSIO55NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AA12,---,HSIO51PB1/DQS/CCC_NE_PLL1_OUT0,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AA13,---,HSIO52PB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AA14,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+AA15,---,HSIO48NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AA16,---,HSIO46PB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AA17,---,HSIO45NB1/DQS,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AA18,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+AA19,---,XCVR_0_RX3_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity"
+AA20,---,XCVR_0_RX3_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity"
+AA21,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+AA22,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+AB1,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+AB2,---,HSIO98NB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AB3,---,HSIO96PB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AB4,---,HSIO96NB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AB5,---,HSIO93NB0/DQS,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AB6,---,VDDI0,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDI0 to 1.2v/1.5v/1.8v or to VSS through resistor (10K ohm)
+AB7,---,HSIO91NB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AB8,---,HSIO57PB1/DQS,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AB9,---,HSIO57NB1/DQS,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AB10,---,HSIO54NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AB11,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+AB12,---,HSIO51NB1/DQS,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AB13,---,HSIO52NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AB14,---,HSIO50PB1/CLKIN_N_8/CCC_NE_CLKIN_N_8/CCC_NE_PLL1_OUT0,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AB15,---,HSIO50NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AB16,---,VDDI1,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDI1 to 1.2v/1.5v/1.8v or to VSS through resistor (10K ohm)
+AB17,---,HSIO45PB1/DQS/CCC_NE_PLL0_OUT0,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AB18,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+AB19,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+AB20,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+AB21,---,XCVR_0_TX3_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
+AB22,---,XCVR_0_TX3_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
+B1,---,GPIO144NB2/DQS,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+B2,---,GPIO147PB2/CLKIN_S_3/CCC_SW_CLKIN_S_3,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+B3,---,GPIO147NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+B4,---,GPIO3PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+B5,---,GPIO5NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+B6,---,VDDI2,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+B7,---,GPIO7NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+B8,---,GPIO11PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+B9,---,GPIO14PB2/DQS,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+B10,---,GPIO14NB2/DQS,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+B11,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+B12,---,GPIO12PB2/CLKIN_S_4,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+B13,---,GPIO12NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+B14,---,GPIO33PB2/CLKIN_S_8/CCC_SE_CLKIN_S_8/CCC_SE_PLL0_OUT0,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+B15,---,GPIO33NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+B16,---,VDDI2,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+B17,---,GPIO32NB2/DQS,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+B18,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+B19,---,VDDA,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDA to 1.0v/1.05v or to VSS through resistor (10K ohm)
+B20,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+B21,---,XCVR_1_TX0_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
+B22,---,XCVR_1_TX0_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
+C1,---,GPIO144PB2/DQS/CCC_SW_PLL1_OUT0,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+C2,---,GPIO143NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+C3,---,VDDI2,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+C4,---,GPIO1NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+C5,---,GPIO5PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+C6,---,GPIO7PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+C7,---,GPIO6NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+C8,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+C9,---,GPIO13PB2/CLKIN_S_5,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+C10,---,GPIO13NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+C11,---,GPIO15PB2/CLKIN_S_6,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+C12,---,GPIO15NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+C13,---,VDDI2,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+C14,---,GPIO31PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+C15,---,GPIO31NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+C16,---,GPIO34PB2/CCC_SE_PLL0_OUT1,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+C17,---,GPIO34NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+C18,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+C19,---,XCVR_1_RX1_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity"
+C20,---,XCVR_1_RX1_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity"
+C21,---,VDDA,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDA to 1.0v/1.05v or to VSS through resistor (10K ohm)
+C22,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+D1,POWER_GOOD,GPIO142NB2,Bank2,Fixed,LVCMOS33,Output,None,No,ON,None,No,---,---,---,---,---,OFF,12,---,5,---,OFF,POWER_GOOD
+D2,---,GPIO143PB2/CCC_SW_CLKIN_S_1,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+D3,---,GPIO146NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+D4,---,GPIO1PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+D5,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+D6,---,GPIO4NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+D7,---,GPIO6PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+D8,---,GPIO8NB2/DQS,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+D9,---,GPIO10NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+D10,---,VDDI2,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+D11,---,GPIO26PB2/DQS,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+D12,---,GPIO26NB2/DQS,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+D13,---,GPIO29PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+D14,---,GPIO30PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+D15,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+D16,---,GPIO38PB2/DQS/CCC_SE_PLL1_OUT0,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+D17,---,GPIO38NB2/DQS,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+D18,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+D19,---,XCVR_VREF,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect to VSS through resistor (10K ohm)
+D20,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+D21,---,XCVR_1_TX1_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
+D22,---,XCVR_1_TX1_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
+E1,---,GPIO142PB2/CCC_SW_CLKIN_S_0,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+E2,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+E3,UART_TXD,GPIO146PB2/CCC_SW_PLL1_OUT1,Bank2,Fixed,LVCMOS33,Output,None,No,ON,None,No,---,---,---,---,---,OFF,8,---,5,---,OFF,UART_TXD
+E4,---,GPIO2NB2/DQS,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+E5,---,GPIO0NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+E6,---,GPIO4PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+E7,---,VDDI2,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+E8,---,GPIO8PB2/DQS,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+E9,---,GPIO10PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+E10,---,GPIO25NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+E11,---,GPIO28PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+E12,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+E13,---,GPIO29NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+E14,---,GPIO30NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+E15,---,GPIO39PB2/CCC_SE_CLKIN_S_10/CCC_SE_PLL1_OUT0,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+E16,---,GPIO39NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+E17,---,VDDI2,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+E18,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+E19,---,XCVR_1C_REFCLK_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity,CLAMP=OFF"
+E20,---,XCVR_1C_REFCLK_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity,CLAMP=OFF"
+E21,---,VDDA,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDA to 1.0v/1.05v or to VSS through resistor (10K ohm)
+E22,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+F1,---,GPIO134NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+F2,---,GPIO134PB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+F3,---,GPIO2PB2/DQS,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+F4,---,VDDI2,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+F5,---,GPIO0PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+F6,---,TDO,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC,CLAMP=OFF"
+F7,---,TMS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC,CLAMP=OFF"
+F8,---,TCK,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"Must connect to VSS through resistor (10K ohm),CLAMP=OFF"
+F9,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+F10,---,GPIO25PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+F11,---,GPIO28NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+F12,---,GPIO27NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+F13,---,GPIO27PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+F14,---,VDDI2,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+F15,---,GPIO41PB2/CCC_SE_CLKIN_S_11,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+F16,---,GPIO41NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+F17,---,GPIO40NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+F18,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+F19,---,XCVR_VREF,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect to VSS through resistor (10K ohm)
+F20,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+F21,---,XCVR_1_RX2_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity"
+F22,---,XCVR_1_RX2_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity"
+G1,---,VDDI4,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+G2,---,GPIO135PB4/CLKIN_W_3/CCC_SW_CLKIN_W_3,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+G3,---,SCK,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"Must connect to VSS through resistor (10K ohm),CLAMP=OFF"
+G4,---,SS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"Must connect to VSS through resistor (10K ohm),CLAMP=OFF"
+G5,---,SDO,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC,CLAMP=OFF"
+G6,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+G7,---,TRSTB,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"Must connect to VDDI3 through 1k ohm resistor per pin (not to be shared with any other pins),CLAMP=OFF"
+G8,---,TDI,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC,CLAMP=OFF"
+G9,---,IO_CFG_INTF,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"Must connect to VSS through resistor (10K ohm),CLAMP=OFF"
+G10,---,SDI,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"Must connect to VDDI3 through resistor (10K ohm),CLAMP=OFF"
+G11,---,VDDI2,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+G12,---,GPIO24PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+G13,---,GPIO24NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+G14,---,GPIO36PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+G15,---,GPIO37NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+G16,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+G17,---,GPIO40PB2/CCC_SE_PLL1_OUT1,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+G18,---,VDDA25,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDA25 to 2.5v or to VSS through resistor (10K ohm)
+G19,---,XCVR_1A_REFCLK_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity,CLAMP=OFF"
+G20,---,XCVR_1A_REFCLK_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity,CLAMP=OFF"
+G21,---,VDDA,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDA to 1.0v/1.05v or to VSS through resistor (10K ohm)
+G22,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+H1,---,GPIO133PB4/DQS,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+H2,---,GPIO135NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+H3,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+H4,---,GPIO139PB4/DQS/CCC_SW_PLL0_OUT0,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+H5,---,GPIO140NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+H6,---,GPIO140PB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+H7,---,GPIO137PB4/CLKIN_W_2/CCC_SW_CLKIN_W_2/CCC_SW_PLL0_OUT0,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+H8,---,VDDI3,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDI3 to 1.8v/2.5v/3.3v
+H9,---,DEVRST_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"Must connect to VDDI3 through 1k ohm resistor per pin (not to be shared with any other pins),CLAMP=OFF"
+H10,---,SPI_EN,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"Must connect to VSS through resistor (10K ohm),CLAMP=OFF"
+H11,---,RESERVED,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC,CLAMP=OFF"
+H12,---,VDDI3,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDI3 to 1.8v/2.5v/3.3v
+H13,---,GPIO36NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+H14,---,VDDAUX2,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+H15,---,GPIO37PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+H16,---,VDDAUX2,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+H17,---,VDDI2,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+H18,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+H19,---,VDDA,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDA to 1.0v/1.05v or to VSS through resistor (10K ohm)
+H20,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+H21,---,XCVR_1_TX2_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
+H22,---,XCVR_1_TX2_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
+J1,---,GPIO133NB4/DQS,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+J2,---,GPIO131NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+J3,---,GPIO131PB4/CLKIN_W_5/CCC_NW_CLKIN_W_5,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+J4,---,GPIO139NB4/DQS,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+J5,---,VDDI4,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+J6,---,GPIO136PB4/CCC_SW_PLL0_OUT1,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+J7,---,GPIO137NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+J8,---,GPIO138PB4/CLKIN_W_1/CCC_SW_CLKIN_W_1,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+J9,---,GPIO141PB4/CLKIN_W_0/CCC_SW_CLKIN_W_0,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+J10,---,VDD25,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDD25 to 2.5v
+J11,---,VDDAUX2,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+J12,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+J13,---,VDDAUX2,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+J14,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+J15,---,VDD,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,1.0v
+J16,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+J17,---,VDD25,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDD25 to 2.5v
+J18,---,VDD_XCVR_CLK,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDD_XCVR_CLK to 2.5v/3.3v or to VSS through resistor (10K ohm)
+J19,---,XCVR_1B_REFCLK_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity,CLAMP=OFF"
+J20,---,XCVR_1B_REFCLK_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity,CLAMP=OFF"
+J21,---,VDDA,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDA to 1.0v/1.05v or to VSS through resistor (10K ohm)
+J22,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+K1,---,GPIO130PB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+K2,---,VDDI4,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+K3,---,GPIO132PB4/CLKIN_W_4/CCC_NW_CLKIN_W_4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+K4,---,GPIO127NB4/DQS,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+K5,---,GPIO127PB4/DQS,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+K6,---,GPIO136NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+K7,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+K8,---,GPIO138NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+K9,---,GPIO141NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+K10,---,VDDAUX4,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+K11,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+K12,---,VDD,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,1.0v
+K13,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+K14,---,VDD,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,1.0v
+K15,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+K16,---,VDD,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,1.0v
+K17,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+K18,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+K19,---,VDDA,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDA to 1.0v/1.05v or to VSS through resistor (10K ohm)
+K20,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+K21,---,XCVR_1_TX3_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
+K22,---,XCVR_1_TX3_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
+L1,---,GPIO130NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+L2,---,GPIO132NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+L3,---,GPIO128PB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+L4,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+L5,---,GPIO129PB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+L6,RESET_N,GPIO126PB4,Bank4,Fixed,LVCMOS33,Input,None,No,ON,Up,No,OFF,---,---,---,OFF,---,---,---,---,---,---,RESET_N
+L7,---,GPIO125PB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+L8,---,GPIO125NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+L9,---,VDDI4,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+L10,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+L11,---,VDD,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,1.0v
+L12,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+L13,---,VDD25,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDD25 to 2.5v
+L14,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+L15,---,VDD,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,1.0v
+L16,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+L17,---,VDD,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,1.0v
+L18,---,VDDA25,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDA25 to 2.5v or to VSS through resistor (10K ohm)
+L19,---,XCVR_1_RX3_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity"
+L20,---,XCVR_1_RX3_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity"
+L21,---,VDDA,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDA to 1.0v/1.05v or to VSS through resistor (10K ohm)
+L22,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+M1,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+M2,---,GPIO124NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+M3,---,GPIO124PB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+M4,---,GPIO128NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+M5,---,GPIO129NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+M6,---,VDDI4,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+M7,---,GPIO126NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+M8,---,GPIO123PB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+M9,---,GPIO123NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+M10,---,VDDAUX4,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+M11,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+M12,---,VDD,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,1.0v
+M13,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+M14,---,VDD,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,1.0v
+M15,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+M16,---,VDD,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,1.0v
+M17,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+M18,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+M19,---,VDDA,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDA to 1.0v/1.05v or to VSS through resistor (10K ohm)
+M20,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+M21,---,XCVR_0_RX0_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity"
+M22,---,XCVR_0_RX0_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity"
+N1,---,GPIO109PB4/DQS,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+N2,---,GPIO112PB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+N3,---,VDDI4,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+N4,---,GPIO116PB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+N5,---,GPIO122NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+N6,---,GPIO122PB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+N7,---,GPIO121PB4/DQS,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+N8,---,GPIO121NB4/DQS,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+N9,---,VDDAUX4,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+N10,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+N11,---,VDD,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,1.0v
+N12,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+N13,---,VDD,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,1.0v
+N14,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+N15,---,VDD,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,1.0v
+N16,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+N17,---,VDD,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,1.0v
+N18,---,VDD_XCVR_CLK,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDD_XCVR_CLK to 2.5v/3.3v or to VSS through resistor (10K ohm)
+N19,---,XCVR_0C_REFCLK_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity,CLAMP=OFF"
+N20,---,XCVR_0C_REFCLK_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity,CLAMP=OFF"
+N21,---,VDDA,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDA to 1.0v/1.05v or to VSS through resistor (10K ohm)
+N22,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+P1,---,GPIO109NB4/DQS,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+P2,---,GPIO112NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+P3,---,GPIO116NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+P4,---,GPIO114PB4/CLKIN_W_6/CCC_NW_CLKIN_W_6/CCC_NW_PLL0_OUT1,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+P5,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+P6,---,GPIO119PB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+P7,---,GPIO120PB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+P8,---,GPIO120NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+P9,---,GPIO118PB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+P10,---,VDD25,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDD25 to 2.5v
+P11,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+P12,---,VDD18,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDD18 to 1.8v
+P13,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+P14,---,VDD18,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDD18 to 1.8v
+P15,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+P16,---,VDD18,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDD18 to 1.8v
+P17,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+P18,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+P19,---,VDDA,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDA to 1.0v/1.05v or to VSS through resistor (10K ohm)
+P20,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+P21,---,XCVR_0_TX0_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
+P22,---,XCVR_0_TX0_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
+R1,SYS_CLK,GPIO108PB4/CLKIN_W_7/CCC_NW_CLKIN_W_7/CCC_NW_PLL0_OUT0,Bank4,Fixed,LVCMOS33,Input,None,No,ON,Up,No,OFF,---,---,---,OFF,---,---,---,---,---,---,SYS_CLK
+R2,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+R3,---,GPIO114NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+R4,---,GPIO117NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+R5,---,GPIO117PB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+R6,---,GPIO119NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+R7,---,VDDI4,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+R8,---,GPIO118NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+R9,---,HSIO80PB0/CLKIN_N_4,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+R10,---,HSIO80NB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+R11,---,VDDI0,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDI0 to 1.2v/1.5v/1.8v or to VSS through resistor (10K ohm)
+R12,---,HSIO70PB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+R13,---,HSIO69PB1/DQS,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+R14,---,VDD18,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDD18 to 1.8v
+R15,---,HSIO66NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+R16,---,HSIO47NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+R17,---,VDD25,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDD25 to 2.5v
+R18,---,VDDA25,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDA25 to 2.5v or to VSS through resistor (10K ohm)
+R19,---,XCVR_0A_REFCLK_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity,CLAMP=OFF"
+R20,---,XCVR_0A_REFCLK_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity,CLAMP=OFF"
+R21,---,VDDA,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDA to 1.0v/1.05v or to VSS through resistor (10K ohm)
+R22,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+T1,---,GPIO108NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+T2,---,GPIO115PB4/DQS/CCC_NW_PLL0_OUT0,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+T3,---,GPIO115NB4/DQS,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+T4,---,VDDI4,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
+T5,---,GPIO113PB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+T6,---,GPIO113NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+T7,---,HSIO83PB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+T8,---,HSIO83NB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+T9,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+T10,---,HSIO81PB0/DQS,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+T11,---,HSIO70NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+T12,---,HSIO69NB1/DQS,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+T13,---,HSIO67PB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+T14,---,VDDI1,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDI1 to 1.2v/1.5v/1.8v or to VSS through resistor (10K ohm)
+T15,---,HSIO66PB1/CLKIN_N_7,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+T16,---,HSIO47PB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+T17,---,HSIO42PB1/CCC_NE_CLKIN_N_11,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+T18,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+T19,---,VDDA,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDA to 1.0v/1.05v or to VSS through resistor (10K ohm)
+T20,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+T21,---,XCVR_0_RX1_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity"
+T22,---,XCVR_0_RX1_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity"
+U1,---,VDDI0,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDI0 to 1.2v/1.5v/1.8v or to VSS through resistor (10K ohm)
+U2,---,HSIO106NB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+U3,---,HSIO106PB0/CCC_NW_CLKIN_N_1,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+U4,---,HSIO107NB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+U5,---,HSIO107PB0/CCC_NW_CLKIN_N_0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+U6,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+U7,---,HSIO95PB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+U8,---,HSIO82PB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+U9,---,HSIO82NB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+U10,---,HSIO81NB0/DQS,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+U11,---,VDDI1,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDI1 to 1.2v/1.5v/1.8v or to VSS through resistor (10K ohm)
+U12,---,HSIO59PB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+U13,---,HSIO67NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+U14,---,HSIO71NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+U15,---,HSIO68NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+U16,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+U17,---,HSIO42NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+U18,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+U19,---,XCVR_0B_REFCLK_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity,CLAMP=OFF"
+U20,---,XCVR_0B_REFCLK_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity,CLAMP=OFF"
+U21,---,VDDA,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDA to 1.0v/1.05v or to VSS through resistor (10K ohm)
+U22,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+V1,---,HSIO104PB0/CLKIN_N_2/CCC_NW_CLKIN_N_2/CCC_NW_PLL1_OUT0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+V2,---,HSIO105PB0/DQS/CCC_NW_PLL1_OUT0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+V3,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+V4,---,HSIO103PB0/CCC_NW_PLL1_OUT1,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+V5,---,HSIO101PB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+V6,---,HSIO97PB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+V7,---,HSIO95NB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+V8,---,VDDI0,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDI0 to 1.2v/1.5v/1.8v or to VSS through resistor (10K ohm)
+V9,---,HSIO79PB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+V10,---,HSIO79NB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+V11,---,HSIO59NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+V12,---,HSIO56PB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+V13,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+V14,---,HSIO71PB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+V15,---,HSIO68PB1/CLKIN_N_6,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+V16,---,HSIO43PB1/CCC_NE_PLL0_OUT1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+V17,---,HSIO44NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+V18,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+V19,---,VDDA25,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDA25 to 2.5v or to VSS through resistor (10K ohm)
+V20,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+V21,---,XCVR_0_TX1_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
+V22,---,XCVR_0_TX1_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
+W1,---,HSIO104NB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+W2,---,HSIO105NB0/DQS,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+W3,---,HSIO103NB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+W4,---,HSIO101NB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+W5,---,VDDI0,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDI0 to 1.2v/1.5v/1.8v or to VSS through resistor (10K ohm)
+W6,---,HSIO97NB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+W7,---,HSIO92PB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+W8,---,HSIO92NB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+W9,---,HSIO78PB0/CLKIN_N_5,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+W10,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+W11,---,HSIO58PB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+W12,---,HSIO56NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+W13,---,HSIO53PB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+W14,---,HSIO49PB1/CCC_NE_PLL1_OUT1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+W15,---,VDDI1,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDI1 to 1.2v/1.5v/1.8v or to VSS through resistor (10K ohm)
+W16,---,HSIO43NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+W17,---,HSIO44PB1/CCC_NE_CLKIN_N_10/CCC_NE_PLL0_OUT0,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+W18,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+W19,---,XCVR_0_RX2_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity"
+W20,---,XCVR_0_RX2_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity"
+W21,---,VDDA,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDA to 1.0v/1.05v or to VSS through resistor (10K ohm)
+W22,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+Y1,---,HSIO102PB0/CLKIN_N_3/CCC_NW_CLKIN_N_3,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+Y2,---,VDDI0,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDI0 to 1.2v/1.5v/1.8v or to VSS through resistor (10K ohm)
+Y3,---,HSIO100PB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+Y4,---,HSIO99PB0/DQS,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+Y5,---,HSIO99NB0/DQS,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+Y6,---,HSIO94PB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+Y7,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+Y8,---,HSIO90NB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+Y9,---,HSIO78NB0,Bank0,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+Y10,---,HSIO58NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+Y11,---,HSIO55PB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+Y12,---,VDDI1,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDI1 to 1.2v/1.5v/1.8v or to VSS through resistor (10K ohm)
+Y13,---,HSIO53NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+Y14,---,HSIO49NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+Y15,---,HSIO48PB1/CLKIN_N_9/CCC_NE_CLKIN_N_9,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+Y16,---,HSIO46NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+Y17,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+Y18,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+Y19,---,VDDA,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDA to 1.0v/1.05v or to VSS through resistor (10K ohm)
+Y20,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
+Y21,---,XCVR_0_TX2_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
+Y22,---,XCVR_0_TX2_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+"-""DNC"" Do Not Connect"
+"-""Vref"" The pin is set as a VREF pin"
+"-""NC"" No Connection - No connection to die. These pins can be used for board level signal routing by the designer."
+"-""Probe A"" Programmed as output for probeA"
+"-""Probe B"" Programmed as output for probeB"
+"-""Due to Probe"" Probe is on, therefore bank voltage must be 2.5V or 3.3V"
+"-""Open Drain"" Tribuff IOs where the D is connected to 0 and the E is routed."
+"-* Libero configures unused User IO (GPIO, HSIO) as: Input Buffer Disabled, Output Buffer Tristated, Week Pull-up."
+"-** Even if the IO bank is not being used, users must connect this VDDIx to a rail that meets the specifications of this IO bank."
+-*** Tie-offs to VSS can be ganged to a single 10K Ohm resistor. User can also add more 10K Ohm resistors if it eases board level routing.
+-**** Package Power Parasitics are lumped together and will be reported only on one power ball line per power type.
+"-***** The embedded PCIe controller subsystem (PCIESS) is available only within Quad_0 ""XCVR_0"" Lanes.  See ""UG0685: PolarFire FPGA PCI Express User Guide"" for more information on the embedded PCIE capabilities and its usage."
+"-****** Preferred clock connectivity should be referenced in ""UG0684: PolarFire FPGA Clocking Resources User Guide"" before completion of PCB design."
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

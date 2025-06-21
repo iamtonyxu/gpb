@@ -1,0 +1,15 @@
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+@N: BN362 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\scratchpadregister.v":39:4:39:9|Removing sequential instance scratch_pad_0.dev_sp2[15:0] (in view: work.top(verilog)) of type view:PrimLib.dffpatre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\scratchpadregister.v":53:4:53:9|Removing sequential instance scratch_pad_0.SP_DO_1[15:0] (in view: work.top(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\scratchpadregister.v":39:4:39:9|Removing sequential instance scratch_pad_0.dev_sp1[15:0] (in view: work.top(verilog)) of type view:PrimLib.dffpatre(prim) because it does not drive other instances.
+@N: FX702 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0] (in view: work.afifo_8s_4s_8s_4s_1(verilog)).
+@N: FX702 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0]
+@N: FX702 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0] (in view: work.afifo_8s_4s_8s_4s_0(verilog)).
+@N: FX702 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0]
+@N: MO225 :"c:\repo\jabil2025\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|There are no possible illegal states for state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl)); safe FSM implementation is not required.
+@N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
+@N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.

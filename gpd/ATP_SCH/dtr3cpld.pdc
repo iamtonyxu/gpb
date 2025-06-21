@@ -1,0 +1,883 @@
+# Actel Physical design constraints file
+# Generated file
+
+# Version: 9.0 9.0.0.15
+# Family: ProASIC3 , Die: A3P060 , Package: 144 FBGA
+# Date generated: Tue Mar 01 12:58:59 2011 
+
+
+# 
+# IO banks setting
+# 
+
+
+# 
+# I/O constraints
+# 
+
+set_io {a[0]}         \
+    -pinname D2       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {a[1]}         \
+    -pinname D3       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {a[2]}         \
+    -pinname C3       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {a[3]}         \
+    -pinname C1       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io ad_test        \
+    -pinname C2       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io bel_sns        \
+    -pinname E8       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io cs_cpldn       \
+    -pinname E3       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {d[0]}         \
+    -pinname M3       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {d[1]}         \
+    -pinname L4       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {d[2]}         \
+    -pinname M4       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {d[3]}         \
+    -pinname K5       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {d[4]}         \
+    -pinname K6       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {d[5]}         \
+    -pinname M5       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {d[6]}         \
+    -pinname L6       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {d[7]}         \
+    -pinname M6       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {di_a[0]}      \
+    -pinname D11      \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[1]}      \
+    -pinname D9       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[2]}      \
+    -pinname C11      \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[3]}      \
+    -pinname C10      \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[4]}      \
+    -pinname A11      \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[5]}      \
+    -pinname A10      \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[6]}      \
+    -pinname B10      \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[7]}      \
+    -pinname B9       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[8]}      \
+    -pinname D8       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[9]}      \
+    -pinname D7       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[10]}     \
+    -pinname D10      \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[11]}     \
+    -pinname C9       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[12]}     \
+    -pinname A9       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[13]}     \
+    -pinname C8       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[14]}     \
+    -pinname B8       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[15]}     \
+    -pinname C7       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[16]}     \
+    -pinname B7       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[17]}     \
+    -pinname A7       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[18]}     \
+    -pinname B6       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[19]}     \
+    -pinname C6       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[20]}     \
+    -pinname A5       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[21]}     \
+    -pinname D6       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[22]}     \
+    -pinname A4       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[23]}     \
+    -pinname A3       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[24]}     \
+    -pinname B4       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[25]}     \
+    -pinname B3       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[26]}     \
+    -pinname C5       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_a[27]}     \
+    -pinname B5       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {di_b[0]}      \
+    -pinname K3       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {di_b[1]}      \
+    -pinname K4       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {di_b[2]}      \
+    -pinname L3       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {di_b[3]}      \
+    -pinname M2       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {do_a[0]}      \
+    -pinname M7       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {do_a[1]}      \
+    -pinname L7       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {do_a[2]}      \
+    -pinname L8       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {do_a[3]}      \
+    -pinname K8       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {do_a[4]}      \
+    -pinname K9       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {do_a[5]}      \
+    -pinname H8       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {do_a[6]}      \
+    -pinname J9       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {do_a[7]}      \
+    -pinname B1       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {do_a[8]}      \
+    -pinname E5       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {do_a[9]}      \
+    -pinname D4       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {do_a[10]}     \
+    -pinname K11      \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {do_a[11]}     \
+    -pinname J11      \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {do_a[12]}     \
+    -pinname K12      \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {do_a[13]}     \
+    -pinname J12      \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {do_a[14]}     \
+    -pinname H9       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {do_a[15]}     \
+    -pinname G8       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {do_en[0]}     \
+    -pinname G11      \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {do_en[1]}     \
+    -pinname E12      \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io {do_flt[0]}    \
+    -pinname D1       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {do_flt[1]}    \
+    -pinname F4       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {do_flt[2]}    \
+    -pinname J6       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io {do_flt[3]}    \
+    -pinname J5       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io dsp_test       \
+    -pinname J2       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io dspclk         \
+    -pinname E11      \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io hs_flt         \
+    -pinname K2       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io mel_sns        \
+    -pinname F8       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io pel_sns        \
+    -pinname G12      \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io rdn            \
+    -pinname E2       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io resetn_cpld    \
+    -pinname G4       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io v5_flt         \
+    -pinname K1       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+set_io v5_on          \
+    -pinname G1       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io wdog           \
+    -pinname H2       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -OUT_DRIVE 12     \
+    -OUT_LOAD 35      \
+    -RES_PULL None    \
+    -SKEW Off         \
+    -SLEW High        \
+    -DIRECTION Inout
+
+
+set_io wrn            \
+    -pinname F1       \
+    -fixed yes        \
+    -iostd LVCMOS33   \
+    -RES_PULL None    \
+    -DIRECTION Input
+
+
+
+#
+# Non IO constraints
+#
+
+
+#
+# Old IO constraints, commented out for reference
+#
+
+# set_io {a[0]} -pinname D2 -fixed yes -DIRECTION Input 
+# set_io {a[1]} -pinname D3 -fixed yes -DIRECTION Input 
+# set_io {a[2]} -pinname C3 -fixed yes -DIRECTION Input 
+# set_io {a[3]} -pinname C1 -fixed yes -DIRECTION Input 
+# set_io ad_test -pinname C2 -fixed yes -DIRECTION Inout 
+# set_io bel_sns -pinname E8 -fixed yes -DIRECTION Input 
+# set_io cs_cpldn -pinname E3 -fixed yes -DIRECTION Input 
+# set_io {d[0]} -pinname M3 -fixed yes -DIRECTION Inout 
+# set_io {d[1]} -pinname L4 -fixed yes -DIRECTION Inout 
+# set_io {d[2]} -pinname M4 -fixed yes -DIRECTION Inout 
+# set_io {d[3]} -pinname K5 -fixed yes -DIRECTION Inout 
+# set_io {d[4]} -pinname K6 -fixed yes -DIRECTION Inout 
+# set_io {d[5]} -pinname M5 -fixed yes -DIRECTION Inout 
+# set_io {d[6]} -pinname L6 -fixed yes -DIRECTION Inout 
+# set_io {d[7]} -pinname M6 -fixed yes -DIRECTION Inout 
+# set_io {di_a[0]} -pinname D11 -fixed yes -DIRECTION Input 
+# set_io {di_a[1]} -pinname D9 -fixed yes -DIRECTION Input 
+# set_io {di_a[2]} -pinname C11 -fixed yes -DIRECTION Input 
+# set_io {di_a[3]} -pinname C10 -fixed yes -DIRECTION Input 
+# set_io {di_a[4]} -pinname A11 -fixed yes -DIRECTION Input 
+# set_io {di_a[5]} -pinname A10 -fixed yes -DIRECTION Input 
+# set_io {di_a[6]} -pinname B10 -fixed yes -DIRECTION Input 
+# set_io {di_a[7]} -pinname B9 -fixed yes -DIRECTION Input 
+# set_io {di_a[8]} -pinname D8 -fixed yes -DIRECTION Input 
+# set_io {di_a[9]} -pinname D7 -fixed yes -DIRECTION Input 
+# set_io {di_a[10]} -pinname D10 -fixed yes -DIRECTION Input 
+# set_io {di_a[11]} -pinname C9 -fixed yes -DIRECTION Input 
+# set_io {di_a[12]} -pinname A9 -fixed yes -DIRECTION Input 
+# set_io {di_a[13]} -pinname C8 -fixed yes -DIRECTION Input 
+# set_io {di_a[14]} -pinname B8 -fixed yes -DIRECTION Input 
+# set_io {di_a[15]} -pinname C7 -fixed yes -DIRECTION Input 
+# set_io {di_a[16]} -pinname B7 -fixed yes -DIRECTION Input 
+# set_io {di_a[17]} -pinname A7 -fixed yes -DIRECTION Input 
+# set_io {di_a[18]} -pinname B6 -fixed yes -DIRECTION Input 
+# set_io {di_a[19]} -pinname C6 -fixed yes -DIRECTION Input 
+# set_io {di_a[20]} -pinname A5 -fixed yes -DIRECTION Input 
+# set_io {di_a[21]} -pinname D6 -fixed yes -DIRECTION Input 
+# set_io {di_a[22]} -pinname A4 -fixed yes -DIRECTION Input 
+# set_io {di_a[23]} -pinname A3 -fixed yes -DIRECTION Input 
+# set_io {di_a[24]} -pinname B4 -fixed yes -DIRECTION Input 
+# set_io {di_a[25]} -pinname B3 -fixed yes -DIRECTION Input 
+# set_io {di_a[26]} -pinname C5 -fixed yes -DIRECTION Input 
+# set_io {di_a[27]} -pinname B5 -fixed yes -DIRECTION Input 
+# set_io {di_b[0]} -pinname K3 -fixed yes -DIRECTION Inout 
+# set_io {di_b[1]} -pinname K4 -fixed yes -DIRECTION Inout 
+# set_io {di_b[2]} -pinname L3 -fixed yes -DIRECTION Inout 
+# set_io {di_b[3]} -pinname M2 -fixed yes -DIRECTION Inout 
+# set_io {do_a[0]} -pinname M7 -fixed yes -DIRECTION Inout 
+# set_io {do_a[1]} -pinname L7 -fixed yes -DIRECTION Inout 
+# set_io {do_a[2]} -pinname L8 -fixed yes -DIRECTION Inout 
+# set_io {do_a[3]} -pinname K8 -fixed yes -DIRECTION Inout 
+# set_io {do_a[4]} -pinname K9 -fixed yes -DIRECTION Inout 
+# set_io {do_a[5]} -pinname H8 -fixed yes -DIRECTION Inout 
+# set_io {do_a[6]} -pinname J9 -fixed yes -DIRECTION Inout 
+# set_io {do_a[7]} -pinname B1 -fixed yes -DIRECTION Inout 
+# set_io {do_a[8]} -pinname E5 -fixed yes -DIRECTION Inout 
+# set_io {do_a[9]} -pinname D4 -fixed yes -DIRECTION Inout 
+# set_io {do_a[10]} -pinname K11 -fixed yes -DIRECTION Inout 
+# set_io {do_a[11]} -pinname J11 -fixed yes -DIRECTION Inout 
+# set_io {do_a[12]} -pinname K12 -fixed yes -DIRECTION Inout 
+# set_io {do_a[13]} -pinname J12 -fixed yes -DIRECTION Inout 
+# set_io {do_a[14]} -pinname H9 -fixed yes -DIRECTION Inout 
+# set_io {do_a[15]} -pinname G8 -fixed yes -DIRECTION Inout 
+# set_io {do_en[0]} -pinname G11 -fixed yes -DIRECTION Inout 
+# set_io {do_en[1]} -pinname E12 -fixed yes -DIRECTION Inout 
+# set_io {do_flt[0]} -pinname D1 -fixed yes -DIRECTION Input 
+# set_io {do_flt[1]} -pinname F4 -fixed yes -DIRECTION Input 
+# set_io {do_flt[2]} -pinname J6 -fixed yes -DIRECTION Input 
+# set_io {do_flt[3]} -pinname J5 -fixed yes -DIRECTION Input 
+# set_io dsp_test -pinname J2 -fixed yes -DIRECTION Inout 
+# set_io dspclk -pinname E11 -fixed yes -DIRECTION Input 
+# set_io hs_flt -pinname K2 -fixed yes -DIRECTION Input 
+# set_io mel_sns -pinname F8 -fixed yes -DIRECTION Input 
+# set_io pel_sns -pinname G12 -fixed yes -DIRECTION Input 
+# set_io rdn -pinname E2 -fixed yes -DIRECTION Input 
+# set_io resetn_cpld -pinname G4 -fixed yes -DIRECTION Input 
+# set_io v5_flt -pinname K1 -fixed yes -DIRECTION Input 
+# set_io v5_on -pinname G1 -fixed yes -DIRECTION Inout 
+# set_io wdog -pinname H2 -fixed yes -DIRECTION Inout 
+# set_io wrn -pinname F1 -fixed yes -DIRECTION Input 

@@ -1,0 +1,7 @@
+Runtime Summary:
+================
+
+	The following design units have negligible CPU times:
+	=====================================================
+		*Library: work, Entity: work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY, Architecture: rtl
+			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time

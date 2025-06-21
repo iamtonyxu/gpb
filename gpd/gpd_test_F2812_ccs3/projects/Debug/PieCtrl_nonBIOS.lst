@@ -1,0 +1,1435 @@
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE    1
+
+       1              ;***************************************************************
+       2              ;* TMS320C2000 C/C++ Codegen                         PC v4.1.0 *
+       3              ;* Date/Time created: Tue Sep 16 13:11:50 2008                 *
+       4              ;***************************************************************
+       5                      .compiler_opts --mem_model:code=flat --mem_model:data=large --quiet --silicon_version=28 
+       6        0002  FP      .set    XAR2
+       7              
+       8              DW$CU   .dwtag  DW_TAG_compile_unit
+       9                      .dwattr DW$CU, DW_AT_name("PieCtrl_nonBIOS.c")
+      10                      .dwattr DW$CU, DW_AT_producer("TMS320C2000 C/C++ Codegen PC v4.1.0 Copyright (c) 1996-2005 Texas Inst
+      11                      .dwattr DW$CU, DW_AT_stmt_list(0x00)
+      12                      .dwattr DW$CU, DW_AT_TI_VERSION(0x01)
+      13              
+      14              DW$1    .dwtag  DW_TAG_subprogram, DW_AT_name("memcpy"), DW_AT_symbol_name("_memcpy")
+      15                      .dwattr DW$1, DW_AT_type(*DW$T$3)
+      16                      .dwattr DW$1, DW_AT_declaration(0x01)
+      17                      .dwattr DW$1, DW_AT_external(0x01)
+      18              DW$2    .dwtag  DW_TAG_formal_parameter, DW_AT_type(*DW$T$3)
+      19              DW$3    .dwtag  DW_TAG_formal_parameter, DW_AT_type(*DW$T$34)
+      20              DW$4    .dwtag  DW_TAG_formal_parameter, DW_AT_type(*DW$T$13)
+      21                      .dwendtag DW$1
+      22              
+      23              DW$5    .dwtag  DW_TAG_variable, DW_AT_name("PieCtrlRegs"), DW_AT_symbol_name("_PieCtrlRegs")
+      24                      .dwattr DW$5, DW_AT_type(*DW$T$43)
+      25                      .dwattr DW$5, DW_AT_declaration(0x01)
+      26                      .dwattr DW$5, DW_AT_external(0x01)
+      27              DW$6    .dwtag  DW_TAG_variable, DW_AT_name("PieVectTableInit"), DW_AT_symbol_name("_PieVectTableInit")
+      28                      .dwattr DW$6, DW_AT_type(*DW$T$44)
+      29                      .dwattr DW$6, DW_AT_declaration(0x01)
+      30                      .dwattr DW$6, DW_AT_external(0x01)
+      31              DW$7    .dwtag  DW_TAG_variable, DW_AT_name("PieVectTable"), DW_AT_symbol_name("_PieVectTable")
+      32                      .dwattr DW$7, DW_AT_type(*DW$T$32)
+      33                      .dwattr DW$7, DW_AT_declaration(0x01)
+      34                      .dwattr DW$7, DW_AT_external(0x01)
+      35              ;       C:\CCStudio_v3.1\C2000\cgtools\bin\ac2000.exe -@C:\DOCUME~1\iadevait\LOCALS~1\Temp\TI3322 
+      36 00000000               .sect   ".text"
+      37                      .global _InitPieCtrl
+      38              
+      39              DW$8    .dwtag  DW_TAG_subprogram, DW_AT_name("InitPieCtrl"), DW_AT_symbol_name("_InitPieCtrl")
+      40                      .dwattr DW$8, DW_AT_low_pc(_InitPieCtrl)
+      41                      .dwattr DW$8, DW_AT_high_pc(0x00)
+      42                      .dwattr DW$8, DW_AT_begin_file("PieCtrl_nonBIOS.c")
+      43                      .dwattr DW$8, DW_AT_begin_line(0x19)
+      44                      .dwattr DW$8, DW_AT_begin_column(0x06)
+      45                      .dwpsn  "PieCtrl_nonBIOS.c",26,1
+      46              
+      47                      .dwfde DW$CIE
+      48              ;----------------------------------------------------------------------
+      49              ;  25 | void InitPieCtrl(void)                                                 
+      50              ;----------------------------------------------------------------------
+      51              
+      52              ;***************************************************************
+      53              ;* FNAME: _InitPieCtrl                  FR SIZE:   0           *
+      54              ;*                                                             *
+      55              ;* FUNCTION ENVIRONMENT                                        *
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE    2
+
+      56              ;*                                                             *
+      57              ;* FUNCTION PROPERTIES                                         *
+      58              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+      59              ;***************************************************************
+      60              
+      61 00000000       _InitPieCtrl:
+      62                      .dwcfa  0x1d, -2
+      63                      .dwcfa  0x1c, 26, 0
+      64                      .dwcfa  0x09, 40, 26
+      65                      .dwpsn  "PieCtrl_nonBIOS.c",28,2
+      66              ;----------------------------------------------------------------------
+      67              ;  28 | asm(" SETC INTM, DBGM");                        // Disable global inter
+      68              ;     | rupts                                                                  
+      69              ;----------------------------------------------------------------------
+      70 00000000 3B30   SETC INTM, DBGM
+      71                      .dwpsn  "PieCtrl_nonBIOS.c",31,2
+      72              ;----------------------------------------------------------------------
+      73              ;  31 | PieCtrlRegs.PIECRTL.bit.ENPIE = 0;      // Disable the PIE             
+      74              ;----------------------------------------------------------------------
+      75 00000001 761F!         MOVW      DP,#_PieCtrlRegs
+         00000002 0000 
+      76 00000003 1800!         AND       @_PieCtrlRegs,#0xfffe ; |31| 
+         00000004 FFFE 
+      77                      .dwpsn  "PieCtrl_nonBIOS.c",32,2
+      78              ;----------------------------------------------------------------------
+      79              ;  32 | asm(" EALLOW");                                         // Enable EALLO
+      80              ;     | W protected register access                                            
+      81              ;----------------------------------------------------------------------
+      82 00000005 7622   EALLOW
+      83                      .dwpsn  "PieCtrl_nonBIOS.c",33,2
+      84              ;----------------------------------------------------------------------
+      85              ;  33 | memcpy(&PieVectTable, &PieVectTableInit, 256);                         
+      86              ;----------------------------------------------------------------------
+      87 00000006 FF69          SPM       #0
+      88 00000007 8F40!         MOVL      XAR5,#_PieVectTableInit ; |33| 
+         00000008 0000 
+      89 00000009 8F00!         MOVL      XAR4,#_PieVectTable   ; |33| 
+         0000000a 0000 
+      90 0000000b FF28          MOV       ACC,#1 << 8
+         0000000c 0001 
+      91 0000000d 7640!         LCR       #___memcpy_ff         ; |33| 
+         0000000e 0000 
+      92                      ; call occurs [#___memcpy_ff] ; |33| 
+      93                      .dwpsn  "PieCtrl_nonBIOS.c",34,2
+      94              ;----------------------------------------------------------------------
+      95              ;  34 | asm(" EDIS");                                           // Disable EALL
+      96              ;     | OW protected register access                                           
+      97              ;----------------------------------------------------------------------
+      98 0000000f 761A   EDIS
+      99                      .dwpsn  "PieCtrl_nonBIOS.c",37,2
+     100              ;----------------------------------------------------------------------
+     101              ;  37 | PieCtrlRegs.PIEIER1.all =  0x0000;                                     
+     102              ;----------------------------------------------------------------------
+     103 00000010 761F!         MOVW      DP,#_PieCtrlRegs+2
+         00000011 0000 
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE    3
+
+     104 00000012 2B02!         MOV       @_PieCtrlRegs+2,#0    ; |37| 
+     105                      .dwpsn  "PieCtrl_nonBIOS.c",38,2
+     106              ;----------------------------------------------------------------------
+     107              ;  38 | PieCtrlRegs.PIEIER2.all =  0x0000;                                     
+     108              ;----------------------------------------------------------------------
+     109 00000013 2B04!         MOV       @_PieCtrlRegs+4,#0    ; |38| 
+     110                      .dwpsn  "PieCtrl_nonBIOS.c",39,2
+     111              ;----------------------------------------------------------------------
+     112              ;  39 | PieCtrlRegs.PIEIER3.all =  0x0000;                                     
+     113              ;----------------------------------------------------------------------
+     114 00000014 2B06!         MOV       @_PieCtrlRegs+6,#0    ; |39| 
+     115                      .dwpsn  "PieCtrl_nonBIOS.c",40,2
+     116              ;----------------------------------------------------------------------
+     117              ;  40 | PieCtrlRegs.PIEIER4.all =  0x0000;                                     
+     118              ;----------------------------------------------------------------------
+     119 00000015 2B08!         MOV       @_PieCtrlRegs+8,#0    ; |40| 
+     120                      .dwpsn  "PieCtrl_nonBIOS.c",41,2
+     121              ;----------------------------------------------------------------------
+     122              ;  41 | PieCtrlRegs.PIEIER5.all =  0x0000;                                     
+     123              ;----------------------------------------------------------------------
+     124 00000016 2B0A!         MOV       @_PieCtrlRegs+10,#0   ; |41| 
+     125                      .dwpsn  "PieCtrl_nonBIOS.c",42,2
+     126              ;----------------------------------------------------------------------
+     127              ;  42 | PieCtrlRegs.PIEIER6.all =  0x0000;                                     
+     128              ;----------------------------------------------------------------------
+     129 00000017 2B0C!         MOV       @_PieCtrlRegs+12,#0   ; |42| 
+     130                      .dwpsn  "PieCtrl_nonBIOS.c",43,2
+     131              ;----------------------------------------------------------------------
+     132              ;  43 | PieCtrlRegs.PIEIER7.all =  0x0000;                                     
+     133              ;----------------------------------------------------------------------
+     134 00000018 2B0E!         MOV       @_PieCtrlRegs+14,#0   ; |43| 
+     135                      .dwpsn  "PieCtrl_nonBIOS.c",44,2
+     136              ;----------------------------------------------------------------------
+     137              ;  44 | PieCtrlRegs.PIEIER8.all =  0x0000;                                     
+     138              ;----------------------------------------------------------------------
+     139 00000019 2B10!         MOV       @_PieCtrlRegs+16,#0   ; |44| 
+     140                      .dwpsn  "PieCtrl_nonBIOS.c",45,2
+     141              ;----------------------------------------------------------------------
+     142              ;  45 | PieCtrlRegs.PIEIER9.all =  0x0000;                                     
+     143              ;----------------------------------------------------------------------
+     144 0000001a 2B12!         MOV       @_PieCtrlRegs+18,#0   ; |45| 
+     145                      .dwpsn  "PieCtrl_nonBIOS.c",46,2
+     146              ;----------------------------------------------------------------------
+     147              ;  46 | PieCtrlRegs.PIEIER10.all = 0x0000;                                     
+     148              ;----------------------------------------------------------------------
+     149 0000001b 2B14!         MOV       @_PieCtrlRegs+20,#0   ; |46| 
+     150                      .dwpsn  "PieCtrl_nonBIOS.c",47,2
+     151              ;----------------------------------------------------------------------
+     152              ;  47 | PieCtrlRegs.PIEIER11.all = 0x0000;                                     
+     153              ;----------------------------------------------------------------------
+     154 0000001c 2B16!         MOV       @_PieCtrlRegs+22,#0   ; |47| 
+     155                      .dwpsn  "PieCtrl_nonBIOS.c",48,2
+     156              ;----------------------------------------------------------------------
+     157              ;  48 | PieCtrlRegs.PIEIER12.all = 0x0000;                                     
+     158              ;----------------------------------------------------------------------
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE    4
+
+     159 0000001d 2B18!         MOV       @_PieCtrlRegs+24,#0   ; |48| 
+     160                      .dwpsn  "PieCtrl_nonBIOS.c",51,2
+     161              ;----------------------------------------------------------------------
+     162              ;  51 | PieCtrlRegs.PIEIFR1.all  = 0x0000;                                     
+     163              ;----------------------------------------------------------------------
+     164 0000001e 2B03!         MOV       @_PieCtrlRegs+3,#0    ; |51| 
+     165                      .dwpsn  "PieCtrl_nonBIOS.c",52,2
+     166              ;----------------------------------------------------------------------
+     167              ;  52 | PieCtrlRegs.PIEIFR2.all  = 0x0000;                                     
+     168              ;----------------------------------------------------------------------
+     169 0000001f 2B05!         MOV       @_PieCtrlRegs+5,#0    ; |52| 
+     170                      .dwpsn  "PieCtrl_nonBIOS.c",53,2
+     171              ;----------------------------------------------------------------------
+     172              ;  53 | PieCtrlRegs.PIEIFR3.all  = 0x0000;                                     
+     173              ;----------------------------------------------------------------------
+     174 00000020 2B07!         MOV       @_PieCtrlRegs+7,#0    ; |53| 
+     175                      .dwpsn  "PieCtrl_nonBIOS.c",54,2
+     176              ;----------------------------------------------------------------------
+     177              ;  54 | PieCtrlRegs.PIEIFR4.all  = 0x0000;                                     
+     178              ;----------------------------------------------------------------------
+     179 00000021 2B09!         MOV       @_PieCtrlRegs+9,#0    ; |54| 
+     180                      .dwpsn  "PieCtrl_nonBIOS.c",55,2
+     181              ;----------------------------------------------------------------------
+     182              ;  55 | PieCtrlRegs.PIEIFR5.all  = 0x0000;                                     
+     183              ;----------------------------------------------------------------------
+     184 00000022 2B0B!         MOV       @_PieCtrlRegs+11,#0   ; |55| 
+     185                      .dwpsn  "PieCtrl_nonBIOS.c",56,2
+     186              ;----------------------------------------------------------------------
+     187              ;  56 | PieCtrlRegs.PIEIFR6.all  = 0x0000;                                     
+     188              ;----------------------------------------------------------------------
+     189 00000023 2B0D!         MOV       @_PieCtrlRegs+13,#0   ; |56| 
+     190                      .dwpsn  "PieCtrl_nonBIOS.c",57,2
+     191              ;----------------------------------------------------------------------
+     192              ;  57 | PieCtrlRegs.PIEIFR7.all  = 0x0000;                                     
+     193              ;----------------------------------------------------------------------
+     194 00000024 2B0F!         MOV       @_PieCtrlRegs+15,#0   ; |57| 
+     195                      .dwpsn  "PieCtrl_nonBIOS.c",58,2
+     196              ;----------------------------------------------------------------------
+     197              ;  58 | PieCtrlRegs.PIEIFR8.all  = 0x0000;                                     
+     198              ;----------------------------------------------------------------------
+     199 00000025 2B11!         MOV       @_PieCtrlRegs+17,#0   ; |58| 
+     200                      .dwpsn  "PieCtrl_nonBIOS.c",59,2
+     201              ;----------------------------------------------------------------------
+     202              ;  59 | PieCtrlRegs.PIEIFR9.all  = 0x0000;                                     
+     203              ;----------------------------------------------------------------------
+     204 00000026 2B13!         MOV       @_PieCtrlRegs+19,#0   ; |59| 
+     205                      .dwpsn  "PieCtrl_nonBIOS.c",60,2
+     206              ;----------------------------------------------------------------------
+     207              ;  60 | PieCtrlRegs.PIEIFR10.all = 0x0000;                                     
+     208              ;----------------------------------------------------------------------
+     209 00000027 2B15!         MOV       @_PieCtrlRegs+21,#0   ; |60| 
+     210                      .dwpsn  "PieCtrl_nonBIOS.c",61,2
+     211              ;----------------------------------------------------------------------
+     212              ;  61 | PieCtrlRegs.PIEIFR11.all = 0x0000;                                     
+     213              ;----------------------------------------------------------------------
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE    5
+
+     214 00000028 2B17!         MOV       @_PieCtrlRegs+23,#0   ; |61| 
+     215                      .dwpsn  "PieCtrl_nonBIOS.c",62,2
+     216              ;----------------------------------------------------------------------
+     217              ;  62 | PieCtrlRegs.PIEIFR12.all = 0x0000;                                     
+     218              ;----------------------------------------------------------------------
+     219 00000029 2B19!         MOV       @_PieCtrlRegs+25,#0   ; |62| 
+     220                      .dwpsn  "PieCtrl_nonBIOS.c",65,2
+     221              ;----------------------------------------------------------------------
+     222              ;  65 | PieCtrlRegs.PIEACK.all = 0xFFFF;                                       
+     223              ;----------------------------------------------------------------------
+     224 0000002a 2801!         MOV       @_PieCtrlRegs+1,#65535 ; |65| 
+         0000002b FFFF 
+     225                      .dwpsn  "PieCtrl_nonBIOS.c",68,2
+     226              ;----------------------------------------------------------------------
+     227              ;  68 | PieCtrlRegs.PIECRTL.bit.ENPIE = 1;              // Enable the PIE      
+     228              ;----------------------------------------------------------------------
+     229 0000002c 1A00!         OR        @_PieCtrlRegs,#0x0001 ; |68| 
+         0000002d 0001 
+     230                      .dwpsn  "PieCtrl_nonBIOS.c",70,1
+     231              ;----------------------------------------------------------------------
+     232              ;  70 | } //end of InitPieCtrl()                                               
+     233              ;----------------------------------------------------------------------
+     234 0000002e FF69          SPM       #0
+     235 0000002f 0006          LRETR
+     236                      ; return occurs
+     237                      .dwattr DW$8, DW_AT_end_file("PieCtrl_nonBIOS.c")
+     238                      .dwattr DW$8, DW_AT_end_line(0x46)
+     239                      .dwattr DW$8, DW_AT_end_column(0x01)
+     240                      .dwendentry
+     241                      .dwendtag DW$8
+     242              
+     243              ;***************************************************************
+     244              ;* UNDEFINED EXTERNAL REFERENCES                               *
+     245              ;***************************************************************
+     246                      .global _PieCtrlRegs
+     247                      .global _PieVectTableInit
+     248                      .global _PieVectTable
+     249                      .global ___memcpy_ff
+     250              
+     251              ;***************************************************************
+     252              ;* TYPE INFORMATION                                            *
+     253              ;***************************************************************
+     254              DW$T$3  .dwtag  DW_TAG_pointer_type
+     255                      .dwattr DW$T$3, DW_AT_address_class(0x16)
+     256              
+     257              DW$T$35 .dwtag  DW_TAG_subroutine_type, DW_AT_type(*DW$T$3)
+     258                      .dwattr DW$T$35, DW_AT_language(DW_LANG_C)
+     259              DW$9    .dwtag  DW_TAG_formal_parameter, DW_AT_type(*DW$T$3)
+     260              DW$10   .dwtag  DW_TAG_formal_parameter, DW_AT_type(*DW$T$34)
+     261              DW$11   .dwtag  DW_TAG_formal_parameter, DW_AT_type(*DW$T$13)
+     262                      .dwendtag DW$T$35
+     263              
+     264              
+     265              DW$T$29 .dwtag  DW_TAG_subroutine_type
+     266                      .dwattr DW$T$29, DW_AT_language(DW_LANG_C)
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE    6
+
+     267              DW$T$34 .dwtag  DW_TAG_pointer_type, DW_AT_type(*DW$T$33)
+     268                      .dwattr DW$T$34, DW_AT_address_class(0x16)
+     269              DW$T$13 .dwtag  DW_TAG_base_type, DW_AT_name("unsigned long")
+     270                      .dwattr DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+     271                      .dwattr DW$T$13, DW_AT_byte_size(0x02)
+     272              DW$12   .dwtag  DW_TAG_far_type
+     273                      .dwattr DW$12, DW_AT_type(*DW$T$28)
+     274              DW$T$43 .dwtag  DW_TAG_volatile_type
+     275                      .dwattr DW$T$43, DW_AT_type(*DW$12)
+     276              
+     277              DW$T$32 .dwtag  DW_TAG_structure_type
+     278                      .dwattr DW$T$32, DW_AT_name("PIE_VECT_TABLE")
+     279                      .dwattr DW$T$32, DW_AT_byte_size(0x100)
+     280              DW$13   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     281                      .dwattr DW$13, DW_AT_name("PIE1_RESERVED"), DW_AT_symbol_name("_PIE1_RESERVED")
+     282                      .dwattr DW$13, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     283                      .dwattr DW$13, DW_AT_accessibility(DW_ACCESS_public)
+     284              DW$14   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     285                      .dwattr DW$14, DW_AT_name("PIE2_RESERVED"), DW_AT_symbol_name("_PIE2_RESERVED")
+     286                      .dwattr DW$14, DW_AT_data_member_location[DW_OP_plus_uconst 0x2]
+     287                      .dwattr DW$14, DW_AT_accessibility(DW_ACCESS_public)
+     288              DW$15   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     289                      .dwattr DW$15, DW_AT_name("PIE3_RESERVED"), DW_AT_symbol_name("_PIE3_RESERVED")
+     290                      .dwattr DW$15, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+     291                      .dwattr DW$15, DW_AT_accessibility(DW_ACCESS_public)
+     292              DW$16   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     293                      .dwattr DW$16, DW_AT_name("PIE4_RESERVED"), DW_AT_symbol_name("_PIE4_RESERVED")
+     294                      .dwattr DW$16, DW_AT_data_member_location[DW_OP_plus_uconst 0x6]
+     295                      .dwattr DW$16, DW_AT_accessibility(DW_ACCESS_public)
+     296              DW$17   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     297                      .dwattr DW$17, DW_AT_name("PIE5_RESERVED"), DW_AT_symbol_name("_PIE5_RESERVED")
+     298                      .dwattr DW$17, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+     299                      .dwattr DW$17, DW_AT_accessibility(DW_ACCESS_public)
+     300              DW$18   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     301                      .dwattr DW$18, DW_AT_name("PIE6_RESERVED"), DW_AT_symbol_name("_PIE6_RESERVED")
+     302                      .dwattr DW$18, DW_AT_data_member_location[DW_OP_plus_uconst 0xa]
+     303                      .dwattr DW$18, DW_AT_accessibility(DW_ACCESS_public)
+     304              DW$19   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     305                      .dwattr DW$19, DW_AT_name("PIE7_RESERVED"), DW_AT_symbol_name("_PIE7_RESERVED")
+     306                      .dwattr DW$19, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+     307                      .dwattr DW$19, DW_AT_accessibility(DW_ACCESS_public)
+     308              DW$20   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     309                      .dwattr DW$20, DW_AT_name("PIE8_RESERVED"), DW_AT_symbol_name("_PIE8_RESERVED")
+     310                      .dwattr DW$20, DW_AT_data_member_location[DW_OP_plus_uconst 0xe]
+     311                      .dwattr DW$20, DW_AT_accessibility(DW_ACCESS_public)
+     312              DW$21   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     313                      .dwattr DW$21, DW_AT_name("PIE9_RESERVED"), DW_AT_symbol_name("_PIE9_RESERVED")
+     314                      .dwattr DW$21, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
+     315                      .dwattr DW$21, DW_AT_accessibility(DW_ACCESS_public)
+     316              DW$22   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     317                      .dwattr DW$22, DW_AT_name("PIE10_RESERVED"), DW_AT_symbol_name("_PIE10_RESERVED")
+     318                      .dwattr DW$22, DW_AT_data_member_location[DW_OP_plus_uconst 0x12]
+     319                      .dwattr DW$22, DW_AT_accessibility(DW_ACCESS_public)
+     320              DW$23   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     321                      .dwattr DW$23, DW_AT_name("PIE11_RESERVED"), DW_AT_symbol_name("_PIE11_RESERVED")
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE    7
+
+     322                      .dwattr DW$23, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
+     323                      .dwattr DW$23, DW_AT_accessibility(DW_ACCESS_public)
+     324              DW$24   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     325                      .dwattr DW$24, DW_AT_name("PIE12_RESERVED"), DW_AT_symbol_name("_PIE12_RESERVED")
+     326                      .dwattr DW$24, DW_AT_data_member_location[DW_OP_plus_uconst 0x16]
+     327                      .dwattr DW$24, DW_AT_accessibility(DW_ACCESS_public)
+     328              DW$25   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     329                      .dwattr DW$25, DW_AT_name("PIE13_RESERVED"), DW_AT_symbol_name("_PIE13_RESERVED")
+     330                      .dwattr DW$25, DW_AT_data_member_location[DW_OP_plus_uconst 0x18]
+     331                      .dwattr DW$25, DW_AT_accessibility(DW_ACCESS_public)
+     332              DW$26   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     333                      .dwattr DW$26, DW_AT_name("XINT13"), DW_AT_symbol_name("_XINT13")
+     334                      .dwattr DW$26, DW_AT_data_member_location[DW_OP_plus_uconst 0x1a]
+     335                      .dwattr DW$26, DW_AT_accessibility(DW_ACCESS_public)
+     336              DW$27   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     337                      .dwattr DW$27, DW_AT_name("TINT2"), DW_AT_symbol_name("_TINT2")
+     338                      .dwattr DW$27, DW_AT_data_member_location[DW_OP_plus_uconst 0x1c]
+     339                      .dwattr DW$27, DW_AT_accessibility(DW_ACCESS_public)
+     340              DW$28   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     341                      .dwattr DW$28, DW_AT_name("DATALOG"), DW_AT_symbol_name("_DATALOG")
+     342                      .dwattr DW$28, DW_AT_data_member_location[DW_OP_plus_uconst 0x1e]
+     343                      .dwattr DW$28, DW_AT_accessibility(DW_ACCESS_public)
+     344              DW$29   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     345                      .dwattr DW$29, DW_AT_name("RTOSINT"), DW_AT_symbol_name("_RTOSINT")
+     346                      .dwattr DW$29, DW_AT_data_member_location[DW_OP_plus_uconst 0x20]
+     347                      .dwattr DW$29, DW_AT_accessibility(DW_ACCESS_public)
+     348              DW$30   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     349                      .dwattr DW$30, DW_AT_name("EMUINT"), DW_AT_symbol_name("_EMUINT")
+     350                      .dwattr DW$30, DW_AT_data_member_location[DW_OP_plus_uconst 0x22]
+     351                      .dwattr DW$30, DW_AT_accessibility(DW_ACCESS_public)
+     352              DW$31   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     353                      .dwattr DW$31, DW_AT_name("XNMI"), DW_AT_symbol_name("_XNMI")
+     354                      .dwattr DW$31, DW_AT_data_member_location[DW_OP_plus_uconst 0x24]
+     355                      .dwattr DW$31, DW_AT_accessibility(DW_ACCESS_public)
+     356              DW$32   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     357                      .dwattr DW$32, DW_AT_name("ILLEGAL"), DW_AT_symbol_name("_ILLEGAL")
+     358                      .dwattr DW$32, DW_AT_data_member_location[DW_OP_plus_uconst 0x26]
+     359                      .dwattr DW$32, DW_AT_accessibility(DW_ACCESS_public)
+     360              DW$33   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     361                      .dwattr DW$33, DW_AT_name("USER1"), DW_AT_symbol_name("_USER1")
+     362                      .dwattr DW$33, DW_AT_data_member_location[DW_OP_plus_uconst 0x28]
+     363                      .dwattr DW$33, DW_AT_accessibility(DW_ACCESS_public)
+     364              DW$34   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     365                      .dwattr DW$34, DW_AT_name("USER2"), DW_AT_symbol_name("_USER2")
+     366                      .dwattr DW$34, DW_AT_data_member_location[DW_OP_plus_uconst 0x2a]
+     367                      .dwattr DW$34, DW_AT_accessibility(DW_ACCESS_public)
+     368              DW$35   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     369                      .dwattr DW$35, DW_AT_name("USER3"), DW_AT_symbol_name("_USER3")
+     370                      .dwattr DW$35, DW_AT_data_member_location[DW_OP_plus_uconst 0x2c]
+     371                      .dwattr DW$35, DW_AT_accessibility(DW_ACCESS_public)
+     372              DW$36   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     373                      .dwattr DW$36, DW_AT_name("USER4"), DW_AT_symbol_name("_USER4")
+     374                      .dwattr DW$36, DW_AT_data_member_location[DW_OP_plus_uconst 0x2e]
+     375                      .dwattr DW$36, DW_AT_accessibility(DW_ACCESS_public)
+     376              DW$37   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE    8
+
+     377                      .dwattr DW$37, DW_AT_name("USER5"), DW_AT_symbol_name("_USER5")
+     378                      .dwattr DW$37, DW_AT_data_member_location[DW_OP_plus_uconst 0x30]
+     379                      .dwattr DW$37, DW_AT_accessibility(DW_ACCESS_public)
+     380              DW$38   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     381                      .dwattr DW$38, DW_AT_name("USER6"), DW_AT_symbol_name("_USER6")
+     382                      .dwattr DW$38, DW_AT_data_member_location[DW_OP_plus_uconst 0x32]
+     383                      .dwattr DW$38, DW_AT_accessibility(DW_ACCESS_public)
+     384              DW$39   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     385                      .dwattr DW$39, DW_AT_name("USER7"), DW_AT_symbol_name("_USER7")
+     386                      .dwattr DW$39, DW_AT_data_member_location[DW_OP_plus_uconst 0x34]
+     387                      .dwattr DW$39, DW_AT_accessibility(DW_ACCESS_public)
+     388              DW$40   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     389                      .dwattr DW$40, DW_AT_name("USER8"), DW_AT_symbol_name("_USER8")
+     390                      .dwattr DW$40, DW_AT_data_member_location[DW_OP_plus_uconst 0x36]
+     391                      .dwattr DW$40, DW_AT_accessibility(DW_ACCESS_public)
+     392              DW$41   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     393                      .dwattr DW$41, DW_AT_name("USER9"), DW_AT_symbol_name("_USER9")
+     394                      .dwattr DW$41, DW_AT_data_member_location[DW_OP_plus_uconst 0x38]
+     395                      .dwattr DW$41, DW_AT_accessibility(DW_ACCESS_public)
+     396              DW$42   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     397                      .dwattr DW$42, DW_AT_name("USER10"), DW_AT_symbol_name("_USER10")
+     398                      .dwattr DW$42, DW_AT_data_member_location[DW_OP_plus_uconst 0x3a]
+     399                      .dwattr DW$42, DW_AT_accessibility(DW_ACCESS_public)
+     400              DW$43   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     401                      .dwattr DW$43, DW_AT_name("USER11"), DW_AT_symbol_name("_USER11")
+     402                      .dwattr DW$43, DW_AT_data_member_location[DW_OP_plus_uconst 0x3c]
+     403                      .dwattr DW$43, DW_AT_accessibility(DW_ACCESS_public)
+     404              DW$44   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     405                      .dwattr DW$44, DW_AT_name("USER12"), DW_AT_symbol_name("_USER12")
+     406                      .dwattr DW$44, DW_AT_data_member_location[DW_OP_plus_uconst 0x3e]
+     407                      .dwattr DW$44, DW_AT_accessibility(DW_ACCESS_public)
+     408              DW$45   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     409                      .dwattr DW$45, DW_AT_name("PDPINTA"), DW_AT_symbol_name("_PDPINTA")
+     410                      .dwattr DW$45, DW_AT_data_member_location[DW_OP_plus_uconst 0x40]
+     411                      .dwattr DW$45, DW_AT_accessibility(DW_ACCESS_public)
+     412              DW$46   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     413                      .dwattr DW$46, DW_AT_name("PDPINTB"), DW_AT_symbol_name("_PDPINTB")
+     414                      .dwattr DW$46, DW_AT_data_member_location[DW_OP_plus_uconst 0x42]
+     415                      .dwattr DW$46, DW_AT_accessibility(DW_ACCESS_public)
+     416              DW$47   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     417                      .dwattr DW$47, DW_AT_name("rsvd1_3"), DW_AT_symbol_name("_rsvd1_3")
+     418                      .dwattr DW$47, DW_AT_data_member_location[DW_OP_plus_uconst 0x44]
+     419                      .dwattr DW$47, DW_AT_accessibility(DW_ACCESS_public)
+     420              DW$48   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     421                      .dwattr DW$48, DW_AT_name("XINT1"), DW_AT_symbol_name("_XINT1")
+     422                      .dwattr DW$48, DW_AT_data_member_location[DW_OP_plus_uconst 0x46]
+     423                      .dwattr DW$48, DW_AT_accessibility(DW_ACCESS_public)
+     424              DW$49   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     425                      .dwattr DW$49, DW_AT_name("XINT2"), DW_AT_symbol_name("_XINT2")
+     426                      .dwattr DW$49, DW_AT_data_member_location[DW_OP_plus_uconst 0x48]
+     427                      .dwattr DW$49, DW_AT_accessibility(DW_ACCESS_public)
+     428              DW$50   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     429                      .dwattr DW$50, DW_AT_name("ADCINT"), DW_AT_symbol_name("_ADCINT")
+     430                      .dwattr DW$50, DW_AT_data_member_location[DW_OP_plus_uconst 0x4a]
+     431                      .dwattr DW$50, DW_AT_accessibility(DW_ACCESS_public)
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE    9
+
+     432              DW$51   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     433                      .dwattr DW$51, DW_AT_name("TINT0"), DW_AT_symbol_name("_TINT0")
+     434                      .dwattr DW$51, DW_AT_data_member_location[DW_OP_plus_uconst 0x4c]
+     435                      .dwattr DW$51, DW_AT_accessibility(DW_ACCESS_public)
+     436              DW$52   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     437                      .dwattr DW$52, DW_AT_name("WAKEINT"), DW_AT_symbol_name("_WAKEINT")
+     438                      .dwattr DW$52, DW_AT_data_member_location[DW_OP_plus_uconst 0x4e]
+     439                      .dwattr DW$52, DW_AT_accessibility(DW_ACCESS_public)
+     440              DW$53   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     441                      .dwattr DW$53, DW_AT_name("CMP1INT"), DW_AT_symbol_name("_CMP1INT")
+     442                      .dwattr DW$53, DW_AT_data_member_location[DW_OP_plus_uconst 0x50]
+     443                      .dwattr DW$53, DW_AT_accessibility(DW_ACCESS_public)
+     444              DW$54   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     445                      .dwattr DW$54, DW_AT_name("CMP2INT"), DW_AT_symbol_name("_CMP2INT")
+     446                      .dwattr DW$54, DW_AT_data_member_location[DW_OP_plus_uconst 0x52]
+     447                      .dwattr DW$54, DW_AT_accessibility(DW_ACCESS_public)
+     448              DW$55   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     449                      .dwattr DW$55, DW_AT_name("CMP3INT"), DW_AT_symbol_name("_CMP3INT")
+     450                      .dwattr DW$55, DW_AT_data_member_location[DW_OP_plus_uconst 0x54]
+     451                      .dwattr DW$55, DW_AT_accessibility(DW_ACCESS_public)
+     452              DW$56   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     453                      .dwattr DW$56, DW_AT_name("T1PINT"), DW_AT_symbol_name("_T1PINT")
+     454                      .dwattr DW$56, DW_AT_data_member_location[DW_OP_plus_uconst 0x56]
+     455                      .dwattr DW$56, DW_AT_accessibility(DW_ACCESS_public)
+     456              DW$57   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     457                      .dwattr DW$57, DW_AT_name("T1CINT"), DW_AT_symbol_name("_T1CINT")
+     458                      .dwattr DW$57, DW_AT_data_member_location[DW_OP_plus_uconst 0x58]
+     459                      .dwattr DW$57, DW_AT_accessibility(DW_ACCESS_public)
+     460              DW$58   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     461                      .dwattr DW$58, DW_AT_name("T1UFINT"), DW_AT_symbol_name("_T1UFINT")
+     462                      .dwattr DW$58, DW_AT_data_member_location[DW_OP_plus_uconst 0x5a]
+     463                      .dwattr DW$58, DW_AT_accessibility(DW_ACCESS_public)
+     464              DW$59   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     465                      .dwattr DW$59, DW_AT_name("T1OFINT"), DW_AT_symbol_name("_T1OFINT")
+     466                      .dwattr DW$59, DW_AT_data_member_location[DW_OP_plus_uconst 0x5c]
+     467                      .dwattr DW$59, DW_AT_accessibility(DW_ACCESS_public)
+     468              DW$60   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     469                      .dwattr DW$60, DW_AT_name("rsvd2_8"), DW_AT_symbol_name("_rsvd2_8")
+     470                      .dwattr DW$60, DW_AT_data_member_location[DW_OP_plus_uconst 0x5e]
+     471                      .dwattr DW$60, DW_AT_accessibility(DW_ACCESS_public)
+     472              DW$61   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     473                      .dwattr DW$61, DW_AT_name("T2PINT"), DW_AT_symbol_name("_T2PINT")
+     474                      .dwattr DW$61, DW_AT_data_member_location[DW_OP_plus_uconst 0x60]
+     475                      .dwattr DW$61, DW_AT_accessibility(DW_ACCESS_public)
+     476              DW$62   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     477                      .dwattr DW$62, DW_AT_name("T2CINT"), DW_AT_symbol_name("_T2CINT")
+     478                      .dwattr DW$62, DW_AT_data_member_location[DW_OP_plus_uconst 0x62]
+     479                      .dwattr DW$62, DW_AT_accessibility(DW_ACCESS_public)
+     480              DW$63   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     481                      .dwattr DW$63, DW_AT_name("T2UFINT"), DW_AT_symbol_name("_T2UFINT")
+     482                      .dwattr DW$63, DW_AT_data_member_location[DW_OP_plus_uconst 0x64]
+     483                      .dwattr DW$63, DW_AT_accessibility(DW_ACCESS_public)
+     484              DW$64   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     485                      .dwattr DW$64, DW_AT_name("T2OFINT"), DW_AT_symbol_name("_T2OFINT")
+     486                      .dwattr DW$64, DW_AT_data_member_location[DW_OP_plus_uconst 0x66]
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE   10
+
+     487                      .dwattr DW$64, DW_AT_accessibility(DW_ACCESS_public)
+     488              DW$65   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     489                      .dwattr DW$65, DW_AT_name("CAPINT1"), DW_AT_symbol_name("_CAPINT1")
+     490                      .dwattr DW$65, DW_AT_data_member_location[DW_OP_plus_uconst 0x68]
+     491                      .dwattr DW$65, DW_AT_accessibility(DW_ACCESS_public)
+     492              DW$66   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     493                      .dwattr DW$66, DW_AT_name("CAPINT2"), DW_AT_symbol_name("_CAPINT2")
+     494                      .dwattr DW$66, DW_AT_data_member_location[DW_OP_plus_uconst 0x6a]
+     495                      .dwattr DW$66, DW_AT_accessibility(DW_ACCESS_public)
+     496              DW$67   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     497                      .dwattr DW$67, DW_AT_name("CAPINT3"), DW_AT_symbol_name("_CAPINT3")
+     498                      .dwattr DW$67, DW_AT_data_member_location[DW_OP_plus_uconst 0x6c]
+     499                      .dwattr DW$67, DW_AT_accessibility(DW_ACCESS_public)
+     500              DW$68   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     501                      .dwattr DW$68, DW_AT_name("rsvd3_8"), DW_AT_symbol_name("_rsvd3_8")
+     502                      .dwattr DW$68, DW_AT_data_member_location[DW_OP_plus_uconst 0x6e]
+     503                      .dwattr DW$68, DW_AT_accessibility(DW_ACCESS_public)
+     504              DW$69   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     505                      .dwattr DW$69, DW_AT_name("CMP4INT"), DW_AT_symbol_name("_CMP4INT")
+     506                      .dwattr DW$69, DW_AT_data_member_location[DW_OP_plus_uconst 0x70]
+     507                      .dwattr DW$69, DW_AT_accessibility(DW_ACCESS_public)
+     508              DW$70   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     509                      .dwattr DW$70, DW_AT_name("CMP5INT"), DW_AT_symbol_name("_CMP5INT")
+     510                      .dwattr DW$70, DW_AT_data_member_location[DW_OP_plus_uconst 0x72]
+     511                      .dwattr DW$70, DW_AT_accessibility(DW_ACCESS_public)
+     512              DW$71   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     513                      .dwattr DW$71, DW_AT_name("CMP6INT"), DW_AT_symbol_name("_CMP6INT")
+     514                      .dwattr DW$71, DW_AT_data_member_location[DW_OP_plus_uconst 0x74]
+     515                      .dwattr DW$71, DW_AT_accessibility(DW_ACCESS_public)
+     516              DW$72   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     517                      .dwattr DW$72, DW_AT_name("T3PINT"), DW_AT_symbol_name("_T3PINT")
+     518                      .dwattr DW$72, DW_AT_data_member_location[DW_OP_plus_uconst 0x76]
+     519                      .dwattr DW$72, DW_AT_accessibility(DW_ACCESS_public)
+     520              DW$73   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     521                      .dwattr DW$73, DW_AT_name("T3CINT"), DW_AT_symbol_name("_T3CINT")
+     522                      .dwattr DW$73, DW_AT_data_member_location[DW_OP_plus_uconst 0x78]
+     523                      .dwattr DW$73, DW_AT_accessibility(DW_ACCESS_public)
+     524              DW$74   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     525                      .dwattr DW$74, DW_AT_name("T3UFINT"), DW_AT_symbol_name("_T3UFINT")
+     526                      .dwattr DW$74, DW_AT_data_member_location[DW_OP_plus_uconst 0x7a]
+     527                      .dwattr DW$74, DW_AT_accessibility(DW_ACCESS_public)
+     528              DW$75   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     529                      .dwattr DW$75, DW_AT_name("T3OFINT"), DW_AT_symbol_name("_T3OFINT")
+     530                      .dwattr DW$75, DW_AT_data_member_location[DW_OP_plus_uconst 0x7c]
+     531                      .dwattr DW$75, DW_AT_accessibility(DW_ACCESS_public)
+     532              DW$76   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     533                      .dwattr DW$76, DW_AT_name("rsvd4_8"), DW_AT_symbol_name("_rsvd4_8")
+     534                      .dwattr DW$76, DW_AT_data_member_location[DW_OP_plus_uconst 0x7e]
+     535                      .dwattr DW$76, DW_AT_accessibility(DW_ACCESS_public)
+     536              DW$77   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     537                      .dwattr DW$77, DW_AT_name("T4PINT"), DW_AT_symbol_name("_T4PINT")
+     538                      .dwattr DW$77, DW_AT_data_member_location[DW_OP_plus_uconst 0x80]
+     539                      .dwattr DW$77, DW_AT_accessibility(DW_ACCESS_public)
+     540              DW$78   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     541                      .dwattr DW$78, DW_AT_name("T4CINT"), DW_AT_symbol_name("_T4CINT")
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE   11
+
+     542                      .dwattr DW$78, DW_AT_data_member_location[DW_OP_plus_uconst 0x82]
+     543                      .dwattr DW$78, DW_AT_accessibility(DW_ACCESS_public)
+     544              DW$79   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     545                      .dwattr DW$79, DW_AT_name("T4UFINT"), DW_AT_symbol_name("_T4UFINT")
+     546                      .dwattr DW$79, DW_AT_data_member_location[DW_OP_plus_uconst 0x84]
+     547                      .dwattr DW$79, DW_AT_accessibility(DW_ACCESS_public)
+     548              DW$80   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     549                      .dwattr DW$80, DW_AT_name("T4OFINT"), DW_AT_symbol_name("_T4OFINT")
+     550                      .dwattr DW$80, DW_AT_data_member_location[DW_OP_plus_uconst 0x86]
+     551                      .dwattr DW$80, DW_AT_accessibility(DW_ACCESS_public)
+     552              DW$81   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     553                      .dwattr DW$81, DW_AT_name("CAPINT4"), DW_AT_symbol_name("_CAPINT4")
+     554                      .dwattr DW$81, DW_AT_data_member_location[DW_OP_plus_uconst 0x88]
+     555                      .dwattr DW$81, DW_AT_accessibility(DW_ACCESS_public)
+     556              DW$82   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     557                      .dwattr DW$82, DW_AT_name("CAPINT5"), DW_AT_symbol_name("_CAPINT5")
+     558                      .dwattr DW$82, DW_AT_data_member_location[DW_OP_plus_uconst 0x8a]
+     559                      .dwattr DW$82, DW_AT_accessibility(DW_ACCESS_public)
+     560              DW$83   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     561                      .dwattr DW$83, DW_AT_name("CAPINT6"), DW_AT_symbol_name("_CAPINT6")
+     562                      .dwattr DW$83, DW_AT_data_member_location[DW_OP_plus_uconst 0x8c]
+     563                      .dwattr DW$83, DW_AT_accessibility(DW_ACCESS_public)
+     564              DW$84   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     565                      .dwattr DW$84, DW_AT_name("rsvd5_8"), DW_AT_symbol_name("_rsvd5_8")
+     566                      .dwattr DW$84, DW_AT_data_member_location[DW_OP_plus_uconst 0x8e]
+     567                      .dwattr DW$84, DW_AT_accessibility(DW_ACCESS_public)
+     568              DW$85   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     569                      .dwattr DW$85, DW_AT_name("SPIRXINTA"), DW_AT_symbol_name("_SPIRXINTA")
+     570                      .dwattr DW$85, DW_AT_data_member_location[DW_OP_plus_uconst 0x90]
+     571                      .dwattr DW$85, DW_AT_accessibility(DW_ACCESS_public)
+     572              DW$86   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     573                      .dwattr DW$86, DW_AT_name("SPITXINTA"), DW_AT_symbol_name("_SPITXINTA")
+     574                      .dwattr DW$86, DW_AT_data_member_location[DW_OP_plus_uconst 0x92]
+     575                      .dwattr DW$86, DW_AT_accessibility(DW_ACCESS_public)
+     576              DW$87   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     577                      .dwattr DW$87, DW_AT_name("rsvd6_3"), DW_AT_symbol_name("_rsvd6_3")
+     578                      .dwattr DW$87, DW_AT_data_member_location[DW_OP_plus_uconst 0x94]
+     579                      .dwattr DW$87, DW_AT_accessibility(DW_ACCESS_public)
+     580              DW$88   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     581                      .dwattr DW$88, DW_AT_name("rsvd6_4"), DW_AT_symbol_name("_rsvd6_4")
+     582                      .dwattr DW$88, DW_AT_data_member_location[DW_OP_plus_uconst 0x96]
+     583                      .dwattr DW$88, DW_AT_accessibility(DW_ACCESS_public)
+     584              DW$89   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     585                      .dwattr DW$89, DW_AT_name("MRINTA"), DW_AT_symbol_name("_MRINTA")
+     586                      .dwattr DW$89, DW_AT_data_member_location[DW_OP_plus_uconst 0x98]
+     587                      .dwattr DW$89, DW_AT_accessibility(DW_ACCESS_public)
+     588              DW$90   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     589                      .dwattr DW$90, DW_AT_name("MXINTA"), DW_AT_symbol_name("_MXINTA")
+     590                      .dwattr DW$90, DW_AT_data_member_location[DW_OP_plus_uconst 0x9a]
+     591                      .dwattr DW$90, DW_AT_accessibility(DW_ACCESS_public)
+     592              DW$91   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     593                      .dwattr DW$91, DW_AT_name("rsvd6_7"), DW_AT_symbol_name("_rsvd6_7")
+     594                      .dwattr DW$91, DW_AT_data_member_location[DW_OP_plus_uconst 0x9c]
+     595                      .dwattr DW$91, DW_AT_accessibility(DW_ACCESS_public)
+     596              DW$92   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE   12
+
+     597                      .dwattr DW$92, DW_AT_name("rsvd6_8"), DW_AT_symbol_name("_rsvd6_8")
+     598                      .dwattr DW$92, DW_AT_data_member_location[DW_OP_plus_uconst 0x9e]
+     599                      .dwattr DW$92, DW_AT_accessibility(DW_ACCESS_public)
+     600              DW$93   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     601                      .dwattr DW$93, DW_AT_name("rsvd7_1"), DW_AT_symbol_name("_rsvd7_1")
+     602                      .dwattr DW$93, DW_AT_data_member_location[DW_OP_plus_uconst 0xa0]
+     603                      .dwattr DW$93, DW_AT_accessibility(DW_ACCESS_public)
+     604              DW$94   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     605                      .dwattr DW$94, DW_AT_name("rsvd7_2"), DW_AT_symbol_name("_rsvd7_2")
+     606                      .dwattr DW$94, DW_AT_data_member_location[DW_OP_plus_uconst 0xa2]
+     607                      .dwattr DW$94, DW_AT_accessibility(DW_ACCESS_public)
+     608              DW$95   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     609                      .dwattr DW$95, DW_AT_name("rsvd7_3"), DW_AT_symbol_name("_rsvd7_3")
+     610                      .dwattr DW$95, DW_AT_data_member_location[DW_OP_plus_uconst 0xa4]
+     611                      .dwattr DW$95, DW_AT_accessibility(DW_ACCESS_public)
+     612              DW$96   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     613                      .dwattr DW$96, DW_AT_name("rsvd7_4"), DW_AT_symbol_name("_rsvd7_4")
+     614                      .dwattr DW$96, DW_AT_data_member_location[DW_OP_plus_uconst 0xa6]
+     615                      .dwattr DW$96, DW_AT_accessibility(DW_ACCESS_public)
+     616              DW$97   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     617                      .dwattr DW$97, DW_AT_name("rsvd7_5"), DW_AT_symbol_name("_rsvd7_5")
+     618                      .dwattr DW$97, DW_AT_data_member_location[DW_OP_plus_uconst 0xa8]
+     619                      .dwattr DW$97, DW_AT_accessibility(DW_ACCESS_public)
+     620              DW$98   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     621                      .dwattr DW$98, DW_AT_name("rsvd7_6"), DW_AT_symbol_name("_rsvd7_6")
+     622                      .dwattr DW$98, DW_AT_data_member_location[DW_OP_plus_uconst 0xaa]
+     623                      .dwattr DW$98, DW_AT_accessibility(DW_ACCESS_public)
+     624              DW$99   .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     625                      .dwattr DW$99, DW_AT_name("rsvd7_7"), DW_AT_symbol_name("_rsvd7_7")
+     626                      .dwattr DW$99, DW_AT_data_member_location[DW_OP_plus_uconst 0xac]
+     627                      .dwattr DW$99, DW_AT_accessibility(DW_ACCESS_public)
+     628              DW$100  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     629                      .dwattr DW$100, DW_AT_name("rsvd7_8"), DW_AT_symbol_name("_rsvd7_8")
+     630                      .dwattr DW$100, DW_AT_data_member_location[DW_OP_plus_uconst 0xae]
+     631                      .dwattr DW$100, DW_AT_accessibility(DW_ACCESS_public)
+     632              DW$101  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     633                      .dwattr DW$101, DW_AT_name("rsvd8_1"), DW_AT_symbol_name("_rsvd8_1")
+     634                      .dwattr DW$101, DW_AT_data_member_location[DW_OP_plus_uconst 0xb0]
+     635                      .dwattr DW$101, DW_AT_accessibility(DW_ACCESS_public)
+     636              DW$102  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     637                      .dwattr DW$102, DW_AT_name("rsvd8_2"), DW_AT_symbol_name("_rsvd8_2")
+     638                      .dwattr DW$102, DW_AT_data_member_location[DW_OP_plus_uconst 0xb2]
+     639                      .dwattr DW$102, DW_AT_accessibility(DW_ACCESS_public)
+     640              DW$103  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     641                      .dwattr DW$103, DW_AT_name("rsvd8_3"), DW_AT_symbol_name("_rsvd8_3")
+     642                      .dwattr DW$103, DW_AT_data_member_location[DW_OP_plus_uconst 0xb4]
+     643                      .dwattr DW$103, DW_AT_accessibility(DW_ACCESS_public)
+     644              DW$104  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     645                      .dwattr DW$104, DW_AT_name("rsvd8_4"), DW_AT_symbol_name("_rsvd8_4")
+     646                      .dwattr DW$104, DW_AT_data_member_location[DW_OP_plus_uconst 0xb6]
+     647                      .dwattr DW$104, DW_AT_accessibility(DW_ACCESS_public)
+     648              DW$105  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     649                      .dwattr DW$105, DW_AT_name("rsvd8_5"), DW_AT_symbol_name("_rsvd8_5")
+     650                      .dwattr DW$105, DW_AT_data_member_location[DW_OP_plus_uconst 0xb8]
+     651                      .dwattr DW$105, DW_AT_accessibility(DW_ACCESS_public)
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE   13
+
+     652              DW$106  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     653                      .dwattr DW$106, DW_AT_name("rsvd8_6"), DW_AT_symbol_name("_rsvd8_6")
+     654                      .dwattr DW$106, DW_AT_data_member_location[DW_OP_plus_uconst 0xba]
+     655                      .dwattr DW$106, DW_AT_accessibility(DW_ACCESS_public)
+     656              DW$107  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     657                      .dwattr DW$107, DW_AT_name("rsvd8_7"), DW_AT_symbol_name("_rsvd8_7")
+     658                      .dwattr DW$107, DW_AT_data_member_location[DW_OP_plus_uconst 0xbc]
+     659                      .dwattr DW$107, DW_AT_accessibility(DW_ACCESS_public)
+     660              DW$108  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     661                      .dwattr DW$108, DW_AT_name("rsvd8_8"), DW_AT_symbol_name("_rsvd8_8")
+     662                      .dwattr DW$108, DW_AT_data_member_location[DW_OP_plus_uconst 0xbe]
+     663                      .dwattr DW$108, DW_AT_accessibility(DW_ACCESS_public)
+     664              DW$109  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     665                      .dwattr DW$109, DW_AT_name("RXAINT"), DW_AT_symbol_name("_RXAINT")
+     666                      .dwattr DW$109, DW_AT_data_member_location[DW_OP_plus_uconst 0xc0]
+     667                      .dwattr DW$109, DW_AT_accessibility(DW_ACCESS_public)
+     668              DW$110  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     669                      .dwattr DW$110, DW_AT_name("TXAINT"), DW_AT_symbol_name("_TXAINT")
+     670                      .dwattr DW$110, DW_AT_data_member_location[DW_OP_plus_uconst 0xc2]
+     671                      .dwattr DW$110, DW_AT_accessibility(DW_ACCESS_public)
+     672              DW$111  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     673                      .dwattr DW$111, DW_AT_name("RXBINT"), DW_AT_symbol_name("_RXBINT")
+     674                      .dwattr DW$111, DW_AT_data_member_location[DW_OP_plus_uconst 0xc4]
+     675                      .dwattr DW$111, DW_AT_accessibility(DW_ACCESS_public)
+     676              DW$112  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     677                      .dwattr DW$112, DW_AT_name("TXBINT"), DW_AT_symbol_name("_TXBINT")
+     678                      .dwattr DW$112, DW_AT_data_member_location[DW_OP_plus_uconst 0xc6]
+     679                      .dwattr DW$112, DW_AT_accessibility(DW_ACCESS_public)
+     680              DW$113  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     681                      .dwattr DW$113, DW_AT_name("ECAN0INTA"), DW_AT_symbol_name("_ECAN0INTA")
+     682                      .dwattr DW$113, DW_AT_data_member_location[DW_OP_plus_uconst 0xc8]
+     683                      .dwattr DW$113, DW_AT_accessibility(DW_ACCESS_public)
+     684              DW$114  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     685                      .dwattr DW$114, DW_AT_name("ECAN1INTA"), DW_AT_symbol_name("_ECAN1INTA")
+     686                      .dwattr DW$114, DW_AT_data_member_location[DW_OP_plus_uconst 0xca]
+     687                      .dwattr DW$114, DW_AT_accessibility(DW_ACCESS_public)
+     688              DW$115  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     689                      .dwattr DW$115, DW_AT_name("rsvd9_7"), DW_AT_symbol_name("_rsvd9_7")
+     690                      .dwattr DW$115, DW_AT_data_member_location[DW_OP_plus_uconst 0xcc]
+     691                      .dwattr DW$115, DW_AT_accessibility(DW_ACCESS_public)
+     692              DW$116  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     693                      .dwattr DW$116, DW_AT_name("rsvd9_8"), DW_AT_symbol_name("_rsvd9_8")
+     694                      .dwattr DW$116, DW_AT_data_member_location[DW_OP_plus_uconst 0xce]
+     695                      .dwattr DW$116, DW_AT_accessibility(DW_ACCESS_public)
+     696              DW$117  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     697                      .dwattr DW$117, DW_AT_name("rsvd10_1"), DW_AT_symbol_name("_rsvd10_1")
+     698                      .dwattr DW$117, DW_AT_data_member_location[DW_OP_plus_uconst 0xd0]
+     699                      .dwattr DW$117, DW_AT_accessibility(DW_ACCESS_public)
+     700              DW$118  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     701                      .dwattr DW$118, DW_AT_name("rsvd10_2"), DW_AT_symbol_name("_rsvd10_2")
+     702                      .dwattr DW$118, DW_AT_data_member_location[DW_OP_plus_uconst 0xd2]
+     703                      .dwattr DW$118, DW_AT_accessibility(DW_ACCESS_public)
+     704              DW$119  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     705                      .dwattr DW$119, DW_AT_name("rsvd10_3"), DW_AT_symbol_name("_rsvd10_3")
+     706                      .dwattr DW$119, DW_AT_data_member_location[DW_OP_plus_uconst 0xd4]
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE   14
+
+     707                      .dwattr DW$119, DW_AT_accessibility(DW_ACCESS_public)
+     708              DW$120  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     709                      .dwattr DW$120, DW_AT_name("rsvd10_4"), DW_AT_symbol_name("_rsvd10_4")
+     710                      .dwattr DW$120, DW_AT_data_member_location[DW_OP_plus_uconst 0xd6]
+     711                      .dwattr DW$120, DW_AT_accessibility(DW_ACCESS_public)
+     712              DW$121  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     713                      .dwattr DW$121, DW_AT_name("rsvd10_5"), DW_AT_symbol_name("_rsvd10_5")
+     714                      .dwattr DW$121, DW_AT_data_member_location[DW_OP_plus_uconst 0xd8]
+     715                      .dwattr DW$121, DW_AT_accessibility(DW_ACCESS_public)
+     716              DW$122  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     717                      .dwattr DW$122, DW_AT_name("rsvd10_6"), DW_AT_symbol_name("_rsvd10_6")
+     718                      .dwattr DW$122, DW_AT_data_member_location[DW_OP_plus_uconst 0xda]
+     719                      .dwattr DW$122, DW_AT_accessibility(DW_ACCESS_public)
+     720              DW$123  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     721                      .dwattr DW$123, DW_AT_name("rsvd10_7"), DW_AT_symbol_name("_rsvd10_7")
+     722                      .dwattr DW$123, DW_AT_data_member_location[DW_OP_plus_uconst 0xdc]
+     723                      .dwattr DW$123, DW_AT_accessibility(DW_ACCESS_public)
+     724              DW$124  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     725                      .dwattr DW$124, DW_AT_name("rsvd10_8"), DW_AT_symbol_name("_rsvd10_8")
+     726                      .dwattr DW$124, DW_AT_data_member_location[DW_OP_plus_uconst 0xde]
+     727                      .dwattr DW$124, DW_AT_accessibility(DW_ACCESS_public)
+     728              DW$125  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     729                      .dwattr DW$125, DW_AT_name("rsvd11_1"), DW_AT_symbol_name("_rsvd11_1")
+     730                      .dwattr DW$125, DW_AT_data_member_location[DW_OP_plus_uconst 0xe0]
+     731                      .dwattr DW$125, DW_AT_accessibility(DW_ACCESS_public)
+     732              DW$126  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     733                      .dwattr DW$126, DW_AT_name("rsvd11_2"), DW_AT_symbol_name("_rsvd11_2")
+     734                      .dwattr DW$126, DW_AT_data_member_location[DW_OP_plus_uconst 0xe2]
+     735                      .dwattr DW$126, DW_AT_accessibility(DW_ACCESS_public)
+     736              DW$127  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     737                      .dwattr DW$127, DW_AT_name("rsvd11_3"), DW_AT_symbol_name("_rsvd11_3")
+     738                      .dwattr DW$127, DW_AT_data_member_location[DW_OP_plus_uconst 0xe4]
+     739                      .dwattr DW$127, DW_AT_accessibility(DW_ACCESS_public)
+     740              DW$128  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     741                      .dwattr DW$128, DW_AT_name("rsvd11_4"), DW_AT_symbol_name("_rsvd11_4")
+     742                      .dwattr DW$128, DW_AT_data_member_location[DW_OP_plus_uconst 0xe6]
+     743                      .dwattr DW$128, DW_AT_accessibility(DW_ACCESS_public)
+     744              DW$129  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     745                      .dwattr DW$129, DW_AT_name("rsvd11_5"), DW_AT_symbol_name("_rsvd11_5")
+     746                      .dwattr DW$129, DW_AT_data_member_location[DW_OP_plus_uconst 0xe8]
+     747                      .dwattr DW$129, DW_AT_accessibility(DW_ACCESS_public)
+     748              DW$130  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     749                      .dwattr DW$130, DW_AT_name("rsvd11_6"), DW_AT_symbol_name("_rsvd11_6")
+     750                      .dwattr DW$130, DW_AT_data_member_location[DW_OP_plus_uconst 0xea]
+     751                      .dwattr DW$130, DW_AT_accessibility(DW_ACCESS_public)
+     752              DW$131  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     753                      .dwattr DW$131, DW_AT_name("rsvd11_7"), DW_AT_symbol_name("_rsvd11_7")
+     754                      .dwattr DW$131, DW_AT_data_member_location[DW_OP_plus_uconst 0xec]
+     755                      .dwattr DW$131, DW_AT_accessibility(DW_ACCESS_public)
+     756              DW$132  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     757                      .dwattr DW$132, DW_AT_name("rsvd11_8"), DW_AT_symbol_name("_rsvd11_8")
+     758                      .dwattr DW$132, DW_AT_data_member_location[DW_OP_plus_uconst 0xee]
+     759                      .dwattr DW$132, DW_AT_accessibility(DW_ACCESS_public)
+     760              DW$133  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     761                      .dwattr DW$133, DW_AT_name("rsvd12_1"), DW_AT_symbol_name("_rsvd12_1")
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE   15
+
+     762                      .dwattr DW$133, DW_AT_data_member_location[DW_OP_plus_uconst 0xf0]
+     763                      .dwattr DW$133, DW_AT_accessibility(DW_ACCESS_public)
+     764              DW$134  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     765                      .dwattr DW$134, DW_AT_name("rsvd12_2"), DW_AT_symbol_name("_rsvd12_2")
+     766                      .dwattr DW$134, DW_AT_data_member_location[DW_OP_plus_uconst 0xf2]
+     767                      .dwattr DW$134, DW_AT_accessibility(DW_ACCESS_public)
+     768              DW$135  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     769                      .dwattr DW$135, DW_AT_name("rsvd12_3"), DW_AT_symbol_name("_rsvd12_3")
+     770                      .dwattr DW$135, DW_AT_data_member_location[DW_OP_plus_uconst 0xf4]
+     771                      .dwattr DW$135, DW_AT_accessibility(DW_ACCESS_public)
+     772              DW$136  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     773                      .dwattr DW$136, DW_AT_name("rsvd12_4"), DW_AT_symbol_name("_rsvd12_4")
+     774                      .dwattr DW$136, DW_AT_data_member_location[DW_OP_plus_uconst 0xf6]
+     775                      .dwattr DW$136, DW_AT_accessibility(DW_ACCESS_public)
+     776              DW$137  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     777                      .dwattr DW$137, DW_AT_name("rsvd12_5"), DW_AT_symbol_name("_rsvd12_5")
+     778                      .dwattr DW$137, DW_AT_data_member_location[DW_OP_plus_uconst 0xf8]
+     779                      .dwattr DW$137, DW_AT_accessibility(DW_ACCESS_public)
+     780              DW$138  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     781                      .dwattr DW$138, DW_AT_name("rsvd12_6"), DW_AT_symbol_name("_rsvd12_6")
+     782                      .dwattr DW$138, DW_AT_data_member_location[DW_OP_plus_uconst 0xfa]
+     783                      .dwattr DW$138, DW_AT_accessibility(DW_ACCESS_public)
+     784              DW$139  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     785                      .dwattr DW$139, DW_AT_name("rsvd12_7"), DW_AT_symbol_name("_rsvd12_7")
+     786                      .dwattr DW$139, DW_AT_data_member_location[DW_OP_plus_uconst 0xfc]
+     787                      .dwattr DW$139, DW_AT_accessibility(DW_ACCESS_public)
+     788              DW$140  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$31)
+     789                      .dwattr DW$140, DW_AT_name("rsvd12_8"), DW_AT_symbol_name("_rsvd12_8")
+     790                      .dwattr DW$140, DW_AT_data_member_location[DW_OP_plus_uconst 0xfe]
+     791                      .dwattr DW$140, DW_AT_accessibility(DW_ACCESS_public)
+     792                      .dwendtag DW$T$32
+     793              
+     794              DW$141  .dwtag  DW_TAG_far_type
+     795                      .dwattr DW$141, DW_AT_type(*DW$T$32)
+     796              DW$T$44 .dwtag  DW_TAG_const_type
+     797                      .dwattr DW$T$44, DW_AT_type(*DW$141)
+     798              DW$T$31 .dwtag  DW_TAG_typedef, DW_AT_name("PINT"), DW_AT_type(*DW$T$30)
+     799                      .dwattr DW$T$31, DW_AT_language(DW_LANG_C)
+     800              DW$142  .dwtag  DW_TAG_far_type
+     801              DW$T$33 .dwtag  DW_TAG_const_type
+     802                      .dwattr DW$T$33, DW_AT_type(*DW$142)
+     803              
+     804              DW$T$28 .dwtag  DW_TAG_structure_type
+     805                      .dwattr DW$T$28, DW_AT_name("PIE_CTRL_REGS")
+     806                      .dwattr DW$T$28, DW_AT_byte_size(0x1a)
+     807              DW$143  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$21)
+     808                      .dwattr DW$143, DW_AT_name("PIECRTL"), DW_AT_symbol_name("_PIECRTL")
+     809                      .dwattr DW$143, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     810                      .dwattr DW$143, DW_AT_accessibility(DW_ACCESS_public)
+     811              DW$144  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$23)
+     812                      .dwattr DW$144, DW_AT_name("PIEACK"), DW_AT_symbol_name("_PIEACK")
+     813                      .dwattr DW$144, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     814                      .dwattr DW$144, DW_AT_accessibility(DW_ACCESS_public)
+     815              DW$145  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$25)
+     816                      .dwattr DW$145, DW_AT_name("PIEIER1"), DW_AT_symbol_name("_PIEIER1")
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE   16
+
+     817                      .dwattr DW$145, DW_AT_data_member_location[DW_OP_plus_uconst 0x2]
+     818                      .dwattr DW$145, DW_AT_accessibility(DW_ACCESS_public)
+     819              DW$146  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$27)
+     820                      .dwattr DW$146, DW_AT_name("PIEIFR1"), DW_AT_symbol_name("_PIEIFR1")
+     821                      .dwattr DW$146, DW_AT_data_member_location[DW_OP_plus_uconst 0x3]
+     822                      .dwattr DW$146, DW_AT_accessibility(DW_ACCESS_public)
+     823              DW$147  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$25)
+     824                      .dwattr DW$147, DW_AT_name("PIEIER2"), DW_AT_symbol_name("_PIEIER2")
+     825                      .dwattr DW$147, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+     826                      .dwattr DW$147, DW_AT_accessibility(DW_ACCESS_public)
+     827              DW$148  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$27)
+     828                      .dwattr DW$148, DW_AT_name("PIEIFR2"), DW_AT_symbol_name("_PIEIFR2")
+     829                      .dwattr DW$148, DW_AT_data_member_location[DW_OP_plus_uconst 0x5]
+     830                      .dwattr DW$148, DW_AT_accessibility(DW_ACCESS_public)
+     831              DW$149  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$25)
+     832                      .dwattr DW$149, DW_AT_name("PIEIER3"), DW_AT_symbol_name("_PIEIER3")
+     833                      .dwattr DW$149, DW_AT_data_member_location[DW_OP_plus_uconst 0x6]
+     834                      .dwattr DW$149, DW_AT_accessibility(DW_ACCESS_public)
+     835              DW$150  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$27)
+     836                      .dwattr DW$150, DW_AT_name("PIEIFR3"), DW_AT_symbol_name("_PIEIFR3")
+     837                      .dwattr DW$150, DW_AT_data_member_location[DW_OP_plus_uconst 0x7]
+     838                      .dwattr DW$150, DW_AT_accessibility(DW_ACCESS_public)
+     839              DW$151  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$25)
+     840                      .dwattr DW$151, DW_AT_name("PIEIER4"), DW_AT_symbol_name("_PIEIER4")
+     841                      .dwattr DW$151, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+     842                      .dwattr DW$151, DW_AT_accessibility(DW_ACCESS_public)
+     843              DW$152  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$27)
+     844                      .dwattr DW$152, DW_AT_name("PIEIFR4"), DW_AT_symbol_name("_PIEIFR4")
+     845                      .dwattr DW$152, DW_AT_data_member_location[DW_OP_plus_uconst 0x9]
+     846                      .dwattr DW$152, DW_AT_accessibility(DW_ACCESS_public)
+     847              DW$153  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$25)
+     848                      .dwattr DW$153, DW_AT_name("PIEIER5"), DW_AT_symbol_name("_PIEIER5")
+     849                      .dwattr DW$153, DW_AT_data_member_location[DW_OP_plus_uconst 0xa]
+     850                      .dwattr DW$153, DW_AT_accessibility(DW_ACCESS_public)
+     851              DW$154  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$27)
+     852                      .dwattr DW$154, DW_AT_name("PIEIFR5"), DW_AT_symbol_name("_PIEIFR5")
+     853                      .dwattr DW$154, DW_AT_data_member_location[DW_OP_plus_uconst 0xb]
+     854                      .dwattr DW$154, DW_AT_accessibility(DW_ACCESS_public)
+     855              DW$155  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$25)
+     856                      .dwattr DW$155, DW_AT_name("PIEIER6"), DW_AT_symbol_name("_PIEIER6")
+     857                      .dwattr DW$155, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+     858                      .dwattr DW$155, DW_AT_accessibility(DW_ACCESS_public)
+     859              DW$156  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$27)
+     860                      .dwattr DW$156, DW_AT_name("PIEIFR6"), DW_AT_symbol_name("_PIEIFR6")
+     861                      .dwattr DW$156, DW_AT_data_member_location[DW_OP_plus_uconst 0xd]
+     862                      .dwattr DW$156, DW_AT_accessibility(DW_ACCESS_public)
+     863              DW$157  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$25)
+     864                      .dwattr DW$157, DW_AT_name("PIEIER7"), DW_AT_symbol_name("_PIEIER7")
+     865                      .dwattr DW$157, DW_AT_data_member_location[DW_OP_plus_uconst 0xe]
+     866                      .dwattr DW$157, DW_AT_accessibility(DW_ACCESS_public)
+     867              DW$158  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$27)
+     868                      .dwattr DW$158, DW_AT_name("PIEIFR7"), DW_AT_symbol_name("_PIEIFR7")
+     869                      .dwattr DW$158, DW_AT_data_member_location[DW_OP_plus_uconst 0xf]
+     870                      .dwattr DW$158, DW_AT_accessibility(DW_ACCESS_public)
+     871              DW$159  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$25)
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE   17
+
+     872                      .dwattr DW$159, DW_AT_name("PIEIER8"), DW_AT_symbol_name("_PIEIER8")
+     873                      .dwattr DW$159, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
+     874                      .dwattr DW$159, DW_AT_accessibility(DW_ACCESS_public)
+     875              DW$160  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$27)
+     876                      .dwattr DW$160, DW_AT_name("PIEIFR8"), DW_AT_symbol_name("_PIEIFR8")
+     877                      .dwattr DW$160, DW_AT_data_member_location[DW_OP_plus_uconst 0x11]
+     878                      .dwattr DW$160, DW_AT_accessibility(DW_ACCESS_public)
+     879              DW$161  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$25)
+     880                      .dwattr DW$161, DW_AT_name("PIEIER9"), DW_AT_symbol_name("_PIEIER9")
+     881                      .dwattr DW$161, DW_AT_data_member_location[DW_OP_plus_uconst 0x12]
+     882                      .dwattr DW$161, DW_AT_accessibility(DW_ACCESS_public)
+     883              DW$162  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$27)
+     884                      .dwattr DW$162, DW_AT_name("PIEIFR9"), DW_AT_symbol_name("_PIEIFR9")
+     885                      .dwattr DW$162, DW_AT_data_member_location[DW_OP_plus_uconst 0x13]
+     886                      .dwattr DW$162, DW_AT_accessibility(DW_ACCESS_public)
+     887              DW$163  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$25)
+     888                      .dwattr DW$163, DW_AT_name("PIEIER10"), DW_AT_symbol_name("_PIEIER10")
+     889                      .dwattr DW$163, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
+     890                      .dwattr DW$163, DW_AT_accessibility(DW_ACCESS_public)
+     891              DW$164  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$27)
+     892                      .dwattr DW$164, DW_AT_name("PIEIFR10"), DW_AT_symbol_name("_PIEIFR10")
+     893                      .dwattr DW$164, DW_AT_data_member_location[DW_OP_plus_uconst 0x15]
+     894                      .dwattr DW$164, DW_AT_accessibility(DW_ACCESS_public)
+     895              DW$165  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$25)
+     896                      .dwattr DW$165, DW_AT_name("PIEIER11"), DW_AT_symbol_name("_PIEIER11")
+     897                      .dwattr DW$165, DW_AT_data_member_location[DW_OP_plus_uconst 0x16]
+     898                      .dwattr DW$165, DW_AT_accessibility(DW_ACCESS_public)
+     899              DW$166  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$27)
+     900                      .dwattr DW$166, DW_AT_name("PIEIFR11"), DW_AT_symbol_name("_PIEIFR11")
+     901                      .dwattr DW$166, DW_AT_data_member_location[DW_OP_plus_uconst 0x17]
+     902                      .dwattr DW$166, DW_AT_accessibility(DW_ACCESS_public)
+     903              DW$167  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$25)
+     904                      .dwattr DW$167, DW_AT_name("PIEIER12"), DW_AT_symbol_name("_PIEIER12")
+     905                      .dwattr DW$167, DW_AT_data_member_location[DW_OP_plus_uconst 0x18]
+     906                      .dwattr DW$167, DW_AT_accessibility(DW_ACCESS_public)
+     907              DW$168  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$27)
+     908                      .dwattr DW$168, DW_AT_name("PIEIFR12"), DW_AT_symbol_name("_PIEIFR12")
+     909                      .dwattr DW$168, DW_AT_data_member_location[DW_OP_plus_uconst 0x19]
+     910                      .dwattr DW$168, DW_AT_accessibility(DW_ACCESS_public)
+     911                      .dwendtag DW$T$28
+     912              
+     913              DW$T$30 .dwtag  DW_TAG_pointer_type, DW_AT_type(*DW$T$29)
+     914                      .dwattr DW$T$30, DW_AT_address_class(0x16)
+     915              
+     916              DW$T$21 .dwtag  DW_TAG_union_type
+     917                      .dwattr DW$T$21, DW_AT_name("PIECTRL_REG")
+     918                      .dwattr DW$T$21, DW_AT_byte_size(0x01)
+     919              DW$169  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+     920                      .dwattr DW$169, DW_AT_name("all"), DW_AT_symbol_name("_all")
+     921                      .dwattr DW$169, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     922                      .dwattr DW$169, DW_AT_accessibility(DW_ACCESS_public)
+     923              DW$170  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$20)
+     924                      .dwattr DW$170, DW_AT_name("bit"), DW_AT_symbol_name("_bit")
+     925                      .dwattr DW$170, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     926                      .dwattr DW$170, DW_AT_accessibility(DW_ACCESS_public)
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE   18
+
+     927                      .dwendtag DW$T$21
+     928              
+     929              
+     930              DW$T$23 .dwtag  DW_TAG_union_type
+     931                      .dwattr DW$T$23, DW_AT_name("PIEACK_REG")
+     932                      .dwattr DW$T$23, DW_AT_byte_size(0x01)
+     933              DW$171  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+     934                      .dwattr DW$171, DW_AT_name("all"), DW_AT_symbol_name("_all")
+     935                      .dwattr DW$171, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     936                      .dwattr DW$171, DW_AT_accessibility(DW_ACCESS_public)
+     937              DW$172  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$22)
+     938                      .dwattr DW$172, DW_AT_name("bit"), DW_AT_symbol_name("_bit")
+     939                      .dwattr DW$172, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     940                      .dwattr DW$172, DW_AT_accessibility(DW_ACCESS_public)
+     941                      .dwendtag DW$T$23
+     942              
+     943              
+     944              DW$T$25 .dwtag  DW_TAG_union_type
+     945                      .dwattr DW$T$25, DW_AT_name("PIEIER_REG")
+     946                      .dwattr DW$T$25, DW_AT_byte_size(0x01)
+     947              DW$173  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+     948                      .dwattr DW$173, DW_AT_name("all"), DW_AT_symbol_name("_all")
+     949                      .dwattr DW$173, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     950                      .dwattr DW$173, DW_AT_accessibility(DW_ACCESS_public)
+     951              DW$174  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$24)
+     952                      .dwattr DW$174, DW_AT_name("bit"), DW_AT_symbol_name("_bit")
+     953                      .dwattr DW$174, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     954                      .dwattr DW$174, DW_AT_accessibility(DW_ACCESS_public)
+     955                      .dwendtag DW$T$25
+     956              
+     957              
+     958              DW$T$27 .dwtag  DW_TAG_union_type
+     959                      .dwattr DW$T$27, DW_AT_name("PIEIFR_REG")
+     960                      .dwattr DW$T$27, DW_AT_byte_size(0x01)
+     961              DW$175  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+     962                      .dwattr DW$175, DW_AT_name("all"), DW_AT_symbol_name("_all")
+     963                      .dwattr DW$175, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     964                      .dwattr DW$175, DW_AT_accessibility(DW_ACCESS_public)
+     965              DW$176  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$26)
+     966                      .dwattr DW$176, DW_AT_name("bit"), DW_AT_symbol_name("_bit")
+     967                      .dwattr DW$176, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     968                      .dwattr DW$176, DW_AT_accessibility(DW_ACCESS_public)
+     969                      .dwendtag DW$T$27
+     970              
+     971              DW$T$19 .dwtag  DW_TAG_typedef, DW_AT_name("Uint16"), DW_AT_type(*DW$T$11)
+     972                      .dwattr DW$T$19, DW_AT_language(DW_LANG_C)
+     973              
+     974              DW$T$20 .dwtag  DW_TAG_structure_type
+     975                      .dwattr DW$T$20, DW_AT_name("PIECTRL_BITS")
+     976                      .dwattr DW$T$20, DW_AT_byte_size(0x01)
+     977              DW$177  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+     978                      .dwattr DW$177, DW_AT_name("ENPIE"), DW_AT_symbol_name("_ENPIE")
+     979                      .dwattr DW$177, DW_AT_bit_offset(0x0f), DW_AT_bit_size(0x01)
+     980                      .dwattr DW$177, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     981                      .dwattr DW$177, DW_AT_accessibility(DW_ACCESS_public)
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE   19
+
+     982              DW$178  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+     983                      .dwattr DW$178, DW_AT_name("PIEVECT"), DW_AT_symbol_name("_PIEVECT")
+     984                      .dwattr DW$178, DW_AT_bit_offset(0x00), DW_AT_bit_size(0x0f)
+     985                      .dwattr DW$178, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     986                      .dwattr DW$178, DW_AT_accessibility(DW_ACCESS_public)
+     987                      .dwendtag DW$T$20
+     988              
+     989              
+     990              DW$T$22 .dwtag  DW_TAG_structure_type
+     991                      .dwattr DW$T$22, DW_AT_name("PIEACK_BITS")
+     992                      .dwattr DW$T$22, DW_AT_byte_size(0x01)
+     993              DW$179  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+     994                      .dwattr DW$179, DW_AT_name("ACK1"), DW_AT_symbol_name("_ACK1")
+     995                      .dwattr DW$179, DW_AT_bit_offset(0x0f), DW_AT_bit_size(0x01)
+     996                      .dwattr DW$179, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     997                      .dwattr DW$179, DW_AT_accessibility(DW_ACCESS_public)
+     998              DW$180  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+     999                      .dwattr DW$180, DW_AT_name("ACK2"), DW_AT_symbol_name("_ACK2")
+    1000                      .dwattr DW$180, DW_AT_bit_offset(0x0e), DW_AT_bit_size(0x01)
+    1001                      .dwattr DW$180, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1002                      .dwattr DW$180, DW_AT_accessibility(DW_ACCESS_public)
+    1003              DW$181  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1004                      .dwattr DW$181, DW_AT_name("ACK3"), DW_AT_symbol_name("_ACK3")
+    1005                      .dwattr DW$181, DW_AT_bit_offset(0x0d), DW_AT_bit_size(0x01)
+    1006                      .dwattr DW$181, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1007                      .dwattr DW$181, DW_AT_accessibility(DW_ACCESS_public)
+    1008              DW$182  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1009                      .dwattr DW$182, DW_AT_name("ACK4"), DW_AT_symbol_name("_ACK4")
+    1010                      .dwattr DW$182, DW_AT_bit_offset(0x0c), DW_AT_bit_size(0x01)
+    1011                      .dwattr DW$182, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1012                      .dwattr DW$182, DW_AT_accessibility(DW_ACCESS_public)
+    1013              DW$183  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1014                      .dwattr DW$183, DW_AT_name("ACK5"), DW_AT_symbol_name("_ACK5")
+    1015                      .dwattr DW$183, DW_AT_bit_offset(0x0b), DW_AT_bit_size(0x01)
+    1016                      .dwattr DW$183, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1017                      .dwattr DW$183, DW_AT_accessibility(DW_ACCESS_public)
+    1018              DW$184  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1019                      .dwattr DW$184, DW_AT_name("ACK6"), DW_AT_symbol_name("_ACK6")
+    1020                      .dwattr DW$184, DW_AT_bit_offset(0x0a), DW_AT_bit_size(0x01)
+    1021                      .dwattr DW$184, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1022                      .dwattr DW$184, DW_AT_accessibility(DW_ACCESS_public)
+    1023              DW$185  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1024                      .dwattr DW$185, DW_AT_name("ACK7"), DW_AT_symbol_name("_ACK7")
+    1025                      .dwattr DW$185, DW_AT_bit_offset(0x09), DW_AT_bit_size(0x01)
+    1026                      .dwattr DW$185, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1027                      .dwattr DW$185, DW_AT_accessibility(DW_ACCESS_public)
+    1028              DW$186  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1029                      .dwattr DW$186, DW_AT_name("ACK8"), DW_AT_symbol_name("_ACK8")
+    1030                      .dwattr DW$186, DW_AT_bit_offset(0x08), DW_AT_bit_size(0x01)
+    1031                      .dwattr DW$186, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1032                      .dwattr DW$186, DW_AT_accessibility(DW_ACCESS_public)
+    1033              DW$187  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1034                      .dwattr DW$187, DW_AT_name("ACK9"), DW_AT_symbol_name("_ACK9")
+    1035                      .dwattr DW$187, DW_AT_bit_offset(0x07), DW_AT_bit_size(0x01)
+    1036                      .dwattr DW$187, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE   20
+
+    1037                      .dwattr DW$187, DW_AT_accessibility(DW_ACCESS_public)
+    1038              DW$188  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1039                      .dwattr DW$188, DW_AT_name("ACK10"), DW_AT_symbol_name("_ACK10")
+    1040                      .dwattr DW$188, DW_AT_bit_offset(0x06), DW_AT_bit_size(0x01)
+    1041                      .dwattr DW$188, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1042                      .dwattr DW$188, DW_AT_accessibility(DW_ACCESS_public)
+    1043              DW$189  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1044                      .dwattr DW$189, DW_AT_name("ACK11"), DW_AT_symbol_name("_ACK11")
+    1045                      .dwattr DW$189, DW_AT_bit_offset(0x05), DW_AT_bit_size(0x01)
+    1046                      .dwattr DW$189, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1047                      .dwattr DW$189, DW_AT_accessibility(DW_ACCESS_public)
+    1048              DW$190  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1049                      .dwattr DW$190, DW_AT_name("ACK12"), DW_AT_symbol_name("_ACK12")
+    1050                      .dwattr DW$190, DW_AT_bit_offset(0x04), DW_AT_bit_size(0x01)
+    1051                      .dwattr DW$190, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1052                      .dwattr DW$190, DW_AT_accessibility(DW_ACCESS_public)
+    1053              DW$191  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1054                      .dwattr DW$191, DW_AT_name("rsvd"), DW_AT_symbol_name("_rsvd")
+    1055                      .dwattr DW$191, DW_AT_bit_offset(0x00), DW_AT_bit_size(0x04)
+    1056                      .dwattr DW$191, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1057                      .dwattr DW$191, DW_AT_accessibility(DW_ACCESS_public)
+    1058                      .dwendtag DW$T$22
+    1059              
+    1060              
+    1061              DW$T$24 .dwtag  DW_TAG_structure_type
+    1062                      .dwattr DW$T$24, DW_AT_name("PIEIER_BITS")
+    1063                      .dwattr DW$T$24, DW_AT_byte_size(0x01)
+    1064              DW$192  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1065                      .dwattr DW$192, DW_AT_name("INTx1"), DW_AT_symbol_name("_INTx1")
+    1066                      .dwattr DW$192, DW_AT_bit_offset(0x0f), DW_AT_bit_size(0x01)
+    1067                      .dwattr DW$192, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1068                      .dwattr DW$192, DW_AT_accessibility(DW_ACCESS_public)
+    1069              DW$193  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1070                      .dwattr DW$193, DW_AT_name("INTx2"), DW_AT_symbol_name("_INTx2")
+    1071                      .dwattr DW$193, DW_AT_bit_offset(0x0e), DW_AT_bit_size(0x01)
+    1072                      .dwattr DW$193, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1073                      .dwattr DW$193, DW_AT_accessibility(DW_ACCESS_public)
+    1074              DW$194  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1075                      .dwattr DW$194, DW_AT_name("INTx3"), DW_AT_symbol_name("_INTx3")
+    1076                      .dwattr DW$194, DW_AT_bit_offset(0x0d), DW_AT_bit_size(0x01)
+    1077                      .dwattr DW$194, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1078                      .dwattr DW$194, DW_AT_accessibility(DW_ACCESS_public)
+    1079              DW$195  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1080                      .dwattr DW$195, DW_AT_name("INTx4"), DW_AT_symbol_name("_INTx4")
+    1081                      .dwattr DW$195, DW_AT_bit_offset(0x0c), DW_AT_bit_size(0x01)
+    1082                      .dwattr DW$195, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1083                      .dwattr DW$195, DW_AT_accessibility(DW_ACCESS_public)
+    1084              DW$196  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1085                      .dwattr DW$196, DW_AT_name("INTx5"), DW_AT_symbol_name("_INTx5")
+    1086                      .dwattr DW$196, DW_AT_bit_offset(0x0b), DW_AT_bit_size(0x01)
+    1087                      .dwattr DW$196, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1088                      .dwattr DW$196, DW_AT_accessibility(DW_ACCESS_public)
+    1089              DW$197  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1090                      .dwattr DW$197, DW_AT_name("INTx6"), DW_AT_symbol_name("_INTx6")
+    1091                      .dwattr DW$197, DW_AT_bit_offset(0x0a), DW_AT_bit_size(0x01)
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE   21
+
+    1092                      .dwattr DW$197, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1093                      .dwattr DW$197, DW_AT_accessibility(DW_ACCESS_public)
+    1094              DW$198  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1095                      .dwattr DW$198, DW_AT_name("INTx7"), DW_AT_symbol_name("_INTx7")
+    1096                      .dwattr DW$198, DW_AT_bit_offset(0x09), DW_AT_bit_size(0x01)
+    1097                      .dwattr DW$198, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1098                      .dwattr DW$198, DW_AT_accessibility(DW_ACCESS_public)
+    1099              DW$199  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1100                      .dwattr DW$199, DW_AT_name("INTx8"), DW_AT_symbol_name("_INTx8")
+    1101                      .dwattr DW$199, DW_AT_bit_offset(0x08), DW_AT_bit_size(0x01)
+    1102                      .dwattr DW$199, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1103                      .dwattr DW$199, DW_AT_accessibility(DW_ACCESS_public)
+    1104              DW$200  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1105                      .dwattr DW$200, DW_AT_name("rsvd"), DW_AT_symbol_name("_rsvd")
+    1106                      .dwattr DW$200, DW_AT_bit_offset(0x00), DW_AT_bit_size(0x08)
+    1107                      .dwattr DW$200, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1108                      .dwattr DW$200, DW_AT_accessibility(DW_ACCESS_public)
+    1109                      .dwendtag DW$T$24
+    1110              
+    1111              
+    1112              DW$T$26 .dwtag  DW_TAG_structure_type
+    1113                      .dwattr DW$T$26, DW_AT_name("PIEIFR_BITS")
+    1114                      .dwattr DW$T$26, DW_AT_byte_size(0x01)
+    1115              DW$201  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1116                      .dwattr DW$201, DW_AT_name("INTx1"), DW_AT_symbol_name("_INTx1")
+    1117                      .dwattr DW$201, DW_AT_bit_offset(0x0f), DW_AT_bit_size(0x01)
+    1118                      .dwattr DW$201, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1119                      .dwattr DW$201, DW_AT_accessibility(DW_ACCESS_public)
+    1120              DW$202  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1121                      .dwattr DW$202, DW_AT_name("INTx2"), DW_AT_symbol_name("_INTx2")
+    1122                      .dwattr DW$202, DW_AT_bit_offset(0x0e), DW_AT_bit_size(0x01)
+    1123                      .dwattr DW$202, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1124                      .dwattr DW$202, DW_AT_accessibility(DW_ACCESS_public)
+    1125              DW$203  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1126                      .dwattr DW$203, DW_AT_name("INTx3"), DW_AT_symbol_name("_INTx3")
+    1127                      .dwattr DW$203, DW_AT_bit_offset(0x0d), DW_AT_bit_size(0x01)
+    1128                      .dwattr DW$203, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1129                      .dwattr DW$203, DW_AT_accessibility(DW_ACCESS_public)
+    1130              DW$204  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1131                      .dwattr DW$204, DW_AT_name("INTx4"), DW_AT_symbol_name("_INTx4")
+    1132                      .dwattr DW$204, DW_AT_bit_offset(0x0c), DW_AT_bit_size(0x01)
+    1133                      .dwattr DW$204, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1134                      .dwattr DW$204, DW_AT_accessibility(DW_ACCESS_public)
+    1135              DW$205  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1136                      .dwattr DW$205, DW_AT_name("INTx5"), DW_AT_symbol_name("_INTx5")
+    1137                      .dwattr DW$205, DW_AT_bit_offset(0x0b), DW_AT_bit_size(0x01)
+    1138                      .dwattr DW$205, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1139                      .dwattr DW$205, DW_AT_accessibility(DW_ACCESS_public)
+    1140              DW$206  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1141                      .dwattr DW$206, DW_AT_name("INTx6"), DW_AT_symbol_name("_INTx6")
+    1142                      .dwattr DW$206, DW_AT_bit_offset(0x0a), DW_AT_bit_size(0x01)
+    1143                      .dwattr DW$206, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1144                      .dwattr DW$206, DW_AT_accessibility(DW_ACCESS_public)
+    1145              DW$207  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1146                      .dwattr DW$207, DW_AT_name("INTx7"), DW_AT_symbol_name("_INTx7")
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE   22
+
+    1147                      .dwattr DW$207, DW_AT_bit_offset(0x09), DW_AT_bit_size(0x01)
+    1148                      .dwattr DW$207, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1149                      .dwattr DW$207, DW_AT_accessibility(DW_ACCESS_public)
+    1150              DW$208  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1151                      .dwattr DW$208, DW_AT_name("INTx8"), DW_AT_symbol_name("_INTx8")
+    1152                      .dwattr DW$208, DW_AT_bit_offset(0x08), DW_AT_bit_size(0x01)
+    1153                      .dwattr DW$208, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1154                      .dwattr DW$208, DW_AT_accessibility(DW_ACCESS_public)
+    1155              DW$209  .dwtag  DW_TAG_member, DW_AT_type(*DW$T$19)
+    1156                      .dwattr DW$209, DW_AT_name("rsvd"), DW_AT_symbol_name("_rsvd")
+    1157                      .dwattr DW$209, DW_AT_bit_offset(0x00), DW_AT_bit_size(0x08)
+    1158                      .dwattr DW$209, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1159                      .dwattr DW$209, DW_AT_accessibility(DW_ACCESS_public)
+    1160                      .dwendtag DW$T$26
+    1161              
+    1162              DW$T$11 .dwtag  DW_TAG_base_type, DW_AT_name("unsigned int")
+    1163                      .dwattr DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+    1164                      .dwattr DW$T$11, DW_AT_byte_size(0x01)
+    1165              
+    1166                      .dwattr DW$8, DW_AT_external(0x01)
+    1167                      .dwattr DW$CU, DW_AT_language(DW_LANG_C)
+    1168              
+    1169              ;***************************************************************
+    1170              ;* DWARF CIE ENTRIES                                           *
+    1171              ;***************************************************************
+    1172              
+    1173              DW$CIE  .dwcie 1, 40
+    1174                      .dwcfa  0x0c, 20, 0
+    1175                      .dwcfa  0x07, 0
+    1176                      .dwcfa  0x07, 1
+    1177                      .dwcfa  0x07, 2
+    1178                      .dwcfa  0x07, 3
+    1179                      .dwcfa  0x07, 4
+    1180                      .dwcfa  0x07, 5
+    1181                      .dwcfa  0x08, 6
+    1182                      .dwcfa  0x08, 7
+    1183                      .dwcfa  0x08, 8
+    1184                      .dwcfa  0x08, 9
+    1185                      .dwcfa  0x08, 10
+    1186                      .dwcfa  0x08, 11
+    1187                      .dwcfa  0x07, 12
+    1188                      .dwcfa  0x07, 13
+    1189                      .dwcfa  0x07, 14
+    1190                      .dwcfa  0x07, 15
+    1191                      .dwcfa  0x07, 16
+    1192                      .dwcfa  0x07, 17
+    1193                      .dwcfa  0x07, 18
+    1194                      .dwcfa  0x07, 19
+    1195                      .dwcfa  0x07, 20
+    1196                      .dwcfa  0x07, 21
+    1197                      .dwcfa  0x07, 22
+    1198                      .dwcfa  0x07, 23
+    1199                      .dwcfa  0x07, 24
+    1200                      .dwcfa  0x07, 25
+    1201                      .dwcfa  0x07, 26
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE   23
+
+    1202                      .dwcfa  0x08, 27
+    1203                      .dwcfa  0x07, 28
+    1204                      .dwcfa  0x07, 29
+    1205                      .dwcfa  0x07, 30
+    1206                      .dwcfa  0x07, 31
+    1207                      .dwcfa  0x07, 32
+    1208                      .dwcfa  0x07, 33
+    1209                      .dwcfa  0x07, 34
+    1210                      .dwcfa  0x07, 35
+    1211                      .dwcfa  0x07, 36
+    1212                      .dwcfa  0x07, 37
+    1213                      .dwcfa  0x07, 38
+    1214                      .dwcfa  0x07, 39
+    1215                      .dwcfa  0x07, 40
+    1216              
+    1217              ;***************************************************************
+    1218              ;* DWARF REGISTER MAP                                          *
+    1219              ;***************************************************************
+    1220              
+    1221              DW$210  .dwtag  DW_TAG_assign_register, DW_AT_name("AL")
+    1222                      .dwattr DW$210, DW_AT_location[DW_OP_reg0]
+    1223              DW$211  .dwtag  DW_TAG_assign_register, DW_AT_name("AH")
+    1224                      .dwattr DW$211, DW_AT_location[DW_OP_reg1]
+    1225              DW$212  .dwtag  DW_TAG_assign_register, DW_AT_name("PL")
+    1226                      .dwattr DW$212, DW_AT_location[DW_OP_reg2]
+    1227              DW$213  .dwtag  DW_TAG_assign_register, DW_AT_name("PH")
+    1228                      .dwattr DW$213, DW_AT_location[DW_OP_reg3]
+    1229              DW$214  .dwtag  DW_TAG_assign_register, DW_AT_name("AR0")
+    1230                      .dwattr DW$214, DW_AT_location[DW_OP_reg4]
+    1231              DW$215  .dwtag  DW_TAG_assign_register, DW_AT_name("XAR0")
+    1232                      .dwattr DW$215, DW_AT_location[DW_OP_reg5]
+    1233              DW$216  .dwtag  DW_TAG_assign_register, DW_AT_name("AR1")
+    1234                      .dwattr DW$216, DW_AT_location[DW_OP_reg6]
+    1235              DW$217  .dwtag  DW_TAG_assign_register, DW_AT_name("XAR1")
+    1236                      .dwattr DW$217, DW_AT_location[DW_OP_reg7]
+    1237              DW$218  .dwtag  DW_TAG_assign_register, DW_AT_name("AR2")
+    1238                      .dwattr DW$218, DW_AT_location[DW_OP_reg8]
+    1239              DW$219  .dwtag  DW_TAG_assign_register, DW_AT_name("XAR2")
+    1240                      .dwattr DW$219, DW_AT_location[DW_OP_reg9]
+    1241              DW$220  .dwtag  DW_TAG_assign_register, DW_AT_name("AR3")
+    1242                      .dwattr DW$220, DW_AT_location[DW_OP_reg10]
+    1243              DW$221  .dwtag  DW_TAG_assign_register, DW_AT_name("XAR3")
+    1244                      .dwattr DW$221, DW_AT_location[DW_OP_reg11]
+    1245              DW$222  .dwtag  DW_TAG_assign_register, DW_AT_name("AR4")
+    1246                      .dwattr DW$222, DW_AT_location[DW_OP_reg12]
+    1247              DW$223  .dwtag  DW_TAG_assign_register, DW_AT_name("XAR4")
+    1248                      .dwattr DW$223, DW_AT_location[DW_OP_reg13]
+    1249              DW$224  .dwtag  DW_TAG_assign_register, DW_AT_name("AR5")
+    1250                      .dwattr DW$224, DW_AT_location[DW_OP_reg14]
+    1251              DW$225  .dwtag  DW_TAG_assign_register, DW_AT_name("XAR5")
+    1252                      .dwattr DW$225, DW_AT_location[DW_OP_reg15]
+    1253              DW$226  .dwtag  DW_TAG_assign_register, DW_AT_name("AR6")
+    1254                      .dwattr DW$226, DW_AT_location[DW_OP_reg16]
+    1255              DW$227  .dwtag  DW_TAG_assign_register, DW_AT_name("XAR6")
+    1256                      .dwattr DW$227, DW_AT_location[DW_OP_reg17]
+TMS320C2000 COFF Assembler PC v4.1.0 Tue Sep 16 13:11:51 2008
+
+Tools Copyright (c) 1996-2005 Texas Instruments Incorporated
+G:/VMS/Tsunami/100025092/Firmware/spra958f/eZdspF2812/projects/Debug/PieCtrl_nonBIOS.asm PAGE   24
+
+    1257              DW$228  .dwtag  DW_TAG_assign_register, DW_AT_name("AR7")
+    1258                      .dwattr DW$228, DW_AT_location[DW_OP_reg18]
+    1259              DW$229  .dwtag  DW_TAG_assign_register, DW_AT_name("XAR7")
+    1260                      .dwattr DW$229, DW_AT_location[DW_OP_reg19]
+    1261              DW$230  .dwtag  DW_TAG_assign_register, DW_AT_name("SP")
+    1262                      .dwattr DW$230, DW_AT_location[DW_OP_reg20]
+    1263              DW$231  .dwtag  DW_TAG_assign_register, DW_AT_name("XT")
+    1264                      .dwattr DW$231, DW_AT_location[DW_OP_reg21]
+    1265              DW$232  .dwtag  DW_TAG_assign_register, DW_AT_name("T")
+    1266                      .dwattr DW$232, DW_AT_location[DW_OP_reg22]
+    1267              DW$233  .dwtag  DW_TAG_assign_register, DW_AT_name("ST0")
+    1268                      .dwattr DW$233, DW_AT_location[DW_OP_reg23]
+    1269              DW$234  .dwtag  DW_TAG_assign_register, DW_AT_name("ST1")
+    1270                      .dwattr DW$234, DW_AT_location[DW_OP_reg24]
+    1271              DW$235  .dwtag  DW_TAG_assign_register, DW_AT_name("PC")
+    1272                      .dwattr DW$235, DW_AT_location[DW_OP_reg25]
+    1273              DW$236  .dwtag  DW_TAG_assign_register, DW_AT_name("RPC")
+    1274                      .dwattr DW$236, DW_AT_location[DW_OP_reg26]
+    1275              DW$237  .dwtag  DW_TAG_assign_register, DW_AT_name("FP")
+    1276                      .dwattr DW$237, DW_AT_location[DW_OP_reg27]
+    1277              DW$238  .dwtag  DW_TAG_assign_register, DW_AT_name("DP")
+    1278                      .dwattr DW$238, DW_AT_location[DW_OP_reg28]
+    1279              DW$239  .dwtag  DW_TAG_assign_register, DW_AT_name("SXM")
+    1280                      .dwattr DW$239, DW_AT_location[DW_OP_reg29]
+    1281              DW$240  .dwtag  DW_TAG_assign_register, DW_AT_name("PM")
+    1282                      .dwattr DW$240, DW_AT_location[DW_OP_reg30]
+    1283              DW$241  .dwtag  DW_TAG_assign_register, DW_AT_name("OVM")
+    1284                      .dwattr DW$241, DW_AT_location[DW_OP_reg31]
+    1285              DW$242  .dwtag  DW_TAG_assign_register, DW_AT_name("PAGE0")
+    1286                      .dwattr DW$242, DW_AT_location[DW_OP_regx 0x20]
+    1287              DW$243  .dwtag  DW_TAG_assign_register, DW_AT_name("AMODE")
+    1288                      .dwattr DW$243, DW_AT_location[DW_OP_regx 0x21]
+    1289              DW$244  .dwtag  DW_TAG_assign_register, DW_AT_name("IFR")
+    1290                      .dwattr DW$244, DW_AT_location[DW_OP_regx 0x22]
+    1291              DW$245  .dwtag  DW_TAG_assign_register, DW_AT_name("IER")
+    1292                      .dwattr DW$245, DW_AT_location[DW_OP_regx 0x23]
+    1293              DW$246  .dwtag  DW_TAG_assign_register, DW_AT_name("IER")
+    1294                      .dwattr DW$246, DW_AT_location[DW_OP_regx 0x24]
+    1295              DW$247  .dwtag  DW_TAG_assign_register, DW_AT_name("PSEUDO")
+    1296                      .dwattr DW$247, DW_AT_location[DW_OP_regx 0x25]
+    1297              DW$248  .dwtag  DW_TAG_assign_register, DW_AT_name("PSEUDOH")
+    1298                      .dwattr DW$248, DW_AT_location[DW_OP_regx 0x26]
+    1299              DW$249  .dwtag  DW_TAG_assign_register, DW_AT_name("VOL")
+    1300                      .dwattr DW$249, DW_AT_location[DW_OP_regx 0x27]
+    1301              DW$250  .dwtag  DW_TAG_assign_register, DW_AT_name("CIE_RETA")
+    1302                      .dwattr DW$250, DW_AT_location[DW_OP_regx 0x28]
+    1303                      .dwendtag DW$CU
+    1304              
+
+No Assembly Errors, No Assembly Warnings
