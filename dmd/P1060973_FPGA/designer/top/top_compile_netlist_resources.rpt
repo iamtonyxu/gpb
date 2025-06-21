@@ -1,6 +1,6 @@
 Compile Report
 Microchip Technology Inc. - Microchip Libero Software Release v2024.2 (Version 2024.2.0.13)
-Date: Sun May 25 18:06:09 2025
+Date: Sat Jun  7 03:04:34 2025
 
 Device Selection
 +------------------------+-------------+
@@ -29,8 +29,8 @@ Resource Usage
 +---------------------------+------+--------+------------+
 | Type                      | Used | Total  | Percentage |
 +---------------------------+------+--------+------------+
-| 4LUT                      | 6017 | 108600 | 5.54       |
-| DFF                       | 4738 | 108600 | 4.36       |
+| 4LUT                      | 6327 | 108600 | 5.83       |
+| DFF                       | 5012 | 108600 | 4.62       |
 | I/O Register              | 0    | 732    | 0.00       |
 | User I/O                  | 148  | 244    | 60.66      |
 | -- Single-ended I/O       | 148  | 244    | 60.66      |
@@ -49,11 +49,11 @@ Detailed Logic Resource Usage
 +-----------------------+------+------+
 | Type                  | 4LUT | DFF  |
 +-----------------------+------+------+
-| Fabric Logic          | 5909 | 4630 |
+| Fabric Logic          | 6219 | 4904 |
 | uSRAM Interface Logic | 72   | 72   |
 | LSRAM Interface Logic | 36   | 36   |
 | Math Interface Logic  | 0    | 0    |
-| Total Used            | 6017 | 4738 |
+| Total Used            | 6327 | 5012 |
 +-----------------------+------+------+
 
 Detailed Carry Chains Resource Usage
@@ -66,10 +66,8 @@ Detailed Carry Chains Resource Usage
 | 11     | 9    |
 | 12     | 1    |
 | 13     | 1    |
-| 14     | 2    |
-| 15     | 1    |
 | 16     | 28   |
-| 17     | 21   |
+| 17     | 24   |
 | 21     | 4    |
 | 29     | 8    |
 | 32     | 2    |
@@ -80,8 +78,9 @@ Detailed Carry Chains Resource Usage
 Detailed 4LUT Groups Resource Usage
 +--------+------+
 | Length | Used |
-| 2      | 97   |
-| Total  | 97   |
+| 2      | 222  |
+| 5      | 25   |
+| Total  | 247  |
 +--------+------+
 
 I/O Function
@@ -99,10 +98,10 @@ Nets assigned to chip global resources
 +--------+---------+---------------------------------------------------------------------------------+
 | Fanout | Type    | Name                                                                            |
 +--------+---------+---------------------------------------------------------------------------------+
-| 4531   | INT_NET | Net   : RESET_N_arst                                                            |
+| 4805   | INT_NET | Net   : RESET_N_arst                                                            |
 |        |         | Driver: I_1/U0_RGB1                                                             |
 |        |         | Source: NETLIST                                                                 |
-| 3565   | INT_NET | Net   : NN_1                                                                    |
+| 3839   | INT_NET | Net   : NN_1                                                                    |
 |        |         | Driver: I_2/U0_RGB1                                                             |
 |        |         | Source: NETLIST                                                                 |
 | 161    | INT_NET | Net   : gantry_mot_if_0/clk_25MHz                                               |
@@ -130,7 +129,7 @@ Nets assigned to chip global resources
 |        |         | Driver: gantry_brk1_ret_if_0/clk_16khz_div/N_17_inferred_clock_RNI4UU13/U0_RGB1 |
 |        |         | Source: NETLIST                                                                 |
 | 84     | INT_NET | Net   : adc_0/clk_sd                                                            |
-|        |         | Driver: adc_0/sclk/CLK_OUT_i_m3_i_m7_RNI34PU6/U0_RGB1                           |
+|        |         | Driver: adc_0/sclk/CLK_OUT_RNIHMSU6/U0_RGB1                                     |
 |        |         | Source: NETLIST                                                                 |
 | 78     | INT_NET | Net   : dac_0/clk_sd                                                            |
 |        |         | Driver: dac_0/sclk/N_17_inferred_clock_RNIE7TP2/U0_RGB1                         |
@@ -153,54 +152,54 @@ Nets assigned to row global resources
 +--------+------+------+
 
 High fanout nets
-+--------+---------+----------------------------------------------------------------------+
-| Fanout | Type    | Name                                                                 |
-+--------+---------+----------------------------------------------------------------------+
-| 889    | INT_NET | Net   : OPB_ADDR[0]                                                  |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[0] |
-| 480    | INT_NET | Net   : OPB_ADDR[1]                                                  |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[1] |
-| 108    | INT_NET | Net   : N_1902_i_1                                                   |
-|        |         | Driver: clk_gen_0/clk16khz_div[3]                                    |
-| 78     | INT_NET | Net   : OPB_DO[1]                                                    |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[1]   |
-| 78     | INT_NET | Net   : OPB_DO[0]                                                    |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[0]   |
-| 78     | INT_NET | Net   : mssb_if_0/un1_mssb_recv_bytes8_Z                             |
-|        |         | Driver: mssb_if_0/un1_mssb_recv_bytes8                               |
-| 78     | INT_NET | Net   : mssb_if_1/un1_mssb_recv_bytes8_0                             |
-|        |         | Driver: mssb_if_1/un1_mssb_recv_bytes8                               |
-| 77     | INT_NET | Net   : OPB_DO[7]                                                    |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[7]   |
-| 77     | INT_NET | Net   : OPB_DO[6]                                                    |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[6]   |
-| 77     | INT_NET | Net   : OPB_DO[2]                                                    |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[2]   |
-+--------+---------+----------------------------------------------------------------------+
++--------+---------+------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                   |
++--------+---------+------------------------------------------------------------------------+
+| 658    | INT_NET | Net   : OPB_ADDR[0]                                                    |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[0]   |
+| 652    | INT_NET | Net   : OPB_ADDR[1]                                                    |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[1]   |
+| 113    | INT_NET | Net   : gantry_mot_if_0_OPB_ADDR[2]                                    |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[2]   |
+| 97     | INT_NET | Net   : lift_mot_if_0_OPB_ADDR[2]                                      |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_2_rep2 |
+| 87     | INT_NET | Net   : OPB_DO[6]                                                      |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[6]     |
+| 83     | INT_NET | Net   : OPB_DO[15]                                                     |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[15]    |
+| 83     | INT_NET | Net   : OPB_DO[1]                                                      |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[1]     |
+| 83     | INT_NET | Net   : OPB_DO[0]                                                      |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[0]     |
+| 82     | INT_NET | Net   : OPB_DO[14]                                                     |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[14]    |
+| 82     | INT_NET | Net   : OPB_DO[11]                                                     |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[11]    |
++--------+---------+------------------------------------------------------------------------+
 
 High fanout nets (through buffer trees)
-+--------+---------+----------------------------------------------------------------------+
-| Fanout | Type    | Name                                                                 |
-+--------+---------+----------------------------------------------------------------------+
-| 889    | INT_NET | Net   : OPB_ADDR[0]                                                  |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[0] |
-| 480    | INT_NET | Net   : OPB_ADDR[1]                                                  |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[1] |
-| 108    | INT_NET | Net   : N_1902_i_1                                                   |
-|        |         | Driver: clk_gen_0/clk16khz_div[3]                                    |
-| 78     | INT_NET | Net   : OPB_DO[1]                                                    |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[1]   |
-| 78     | INT_NET | Net   : OPB_DO[0]                                                    |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[0]   |
-| 78     | INT_NET | Net   : mssb_if_0/un1_mssb_recv_bytes8_Z                             |
-|        |         | Driver: mssb_if_0/un1_mssb_recv_bytes8                               |
-| 78     | INT_NET | Net   : mssb_if_1/un1_mssb_recv_bytes8_0                             |
-|        |         | Driver: mssb_if_1/un1_mssb_recv_bytes8                               |
-| 77     | INT_NET | Net   : OPB_DO[7]                                                    |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[7]   |
-| 77     | INT_NET | Net   : OPB_DO[6]                                                    |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[6]   |
-| 77     | INT_NET | Net   : OPB_DO[2]                                                    |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[2]   |
-+--------+---------+----------------------------------------------------------------------+
++--------+---------+------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                   |
++--------+---------+------------------------------------------------------------------------+
+| 658    | INT_NET | Net   : OPB_ADDR[0]                                                    |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[0]   |
+| 652    | INT_NET | Net   : OPB_ADDR[1]                                                    |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[1]   |
+| 113    | INT_NET | Net   : gantry_mot_if_0_OPB_ADDR[2]                                    |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[2]   |
+| 97     | INT_NET | Net   : lift_mot_if_0_OPB_ADDR[2]                                      |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_2_rep2 |
+| 87     | INT_NET | Net   : OPB_DO[6]                                                      |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[6]     |
+| 83     | INT_NET | Net   : OPB_DO[15]                                                     |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[15]    |
+| 83     | INT_NET | Net   : OPB_DO[1]                                                      |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[1]     |
+| 83     | INT_NET | Net   : OPB_DO[0]                                                      |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[0]     |
+| 82     | INT_NET | Net   : OPB_DO[14]                                                     |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[14]    |
+| 82     | INT_NET | Net   : OPB_DO[11]                                                     |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[11]    |
++--------+---------+------------------------------------------------------------------------+
 

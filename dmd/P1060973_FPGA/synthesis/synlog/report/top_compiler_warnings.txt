@@ -276,8 +276,6 @@
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[30] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[31] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Pruning register bits 31 to 2 of mssb_status[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":104:4:104:9|Feedback mux created for signal pwm_config[31:24]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
-@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":104:4:104:9|All reachable assignments to pwm_config[31:24] assign 0, register removed by optimization
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[2] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[3] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[4] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
@@ -328,6 +326,7 @@
 @W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\EEPROM_OPB_IF.v":7:24:7:29|Input port bits 27 to 24 of EEP_DI[31:0] are unused. Assign logic for all port bits or change the input port size.
 @W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":29:24:29:32|Input port bits 31 to 16 of OSC_CT_DI[31:0] are unused. Assign logic for all port bits or change the input port size.
 @W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_GEN.v":34:17:34:26|Input port bits 31 to 16 of CLK_GEN_DI[31:0] are unused. Assign logic for all port bits or change the input port size.
+@W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_GEN.v":35:17:35:24|Input port bits 31 to 4 of OPB_ADDR[31:0] are unused. Assign logic for all port bits or change the input port size.
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Pruning register bits 15 to 8 of timeout_cnt[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
 @W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_read.v":176:4:176:9|Pruning register bits 15 to 8 of timeout_cnt[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.

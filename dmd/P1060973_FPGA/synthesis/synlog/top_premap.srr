@@ -1,4 +1,4 @@
-# Sun May 25 18:05:23 2025
+# Sat Jun  7 03:03:26 2025
 
 
 Copyright (C) 1994-2023 Synopsys, Inc.
@@ -110,7 +110,7 @@ Finished HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:0
 Started DisTri Cleanup (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 272MB peak: 272MB)
 
 
-Finished DisTri Cleanup (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 272MB peak: 272MB)
+Finished DisTri Cleanup (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 272MB peak: 273MB)
 
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\dual_port_ram.v":53:1:53:6|Removing sequential instance PA_RADDR[9:0] (in view: work.DP_RAM_2R_1W_16s_10s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":476:8:476:9|Removing sequential instance next_command_ready (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
@@ -226,7 +226,7 @@ Clock Summary
           Start                                        Requested     Requested     Clock        Clock          Clock
 Level     Clock                                        Frequency     Period        Type         Group          Load 
 --------------------------------------------------------------------------------------------------------------------
-0 -       top|FPGA_100M_CLK                            100.0 MHz     10.000        inferred     (multiple)     4012 
+0 -       top|FPGA_100M_CLK                            100.0 MHz     10.000        inferred     (multiple)     4076 
                                                                                                                     
 0 -       CLOCK_DIV_10|N_17_inferred_clock             100.0 MHz     10.000        inferred     (multiple)     183  
                                                                                                                     
@@ -259,7 +259,7 @@ Clock Load Summary
                                              Clock     Source                                                    Clock Pin                                 Non-clock Pin                                      Non-clock Pin                                        
 Clock                                        Load      Pin                                                       Seq Example                               Seq Example                                        Comb Example                                         
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-top|FPGA_100M_CLK                            4012      FPGA_100M_CLK(port)                                       lift_mot_if_0.pwm_status[23:8].C          adc_0.clk_aq_high[1:0].D[1]                        I_2.A(CLKINT)                                        
+top|FPGA_100M_CLK                            4076      FPGA_100M_CLK(port)                                       lift_mot_if_0.pwm_status[23:8].C          adc_0.clk_aq_high[1:0].D[1]                        I_2.A(CLKINT)                                        
                                                                                                                                                                                                                                                                    
 CLOCK_DIV_10|N_17_inferred_clock             183       gantry_mot_if_0.clk_16khz_div.clkout.Q[0](dffre)          gantry_mot_if_0.sync_cntr[1:0].C          gantry_mot_if_0.clk_16khz_div.clkout.D[0]          gantry_mot_if_0.clk_16khz_div.clkout_2.I[0](inv)     
                                                                                                                                                                                                                                                                    
@@ -284,7 +284,7 @@ ADC_ADS8864_IF|ram_wr_clk_inferred_clock     16        adc_0.ram_wr_clk.Q[0](dff
 top|DBUG_HEADER10                            13        DBUG_HEADER10(port)                                       osc_counter_0.cntr_trig.C                 -                                                  I_3.A(CLKINT)                                        
 ===================================================================================================================================================================================================================================================================
 
-@W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_div.v":37:1:37:6|Found inferred clock top|FPGA_100M_CLK which controls 4012 sequential elements including clkgen_2khz.cntr[15:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\clk_div.v":37:1:37:6|Found inferred clock top|FPGA_100M_CLK which controls 4076 sequential elements including clkgen_2khz.cntr[15:0]. This clock has no specified timing constraint which may adversely impact design performance. 
 @W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found inferred clock CLOCK_DIV_11_6|N_17_inferred_clock which controls 183 sequential elements including lift_mot_if_0.pwm_0.i_mot_filt.debounce_cntr[27:0]. This clock has no specified timing constraint which may adversely impact design performance. 
 @W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found inferred clock CLOCK_DIV_11_5|N_17_inferred_clock which controls 105 sequential elements including gantry_brk3_ret_if_0.pwm_0.i_brk_filt.debounce_cntr[27:0]. This clock has no specified timing constraint which may adversely impact design performance. 
 @W: MT530 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found inferred clock CLOCK_DIV_11_4|N_17_inferred_clock which controls 105 sequential elements including gantry_brk2_ret_if_0.pwm_0.i_brk_filt.debounce_cntr[27:0]. This clock has no specified timing constraint which may adversely impact design performance. 
@@ -567,9 +567,9 @@ Finished constraint checker (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:0
 
 Pre-mapping successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 188MB peak: 282MB)
+At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 189MB peak: 283MB)
 
 Process took 0h:00m:02s realtime, 0h:00m:02s cputime
-# Sun May 25 18:05:25 2025
+# Sat Jun  7 03:03:29 2025
 
 ###########################################################]

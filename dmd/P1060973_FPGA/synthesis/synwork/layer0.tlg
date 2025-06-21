@@ -9,7 +9,7 @@ Finished optimization stage 1 on CLOCK_DIV (CPU Time 0h:00m:00s, Memory Used cur
 	DW=32'b00000000000000000000000000001000
 	AW=32'b00000000000000000000000000000100
    Generated name = afifo_8s_4s_8s_4s
-Opening data file afifo_8s_4s_8s_4s_mem_39420_initial_block from directory .
+Opening data file afifo_8s_4s_8s_4s_mem_9640_initial_block from directory .
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":93:4:93:10|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":110:1:110:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":127:1:127:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
@@ -59,7 +59,7 @@ Finished optimization stage 1 on ClkGen (CPU Time 0h:00m:00s, Memory Used curren
 	DW=32'b00000000000000000000000000001000
 	AW=32'b00000000000000000000000000000010
    Generated name = afifo_8s_2s_8s_2s
-Opening data file afifo_8s_2s_8s_2s_mem_39420_initial_block from directory .
+Opening data file afifo_8s_2s_8s_2s_mem_9640_initial_block from directory .
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":93:4:93:10|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":110:1:110:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":127:1:127:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
@@ -71,7 +71,7 @@ Running optimization stage 1 on afifo_8s_2s_8s_2s .......
 @N: CL134 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":149:1:149:6|Found RAM mem, depth=4, width=8
 @W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":128:1:128:6|Pruning register bit 2 of wgray[2:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
 @W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":186:1:186:6|Pruning register bit 2 of rgray[2:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-Finished optimization stage 1 on afifo_8s_2s_8s_2s (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 104MB)
+Finished optimization stage 1 on afifo_8s_2s_8s_2s (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 103MB)
 @N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":22:7:22:24|Synthesizing module OSCILLATOR_COUNTER in library work.
 Running optimization stage 1 on OSCILLATOR_COUNTER .......
 @W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":149:1:149:6|Pruning unused register startb_d1. Make sure that there are no unused intermediate registers.
@@ -128,7 +128,7 @@ Running optimization stage 1 on ADC_ADS8864_IF .......
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":336:1:336:6|Optimizing register bit OPB_DO[29] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":336:1:336:6|Optimizing register bit OPB_DO[30] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":336:1:336:6|Pruning register bits 30 to 16 of OPB_DO[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-Finished optimization stage 1 on ADC_ADS8864_IF (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 105MB)
+Finished optimization stage 1 on ADC_ADS8864_IF (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 106MB)
 @N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\dual_port_ram.v":19:7:19:18|Synthesizing module DP_RAM_2R_1W in library work.
 
 	DATA_WIDTH=32'b00000000000000000000000000011000
@@ -137,7 +137,7 @@ Finished optimization stage 1 on ADC_ADS8864_IF (CPU Time 0h:00m:00s, Memory Use
 Running optimization stage 1 on DP_RAM_2R_1W_24s_4s .......
 @N: CL134 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\dual_port_ram.v":53:1:53:6|Found RAM ram, depth=16, width=24
 @N: CL134 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\dual_port_ram.v":53:1:53:6|Found RAM ram, depth=16, width=24
-Finished optimization stage 1 on DP_RAM_2R_1W_24s_4s (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 105MB)
+Finished optimization stage 1 on DP_RAM_2R_1W_24s_4s (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 106MB)
 @N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":62:7:62:11|Synthesizing module afifo in library work.
 
 	DSIZE=32'b00000000000000000000000000011000
@@ -145,7 +145,7 @@ Finished optimization stage 1 on DP_RAM_2R_1W_24s_4s (CPU Time 0h:00m:00s, Memor
 	DW=32'b00000000000000000000000000011000
 	AW=32'b00000000000000000000000000000100
    Generated name = afifo_24s_4s_24s_4s
-Opening data file afifo_24s_4s_24s_4s_mem_39420_initial_block from directory .
+Opening data file afifo_24s_4s_24s_4s_mem_9640_initial_block from directory .
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":93:4:93:10|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":110:1:110:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":127:1:127:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
@@ -157,13 +157,13 @@ Running optimization stage 1 on afifo_24s_4s_24s_4s .......
 @N: CL134 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":149:1:149:6|Found RAM mem, depth=16, width=24
 @W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":128:1:128:6|Pruning register bit 4 of wgray[4:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
 @W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":186:1:186:6|Pruning register bit 4 of rgray[4:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-Finished optimization stage 1 on afifo_24s_4s_24s_4s (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 105MB)
+Finished optimization stage 1 on afifo_24s_4s_24s_4s (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 106MB)
 @N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\DAC_DACx0504_IF.v":16:7:16:21|Synthesizing module DAC_DACx0504_IF in library work.
 Running optimization stage 1 on DAC_DACx0504_IF .......
-Finished optimization stage 1 on DAC_DACx0504_IF (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 105MB)
+Finished optimization stage 1 on DAC_DACx0504_IF (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 106MB)
 @N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\FPGA_WD.v":19:7:19:14|Synthesizing module FPGA_WDI in library work.
 Running optimization stage 1 on FPGA_WDI .......
-Finished optimization stage 1 on FPGA_WDI (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 105MB)
+Finished optimization stage 1 on FPGA_WDI (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 106MB)
 @N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":15:7:15:10|Synthesizing module GPIO in library work.
 Running optimization stage 1 on GPIO .......
 @W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":522:4:522:9|Feedback mux created for signal GPIO_FREE_IF_REG[31:16]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
@@ -250,8 +250,6 @@ Finished optimization stage 1 on MSSB_IF (CPU Time 0h:00m:00s, Memory Used curre
 @N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":134:29:134:41|Removing redundant assignment.
 @N: CG794 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":303:12:303:16|Using module cmn_pwm from library work
 Running optimization stage 1 on cmn_pwm_wrapper .......
-@W: CL113 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":104:4:104:9|Feedback mux created for signal pwm_config[31:24]. To avoid the feedback mux, assign values explicitly under all conditions of conditional assignment statements.
-@W: CL250 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":104:4:104:9|All reachable assignments to pwm_config[31:24] assign 0, register removed by optimization
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[2] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[3] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[4] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
@@ -317,11 +315,11 @@ State machine has 4 reachable states with original encodings of:
    100
 @W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\DAC_DACx0504_IF.v":19:24:19:31|Input port bits 31 to 4 of OPB_ADDR[31:0] are unused. Assign logic for all port bits or change the input port size.
 @W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\DAC_DACx0504_IF.v":20:24:20:29|Input port bits 31 to 16 of OPB_DI[31:0] are unused. Assign logic for all port bits or change the input port size.
-Finished optimization stage 2 on DAC_DACx0504_IF (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 115MB)
+Finished optimization stage 2 on DAC_DACx0504_IF (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 115MB)
 Running optimization stage 2 on afifo_24s_4s_24s_4s .......
-Finished optimization stage 2 on afifo_24s_4s_24s_4s (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 115MB)
+Finished optimization stage 2 on afifo_24s_4s_24s_4s (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 115MB)
 Running optimization stage 2 on DP_RAM_2R_1W_24s_4s .......
-Finished optimization stage 2 on DP_RAM_2R_1W_24s_4s (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 115MB)
+Finished optimization stage 2 on DP_RAM_2R_1W_24s_4s (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 115MB)
 Running optimization stage 2 on ADC_ADS8864_IF .......
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":130:1:130:6|Optimizing register bit conv_count[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":130:1:130:6|Optimizing register bit conv_count[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
@@ -375,13 +373,13 @@ State machine has 23 reachable states with original encodings of:
 @W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":147:4:147:9|Pruning unused register time_out_count[5:0]. Make sure that there are no unused intermediate registers.
 @W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":58:25:58:32|Input port bits 31 to 12 of OPB_ADDR[31:0] are unused. Assign logic for all port bits or change the input port size.
 @W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\ADC_ADS8864_IF.v":60:25:60:30|Input port bits 31 to 16 of OPB_DI[31:0] are unused. Assign logic for all port bits or change the input port size.
-Finished optimization stage 2 on ADC_ADS8864_IF (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 115MB)
+Finished optimization stage 2 on ADC_ADS8864_IF (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 115MB)
 Running optimization stage 2 on DP_RAM_2R_1W_16s_10s .......
-Finished optimization stage 2 on DP_RAM_2R_1W_16s_10s (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 115MB)
+Finished optimization stage 2 on DP_RAM_2R_1W_16s_10s (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 115MB)
 Running optimization stage 2 on EEPROM_OPB_IF .......
 @W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\EEPROM_OPB_IF.v":7:24:7:29|Input port bits 27 to 24 of EEP_DI[31:0] are unused. Assign logic for all port bits or change the input port size.
 @N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\EEPROM_OPB_IF.v":8:24:8:29|Input EEP_RE is unused.
-Finished optimization stage 2 on EEPROM_OPB_IF (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 115MB)
+Finished optimization stage 2 on EEPROM_OPB_IF (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 115MB)
 Running optimization stage 2 on SCRATCH_PAD_REGISTER .......
 Finished optimization stage 2 on SCRATCH_PAD_REGISTER (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 115MB)
 Running optimization stage 2 on OSCILLATOR_COUNTER .......
@@ -391,11 +389,12 @@ Running optimization stage 2 on afifo_8s_2s_8s_2s .......
 Finished optimization stage 2 on afifo_8s_2s_8s_2s (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 115MB)
 Running optimization stage 2 on ClkGen .......
 @W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_GEN.v":34:17:34:26|Input port bits 31 to 16 of CLK_GEN_DI[31:0] are unused. Assign logic for all port bits or change the input port size.
+@W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_GEN.v":35:17:35:24|Input port bits 31 to 4 of OPB_ADDR[31:0] are unused. Assign logic for all port bits or change the input port size.
 Finished optimization stage 2 on ClkGen (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 115MB)
 Running optimization stage 2 on AdderDecode .......
-Finished optimization stage 2 on AdderDecode (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 117MB)
+Finished optimization stage 2 on AdderDecode (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 116MB)
 Running optimization stage 2 on cmd_server .......
-Finished optimization stage 2 on cmd_server (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 117MB)
+Finished optimization stage 2 on cmd_server (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 116MB)
 Running optimization stage 2 on opb_emu_target .......
 @N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\opb_emu_target.v":130:4:130:9|Trying to extract state machine for register state.
 Extracted state machine for register state
@@ -403,7 +402,7 @@ State machine has 3 reachable states with original encodings of:
    00
    01
    10
-Finished optimization stage 2 on opb_emu_target (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 117MB)
+Finished optimization stage 2 on opb_emu_target (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 116MB)
 Running optimization stage 2 on msg_write .......
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
@@ -430,7 +429,7 @@ Finished optimization stage 2 on msg_buffer (CPU Time 0h:00m:00s, Memory Used cu
 Running optimization stage 2 on afifo_8s_4s_8s_4s .......
 Finished optimization stage 2 on afifo_8s_4s_8s_4s (CPU Time 0h:00m:00s, Memory Used current: 117MB peak: 122MB)
 Running optimization stage 2 on CLOCK_DIV .......
-Finished optimization stage 2 on CLOCK_DIV (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 122MB)
+Finished optimization stage 2 on CLOCK_DIV (CPU Time 0h:00m:00s, Memory Used current: 117MB peak: 122MB)
 
 For a summary of runtime per design unit, please see file:
 ==========================================================
