@@ -1,6 +1,7 @@
 KEY LIBERO "2024.2"
 KEY CAPTURE "2024.2.0.13"
 KEY DEFAULT_IMPORT_LOC ""
+KEY DEFAULT_OPEN_LOC ""
 KEY ProjectID "0"
 KEY HDLTechnology "VERILOG"
 KEY VERILOGMODE "SYSTEMVERILOG"
@@ -13,7 +14,11 @@ KEY VendorTechnology_Package "fcvg484"
 KEY VendorTechnology_Speed "STD"
 KEY VendorTechnology_DieVoltage "1.0"
 KEY VendorTechnology_PART_RANGE "EXT"
+KEY VendorTechnology_DSW_VCCA_VOLTAGE_RAMP_RATE ""
 KEY VendorTechnology_IO_DEFT_STD "LVCMOS18"
+KEY VendorTechnology_OPCONR ""
+KEY VendorTechnology_PLL_SUPPLY ""
+KEY VendorTechnology_RAD_EXPOSURE ""
 KEY VendorTechnology_RESERVEMIGRATIONPINS "1"
 KEY VendorTechnology_RESTRICTPROBEPINS "0"
 KEY VendorTechnology_RESTRICTSPIPINS "0"
@@ -49,56 +54,38 @@ ENDLIST
 LIST FileManager
 VALUE "<project>\constraint\io\top_hw.pdc,io_pdc"
 STATE="utd"
-TIME="1750483792"
-SIZE="14944"
+TIME="1750496125"
+SIZE="15075"
 ENDFILE
 VALUE "<project>\hdl\top_hw.v,hdl"
 STATE="utd"
-TIME="1750481463"
-SIZE="7288"
+TIME="1750496628"
+SIZE="10038"
 ENDFILE
 VALUE "<project>\synthesis\top_hw.so,so"
 STATE="utd"
-TIME="1750479839"
+TIME="1750496040"
 SIZE="211"
 ENDFILE
 VALUE "<project>\synthesis\top_hw.vm,syn_vm"
-STATE="utd"
-TIME="1750479838"
-SIZE="9264"
+STATE="ood"
+TIME="1750496040"
+SIZE="54698"
 ENDFILE
 VALUE "<project>\synthesis\top_hw_syn.prj,prj"
 STATE="utd"
-TIME="1750479839"
+TIME="1750496041"
 SIZE="2927"
 ENDFILE
 VALUE "<project>\synthesis\top_hw_vm.sdc,syn_sdc"
 STATE="utd"
-TIME="1750479838"
-SIZE="807"
+TIME="1750496040"
+SIZE="1005"
 ENDFILE
 ENDLIST
 LIST UsedFile
 ENDLIST
 LIST NewModulesInfo
-LIST "top_hw::work"
-FILE "<project>\hdl\top_hw.v,hdl"
-LIST PNRConstraints
-VALUE "<project>\constraint\io\top_hw.pdc,io_pdc"
-ENDLIST
-LIST ProjectState5.1
-LIST Impl1
-ideSYNTHESIS(<project>\synthesis\top_hw.vm,syn_vm)=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
-ENDLIST
 ENDLIST
 LIST AssociatedStimulus
 ENDLIST
@@ -175,8 +162,8 @@ NAME="synplify_Pro"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\bin\synplify_pro.exe"
-PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
-BATCH=1
+PARAM=""
+BATCH=0
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -200,18 +187,6 @@ IS32BIT="1"
 EndProfile
 ENDLIST
 LIST ProjectState5.1
-LIST "top_hw::work"
-LIST Impl1
-ideSYNTHESIS(<project>\synthesis\top_hw.vm,syn_vm)=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
 ENDLIST
 LIST ExcludePackageForSimulation
 ENDLIST
@@ -225,13 +200,8 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-Reports;Reports;0
-ReportsCurrentItem;Place and Route:top_hw_pinrpt_name.rpt
-HDL;hdl\top_hw.v;0
-Constraint Manager;Constraint Manager;0
-HDL;constraint\io\top_hw.pdc;0
 StartPage;StartPage;0
-ACTIVEVIEW;Constraint Manager
+ACTIVEVIEW;StartPage
 ENDLIST
 LIST ModuleSubBlockList
 LIST "top_hw::work","hdl\top_hw.v","FALSE","FALSE"

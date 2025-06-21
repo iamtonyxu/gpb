@@ -34,12 +34,12 @@ module top_hw(
     input APP_AUX_IO4,
     input APP_AUX_IO5,
 
-    input BMENLP_SINK_STATE,
-    input PWRENLP_SINK_STATE,
-    input MTNENLP_SINK_STATE,
-    input KVBMENLP_SINK_STATE,
-    input MTNENLP_CCH_SINK_STATE,
-    input MTNENLP_DKB_SINK_STATE,
+    input BMENLP_STATE,
+    input PWRENLP_STATE,
+    input MTNENLP_STATE,
+    input KVBMENLP_STATE,
+    input MTNENLP_CCH_STATE,
+    input MTNENLP_DKB_STATE,
     input PENDANT_INST,
     input PENDANT_MEB_N,
 
@@ -140,6 +140,19 @@ module top_hw(
     output HDW_EEP_SCLK,
     input HDW_EEP_SDO,
 
+    // ETH Interface
+    output PHY_RMII_TX_EN,
+    output PHY_RMII_TX_DATA1,
+    output PHY_RMII_TX_DATA0,
+    output PHY_RST_N,
+    output PHY_MDIO,
+    output PHY_MDC,
+    output ETH_LED1,
+    output ETH_LED2,
+    input PHY_RMII_RX_DATA1,
+    input PHY_RMII_RX_DATA0,
+    input PHY_RMII_RX_DV,
+
     // DBUG Connector
     input HDW_DBUG_SCLK, // UART-RXD
     input HDW_DBUG_MISO,
@@ -153,10 +166,38 @@ module top_hw(
     output HDW_DBUG_HEADER10,
 
     // Test Points
-    output [7:0]TP85,  // 1.8V Bank
-    output [7:0]TP95,  // 1.8V Bank
-    output [7:0]TP140, // 3.3V Bank
-    output [7:0]TP150  // 3.3V Bank
+    output TP85,  // 1.8V Bank
+    output TP86,
+    output TP88,
+    output TP89,
+    output TP91,
+    output TP92,
+    output TP93,
+    output TP94,
+    output TP95,
+    output TP96,
+    output TP97,
+    output TP98,
+    output TP99,
+    output TP100,
+    output TP101,
+    output TP102,
+    output TP140, // 3.3V Bank
+    output TP141,
+    output TP142,
+    output TP143,
+    output TP144,
+    output TP145,
+    output TP146,
+    output TP147,
+    output TP148,
+    output TP149,
+    output TP150,
+    output TP151,
+    output TP152,
+    output TP153,
+    output TP154,
+    output TP155
 );
 
     wire CLK_100M, CLK_50M, RST_N;
@@ -166,16 +207,16 @@ module top_hw(
     assign RST_N = HDW_DEVRST_N;
 
     // create a register and assign all inputs into this register on the rising edge of the clock
-    reg [63:0] inputs_reg;
+    reg [60:0] inputs_reg;
     always @(posedge CLK_100M or negedge RST_N) begin
         if (!RST_N) begin
-            inputs_reg <= 64'b0;
+            inputs_reg <= 0;
         end else begin
             inputs_reg <= {
                 APP_AUX_IO0, APP_AUX_IO1, APP_AUX_IO2, APP_AUX_IO3,
-                APP_AUX_IO4, APP_AUX_IO5, BMENLP_SINK_STATE, PWRENLP_SINK_STATE,
-                MTNENLP_SINK_STATE, KVBMENLP_SINK_STATE, MTNENLP_CCH_SINK_STATE,
-                MTNENLP_DKB_SINK_STATE, PENDANT_INST, PENDANT_MEB_N,
+                APP_AUX_IO4, APP_AUX_IO5, BMENLP_STATE, PWRENLP_STATE,
+                MTNENLP_STATE, KVBMENLP_STATE, MTNENLP_CCH_STATE,
+                MTNENLP_DKB_STATE, PENDANT_INST, PENDANT_MEB_N,
                 HSSB_PMII_TX_DATA0, HSSB_PMII_TX_DATA1, HSSB_PMII_TX_DATA2,
                 HSSB_PMII_TX_DATA3, HSSB_PMII_TX_EN, CMNR_STS_N, CDOS_STS_N,
                 DC_MAIN_DOOR_SW_N, NEUTRON_DR_SW1_N, NEUTRON_DR_SW2_N,
@@ -189,8 +230,9 @@ module top_hw(
                 BEL_SW_CONFIG4, BEL_SW_CONFIG5, BEL_SW_CONFIG6, BEL_SW_CONFIG7,
                 KVBEL_SW_CONFIG0, KVBEL_SW_CONFIG1, KVBEL_SW_CONFIG2, KVBEL_SW_CONFIG3,
                 KVBEL_SW_CONFIG4, KVBEL_SW_CONFIG5, KVBEL_SW_CONFIG6, KVBEL_SW_CONFIG7,
-                HDW_EEP_SDO, HDW_DBUG_SCLK, HDW_DBUG_MISO, HDW_DBUG_MOSI,
-                HDW_DBUG_CS_N, HDW_DBUG_ACTIVE
+                HDW_EEP_SDO, PHY_RMII_RX_DATA1, PHY_RMII_RX_DATA0, PHY_RMII_RX_DV,
+                HDW_DBUG_SCLK, HDW_DBUG_MISO, HDW_DBUG_MOSI, HDW_DBUG_CS_N,
+                HDW_DBUG_ACTIVE
             };
         end
     end
@@ -228,7 +270,7 @@ module top_hw(
 
     assign HDW_EEP_CS_N = 1'b1;
     assign HDW_EEP_SDI = 1'b0;
-    assign HDW_EEP_SCLK = 1'b0;
+    assign HDW_EEP_SCLK = CLK_50M;
 
     assign HDW_DBUG_HEADER2 = 1'b0;
     assign HDW_DBUG_HEADER4 = 1'b0;
@@ -237,10 +279,46 @@ module top_hw(
     assign HDW_DBUG_HEADER10 = 1'b0;
 
     // assign inputs_reg to test points bit by bit
-    assign TP85 = inputs_reg[7:0];   // 1.8V Bank
-    assign TP95 = inputs_reg[15:8];  // 1.8V Bank
-    assign TP140 = inputs_reg[23:16]; // 3.3V Bank
-    assign TP150 = inputs_reg[31:24]; // 3.3V Bank
+    assign TP85 = (&inputs_reg) ? 1'b1 : 1'b0;    // 1.8V Bank
+    assign TP86 = (inputs_reg == 2) ? 1'b1 : 1'b0;
+    assign TP88 = (inputs_reg == 3) ? 1'b1 : 1'b0;
+    assign TP89 = (inputs_reg == 4) ? 1'b1 : 1'b0;
+    assign TP91 = (inputs_reg == 5) ? 1'b1 : 1'b0;
+    assign TP92 = (inputs_reg == 6) ? 1'b1 : 1'b0;
+    assign TP93 = (inputs_reg == 7) ? 1'b1 : 1'b0;
+    assign TP94 = (inputs_reg == 8) ? 1'b1 : 1'b0;
+    assign TP95 = (inputs_reg == 9) ? 1'b1 : 1'b0;
+    assign TP96 = (inputs_reg == 10) ? 1'b1 : 1'b0;
+    assign TP97 = (inputs_reg == 11) ? 1'b1 : 1'b0;
+    assign TP98 = (inputs_reg == 12) ? 1'b1 : 1'b0;
+    assign TP100 = (inputs_reg == 13) ? 1'b1 : 1'b0;
+    assign TP101 = (inputs_reg == 14) ? 1'b1 : 1'b0;
+    assign TP102 = (inputs_reg == 15) ? 1'b1 : 1'b0;
+    assign TP140 = (inputs_reg == 16) ? 1'b1 : 1'b0;   // 3.3V Bank
+    assign TP141 = (inputs_reg == 17) ? 1'b1 : 1'b0;
+    assign TP142 = (inputs_reg == 18) ? 1'b1 : 1'b0;
+    assign TP143 = (inputs_reg == 19) ? 1'b1 : 1'b0;
+    assign TP144 = (inputs_reg == 20) ? 1'b1 : 1'b0;
+    assign TP145 = (inputs_reg == 21) ? 1'b1 : 1'b0;
+    assign TP146 = (inputs_reg == 22) ? 1'b1 : 1'b0;
+    assign TP147 = (inputs_reg == 23) ? 1'b1 : 1'b0;
+    assign TP148 = (inputs_reg == 24) ? 1'b1 : 1'b0;
+    assign TP149 = (inputs_reg == 25) ? 1'b1 : 1'b0;
+    assign TP150 = (inputs_reg == 26) ? 1'b1 : 1'b0;
+    assign TP151 = (inputs_reg == 27) ? 1'b1 : 1'b0;
+    assign TP152 = (inputs_reg == 28) ? 1'b1 : 1'b0;
+    assign TP153 = (inputs_reg == 29) ? 1'b1 : 1'b0;
+    assign TP154 = (inputs_reg == 30) ? 1'b1 : 1'b0;
+    assign TP155 = (inputs_reg == 31) ? 1'b1 : 1'b0;
+
+    assign PHY_RMII_TX_EN = (inputs_reg == 32) ? 1'b1 : 1'b0;
+    assign PHY_RMII_TX_DATA1 = (inputs_reg == 33) ? 1'b1 : 1'b0;
+    assign PHY_RMII_TX_DATA0 = (inputs_reg == 34) ? 1'b1 : 1'b0;
+    assign PHY_RST_N = (inputs_reg == 35) ? 1'b1 : 1'b0;
+    assign PHY_MDIO = (inputs_reg == 36) ? 1'b1 : 1'b0;
+    assign PHY_MDC = (inputs_reg == 37) ? 1'b1 : 1'b0;
+    assign ETH_LED1 = (inputs_reg == 38) ? 1'b1 : 1'b0;
+    assign ETH_LED2 = (inputs_reg == 39) ? 1'b1 : 1'b0;
 
 endmodule
 
