@@ -59,8 +59,8 @@ SIZE="20739"
 ENDFILE
 VALUE "<project>\hdl\top_app.v,hdl"
 STATE="utd"
-TIME="1750556450"
-SIZE="9523"
+TIME="1750581906"
+SIZE="11354"
 ENDFILE
 VALUE "<project>\synthesis\top_app.so,so"
 STATE="utd"
@@ -68,7 +68,7 @@ TIME="1750556478"
 SIZE="214"
 ENDFILE
 VALUE "<project>\synthesis\top_app.vm,syn_vm"
-STATE="utd"
+STATE="ood"
 TIME="1750556478"
 SIZE="49525"
 ENDFILE
@@ -90,21 +90,6 @@ LIST "top_app::work"
 FILE "<project>\hdl\top_app.v,hdl"
 LIST PNRConstraints
 VALUE "<project>\constraint\io\top_app.pdc,io_pdc"
-ENDLIST
-LIST ProjectState5.1
-LIST Impl1
-ideSYNTHESIS(<project>\synthesis\top_app.vm,syn_vm)=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
-LIST synthesis_implementations
-VALUE "synthesis"
 ENDLIST
 ENDLIST
 ENDLIST
@@ -208,18 +193,6 @@ IS32BIT="1"
 EndProfile
 ENDLIST
 LIST ProjectState5.1
-LIST "top_app::work"
-LIST Impl1
-ideSYNTHESIS(<project>\synthesis\top_app.vm,syn_vm)=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
 ENDLIST
 LIST ExcludePackageForSimulation
 ENDLIST
@@ -236,10 +209,9 @@ ORIENTATION;HORIZONTAL
 Reports;Reports;0
 ReportsCurrentItem;synthesis:synplify.log
 HDL;hdl\top_app.v;0
-Constraint Manager;Constraint Manager;0
 HDL;constraint\io\top_app.pdc;0
 StartPage;StartPage;0
-ACTIVEVIEW;Constraint Manager
+ACTIVEVIEW;Reports
 ENDLIST
 LIST ModuleSubBlockList
 LIST "top_app::work","hdl\top_app.v","FALSE","FALSE"

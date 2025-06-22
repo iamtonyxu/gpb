@@ -241,46 +241,50 @@ assign CLK_100M = APP_FPGA_100M_CLK;
 assign rst_n = APP_DEVRST_N;
 
 // define a register to hold all input signals
-reg [87:0] input_signals;
+reg [100:0] input_signals;
 always @(posedge CLK_100M or negedge rst_n) begin
     if (!rst_n) begin
-        input_signals <= 88'b0;
+        input_signals <= 0;
     end else begin
         input_signals <= {
-            AD_SDOUT,
-            BMPLS, CCW_LIMIT_STAT, CW_LIMIT_STAT, LS_OSSD2_N, LS_WARNING_N, 
-            GANT_LOCK_PIN_STAT, LS_RES_REQ_N, APP_DEVRST_N, SYNC_LOC_MONITOR, SYNC_MONITOR, 
-            GROTPWR_STS_N,
-            BMENLP_LOC_SINK_STATE, BMENLP_LOC_SOURCE_STATE, BMENLP_SOURCE_STATE,
-            KVBMENLP_SOURCE_STATE, MTNENLP_CCH_SOURCE_STATE, MTNENLP_DKB_SOURCE_STATE,
-            MTNENLP_LOC_SINK_STATE, MTNENLP_LOC_SOURCE_STATE, MTNENLP_SOURCE_STATE,
-            PWRENLP_LOC_SINK_STATE, PWRENLP_LOC_SOURCE_STATE, PWRENLP_SOURCE_STATE,
-            TP134, TP133, DAC_SDO,
-            FLOW_N1, FLOW_N2, FLOW_N3, FLOW_N4, FLOW_N5,
-            P24VDRV_TEMP_FAULT_N,
-            APP_FPGA_100M_CLK, DKB_EMO_CLOSED, DKB_FUSE_OK_N, ENCODER1_FUSE_OK,
-            HW_GANT_ROT_EN_FLT_N, PEND_FUSE_OK_N, PUMP_FAULT, WATER_HIGH_ERROR,
-            WATER_FUSE_OK_N, WATER_LOW_ERROR, WATER_LOW_WARNING,
-            TP183, TP182, TP181, TP180,
-            CAN_RX1, CAN_RX2, CAN_RX3, CAN_RX4,
-            PRI_QUADR_A, PRI_QUADR_B, PRI_QUADR_I,
-            P5VISO_STATUS,
-            TP198, TP195, TP202, TP196, DMD_MSSB_RX,
-            TP190, TP192, TP203, TP201, TP189, TP199, TP193, TP200,
-            ENCODER_RX1, ENCODER_RX2,
-            TP184, TP197, TP191, TP194, TP187, TP186, TP185, TP188,
-            HSSB_PMII_CLK, HSSB_PMII_RESET_N, HSSB_PMII_RX_DV,
-            HSSB_PMII_RX_DATA0, HSSB_PMII_RX_DATA1, HSSB_PMII_RX_DATA2, HSSB_PMII_RX_DATA3,
-            TP136, TP138, TP135, TP137,
-            TP207, TP205, TP206, TP204,
-            TP120, TP121, TP119, TP118,
-            TP115, TP114, TP117, TP116
+            TP116, TP117, TP114, TP115,                    // [100:97]
+            TP118, TP119, TP121, TP120,                    // [96:93]
+            TP204, TP206, TP205, TP207,                    // [92:89]
+            TP136, TP138, TP135, TP137,                    // [88:85]
+            HSSB_PMII_RX_DATA3, HSSB_PMII_RX_DATA2, HSSB_PMII_RX_DATA1, HSSB_PMII_RX_DATA0, // [84:81]
+            HSSB_PMII_RX_DV, HSSB_PMII_RESET_N, HSSB_PMII_CLK, // [80:78]
+            TP188, TP185, TP186, TP187,                    // [77:74]
+            TP194, TP191, TP197, TP184,                    // [73:70]
+            ENCODER_RX2, ENCODER_RX1,                      // [69:68]
+            TP200, TP193, TP199, TP189,                    // [67:64]
+            TP201, TP203, TP192, TP190,                    // [63:60]
+            DMD_MSSB_RX,                                   // [59]
+            TP196, TP202, TP195, TP198,                    // [58:55]
+            P5VISO_STATUS,                                 // [54]
+            PRI_QUADR_I, PRI_QUADR_B, PRI_QUADR_A,        // [53:51]
+            CAN_RX4, CAN_RX3, CAN_RX2, CAN_RX1,          // [50:47]
+            TP180, TP181, TP182, TP183,                    // [46:43]
+            WATER_LOW_WARNING, WATER_LOW_ERROR, WATER_FUSE_OK_N, WATER_HIGH_ERROR, // [42:39]
+            PUMP_FAULT, PEND_FUSE_OK_N, HW_GANT_ROT_EN_FLT_N, ENCODER1_FUSE_OK, // [38:35]
+            DKB_FUSE_OK_N, DKB_EMO_CLOSED, APP_FPGA_100M_CLK, // [34:32]
+            P24VDRV_TEMP_FAULT_N,                         // [31]
+            FLOW_N5, FLOW_N4, FLOW_N3, FLOW_N2, FLOW_N1,  // [30:26]
+            DAC_SDO,                                       // [25]
+            TP133, TP134,                                  // [24:23]
+            PWRENLP_SOURCE_STATE, PWRENLP_LOC_SOURCE_STATE, PWRENLP_LOC_SINK_STATE, // [22:20]
+            MTNENLP_SOURCE_STATE, MTNENLP_LOC_SOURCE_STATE, MTNENLP_LOC_SINK_STATE, // [19:17]
+            MTNENLP_DKB_SOURCE_STATE, MTNENLP_CCH_SOURCE_STATE, KVBMENLP_SOURCE_STATE, // [16:14]
+            BMENLP_SOURCE_STATE, BMENLP_LOC_SOURCE_STATE, BMENLP_LOC_SINK_STATE, // [13:11]
+            GROTPWR_STS_N, SYNC_MONITOR, SYNC_LOC_MONITOR, // [10:8]
+            LS_RES_REQ_N, GANT_LOCK_PIN_STAT, LS_WARNING_N, LS_OSSD2_N, // [7:4]
+            CW_LIMIT_STAT, CCW_LIMIT_STAT, BMPLS,          // [3:1]
+            AD_SDOUT                                       // [0]
         };
     end
 end
 
 // assign default 0 to output signals
-assign AD_SCLK = &input_signals  ? 1'b1 : 1'b0;
+assign AD_SCLK = &input_signals;
 assign AD_CNVST_N = 1'b0;
 assign AD_SEL0 = 1'b0;
 assign AD_SEL1 = 1'b0;
@@ -336,6 +340,16 @@ assign HSSB_PMII_TX_DATA1 = 1'b0;
 assign HSSB_PMII_TX_DATA2 = 1'b0;
 assign HSSB_PMII_TX_DATA3 = 1'b0;
 assign HSSB_PMII_TX_EN = 1'b0;
+assign APP_DBUG_HEADER2 = 1'b0;
+assign APP_DBUG_HEADER4 = 1'b0;
+assign APP_DBUG_HEADER6 = 1'b0;
+assign APP_DBUG_HEADER8 = 1'b0;
+assign APP_DBUG_HEADER10 = 1'b0;
+assign APP_DBUG_CS_N = 1'b0;
+assign APP_DBUG_ACTIVE = 1'b0;
+assign APP_DBUG_MOSI = 1'b0;
+assign APP_DBUG_MISO = 1'b0;
+assign APP_DBUG_SCLK = 1'b0;
 assign APP_FPGA_SPI_CLK = 1'b0;
 assign APP_FPGA_SPI0_CS_N = 1'b0;
 assign APP_FPGA_SPI0_MOSI = 1'b0;
@@ -350,17 +364,6 @@ assign APP_AUX_IO3 = 1'b0;
 assign APP_AUX_IO4 = 1'b0;
 assign APP_AUX_IO5 = 1'b0;
 assign DISABLE_HDW_FPGA = 1'b0;
-
-assign APP_DBUG_HEADER2 = 1'b0;
-assign APP_DBUG_HEADER4 = 1'b0;
-assign APP_DBUG_HEADER6 = 1'b0;
-assign APP_DBUG_HEADER8 = 1'b0;
-assign APP_DBUG_HEADER10 = 1'b0;
-assign APP_DBUG_CS_N = 1'b0;
-assign APP_DBUG_ACTIVE = 1'b0;
-assign APP_DBUG_MOSI = 1'b0;
-assign APP_DBUG_MISO = 1'b0;
-assign APP_DBUG_SCLK = 1'b0;
 
 
 endmodule
