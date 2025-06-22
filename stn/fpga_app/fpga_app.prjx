@@ -9,9 +9,9 @@ KEY VHDLMODE "VHDL2008"
 KEY SYSTEMVERILOGMFCU "FALSE"
 KEY UseConstraintFlowTechnology "TRUE"
 KEY VendorTechnology_Family "PolarFire"
-KEY VendorTechnology_Die "PA5M050T"
-KEY VendorTechnology_Package "fcvg484"
-KEY VendorTechnology_Speed "STD"
+KEY VendorTechnology_Die "PA5M100T"
+KEY VendorTechnology_Package "fcg484"
+KEY VendorTechnology_Speed "-1"
 KEY VendorTechnology_DieVoltage "1.0"
 KEY VendorTechnology_PART_RANGE "EXT"
 KEY VendorTechnology_DSW_VCCA_VOLTAGE_RAMP_RATE ""
@@ -19,11 +19,11 @@ KEY VendorTechnology_IO_DEFT_STD "LVCMOS18"
 KEY VendorTechnology_OPCONR ""
 KEY VendorTechnology_PLL_SUPPLY ""
 KEY VendorTechnology_RAD_EXPOSURE ""
-KEY VendorTechnology_RESERVEMIGRATIONPINS "1"
+KEY VendorTechnology_RESERVEMIGRATIONPINS "0"
 KEY VendorTechnology_RESTRICTPROBEPINS "0"
 KEY VendorTechnology_RESTRICTSPIPINS "0"
 KEY VendorTechnology_SYSTEM_CONTROLLER_SUSPEND_MODE "0"
-KEY VendorTechnology_TARGETDEVICESFORMIGRATION "PA5M050T"
+KEY VendorTechnology_TARGETDEVICESFORMIGRATION "PA5M100T"
 KEY VendorTechnology_TEMPR "EXT"
 KEY VendorTechnology_UNUSED_MSS_IO_RESISTOR_PULL "None"
 KEY VendorTechnology_VCCI_1.2_VOLTR "EXT"
@@ -32,7 +32,7 @@ KEY VendorTechnology_VCCI_1.8_VOLTR "EXT"
 KEY VendorTechnology_VCCI_2.5_VOLTR "EXT"
 KEY VendorTechnology_VCCI_3.3_VOLTR "EXT"
 KEY VendorTechnology_VOLTR "EXT"
-KEY ProjectLocation "C:\repo1\gpb\stn\fpga_hw"
+KEY ProjectLocation "C:\repo1\gpb\stn\fpga_app"
 KEY ProjectDescription ""
 KEY UseRootLocationForLinkedFiles "FALSE"
 KEY RootLocationENVForLinkedFiles ""
@@ -44,7 +44,7 @@ KEY LossOfDataDRCSeverity "TRUE"
 KEY IdWidthMismatchDRCSeverity "TRUE"
 KEY SimulationType "VERILOG"
 KEY Vendor "Actel"
-KEY ActiveRoot "top_hw::work"
+KEY ActiveRoot "top_app::work"
 LIST REVISIONS
 VALUE="Impl1",NUM=1
 CURREV=1
@@ -52,45 +52,48 @@ ENDLIST
 LIST GlobalIncludeFileList
 ENDLIST
 LIST FileManager
-VALUE "<project>\constraint\io\top_hw.pdc,io_pdc"
+VALUE "<project>\constraint\io\top_app.pdc,io_pdc"
 STATE="utd"
-TIME="1750497095"
-SIZE="15551"
+TIME="1750558354"
+SIZE="20739"
 ENDFILE
-VALUE "<project>\hdl\top_hw.v,hdl"
+VALUE "<project>\hdl\top_app.v,hdl"
 STATE="utd"
-TIME="1750496628"
-SIZE="10038"
+TIME="1750556450"
+SIZE="9523"
 ENDFILE
-VALUE "<project>\synthesis\top_hw.so,so"
+VALUE "<project>\synthesis\top_app.so,so"
 STATE="utd"
-TIME="1750496040"
-SIZE="211"
+TIME="1750556478"
+SIZE="214"
 ENDFILE
-VALUE "<project>\synthesis\top_hw.vm,syn_vm"
+VALUE "<project>\synthesis\top_app.vm,syn_vm"
 STATE="utd"
-TIME="1750496040"
-SIZE="54698"
+TIME="1750556478"
+SIZE="49525"
 ENDFILE
-VALUE "<project>\synthesis\top_hw_syn.prj,prj"
+VALUE "<project>\synthesis\top_app_syn.prj,prj"
 STATE="utd"
-TIME="1750496041"
-SIZE="2927"
+TIME="1750556478"
+SIZE="2933"
 ENDFILE
-VALUE "<project>\synthesis\top_hw_vm.sdc,syn_sdc"
+VALUE "<project>\synthesis\top_app_vm.sdc,syn_sdc"
 STATE="utd"
-TIME="1750496040"
-SIZE="1005"
+TIME="1750556478"
+SIZE="1007"
 ENDFILE
 ENDLIST
 LIST UsedFile
 ENDLIST
 LIST NewModulesInfo
-LIST "top_hw::work"
-FILE "<project>\hdl\top_hw.v,hdl"
+LIST "top_app::work"
+FILE "<project>\hdl\top_app.v,hdl"
+LIST PNRConstraints
+VALUE "<project>\constraint\io\top_app.pdc,io_pdc"
+ENDLIST
 LIST ProjectState5.1
 LIST Impl1
-ideSYNTHESIS(<project>\synthesis\top_hw.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>\synthesis\top_app.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -99,6 +102,9 @@ ENDLIST
 Used_File_List
 ENDUsed_File_List
 ENDLIST
+ENDLIST
+LIST synthesis_implementations
+VALUE "synthesis"
 ENDLIST
 ENDLIST
 ENDLIST
@@ -202,9 +208,9 @@ IS32BIT="1"
 EndProfile
 ENDLIST
 LIST ProjectState5.1
-LIST "top_hw::work"
+LIST "top_app::work"
 LIST Impl1
-ideSYNTHESIS(<project>\synthesis\top_hw.vm,syn_vm)=StateSuccess
+ideSYNTHESIS(<project>\synthesis\top_app.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -228,18 +234,21 @@ ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
 Reports;Reports;0
-ReportsCurrentItem;Place and Route:top_hw_pinrpt_name.rpt
+ReportsCurrentItem;synthesis:synplify.log
+HDL;hdl\top_app.v;0
+Constraint Manager;Constraint Manager;0
+HDL;constraint\io\top_app.pdc;0
 StartPage;StartPage;0
-ACTIVEVIEW;Reports
+ACTIVEVIEW;Constraint Manager
 ENDLIST
 LIST ModuleSubBlockList
-LIST "top_hw::work","hdl\top_hw.v","FALSE","FALSE"
+LIST "top_app::work","hdl\top_app.v","FALSE","FALSE"
 ENDLIST
 ENDLIST
 LIST ActiveTestBenchList
 ENDLIST
 LIST IOTabList
-VALUE "constraint\io\top_hw.pdc"
+VALUE "constraint\io\top_app.pdc"
 ENDLIST
 LIST FPTabList
 ENDLIST
