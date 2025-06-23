@@ -2,7 +2,7 @@
 // Written by Synplify Pro 
 // Product Version "V-2023.09M-3"
 // Program "Synplify Pro", Mapper "map202309actp1, Build 008R"
-// Sat Jun  7 03:04:20 2025
+// Mon Jun 23 17:46:00 2025
 //
 // Source file index table:
 // Object locations will have the form <file>:<line>
@@ -54,15 +54,15 @@
 
 `timescale 100 ps/100 ps
 module CLOCK_DIV_11_7 (
-  POWER_GOOD_c,
+  HSWAP_FAULT_c,
   DBUG_HEADER6_c,
   RESET_N_arst
 )
 ;
-output POWER_GOOD_c ;
+output HSWAP_FAULT_c ;
 input DBUG_HEADER6_c ;
 input RESET_N_arst ;
-wire POWER_GOOD_c ;
+wire HSWAP_FAULT_c ;
 wire DBUG_HEADER6_c ;
 wire RESET_N_arst ;
 wire [15:0] cntr_Z;
@@ -214,7 +214,7 @@ defparam \cntr_4_fast[0] .INIT=2'h1;
 );
 // @5:37
   SLE clkout (
-	.Q(POWER_GOOD_c),
+	.Q(HSWAP_FAULT_c),
 	.ADn(VCC),
 	.ALn(RESET_N_arst),
 	.CLK(DBUG_HEADER6_c),
@@ -563,7 +563,7 @@ defparam un1_cntrlto15.INIT=16'h1000;
 // @5:37
   CFG2 clkout_RNO (
 	.A(un1_cntrlto15_0),
-	.B(POWER_GOOD_c),
+	.B(HSWAP_FAULT_c),
 	.Y(N_496_i)
 );
 defparam clkout_RNO.INIT=4'h9;
@@ -133770,9 +133770,9 @@ wire [3:3] gantry_mot_if_0_OPB_ADDR_fast;
 wire [1:1] OPB_ADDR_fast;
 wire [31:0] OPB_DO;
 wire NN_1 ;
+wire VCC ;
 wire NN_2 ;
 wire GND ;
-wire VCC ;
 wire OPB_RE ;
 wire cmd_server_0_opb_emu_target_inst_msg_write_inst_OPB_WE ;
 wire COUNTER_RE ;
@@ -133906,7 +133906,7 @@ wire DBUG_MOSI_c ;
 wire DBUG_CS_N_c ;
 wire DBUG_SCLK_c ;
 wire DBUG_ACTIVE_c ;
-wire POWER_GOOD_c ;
+wire HSWAP_FAULT_c ;
 wire DBUG_HEADER4_c ;
 wire DBUG_HEADER6_c ;
 wire DBUG_HEADER8_c ;
@@ -134394,17 +134394,17 @@ defparam I_2_RNIQNG2.INIT=2'h1;
 // @25:9
   OUTBUF MSSB_COMM_FAULT_obuf (
 	.PAD(MSSB_COMM_FAULT),
-	.D(POWER_GOOD_c)
+	.D(HSWAP_FAULT_c)
 );
 // @25:10
   OUTBUF HSWAP_FAULT_obuf (
 	.PAD(HSWAP_FAULT),
-	.D(POWER_GOOD_c)
+	.D(HSWAP_FAULT_c)
 );
 // @25:11
   OUTBUF POWER_GOOD_obuf (
 	.PAD(POWER_GOOD),
-	.D(POWER_GOOD_c)
+	.D(VCC)
 );
 // @25:15
   OUTBUF DBUG_HEADER4_obuf (
@@ -134845,7 +134845,7 @@ defparam I_2_RNIQNG2.INIT=2'h1;
 );
 // @25:394
   CLOCK_DIV_11_7 clkgen_2khz (
-	.POWER_GOOD_c(POWER_GOOD_c),
+	.HSWAP_FAULT_c(HSWAP_FAULT_c),
 	.DBUG_HEADER6_c(DBUG_HEADER6_c),
 	.RESET_N_arst(RESET_N_arst)
 );

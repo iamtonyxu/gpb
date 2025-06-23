@@ -379,7 +379,7 @@ module top(
 //
     assign SYS_CLK = FPGA_100M_CLK; // 100MHz Clock
     
-    assign POWER_GOOD = PULSE_1HZ; // Power good signal after FPGA programmed
+    assign POWER_GOOD = 1; // Power good signal after FPGA programmed
     assign MSSB_COMM_FAULT = PULSE_1HZ; // MSSB communication fault signal
     assign HSWAP_FAULT = PULSE_1HZ; // HSWAP fault signal
 

@@ -9,7 +9,7 @@ Finished optimization stage 1 on CLOCK_DIV (CPU Time 0h:00m:00s, Memory Used cur
 	DW=32'b00000000000000000000000000001000
 	AW=32'b00000000000000000000000000000100
    Generated name = afifo_8s_4s_8s_4s
-Opening data file afifo_8s_4s_8s_4s_mem_9640_initial_block from directory .
+Opening data file afifo_8s_4s_8s_4s_mem_22728_initial_block from directory .
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":93:4:93:10|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":110:1:110:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":127:1:127:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
@@ -59,7 +59,7 @@ Finished optimization stage 1 on ClkGen (CPU Time 0h:00m:00s, Memory Used curren
 	DW=32'b00000000000000000000000000001000
 	AW=32'b00000000000000000000000000000010
    Generated name = afifo_8s_2s_8s_2s
-Opening data file afifo_8s_2s_8s_2s_mem_9640_initial_block from directory .
+Opening data file afifo_8s_2s_8s_2s_mem_22728_initial_block from directory .
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":93:4:93:10|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":110:1:110:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":127:1:127:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
@@ -71,7 +71,7 @@ Running optimization stage 1 on afifo_8s_2s_8s_2s .......
 @N: CL134 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":149:1:149:6|Found RAM mem, depth=4, width=8
 @W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":128:1:128:6|Pruning register bit 2 of wgray[2:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
 @W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":186:1:186:6|Pruning register bit 2 of rgray[2:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-Finished optimization stage 1 on afifo_8s_2s_8s_2s (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 103MB)
+Finished optimization stage 1 on afifo_8s_2s_8s_2s (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 104MB)
 @N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":22:7:22:24|Synthesizing module OSCILLATOR_COUNTER in library work.
 Running optimization stage 1 on OSCILLATOR_COUNTER .......
 @W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":149:1:149:6|Pruning unused register startb_d1. Make sure that there are no unused intermediate registers.
@@ -145,7 +145,7 @@ Finished optimization stage 1 on DP_RAM_2R_1W_24s_4s (CPU Time 0h:00m:00s, Memor
 	DW=32'b00000000000000000000000000011000
 	AW=32'b00000000000000000000000000000100
    Generated name = afifo_24s_4s_24s_4s
-Opening data file afifo_24s_4s_24s_4s_mem_9640_initial_block from directory .
+Opening data file afifo_24s_4s_24s_4s_mem_22728_initial_block from directory .
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":93:4:93:10|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":110:1:110:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":127:1:127:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
@@ -206,7 +206,7 @@ Running optimization stage 1 on GPIO .......
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":540:4:540:9|Optimizing register bit OPB_DO[29] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":540:4:540:9|Optimizing register bit OPB_DO[30] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":540:4:540:9|Pruning register bits 30 to 24 of OPB_DO[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-Finished optimization stage 1 on GPIO (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 107MB)
+Finished optimization stage 1 on GPIO (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 106MB)
 @W: CG238 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":262:6:262:18|Instantiation will not be bound to the VHDL entity. For mixed HDL, only integer/real/string generics on the VHDL side are supported.  Change VHDL generic types to one of the supported types for mixed HDL usage.
 @N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":26:7:26:13|Synthesizing module MSSB_IF in library work.
 @N: CG794 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":262:6:262:18|Using module cmn_uart from library work
@@ -242,7 +242,7 @@ Running optimization stage 1 on MSSB_IF .......
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[30] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[31] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Pruning register bits 31 to 2 of mssb_status[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-Finished optimization stage 1 on MSSB_IF (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 107MB)
+Finished optimization stage 1 on MSSB_IF (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 106MB)
 @N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":26:7:26:21|Synthesizing module cmn_pwm_wrapper in library work.
 @N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":131:31:131:45|Removing redundant assignment.
 @N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":132:31:132:45|Removing redundant assignment.
@@ -266,12 +266,12 @@ Running optimization stage 1 on cmn_pwm_wrapper .......
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[31] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Pruning register bits 31 to 24 of pwm_status[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
 @W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Pruning register bits 7 to 2 of pwm_status[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-Finished optimization stage 1 on cmn_pwm_wrapper (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 107MB)
+Finished optimization stage 1 on cmn_pwm_wrapper (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 106MB)
 @N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v":3:7:3:9|Synthesizing module top in library work.
 Running optimization stage 1 on top .......
-Finished optimization stage 1 on top (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 107MB)
+Finished optimization stage 1 on top (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 106MB)
 Running optimization stage 2 on top .......
-Finished optimization stage 2 on top (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 107MB)
+Finished optimization stage 2 on top (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 106MB)
 Running optimization stage 2 on cmn_pwm_wrapper .......
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":238:4:238:9|Optimizing register bit sync_cntr[2] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":238:4:238:9|Optimizing register bit sync_cntr[3] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
@@ -402,7 +402,7 @@ State machine has 3 reachable states with original encodings of:
    00
    01
    10
-Finished optimization stage 2 on opb_emu_target (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 116MB)
+Finished optimization stage 2 on opb_emu_target (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 117MB)
 Running optimization stage 2 on msg_write .......
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 

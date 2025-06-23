@@ -3,7 +3,7 @@
 #OS: Windows 10 or later
 #Hostname: LAPTOP-6FQD1N4B
 
-# Sat Jun  7 03:03:15 2025
+# Mon Jun 23 17:45:21 2025
 
 #Implementation: synthesis
 
@@ -55,7 +55,7 @@ At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memor
 
 
 Process completed successfully.
-# Sat Jun  7 03:03:15 2025
+# Mon Jun 23 17:45:21 2025
 
 ###########################################################]
 ###########################################################[
@@ -249,7 +249,7 @@ At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory
 
 
 Process completed successfully.
-# Sat Jun  7 03:03:16 2025
+# Mon Jun 23 17:45:22 2025
 
 ###########################################################]
 ###########################################################[
@@ -422,7 +422,11 @@ Process completed successfully.
 @I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v" (library work)
 @I::"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v" (library work)
 Verilog syntax check successful!
-Options changed - recompiling
+File C:\repo2\gpb\dmd\P1060973_FPGA\component\polarfire_syn_comps.v changed - recompiling
+File C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v changed - recompiling
+File afifo_8s_4s_8s_4s_mem_9640_initial_block changed - recompiling
+File afifo_8s_2s_8s_2s_mem_9640_initial_block changed - recompiling
+File afifo_24s_4s_24s_4s_mem_9640_initial_block changed - recompiling
 @N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\CLK_DIV.V":21:7:21:15|Synthesizing module CLOCK_DIV in library work.
 Running optimization stage 1 on CLOCK_DIV .......
 Finished optimization stage 1 on CLOCK_DIV (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
@@ -434,7 +438,7 @@ Finished optimization stage 1 on CLOCK_DIV (CPU Time 0h:00m:00s, Memory Used cur
 	DW=32'b00000000000000000000000000001000
 	AW=32'b00000000000000000000000000000100
    Generated name = afifo_8s_4s_8s_4s
-Opening data file afifo_8s_4s_8s_4s_mem_9640_initial_block from directory .
+Opening data file afifo_8s_4s_8s_4s_mem_22728_initial_block from directory .
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":93:4:93:10|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":110:1:110:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":127:1:127:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
@@ -484,7 +488,7 @@ Finished optimization stage 1 on ClkGen (CPU Time 0h:00m:00s, Memory Used curren
 	DW=32'b00000000000000000000000000001000
 	AW=32'b00000000000000000000000000000010
    Generated name = afifo_8s_2s_8s_2s
-Opening data file afifo_8s_2s_8s_2s_mem_9640_initial_block from directory .
+Opening data file afifo_8s_2s_8s_2s_mem_22728_initial_block from directory .
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":93:4:93:10|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":110:1:110:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":127:1:127:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
@@ -496,7 +500,7 @@ Running optimization stage 1 on afifo_8s_2s_8s_2s .......
 @N: CL134 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":149:1:149:6|Found RAM mem, depth=4, width=8
 @W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":128:1:128:6|Pruning register bit 2 of wgray[2:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
 @W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":186:1:186:6|Pruning register bit 2 of rgray[2:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-Finished optimization stage 1 on afifo_8s_2s_8s_2s (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 103MB)
+Finished optimization stage 1 on afifo_8s_2s_8s_2s (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 104MB)
 @N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":22:7:22:24|Synthesizing module OSCILLATOR_COUNTER in library work.
 Running optimization stage 1 on OSCILLATOR_COUNTER .......
 @W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\OSCILLATOR_COUNTER.v":149:1:149:6|Pruning unused register startb_d1. Make sure that there are no unused intermediate registers.
@@ -570,7 +574,7 @@ Finished optimization stage 1 on DP_RAM_2R_1W_24s_4s (CPU Time 0h:00m:00s, Memor
 	DW=32'b00000000000000000000000000011000
 	AW=32'b00000000000000000000000000000100
    Generated name = afifo_24s_4s_24s_4s
-Opening data file afifo_24s_4s_24s_4s_mem_9640_initial_block from directory .
+Opening data file afifo_24s_4s_24s_4s_mem_22728_initial_block from directory .
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":93:4:93:10|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":110:1:110:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
 @W: CG532 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\afifo.v":127:1:127:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
@@ -631,7 +635,7 @@ Running optimization stage 1 on GPIO .......
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":540:4:540:9|Optimizing register bit OPB_DO[29] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":540:4:540:9|Optimizing register bit OPB_DO[30] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\GPIO.v":540:4:540:9|Pruning register bits 30 to 24 of OPB_DO[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-Finished optimization stage 1 on GPIO (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 107MB)
+Finished optimization stage 1 on GPIO (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 106MB)
 @W: CG238 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":262:6:262:18|Instantiation will not be bound to the VHDL entity. For mixed HDL, only integer/real/string generics on the VHDL side are supported.  Change VHDL generic types to one of the supported types for mixed HDL usage.
 @N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":26:7:26:13|Synthesizing module MSSB_IF in library work.
 @N: CG794 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":262:6:262:18|Using module cmn_uart from library work
@@ -667,7 +671,7 @@ Running optimization stage 1 on MSSB_IF .......
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[30] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Optimizing register bit mssb_status[31] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\MSSB_IF.v":210:4:210:9|Pruning register bits 31 to 2 of mssb_status[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-Finished optimization stage 1 on MSSB_IF (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 107MB)
+Finished optimization stage 1 on MSSB_IF (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 106MB)
 @N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":26:7:26:21|Synthesizing module cmn_pwm_wrapper in library work.
 @N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":131:31:131:45|Removing redundant assignment.
 @N: CG179 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":132:31:132:45|Removing redundant assignment.
@@ -691,12 +695,12 @@ Running optimization stage 1 on cmn_pwm_wrapper .......
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Optimizing register bit pwm_status[31] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Pruning register bits 31 to 24 of pwm_status[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
 @W: CL279 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":262:4:262:9|Pruning register bits 7 to 2 of pwm_status[31:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-Finished optimization stage 1 on cmn_pwm_wrapper (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 107MB)
+Finished optimization stage 1 on cmn_pwm_wrapper (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 106MB)
 @N: CG364 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\top.v":3:7:3:9|Synthesizing module top in library work.
 Running optimization stage 1 on top .......
-Finished optimization stage 1 on top (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 107MB)
+Finished optimization stage 1 on top (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 106MB)
 Running optimization stage 2 on top .......
-Finished optimization stage 2 on top (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 107MB)
+Finished optimization stage 2 on top (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 106MB)
 Running optimization stage 2 on cmn_pwm_wrapper .......
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":238:4:238:9|Optimizing register bit sync_cntr[2] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm_wrapper.v":238:4:238:9|Optimizing register bit sync_cntr[3] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
@@ -827,7 +831,7 @@ State machine has 3 reachable states with original encodings of:
    00
    01
    10
-Finished optimization stage 2 on opb_emu_target (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 116MB)
+Finished optimization stage 2 on opb_emu_target (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 117MB)
 Running optimization stage 2 on msg_write .......
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\msg_write.v":235:4:235:9|Optimizing register bit timeout_cnt[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
@@ -866,7 +870,7 @@ At c_ver Exit (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory
 
 
 Process completed successfully.
-# Sat Jun  7 03:03:22 2025
+# Mon Jun 23 17:45:28 2025
 
 ###########################################################]
 ###########################################################[
@@ -905,11 +909,11 @@ Finished optimization stage 1 on PH_PWM (CPU Time 0h:00m:00s, Memory Used curren
 @N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\SIMPLE_PH_PWM.vhd":5:7:5:19|Synthesizing work.simple_ph_pwm.behavioral.
 Post processing for work.simple_ph_pwm.behavioral
 Running optimization stage 1 on SIMPLE_PH_PWM .......
-Finished optimization stage 1 on SIMPLE_PH_PWM (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 97MB)
+Finished optimization stage 1 on SIMPLE_PH_PWM (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
 @N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":22:7:22:19|Synthesizing work.cmn_debouncer.rtl.
 Post processing for work.cmn_debouncer.rtl
 Running optimization stage 1 on cmn_debouncer .......
-Finished optimization stage 1 on cmn_debouncer (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 97MB)
+Finished optimization stage 1 on cmn_debouncer (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
 Post processing for work.cmn_pwm.rtl
 Running optimization stage 1 on cmn_pwm .......
 @W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":195:9:195:10|Pruning unused register sync_mot_pwm_param45_3(9 downto 0). Make sure that there are no unused intermediate registers.
@@ -918,7 +922,7 @@ Running optimization stage 1 on cmn_pwm .......
 @W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":167:9:167:10|Pruning unused register valid_mot_pwm_param45_4(9 downto 0). Make sure that there are no unused intermediate registers.
 @W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":167:9:167:10|Pruning unused register valid_mot_pwm_param23_4(9 downto 0). Make sure that there are no unused intermediate registers.
 @W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":167:9:167:10|Pruning unused register valid_mot_pwm_param01_6(9 downto 0). Make sure that there are no unused intermediate registers.
-Finished optimization stage 1 on cmn_pwm (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 97MB)
+Finished optimization stage 1 on cmn_pwm (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
 @N: Setting default value for generic baud_rate to 921600;
 @N: Setting default value for generic clock_frequency to 100000000;
 @N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":42:7:42:14|Synthesizing work.cmn_uart.rtl.
@@ -936,7 +940,7 @@ Finished optimization stage 1 on work_cmn_uart_rtl_false_921600_100000000_1_BAUD
 @N: CD604 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd":298:20:298:33|OTHERS clause is not synthesized.
 Post processing for work.serial_eeprom_if.rtl
 Running optimization stage 1 on serial_eeprom_if .......
-Finished optimization stage 1 on serial_eeprom_if (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 99MB)
+Finished optimization stage 1 on serial_eeprom_if (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
 @N: Setting default value for generic baud_rate to 115200;
 @N: Setting default value for generic clock_frequency to 100000000;
 @N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":42:7:42:14|Synthesizing work.cmn_uart.rtl.
@@ -1019,9 +1023,9 @@ Running optimization stage 2 on cmn_debouncer_8_8 .......
 @W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Pruning register bit 29 of debounce_cntr(29 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Optimizing register bit debounce_cntr(28) to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Pruning register bit 28 of debounce_cntr(28 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-Finished optimization stage 2 on cmn_debouncer_8_8 (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 102MB)
+Finished optimization stage 2 on cmn_debouncer_8_8 (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 103MB)
 Running optimization stage 2 on SIMPLE_PH_PWM .......
-Finished optimization stage 2 on SIMPLE_PH_PWM (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 102MB)
+Finished optimization stage 2 on SIMPLE_PH_PWM (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 103MB)
 Running optimization stage 2 on PH_PWM_625_0_80_128_3_3 .......
 Finished optimization stage 2 on PH_PWM_625_0_80_128_3_3 (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 104MB)
 Running optimization stage 2 on CMN_DEADBAND_5 .......
@@ -1051,7 +1055,7 @@ At c_vhdl Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memor
 
 
 Process completed successfully.
-# Sat Jun  7 03:03:24 2025
+# Mon Jun 23 17:45:31 2025
 
 ###########################################################]
 ###########################################################[
@@ -1085,7 +1089,7 @@ At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sat Jun  7 03:03:25 2025
+# Mon Jun 23 17:45:31 2025
 
 ###########################################################]
 
@@ -1095,12 +1099,12 @@ For a summary of runtime and memory usage for all design units, please see file:
 
 @END
 
-At c_hdl Exit (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 24MB peak: 25MB)
+At c_hdl Exit (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:09s; Memory used current: 24MB peak: 25MB)
 
-Process took 0h:00m:09s realtime, 0h:00m:09s cputime
+Process took 0h:00m:10s realtime, 0h:00m:09s cputime
 
 Process completed successfully.
-# Sat Jun  7 03:03:25 2025
+# Mon Jun 23 17:45:31 2025
 
 ###########################################################]
 ###########################################################[
@@ -1127,12 +1131,12 @@ At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sat Jun  7 03:03:26 2025
+# Mon Jun 23 17:45:33 2025
 
 ###########################################################]
 Premap Report
 
-# Sat Jun  7 03:03:26 2025
+# Mon Jun 23 17:45:33 2025
 
 
 Copyright (C) 1994-2023 Synopsys, Inc.
@@ -1170,7 +1174,7 @@ Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s
 Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 202MB peak: 203MB)
 
 
-Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 203MB peak: 203MB)
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 204MB peak: 204MB)
 
 
 Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 204MB peak: 206MB)
@@ -1241,10 +1245,10 @@ Finished HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:0
 
 @W: MO156 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\dual_port_ram.v":53:1:53:6|RAM ram_1[15:0] removed due to constant propagation. 
 
-Started DisTri Cleanup (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 272MB peak: 272MB)
+Started DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 272MB peak: 272MB)
 
 
-Finished DisTri Cleanup (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 272MB peak: 273MB)
+Finished DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 272MB peak: 273MB)
 
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\dual_port_ram.v":53:1:53:6|Removing sequential instance PA_RADDR[9:0] (in view: work.DP_RAM_2R_1W_16s_10s(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":476:8:476:9|Removing sequential instance next_command_ready (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
@@ -1694,22 +1698,22 @@ original code -> new code
    01000 -> 01000
    10000 -> 10000
 
-Finished constraint checker preprocessing (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 278MB peak: 278MB)
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 278MB peak: 278MB)
 
 
-Finished constraint checker (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 282MB peak: 282MB)
+Finished constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 282MB peak: 282MB)
 
 Pre-mapping successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 189MB peak: 283MB)
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 188MB peak: 283MB)
 
-Process took 0h:00m:02s realtime, 0h:00m:02s cputime
-# Sat Jun  7 03:03:29 2025
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Jun 23 17:45:35 2025
 
 ###########################################################]
 Map & Optimize Report
 
-# Sat Jun  7 03:03:29 2025
+# Mon Jun 23 17:45:35 2025
 
 
 Copyright (C) 1994-2023 Synopsys, Inc.
@@ -1815,7 +1819,7 @@ Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapse
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":157:4:157:5|Removing sequential instance ENABLE_SYNC (in view: work.PH_PWM_625_0_80_3_3_7(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
 @A: BN291 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":157:4:157:5|Boundary register ENABLE_SYNC (in view: work.PH_PWM_625_0_80_3_3_7(behavioral)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
 
-Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 268MB peak: 268MB)
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 269MB peak: 269MB)
 
 @N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\oscillator_counter.v":65:4:65:9|Found counter in view:work.OSCILLATOR_COUNTER(verilog) instance count_data[15:0] 
 Encoding state machine eeprom_cycle_state[0:11] (in view: work.serial_eeprom_if(rtl))
@@ -2086,11 +2090,11 @@ original code -> new code
    01000 -> 01000
    10000 -> 10000
 
-Starting factoring (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:05s; Memory used current: 324MB peak: 328MB)
+Starting factoring (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 324MB peak: 328MB)
 
 @W: BN132 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":265:4:265:9|Removing instance adder_decode_0.ILIM_DAC_RE_d1 because it is equivalent to instance dac_0.opb_dummy_re. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
-Finished factoring (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:07s; Memory used current: 352MB peak: 352MB)
+Finished factoring (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:05s; Memory used current: 352MB peak: 352MB)
 
 
 Available hyper_sources - for debug and ip models
@@ -2115,7 +2119,7 @@ NConnInternalConnection caching is on
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":265:4:265:9|Removing sequential instance adder_decode_0.GANTRY_96V_IF_RE_d1 (in view: work.top(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":265:4:265:9|Removing sequential instance adder_decode_0.PWR_IF_RE_d1 (in view: work.top(verilog)) because it does not drive other instances.
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:12s; CPU Time elapsed 0h:00m:11s; Memory used current: 340MB peak: 363MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:07s; Memory used current: 339MB peak: 363MB)
 
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":262:4:262:9|Removing sequential instance gantry_brk1_if_0.pwm_status[0] (in view: work.top(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":262:4:262:9|Removing sequential instance gantry_brk2_if_0.pwm_status[0] (in view: work.top(verilog)) because it does not drive other instances.
@@ -2124,24 +2128,24 @@ Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:12s; CP
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":262:4:262:9|Removing sequential instance gantry_brk2_ret_if_0.pwm_status[0] (in view: work.top(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":262:4:262:9|Removing sequential instance gantry_brk3_ret_if_0.pwm_status[0] (in view: work.top(verilog)) because it does not drive other instances.
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:13s; Memory used current: 340MB peak: 363MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:08s; Memory used current: 340MB peak: 363MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:24s; CPU Time elapsed 0h:00m:23s; Memory used current: 358MB peak: 363MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:14s; CPU Time elapsed 0h:00m:14s; Memory used current: 358MB peak: 363MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:25s; CPU Time elapsed 0h:00m:24s; Memory used current: 359MB peak: 363MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:15s; CPU Time elapsed 0h:00m:14s; Memory used current: 359MB peak: 363MB)
 
 
-Finished preparing to map (Real Time elapsed 0h:00m:31s; CPU Time elapsed 0h:00m:29s; Memory used current: 359MB peak: 363MB)
+Finished preparing to map (Real Time elapsed 0h:00m:17s; CPU Time elapsed 0h:00m:16s; Memory used current: 359MB peak: 363MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:34s; CPU Time elapsed 0h:00m:33s; Memory used current: 379MB peak: 402MB)
+Finished technology mapping (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:18s; Memory used current: 379MB peak: 402MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:00m:34s		    -1.23ns		6995 /      4888
-   2		0h:00m:34s		    -1.23ns		6917 /      4888
+   1		0h:00m:18s		    -1.23ns		6995 /      4888
+   2		0h:00m:18s		    -1.23ns		6917 /      4888
 @N: FX271 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":241:4:241:9|Replicating instance cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_ADDR[21] (in view: work.top(verilog)) with 5 loads 1 time to improve timing.
 @N: FX271 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":241:4:241:9|Replicating instance cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_ADDR[20] (in view: work.top(verilog)) with 5 loads 1 time to improve timing.
 @N: FX271 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":241:4:241:9|Replicating instance cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_ADDR[9] (in view: work.top(verilog)) with 9 loads 1 time to improve timing.
@@ -2157,34 +2161,34 @@ Timing driven replication report
 Added 16 Registers via timing driven replication
 Added 16 LUTs via timing driven replication
 
-   3		0h:00m:37s		    -0.60ns		6962 /      4904
-   4		0h:00m:37s		    -0.46ns		6963 /      4904
-   5		0h:00m:38s		    -0.21ns		6965 /      4904
-   6		0h:00m:38s		     0.42ns		6966 /      4904
-   7		0h:00m:38s		     0.44ns		6969 /      4904
+   3		0h:00m:19s		    -0.60ns		6962 /      4904
+   4		0h:00m:19s		    -0.46ns		6963 /      4904
+   5		0h:00m:19s		    -0.21ns		6965 /      4904
+   6		0h:00m:20s		     0.42ns		6966 /      4904
+   7		0h:00m:20s		     0.44ns		6969 /      4904
 
 Added 0 Buffers
 Added 0 Cells via replication
 	Added 0 Sequential Cells via replication
 	Added 0 Combinational Cells via replication
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:44s; CPU Time elapsed 0h:00m:42s; Memory used current: 384MB peak: 402MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:22s; CPU Time elapsed 0h:00m:21s; Memory used current: 384MB peak: 402MB)
 
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:44s; CPU Time elapsed 0h:00m:43s; Memory used current: 385MB peak: 402MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:22s; CPU Time elapsed 0h:00m:21s; Memory used current: 386MB peak: 402MB)
 
 
-Starting CDBProcessSetClockGroups... (Real Time elapsed 0h:00m:45s; CPU Time elapsed 0h:00m:43s; Memory used current: 386MB peak: 402MB)
+Starting CDBProcessSetClockGroups... (Real Time elapsed 0h:00m:22s; CPU Time elapsed 0h:00m:22s; Memory used current: 387MB peak: 402MB)
 
 
-Finished with CDBProcessSetClockGroups (Real Time elapsed 0h:00m:45s; CPU Time elapsed 0h:00m:44s; Memory used current: 386MB peak: 402MB)
+Finished with CDBProcessSetClockGroups (Real Time elapsed 0h:00m:22s; CPU Time elapsed 0h:00m:22s; Memory used current: 387MB peak: 402MB)
 
 
-Start Writing Netlists (Real Time elapsed 0h:00m:46s; CPU Time elapsed 0h:00m:44s; Memory used current: 297MB peak: 402MB)
+Start Writing Netlists (Real Time elapsed 0h:00m:23s; CPU Time elapsed 0h:00m:22s; Memory used current: 297MB peak: 402MB)
 
 Writing Analyst data base C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\synwork\top_m.srm
 
-Finished Writing Netlist Databases (Real Time elapsed 0h:00m:48s; CPU Time elapsed 0h:00m:46s; Memory used current: 363MB peak: 402MB)
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:23s; CPU Time elapsed 0h:00m:23s; Memory used current: 363MB peak: 402MB)
 
 Writing Verilog Simulation files
 @N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
@@ -2202,13 +2206,13 @@ Writing Verilog Simulation files
 @W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
 @W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
 
-Finished Writing Verilog Simulation files (Real Time elapsed 0h:00m:52s; CPU Time elapsed 0h:00m:51s; Memory used current: 364MB peak: 402MB)
+Finished Writing Verilog Simulation files (Real Time elapsed 0h:00m:25s; CPU Time elapsed 0h:00m:24s; Memory used current: 363MB peak: 402MB)
 
 
-Finished Writing Netlists (Real Time elapsed 0h:00m:53s; CPU Time elapsed 0h:00m:51s; Memory used current: 364MB peak: 402MB)
+Finished Writing Netlists (Real Time elapsed 0h:00m:25s; CPU Time elapsed 0h:00m:24s; Memory used current: 363MB peak: 402MB)
 
 
-Start final timing analysis (Real Time elapsed 0h:00m:54s; CPU Time elapsed 0h:00m:52s; Memory used current: 355MB peak: 402MB)
+Start final timing analysis (Real Time elapsed 0h:00m:25s; CPU Time elapsed 0h:00m:24s; Memory used current: 355MB peak: 402MB)
 
 @W: MT420 |Found inferred clock top|FPGA_100M_CLK with period 10.00ns. Please declare a user-defined clock on port FPGA_100M_CLK.
 @W: MT420 |Found inferred clock CLOCK_DIV_11_6|N_17_inferred_clock with period 10.00ns. Please declare a user-defined clock on net lift_mot_if_0.clk_16khz_div.N_17_9.
@@ -2225,7 +2229,7 @@ Start final timing analysis (Real Time elapsed 0h:00m:54s; CPU Time elapsed 0h:0
 
 
 ##### START OF TIMING REPORT #####[
-# Timing report written on Sat Jun  7 03:04:24 2025
+# Timing report written on Mon Jun 23 17:46:01 2025
 #
 
 
@@ -3546,10 +3550,10 @@ Path delay compensated for clock skew. Clock skew is added to clock-to-out value
 
 Timing exceptions that could not be applied
 
-Finished final timing analysis (Real Time elapsed 0h:00m:54s; CPU Time elapsed 0h:00m:52s; Memory used current: 359MB peak: 402MB)
+Finished final timing analysis (Real Time elapsed 0h:00m:25s; CPU Time elapsed 0h:00m:25s; Memory used current: 359MB peak: 402MB)
 
 
-Finished timing report (Real Time elapsed 0h:00m:54s; CPU Time elapsed 0h:00m:52s; Memory used current: 359MB peak: 402MB)
+Finished timing report (Real Time elapsed 0h:00m:25s; CPU Time elapsed 0h:00m:25s; Memory used current: 359MB peak: 402MB)
 
 ---------------------------------------
 Resource Usage Report for top 
@@ -3599,9 +3603,9 @@ Total number of LUTs after P&R:  6188 + 72 + 36 + 0 = 6296;
 
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:55s; CPU Time elapsed 0h:00m:53s; Memory used current: 156MB peak: 402MB)
+At Mapper Exit (Real Time elapsed 0h:00m:26s; CPU Time elapsed 0h:00m:25s; Memory used current: 157MB peak: 402MB)
 
-Process took 0h:00m:55s realtime, 0h:00m:53s cputime
-# Sat Jun  7 03:04:25 2025
+Process took 0h:00m:26s realtime, 0h:00m:25s cputime
+# Mon Jun 23 17:46:02 2025
 
 ###########################################################]

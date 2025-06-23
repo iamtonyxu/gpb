@@ -1,4 +1,4 @@
-# Sat Jun  7 03:03:29 2025
+# Mon Jun 23 17:45:35 2025
 
 
 Copyright (C) 1994-2023 Synopsys, Inc.
@@ -104,7 +104,7 @@ Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapse
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":157:4:157:5|Removing sequential instance ENABLE_SYNC (in view: work.PH_PWM_625_0_80_3_3_7(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
 @A: BN291 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":157:4:157:5|Boundary register ENABLE_SYNC (in view: work.PH_PWM_625_0_80_3_3_7(behavioral)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
 
-Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 268MB peak: 268MB)
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 269MB peak: 269MB)
 
 @N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\oscillator_counter.v":65:4:65:9|Found counter in view:work.OSCILLATOR_COUNTER(verilog) instance count_data[15:0] 
 Encoding state machine eeprom_cycle_state[0:11] (in view: work.serial_eeprom_if(rtl))
@@ -375,11 +375,11 @@ original code -> new code
    01000 -> 01000
    10000 -> 10000
 
-Starting factoring (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:05s; Memory used current: 324MB peak: 328MB)
+Starting factoring (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 324MB peak: 328MB)
 
 @W: BN132 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":265:4:265:9|Removing instance adder_decode_0.ILIM_DAC_RE_d1 because it is equivalent to instance dac_0.opb_dummy_re. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
-Finished factoring (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:07s; Memory used current: 352MB peak: 352MB)
+Finished factoring (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:05s; Memory used current: 352MB peak: 352MB)
 
 
 Available hyper_sources - for debug and ip models
@@ -404,7 +404,7 @@ NConnInternalConnection caching is on
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":265:4:265:9|Removing sequential instance adder_decode_0.GANTRY_96V_IF_RE_d1 (in view: work.top(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":265:4:265:9|Removing sequential instance adder_decode_0.PWR_IF_RE_d1 (in view: work.top(verilog)) because it does not drive other instances.
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:12s; CPU Time elapsed 0h:00m:11s; Memory used current: 340MB peak: 363MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:07s; Memory used current: 339MB peak: 363MB)
 
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":262:4:262:9|Removing sequential instance gantry_brk1_if_0.pwm_status[0] (in view: work.top(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":262:4:262:9|Removing sequential instance gantry_brk2_if_0.pwm_status[0] (in view: work.top(verilog)) because it does not drive other instances.
@@ -413,24 +413,24 @@ Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:12s; CP
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":262:4:262:9|Removing sequential instance gantry_brk2_ret_if_0.pwm_status[0] (in view: work.top(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":262:4:262:9|Removing sequential instance gantry_brk3_ret_if_0.pwm_status[0] (in view: work.top(verilog)) because it does not drive other instances.
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:13s; Memory used current: 340MB peak: 363MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:08s; Memory used current: 340MB peak: 363MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:24s; CPU Time elapsed 0h:00m:23s; Memory used current: 358MB peak: 363MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:14s; CPU Time elapsed 0h:00m:14s; Memory used current: 358MB peak: 363MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:25s; CPU Time elapsed 0h:00m:24s; Memory used current: 359MB peak: 363MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:15s; CPU Time elapsed 0h:00m:14s; Memory used current: 359MB peak: 363MB)
 
 
-Finished preparing to map (Real Time elapsed 0h:00m:31s; CPU Time elapsed 0h:00m:29s; Memory used current: 359MB peak: 363MB)
+Finished preparing to map (Real Time elapsed 0h:00m:17s; CPU Time elapsed 0h:00m:16s; Memory used current: 359MB peak: 363MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:34s; CPU Time elapsed 0h:00m:33s; Memory used current: 379MB peak: 402MB)
+Finished technology mapping (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:18s; Memory used current: 379MB peak: 402MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:00m:34s		    -1.23ns		6995 /      4888
-   2		0h:00m:34s		    -1.23ns		6917 /      4888
+   1		0h:00m:18s		    -1.23ns		6995 /      4888
+   2		0h:00m:18s		    -1.23ns		6917 /      4888
 @N: FX271 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":241:4:241:9|Replicating instance cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_ADDR[21] (in view: work.top(verilog)) with 5 loads 1 time to improve timing.
 @N: FX271 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":241:4:241:9|Replicating instance cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_ADDR[20] (in view: work.top(verilog)) with 5 loads 1 time to improve timing.
 @N: FX271 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":241:4:241:9|Replicating instance cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_ADDR[9] (in view: work.top(verilog)) with 9 loads 1 time to improve timing.
@@ -446,34 +446,34 @@ Timing driven replication report
 Added 16 Registers via timing driven replication
 Added 16 LUTs via timing driven replication
 
-   3		0h:00m:37s		    -0.60ns		6962 /      4904
-   4		0h:00m:37s		    -0.46ns		6963 /      4904
-   5		0h:00m:38s		    -0.21ns		6965 /      4904
-   6		0h:00m:38s		     0.42ns		6966 /      4904
-   7		0h:00m:38s		     0.44ns		6969 /      4904
+   3		0h:00m:19s		    -0.60ns		6962 /      4904
+   4		0h:00m:19s		    -0.46ns		6963 /      4904
+   5		0h:00m:19s		    -0.21ns		6965 /      4904
+   6		0h:00m:20s		     0.42ns		6966 /      4904
+   7		0h:00m:20s		     0.44ns		6969 /      4904
 
 Added 0 Buffers
 Added 0 Cells via replication
 	Added 0 Sequential Cells via replication
 	Added 0 Combinational Cells via replication
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:44s; CPU Time elapsed 0h:00m:42s; Memory used current: 384MB peak: 402MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:22s; CPU Time elapsed 0h:00m:21s; Memory used current: 384MB peak: 402MB)
 
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:44s; CPU Time elapsed 0h:00m:43s; Memory used current: 385MB peak: 402MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:22s; CPU Time elapsed 0h:00m:21s; Memory used current: 386MB peak: 402MB)
 
 
-Starting CDBProcessSetClockGroups... (Real Time elapsed 0h:00m:45s; CPU Time elapsed 0h:00m:43s; Memory used current: 386MB peak: 402MB)
+Starting CDBProcessSetClockGroups... (Real Time elapsed 0h:00m:22s; CPU Time elapsed 0h:00m:22s; Memory used current: 387MB peak: 402MB)
 
 
-Finished with CDBProcessSetClockGroups (Real Time elapsed 0h:00m:45s; CPU Time elapsed 0h:00m:44s; Memory used current: 386MB peak: 402MB)
+Finished with CDBProcessSetClockGroups (Real Time elapsed 0h:00m:22s; CPU Time elapsed 0h:00m:22s; Memory used current: 387MB peak: 402MB)
 
 
-Start Writing Netlists (Real Time elapsed 0h:00m:46s; CPU Time elapsed 0h:00m:44s; Memory used current: 297MB peak: 402MB)
+Start Writing Netlists (Real Time elapsed 0h:00m:23s; CPU Time elapsed 0h:00m:22s; Memory used current: 297MB peak: 402MB)
 
 Writing Analyst data base C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\synwork\top_m.srm
 
-Finished Writing Netlist Databases (Real Time elapsed 0h:00m:48s; CPU Time elapsed 0h:00m:46s; Memory used current: 363MB peak: 402MB)
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:23s; CPU Time elapsed 0h:00m:23s; Memory used current: 363MB peak: 402MB)
 
 Writing Verilog Simulation files
 @N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
@@ -491,13 +491,13 @@ Writing Verilog Simulation files
 @W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
 @W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
 
-Finished Writing Verilog Simulation files (Real Time elapsed 0h:00m:52s; CPU Time elapsed 0h:00m:51s; Memory used current: 364MB peak: 402MB)
+Finished Writing Verilog Simulation files (Real Time elapsed 0h:00m:25s; CPU Time elapsed 0h:00m:24s; Memory used current: 363MB peak: 402MB)
 
 
-Finished Writing Netlists (Real Time elapsed 0h:00m:53s; CPU Time elapsed 0h:00m:51s; Memory used current: 364MB peak: 402MB)
+Finished Writing Netlists (Real Time elapsed 0h:00m:25s; CPU Time elapsed 0h:00m:24s; Memory used current: 363MB peak: 402MB)
 
 
-Start final timing analysis (Real Time elapsed 0h:00m:54s; CPU Time elapsed 0h:00m:52s; Memory used current: 355MB peak: 402MB)
+Start final timing analysis (Real Time elapsed 0h:00m:25s; CPU Time elapsed 0h:00m:24s; Memory used current: 355MB peak: 402MB)
 
 @W: MT420 |Found inferred clock top|FPGA_100M_CLK with period 10.00ns. Please declare a user-defined clock on port FPGA_100M_CLK.
 @W: MT420 |Found inferred clock CLOCK_DIV_11_6|N_17_inferred_clock with period 10.00ns. Please declare a user-defined clock on net lift_mot_if_0.clk_16khz_div.N_17_9.
@@ -514,7 +514,7 @@ Start final timing analysis (Real Time elapsed 0h:00m:54s; CPU Time elapsed 0h:0
 
 
 ##### START OF TIMING REPORT #####[
-# Timing report written on Sat Jun  7 03:04:24 2025
+# Timing report written on Mon Jun 23 17:46:01 2025
 #
 
 
@@ -1835,10 +1835,10 @@ Path delay compensated for clock skew. Clock skew is added to clock-to-out value
 
 Timing exceptions that could not be applied
 
-Finished final timing analysis (Real Time elapsed 0h:00m:54s; CPU Time elapsed 0h:00m:52s; Memory used current: 359MB peak: 402MB)
+Finished final timing analysis (Real Time elapsed 0h:00m:25s; CPU Time elapsed 0h:00m:25s; Memory used current: 359MB peak: 402MB)
 
 
-Finished timing report (Real Time elapsed 0h:00m:54s; CPU Time elapsed 0h:00m:52s; Memory used current: 359MB peak: 402MB)
+Finished timing report (Real Time elapsed 0h:00m:25s; CPU Time elapsed 0h:00m:25s; Memory used current: 359MB peak: 402MB)
 
 ---------------------------------------
 Resource Usage Report for top 
@@ -1888,9 +1888,9 @@ Total number of LUTs after P&R:  6188 + 72 + 36 + 0 = 6296;
 
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:55s; CPU Time elapsed 0h:00m:53s; Memory used current: 156MB peak: 402MB)
+At Mapper Exit (Real Time elapsed 0h:00m:26s; CPU Time elapsed 0h:00m:25s; Memory used current: 157MB peak: 402MB)
 
-Process took 0h:00m:55s realtime, 0h:00m:53s cputime
-# Sat Jun  7 03:04:25 2025
+Process took 0h:00m:26s realtime, 0h:00m:25s cputime
+# Mon Jun 23 17:46:02 2025
 
 ###########################################################]
