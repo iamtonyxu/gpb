@@ -357,18 +357,28 @@ module top(
     assign GNT_PWM_PHB_LO = gantry_mot_pwm[3]; // PWM phase B low
     assign GNT_PWM_PHC_HI = gantry_mot_pwm[4]; // PWM phase C high
     assign GNT_PWM_PHC_LO = gantry_mot_pwm[5]; // PWM phase C low
+    
     assign GNT_BRK1_PWM_HI = gantry_brk1_pwm[0]; // Brake 1 PWM high
     assign GNT_BRK1_PWM_LO = gantry_brk1_pwm[1]; // Brake 1 PWM low
-    assign GNT_BRK1_RET_PWM_HI = gantry_brk1_ret_pwm[0]; // Brake 1 ret PWM high
-    assign GNT_BRK1_RET_PWM_LO = gantry_brk1_ret_pwm[1]; // Brake 1 ret PWM low
+    assign GNT_BRK1_RET_PWM_HI = gantry_brk1_pwm[1]; // Brake 1 ret PWM high
+    assign GNT_BRK1_RET_PWM_LO = gantry_brk1_pwm[0]; // Brake 1 ret PWM low
+    //assign GNT_BRK1_RET_PWM_HI = gantry_brk1_ret_pwm[0]; // Brake 1 ret PWM high
+    //assign GNT_BRK1_RET_PWM_LO = gantry_brk1_ret_pwm[1]; // Brake 1 ret PWM low
+    
     assign GNT_BRK2_PWM_HI = gantry_brk2_pwm[0]; // Brake 2 PWM high
     assign GNT_BRK2_PWM_LO = gantry_brk2_pwm[1]; // Brake 2 PWM low
-    assign GNT_BRK2_RET_PWM_HI = gantry_brk2_ret_pwm[0]; // Brake 2 ret PWM high
-    assign GNT_BRK2_RET_PWM_LO = gantry_brk2_ret_pwm[1]; // Brake 2 ret PWM low
+    assign GNT_BRK2_RET_PWM_HI = gantry_brk2_pwm[1]; // Brake 2 ret PWM high
+    assign GNT_BRK2_RET_PWM_LO = gantry_brk2_pwm[0]; // Brake 2 ret PWM low
+    //assign GNT_BRK2_RET_PWM_HI = gantry_brk2_ret_pwm[0]; // Brake 2 ret PWM high
+    //assign GNT_BRK2_RET_PWM_LO = gantry_brk2_ret_pwm[1]; // Brake 2 ret PWM low
+    
     assign GNT_BRK3_PWM_HI = gantry_brk3_pwm[0]; // Brake 3 PWM high
     assign GNT_BRK3_PWM_LO = gantry_brk3_pwm[1]; // Brake 3 PWM low
-    assign GNT_BRK3_RET_PWM_HI = gantry_brk3_ret_pwm[0]; // Brake 3 ret PWM high
-    assign GNT_BRK3_RET_PWM_LO = gantry_brk3_ret_pwm[1]; // Brake 3 ret PWM low
+    assign GNT_BRK3_RET_PWM_HI = gantry_brk3_pwm[1]; // Brake 3 ret PWM high
+    assign GNT_BRK3_RET_PWM_LO = gantry_brk3_pwm[0]; // Brake 3 ret PWM low
+    //assign GNT_BRK3_RET_PWM_HI = gantry_brk3_ret_pwm[0]; // Brake 3 ret PWM high
+    //assign GNT_BRK3_RET_PWM_LO = gantry_brk3_ret_pwm[1]; // Brake 3 ret PWM low
+    
     assign LFT_PWM_PHA_HI = lift_mot_pwm[0]; // Lift motor phase A high
     assign LFT_PWM_PHA_LO = lift_mot_pwm[1]; // Lift motor phase A low
     assign LFT_PWM_PHB_HI = lift_mot_pwm[2]; // Lift motor phase B high
