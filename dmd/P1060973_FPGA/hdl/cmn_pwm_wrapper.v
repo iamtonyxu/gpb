@@ -186,7 +186,7 @@ module cmn_pwm_wrapper
     * 1) pwm_start = 1 and pwm_stop = 0
     * pwm_start will trigger the state from ST_IDLE to ST_PWM when
     * With test_mode = 0: 
-    *   1) pwm_stop = 1
+    *   1) pwm_stop = 1; 2) over-current detected
     * With test_mode = 1:
     *   1) pwm_stop = 1;  or 2) after 100ms;  or 3) over-current detected 
     *
@@ -226,6 +226,12 @@ module cmn_pwm_wrapper
                             state <= ST_IDLE;
                         end else begin
                             state <= ST_PWM;
+                        end
+                    end else begin
+                        if (mot_over_curr_i || brk_over_curr_i) begin
+                            state <= ST_IDLE; // stop PWM generation if over-current detected
+                        end else begin
+                            state <= ST_PWM; // continue PWM generation
                         end
                     end
                 end

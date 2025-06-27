@@ -10,9 +10,9 @@ module top_tb;
     integer OSC_COUNTER_TEST       = 0;    // Enable Oscillator Counter Test
     integer GPIO_TEST              = 0;    // Enable GPIO Test
     integer MSSB_TEST              = 0;    // Enable MSSB Test
-    integer GANTRY_MOT_TEST        = 1;    // Enable Gantry Motor Test
+    integer GANTRY_MOT_TEST        = 0;    // Enable Gantry Motor Test
     integer LIFT_MOT_TEST          = 0;    // Enable Lift Motor Test
-    integer GANTRY_BRK_TEST        = 0;    // Enable Gantry Brake Test
+    integer GANTRY_BRK_TEST        = 1;    // Enable Gantry Brake Test
 
     // System Clock and Reset
     reg SYS_CLK;
@@ -736,7 +736,23 @@ end
             repeat(10) uart_recv(uart_tdata);
 
             // Wait for some time
-            #(1000000); // Wait for 1ms 
+            #(1000000); // Wait for 1ms
+
+            // Write motor start: ADDR_PWM_CONTROL, pwm_start = 1
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h10*ii); uart_send(8'h05);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h01); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Wait for some time
+            #(1000000); // Wait for 1ms
+
+            // Simulate over-current condition
+            OC_V_GNT_BRK_DRV = 1;
+            #50;
+            OC_V_GNT_BRK_DRV = 0;
+
+            // Wait for some time
+            #(1000000); // Wait for 1ms
 
             // OPB WRITE: Gantry Motor Write
             // Write to PWM configuration register, test_mode = 1, set_test_duration = 16'h10, 16*25 = 0.4ms
