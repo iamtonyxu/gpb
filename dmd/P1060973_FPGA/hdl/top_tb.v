@@ -748,11 +748,19 @@ end
 
             // Simulate over-current condition
             OC_V_GNT_BRK_DRV = 1;
-            #50;
+            #400; // Wait for 400us
             OC_V_GNT_BRK_DRV = 0;
 
             // Wait for some time
             #(1000000); // Wait for 1ms
+
+            // Write motor start: ADDR_PWM_CONTROL, pwm_stop = 1
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h10*ii); uart_send(8'h05);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h02); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Wait for some time
+            #(10000); // Wait for 10us
 
             // OPB WRITE: Gantry Motor Write
             // Write to PWM configuration register, test_mode = 1, set_test_duration = 16'h10, 16*25 = 0.4ms
