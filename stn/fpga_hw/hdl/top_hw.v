@@ -17,7 +17,7 @@
 //
 /////////////////////////////////////////////////////////////////////////////////////////////////// 
 
-//`timescale 1ns / 1ps
+`timescale 1ns / 100ps
 
 module top_hw(
     // Clock and Reset
@@ -26,14 +26,30 @@ module top_hw(
     input HDW_DEVRST_N,
 
     // External Input/Output Signals
-    // Input Signals
+
+    // APP Interface
     input APP_AUX_IO0,
     input APP_AUX_IO1,
     input APP_AUX_IO2,
     input APP_AUX_IO3,
     input APP_AUX_IO4,
     input APP_AUX_IO5,
+    
+    input HSSB_PMII_TX_DATA0,
+    input HSSB_PMII_TX_DATA1,
+    input HSSB_PMII_TX_DATA2,
+    input HSSB_PMII_TX_DATA3,
+    input HSSB_PMII_TX_EN,
 
+    input APP_FPGA_SPI1_CS_N,
+    input APP_FPGA_SPI0_CS_N,
+    input APP_FPGA_SPI0_MOSI,
+    input APP_FPGA_SPI1_MOSI,
+    input APP_FPGA_SPI_CLK,
+    input DISABLE_HDW_FPGA,
+    input APP_FPGA_TDO,
+
+    // GPIO Inputs
     input BMENLP_STATE,
     input PWRENLP_STATE,
     input MTNENLP_STATE,
@@ -42,12 +58,6 @@ module top_hw(
     input MTNENLP_DKB_STATE,
     input PENDANT_INST,
     input PENDANT_MEB_N,
-
-    input HSSB_PMII_TX_DATA0,
-    input HSSB_PMII_TX_DATA1,
-    input HSSB_PMII_TX_DATA2,
-    input HSSB_PMII_TX_DATA3,
-    input HSSB_PMII_TX_EN,
 
     input CMNR_STS_N,
     input CDOS_STS_N,
@@ -61,28 +71,12 @@ module top_hw(
     input LS_OSSD1_N,
     input LS_ERROR_N,
 
-    input APP_FPGA_SPI1_CS_N,
-    input APP_FPGA_SPI0_CS_N,
-    input APP_FPGA_SPI0_MOSI,
-    input APP_FPGA_SPI1_MOSI,
-    input APP_FPGA_SPI_CLK,
-
     input SPD_AC_DR_N,
     input EMO_GOOD_N,
 
-    input DISABLE_HDW_FPGA,
-    input APP_FPGA_TDO,
-
     // Output Signals
-    output BMENLP_LOC_CNTL,
-    output PWRENLP_LOC_CNTL,
-    output MTNENLP_LOC_CNTL,
-    
-    output PWRENLP_CNTL,
-    output KVBMENLP_CNTL,
-    output MTNENLP_CNTL,
-    output BMENLP_CNTL,
 
+    // APP Interface
     output HSSB_PMII_CLK,
     output HSSB_PMII_RESET_N,
     output HSSB_PMII_RX_DATA0,
@@ -90,15 +84,25 @@ module top_hw(
     output HSSB_PMII_RX_DATA2,
     output HSSB_PMII_RX_DATA3,
     output HSSB_PMII_RX_DV,
-
-    output HDW_GANT_ROT_EN,
-
+    
     output APP_FPGA_SPI0_MISO,
     output APP_FPGA_SPI1_MISO,
     output APP_FPGA_TMS,
     output APP_FPGA_TDI,
     output APP_FPGA_TCK,
     output APP_FPGA_TRST,
+
+    // GPIO Outputs
+    output BMENLP_LOC_CNTL,
+    output PWRENLP_LOC_CNTL,
+    output MTNENLP_LOC_CNTL,
+
+    output PWRENLP_CNTL,
+    output KVBMENLP_CNTL,
+    output MTNENLP_CNTL,
+    output BMENLP_CNTL,
+
+    output HDW_GANT_ROT_EN,
 
     // Internal Interface
     // LEDs and Status
@@ -154,13 +158,13 @@ module top_hw(
     input PHY_RMII_RX_DV,
 
     // DBUG Connector
-    input HDW_DBUG_SCLK, // UART-RXD
-    input HDW_DBUG_MISO,
+    input HDW_DBUG_SCLK, // J36-P1, UART-RXD
+    input HDW_DBUG_MISO, // J36-P3, CLKIN_2KHZ
     input HDW_DBUG_MOSI,
     input HDW_DBUG_CS_N,
     input HDW_DBUG_ACTIVE,
-    output HDW_DBUG_HEADER2, // UART-TXD
-    output HDW_DBUG_HEADER4,
+    output HDW_DBUG_HEADER2, // J36-P2, UART-TXD
+    output HDW_DBUG_HEADER4, // J36-P4, CLKOUT_2KHZ
     output HDW_DBUG_HEADER6,
     output HDW_DBUG_HEADER8,
     output HDW_DBUG_HEADER10,
@@ -200,16 +204,181 @@ module top_hw(
     output TP155
 );
 
-    wire CLK_100M, CLK_50M, RST_N;
+    // Clock and Reset Signals
+    wire clk_100m, clk_50m, rst_n;
+    // UART Signals
+    wire rxd, txd;
+    // Reference Clock Signals
+    wire clkin_2khz, clkout_2khz;
 
-    assign CLK_100M = HDW_FPGA_100M_CLK;
-    assign CLK_50M = HDW_FPGA_50M_CLK;
-    assign RST_N = HDW_DEVRST_N;
+    // Internal signals for cmd_server
+    wire opb_clk, opb_rst;
+    wire [31:0] opb_di, opb_do, opb_addr;
+    wire opb_re, opb_we;
 
+    // Signal declarations for ADDER_DECODER
+    wire [31:0] sp_in, clock_in, counter_in1, counter_in2, gpio_in, app_in, eep_in, phy_in;
+    wire sp_re, sp_we, clock_we, clock_re, counter_we1, counter_re1, counter_we2, counter_re2;
+    wire gpio_re, gpio_we, app_re, app_we, eep_re, eep_we, phy_re, phy_we;
+
+    // clock generation
+    wire pulse_200khz, pulse_20khz, pulse_2khz, pulse_1hz;
+
+    assign clk_100m = HDW_FPGA_100M_CLK;
+    assign clk_50m = HDW_FPGA_50M_CLK;
+    assign rst_n = HDW_DEVRST_N;
+
+    assign rxd = HDW_DBUG_SCLK; // J36-P1
+    assign clkin_2khz = HDW_DBUG_MISO; // J36
+    assign HDW_DBUG_HEADER2 = txd; // J36-P2
+    assign HDW_DBUG_HEADER4 = clkout_2khz; // J36-P4
+
+    // status LEDs
+    assign HDW_FPGA_DONE = 1'b1; // D33 ON after FPGA configuration
+    assign HDW_FPGA_STAT_LED1 = pulse_1hz; // D20 ON
+    assign HDW_FPGA_STAT_LED2 = pulse_1hz; // D21 ON
+
+    // PULSE_1HZ
+	CLOCK_DIV clkgen_2khz(
+		.CLK_DIV(16'd1000),
+		.CLK_IN(pulse_2khz),
+        .RST(~rst_n),
+		.CLK_OUT(pulse_1hz)
+	);
+
+// cmd_server instantiation
+cmd_server u_cmd_server(
+    .SYS_CLK    (clk_100m),
+    .SYS_RST    (~rst_n),
+    .PULSE_2KHZ (pulse_2khz),
+    .OPB_CLK    (opb_clk),
+    .OPB_RST    (opb_rst),
+    .OPB_DI     (opb_di),
+    .OPB_DO     (opb_do),
+    .OPB_ADDR   (opb_addr),
+    .OPB_RE     (opb_re),
+    .OPB_WE     (opb_we),
+    .UART_TXD   (txd),
+    .UART_RXD   (rxd)
+);
+
+// ADDER_DECODE instantiation
+ADDER_DECODE adder_decode_0(
+    .OPB_CLK     (opb_clk),
+    .OPB_RST     (opb_rst),
+    .OPB_RE      (opb_re),
+    .OPB_WE      (opb_we),
+    .OPB_ADDR    (opb_addr),
+    .OPB_DO      (opb_di),
+    
+    .SP_IN       (sp_in),
+    .CLOCK_IN    (clock_in),
+    .COUNTER_IN1  (counter_in1),
+    .COUNTER_IN2  (counter_in2),
+    .GPIO_IN     (gpio_in),
+    .APP_IN      (app_in),
+    .EEP_IN      (eep_in),
+    .PHY_IN      (phy_in),
+    
+    .SP_RE       (sp_re),
+    .SP_WE       (sp_we),
+    .CLOCK_WE    (clock_we),
+    .CLOCK_RE    (clock_re),
+    .COUNTER_WE1  (counter_we1),
+    .COUNTER_RE1  (counter_re1),
+    .COUNTER_WE2  (counter_we2),
+    .COUNTER_RE2  (counter_re2),
+    .GPIO_RE     (gpio_re),
+    .GPIO_WE     (gpio_we),
+    .APP_RE      (app_re),
+    .APP_WE      (app_we),
+    .EEP_RE      (eep_re),
+    .EEP_WE      (eep_we),
+    .PHY_RE      (phy_re),
+    .PHY_WE      (phy_we)
+);
+
+// SCRATCH_PAD_REGISTER instantiation
+SCRATCH_PAD_REGISTER #(
+    .VERSION(32'h1234_5678),
+    .ID(32'h0000_0050),
+    .DATE(32'h2025_0714)
+) scratch_pad_register_0 (
+    .OPB_CLK(opb_clk),
+    .OPB_RST(opb_rst),
+    .OPB_ADDR(opb_addr),
+    .SP_DI(opb_do),
+    .SP_RE(sp_re),
+    .SP_WE(sp_we),
+    .SP_DO(sp_in)
+);
+
+// ClkGen instantiation
+ClkGen u_clkgen(
+    .CLK_GEN_DO   (clock_in),
+    .CLK_GEN_DI   (opb_do),
+    .OPB_ADDR     (opb_addr),
+    .CLK_GEN_RE   (clock_re),
+    .CLK_GEN_WE   (clock_we),
+    .OPB_CLK      (opb_clk),
+    .OPB_RST      (opb_rst),
+    .SYSCLK       (clk_100m),
+    .PULSE_200KHZ (pulse_200khz),
+    .PULSE_20KHZ  (pulse_20khz),
+    .PULSE_2KHZ   (pulse_2khz),
+    .PULSE_100US  (),
+    .CLK_16KHZ    (),
+    .CLK_2MHZ     ()
+);
+assign clkout_2khz = pulse_2khz; // replacement of clkin_2khz, connect J36-P4 to P3
+
+// OSCILLATOR_COUNTER instantiation
+OSCILLATOR_COUNTER oscillator_counter_0(
+    .OPB_CLK    (opb_clk),
+    .OPB_RST    (opb_rst),
+    .OSC_CT_DO  (counter_in1),
+    .OSC_CT_DI  (opb_do),
+    .OPB_ADDR   (opb_addr),
+    .OSC_CT_RE  (counter_re1),
+    .OSC_CT_WE  (counter_we1),
+    .TEST_CLK   (clk_100m),
+    .REF_CLK    (clkin_2khz)
+);
+
+// OSCILLATOR_COUNTER instantiation
+OSCILLATOR_COUNTER oscillator_counter_1(
+    .OPB_CLK    (opb_clk),
+    .OPB_RST    (opb_rst),
+    .OSC_CT_DO  (counter_in2),
+    .OSC_CT_DI  (opb_do),
+    .OPB_ADDR   (opb_addr),
+    .OSC_CT_RE  (counter_re2),
+    .OSC_CT_WE  (counter_we2),
+    .TEST_CLK   (clk_50m),
+    .REF_CLK    (clkin_2khz)
+);
+
+// EEPROM_OPB_IF instantiation
+EEPROM_OPB_IF u_eeprom_opb_if(
+    .OPB_CLK    (opb_clk),
+    .OPB_RST    (opb_rst),
+    .EEP_DI     (opb_do),
+    .EEP_RE     (eep_re),
+    .EEP_WE     (eep_we),
+    .EEP_DO     (eep_in),
+    .EEP_CS_N   (HDW_EEP_CS_N),
+    .EEP_SI     (HDW_EEP_SDI),
+    .EEP_SCK    (HDW_EEP_SCLK),
+    .EEP_SO     (HDW_EEP_SDO)
+);
+
+
+//////////////////////////////////////////
+//////////////////////////////////////////
     // create a register and assign all inputs into this register on the rising edge of the clock
     reg [60:0] inputs_reg;
-    always @(posedge CLK_100M or negedge RST_N) begin
-        if (!RST_N) begin
+    always @(posedge clk_100m or negedge rst_n) begin
+        if (!rst_n) begin
             inputs_reg <= 0;
         end else begin
             inputs_reg <= {
@@ -264,61 +433,53 @@ module top_hw(
     assign APP_FPGA_TCK = 1'b0;
     assign APP_FPGA_TRST = 1'b0;
 
-    assign HDW_FPGA_DONE = 1'b1;
-    assign HDW_FPGA_STAT_LED1 = 1'b0;
-    assign HDW_FPGA_STAT_LED2 = 1'b0;
-
-    assign HDW_EEP_CS_N = 1'b1;
-    assign HDW_EEP_SDI = 1'b0;
-    assign HDW_EEP_SCLK = CLK_50M;
-
-    assign HDW_DBUG_HEADER2 = 1'b0;
-    assign HDW_DBUG_HEADER4 = 1'b0;
+    //assign HDW_DBUG_HEADER2 = 1'b0;
+    //assign HDW_DBUG_HEADER4 = 1'b0;
     assign HDW_DBUG_HEADER6 = 1'b0;
     assign HDW_DBUG_HEADER8 = 1'b0;
     assign HDW_DBUG_HEADER10 = 1'b0;
 
     // assign inputs_reg to test points bit by bit
-    assign TP85 = (&inputs_reg) ? 1'b1 : 1'b0;    // 1.8V Bank
-    assign TP86 = (inputs_reg == 2) ? 1'b1 : 1'b0;
-    assign TP88 = (inputs_reg == 3) ? 1'b1 : 1'b0;
-    assign TP89 = (inputs_reg == 4) ? 1'b1 : 1'b0;
-    assign TP91 = (inputs_reg == 5) ? 1'b1 : 1'b0;
-    assign TP92 = (inputs_reg == 6) ? 1'b1 : 1'b0;
-    assign TP93 = (inputs_reg == 7) ? 1'b1 : 1'b0;
-    assign TP94 = (inputs_reg == 8) ? 1'b1 : 1'b0;
-    assign TP95 = (inputs_reg == 9) ? 1'b1 : 1'b0;
-    assign TP96 = (inputs_reg == 10) ? 1'b1 : 1'b0;
-    assign TP97 = (inputs_reg == 11) ? 1'b1 : 1'b0;
-    assign TP98 = (inputs_reg == 12) ? 1'b1 : 1'b0;
-    assign TP100 = (inputs_reg == 13) ? 1'b1 : 1'b0;
-    assign TP101 = (inputs_reg == 14) ? 1'b1 : 1'b0;
-    assign TP102 = (inputs_reg == 15) ? 1'b1 : 1'b0;
-    assign TP140 = (inputs_reg == 16) ? 1'b1 : 1'b0;   // 3.3V Bank
-    assign TP141 = (inputs_reg == 17) ? 1'b1 : 1'b0;
-    assign TP142 = (inputs_reg == 18) ? 1'b1 : 1'b0;
-    assign TP143 = (inputs_reg == 19) ? 1'b1 : 1'b0;
-    assign TP144 = (inputs_reg == 20) ? 1'b1 : 1'b0;
-    assign TP145 = (inputs_reg == 21) ? 1'b1 : 1'b0;
-    assign TP146 = (inputs_reg == 22) ? 1'b1 : 1'b0;
-    assign TP147 = (inputs_reg == 23) ? 1'b1 : 1'b0;
-    assign TP148 = (inputs_reg == 24) ? 1'b1 : 1'b0;
-    assign TP149 = (inputs_reg == 25) ? 1'b1 : 1'b0;
-    assign TP150 = (inputs_reg == 26) ? 1'b1 : 1'b0;
-    assign TP151 = (inputs_reg == 27) ? 1'b1 : 1'b0;
-    assign TP152 = (inputs_reg == 28) ? 1'b1 : 1'b0;
-    assign TP153 = (inputs_reg == 29) ? 1'b1 : 1'b0;
-    assign TP154 = (inputs_reg == 30) ? 1'b1 : 1'b0;
-    assign TP155 = (inputs_reg == 31) ? 1'b1 : 1'b0;
+    assign TP85 = &inputs_reg;    // 1.8V Bank
+    assign TP86 = 1'b0;
+    assign TP88 = 1'b0;
+    assign TP89 = 1'b0;
+    assign TP91 = 1'b0;
+    assign TP92 = 1'b0;
+    assign TP93 = 1'b0;
+    assign TP94 = 1'b0;
+    assign TP95 = 1'b0;
+    assign TP96 = 1'b0;
+    assign TP97 = 1'b0;
+    assign TP98 = 1'b0;
+    assign TP100 = 1'b0;
+    assign TP101 = 1'b0;
+    assign TP102 = 1'b0;
+    assign TP140 = 1'b0;   // 3.3V Bank
+    assign TP141 = 1'b0;
+    assign TP142 = 1'b0;
+    assign TP143 = 1'b0;
+    assign TP144 = 1'b0;
+    assign TP145 = 1'b0;
+    assign TP146 = 1'b0;
+    assign TP147 = 1'b0;
+    assign TP148 = 1'b0;
+    assign TP149 = 1'b0;
+    assign TP150 = 1'b0;
+    assign TP151 = 1'b0;
+    assign TP152 = 1'b0;
+    assign TP153 = 1'b0;
+    assign TP154 = 1'b0;
+    assign TP155 = 1'b0;
 
-    assign PHY_RMII_TX_EN = (inputs_reg == 32) ? 1'b1 : 1'b0;
-    assign PHY_RMII_TX_DATA1 = (inputs_reg == 33) ? 1'b1 : 1'b0;
-    assign PHY_RMII_TX_DATA0 = (inputs_reg == 34) ? 1'b1 : 1'b0;
-    assign PHY_RST_N = (inputs_reg == 35) ? 1'b1 : 1'b0;
-    assign PHY_MDIO = (inputs_reg == 36) ? 1'b1 : 1'b0;
-    assign PHY_MDC = (inputs_reg == 37) ? 1'b1 : 1'b0;
-    assign ETH_LED1 = (inputs_reg == 38) ? 1'b1 : 1'b0;
-    assign ETH_LED2 = (inputs_reg == 39) ? 1'b1 : 1'b0;
+    assign PHY_RMII_TX_EN = 1'b0;
+    assign PHY_RMII_TX_DATA1 = 1'b0;
+    assign PHY_RMII_TX_DATA0 = 1'b0;
+    assign PHY_RST_N = 1'b0;
+    assign PHY_MDIO = 1'b0;
+    assign PHY_MDC = 1'b0;
+    assign ETH_LED1 = 1'b0;
+    assign ETH_LED2 = 1'b0;
 
 endmodule
 
