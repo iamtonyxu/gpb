@@ -162,6 +162,30 @@ initial begin
     uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
     repeat(10) uart_recv(uart_tdata);
     #1000000;    // Wait 1us
+
+   // Write Scratchpad Reg1
+    uart_send(8'h5A); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h03);
+    uart_send(8'h12); uart_send(8'h34); uart_send(8'h56); uart_send(8'h78); uart_send(8'hA5);
+    repeat(10) uart_recv(uart_tdata);
+    #1000000;    // Wait 1us
+
+    // Write Scratchpad Reg2
+    uart_send(8'h5A); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h04);
+    uart_send(8'h87); uart_send(8'h65); uart_send(8'h43); uart_send(8'h21); uart_send(8'hA5);
+    repeat(10) uart_recv(uart_tdata);
+    #1000000;    // Wait 1us
+
+   // Read Scratchpad Reg1
+    uart_send(8'h5B); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h03);
+    uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
+    repeat(10) uart_recv(uart_tdata);
+    #1000000;    // Wait 1us
+
+   // Read Scratchpad Reg2
+    uart_send(8'h5B); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h04);
+    uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
+    repeat(10) uart_recv(uart_tdata);
+    #1000000;    // Wait 1us
     end
 
     #1000000; // Run simulation for 1ms
