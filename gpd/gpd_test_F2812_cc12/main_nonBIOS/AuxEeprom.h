@@ -26,8 +26,7 @@ void AuxEepromWriteStatus(Uint16 Data);
 void AuxEepromWriteEnable(Uint16 State);
 void AuxEepromWriteByte(Uint16 Addr, Uint16 Data);
 Uint16 AuxEepromReadByte(Uint16 Addr);
-Uint16 AuxEepromTest(void);
-
+Uint16 AuxEepromTest(Byte *pDoneFlag);
 
 #ifdef __cplusplus
 }

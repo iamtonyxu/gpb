@@ -21,7 +21,7 @@
 #include "Eeprom.h"
 #include "Max7301.h"
 
-// �����ⲿ����(�����������F2812.cmd�ﶨ��)
+// 锟斤拷锟斤拷锟解部锟斤拷锟斤拷(锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟紽2812.cmd锟斤定锟斤拷)
 extern Uint16 RamfuncsLoadStart;
 extern Uint16 RamfuncsLoadEnd;
 extern Uint16 RamfuncsRunStart;
@@ -41,6 +41,7 @@ int main(void)
     Byte CpldRd;
     static int SpiMode = 0;
     static const Uint32 PcbModel = 100025092;   // Assembly Number of UUT
+    Byte doneFlag = 0; // eeprom test
 
     /*** CPU Initialization ***/
     InitSysCtrl();                      // Initialize the CPU (FILE: SysCtrl.c)
@@ -56,7 +57,7 @@ int main(void)
     IER = 0x0000;                       // Disable CPU interrupts
     IFR = 0x0000;                       // Clear interrupt flags
 
-    //��ʼ��PIE�ж�����������ʹ��ָ���жϷ����ӳ���ISR��
+    //锟斤拷始锟斤拷PIE锟叫讹拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷使锟斤拷指锟斤拷锟叫断凤拷锟斤拷锟接筹拷锟斤拷ISR锟斤拷
     InitPieVectTable();
 
     /*** Enable interrupts ***/
@@ -349,8 +350,9 @@ int main(void)
                 SpiMode = 2;
                 switch (RxMessage.sMsgStruct.Parm1) {
                     case 0: // Test external EEPROM ' F 1 0'
-                        TxMessage.sMsgStruct.Parm1 = AuxEepromTest(); // This test can take up to 3 minutes to complete
-                        TxMessage.sMsgStruct.Length = 1;
+                        TxMessage.sMsgStruct.Parm1 = AuxEepromTest(&doneFlag); // This test can take up to 3 minutes to complete
+                        TxMessage.sMsgStruct.Parm2 = doneFlag; // doneFlag
+                        TxMessage.sMsgStruct.Length = 2;
                         break;
                     case 1: // Read external EEPROM Status Register 'F 1 1'
                         TxMessage.sMsgStruct.Parm1 = AuxEepromReadStatus();
@@ -665,7 +667,7 @@ int main(void)
                     TxMessage.sMsgStruct.Length = 2;
                 break;
             default:    /* Unrecognized Command */
-                TxMessage.sMsgStruct.Cmd = '~'; // ‘~’ (0x7E) = Unrecognized Command
+                TxMessage.sMsgStruct.Cmd = '~'; // 鈥榽鈥� (0x7E) = Unrecognized Command
                 TxMessage.sMsgStruct.Length = 0;
         }
         DELAY_US(65535); /* Delay approximately 82mS */
