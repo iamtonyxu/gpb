@@ -51,8 +51,8 @@ module SCRATCH_PAD_REGISTER #(
             fpga_version <= VERSION;
             fpga_id      <= ID;
             build_date   <= DATE;
-            dev_sp1      <= 32'hcafebeef; 
-            dev_sp2      <= 32'hbaddadef;
+            dev_sp1      <= 32'h12345678; 
+            dev_sp2      <= 32'h9abcbeef;
         end
         else if (SP_WE & (OPB_ADDR[3:0] == `ADDR_SP1)) begin
             dev_sp1 <= SP_DI[31:0]; 

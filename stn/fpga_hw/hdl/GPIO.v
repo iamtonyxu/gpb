@@ -147,8 +147,7 @@ module GPIO(
     assign HDW_GANT_ROT_EN   = GPIO_OUT_REG[7];
 
     // Test Points
-    assign TP85              = TP_OUT_REG[0];
-    assign TP86              = TP_OUT_REG[1];
+    assign TP85              = TP_OUT_REG[0]; assign TP86              = TP_OUT_REG[1];
     assign TP88              = TP_OUT_REG[2];
     assign TP89              = TP_OUT_REG[3];
     assign TP91              = TP_OUT_REG[4];

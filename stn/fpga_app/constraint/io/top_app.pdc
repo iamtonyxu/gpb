@@ -27,7 +27,7 @@ set_io -port_name {LS_OSSD2_N}                  -pin_name B7     -fixed true -io
 set_io -port_name {LS_WARNING_N}                -pin_name E8     -fixed true -io_std LVCMOS33 -DIRECTION Input
 set_io -port_name {GANT_LOCK_PIN_STAT}          -pin_name D8     -fixed true -io_std LVCMOS33 -DIRECTION Input
 set_io -port_name {LS_RES_REQ_N}                -pin_name A6     -fixed true -io_std LVCMOS33 -DIRECTION Input
-set_io -port_name {APP_DEVRST_N}                -pin_name E9     -fixed true -io_std LVCMOS33 -DIRECTION Input
+set_io -port_name {APP_DEVRST_N}                -pin_name E9     -fixed true -io_std LVCMOS33 -DIRECTION Output
 set_io -port_name {PUMP_CLR_FLT_ON}             -pin_name D9     -fixed true -io_std LVCMOS33 -DIRECTION Output
 set_io -port_name {SYNC_LOC_MONITOR}            -pin_name B8     -fixed true -io_std LVCMOS33 -DIRECTION Input
 set_io -port_name {SYNC_LOC_OUT}                -pin_name A8     -fixed true -io_std LVCMOS33 -DIRECTION Output
@@ -94,9 +94,9 @@ set_io -port_name {CAN_RX4}                     -pin_name T6     -fixed true -io
 set_io -port_name {PRI_QUADR_A}                 -pin_name P4     -fixed true -io_std LVCMOS33 -DIRECTION Input
 set_io -port_name {PRI_QUADR_B}                 -pin_name R3     -fixed true -io_std LVCMOS33 -DIRECTION Input
 set_io -port_name {PRI_QUADR_I}                 -pin_name T2     -fixed true -io_std LVCMOS33 -DIRECTION Input
-set_io -port_name {RSTAT_LED1_N}                -pin_name R5     -fixed true -io_std LVCMOS33 -DIRECTION Output
-set_io -port_name {RSTAT_LED2_N}                -pin_name R4     -fixed true -io_std LVCMOS33 -DIRECTION Output
-set_io -port_name {RSTAT_LED3_N}                -pin_name P9     -fixed true -io_std LVCMOS33 -DIRECTION Output
+set_io -port_name {STAT_LED1_N}                 -pin_name R5     -fixed true -io_std LVCMOS33 -DIRECTION Output
+set_io -port_name {STAT_LED2_N}                 -pin_name R4     -fixed true -io_std LVCMOS33 -DIRECTION Output
+set_io -port_name {STAT_LED3_N}                 -pin_name P9     -fixed true -io_std LVCMOS33 -DIRECTION Output
 set_io -port_name {HEARTBEAT_LED_N}             -pin_name R8     -fixed true -io_std LVCMOS33 -DIRECTION Output
 set_io -port_name {ENCODER_FUSE_ON_N}           -pin_name P6     -fixed true -io_std LVCMOS33 -DIRECTION Output
 set_io -port_name {FPGA_DONE}                   -pin_name R6     -fixed true -io_std LVCMOS33 -DIRECTION Output
@@ -164,8 +164,8 @@ set_io -port_name {APP_DBUG_HEADER10}           -pin_name Y5     -fixed true -io
 set_io -port_name {APP_DBUG_CS_N}               -pin_name Y3     -fixed true -io_std LVCMOS18 -DIRECTION Output
 set_io -port_name {APP_DBUG_ACTIVE}             -pin_name AA3    -fixed true -io_std LVCMOS18 -DIRECTION Output
 set_io -port_name {APP_DBUG_MOSI}               -pin_name V5     -fixed true -io_std LVCMOS18 -DIRECTION Output
-set_io -port_name {APP_DBUG_MISO}               -pin_name W4     -fixed true -io_std LVCMOS18 -DIRECTION Output
-set_io -port_name {APP_DBUG_SCLK}               -pin_name Y1     -fixed true -io_std LVCMOS18 -DIRECTION Output
+set_io -port_name {APP_DBUG_MISO}               -pin_name W4     -fixed true -io_std LVCMOS18 -DIRECTION Input
+set_io -port_name {APP_DBUG_SCLK}               -pin_name Y1     -fixed true -io_std LVCMOS18 -DIRECTION Input
 set_io -port_name {TP207}                       -pin_name U3     -fixed true -io_std LVCMOS18 -DIRECTION Input
 set_io -port_name {TP205}                       -pin_name U2     -fixed true -io_std LVCMOS18 -DIRECTION Input
 set_io -port_name {TP206}                       -pin_name U5     -fixed true -io_std LVCMOS18 -DIRECTION Input
@@ -192,3 +192,8 @@ set_io -port_name {TP115}                       -pin_name R12    -fixed true -io
 set_io -port_name {TP114}                       -pin_name T11    -fixed true -io_std LVCMOS18 -DIRECTION Input
 set_io -port_name {TP117}                       -pin_name V14    -fixed true -io_std LVCMOS18 -DIRECTION Input
 set_io -port_name {TP116}                       -pin_name U14    -fixed true -io_std LVCMOS18 -DIRECTION Input
+#set_io -port_name {APP_FPGA_TMS}                -pin_name F7     -fixed true -io_std LVCMOS33 -DIRECTION Input
+#set_io -port_name {APP_FPGA_TDI}                -pin_name G8     -fixed true -io_std LVCMOS33 -DIRECTION Input
+#set_io -port_name {APP_FPGA_TCK}                -pin_name F8     -fixed true -io_std LVCMOS33 -DIRECTION Input
+#set_io -port_name {APP_FPGA_TRST}               -pin_name G7     -fixed true -io_std LVCMOS33 -DIRECTION Input
+#set_io -port_name {APP_FPGA_TDO}                -pin_name F6     -fixed true -io_std LVCMOS33 -DIRECTION Output
