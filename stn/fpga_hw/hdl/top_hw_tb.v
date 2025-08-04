@@ -9,10 +9,9 @@ module top_hw_tb;
 integer SCRATCHPAD_TEST        = 1;    // Enable Scratchpad Test
 integer COUNTER1_TEST          = 0;    // Enable COUNTER1 Test
 integer COUNTER2_TEST          = 0;    // Enable COUNTER2 Test
-integer GPIO_TEST              = 0;    // Enable GPIO Test
+integer GPIO_TEST              = 1;    // Enable GPIO Test
 integer APP_TEST               = 0;    // Enable APP Test
 integer EEPROM_TEST            = 0;    // Enable EEPROM Test
-integer OSC_COUNTER_TEST       = 0;    // Enable Oscillator Counter Test
 integer PHY_TEST               = 0;    // Enable PHY Test
 
 // Clock and reset signals
@@ -120,79 +119,239 @@ task uart_recv;
     end
 endtask
 
-// Clock generation
+
+// UART Receive data Task
+task uart_recv_data_display;
+    reg [7:0] uart_data_array [0:9];
+    integer j;
+    begin
+        for (j = 0; j < 10; j = j + 1) begin
+            uart_recv(uart_tdata);
+            uart_data_array[j] = uart_tdata;
+        end
+        // Print all received data at once
+        $display("Received: %h %h %h %h %h %h %h %h %h %h", 
+                 uart_data_array[0], uart_data_array[1], uart_data_array[2], uart_data_array[3], uart_data_array[4],
+                 uart_data_array[5], uart_data_array[6], uart_data_array[7], uart_data_array[8], uart_data_array[9]);
+    end
+endtask
+
+// OPB Write Task
+task opb_write;
+    input [31:0] addr;    // Address to write to
+    input [31:0] data;    // Data to write
+    begin
+        // Set OPB address and data
+        uart_send(8'h5A); // Start byte for write
+        uart_send(addr[31:24]); uart_send(addr[23:16]); uart_send(addr[15:8]); uart_send(addr[7:0]);
+        uart_send(data[31:24]); uart_send(data[23:16]); uart_send(data[15:8]); uart_send(data[7:0]);
+        uart_send(8'hA5); // Send end byte
+    end
+endtask
+
+// OPB Read Task
+task opb_read;
+    input [31:0] addr;    // Address to read from
+    begin
+        // Set OPB address for read
+        uart_send(8'h5B); // Start byte for read
+        uart_send(addr[31:24]); uart_send(addr[23:16]); uart_send(addr[15:8]); uart_send(addr[7:0]);
+        uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); // Padding bytes
+        uart_send(8'hA4); // Send end byte
+    end
+endtask
+
+// task to set GPIO and Switch Inputs
+task set_gpio_switch_inputs;
+    input [31:0] gpio_inputs; // GPIO inputs
+    input [31:0] switch_inputs; // Switch inputs
+    begin
+        // Set GPIO inputs
+        BMENLP_STATE = gpio_inputs[0];
+        PWRENLP_STATE = gpio_inputs[1];
+        MTNENLP_STATE = gpio_inputs[2];
+        KVBMENLP_STATE = gpio_inputs[3];
+        MTNENLP_CCH_STATE = gpio_inputs[4];
+        MTNENLP_DKB_STATE = gpio_inputs[5];
+        PENDANT_INST = gpio_inputs[6];
+        PENDANT_MEB_N = gpio_inputs[7];
+        CMNR_STS_N = gpio_inputs[8];
+        CDOS_STS_N = gpio_inputs[9];
+        DC_MAIN_DOOR_SW_N = gpio_inputs[10];
+        NEUTRON_DR_SW1_N = gpio_inputs[11];
+        NEUTRON_DR_SW2_N = gpio_inputs[12];
+        CSPARESW1_N = gpio_inputs[13];
+        CSPARESW2_N = gpio_inputs[14];
+        LS_OSSD1_N = gpio_inputs[15];
+        LS_ERROR_N = gpio_inputs[16];
+        SPD_AC_DR_N = gpio_inputs[17];
+        EMO_GOOD_N = gpio_inputs[18];
+
+        // Set Switch inputs
+        MEL_SW_CONFIG0 = switch_inputs[0];
+        MEL_SW_CONFIG1 = switch_inputs[1];
+        MEL_SW_CONFIG2 = switch_inputs[2];
+        MEL_SW_CONFIG3 = switch_inputs[3];
+        MEL_SW_CONFIG4 = switch_inputs[4];
+        MEL_SW_CONFIG5 = switch_inputs[5];
+        MEL_SW_CONFIG6 = switch_inputs[6];
+        MEL_SW_CONFIG7 = switch_inputs[7];
+        BEL_SW_CONFIG0 = switch_inputs[8];
+        BEL_SW_CONFIG1 = switch_inputs[9];
+        BEL_SW_CONFIG2 = switch_inputs[10];
+        BEL_SW_CONFIG3 = switch_inputs[11];
+        BEL_SW_CONFIG4 = switch_inputs[12];
+        BEL_SW_CONFIG5 = switch_inputs[13];
+        BEL_SW_CONFIG6 = switch_inputs[14];
+        BEL_SW_CONFIG7 = switch_inputs[15];
+        KVBEL_SW_CONFIG0 = switch_inputs[16];
+        KVBEL_SW_CONFIG1 = switch_inputs[17];
+        KVBEL_SW_CONFIG2 = switch_inputs[18];
+        KVBEL_SW_CONFIG3 = switch_inputs[19];
+        KVBEL_SW_CONFIG4 = switch_inputs[20];
+        KVBEL_SW_CONFIG5 = switch_inputs[21];
+        KVBEL_SW_CONFIG6 = switch_inputs[22];
+        KVBEL_SW_CONFIG7 = switch_inputs[23];
+    end
+endtask
+
+// Clock generation: 100MHz
 initial begin
     HDW_FPGA_100M_CLK = 0;
     forever #(`CLK100M_PERIOD/2) HDW_FPGA_100M_CLK = ~HDW_FPGA_100M_CLK; // 100MHz
 end
 
+// Clock generation: 50MHz
 initial begin
     HDW_FPGA_50M_CLK = 0;
     forever #(`CLK50M_PERIOD/2) HDW_FPGA_50M_CLK = ~HDW_FPGA_50M_CLK; // 50MHz
 end
 
-// Reset generation
+// Reset signal generation
 initial begin
     HDW_DEVRST_N = 0;
     #100000;
     HDW_DEVRST_N = 1;
 end
 
-
-// Test stimulus
+// Main testbench
 initial begin
-    // wait for HDW_RESET_N goes to 1
-    wait(HDW_DEVRST_N == 1);
+    // Initialize inputs
+    set_gpio_switch_inputs(32'h00000000, 32'h00000000);
+
+    // Wait for reset to be released
+    wait (HDW_DEVRST_N == 1);
+    $display("test start... at time %0t us", $time/1000000);
 
     if(SCRATCHPAD_TEST==1) begin
     // Read FPGA VERSION
-    uart_send(8'h5B); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00);
-    uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
-    repeat(10) uart_recv(uart_tdata);
+    opb_read(32'h00000000);
+    $display("FPGA VERSION read at time %0t us", $time/1000000);
+    uart_recv_data_display();
     #1000000;    // Wait 1us
 
    // Read FPGA ID
-    uart_send(8'h5B); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h01);
-    uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
-    repeat(10) uart_recv(uart_tdata);
+    opb_read(32'h00000001);
+    $display("FPGA ID read at time %0t us", $time/1000000);
+    uart_recv_data_display();
     #1000000;    // Wait 1us
 
    // Read BUILD DATE
-    uart_send(8'h5B); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h02);
-    uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
-    repeat(10) uart_recv(uart_tdata);
+    opb_read(32'h00000002);
+    $display("FPGA BUILD DATE read at time %0t us", $time/1000000);
+    uart_recv_data_display();
     #1000000;    // Wait 1us
 
    // Write Scratchpad Reg1
-    uart_send(8'h5A); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h03);
-    uart_send(8'h12); uart_send(8'h34); uart_send(8'h56); uart_send(8'h78); uart_send(8'hA5);
-    repeat(10) uart_recv(uart_tdata);
+   opb_write(32'h00000003, 32'h12345678);
+    $display("Scratchpad Reg1 written at time %0t us", $time/1000000);
+   uart_recv_data_display();
+   #1000000;    // Wait 1us
+
+   // Read Scratchpad Reg1
+    opb_read(32'h00000003);
+    $display("Scratchpad Reg1 read at time %0t us", $time/1000000);
+    uart_recv_data_display();
     #1000000;    // Wait 1us
 
     // Write Scratchpad Reg2
-    uart_send(8'h5A); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h04);
-    uart_send(8'h87); uart_send(8'h65); uart_send(8'h43); uart_send(8'h21); uart_send(8'hA5);
-    repeat(10) uart_recv(uart_tdata);
-    #1000000;    // Wait 1us
-
-   // Read Scratchpad Reg1
-    uart_send(8'h5B); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h03);
-    uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
-    repeat(10) uart_recv(uart_tdata);
+    opb_write(32'h00000004, 32'h87654321);
+    $display("Scratchpad Reg2 written at time %0t us", $time/1000000);
+    uart_recv_data_display();
     #1000000;    // Wait 1us
 
    // Read Scratchpad Reg2
-    uart_send(8'h5B); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h04);
-    uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'hA4);
-    repeat(10) uart_recv(uart_tdata);
+    opb_read(32'h00000004);
+    $display("Scratchpad Reg2 read at time %0t us", $time/1000000);
+    uart_recv_data_display();
     #1000000;    // Wait 1us
+    end
+
+    if (GPIO_TEST == 1) begin
+        // GPIO Test
+        // Set GPIO and Switch inputs to 0
+        $display("Setting GPIO and Switch inputs to 0 at time %0t us", $time/1000000);
+        set_gpio_switch_inputs(32'h00000000, 32'h00000000);
+
+        // Read GPIO_IN
+        opb_read(32'h00030000);
+        $display("GPIO_IN read at time %0t us", $time/1000000);
+        uart_recv_data_display();
+        #1000000; // Wait 1us
+
+        // Read SWITCH_IN
+        opb_read(32'h00030001);
+        $display("SWITCH_IN read at time %0t us", $time/1000000);
+        uart_recv_data_display();
+        #1000000; // Wait 1us
+
+        // Set GPIO and Switch inputs to 1
+        $display("Setting GPIO and Switch inputs to 1 at time %0t us", $time/1000000);
+        set_gpio_switch_inputs(32'hFFFFFFFF, 32'hFFFFFFFF);
+
+        // Read GPIO_IN
+        opb_read(32'h00030000);
+        $display("GPIO_IN read at time %0t us", $time/1000000);
+        uart_recv_data_display();
+        #1000000; // Wait 1us
+
+        // Read SWITCH_IN
+        opb_read(32'h00030001);
+        $display("SWITCH_IN read at time %0t us", $time/1000000);
+        uart_recv_data_display();
+        #1000000; // Wait 1us
+
+        // Write GPIO_OUT
+        $display("Writing GPIO_OUT to 0xFFFFFFFF at time %0t us", $time/1000000);
+        opb_write(32'h00030002, 32'hFFFFFFFF);
+        $display("GPIO_OUT written at time %0t us", $time/1000000);
+        uart_recv_data_display();
+        #1000000; // Wait 1us
+
+        // Read GPIO_OUT
+        opb_read(32'h00030002);
+        $display("GPIO_OUT read at time %0t us", $time/1000000);
+        uart_recv_data_display();
+        #1000000; // Wait 1us
+
+        // Write TP_OUT
+        $display("Writing TP_OUT to 0xFFFFFFFF at time %0t us", $time/1000000);
+        opb_write(32'h00030003, 32'hFFFFFFFF);
+        $display("TP_OUT written at time %0t us", $time/1000000);
+        uart_recv_data_display();
+        #1000000; // Wait 1us
+
+        // Read TP_OUT
+        opb_read(32'h00030003);
+        $display("TP_OUT read at time %0t us", $time/1000000);
+        uart_recv_data_display();
+        #1000000; // Wait 1us
     end
 
     #1000000; // Run simulation for 1ms
     $display("test end...");
     $stop;
 end
-
 
 // DUT instantiation
 top_hw dut (
