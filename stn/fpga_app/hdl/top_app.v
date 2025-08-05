@@ -494,6 +494,7 @@ module top_app(
         .DAC_SDO(DAC_SDO)
     );
 
+/*
     // RS422 Interface
     RS422_TEST_IF u_rs422 (
         .OPB_CLK(opb_clk),
@@ -522,6 +523,12 @@ module top_app(
         .ENCODER_TX1(ENCODER_TX1),
         .ENCODER_TX2(ENCODER_TX2)
     );
+*/
+assign SYNC_LOC_OUT = 0;
+assign SYNC_OUT = 0;
+assign ST_DMD_MSSB_TX = 0;
+assign ENCODER_TX1 = 0;
+assign ENCODER_TX2 = 0;
 
     // APP to Hardware Interface
     APP2HW_IF u_app2hw_if (
@@ -601,15 +608,15 @@ module top_app(
         .GPIO_WE(gpio_we),
 
         // GPIO Inputs
-        .BMPLS(1'b0), // Not used, kept for compatibility
+        .BMPLS(BMPLS), // Don't care, RS422-IN
         .CCW_LIMIT_STAT(CCW_LIMIT_STAT),
         .CW_LIMIT_STAT(CW_LIMIT_STAT),
         .LS_OSSD2_N(LS_OSSD2_N),
         .LS_WARNING_N(LS_WARNING_N),
         .GANT_LOCK_PIN_STAT(GANT_LOCK_PIN_STAT),
         .LS_RES_REQ_N(LS_RES_REQ_N),
-        .SYNC_LOC_MONITOR(1'b0), // Not used, kept for compatibility
-        .SYNC_MONITOR(1'b0), // Not used, kept for compatibility
+        .SYNC_LOC_MONITOR(SYNC_LOC_MONITOR), // Don't care, RS422-IN
+        .SYNC_MONITOR(SYNC_MONITOR), // Don't care, RS422-IN
         .GROTPWR_STS_N(GROTPWR_STS_N),
         .BMENLP_LOC_SINK_STATE(BMENLP_LOC_SINK_STATE),
         .BMENLP_LOC_SOURCE_STATE(BMENLP_LOC_SOURCE_STATE),
