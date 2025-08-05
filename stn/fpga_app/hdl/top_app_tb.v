@@ -226,10 +226,10 @@ task uart_send;
         // Transmit the UART frame
         for (i = 0; i < 10; i = i + 1) begin
             RXD = uart_frame[i];    // Send each bit
-            #baud_delay;                 // Wait for one baud period
+            #baud_delay;            // Wait for one baud period
         end
         RXD = 1'b1;                // Set to idle state (high) after transmission
-        #20;                            // Wait for a short time before sending the next byte
+        #20;                       // Wait for a short time before sending the next byte
     end
 endtask
 
@@ -777,6 +777,35 @@ endtask
             $display("GPIO_IN2 read at time %0t us", $time/1000000);
             uart_recv_data_display();
             #1000000; // Wait 1us
+
+            // Write GPIO_OUT1 as 0x00000000
+            $display("Writing GPIO_OUT1 to 0x00000000 at time %0t us", $time/1000000);
+            opb_write(32'h00030002, 32'h00000000);
+            $display("GPIO_OUT1 written at time %0t us", $time/1000000);
+            uart_recv_data_display();
+            #1000000; // Wait 1us
+
+            // Write GPIO_OUT1 as 0xFFFFFFFF
+            $display("Writing GPIO_OUT1 to 0xFFFFFFFF at time %0t us", $time/1000000);
+            opb_write(32'h00030002, 32'hFFFFFFFF);
+            $display("GPIO_OUT1 written at time %0t us", $time/1000000);
+            uart_recv_data_display();
+            #1000000; // Wait 1us
+
+            // Write GPIO_OUT2 as 0x00000000
+            $display("Writing GPIO_OUT2 to 0x00000000 at time %0t us", $time/1000000);
+            opb_write(32'h00030003, 32'h00000000);
+            $display("GPIO_OUT2 written at time %0t us", $time/1000000);
+            uart_recv_data_display();
+            #1000000; // Wait 1us
+
+            // Write GPIO_OUT2 as 0xFFFFFFFF
+            $display("Writing GPIO_OUT2 to 0xFFFFFFFF at time %0t us", $time/1000000);
+            opb_write(32'h00030003, 32'hFFFFFFFF);
+            $display("GPIO_OUT2 written at time %0t us", $time/1000000);
+            uart_recv_data_display();
+            #1000000; // Wait 1us
+
             $display("GPIO tests completed");
 
         end
