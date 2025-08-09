@@ -18,11 +18,11 @@ module top_app_tb;
     // Test Case Configuration
     integer SCRATCHPAD_TEST        = 0;    // Enable Scratchpad Test
     integer COUNTER_TEST           = 0;    // Enable COUNTER Test
-    integer GPIO_TEST              = 1;    // Enable GPIO Test
+    integer GPIO_TEST              = 0;    // Enable GPIO Test
     integer HW_TEST                = 0;    // Enable HW Test
     integer ADC_TEST               = 0;    // Enable ADC Test
     integer DAC_TEST               = 0;    // Enable DAC Test
-    integer RS422_TEST             = 0;    // Enable RS422 Test
+    integer RS422_TEST             = 1;    // Enable RS422 Test
     integer CAN_TEST               = 0;    // Enable CAN Test
 
     //=========================================================================
@@ -45,15 +45,15 @@ module top_app_tb;
     reg         DAC_SDO;
 
     // GPIO Inputs
-    reg         BMPLS;
+    wire        BMPLS;
     reg         CCW_LIMIT_STAT;
     reg         CW_LIMIT_STAT;
     reg         LS_OSSD2_N;
     reg         LS_WARNING_N;
     reg         GANT_LOCK_PIN_STAT;
     reg         LS_RES_REQ_N;
-    reg         SYNC_LOC_MONITOR;
-    reg         SYNC_MONITOR;
+    wire        SYNC_LOC_MONITOR;
+    wire        SYNC_MONITOR;
     reg         GROTPWR_STS_N;
     reg         BMENLP_LOC_SINK_STATE;
     reg         BMENLP_LOC_SOURCE_STATE;
@@ -179,8 +179,8 @@ module top_app_tb;
     reg         TP115, TP114, TP117, TP116;
 
     // RS422-IN
-    reg         DMD_MSSB_RX, ENCODER_RX1, ENCODER_RX2;
-    reg         PRI_QUADR_A, PRI_QUADR_B, PRI_QUADR_I;
+    wire        DMD_MSSB_RX, ENCODER_RX1, ENCODER_RX2;
+    wire        PRI_QUADR_A, PRI_QUADR_B, PRI_QUADR_I;
 
     // RS422-OUT
     wire        SYNC_LOC_OUT, SYNC_OUT, DMD_MSSB_TX;
@@ -309,15 +309,15 @@ input [31:0] gpio_in1_values; // GPIO_IN1 register (bits 0-31)
 input [31:0] gpio_in2_values; // GPIO_IN2 register (bits 32-63)
 begin
     // Set GPIO_IN1 register signals (first 32 GPIO inputs)
-    BMPLS = gpio_in1_values[0];
+    //BMPLS = gpio_in1_values[0];
     CCW_LIMIT_STAT = gpio_in1_values[1];
     CW_LIMIT_STAT = gpio_in1_values[2];
     LS_OSSD2_N = gpio_in1_values[3];
     LS_WARNING_N = gpio_in1_values[4];
     GANT_LOCK_PIN_STAT = gpio_in1_values[5];
     LS_RES_REQ_N = gpio_in1_values[6];
-    SYNC_LOC_MONITOR = gpio_in1_values[7];
-    SYNC_MONITOR = gpio_in1_values[8];
+    //SYNC_LOC_MONITOR = gpio_in1_values[7];
+    //SYNC_MONITOR = gpio_in1_values[8];
     GROTPWR_STS_N = gpio_in1_values[9];
     BMENLP_LOC_SINK_STATE = gpio_in1_values[10];
     BMENLP_LOC_SOURCE_STATE = gpio_in1_values[11];
@@ -439,17 +439,6 @@ endtask
         HSSB_PMII_RX_DV = 1'b0;
         HSSB_PMII_RX_DATA0 = 1'b0; HSSB_PMII_RX_DATA1 = 1'b0;
         HSSB_PMII_RX_DATA2 = 1'b0; HSSB_PMII_RX_DATA3 = 1'b0;
-
-        // RS422 inputs
-        SYNC_LOC_MONITOR = 1'b0;
-        SYNC_MONITOR = 1'b0;
-        DMD_MSSB_RX = 1'b0;
-        ENCODER_RX1 = 1'b0;
-        ENCODER_RX2 = 1'b0;
-        BMPLS = 1'b0;
-        PRI_QUADR_A = 1'b0;
-        PRI_QUADR_B = 1'b0;
-        PRI_QUADR_I = 1'b0;
 
         // Initialize all test points to 0
         TP134 = 1'b0; TP133 = 1'b0;
@@ -573,7 +562,7 @@ endtask
         .TP198(TP198), .TP195(TP195), .TP202(TP202), .TP196(TP196),
 
         // DMD MSSB Interface
-        .ST_DMD_MSSB_TX(ST_DMD_MSSB_TX),
+        .ST_DMD_MSSB_TX(DMD_MSSB_TX),
         .DMD_MSSB_RX(DMD_MSSB_RX),
 
         // Additional Test Points
@@ -852,23 +841,115 @@ endtask
         end
     endtask
 
+ // Loopback for testing
+assign SYNC_LOC_MONITOR = SYNC_OUT;
+assign SYNC_MONITOR = SYNC_OUT;
+assign DMD_MSSB_RX = SYNC_OUT;
+assign ENCODER_RX1 = ENCODER_TX1;
+assign ENCODER_RX2 = ENCODER_TX2;
+assign BMPLS = DMD_MSSB_TX;
+assign PRI_QUADR_A = SYNC_OUT;
+assign PRI_QUADR_B = SYNC_LOC_OUT;
+assign PRI_QUADR_I = DMD_MSSB_TX;
+
+
     task test_rs422_functionality;
         begin
             $display("Testing RS422 functionality...");
 
-            // Simulate RS422 inputs
-            SYNC_LOC_MONITOR = 1'b0;
-            SYNC_MONITOR = 1'b0;
-            DMD_MSSB_RX = 1'b0;
-            ENCODER_RX1 = 1'b0;
-            ENCODER_RX2 = 1'b0;
-            BMPLS = 1'b0;
-            PRI_QUADR_A = 1'b0;
-            PRI_QUADR_B = 1'b0;
-            PRI_QUADR_I = 1'b0;
-            #100;
+        // Test 1: Write and read test pattern
+        $display("\n=== Test 1: Register Read/Write Test ===");
+        $display("RS422 Test Pattern write to 0xA5 at time %0t us", $time/1000000);
+        opb_write(`RS422_ADDR + 8'h00, 32'h000000A5); // TEST_PATTERN_ADDR = 0xA5
+        uart_recv_data_display();
+        #1000000; // Wait 1us
 
-            $display("RS422 tests completed");
+        // read test pattern
+        opb_read(`RS422_ADDR + 8'h00);
+        $display("RS422 test pattern read at time %0t us", $time/1000000);
+        uart_recv_data_display();
+        #1000000;    // Wait 1us
+
+        // Test 2: Write and read transmission bytes
+        $display("\n=== Test 2: RS422 Transmission Bytes ===");
+        $display("RS422 Trans Bytes write to 0xA5 at time %0t us", $time/1000000);
+        opb_write(`RS422_ADDR + 8'h01, 32'h12345678);
+        uart_recv_data_display();
+        #1000000; // Wait 1us
+
+        // read Trans Bytes
+        opb_read(`RS422_ADDR + 8'h01);
+        $display("RS422 Trans Bytes read at time %0t us", $time/1000000);
+        uart_recv_data_display();
+        #1000000;    // Wait 1us
+
+        // Test 3: Control register functionality
+        $display("\n=== Test 3: Control Register Functionality ===");
+        $display("RS422 Control Reg write to 0x0F at time %0t us", $time/1000000);
+        opb_write(`RS422_ADDR + 8'h02, 32'h0000000F);
+        uart_recv_data_display();
+        #1000000; // Wait 1us
+
+        // read Control Reg
+        opb_read(`RS422_ADDR + 8'h02);
+        $display("RS422 Control Reg read at time %0t us", $time/1000000);
+        uart_recv_data_display();
+        #1000000;    // Wait 1us
+
+        // Test 4: Start transmission and loopback tx to rx
+        $display("\n=== Test 4: RS422 Transmission Start ===");
+        // Set test pattern to 0x5A (alternating bits)
+        opb_write(`RS422_ADDR + 8'h00, 32'h0000005A); // TEST_PATTERN_ADDR
+        uart_recv_data_display();
+        #1000000;    // Wait 1us
+
+        // Set transmission count to 5 bytes
+        opb_write(`RS422_ADDR + 8'h01, 32'h00000005); // TX_TRANS_BYTES_ADDR
+        uart_recv_data_display();
+        #1000000;    // Wait 1us
+
+        // Start transmission
+        opb_write(`RS422_ADDR + 8'h02, 32'h00000001); // TX_CTRL_ADDR, start bit
+        uart_recv_data_display();
+        #1000000;    // Wait 1us
+
+        $display("Transmission started with pattern 0x5A, count = 5");
+        
+        // Wait a bit for transmission to start
+        #50000;
+
+        // Read status register
+        opb_read(`RS422_ADDR + 8'h03); // RX_STATUS_ADDR
+        $display("RS422 Status Reg read at time %0t us", $time/1000000);
+        uart_recv_data_display();
+        #1000000;    // Wait 1us
+        
+        // Read received byte counters
+        opb_read(`RS422_ADDR + 8'h04); // RX1_RECV_BYTES_ADDR
+        uart_recv_data_display();
+        #1000000;    // Wait 1us
+
+        opb_read(`RS422_ADDR + 8'h05); // RX2_RECV_BYTES_ADDR
+        uart_recv_data_display();
+        #1000000;    // Wait 1us
+
+        opb_read(`RS422_ADDR + 8'h06); // RX3_RECV_BYTES_ADDR
+        uart_recv_data_display();
+        #1000000;    // Wait 1us
+
+        // Read error counters
+        opb_read(`RS422_ADDR + 8'h0D); // RX1_ERR_BYTES_ADDR
+        uart_recv_data_display();
+        #1000000;    // Wait 1us
+
+        opb_read(`RS422_ADDR + 8'h0E); // RX2_ERR_BYTES_ADDR
+        uart_recv_data_display();
+        #1000000;    // Wait 1us
+
+        opb_read(`RS422_ADDR + 8'h0F); // RX3_ERR_BYTES_ADDR
+        uart_recv_data_display();
+
+        $display("RS422 tests completed");
         end
     endtask
 

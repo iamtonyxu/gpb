@@ -18,7 +18,7 @@
 `timescale 1ns / 1ps
 `define FW_VERSION  32'h0000_0001 // Firmware version
 `define FPGA_ID     32'h0000_0100 // FPGA ID
-`define BUILD_DATE  32'h2025_0714 // YYYY_MMDD
+`define BUILD_DATE  32'h2025_0809 // YYYY_MMDD
 
 module top_app(
     // BANK-2/4, 3.3V I/O
@@ -494,7 +494,7 @@ module top_app(
         .DAC_SDO(DAC_SDO)
     );
 
-/*
+
     // RS422 Interface
     RS422_TEST_IF u_rs422 (
         .OPB_CLK(opb_clk),
@@ -523,12 +523,14 @@ module top_app(
         .ENCODER_TX1(ENCODER_TX1),
         .ENCODER_TX2(ENCODER_TX2)
     );
-*/
+
+/*
 assign SYNC_LOC_OUT = 0;
 assign SYNC_OUT = 0;
 assign ST_DMD_MSSB_TX = 0;
 assign ENCODER_TX1 = 0;
 assign ENCODER_TX2 = 0;
+*/
 
     // APP to Hardware Interface
     APP2HW_IF u_app2hw_if (

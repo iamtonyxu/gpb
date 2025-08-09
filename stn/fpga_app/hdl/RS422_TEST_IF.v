@@ -72,7 +72,7 @@ module RS422_TEST_IF(
     wire start, stop, clear;
 
     assign start = tx_ctrl[0];                  // Start transmission
-    assign stop  = tx_ctrl[1];                  // Stop transmission
+    assign stop  = tx_ctrl[1] || (act_tx_trans_bytes == tx_trans_bytes); // Stop transmission
     assign clear = tx_ctrl[2];                  // Clear status registers
 
     // Data Stream Signals
