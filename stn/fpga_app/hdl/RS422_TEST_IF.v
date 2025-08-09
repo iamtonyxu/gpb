@@ -189,7 +189,7 @@ module RS422_TEST_IF(
     ) RS422_TX (
         .CLOCK(OPB_CLK),
         .RESET(OPB_RST),
-        .uart_active(1'b0),
+        .uart_active(1'b1),
         .DATA_STREAM_IN(test_pattern),
         .DATA_STREAM_IN_STB(data_stream_in_stb),
         .DATA_STREAM_IN_ACK(data_stream_in_ack),
@@ -197,7 +197,7 @@ module RS422_TEST_IF(
         .DATA_STREAM_OUT_STB(),
         .DATA_STREAM_OUT_ACK(1'b0),
         .TX(txd),
-        .RX(1'b0),                              // Not used
+        .RX(1'b1),                              // Not used
         .debug_uart_phy()
     );
 
