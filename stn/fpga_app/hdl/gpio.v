@@ -181,11 +181,11 @@ module GPIO (
     assign AD_SEL0          = GPIO_OUT1_REG[0];
     assign AD_SEL1          = GPIO_OUT1_REG[1];
     assign AD_SEL2          = GPIO_OUT1_REG[2];
-    assign AD_SEL3          = GPIO_OUT1_REG[3];
-    assign AD_SEL4          = GPIO_OUT1_REG[4];
-    assign AD_SEL5          = GPIO_OUT1_REG[5];
-    assign AD_SEL6          = GPIO_OUT1_REG[6];
-    assign AD_SEL7          = GPIO_OUT1_REG[7];
+    assign AD_SEL3          = (GPIO_OUT1_REG[7:3] == 5'b00001) ? 1'b1 : 1'b0;
+    assign AD_SEL4          = (GPIO_OUT1_REG[7:3] == 5'b00010) ? 1'b1 : 1'b0;
+    assign AD_SEL5          = (GPIO_OUT1_REG[7:3] == 5'b00100) ? 1'b1 : 1'b0;
+    assign AD_SEL6          = (GPIO_OUT1_REG[7:3] == 5'b01000) ? 1'b1 : 1'b0;
+    assign AD_SEL7          = (GPIO_OUT1_REG[7:3] == 5'b10000) ? 1'b1 : 1'b0;
 
     assign PUMP_CLR_FLT_ON  = GPIO_OUT1_REG[8];
     assign SYNC_LOC_OUT     = GPIO_OUT1_REG[9];
@@ -201,8 +201,8 @@ module GPIO (
     assign LP_MON_SEL1      = GPIO_OUT1_REG[20];
     assign LP_MON_SEL2      = GPIO_OUT1_REG[21];
     assign LP_MON_SEL3      = GPIO_OUT1_REG[22];
-
     assign ENCODER_FUSE_ON_N = GPIO_OUT1_REG[23];
+
     assign PUMP_EN_ON       = GPIO_OUT1_REG[24];
     assign SF6_24V_ON       = GPIO_OUT1_REG[25];
     assign SF6_VALVE_OPEN   = GPIO_OUT1_REG[26];

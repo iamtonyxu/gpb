@@ -332,7 +332,7 @@ module top_app(
     assign FPGA_DONE         = 1'b1;           // LED D43
 
     // ADC signal inversion
-    assign AD_CNVST_N        = ~adc_convst_i;  // Active low signal
+    assign AD_CNVST_N        = adc_convst_i;  // Active low signal
 
     // Heartbeat LED control
     assign HEARTBEAT_LED_N   = opb_wakeup ? heartbeat_led_n_w : pulse_1hz; // D42

@@ -15,7 +15,7 @@
 `define COUNTER_SIZE            32'h0000_0040       // COUNTER size
 `define GPIO_SIZE               32'h0000_0040       // GPIO input size
 `define FPGA_IF_SIZE            32'h0000_0040       // FPGA IF size
-`define ADC_SIZE                32'h0000_0040       // ADC size
+`define ADC_SIZE                32'h0000_6000       // ADC size
 `define DAC_SIZE                32'h0000_0040       // DAC size
 `define RS422_SIZE              32'h0000_0040       // RS422 size
 `define CAN_SIZE                32'h0000_3FFF       // CAN size
