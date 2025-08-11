@@ -25,12 +25,15 @@ wire penable; // It goes after OPB_RE or OPB_WE, and will last one cycle
 reg [10:0] paddr; // 11 bits address, from OPB_ADDR[10:0]
 reg [31:0] pwdata; // from OPB_DI[31:0]
 wire [31:0] prdata; // to OPB_DO[31:0]
+reg [31:0] prdata_last; // last read data, used to latch the read data
+wire pready; // ready signal, always high
+wire int_n; // interrupt signal, active low
 
 // OPB to APB signal conversion
 assign pclk = OPB_CLK; // 100MHz clock
 assign presetn = ~OPB_RST;
 assign psel = 1'b1; // always selected
-assign OPB_DO = prdata; // APB read data to OPB read data
+assign OPB_DO = prdata_last; // APB read data to OPB read data
 
 // latch address and write data at OPB_CLK rising edge
 always @(posedge OPB_CLK or posedge OPB_RST) begin
@@ -70,6 +73,15 @@ end
 assign pwrite = pwrite_d1 || pwrite_d2;
 assign penable = pwrite_d2 || pread_d2;
 
+// prdata_last
+always @(posedge OPB_CLK or posedge OPB_RST) begin
+    if (OPB_RST) begin
+        prdata_last <= 32'b0;
+    end else if (penable && !pwrite) begin
+        prdata_last <= {pready, int_n, prdata[29:0]};
+    end
+end
+
 // Instantiate the CORECAN module
 CORECAN_C0 uut (
     // APB Interface
@@ -81,8 +93,8 @@ CORECAN_C0 uut (
     .PADDR(paddr),
     .PWDATA(pwdata),
     .PRDATA(prdata),
-    .PREADY(), // Always ready in this example
-    .INT_N(), // Interrupt not used in this example
+    .PREADY(pready),
+    .INT_N(int_n),
 
     // CAN Interface
     .CAN_TX_EN_N(CAN_TX_EN_N),
