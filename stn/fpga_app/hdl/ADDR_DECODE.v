@@ -68,7 +68,7 @@ module ADDR_DECODE(
     reg ADC_RE_d1;
     reg DAC_RE_d1;
     reg RS422_RE_d1;
-    reg CAN_RE_d1;
+    reg CAN_RE_d1, CAN_RE_d2;
 
     // Address decode logic for RE/WE signals
     assign SP_RE      = OPB_RE & (OPB_ADDR >= `SCRATCHPAD_ADDR) & (OPB_ADDR < (`SCRATCHPAD_ADDR + `SCRATCHPAD_SIZE));
@@ -110,6 +110,7 @@ module ADDR_DECODE(
             DAC_RE_d1     <= 1'b0;
             RS422_RE_d1   <= 1'b0;
             CAN_RE_d1     <= 1'b0;
+            CAN_RE_d2     <= 1'b0;
         end else begin
             SP_RE_d1      <= SP_RE;
             CLOCK_RE_d1   <= CLOCK_RE;
@@ -120,6 +121,7 @@ module ADDR_DECODE(
             DAC_RE_d1     <= DAC_RE;
             RS422_RE_d1   <= RS422_RE;
             CAN_RE_d1     <= CAN_RE;
+            CAN_RE_d2     <= CAN_RE_d1; // For CAN, we need a second delay
         end
     end
 
@@ -132,7 +134,7 @@ module ADDR_DECODE(
                     (ADC_RE_d1)     ? ADC_IN     :
                     (DAC_RE_d1)     ? DAC_IN     :
                     (RS422_RE_d1)   ? RS422_IN   :
-                    (CAN_RE_d1)     ? CAN_IN     :
+                    (CAN_RE_d2)     ? CAN_IN     :
                                       32'h0;
 
 endmodule
