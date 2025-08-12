@@ -5,9 +5,9 @@ module CORECAN_wrapper
     // OPB Interface
     input               OPB_CLK,
     input               OPB_RST,
-    input      [10:0]   OPB_ADDR,
+    input      [15:0]   OPB_ADDR,
     input      [31:0]   OPB_DI,
-    output     [31:0]   OPB_DO,
+    output reg [31:0]   OPB_DO,
     input               OPB_WE,
     input               OPB_RE,
 
@@ -23,17 +23,32 @@ wire pclk, presetn, psel;
 wire pwrite; // OPB_WE driven, and it will last two cycles
 wire penable; // It goes after OPB_RE or OPB_WE, and will last one cycle
 reg [10:0] paddr; // 11 bits address, from OPB_ADDR[10:0]
+reg [10:0] paddr_last; // last address, used to latch the address
 reg [31:0] pwdata; // from OPB_DI[31:0]
 wire [31:0] prdata; // to OPB_DO[31:0]
 reg [31:0] prdata_last; // last read data, used to latch the read data
 wire pready; // ready signal, always high
 wire int_n; // interrupt signal, active low
 
+reg pwrite_d1, pwrite_d2;
+reg pread_d1, pread_d2;
+
 // OPB to APB signal conversion
 assign pclk = OPB_CLK; // 100MHz clock
 assign presetn = ~OPB_RST;
-assign psel = 1'b1; // always selected
-assign OPB_DO = prdata_last; // APB read data to OPB read data
+
+// OPB_DO logic, latches the last read data if OPB_ADDR[10:0] matches
+always @(posedge OPB_CLK or posedge OPB_RST) begin
+    if (OPB_RST) begin
+        OPB_DO <= 32'b0;
+    end else if (OPB_RE) begin
+        if (paddr_last == OPB_ADDR[10:0]) begin
+            OPB_DO <= prdata_last;
+        end else begin
+            OPB_DO <= {30'b0, int_n, pready}; // if address doesn't match, return status bits
+        end
+    end
+end
 
 // latch address and write data at OPB_CLK rising edge
 always @(posedge OPB_CLK or posedge OPB_RST) begin
@@ -47,29 +62,36 @@ always @(posedge OPB_CLK or posedge OPB_RST) begin
 end
 
 // pwrite lasts two cycles, penable lasts one cycle
-reg pwrite_d1, pwrite_d2;
 always @(posedge OPB_CLK or posedge OPB_RST) begin
     if (OPB_RST) begin
         pwrite_d1 <= 1'b0;
         pwrite_d2 <= 1'b0;
     end else begin
-        pwrite_d1 <= OPB_WE;
+        if(OPB_WE) begin
+            pwrite_d1 <= OPB_ADDR[15] ? 1'b0 : 1'b1;
+        end else begin
+            pwrite_d1 <= 1'b0;
+        end
         pwrite_d2 <= pwrite_d1;
     end
 end
 
 // pread lasts two cycles, penable lasts one cycle
-reg pread_d1, pread_d2;
 always @(posedge OPB_CLK or posedge OPB_RST) begin
     if (OPB_RST) begin
         pread_d1 <= 1'b0;
         pread_d2 <= 1'b0;
     end else begin
-        pread_d1 <= OPB_RE;
+        if(OPB_WE) begin
+            pread_d1 <= OPB_ADDR[15] ? 1'b1 : 1'b0;
+        end else begin
+            pread_d1 <= 1'b0;
+        end
         pread_d2 <= pread_d1;
     end
 end
 
+assign psel = pwrite_d1 || pwrite_d2 || pread_d1 || pread_d2;
 assign pwrite = pwrite_d1 || pwrite_d2;
 assign penable = pwrite_d2 || pread_d2;
 
@@ -77,8 +99,10 @@ assign penable = pwrite_d2 || pread_d2;
 always @(posedge OPB_CLK or posedge OPB_RST) begin
     if (OPB_RST) begin
         prdata_last <= 32'b0;
+        paddr_last <= 11'b0;
     end else if (penable && !pwrite) begin
-        prdata_last <= {pready, int_n, prdata[29:0]};
+        prdata_last <= prdata;
+        paddr_last <= paddr;
     end
 end
 

@@ -291,10 +291,11 @@ module top_app(
     wire [31:0] sp_in, clock_in, counter_in, adc_in, dac_in, gpio_in, hw_in;
     wire        sp_re, sp_we, clock_we, clock_re, counter_we, counter_re;
     wire        gpio_re, gpio_we, fpga_if_re, fpga_if_we;
-    wire        adc_re, adc_we, dac_re, dac_we, rs422_re, rs422_we, can_re, can_we;
+    wire        adc_re, adc_we, dac_re, dac_we, rs422_re, rs422_we;
+    wire        can1_re, can1_we, can2_re, can2_we, can3_re, can3_we, can4_re, can4_we;
 
     // Signal declarations for module interfaces
-    wire [31:0] fpga_if_in, rs422_in, can_in;
+    wire [31:0] fpga_if_in, rs422_in, can1_in, can2_in, can3_in, can4_in;
     wire        adc_convst_i;
 
     // System control signals
@@ -397,7 +398,10 @@ module top_app(
         .ADC_IN(adc_in),
         .DAC_IN(dac_in),
         .RS422_IN(rs422_in),
-        .CAN_IN(can_in),
+        .CAN1_IN(can1_in),
+        .CAN2_IN(can2_in),
+        .CAN3_IN(can3_in),
+        .CAN4_IN(can4_in),
 
         .SP_RE(sp_re),
         .SP_WE(sp_we),
@@ -415,8 +419,14 @@ module top_app(
         .DAC_WE(dac_we),
         .RS422_RE(rs422_re),
         .RS422_WE(rs422_we),
-        .CAN_RE(can_re),
-        .CAN_WE(can_we)
+        .CAN1_RE(can1_re),
+        .CAN1_WE(can1_we),
+        .CAN2_RE(can2_re),
+        .CAN2_WE(can2_we),
+        .CAN3_RE(can3_re),
+        .CAN3_WE(can3_we),
+        .CAN4_RE(can4_re),
+        .CAN4_WE(can4_we)
     );
 
     // Scratch Pad Register
@@ -583,11 +593,21 @@ assign ENCODER_TX2 = 0;
         .OPB_CLK(opb_clk),
         .OPB_RST(opb_rst),
         .OPB_DI(opb_do),
-        .OPB_DO(can_in),
-        .OPB_ADDR(opb_addr),
-        .CAN_RE(can_re),
-        .CAN_WE(can_we),
-        
+        .OPB_ADDR(opb_addr[15:0]),
+        .CAN1_DO(can1_in),
+        .CAN2_DO(can2_in),
+        .CAN3_DO(can3_in),
+        .CAN4_DO(can4_in),
+
+        .CAN1_RE(can1_re),
+        .CAN1_WE(can1_we),
+        .CAN2_RE(can2_re),
+        .CAN2_WE(can2_we),
+        .CAN3_RE(can3_re),
+        .CAN3_WE(can3_we),
+        .CAN4_RE(can4_re),
+        .CAN4_WE(can4_we),
+
         // CAN Interface
         .CAN_TX1(CAN_TX1),
         .CAN_TX2(CAN_TX2),

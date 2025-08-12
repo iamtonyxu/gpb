@@ -8,10 +8,12 @@ module CAN_IF_tb;
     
     // OPB Interface signals
     reg [31:0] OPB_DI;
-    wire [31:0] OPB_DO;
+    wire [31:0] CAN1_DO, CAN2_DO, CAN3_DO, CAN4_DO;
     reg [31:0] OPB_ADDR;
-    reg CAN_RE;
-    reg CAN_WE;
+    reg CAN1_RE, CAN1_WE;
+    reg CAN2_RE, CAN2_WE;
+    reg CAN3_RE, CAN3_WE;
+    reg CAN4_RE, CAN4_WE;
     
     // CAN Interface signals
     wire CAN_TX1, CAN_TX2, CAN_TX3, CAN_TX4;
@@ -32,10 +34,19 @@ module CAN_IF_tb;
         .OPB_CLK(OPB_CLK),
         .OPB_RST(OPB_RST),
         .OPB_DI(OPB_DI),
-        .OPB_DO(OPB_DO),
-        .OPB_ADDR(OPB_ADDR),
-        .CAN_RE(CAN_RE),
-        .CAN_WE(CAN_WE),
+        .CAN1_DO(CAN1_DO),
+        .CAN2_DO(CAN2_DO),
+        .CAN3_DO(CAN3_DO),
+        .CAN4_DO(CAN4_DO),
+        .OPB_ADDR(OPB_ADDR[15:0]),
+        .CAN1_RE(CAN1_RE),
+        .CAN1_WE(CAN1_WE),
+        .CAN2_RE(CAN2_RE),
+        .CAN2_WE(CAN2_WE),
+        .CAN3_RE(CAN3_RE),
+        .CAN3_WE(CAN3_WE),
+        .CAN4_RE(CAN4_RE),
+        .CAN4_WE(CAN4_WE),
         .CAN_TX1(CAN_TX1),
         .CAN_TX2(CAN_TX2),
         .CAN_TX3(CAN_TX3),
@@ -48,34 +59,96 @@ module CAN_IF_tb;
     
     // OPB Write Task
     task opb_write;
+        input [3:0] can_sel; // CAN channel selection: 1=CAN1, 2=CAN2, 4=CAN3, 8=CAN4
         input [31:0] addr;
         input [31:0] data;
         begin
             @(posedge OPB_CLK);
             OPB_ADDR = addr;
             OPB_DI = data;
-            CAN_WE = 1'b1;
-            CAN_RE = 1'b0;
+            
+            // Clear all WE signals first
+            CAN1_WE = 1'b0;
+            CAN2_WE = 1'b0;
+            CAN3_WE = 1'b0;
+            CAN4_WE = 1'b0;
+            
+            // Set appropriate WE signal based on selection
+            case (can_sel)
+                4'b0001: CAN1_WE = 1'b1;
+                4'b0010: CAN2_WE = 1'b1;
+                4'b0100: CAN3_WE = 1'b1;
+                4'b1000: CAN4_WE = 1'b1;
+                default: $display("Error: Invalid CAN channel selection");
+            endcase
+            
+            // Clear all RE signals
+            CAN1_RE = 1'b0;
+            CAN2_RE = 1'b0;
+            CAN3_RE = 1'b0;
+            CAN4_RE = 1'b0;
+            
             @(posedge OPB_CLK);
-            CAN_WE = 1'b0;
-            $display("Time %t: OPB Write - Addr: 0x%08X, Data: 0x%08X", $time, addr, data);
+            CAN1_WE = 1'b0;
+            CAN2_WE = 1'b0;
+            CAN3_WE = 1'b0;
+            CAN4_WE = 1'b0;
+            $display("Time %t: OPB Write - CAN%d, Addr: 0x%08X, Data: 0x%08X", 
+                     $time, (can_sel == 4'b0001) ? 1 : (can_sel == 4'b0010) ? 2 : 
+                           (can_sel == 4'b0100) ? 3 : 4, addr, data);
         end
     endtask
     
     // OPB Read Task
     task opb_read;
+        input [3:0] can_sel; // CAN channel selection: 1=CAN1, 2=CAN2, 4=CAN3, 8=CAN4
         input [31:0] addr;
         output [31:0] data;
         begin
             @(posedge OPB_CLK);
             OPB_ADDR = addr;
-            CAN_RE = 1'b1;
-            CAN_WE = 1'b0;
+            
+            // Clear all RE signals first
+            CAN1_RE = 1'b0;
+            CAN2_RE = 1'b0;
+            CAN3_RE = 1'b0;
+            CAN4_RE = 1'b0;
+            
+            // Set appropriate RE signal based on selection
+            case (can_sel)
+                4'b0001: CAN1_RE = 1'b1;
+                4'b0010: CAN2_RE = 1'b1;
+                4'b0100: CAN3_RE = 1'b1;
+                4'b1000: CAN4_RE = 1'b1;
+                default: $display("Error: Invalid CAN channel selection");
+            endcase
+            
+            // Clear all WE signals
+            CAN1_WE = 1'b0;
+            CAN2_WE = 1'b0;
+            CAN3_WE = 1'b0;
+            CAN4_WE = 1'b0;
+            
             @(posedge OPB_CLK);
-            CAN_RE = 1'b0;
+            CAN1_RE = 1'b0;
+            CAN2_RE = 1'b0;
+            CAN3_RE = 1'b0;
+            CAN4_RE = 1'b0;
+            
             @(posedge OPB_CLK); // Wait for operation to complete
-            data = OPB_DO;
-            $display("Time %t: OPB Read - Addr: 0x%08X, Data: 0x%08X", $time, addr, data);
+            
+            // Select appropriate data output based on channel
+            case (can_sel)
+                4'b0001: data = CAN1_DO;
+                4'b0010: data = CAN2_DO;
+                4'b0100: data = CAN3_DO;
+                4'b1000: data = CAN4_DO;
+                default: data = 32'h0;
+            endcase
+            
+            $display("Time %t: OPB Read - CAN%d, Addr: 0x%08X, Data: 0x%08X", 
+                     $time, (can_sel == 4'b0001) ? 1 : (can_sel == 4'b0010) ? 2 : 
+                           (can_sel == 4'b0100) ? 3 : 4, addr, data);
         end
     endtask
     
@@ -88,8 +161,14 @@ module CAN_IF_tb;
         OPB_RST = 1'b1;
         OPB_DI = 32'h0;
         OPB_ADDR = 32'h0;
-        CAN_RE = 1'b0;
-        CAN_WE = 1'b0;
+        CAN1_RE = 1'b0;
+        CAN1_WE = 1'b0;
+        CAN2_RE = 1'b0;
+        CAN2_WE = 1'b0;
+        CAN3_RE = 1'b0;
+        CAN3_WE = 1'b0;
+        CAN4_RE = 1'b0;
+        CAN4_WE = 1'b0;
         
         // Initialize CAN RX signals to idle state (recessive)
         CAN_RX1 = 1'b1;
@@ -111,31 +190,36 @@ module CAN_IF_tb;
         // CAN4: OPB_ADDR[14:11] = 4'b1000 (0x4000 - 0x47FF)
         
         $display("Testing CAN1 address space (0x0800-0x0FFF)...");
-        opb_write(32'h00000800, 32'h12345678); // CAN1 base address
-        opb_read(32'h00000800, read_data);
-        
+        opb_write(4'b0001, 32'h00000800, 32'h12345678); // CAN1 base address
+        #100;
+        opb_write(4'b0001, 32'h00008800, 32'h0); // CAN1 base address
+        #100;
+        opb_read(4'b0001, 32'h00000800, read_data);
+        #100;
+
         $display("Testing CAN2 address space (0x1000-0x17FF)...");
-        opb_write(32'h00001000, 32'hAABBCCDD); // CAN2 base address
-        opb_read(32'h00001000, read_data);
-        
+        opb_write(4'b0010, 32'h00001000, 32'hAABBCCDD); // CAN2 base address
+        #100;
+        opb_write(4'b0010, 32'h00009000, 32'h0); // CAN2 base address
+        #100;
+        opb_read(4'b0010, 32'h00001000, read_data);
+        #100;
+
         $display("Testing CAN3 address space (0x2000-0x27FF)...");
-        opb_write(32'h00002000, 32'h55AA55AA); // CAN3 base address
-        opb_read(32'h00002000, read_data);
-        
+        opb_write(4'b0100, 32'h00002000, 32'h55AA55AA); // CAN3 base address
+        #100;
+        opb_write(4'b0100, 32'h0000A000, 32'h55AA55AA); // CAN2 base address
+        #100;
+        opb_read(4'b0100, 32'h00002000, read_data);
+        #100;
+
         $display("Testing CAN4 address space (0x4000-0x47FF)...");
-        opb_write(32'h00004000, 32'hDEADBEEF); // CAN4 base address
-        opb_read(32'h00004000, read_data);
-        
-        $display("\n=== Test 2: Channel Selection Verification ===");
-        
-        // Verify that each channel responds only to its address range
-        $display("Verifying channel isolation...");
-        
-        // Write to CAN1, read from others (should return 0)
-        opb_write(32'h00000804, 32'h11111111);
-        opb_read(32'h00001004, read_data); // Read from CAN2 - should be 0
-        opb_read(32'h00002004, read_data); // Read from CAN3 - should be 0
-        opb_read(32'h00004004, read_data); // Read from CAN4 - should be 0
+        opb_write(4'b1000, 32'h00004000, 32'hDEADBEEF); // CAN4 base address
+        #100;
+        opb_write(4'b1000, 32'h0000C000, 32'hDEADBEEF); // CAN2 base address
+        #100;
+        opb_read(4'b1000, 32'h00004000, read_data);
+        #100;
         
         $display("\n=== CAN_IF Testbench Completed Successfully ===");
         $stop;
@@ -147,12 +231,13 @@ module CAN_IF_tb;
         #200; // Start after reset
         forever begin
             @(posedge OPB_CLK);
-            if (CAN_RE || CAN_WE) begin
+            if (CAN1_RE || CAN1_WE || CAN2_RE || CAN2_WE || CAN3_RE || CAN3_WE || CAN4_RE || CAN4_WE) begin
                 $display("Address Decode: 0x%08X -> CAN1_EN=%b, CAN2_EN=%b, CAN3_EN=%b, CAN4_EN=%b", 
-                         OPB_ADDR, dut.CAN1_RE || dut.CAN1_WE, 
-                         dut.CAN2_RE || dut.CAN2_WE,
-                         dut.CAN3_RE || dut.CAN3_WE, 
-                         dut.CAN4_RE || dut.CAN4_WE);
+                         OPB_ADDR, 
+                         CAN1_RE || CAN1_WE, 
+                         CAN2_RE || CAN2_WE,
+                         CAN3_RE || CAN3_WE, 
+                         CAN4_RE || CAN4_WE);
             end
         end
     end

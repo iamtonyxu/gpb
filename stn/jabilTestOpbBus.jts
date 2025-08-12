@@ -1,0 +1,185 @@
+// OPB Bus Open
+// Input: $OPB_Com: Serial port
+function OpbOpen()			//	OPB Bus Open
+{
+	{
+		$OPB_BR = 115200;	//	The baud rate to open communications
+		$OPB_DB = 8;		//	The number of bits in each character of data.
+		$OPB_P  = "N";		//	"N" for no parity
+		$OPB_SB = 1;		//	The number of stop bits
+	}
+	$comObject = Serial_Open($OPBCom, $OPB_BR, $OPB_DB, $OPB_P, $OPB_SB);
+	SleepMilliseconds(500);
+	return;
+}
+
+// OPB Bus Close
+// Input: $comObject: instance of OPB Bus Com
+function OpbClose()			//	OPB Bus Close
+{
+	$comOpenState = Serial_IsOpen($comObject);
+	if($comOpenState)
+	{
+		Serial_Close($comObject);
+	}
+	return;
+}
+
+// OPB Write Operation
+// Input: $opbAddrStr = "00 00 00 00"
+// Input: $opbDataStr = "00 00 00 00"
+function OpbWrite()
+{
+    $opbAddrArray = StringSplitToArray($opbAddrStr, " ", 4);
+    $opbDataArray = StringSplitToArray($opbDataStr, " ", 4);
+    
+    // message print
+    $opbAddrStrTrim = StringReplace($opbAddrStr, " ", "");
+    $opbDataStrTrim = StringReplace($opbDataStr, " ", "");
+    $opbWriteMessage = "OpbWrite" + " 32'h" + $opbAddrStrTrim + " 32'h" + $opbDataStrTrim;
+    UpdateStatus($opbWriteMessage);
+
+    $sendMessage = Array1DCreate("INTEGER", 10);
+    Array1DSetValue($sendMessage, 0, 90);  //start: 0x5A = 90
+    Array1DSetValue($sendMessage, 9, 165); //end: 0xA5 = 165
+
+    // copy opbAddr to sendMessage from index = 1
+    $ii = 0;
+    while($ii < 4)
+    {
+        $jj = $ii + 1;
+        $tmpStr = Array1DGetValue($opbAddrArray, $ii);
+        $val = HexStringToInteger($tmpStr);
+        Array1DSetValue($sendMessage, $jj, $val);
+        //UpdateStatus($val);
+        $ii = $ii + 1;
+    }
+
+    // copy opbAddr to sendMessage from index = 5
+    $ii = 0;
+    while($ii < 4)
+    {
+        $jj = $ii + 5;
+        $tmpStr = Array1DGetValue($opbDataArray, $ii);
+        $val = HexStringToInteger($tmpStr);
+        Array1DSetValue($sendMessage, $jj, $val);
+        //UpdateStatus($val);
+        $ii = $ii + 1;
+    }
+    
+    // send message
+    Serial_SendBinaryFromArray($comObject, $sendMessage, 0, 10);
+    
+    // receive message
+    $timeout = 3;           // wait for 1 second
+    $replyMessage = Serial_ReceiveBinaryToArray($comObject, $timeout);
+    
+    // check message
+    $ii = 0;
+    while($ii < 10)
+    {
+        $val1 = Array1DGetValue($replyMessage, $ii);
+        $val2 = Array1DGetValue($sendMessage, $ii);
+        if($val1 != $val2)
+        {
+            UpdateStatus("OpbWrite failed, please stop and check it!");
+            break;
+        }
+        $ii = $ii + 1;
+    }
+
+    return;
+}
+
+// OPB Read Operation
+// Input: $opbAddrStr = "00 00 00 00"
+// Output: $opbDataStr
+// Output: $opbDataArray = Array1DCreate("Integer", 4)
+function OpbRead()
+{
+    $opbAddrArray = StringSplitToArray($opbAddrStr, " ", 4);
+    $opbDataArray = Array1DCreate("Integer", 4);
+    $opbDataStr = "";
+    
+    $sendMessage = Array1DCreate("INTEGER", 10);
+    Array1DSetValue($sendMessage, 0, 91);  //start: 0x5B = 91
+    Array1DSetValue($sendMessage, 9, 164); //end: 0xA4 = 164
+
+    // copy opbAddr to sendMessage from index = 1
+    $ii = 0;
+    while($ii < 4)
+    {
+        $jj = $ii + 1;
+        $tmpStr = Array1DGetValue($opbAddrArray, $ii);
+        $val = HexStringToInteger($tmpStr);
+        Array1DSetValue($sendMessage, $jj, $val);
+        //UpdateStatus($val);
+        $ii = $ii + 1;
+    }
+    
+    // send message
+    Serial_SendBinaryFromArray($comObject, $sendMessage, 0, 10);
+    
+    // receive message
+    $timeout = 1;           // wait for 1 second
+    $replyMessage = Serial_ReceiveBinaryToArray($comObject, $timeout);
+    
+    // check message
+    $ii = 0;
+    while($ii < 10)
+    {
+        $jj = $ii;
+        $ii = $ii + 1;
+        $val1 = Array1DGetValue($replyMessage, $jj);
+        $val2 = Array1DGetValue($sendMessage, $jj);
+        //UpdateStatus($val1);
+        //UpdateStatus($val2);
+        
+        if($jj == 5)
+        {
+            $val1Str = IntegerToHexString($val1,2);
+            $opbDataStr = StringCat($opbDataStr, $val1Str);
+            Array1DSetValue($opbDataArray, 0, $val1);
+            continue;
+        }
+        
+        if($jj == 6)
+        {
+            $val1Str = IntegerToHexString($val1,2);
+            $opbDataStr = StringCat($opbDataStr, $val1Str);
+            Array1DSetValue($opbDataArray, 1, $val1);
+            continue;
+        }
+        
+        if($jj == 7)
+        {
+            $val1Str = IntegerToHexString($val1,2);
+            $opbDataStr = StringCat($opbDataStr, $val1Str);
+            Array1DSetValue($opbDataArray, 2, $val1);
+            continue;
+        }
+        
+        if($jj == 8)
+        {
+            $val1Str = IntegerToHexString($val1,2);
+            $opbDataStr = StringCat($opbDataStr, $val1Str);
+            Array1DSetValue($opbDataArray, 3, $val1);
+            continue;
+        }
+        
+        if($val1 != $val2)
+        {
+            UpdateStatus("OpbRead failed, please stop and check it!");
+            break;
+        }
+    }
+    
+    if($ii == 10)
+    {
+        // message print
+        $opbAddrStrTrim = StringReplace($opbAddrStr, " ", "");
+        $opbWriteMessage = "OpbRead" + " 32'h" + $opbAddrStrTrim + " 32'h" + $opbDataStr;
+        UpdateStatus($opbWriteMessage);
+    }
+    return;
+}

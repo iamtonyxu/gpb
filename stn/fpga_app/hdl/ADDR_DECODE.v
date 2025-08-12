@@ -36,7 +36,10 @@ module ADDR_DECODE(
     input   [31:0]  ADC_IN,
     input   [31:0]  DAC_IN,
     input   [31:0]  RS422_IN,
-    input   [31:0]  CAN_IN,
+    input   [31:0]  CAN1_IN,
+    input   [31:0]  CAN2_IN,
+    input   [31:0]  CAN3_IN,
+    input   [31:0]  CAN4_IN,
 
     // OPB RE/WE control signals
     output          SP_RE,
@@ -55,8 +58,14 @@ module ADDR_DECODE(
     output          DAC_WE,
     output          RS422_RE,
     output          RS422_WE,
-    output          CAN_RE,
-    output          CAN_WE
+    output          CAN1_RE,
+    output          CAN1_WE,
+    output          CAN2_RE,
+    output          CAN2_WE,
+    output          CAN3_RE,
+    output          CAN3_WE,
+    output          CAN4_RE,
+    output          CAN4_WE
 );
 
     // Delayed read enable signals for data multiplexing
@@ -68,7 +77,10 @@ module ADDR_DECODE(
     reg ADC_RE_d1;
     reg DAC_RE_d1;
     reg RS422_RE_d1;
-    reg CAN_RE_d1, CAN_RE_d2;
+    reg CAN1_RE_d1;
+    reg CAN2_RE_d1;
+    reg CAN3_RE_d1;
+    reg CAN4_RE_d1;
 
     // Address decode logic for RE/WE signals
     assign SP_RE      = OPB_RE & (OPB_ADDR >= `SCRATCHPAD_ADDR) & (OPB_ADDR < (`SCRATCHPAD_ADDR + `SCRATCHPAD_SIZE));
@@ -95,8 +107,17 @@ module ADDR_DECODE(
     assign RS422_RE   = OPB_RE & (OPB_ADDR >= `RS422_ADDR) & (OPB_ADDR < (`RS422_ADDR + `RS422_SIZE));
     assign RS422_WE   = OPB_WE & (OPB_ADDR >= `RS422_ADDR) & (OPB_ADDR < (`RS422_ADDR + `RS422_SIZE));
 
-    assign CAN_RE     = OPB_RE & (OPB_ADDR >= `CAN_ADDR) & (OPB_ADDR < (`CAN_ADDR + `CAN_SIZE));
-    assign CAN_WE     = OPB_WE & (OPB_ADDR >= `CAN_ADDR) & (OPB_ADDR < (`CAN_ADDR + `CAN_SIZE));
+    assign CAN1_RE     = OPB_RE & (OPB_ADDR >= `CAN1_ADDR) & (OPB_ADDR < (`CAN1_ADDR + `CAN_SIZE));
+    assign CAN1_WE     = OPB_WE & (OPB_ADDR >= `CAN1_ADDR) & (OPB_ADDR < (`CAN1_ADDR + `CAN_SIZE));
+
+    assign CAN2_RE     = OPB_RE & (OPB_ADDR >= `CAN2_ADDR) & (OPB_ADDR < (`CAN2_ADDR + `CAN_SIZE));
+    assign CAN2_WE     = OPB_WE & (OPB_ADDR >= `CAN2_ADDR) & (OPB_ADDR < (`CAN2_ADDR + `CAN_SIZE));
+
+    assign CAN3_RE     = OPB_RE & (OPB_ADDR >= `CAN3_ADDR) & (OPB_ADDR < (`CAN3_ADDR + `CAN_SIZE));
+    assign CAN3_WE     = OPB_WE & (OPB_ADDR >= `CAN3_ADDR) & (OPB_ADDR < (`CAN3_ADDR + `CAN_SIZE));
+
+    assign CAN4_RE     = OPB_RE & (OPB_ADDR >= `CAN4_ADDR) & (OPB_ADDR < (`CAN4_ADDR + `CAN_SIZE));
+    assign CAN4_WE     = OPB_WE & (OPB_ADDR >= `CAN4_ADDR) & (OPB_ADDR < (`CAN4_ADDR + `CAN_SIZE));
 
     // Register delayed read enable signals for read data multiplexing
     always @(posedge OPB_CLK or posedge OPB_RST) begin
@@ -109,8 +130,10 @@ module ADDR_DECODE(
             ADC_RE_d1     <= 1'b0;
             DAC_RE_d1     <= 1'b0;
             RS422_RE_d1   <= 1'b0;
-            CAN_RE_d1     <= 1'b0;
-            CAN_RE_d2     <= 1'b0;
+            CAN1_RE_d1    <= 1'b0;
+            CAN2_RE_d1    <= 1'b0;
+            CAN3_RE_d1    <= 1'b0;
+            CAN4_RE_d1    <= 1'b0;
         end else begin
             SP_RE_d1      <= SP_RE;
             CLOCK_RE_d1   <= CLOCK_RE;
@@ -120,8 +143,10 @@ module ADDR_DECODE(
             ADC_RE_d1     <= ADC_RE;
             DAC_RE_d1     <= DAC_RE;
             RS422_RE_d1   <= RS422_RE;
-            CAN_RE_d1     <= CAN_RE;
-            CAN_RE_d2     <= CAN_RE_d1; // For CAN, we need a second delay
+            CAN1_RE_d1    <= CAN1_RE;
+            CAN2_RE_d1    <= CAN2_RE;
+            CAN3_RE_d1    <= CAN3_RE;
+            CAN4_RE_d1    <= CAN4_RE;
         end
     end
 
@@ -134,7 +159,10 @@ module ADDR_DECODE(
                     (ADC_RE_d1)     ? ADC_IN     :
                     (DAC_RE_d1)     ? DAC_IN     :
                     (RS422_RE_d1)   ? RS422_IN   :
-                    (CAN_RE_d2)     ? CAN_IN     :
+                    (CAN1_RE_d1)    ? CAN1_IN    :
+                    (CAN2_RE_d1)    ? CAN2_IN    :
+                    (CAN3_RE_d1)    ? CAN3_IN    :
+                    (CAN4_RE_d1)    ? CAN4_IN    :
                                       32'h0;
 
 endmodule

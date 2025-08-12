@@ -110,12 +110,16 @@ module CORECAN_wrapper_tb;
         #100;
         
         // Test read operations
-        opb_read(32'h00000000, read_data);
+        opb_write(32'h00008000, read_data);
         #100;
-        
-        opb_read(32'h00000004, read_data);
+        opb_write(32'h00000000, read_data);
         #100;
-        
+
+        opb_write(32'h000087FF, read_data);
+        #100;
+        opb_read(32'h000007FF, read_data);
+        #100;
+
         $display("\n=== Test 2: APB Signal Timing Verification ===");
         
         // Verify that pwrite and penable signals have correct timing

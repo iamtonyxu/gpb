@@ -7,7 +7,10 @@
 `define ADC_ADDR                32'h0005_0000       // ADC address
 `define DAC_ADDR                32'h0006_0000       // DAC address
 `define RS422_ADDR              32'h0007_0000       // RS422 address
-`define CAN_ADDR                32'h0008_0000       // CAN address
+`define CAN1_ADDR               32'h0008_0000       // CAN1 address
+`define CAN2_ADDR               32'h0009_0000       // CAN2 address
+`define CAN3_ADDR               32'h000A_0000       // CAN3 address
+`define CAN4_ADDR               32'h000B_0000       // CAN4 address
 
 // Description: Size definitions for each sub-system
 `define SCRATCHPAD_SIZE         32'h0000_0040       // Scratchpad size
@@ -18,4 +21,4 @@
 `define ADC_SIZE                32'h0000_6000       // ADC size
 `define DAC_SIZE                32'h0000_0040       // DAC size
 `define RS422_SIZE              32'h0000_0040       // RS422 size
-`define CAN_SIZE                32'h0000_7FFF       // CAN size
+`define CAN_SIZE                32'h0000_FFFF       // CAN size
