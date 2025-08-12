@@ -311,9 +311,20 @@ Uint16 AuxEepromTest(Byte *pDoneFlag)
 	}
     *pDoneFlag |= 0x04;
 
+    for(idx = 0; idx < EEPROM_SIZE; idx++)
+        AuxEepromWriteByte(idx, 0x00);
+
+    for(idx = 0; idx < EEPROM_SIZE; idx++) {
+        if(AuxEepromReadByte(idx) != 0x00) {
+            ErrCnt |= 0x0008;
+            break;
+        }
+    }
+    *pDoneFlag |= 0x08;
+
 	for(idx = 0; idx < EEPROM_SIZE; idx++)
 		AuxEepromWriteByte(idx, 0xff);
-    *pDoneFlag |= 0x08;
+    *pDoneFlag |= 0x10;
 
 	return ErrCnt;
 
