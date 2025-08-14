@@ -163,270 +163,211 @@ if($enableTest > 0)
 }
 
 // CAN Test
-// CAN Write INT ENA
-UpdateStatus("CAN Write INT_ENA");
-$opbAddrStr = "00 08 00 04";
-$opbDataStr = "FF FF FF FF"; // Enable all INT
-call OpbWrite(); //APB Write
-$opbAddrStr = "00 08 80 04";
-call OpbWrite(); //APB Read
-call OpbRead();
-
-// CAN1 Write CMD
-UpdateStatus("CAN1 Write CMD");
-$opbAddrStr = "00 08 00 14";
-// B3:LPBK_MODE, B2: LISTEN_MODE, B0:RUN_STOP_MODE 
-//$opbDataStr = "00 00 00 01";//"00000001": GOOD to receive message on ZLGCAN
-$opbDataStr = "00 00 00 05"; //"00000005": GOOD to run loopback Test 
-call OpbWrite(); //APB Write
-$opbAddrStr = "00 08 80 14";
-call OpbWrite(); //APB Read
-$opbAddrStr = "00 08 80 14";
-call OpbRead();
-$opbAddrStr = "00 08 00 00";
-call OpbRead();
-
-// CAN1 Write CONFIG
-UpdateStatus("CAN1 Write CONFIG");
-$opbAddrStr = "00 08 00 18";
-$opbDataStr = "00 09 04 60"; // CLK100M, 1MBPS
-call OpbWrite(); //APB Write
-$opbAddrStr = "00 08 80 18";
-call OpbWrite(); //APB Read
-$opbAddrStr = "00 08 80 18";
-call OpbRead();
-
-// CAN1 Write TX_MSG0_ID - WO
-UpdateStatus("CAN1 Write TX_MSG0_ID");
-$opbAddrStr = "00 08 00 24";
-$opbDataStr = "FE 20 00 00"; // TX_ID = 11'H7F1
-call OpbWrite();//APB Write
-
-// CAN1 Write RX_MSG0_AMR
-UpdateStatus("CAN1 Write RX_MSG0_AMR");
-$opbAddrStr = "00 08 02 30";
-$opbDataStr = "FF FF FF FF";
-call OpbWrite(); //APB Write
-$opbAddrStr = "00 08 82 30";
-call OpbWrite(); //APB Read
-call OpbRead();
-
-// CAN1 Write RX_MSG0_AMR_DATA
-UpdateStatus("CAN1 Write RX_MSG0_AMR_DATA");
-$opbAddrStr = "00 08 02 38";
-$opbDataStr = "FF FF FF FF";
-call OpbWrite(); //APB Write
-$opbAddrStr = "00 08 82 38";
-call OpbWrite(); //APB Read
-call OpbRead();
-
-// CAN1 Write RX_MSG0_ACR
-UpdateStatus("CAN1 Write RX_MSG0_ACR");
-$opbAddrStr = "00 08 02 34";
-$opbDataStr = "00 00 00 00";
-call OpbWrite(); //APB Write
-$opbAddrStr = "00 08 82 34";
-call OpbWrite(); //APB Read
-call OpbRead();
-
-// CAN1 Write RX_MSG0_ACR_DATA
-UpdateStatus("CAN1 Write RX_MSG0_ACR_DATA");
-$opbAddrStr = "00 08 02 3C";
-$opbDataStr = "00 00 00 00";
-call OpbWrite(); //APB Write
-$opbAddrStr = "00 08 82 3C";
-call OpbWrite(); //APB Read
-call OpbRead();
-
-// CAN1 Write TX_MSG0 WORD1
-UpdateStatus("CAN1 Write TX_MSG0 WORD1");
-$opbAddrStr = "00 08 00 28";
-$opbDataStr = "11 22 33 44";
-call OpbWrite();//APB Write
-
-// CAN1 Write TX_MSG0 WORD0
-UpdateStatus("CAN1 Write TX_MSG0 WORD0");
-$opbAddrStr = "00 08 00 2C";
-$opbDataStr = "55 66 77 88";
-call OpbWrite();//APB Write
-
-// CAN1 Read RX_MSG0 CTRL
-UpdateStatus("CAN1 Write RX_MSG0 CTRL");
-$opbAddrStr = "00 08 02 20";
-$opbDataStr = "FF FF FF FF";
-call OpbWrite();//APB Write
-$opbAddrStr = "00 08 82 20";
-call OpbWrite();//APB Read
-call OpbRead();
-
-// CAN1 Write TX_MSG0 CTRL
-UpdateStatus("CAN1 Write TX_MSG0 CTRL");
-$opbAddrStr = "00 08 00 20";
-$opbDataStr = "00 88 00 01";
-//$opbDataStr = "00 88 00 0F";
-call OpbWrite();//APB Write
-$opbAddrStr = "00 08 80 20";
-call OpbWrite();//APB Read
-call OpbRead();
-
-UpdateStatus("Sleep(3)");
-Sleep(3);
-
-// CAN Read INT SOURCE
-UpdateStatus("CAN Read INT SOURCE");
-$opbAddrStr = "00 08 80 00";
-$opbDataStr = "00 00 00 00";
-call OpbWrite();//APB Read
-call OpbRead();
-
-// CAN1 Read TX_BUF STATUS
-UpdateStatus("CAN1 Read TX_BUF STATUS");
-$opbAddrStr = "00 08 80 0C";
-$opbDataStr = "00 00 00 00";
-call OpbWrite();//APB Read
-call OpbRead();
-
-// CAN1 Read RX_BUF STATUS
-UpdateStatus("CAN1 Read RX_BUF STATUS");
-$opbAddrStr = "00 08 80 08";
-$opbDataStr = "00 00 00 00";
-call OpbWrite();//APB Read
-call OpbRead();
-
-UpdateStatus("CAN Read ERR STATUS");
-$opbAddrStr = "00 08 80 10";
-$opbDataStr = "00 00 00 00";
-call OpbWrite();//APB Read
-call OpbRead();
-
-// CAN1 Read RX_MSG0 CTRL
-$opbAddrStr = "00 08 82 20";
-$opbDataStr = "00 00 00 00";
-call OpbWrite();//APB Read
-call OpbRead();
-
-// CAN1 Read RX_MSG0 ID
-$opbAddrStr = "00 08 82 24";
-$opbDataStr = "00 00 00 00";
-call OpbWrite();//APB Read
-call OpbRead();
-
-// CAN1 Read RX_MSG0 WORD1
-$opbAddrStr = "00 08 82 28";
-$opbDataStr = "00 00 00 00";
-call OpbWrite();//APB Read
-call OpbRead();
-
-// CAN1 Read RX_MSG0 WORD0
-$opbAddrStr = "00 08 82 2C";
-$opbDataStr = "00 00 00 00";
-call OpbWrite();//APB Read
-call OpbRead();
+if($enableTest > 0)
+{
+	// CAN Write INT ENA
+	UpdateStatus("CAN Write INT_ENA");
+	$opbAddrStr = "00 08 00 04";
+	$opbDataStr = "FF FF FF FF"; // Enable all INT
+	call OpbWrite(); //APB Write
+	$opbAddrStr = "00 08 80 04";
+	call OpbWrite(); //APB Read
+	call OpbRead();
+	
+	// CAN Write CMD
+	UpdateStatus("CAN Write CMD");
+	$opbAddrStr = "00 08 00 14";
+	// B3:LPBK_MODE, B2: LISTEN_MODE, B0:RUN_STOP_MODE 
+	//$opbDataStr = "00 00 00 01";//"00000001": GOOD to receive message on ZLGCAN
+	$opbDataStr = "00 00 00 05"; //"00000005": GOOD to run loopback Test 
+	call OpbWrite(); //APB Write
+	$opbAddrStr = "00 08 80 14";
+	call OpbWrite(); //APB Read
+	$opbAddrStr = "00 08 80 14";
+	call OpbRead();
+	$opbAddrStr = "00 08 00 00";
+	call OpbRead();
+	
+	// CAN Write CONFIG
+	UpdateStatus("CAN Write CONFIG");
+	$opbAddrStr = "00 08 00 18";
+	$opbDataStr = "00 09 04 60"; // CLK100M, 1MBPS
+	call OpbWrite(); //APB Write
+	$opbAddrStr = "00 08 80 18";
+	call OpbWrite(); //APB Read
+	$opbAddrStr = "00 08 80 18";
+	call OpbRead();
+	
+	// CAN Write TX_MSG0_ID - WO
+	UpdateStatus("CAN Write TX_MSG0_ID");
+	$opbAddrStr = "00 08 00 24";
+	$opbDataStr = "FE 20 00 00"; // TX_ID = 11'H7F1
+	call OpbWrite();//APB Write
+	
+	// CAN Write RX_MSG0_AMR
+	UpdateStatus("CAN Write RX_MSG0_AMR");
+	$opbAddrStr = "00 08 02 30";
+	$opbDataStr = "FF FF FF FF";
+	call OpbWrite(); //APB Write
+	$opbAddrStr = "00 08 82 30";
+	call OpbWrite(); //APB Read
+	call OpbRead();
+	
+	// CAN Write RX_MSG0_AMR_DATA
+	UpdateStatus("CAN Write RX_MSG0_AMR_DATA");
+	$opbAddrStr = "00 08 02 38";
+	$opbDataStr = "FF FF FF FF";
+	call OpbWrite(); //APB Write
+	$opbAddrStr = "00 08 82 38";
+	call OpbWrite(); //APB Read
+	call OpbRead();
+	
+	// CAN Write RX_MSG0_ACR
+	UpdateStatus("CAN Write RX_MSG0_ACR");
+	$opbAddrStr = "00 08 02 34";
+	$opbDataStr = "00 00 00 00";
+	call OpbWrite(); //APB Write
+	$opbAddrStr = "00 08 82 34";
+	call OpbWrite(); //APB Read
+	call OpbRead();
+	
+	// CAN Write RX_MSG0_ACR_DATA
+	UpdateStatus("CAN Write RX_MSG0_ACR_DATA");
+	$opbAddrStr = "00 08 02 3C";
+	$opbDataStr = "00 00 00 00";
+	call OpbWrite(); //APB Write
+	$opbAddrStr = "00 08 82 3C";
+	call OpbWrite(); //APB Read
+	call OpbRead();
+	
+	// CAN Write TX_MSG0 WORD1
+	UpdateStatus("CAN Write TX_MSG0 WORD1");
+	$opbAddrStr = "00 08 00 28";
+	$opbDataStr = "11 22 33 44";
+	call OpbWrite();//APB Write
+	
+	// CAN Write TX_MSG0 WORD0
+	UpdateStatus("CAN Write TX_MSG0 WORD0");
+	$opbAddrStr = "00 08 00 2C";
+	$opbDataStr = "55 66 77 88";
+	call OpbWrite();//APB Write
+	
+	// CAN Read RX_MSG0 CTRL
+	UpdateStatus("CAN Write RX_MSG0 CTRL");
+	$opbAddrStr = "00 08 02 20";
+	$opbDataStr = "FF FF FF FF";
+	call OpbWrite();//APB Write
+	$opbAddrStr = "00 08 82 20";
+	call OpbWrite();//APB Read
+	call OpbRead();
+	
+	// CAN Write TX_MSG0 CTRL
+	UpdateStatus("CAN Write TX_MSG0 CTRL");
+	$opbAddrStr = "00 08 00 20";
+	$opbDataStr = "00 88 00 01";
+	//$opbDataStr = "00 88 00 0F";
+	call OpbWrite();//APB Write
+	$opbAddrStr = "00 08 80 20";
+	call OpbWrite();//APB Read
+	call OpbRead();
+	
+	UpdateStatus("Sleep(3)");
+	Sleep(3);
+	
+	// CAN Read INT SOURCE
+	UpdateStatus("CAN Read INT SOURCE");
+	$opbAddrStr = "00 08 80 00";
+	$opbDataStr = "00 00 00 00";
+	call OpbWrite();//APB Read
+	call OpbRead();
+	
+	// CAN Read TX_BUF STATUS
+	UpdateStatus("CAN Read TX_BUF STATUS");
+	$opbAddrStr = "00 08 80 0C";
+	$opbDataStr = "00 00 00 00";
+	call OpbWrite();//APB Read
+	call OpbRead();
+	
+	// CAN Read RX_BUF STATUS
+	UpdateStatus("CAN Read RX_BUF STATUS");
+	$opbAddrStr = "00 08 80 08";
+	$opbDataStr = "00 00 00 00";
+	call OpbWrite();//APB Read
+	call OpbRead();
+	
+	UpdateStatus("CAN Read ERR STATUS");
+	$opbAddrStr = "00 08 80 10";
+	$opbDataStr = "00 00 00 00";
+	call OpbWrite();//APB Read
+	call OpbRead();
+	
+	// CAN Read RX_MSG0 CTRL
+	$opbAddrStr = "00 08 82 20";
+	$opbDataStr = "00 00 00 00";
+	call OpbWrite();//APB Read
+	call OpbRead();
+	
+	// CAN Read RX_MSG0 ID
+	$opbAddrStr = "00 08 82 24";
+	$opbDataStr = "00 00 00 00";
+	call OpbWrite();//APB Read
+	call OpbRead();
+	
+	// CAN Read RX_MSG0 WORD1
+	$opbAddrStr = "00 08 82 28";
+	$opbDataStr = "00 00 00 00";
+	call OpbWrite();//APB Read
+	call OpbRead();
+	
+	// CAN Read RX_MSG0 WORD0
+	$opbAddrStr = "00 08 82 2C";
+	$opbDataStr = "00 00 00 00";
+	call OpbWrite();//APB Read
+	call OpbRead();
+}
 
 if($enableTest > 0)
 {
-    // CAN2 Write CMD reg
-    UpdateStatus("CAN2");
-    $opbAddrStr = "00 09 08 14";
-    $opbDataStr = "00 00 00 05"; // 5:LPBK_MODE
-    call OpbWrite(); //APB Write
-    $opbAddrStr = "00 09 88 14";
-    call OpbWrite(); //APB Read
-    $opbAddrStr = "00 09 08 14";
-    call OpbRead();
-    $opbAddrStr = "00 09 00 00";
+    // CAN Write MSGAV to clear RX BUF
+    UpdateStatus("CAN Write MSGAV to clear RX BUF");
+    $opbAddrStr = "00 08 02 20";
+    $opbDataStr = "00 00 00 01";
+    call OpbWrite();//APB Write
+    $opbAddrStr = "00 08 82 20";
+    call OpbWrite();//APB Read
     call OpbRead();
 
-    // CAN3 Write CMD reg
-    UpdateStatus("CAN3");
-    $opbAddrStr = "00 0A 08 14";
-    $opbDataStr = "00 00 00 05"; // 5:LPBK_MODE
-    call OpbWrite(); //APB Write
-    $opbAddrStr = "00 0A 88 14";
-    call OpbWrite(); //APB Read
-    $opbAddrStr = "00 0A 08 14";
-    call OpbRead();
-    $opbAddrStr = "00 0A 00 00";
+    // CAN Read RX_BUF STATUS
+    UpdateStatus("CAN Read RX_BUF STATUS");
+    $opbAddrStr = "00 08 80 08";
+    $opbDataStr = "00 00 00 00";
+    call OpbWrite();//APB Read
     call OpbRead();
 
-    // CAN4 Write CMD reg
-    UpdateStatus("CAN4");
-    $opbAddrStr = "00 0B 08 14";
-    $opbDataStr = "00 00 00 05"; // 5:LPBK_MODE
-    call OpbWrite(); //APB Write
-    $opbAddrStr = "00 0B 88 14";
-    call OpbWrite(); //APB Read
-    $opbAddrStr = "00 0B 08 14";
-    call OpbRead();
-    $opbAddrStr = "00 0B 00 00";
+    // CAN Read RX_MSG0 ID
+    $opbAddrStr = "00 09 82 24";
+    $opbDataStr = "00 00 00 00";
+    call OpbWrite();//APB Read
     call OpbRead();
 
+    // CAN Read RX_MSG0 WORD1
+    $opbAddrStr = "00 09 82 28";
+    $opbDataStr = "00 00 00 00";
+    call OpbWrite();//APB Read
+    call OpbRead();
+    $CAN2_RX_MSG1 = $opbDataStr;
 
-    // Write RX_MSG0_AMR
-    $opbAddrStr = "00 08 0A 30";
-    $opbDataStr = "AB CD EF FF";
-    call OpbWrite(); //APB Write
-    $opbAddrStr = "00 08 8A 30";
-    call OpbWrite(); //APB Read
+    // CAN Read RX_MSG0 WORD0
+    $opbAddrStr = "00 09 82 2C";
+    $opbDataStr = "00 00 00 00";
+    call OpbWrite();//APB Read
     call OpbRead();
-    
-    // Write RX_MSG0_AMR
-    $opbAddrStr = "00 09 0A 30";
-    $opbDataStr = "AB CD EF FF";
-    call OpbWrite(); //APB Write
-    $opbAddrStr = "00 09 8A 30";
-    call OpbWrite(); //APB Read
-    call OpbRead();
-    
-    // Write RX_MSG0_AMR
-    $opbAddrStr = "00 0A 0A 30";
-    $opbDataStr = "AB CD EF FF";
-    call OpbWrite(); //APB Write
-    $opbAddrStr = "00 0A 8A 30";
-    call OpbWrite(); //APB Read
-    call OpbRead();
-    
-    // Write RX_MSG0_AMR
-    $opbAddrStr = "00 0B 0A 30";
-    $opbDataStr = "AB CD EF FF";
-    call OpbWrite(); //APB Write
-    $opbAddrStr = "00 0B 8A 30";
-    call OpbWrite(); //APB Read
-    call OpbRead();
-
+    $CAN2_RX_MSG0 = $opbDataStr;
 }
 
+call CAN_Test();
 
-if($enableTest > 0)
-{
-    // Write Config reg
-    $opbAddrStr = "00 08 08 18";
-    $opbDataStr = "00 09 04 60";
-    call OpbWrite(); //APB Write
-    $opbAddrStr = "00 08 88 18";
-    call OpbWrite(); //APB Read
-    call OpbRead();
 
-    //Read TX_MSG0_CTRL
-    //$opbAddrStr = "00 08 08 20";
-    //call OpbRead();
-
-    // Write INT ENABLE REG
-    $opbAddrStr = "00 08 08 04";
-    $opbDataStr = "00 00 FF FF";
-    call OpbWrite(); //APB Write
-    $opbAddrStr = "00 08 88 04";
-    call OpbWrite(); //APB Read
-    call OpbRead();
-
-    // Write RX_MSG0_AMR
-    $opbAddrStr = "00 08 0A 30";
-    $opbDataStr = "AB CD EF FF";
-    call OpbWrite(); //APB Write
-    $opbAddrStr = "00 08 8A 30";
-    call OpbWrite(); //APB Read
-    call OpbRead();
-}
 
 call OpbClose();
 End;
