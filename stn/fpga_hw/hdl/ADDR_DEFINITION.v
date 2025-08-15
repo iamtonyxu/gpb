@@ -15,4 +15,4 @@
 `define GPIO_SIZE               32'h0000_0040       // GPIO input size
 `define APP_SIZE                32'h0000_0040       // APP IF size
 `define EEPROM_SIZE             32'h0000_0040       // EEPROM IF size
-`define PHY_SIZE                32'h0000_0040       // PHY IF size
+`define PHY_SIZE                32'h0000_FFFF       // PHY IF size

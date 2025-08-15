@@ -94,6 +94,8 @@ module GPIO(
     output              BMENLP_CNTL,
 
     output              HDW_GANT_ROT_EN,
+    output              HDW_FPGA_STAT_LED1,
+    output              HDW_FPGA_STAT_LED2,
 
     // Test Points
     output              TP85,   // 1.8V Bank
@@ -145,6 +147,8 @@ module GPIO(
     assign MTNENLP_CNTL      = GPIO_OUT_REG[5];
     assign BMENLP_CNTL       = GPIO_OUT_REG[6];
     assign HDW_GANT_ROT_EN   = GPIO_OUT_REG[7];
+    assign HDW_FPGA_STAT_LED1 = GPIO_OUT_REG[8];
+    assign HDW_FPGA_STAT_LED2 = GPIO_OUT_REG[9];
 
     // Test Points
     assign TP85              = TP_OUT_REG[0]; assign TP86              = TP_OUT_REG[1];

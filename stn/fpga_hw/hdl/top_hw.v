@@ -20,7 +20,7 @@
 `timescale 1ns / 100ps
 `define FW_VERSION  32'h0000_0001 // Firmware version
 `define FPGA_ID     32'h0000_0050 // FPGA ID
-`define BUILD_DATE  32'h2025_0714 // YYYY_MMDD
+`define BUILD_DATE  32'h2025_0815 // YYYY_MMDD
 
 module top_hw(
     // Clock and Reset
@@ -152,7 +152,7 @@ module top_hw(
     output PHY_RMII_TX_DATA1,
     output PHY_RMII_TX_DATA0,
     output PHY_RST_N,
-    output PHY_MDIO,
+    inout  PHY_MDIO,
     output PHY_MDC,
     output ETH_LED1,
     output ETH_LED2,
@@ -163,9 +163,9 @@ module top_hw(
     // DBUG Connector
     input  HDW_DBUG_SCLK,    // J36-P1, UART-RXD
     input  HDW_DBUG_MISO,    // J36-P3, CLKIN_2KHZ
-    input  HDW_DBUG_MOSI,
-    input  HDW_DBUG_CS_N,
-    input  HDW_DBUG_ACTIVE,
+    output HDW_DBUG_MOSI,
+    output HDW_DBUG_CS_N,
+    output HDW_DBUG_ACTIVE,
     output HDW_DBUG_HEADER2, // J36-P2, UART-TXD
     output HDW_DBUG_HEADER4, // J36-P4, CLKOUT_2KHZ
     output HDW_DBUG_HEADER6,
@@ -208,7 +208,7 @@ module top_hw(
 );
 
     // Clock and Reset Signals
-    wire clk_100m, clk_50m, rst_n;
+    wire clk_100mhz, clk_50mhz, clk_25mhz, rst_n;
     // UART Signals
     wire rxd, txd;
     // Reference Clock Signals
@@ -227,22 +227,47 @@ module top_hw(
     // clock generation
     wire pulse_200khz, pulse_20khz, pulse_2khz, pulse_1hz;
 
-    assign clk_100m    = HDW_FPGA_100M_CLK;
-    assign clk_50m     = HDW_FPGA_50M_CLK;
+    // PHY_MII
+    wire PHY_MDIO_OUT, PHY_MDIO_IN, PHY_MDIO_ENABLE;
+
+    // Wake-up Logic
+    reg opb_wakeup;
+    wire HDW_FPGA_STAT_LED1_W, HDW_FPGA_STAT_LED2_W;
+
+    assign clk_100mhz    = HDW_FPGA_100M_CLK;
+    assign clk_50mhz     = HDW_FPGA_50M_CLK;
     assign rst_n       = HDW_DEVRST_N;
 
     assign rxd         = HDW_DBUG_SCLK;      // J36-P1
     assign clkin_2khz  = HDW_DBUG_MISO;      // J36
     assign HDW_DBUG_HEADER2  = txd;          // J36-P2
     assign HDW_DBUG_HEADER4  = clkout_2khz;  // J36-P4
-    assign HDW_DBUG_HEADER6  = 1'b0;         // Reserved
-    assign HDW_DBUG_HEADER8  = 1'b0;         // Reserved
-    assign HDW_DBUG_HEADER10 = 1'b0;         // Reserved
+    assign HDW_DBUG_MOSI     = 1'b0; // Reserved
+    assign HDW_DBUG_CS_N     = 1'b0; // Reserved
+    assign HDW_DBUG_ACTIVE   = 1'b0; // Reserved
+    assign HDW_DBUG_HEADER6  = 1'b0; // Reserved
+    assign HDW_DBUG_HEADER8  = 1'b0; // Reserved
+    assign HDW_DBUG_HEADER10 = 1'b0; // Reserved
 
     // status LEDs
-    assign HDW_FPGA_DONE      = 1'b1;        // D33 ON after FPGA configuration
-    assign HDW_FPGA_STAT_LED1 = pulse_1hz;   // D20 ON
-    assign HDW_FPGA_STAT_LED2 = pulse_1hz;   // D21 ON
+    assign HDW_FPGA_DONE      = rst_n; // D33 ON after FPGA configuration
+
+    assign HDW_FPGA_STAT_LED1 = opb_wakeup ? HDW_FPGA_STAT_LED1_W : pulse_1hz;   // D20 ON
+    assign HDW_FPGA_STAT_LED2 = opb_wakeup ? HDW_FPGA_STAT_LED2_W : pulse_1hz;   // D21 ON
+
+    //=========================================================================
+    // Wake-up Logic
+    //=========================================================================
+    // OPB wakeup - any opb_re and opb_we will wake up the system
+    always @(posedge opb_clk or negedge rst_n) begin
+        if (!rst_n) begin
+            opb_wakeup <= 1'b0;
+        end else begin
+            if (opb_re || opb_we) begin
+                opb_wakeup <= 1'b1;
+            end
+        end
+    end
 
     // PULSE_1HZ
     CLOCK_DIV clkgen_2khz(
@@ -252,9 +277,17 @@ module top_hw(
         .CLK_OUT (pulse_1hz)
     );
 
+    // clk_25mhz
+    CLOCK_DIV clkgen_25mhz(
+        .CLK_DIV (16'd2),
+        .CLK_IN  (clk_100mhz),
+        .RST     (~rst_n),
+        .CLK_OUT (clk_25mhz)
+    );
+
     // cmd_server instantiation
     cmd_server u_cmd_server(
-        .SYS_CLK    (clk_100m),
+        .SYS_CLK    (clk_100mhz),
         .SYS_RST    (~rst_n),
         .PULSE_2KHZ (pulse_2khz),
         .OPB_CLK    (opb_clk),
@@ -328,7 +361,7 @@ module top_hw(
         .CLK_GEN_WE   (clock_we),
         .OPB_CLK      (opb_clk),
         .OPB_RST      (opb_rst),
-        .SYSCLK       (clk_100m),
+        .SYSCLK       (clk_100mhz),
         .PULSE_200KHZ (pulse_200khz),
         .PULSE_20KHZ  (pulse_20khz),
         .PULSE_2KHZ   (pulse_2khz),
@@ -347,7 +380,7 @@ module top_hw(
         .OPB_ADDR  (opb_addr),
         .OSC_CT_RE (counter_re1),
         .OSC_CT_WE (counter_we1),
-        .TEST_CLK  (clk_100m),
+        .TEST_CLK  (clk_100mhz),
         .REF_CLK   (clkin_2khz)
     );
 
@@ -360,7 +393,7 @@ module top_hw(
         .OPB_ADDR  (opb_addr),
         .OSC_CT_RE (counter_re2),
         .OSC_CT_WE (counter_we2),
-        .TEST_CLK  (clk_50m),
+        .TEST_CLK  (clk_50mhz),
         .REF_CLK   (clkin_2khz)
     );
 
@@ -452,7 +485,9 @@ module top_hw(
         .BMENLP_CNTL        (BMENLP_CNTL),
         
         .HDW_GANT_ROT_EN    (HDW_GANT_ROT_EN),
-        
+        .HDW_FPGA_STAT_LED1  (HDW_FPGA_STAT_LED1_W),
+        .HDW_FPGA_STAT_LED2  (HDW_FPGA_STAT_LED2_W),
+
         // Test Points
         .TP85               (TP85),
         .TP86               (TP86),
@@ -497,13 +532,19 @@ module top_hw(
         .OPB_ADDR           (opb_addr),
         .PHY_RE             (phy_re),
         .PHY_WE             (phy_we),
-        
+
+        // PHY Clock for RMII_TX and RMII_RX
+        .PHY_CLK            (clk_50mhz),
+        .CLK_25MHZ          (clk_25mhz),
+
         // ETH Interface
         .PHY_RMII_TX_EN     (PHY_RMII_TX_EN),
         .PHY_RMII_TX_DATA1  (PHY_RMII_TX_DATA1),
         .PHY_RMII_TX_DATA0  (PHY_RMII_TX_DATA0),
         .PHY_RST_N          (PHY_RST_N),
-        .PHY_MDIO           (PHY_MDIO),
+        .PHY_MDIO_OUT       (PHY_MDIO_OUT),
+        .PHY_MDIO_IN        (PHY_MDIO_IN),
+        .PHY_MDIO_ENABLE    (PHY_MDIO_ENABLE),
         .PHY_MDC            (PHY_MDC),
         .ETH_LED1           (ETH_LED1),
         .ETH_LED2           (ETH_LED2),
@@ -511,6 +552,9 @@ module top_hw(
         .PHY_RMII_RX_DATA0  (PHY_RMII_RX_DATA0),
         .PHY_RMII_RX_DV     (PHY_RMII_RX_DV)
     );
+
+    assign PHY_MDIO_IN = PHY_MDIO;
+    assign PHY_MDIO = PHY_MDIO_ENABLE ? PHY_MDIO_OUT : 1'bz;
 
     // APP_IF instantiation
     APP_IF app_if_0(

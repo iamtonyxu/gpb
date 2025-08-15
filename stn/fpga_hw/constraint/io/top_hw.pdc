@@ -61,8 +61,8 @@ set_io -port_name {HSSB_PMII_CLK}       -pin_name V21   -fixed true  -io_std LVC
 set_io -port_name {HSSB_PMII_RESET_N}   -pin_name V20   -fixed true  -io_std LVCMOS18  -DIRECTION Output
 set_io -port_name {HSSB_PMII_RX_DATA0}  -pin_name Y20   -fixed true  -io_std LVCMOS18  -DIRECTION Output
 set_io -port_name {HSSB_PMII_RX_DATA1}  -pin_name AA20  -fixed true  -io_std LVCMOS18  -DIRECTION Output
-set_io -port_name {HSSB_PMII_RX_DATA2}  -pin_name AB22  -fixed true  -io_std LVCMOS18  -DIRECTION Output
-set_io -port_name {HSSB_PMII_RX_DATA3}  -pin_name AA21  -fixed true  -io_std LVCMOS18  -DIRECTION Output
+set_io -port_name {HSSB_PMII_RX_DATA2}  -pin_name AB21  -fixed true  -io_std LVCMOS18  -DIRECTION Output
+set_io -port_name {HSSB_PMII_RX_DATA3}  -pin_name AB20  -fixed true  -io_std LVCMOS18  -DIRECTION Output
 set_io -port_name {HSSB_PMII_RX_DV}     -pin_name Y21   -fixed true  -io_std LVCMOS18  -DIRECTION Output
 set_io -port_name {HDW_GANT_ROT_EN}     -pin_name B21   -fixed true  -io_std LVCMOS33  -DIRECTION Output
 set_io -port_name {APP_FPGA_SPI0_MISO}  -pin_name W17   -fixed true  -io_std LVCMOS18  -DIRECTION Output
@@ -109,7 +109,7 @@ set_io -port_name {PHY_RMII_TX_EN}      -pin_name AA2   -fixed true  -io_std LVC
 set_io -port_name {PHY_RMII_TX_DATA1}   -pin_name V1    -fixed true  -io_std LVCMOS18  -DIRECTION Output
 set_io -port_name {PHY_RMII_TX_DATA0}   -pin_name V2    -fixed true  -io_std LVCMOS18  -DIRECTION Output
 set_io -port_name {PHY_RST_N}           -pin_name AB2   -fixed true  -io_std LVCMOS18  -DIRECTION Output
-set_io -port_name {PHY_MDIO}            -pin_name Y3    -fixed true  -io_std LVCMOS18  -DIRECTION Output
+set_io -port_name {PHY_MDIO}            -pin_name Y3    -fixed true  -io_std LVCMOS18  -DIRECTION Inout
 set_io -port_name {PHY_MDC}             -pin_name W3    -fixed true  -io_std LVCMOS18  -DIRECTION Output
 set_io -port_name {ETH_LED1}            -pin_name T7    -fixed true  -io_std LVCMOS18  -DIRECTION Output
 set_io -port_name {ETH_LED2}            -pin_name T6    -fixed true  -io_std LVCMOS18  -DIRECTION Output
@@ -119,9 +119,9 @@ set_io -port_name {PHY_RMII_RX_DV}      -pin_name AA1   -fixed true  -io_std LVC
 
 set_io -port_name {HDW_DBUG_SCLK}       -pin_name W2    -fixed true  -io_std LVCMOS18  -DIRECTION Input
 set_io -port_name {HDW_DBUG_MISO}       -pin_name W1    -fixed true  -io_std LVCMOS18  -DIRECTION Input
-set_io -port_name {HDW_DBUG_MOSI}       -pin_name U4    -fixed true  -io_std LVCMOS18  -DIRECTION Input
-set_io -port_name {HDW_DBUG_CS_N}       -pin_name W4    -fixed true  -io_std LVCMOS18  -DIRECTION Input
-set_io -port_name {HDW_DBUG_ACTIVE}     -pin_name U5    -fixed true  -io_std LVCMOS18  -DIRECTION Input
+set_io -port_name {HDW_DBUG_MOSI}       -pin_name U4    -fixed true  -io_std LVCMOS18  -DIRECTION Output
+set_io -port_name {HDW_DBUG_CS_N}       -pin_name W4    -fixed true  -io_std LVCMOS18  -DIRECTION Output
+set_io -port_name {HDW_DBUG_ACTIVE}     -pin_name U5    -fixed true  -io_std LVCMOS18  -DIRECTION Output
 set_io -port_name {HDW_DBUG_HEADER2}    -pin_name V6    -fixed true  -io_std LVCMOS18  -DIRECTION Output
 set_io -port_name {HDW_DBUG_HEADER4}    -pin_name V5    -fixed true  -io_std LVCMOS18  -DIRECTION Output
 set_io -port_name {HDW_DBUG_HEADER6}    -pin_name V7    -fixed true  -io_std LVCMOS18  -DIRECTION Output

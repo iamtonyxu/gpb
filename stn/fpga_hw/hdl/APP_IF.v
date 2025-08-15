@@ -68,41 +68,43 @@ module APP_IF#(
         end
     end
 
-    // Assign outputs to APP interface signals
-    assign APP_AUX_IO0       = app_data_out[0];
-    assign APP_AUX_IO1       = app_data_out[1];
-    assign APP_AUX_IO2       = app_data_out[2];
-    assign APP_AUX_IO3       = app_data_out[3];
-    assign APP_AUX_IO4       = app_data_out[4];
-    assign APP_AUX_IO5       = app_data_out[5];
+    // Assign outputs from app_data_out
+    assign HSSB_PMII_CLK        = app_data_out[0];
+    assign HSSB_PMII_RESET_N    = app_data_out[1];
+    assign HSSB_PMII_RX_DATA0   = app_data_out[2];
+    assign HSSB_PMII_RX_DATA1   = app_data_out[3];
+    assign HSSB_PMII_RX_DATA2   = app_data_out[4];
+    assign HSSB_PMII_RX_DATA3   = app_data_out[5];
+    assign HSSB_PMII_RX_DV      = app_data_out[6];
+    
+    assign APP_FPGA_SPI0_MISO   = app_data_out[7];
+    assign APP_FPGA_SPI1_MISO   = app_data_out[8];
+    assign APP_FPGA_TMS         = app_data_out[9];
+    assign APP_FPGA_TDI         = app_data_out[10];
+    assign APP_FPGA_TCK         = app_data_out[11];
+    assign APP_FPGA_TRST        = app_data_out[12];
 
-    assign HSSB_PMII_TX_DATA0    = app_data_out[6];
-    assign HSSB_PMII_TX_DATA1    = app_data_out[7];
-    assign HSSB_PMII_TX_DATA2    = app_data_out[8];
-    assign HSSB_PMII_TX_DATA3    = app_data_out[9];
-    assign HSSB_PMII_TX_EN       = app_data_out[10];
-
-    assign APP_FPGA_SPI1_CS_N   = app_data_out[11];
-    assign APP_FPGA_SPI0_CS_N   = app_data_out[12];
-    assign APP_FPGA_SPI0_MOSI   = app_data_out[13];
-    assign APP_FPGA_SPI1_MOSI   = app_data_out[14];
-    assign APP_FPGA_SPI_CLK     = app_data_out[15];
-    assign DISABLE_HDW_FPGA     = app_data_out[16];
-    assign APP_FPGA_TDO         = app_data_out[17];
-
-    // Input signals from APP
-    assign app_data_in[0]       = HSSB_PMII_CLK;
-    assign app_data_in[1]       = HSSB_PMII_RESET_N;
-    assign app_data_in[2]       = HSSB_PMII_RX_DATA0;
-    assign app_data_in[3]       = HSSB_PMII_RX_DATA1;
-    assign app_data_in[4]       = HSSB_PMII_RX_DATA2;
-    assign app_data_in[5]       = HSSB_PMII_RX_DATA3;
-    assign app_data_in[6]       = HSSB_PMII_RX_DV;
-    assign app_data_in[7]       = APP_FPGA_SPI0_MISO;
-    assign app_data_in[8]       = APP_FPGA_SPI1_MISO;
-    assign app_data_in[9]       = APP_FPGA_TMS;
-    assign app_data_in[10]      = APP_FPGA_TDI;
-    assign app_data_in[11]      = APP_FPGA_TCK;
-    assign app_data_in[12]      = APP_FPGA_TRST;
+    // Input signals to app_data_in  
+    assign app_data_in[0]       = APP_AUX_IO0;
+    assign app_data_in[1]       = APP_AUX_IO1;
+    assign app_data_in[2]       = APP_AUX_IO2;
+    assign app_data_in[3]       = APP_AUX_IO3;
+    assign app_data_in[4]       = APP_AUX_IO4;
+    assign app_data_in[5]       = APP_AUX_IO5;
+    assign app_data_in[6]       = HSSB_PMII_TX_DATA0;
+    assign app_data_in[7]       = HSSB_PMII_TX_DATA1;
+    assign app_data_in[8]       = HSSB_PMII_TX_DATA2;
+    assign app_data_in[9]       = HSSB_PMII_TX_DATA3;
+    assign app_data_in[10]      = HSSB_PMII_TX_EN;
+    assign app_data_in[11]      = APP_FPGA_SPI1_CS_N;
+    assign app_data_in[12]      = APP_FPGA_SPI0_CS_N;
+    assign app_data_in[13]      = APP_FPGA_SPI0_MOSI;
+    assign app_data_in[14]      = APP_FPGA_SPI1_MOSI;
+    assign app_data_in[15]      = APP_FPGA_SPI_CLK;
+    assign app_data_in[16]      = DISABLE_HDW_FPGA;
+    assign app_data_in[17]      = APP_FPGA_TDO;
+    
+    // Unused bits should be tied to zero
+    assign app_data_in[31:18]   = 14'b0;
 
 endmodule
