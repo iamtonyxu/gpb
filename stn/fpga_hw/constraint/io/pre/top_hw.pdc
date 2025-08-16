@@ -6,7 +6,7 @@
 
 # Family: PolarFire , Die: MPF050T , Package: FCVG484
 
-# Date generated: Sat Jun 21 16:03:36 2025 
+# Date generated: Sat Aug 16 17:31:50 2025 
 
 
 # 
@@ -24,6 +24,84 @@
 # 
 # User Locked I/O settings
 # 
+
+set_io -port_name APP_AUX_IO0  \
+    -pin_name U10              \
+    -fixed true                \
+    -DIRECTION INPUT
+
+
+set_io -port_name APP_AUX_IO1  \
+    -pin_name T11              \
+    -fixed true                \
+    -DIRECTION INPUT
+
+
+set_io -port_name APP_AUX_IO2  \
+    -pin_name T8               \
+    -fixed true                \
+    -DIRECTION INPUT
+
+
+set_io -port_name APP_AUX_IO3  \
+    -pin_name U8               \
+    -fixed true                \
+    -DIRECTION INPUT
+
+
+set_io -port_name APP_AUX_IO4  \
+    -pin_name AB8              \
+    -fixed true                \
+    -DIRECTION INPUT
+
+
+set_io -port_name APP_AUX_IO5  \
+    -pin_name AB7              \
+    -fixed true                \
+    -DIRECTION INPUT
+
+
+set_io -port_name APP_FPGA_SPI0_CS_N  \
+    -pin_name W19                     \
+    -fixed true                       \
+    -DIRECTION INPUT
+
+
+set_io -port_name APP_FPGA_SPI0_MISO  \
+    -pin_name W17                     \
+    -fixed true                       \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name APP_FPGA_SPI0_MOSI  \
+    -pin_name W18                     \
+    -fixed true                       \
+    -DIRECTION INPUT
+
+
+set_io -port_name APP_FPGA_SPI1_CS_N  \
+    -pin_name Y18                     \
+    -fixed true                       \
+    -DIRECTION INPUT
+
+
+set_io -port_name APP_FPGA_SPI1_MISO  \
+    -pin_name AB19                    \
+    -fixed true                       \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name APP_FPGA_SPI1_MOSI  \
+    -pin_name AA18                    \
+    -fixed true                       \
+    -DIRECTION INPUT
+
+
+set_io -port_name APP_FPGA_SPI_CLK  \
+    -pin_name Y19                   \
+    -fixed true                     \
+    -DIRECTION INPUT
+
 
 set_io -port_name APP_FPGA_TCK  \
     -pin_name A20               \
@@ -130,6 +208,133 @@ set_io -port_name BMENLP_LOC_CNTL  \
     -DIRECTION OUTPUT
 
 
+set_io -port_name BMENLP_STATE  \
+    -pin_name B13               \
+    -fixed true                 \
+    -io_std LVCMOS33            \
+    -DIRECTION INPUT
+
+
+set_io -port_name CDOS_STS_N  \
+    -pin_name D12             \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -DIRECTION INPUT
+
+
+set_io -port_name CMNR_STS_N  \
+    -pin_name D14             \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -DIRECTION INPUT
+
+
+set_io -port_name CSPARESW1_N  \
+    -pin_name J2               \
+    -fixed true                \
+    -io_std LVCMOS33           \
+    -DIRECTION INPUT
+
+
+set_io -port_name CSPARESW2_N  \
+    -pin_name H2               \
+    -fixed true                \
+    -io_std LVCMOS33           \
+    -DIRECTION INPUT
+
+
+set_io -port_name DC_MAIN_DOOR_SW_N  \
+    -pin_name D13                    \
+    -fixed true                      \
+    -io_std LVCMOS33                 \
+    -DIRECTION INPUT
+
+
+set_io -port_name DISABLE_HDW_FPGA  \
+    -pin_name T10                   \
+    -fixed true                     \
+    -DIRECTION INPUT
+
+
+set_io -port_name EMO_GOOD_N  \
+    -pin_name A21             \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -DIRECTION INPUT
+
+
+set_io -port_name ETH_LED1  \
+    -pin_name T7            \
+    -fixed true             \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name ETH_LED2  \
+    -pin_name T6            \
+    -fixed true             \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HDW_DBUG_ACTIVE  \
+    -pin_name U5                   \
+    -fixed true                    \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HDW_DBUG_CS_N  \
+    -pin_name W4                 \
+    -fixed true                  \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HDW_DBUG_HEADER10  \
+    -pin_name V4                     \
+    -fixed true                      \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HDW_DBUG_HEADER2  \
+    -pin_name V6                    \
+    -fixed true                     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HDW_DBUG_HEADER4  \
+    -pin_name V5                    \
+    -fixed true                     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HDW_DBUG_HEADER6  \
+    -pin_name V7                    \
+    -fixed true                     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HDW_DBUG_HEADER8  \
+    -pin_name U7                    \
+    -fixed true                     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HDW_DBUG_MISO  \
+    -pin_name W1                 \
+    -fixed true                  \
+    -DIRECTION INPUT
+
+
+set_io -port_name HDW_DBUG_MOSI  \
+    -pin_name U4                 \
+    -fixed true                  \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HDW_DBUG_SCLK  \
+    -pin_name W2                 \
+    -fixed true                  \
+    -DIRECTION INPUT
+
+
 set_io -port_name HDW_DEVRST_N  \
     -pin_name D16               \
     -fixed true                 \
@@ -137,10 +342,40 @@ set_io -port_name HDW_DEVRST_N  \
     -DIRECTION INPUT
 
 
+set_io -port_name HDW_EEP_CS_N  \
+    -pin_name U19               \
+    -fixed true                 \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HDW_EEP_SCLK  \
+    -pin_name V19               \
+    -fixed true                 \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HDW_EEP_SDI  \
+    -pin_name V17              \
+    -fixed true                \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HDW_EEP_SDO  \
+    -pin_name V16              \
+    -fixed true                \
+    -DIRECTION INPUT
+
+
 set_io -port_name HDW_FPGA_100M_CLK  \
     -pin_name B3                     \
     -fixed true                      \
     -io_std LVCMOS33                 \
+    -DIRECTION INPUT
+
+
+set_io -port_name HDW_FPGA_50M_CLK  \
+    -pin_name Y1                    \
+    -fixed true                     \
     -DIRECTION INPUT
 
 
@@ -170,6 +405,78 @@ set_io -port_name HDW_GANT_ROT_EN  \
     -fixed true                    \
     -io_std LVCMOS33               \
     -DIRECTION OUTPUT
+
+
+set_io -port_name HSSB_PMII_CLK  \
+    -pin_name V21                \
+    -fixed true                  \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HSSB_PMII_RESET_N  \
+    -pin_name V20                    \
+    -fixed true                      \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HSSB_PMII_RX_DATA0  \
+    -pin_name Y20                     \
+    -fixed true                       \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HSSB_PMII_RX_DATA1  \
+    -pin_name AA20                    \
+    -fixed true                       \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HSSB_PMII_RX_DATA2  \
+    -pin_name AB21                    \
+    -fixed true                       \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HSSB_PMII_RX_DATA3  \
+    -pin_name AB20                    \
+    -fixed true                       \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HSSB_PMII_RX_DV  \
+    -pin_name Y21                  \
+    -fixed true                    \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HSSB_PMII_TX_DATA0  \
+    -pin_name V22                     \
+    -fixed true                       \
+    -DIRECTION INPUT
+
+
+set_io -port_name HSSB_PMII_TX_DATA1  \
+    -pin_name W22                     \
+    -fixed true                       \
+    -DIRECTION INPUT
+
+
+set_io -port_name HSSB_PMII_TX_DATA2  \
+    -pin_name AA22                    \
+    -fixed true                       \
+    -DIRECTION INPUT
+
+
+set_io -port_name HSSB_PMII_TX_DATA3  \
+    -pin_name AA21                    \
+    -fixed true                       \
+    -DIRECTION INPUT
+
+
+set_io -port_name HSSB_PMII_TX_EN  \
+    -pin_name W21                  \
+    -fixed true                    \
+    -DIRECTION INPUT
 
 
 set_io -port_name KVBEL_SW_CONFIG0  \
@@ -235,6 +542,27 @@ set_io -port_name KVBMENLP_CNTL  \
     -DIRECTION OUTPUT
 
 
+set_io -port_name KVBMENLP_STATE  \
+    -pin_name B22                 \
+    -fixed true                   \
+    -io_std LVCMOS33              \
+    -DIRECTION INPUT
+
+
+set_io -port_name LS_ERROR_N  \
+    -pin_name B7              \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -DIRECTION INPUT
+
+
+set_io -port_name LS_OSSD1_N  \
+    -pin_name A7              \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -DIRECTION INPUT
+
+
 set_io -port_name MEL_SW_CONFIG0  \
     -pin_name R4                  \
     -fixed true                   \
@@ -291,6 +619,13 @@ set_io -port_name MEL_SW_CONFIG7  \
     -DIRECTION INPUT
 
 
+set_io -port_name MTNENLP_CCH_STATE  \
+    -pin_name D19                    \
+    -fixed true                      \
+    -io_std LVCMOS33                 \
+    -DIRECTION INPUT
+
+
 set_io -port_name MTNENLP_CNTL  \
     -pin_name C1                \
     -fixed true                 \
@@ -298,10 +633,106 @@ set_io -port_name MTNENLP_CNTL  \
     -DIRECTION OUTPUT
 
 
+set_io -port_name MTNENLP_DKB_STATE  \
+    -pin_name D18                    \
+    -fixed true                      \
+    -io_std LVCMOS33                 \
+    -DIRECTION INPUT
+
+
 set_io -port_name MTNENLP_LOC_CNTL  \
     -pin_name E15                   \
     -fixed true                     \
     -io_std LVCMOS33                \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name MTNENLP_STATE  \
+    -pin_name F15                \
+    -fixed true                  \
+    -io_std LVCMOS33             \
+    -DIRECTION INPUT
+
+
+set_io -port_name NEUTRON_DR_SW1_N  \
+    -pin_name A12                   \
+    -fixed true                     \
+    -io_std LVCMOS33                \
+    -DIRECTION INPUT
+
+
+set_io -port_name NEUTRON_DR_SW2_N  \
+    -pin_name B12                   \
+    -fixed true                     \
+    -io_std LVCMOS33                \
+    -DIRECTION INPUT
+
+
+set_io -port_name PENDANT_INST  \
+    -pin_name E19               \
+    -fixed true                 \
+    -io_std LVCMOS33            \
+    -DIRECTION INPUT
+
+
+set_io -port_name PENDANT_MEB_N  \
+    -pin_name E18                \
+    -fixed true                  \
+    -io_std LVCMOS33             \
+    -DIRECTION INPUT
+
+
+set_io -port_name PHY_MDC  \
+    -pin_name W3           \
+    -fixed true            \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name PHY_MDIO  \
+    -pin_name Y3            \
+    -fixed true             \
+    -DIRECTION INOUT
+
+
+set_io -port_name PHY_RMII_RX_DATA0  \
+    -pin_name U3                     \
+    -fixed true                      \
+    -DIRECTION INPUT
+
+
+set_io -port_name PHY_RMII_RX_DATA1  \
+    -pin_name U2                     \
+    -fixed true                      \
+    -DIRECTION INPUT
+
+
+set_io -port_name PHY_RMII_RX_DV  \
+    -pin_name AA1                 \
+    -fixed true                   \
+    -DIRECTION INPUT
+
+
+set_io -port_name PHY_RMII_TX_DATA0  \
+    -pin_name V2                     \
+    -fixed true                      \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name PHY_RMII_TX_DATA1  \
+    -pin_name V1                     \
+    -fixed true                      \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name PHY_RMII_TX_EN  \
+    -pin_name AA2                 \
+    -fixed true                   \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name PHY_RST_N  \
+    -pin_name AB2            \
+    -fixed true              \
     -DIRECTION OUTPUT
 
 
@@ -319,6 +750,228 @@ set_io -port_name PWRENLP_LOC_CNTL  \
     -DIRECTION OUTPUT
 
 
+set_io -port_name PWRENLP_STATE  \
+    -pin_name D17                \
+    -fixed true                  \
+    -io_std LVCMOS33             \
+    -DIRECTION INPUT
+
+
+set_io -port_name SPD_AC_DR_N  \
+    -pin_name A13              \
+    -fixed true                \
+    -io_std LVCMOS33           \
+    -DIRECTION INPUT
+
+
+set_io -port_name TP100  \
+    -pin_name AA7        \
+    -fixed true          \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP101  \
+    -pin_name Y4         \
+    -fixed true          \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP102  \
+    -pin_name AA5        \
+    -fixed true          \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP140  \
+    -pin_name D22        \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP141  \
+    -pin_name C22        \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP142  \
+    -pin_name D21        \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP143  \
+    -pin_name D20        \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP144  \
+    -pin_name C20        \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP145  \
+    -pin_name C19        \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP146  \
+    -pin_name G17        \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP147  \
+    -pin_name F17        \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP148  \
+    -pin_name C6         \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP149  \
+    -pin_name D6         \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP150  \
+    -pin_name E6         \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP151  \
+    -pin_name A6         \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP152  \
+    -pin_name B5         \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP153  \
+    -pin_name A5         \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP154  \
+    -pin_name E5         \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP155  \
+    -pin_name C5         \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP85  \
+    -pin_name T17       \
+    -fixed true         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP86  \
+    -pin_name R16       \
+    -fixed true         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP88  \
+    -pin_name R15       \
+    -fixed true         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP89  \
+    -pin_name T16       \
+    -fixed true         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP91  \
+    -pin_name U15       \
+    -fixed true         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP92  \
+    -pin_name T15       \
+    -fixed true         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP93  \
+    -pin_name U12       \
+    -fixed true         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP94  \
+    -pin_name V12       \
+    -fixed true         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP95  \
+    -pin_name R12       \
+    -fixed true         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP96  \
+    -pin_name V11       \
+    -fixed true         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP97  \
+    -pin_name R11       \
+    -fixed true         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP98  \
+    -pin_name V10       \
+    -fixed true         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TP99  \
+    -pin_name AA6       \
+    -fixed true         \
+    -DIRECTION OUTPUT
+
+
 
 # 
 # Dedicated Peripheral I/O Settings
@@ -330,121 +983,6 @@ set_io -port_name PWRENLP_LOC_CNTL  \
 # The I/Os in this section are unplaced or placed but are not locked
 # the other listed attributes have been applied
 # 
-
-set_io -port_name APP_FPGA_SPI0_MISO  \
-    -io_std LVCMOS33                  \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name APP_FPGA_SPI1_MISO  \
-    -io_std LVCMOS33                  \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name HDW_DBUG_ACTIVE  \
-    -io_std LVCMOS33               \
-    -DIRECTION INPUT
-
-
-set_io -port_name HDW_DBUG_CS_N  \
-    -io_std LVCMOS33             \
-    -DIRECTION INPUT
-
-
-set_io -port_name HDW_DBUG_HEADER10  \
-    -io_std LVCMOS33                 \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name HDW_DBUG_HEADER2  \
-    -io_std LVCMOS33                \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name HDW_DBUG_HEADER4  \
-    -io_std LVCMOS33                \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name HDW_DBUG_HEADER6  \
-    -io_std LVCMOS33                \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name HDW_DBUG_HEADER8  \
-    -io_std LVCMOS33                \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name HDW_DBUG_MISO  \
-    -io_std LVCMOS33             \
-    -DIRECTION INPUT
-
-
-set_io -port_name HDW_DBUG_MOSI  \
-    -io_std LVCMOS33             \
-    -DIRECTION INPUT
-
-
-set_io -port_name HDW_DBUG_SCLK  \
-    -io_std LVCMOS33             \
-    -DIRECTION INPUT
-
-
-set_io -port_name HDW_EEP_CS_N  \
-    -io_std LVCMOS33            \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name HDW_EEP_SCLK  \
-    -io_std LVCMOS33            \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name HDW_EEP_SDI  \
-    -io_std LVCMOS33           \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name HDW_EEP_SDO  \
-    -io_std LVCMOS33           \
-    -DIRECTION INPUT
-
-
-set_io -port_name HSSB_PMII_CLK  \
-    -io_std LVCMOS33             \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name HSSB_PMII_RESET_N  \
-    -io_std LVCMOS33                 \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name HSSB_PMII_RX_DATA0  \
-    -io_std LVCMOS33                  \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name HSSB_PMII_RX_DATA1  \
-    -io_std LVCMOS33                  \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name HSSB_PMII_RX_DATA2  \
-    -io_std LVCMOS33                  \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name HSSB_PMII_RX_DATA3  \
-    -io_std LVCMOS33                  \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name HSSB_PMII_RX_DV  \
-    -io_std LVCMOS33               \
-    -DIRECTION OUTPUT
-
 
 
 #

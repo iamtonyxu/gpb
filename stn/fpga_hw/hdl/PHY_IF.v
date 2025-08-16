@@ -1,9 +1,16 @@
 `timescale 1ns/100ps
 
 `define PHY_REG_ACCESS_ADDR     16'h0000
-`define PHY_TX_CTRL_ADDR        16'h0001
-`define PHY_RX_STATUS_ADDR      16'h0002
-
+`define PHY_CTRL_ADDR           16'h0001
+`define PHY_STATUS_ADDR         16'h0002
+`define PHY_TX_WORD0_ADDR       16'h0010
+`define PHY_TX_WORD1_ADDR       16'h0011
+`define PHY_TX_WORD2_ADDR       16'h0012
+`define PHY_TX_WORD3_ADDR       16'h0013
+`define PHY_RX_WORD0_ADDR       16'h0020
+`define PHY_RX_WORD1_ADDR       16'h0021
+`define PHY_RX_WORD2_ADDR       16'h0022
+`define PHY_RX_WORD3_ADDR       16'h0023
 
 module PHY_IF
 (
@@ -52,10 +59,30 @@ module PHY_IF
     reg     [7:0]               reset_cnt;
     wire                        phy_rst;
 
+    // tx_start to trigger package send
+    reg tx_start;
+    reg tx_start_sync1, tx_start_sync2; // Synchronizer for OPB_CLK to PHY_CLK crossing
+    wire tx_start_synced;
+    wire tx_done;
+    wire rx_good;
+    reg [127:0] tx_package;
+    wire [127:0] rx_package;
+    
+    // Synchronizers for reading PHY_CLK domain signals in OPB_CLK domain
+    reg tx_done_sync1, tx_done_sync2;
+    reg rx_good_sync1, rx_good_sync2;
+
+    // Wire declarations for ctrl_package_transceiver connections
+    wire [1:0] ctrl_tx_data;
+    wire ctrl_tx_en;
+    wire [1:0] ctrl_rx_data;
+    wire ctrl_rx_dv;
+
+
     // afifo to pass OPB DI from OPB_CLK to CLK_25MHZ 
     // only if OPB_WE is asserted and OPB_ADDR is PHY_REG_ACCESS_ADDR
-    wire                        afifo_wr, afifo_rd;
-    wire                        afifo_rempty;
+    wire afifo_wr, afifo_rd;
+    wire afifo_rempty;
 
     afifo #(
         .DSIZE(32),
@@ -88,17 +115,45 @@ module PHY_IF
                     // Read operation, return PHY data
                     OPB_DO <= smii_read_data_reg;
                 end
-                `PHY_TX_CTRL_ADDR: begin
+                `PHY_CTRL_ADDR: begin
                     OPB_DO <= phy_tx_ctrl;
                 end
-                `PHY_RX_STATUS_ADDR: begin
+                `PHY_STATUS_ADDR: begin
                     OPB_DO <= phy_rx_status;
+                end
+                `PHY_TX_WORD0_ADDR: begin
+                    OPB_DO <= tx_package[31:0];
+                end
+                `PHY_TX_WORD1_ADDR: begin
+                    OPB_DO <= tx_package[63:32];
+                end
+                `PHY_TX_WORD2_ADDR: begin
+                    OPB_DO <= tx_package[95:64];
+                end
+                `PHY_TX_WORD3_ADDR: begin
+                    OPB_DO <= tx_package[127:96];
+                end
+                `PHY_RX_WORD0_ADDR: begin
+                    OPB_DO <= rx_package[31:0];
+                end
+                `PHY_RX_WORD1_ADDR: begin
+                    OPB_DO <= rx_package[63:32];
+                end
+                `PHY_RX_WORD2_ADDR: begin
+                    OPB_DO <= rx_package[95:64];
+                end
+                `PHY_RX_WORD3_ADDR: begin
+                    OPB_DO <= rx_package[127:96];
                 end
                 default: begin
                     // Default case, return zero
                     OPB_DO <= 32'h0;
                 end
             endcase
+        end else begin
+            // When PHY_RE is not asserted, maintain previous value
+            // This prevents unnecessary updates and potential glitches
+            OPB_DO <= OPB_DO;
         end
     end
 
@@ -127,43 +182,132 @@ module PHY_IF
         .MDC(PHY_MDC)
     );
 
-    // smii_read_data_reg
+    // smii_read_data_reg - capture read data with improved logic
     always @(posedge CLK_25MHZ or posedge OPB_RST) begin
         if (OPB_RST) begin
             smii_read_data_reg <= 32'h0;
-        end else if(smii_read_data[24])begin
-            smii_read_data_reg[24:0] <= smii_read_data[24:0];
-        end else if(smii_csw) begin
-            smii_read_data_reg <= 32'h0; // Reset at start of new transaction
+        end else if (smii_read_data[24]) begin  // Valid data indicator
+            smii_read_data_reg <= smii_read_data;
+        end else if (smii_csw) begin
+            smii_read_data_reg <= 32'h0; // Clear at start of new transaction
         end
     end
 
     // Assign outputs to PHY interface signals
     assign PHY_RST_N            = ~phy_rst;     // Active low reset
 
-    // TODO: implement PHY_TX and PHY_RX later
-    // PHY_TX_CTRL_ADDR
+    // PHY_CTRL_ADDR - control register for PHY operations
     always @(posedge OPB_CLK or posedge OPB_RST) begin
         if (OPB_RST) begin
             phy_tx_ctrl <= 32'h0;
-        end else if (PHY_WE && (OPB_ADDR[15:0] == `PHY_TX_CTRL_ADDR)) begin
+        end else if (PHY_WE && (OPB_ADDR[15:0] == `PHY_CTRL_ADDR)) begin
             phy_tx_ctrl <= OPB_DI;
         end
     end
 
-    // PHY_RX_STATUS_ADDR
-    always @(posedge PHY_CLK or posedge OPB_RST) begin
+    // PHY_STATUS_ADDR - use synchronized signals from PHY_CLK domain
+    always @(posedge OPB_CLK or posedge OPB_RST) begin
         if (OPB_RST) begin
             phy_rx_status <= 32'h0;
-        end else if (PHY_RE && (OPB_ADDR[15:0] == `PHY_RX_STATUS_ADDR)) begin
-            phy_rx_status <= {29'h0, PHY_RMII_RX_DATA1, PHY_RMII_RX_DATA0, PHY_RMII_RX_DV};
+        end else begin
+            phy_rx_status <= {30'h0, rx_good_sync2, tx_done_sync2};
         end
     end
 
+    // tx_package
+    always @(posedge OPB_CLK or posedge OPB_RST) begin
+        if (OPB_RST) begin
+            tx_package <= 128'h0;
+        end else if (PHY_WE && (OPB_ADDR[15:0] == `PHY_TX_WORD0_ADDR)) begin
+            tx_package[31:0] <= OPB_DI;
+        end else if (PHY_WE && (OPB_ADDR[15:0] == `PHY_TX_WORD1_ADDR)) begin
+            tx_package[63:32] <= OPB_DI;
+        end else if (PHY_WE && (OPB_ADDR[15:0] == `PHY_TX_WORD2_ADDR)) begin
+            tx_package[95:64] <= OPB_DI;
+        end else if (PHY_WE && (OPB_ADDR[15:0] == `PHY_TX_WORD3_ADDR)) begin
+            tx_package[127:96] <= OPB_DI;
+        end
+    end
+
+    // LED control signals
     assign ETH_LED1             = phy_tx_ctrl[0];
-    assign ETH_LED2             = phy_tx_ctrl[1];
-    assign PHY_RMII_TX_EN       = phy_tx_ctrl[2];
-    assign PHY_RMII_TX_DATA1    = phy_tx_ctrl[3];
-    assign PHY_RMII_TX_DATA0    = phy_tx_ctrl[4];
+    assign ETH_LED2             = phy_tx_ctrl[0];
+
+    // tx_start - generate pulse in OPB_CLK domain when bit 0 of PHY_CTRL_ADDR is written
+    always @(posedge OPB_CLK or posedge OPB_RST) begin
+        if (OPB_RST) begin
+            tx_start <= 1'b0;
+        end else if (PHY_WE && (OPB_ADDR[15:0] == `PHY_CTRL_ADDR) && OPB_DI[0]) begin
+            tx_start <= 1'b1; // Generate pulse when bit 0 is written as 1
+        end else begin
+            tx_start <= 1'b0; // Single cycle pulse
+        end
+    end
+
+    // Synchronize tx_start from OPB_CLK to PHY_CLK domain
+    always @(posedge PHY_CLK or posedge OPB_RST) begin
+        if (OPB_RST) begin
+            tx_start_sync1 <= 1'b0;
+            tx_start_sync2 <= 1'b0;
+        end else begin
+            tx_start_sync1 <= tx_start;
+            tx_start_sync2 <= tx_start_sync1;
+        end
+    end
+    
+    assign tx_start_synced = tx_start_sync2;
+
+    // Synchronize tx_done and rx_good from PHY_CLK to OPB_CLK domain for status reading
+    always @(posedge OPB_CLK or posedge OPB_RST) begin
+        if (OPB_RST) begin
+            tx_done_sync1 <= 1'b0;
+            tx_done_sync2 <= 1'b0;
+            rx_good_sync1 <= 1'b0;
+            rx_good_sync2 <= 1'b0;
+        end else begin
+            tx_done_sync1 <= tx_done;
+            tx_done_sync2 <= tx_done_sync1;
+            rx_good_sync1 <= rx_good;
+            rx_good_sync2 <= rx_good_sync1;
+        end
+    end
+
+// PHY RMII Interface instance
+phy_ctrl_rmii phy_ctrl_rmii_inst (
+    .sysclk(OPB_CLK),
+    .reset_n(~phy_rst),
+    
+    // RMII Interface
+    .phy_tx_clk(PHY_CLK),
+    .phy_tx_data({PHY_RMII_TX_DATA1, PHY_RMII_TX_DATA0}),
+    .phy_tx_en(PHY_RMII_TX_EN),
+    .phy_rx_clk(PHY_CLK),
+    .phy_rx_data({PHY_RMII_RX_DATA1, PHY_RMII_RX_DATA0}),
+    .phy_rx_dv(PHY_RMII_RX_DV),
+    
+    // "link_ctrl" interface (system clock domain)
+    .ctrl_tx_data(ctrl_tx_data),
+    .ctrl_tx_en(ctrl_tx_en),
+    .ctrl_rx_data(ctrl_rx_data),
+    .ctrl_rx_dv(ctrl_rx_dv),
+    .ctrl_rx_err()
+);
+
+// Update Package Transceiver instance connections
+ctrl_package_transceiver ctrl_pkg_transceiver_inst (
+    .sys_clk(PHY_CLK),           // Use PHY_CLK as system clock
+    .rst_n(~phy_rst),
+    .tx_start(tx_start_synced),  // Use synchronized signal from OPB_CLK domain
+    .tx_done(tx_done),
+    .rx_good(rx_good),
+    .tx_package_i(tx_package),
+    .rx_package_o(rx_package),
+    .ctrl_tx_clk(),              // Not used, clock is internal
+    .ctrl_tx_data(ctrl_tx_data), // Output: sends data to phy_ctrl_rmii
+    .ctrl_tx_en(ctrl_tx_en),     // Output: sends enable to phy_ctrl_rmii
+    .ctrl_rx_clk(),              // Not used, clock is internal
+    .ctrl_rx_data(ctrl_rx_data), // Input: receives data from phy_ctrl_rmii
+    .ctrl_rx_dv(ctrl_rx_dv)      // Input: receives data valid from phy_ctrl_rmii
+);
 
 endmodule

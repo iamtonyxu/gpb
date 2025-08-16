@@ -30,7 +30,6 @@ data SEG 'C:/repo1/gpb/stn/fpga_hw/designer/top_hw/COMPILE/top_hw.seg'
 data IO_PDC_0 'C:/repo1/gpb/stn/fpga_hw/constraint/io/top_hw.pdc'
 data TARGET_IOPDC  'C:/repo1/gpb/stn/fpga_hw/constraint/io/user.pdc'
 data TARGET_FPPDC  'C:/repo1/gpb/stn/fpga_hw/constraint/fp/user.pdc'
-data TARGET_DEVICES_FOR_MIGRATION 'PA5M050T '
 data RESTRICTPROBEPINS 0
 data RESTRICTSPIPINS 0
 data GDEV_SKIP_UNASSIGN_CMP_CHECK    1 
