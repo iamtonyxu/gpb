@@ -1,0 +1,16 @@
+function stnAppRegisterMapInit()
+{
+    UpdateStatus("Read stn APP FPGA Register Map...");
+
+    $ADDR_SCRATCHPAD    = "00 00 00 00";
+    $ADDR_CLOCKGEN      = "00 01 00 00";
+    $ADDR_OSCCOUNTER    = "00 02 00 00";
+    $ADDR_GPIO          = "00 03 00 00";
+    $ADDR_FPGA_IF       = "00 04 00 00";
+    $ADDR_ADC           = "00 05 00 00";
+    $ADDR_DAC           = "00 06 00 00";
+    $ADDR_RS422         = "00 07 00 00";
+    $ADDR_CAN           = "00 08 00 00";
+        
+    return;
+}
