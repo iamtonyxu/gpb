@@ -48,7 +48,7 @@ set_io -port_name {APP_FPGA_SPI_CLK}    -pin_name Y19   -fixed true  -io_std LVC
 set_io -port_name {SPD_AC_DR_N}         -pin_name A13   -fixed true  -io_std LVCMOS33  -DIRECTION Input
 set_io -port_name {EMO_GOOD_N}          -pin_name A21   -fixed true  -io_std LVCMOS33  -DIRECTION Input
 set_io -port_name {DISABLE_HDW_FPGA}    -pin_name T10   -fixed true  -io_std LVCMOS18  -DIRECTION Input
-set_io -port_name {APP_FPGA_TDO}        -pin_name C11   -fixed true  -io_std LVCMOS33  -DIRECTION Input
+#set_io -port_name {APP_FPGA_TDO}        -pin_name C11   -fixed true  -io_std LVCMOS33  -DIRECTION Input
 
 set_io -port_name {BMENLP_LOC_CNTL}     -pin_name F16   -fixed true  -io_std LVCMOS33  -DIRECTION Output
 set_io -port_name {PWRENLP_LOC_CNTL}    -pin_name E16   -fixed true  -io_std LVCMOS33  -DIRECTION Output
@@ -67,10 +67,10 @@ set_io -port_name {HSSB_PMII_RX_DV}     -pin_name Y21   -fixed true  -io_std LVC
 set_io -port_name {HDW_GANT_ROT_EN}     -pin_name B21   -fixed true  -io_std LVCMOS33  -DIRECTION Output
 set_io -port_name {APP_FPGA_SPI0_MISO}  -pin_name W17   -fixed true  -io_std LVCMOS18  -DIRECTION Output
 set_io -port_name {APP_FPGA_SPI1_MISO}  -pin_name AB19  -fixed true  -io_std LVCMOS18  -DIRECTION Output
-set_io -port_name {APP_FPGA_TMS}        -pin_name B20   -fixed true  -io_std LVCMOS33  -DIRECTION Output
-set_io -port_name {APP_FPGA_TDI}        -pin_name B19   -fixed true  -io_std LVCMOS33  -DIRECTION Output
-set_io -port_name {APP_FPGA_TCK}        -pin_name A20   -fixed true  -io_std LVCMOS33  -DIRECTION Output
-set_io -port_name {APP_FPGA_TRST}       -pin_name D11   -fixed true  -io_std LVCMOS33  -DIRECTION Output
+#set_io -port_name {APP_FPGA_TMS}        -pin_name B20   -fixed true  -io_std LVCMOS33  -DIRECTION Output
+#set_io -port_name {APP_FPGA_TDI}        -pin_name B19   -fixed true  -io_std LVCMOS33  -DIRECTION Output
+#set_io -port_name {APP_FPGA_TCK}        -pin_name A20   -fixed true  -io_std LVCMOS33  -DIRECTION Output
+#set_io -port_name {APP_FPGA_TRST}       -pin_name D11   -fixed true  -io_std LVCMOS33  -DIRECTION Output
 set_io -port_name {HDW_FPGA_DONE}       -pin_name J4    -fixed true  -io_std LVCMOS33  -DIRECTION Output
 set_io -port_name {HDW_FPGA_STAT_LED1}  -pin_name T1    -fixed true  -io_std LVCMOS33  -DIRECTION Output
 set_io -port_name {HDW_FPGA_STAT_LED2}  -pin_name R1    -fixed true  -io_std LVCMOS33  -DIRECTION Output

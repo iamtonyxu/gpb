@@ -1,0 +1,781 @@
+#include<"stnRegisterMap.jts">
+#include<"jabilTestOpbBus.jts">
+
+SetFinalizeFunction("CleanUpTest"); 	// Sets the Finalize Function
+UpdateStatus("-------------     Start     --------------------");
+
+/////////////////////////////////////////////////////////
+//----------------   Main Functions  ------------------
+/////////////////////////////////////////////////////////
+// Open OPB Com
+$OPBCom = 10;
+call OpbOpen();
+
+$enableTest = 0;
+if($enableTest > 0)
+{
+    // demo to read FPGA Version register @32'h0000_0000
+    UpdateStatus("read FPGA Version register @32'h0000_0000");
+    $opbAddrStr = "00 00 00 00";
+    call OpbRead();
+
+    // demo to read FPGA ID @32'h0000_0001
+    UpdateStatus("read FPGA ID @32'h0000_0001");
+    $opbAddrStr = "00 00 00 01";
+    call OpbRead();
+
+    // demo to read build date @32'h0000_0002
+    UpdateStatus("read build date @32'h0000_0002");
+    $opbAddrStr = "00 00 00 02";
+    call OpbRead();
+
+    // demo to write scratchpad register @32'h0000_0003
+    // Then read it back
+    UpdateStatus("write scratchpad reg then read it back");
+    $opbAddrStr = "00 00 00 03";
+    $opbDataStr = "AA BB CC DD";
+    call OpbWrite();
+    call OpbRead();
+}
+
+call PHY_Test();
+
+$enableTest = 0;
+if($enableTest > 0)
+{
+    // demo to read GPIO_IN1
+    UpdateStatus("demo to read GPIO_IN1");
+    call readGPIO_IN1();
+    //$printStr = StringCat("BMPLS=", $BMPLS);
+    //UpdateStatus($BMPLS);
+
+}
+
+
+
+call OpbClose();
+End;
+
+/////////////////////////////////////////////////////////
+//----------------   Helper Functions  ------------------
+/////////////////////////////////////////////////////////
+
+function CleanUpTest()
+{
+	UpdateStatus("-------------  CleanUpTest  --------------------");
+	call OpbClose();  
+	End;
+}
+
+function MeasurementWithlimits()		//
+{
+	RecordMeasurementWithLimits($measurementName,$measurementValue,$Unit,true,$nLowerLimit,$nUpperLimit,true);
+	return;
+}
+function MeasurementBoolPassFail()		//
+{
+	RecordMeasurementPassFail($measurementName,$measurementValue,$Unit,true,$measurePassFail);
+	return;
+}
+function UpdateTestNameToView()			//	Update Test Name to Debug view
+{
+	$PromptString = "\n[" + $TestName + "] " + $measurementName +"......";
+	UpdateStatus($PromptString);
+	$measurementName = $TestName + "_"+ $measurementName;
+	return;
+}
+
+// Function readGPIO_IN1
+// Out: $BMPLS, $CCW_LIMIT_STAT, ..., $PWRENLP_SOURCE_STATE
+function readGPIO_IN1()
+{
+    // demo to read GPIO_IN1
+    $opbAddrStr = "00 03 00 00";
+    call OpbRead();
+    $rdbyte3 = Array1DGetValue($opbDataArray, 0);
+    $rdbyte2 = Array1DGetValue($opbDataArray, 1);
+    $rdbyte1 = Array1DGetValue($opbDataArray, 2);
+    $rdbyte0 = Array1DGetValue($opbDataArray, 3);
+    //UpdateStatus($rdbyte0);
+    //UpdateStatus($rdbyte1);
+    //UpdateStatus($rdbyte2);
+    //UpdateStatus($rdbyte3);
+    
+    $BMPLS = BitWiseAnd($rdbyte0, 1);
+    $CCW_LIMIT_STAT = BitWiseAnd($rdbyte0, 2);
+    $CW_LIMIT_STAT = BitWiseAnd($rdbyte0, 4);
+    $LS_OSSD2_N = BitWiseAnd($rdbyte0, 8);
+    $LS_WARNING_N = BitWiseAnd($rdbyte0, 10);
+    $GANT_LOCK_PIN_STAT = BitWiseAnd($rdbyte0, 20);
+    $LS_RES_REQ_N = BitWiseAnd($rdbyte0, 40);
+    $SYNC_LOC_MONITOR = BitWiseAnd($rdbyte0, 80);
+
+    $SYNC_MONITOR = BitWiseAnd($rdbyte1, 1);
+    $GROTPWR_STS_N = BitWiseAnd($rdbyte1, 2);
+    $BMENLP_LOC_SINK_STATE = BitWiseAnd($rdbyte1, 4);
+    $BMENLP_LOC_SOURCE_STATE = BitWiseAnd($rdbyte1, 8);
+    $BMENLP_SOURCE_STATE = BitWiseAnd($rdbyte1, 10);
+    $KVBMENLP_SOURCE_STATE = BitWiseAnd($rdbyte1, 20);
+    $MTNENLP_CCH_SOURCE_STATE = BitWiseAnd($rdbyte1, 40);
+    $MTNENLP_DKB_SOURCE_STATE = BitWiseAnd($rdbyte1, 80);
+
+    $MTNENLP_LOC_SINK_STATE = BitWiseAnd($rdbyte2, 1);
+    $MTNENLP_LOC_SOURCE_STATE = BitWiseAnd($rdbyte2, 2);
+    $MTNENLP_SOURCE_STATE = BitWiseAnd($rdbyte2, 4);
+    $PWRENLP_LOC_SINK_STATE = BitWiseAnd($rdbyte2, 8);
+    $PWRENLP_LOC_SOURCE_STATE = BitWiseAnd($rdbyte2, 10);
+    $PWRENLP_SOURCE_STATE = BitWiseAnd($rdbyte2, 20);
+    return;
+}
+
+// Function readGPIO_IN2
+// Out: $FLOW_N1, $FLOW_N2, ..., $P5VISO_STATUS
+function readGPIO_IN2()
+{
+    // demo to read GPIO_IN2
+    $opbAddrStr = "00 03 00 01";
+    call OpbRead();
+    $rdbyte3 = Array1DGetValue($opbDataArray, 0);
+    $rdbyte2 = Array1DGetValue($opbDataArray, 1);
+    $rdbyte1 = Array1DGetValue($opbDataArray, 2);
+    $rdbyte0 = Array1DGetValue($opbDataArray, 3);
+    
+    $FLOW_N1 = BitWiseAnd($rdbyte0, 1);
+    $FLOW_N2 = BitWiseAnd($rdbyte0, 2);
+    $FLOW_N3 = BitWiseAnd($rdbyte0, 4);
+    $FLOW_N4 = BitWiseAnd($rdbyte0, 8);
+    $FLOW_N5 = BitWiseAnd($rdbyte0, 10);
+    $P24VDRV_TEMP_FAULT_N = BitWiseAnd($rdbyte0, 20);
+    $DKB_EMO_CLOSED = BitWiseAnd($rdbyte0, 40);
+    $DKB_FUSE_OK_N = BitWiseAnd($rdbyte0, 80);
+
+    $ENCODER1_FUSE_OK = BitWiseAnd($rdbyte1, 1);
+    $HW_GANT_ROT_EN_FLT_N = BitWiseAnd($rdbyte1, 2);
+    $PEND_FUSE_OK_N = BitWiseAnd($rdbyte1, 4);
+    $PUMP_FAULT = BitWiseAnd($rdbyte1, 8);
+    $WATER_HIGH_ERROR = BitWiseAnd($rdbyte1, 10);
+    $WATER_FUSE_OK_N = BitWiseAnd($rdbyte1, 20);
+    $WATER_LOW_ERROR = BitWiseAnd($rdbyte1, 40);
+    $WATER_LOW_WARNING = BitWiseAnd($rdbyte1, 80);
+
+    $P5VISO_STATUS = BitWiseAnd($rdbyte2, 1);
+    return;
+}
+
+// Function writeGPIO_OUT1
+// IN: $AD_SEL0, $AD_SEL1, ..., $PEND_FUSE_ON
+function writeGPIO_OUT1()
+{
+    $wrbyte0 = 0;
+    $wrbyte1 = 0;
+    $wrbyte2 = 0;
+    $wrbyte3 = 0;
+
+    //$wrbyte0
+    if($AD_SEL0 > 0)
+    {
+        $wrbyte0 = BitWiseOr($wrbyte0, 1);
+    }
+    if($AD_SEL1 > 0)
+    {
+        $wrbyte0 = BitWiseOr($wrbyte0, 2);
+    }
+    if($AD_SEL2 > 0)
+    {
+        $wrbyte0 = BitWiseOr($wrbyte0, 4);
+    }
+    if($AD_SEL3 > 0)
+    {
+        $wrbyte0 = BitWiseOr($wrbyte0, 8);
+    }
+    if($AD_SEL4 > 0)
+    {
+        $wrbyte0 = BitWiseOr($wrbyte0, 10);
+    }
+    if($AD_SEL5 > 0)
+    {
+        $wrbyte0 = BitWiseOr($wrbyte0, 20);
+    }
+    if($AD_SEL6 > 0)
+    {
+        $wrbyte0 = BitWiseOr($wrbyte0, 40);
+    }
+    if($AD_SEL7 > 0)
+    {
+        $wrbyte0 = BitWiseOr($wrbyte0, 80);
+    }
+    
+    //wrbyte1
+    if($PUMP_CLR_FLT_ON > 0)
+    {
+        $wrbyte1 = BitWiseOr($wrbyte1, 1);
+    }
+    if($SYNC_LOC_OUT > 0)
+    {
+        $wrbyte1 = BitWiseOr($wrbyte1, 2);
+    }
+    if($SYNC_OUT > 0)
+    {
+        $wrbyte1 = BitWiseOr($wrbyte1, 4);
+    }
+    if($LGCTRL1 > 0)
+    {
+        $wrbyte1 = BitWiseOr($wrbyte1, 8);
+    }
+    if($LGCTRL2 > 0)
+    {
+        $wrbyte1 = BitWiseOr($wrbyte1, 10);
+    }
+    if($LGCTRL3 > 0)
+    {
+        $wrbyte1 = BitWiseOr($wrbyte1, 20);
+    }
+
+    //wrbyte2
+    if($LP_MON_A0 > 0)
+    {
+        $wrbyte2 = BitWiseOr($wrbyte2, 1);
+    }
+    if($LP_MON_A1 > 0)
+    {
+        $wrbyte2 = BitWiseOr($wrbyte2, 2);
+    }
+    if($LP_MON_A2 > 0)
+    {
+        $wrbyte2 = BitWiseOr($wrbyte2, 4);
+    }
+    if($LP_MON_SEL0 > 0)
+    {
+        $wrbyte2 = BitWiseOr($wrbyte2, 8);
+    }
+    if($LP_MON_SEL1 > 0)
+    {
+        $wrbyte2 = BitWiseOr($wrbyte2, 10);
+    }
+    if($LP_MON_SEL2 > 0)
+    {
+        $wrbyte2 = BitWiseOr($wrbyte2, 20);
+    }
+    if($LP_MON_SEL3 > 0)
+    {
+        $wrbyte2 = BitWiseOr($wrbyte2, 40);
+    }
+    if($ENCODER_FUSE_ON_N > 0)
+    {
+        $wrbyte2 = BitWiseOr($wrbyte2, 80);
+    }
+    
+    //wrbyte3
+    if($PUMP_EN_ON > 0)
+    {
+        $wrbyte3 = BitWiseOr($wrbyte3, 1);
+    }
+    if($SF6_24V_ON > 0)
+    {
+        $wrbyte3 = BitWiseOr($wrbyte3, 2);
+    }
+    if($SF6_VALVE_OPEN > 0)
+    {
+        $wrbyte3 = BitWiseOr($wrbyte3, 4);
+    }
+    if($WATER_FUSE_ON > 0)
+    {
+        $wrbyte3 = BitWiseOr($wrbyte3, 8);
+    }
+    if($DKB_FUSE_ON > 0)
+    {
+        $wrbyte3 = BitWiseOr($wrbyte3, 10);
+    }
+    if($PEND_FUSE_ON > 0)
+    {
+        $wrbyte3 = BitWiseOr($wrbyte3, 20);
+    }
+    //UpdateStatus($wrbyte0);
+    //UpdateStatus($wrbyte1);
+    //UpdateStatus($wrbyte2);
+    //UpdateStatus($wrbyte3);
+
+    $opbAddrStr = "00 03 00 02";
+    $opbDataStr = $wrbyte3 + " " + $wrbyte2 + " " + $wrbyte1 + " " + $wrbyte0;
+    call OpbWrite();
+    return;
+}
+
+// Function writeGPIO_OUT2
+// IN: $STAT_LED1_N, $STAT_LED2_N, ..., $ENCODER_TX_ENAB2
+function writeGPIO_OUT2()
+{
+    UpdateStatus("--------------------------------");
+    $wrbyte0 = 0;
+    $wrbyte1 = 0;
+    $wrbyte2 = 0;
+    $wrbyte3 = 0;
+
+    //$wrbyte0
+    if($STAT_LED1_N > 0)
+    {
+        $wrbyte0 = BitWiseOr($wrbyte0, 1);
+    }
+    if($STAT_LED2_N > 0)
+    {
+        $wrbyte0 = BitWiseOr($wrbyte0, 2);
+    }
+    if($STAT_LED3_N > 0)
+    {
+        $wrbyte0 = BitWiseOr($wrbyte0, 4);
+    }
+    if($HEARTBEAT_LED_N > 0)
+    {
+        $wrbyte0 = BitWiseOr($wrbyte0, 8);
+    }
+    if($CAN1_LED_N > 0)
+    {
+        $wrbyte0 = BitWiseOr($wrbyte0, 10);
+    }
+    if($CAN2_LED_N > 0)
+    {
+        $wrbyte0 = BitWiseOr($wrbyte0, 20);
+    }
+    if($CAN3_LED_N > 0)
+    {
+        $wrbyte0 = BitWiseOr($wrbyte0, 40);
+    }
+    if($CAN4_LED_N > 0)
+    {
+        $wrbyte0 = BitWiseOr($wrbyte0, 80);
+    }
+
+    //wrbyte1
+    if($ENCODER_TX_ENAB1 > 0)
+    {
+        $wrbyte1 = BitWiseOr($wrbyte1, 1);
+    }
+    if($ENCODER_TX_ENAB2 > 0)
+    {
+        $wrbyte1 = BitWiseOr($wrbyte1, 2);
+    }
+
+    //UpdateStatus($wrbyte0);
+    //UpdateStatus($wrbyte1);
+    //UpdateStatus($wrbyte2);
+    //UpdateStatus($wrbyte3);
+
+    $opbAddrStr = "00 03 00 03";
+    $opbDataStr = $wrbyte3 + " " + $wrbyte2 + " " + $wrbyte1 + " " + $wrbyte0;
+    call OpbWrite();
+    return;
+}
+
+function PHY_dummyRegs()
+{
+    UpdateStatus("--------------------------------");
+    UpdateStatus("PHY dummy Registers");
+    UpdateStatus("read BMCR @ 0x00");
+    $opbAddrStr = "00 06 00 00";
+    $opbDataStr = "00 00 00 00";
+    call OpbWrite();    
+    call OpbRead();
+
+    UpdateStatus("read BMSR @ 0x01");
+    $opbDataStr = "00 04 00 00";
+    call OpbWrite();   
+    call OpbRead();
+
+    UpdateStatus("read PHYIDR1 @ 0x02");
+    $opbDataStr = "00 08 00 00";
+    call OpbWrite();   
+    call OpbRead();
+
+    UpdateStatus("read PHYIDR2 @ 0x03");
+    $opbDataStr = "00 0C 00 00";
+    call OpbWrite();   
+    call OpbRead();
+
+    UpdateStatus("read ANAR @ 0x04");
+    $opbDataStr = "00 10 00 00";
+    call OpbWrite();   
+    call OpbRead();
+
+    UpdateStatus("read ALNPAR @ 0x05");
+    $opbDataStr = "00 14 00 00";
+    call OpbWrite();   
+    call OpbRead();
+
+    UpdateStatus("read ANER @ 0x06");
+    $opbDataStr = "00 18 00 00";
+    call OpbWrite();   
+    call OpbRead();
+
+    UpdateStatus("read ANNPTR @ 0x07");
+    $opbDataStr = "00 1C 00 00";
+    call OpbWrite();   
+    call OpbRead();
+
+    UpdateStatus("read ANLNPTR @ 0x08");
+    $opbDataStr = "00 20 00 00";
+    call OpbWrite();   
+    call OpbRead();
+
+    UpdateStatus("read CR1 @ 0x09");
+    $opbDataStr = "00 24 00 00";
+    call OpbWrite();   
+    call OpbRead();
+
+    UpdateStatus("read CR2 @ 0x0A");
+    $opbDataStr = "00 28 00 00";
+    call OpbWrite();   
+    call OpbRead();
+
+    UpdateStatus("read CR3 @ 0x0B");
+    $opbDataStr = "00 2C 00 00";
+    call OpbWrite();   
+    call OpbRead();
+
+    UpdateStatus("read Register_12 @ 0x0C");
+    $opbDataStr = "00 30 00 00";
+    call OpbWrite();   
+    call OpbRead();
+
+    UpdateStatus("read REGCR @ 0x0D");
+    $opbDataStr = "00 34 00 00";
+    call OpbWrite();   
+    call OpbRead();
+
+    UpdateStatus("read ADDAR @ 0x0E");
+    $opbDataStr = "00 38 00 00";
+    call OpbWrite();   
+    call OpbRead();
+
+    UpdateStatus("read FLDS @ 0x0F");
+    $opbDataStr = "00 3C 00 00";
+    call OpbWrite();   
+    call OpbRead();
+
+    UpdateStatus("read PHYSTS @ 0x10");
+    $opbDataStr = "00 40 00 00";
+    call OpbWrite();   
+    call OpbRead();
+
+    UpdateStatus("read PHYSCR @ 0x11");
+    $opbDataStr = "00 44 00 00";
+    call OpbWrite();   
+    call OpbRead();
+
+    UpdateStatus("read MISR1 @ 0x12");
+    $opbDataStr = "00 48 00 00";
+    call OpbWrite();   
+    call OpbRead();
+
+    UpdateStatus("read MISR2 @ 0x13");
+    $opbDataStr = "00 4C 00 00";
+    call OpbWrite();   
+    call OpbRead();
+    return;
+}
+
+function PHY_BIST()
+{
+    UpdateStatus("--------------------------------");
+    UpdateStatus("PHY BIST");
+    UpdateStatus("write BMCR: MII loopback, 100MBps, Duplex Mode");
+    $opbAddrStr = "00 06 00 00";
+    $opbDataStr = "00 80 61 00";
+    call OpbWrite();
+    $opbDataStr = "00 00 00 00";
+    call OpbWrite();
+    call OpbRead();
+
+    UpdateStatus("write BICSR1: IPG_LENGTH = 7D");
+    $opbAddrStr = "00 06 00 00";
+    $opbDataStr = "00 DC 00 7D";
+    call OpbWrite();
+    $opbDataStr = "00 5C 00 00";
+    call OpbWrite();
+    call OpbRead();
+
+    UpdateStatus("write BICSR2: PKG_LENGTH = 5EE");
+    $opbAddrStr = "00 06 00 00";
+    $opbDataStr = "00 F0 05 EE";
+    call OpbWrite();
+    $opbDataStr = "00 70 00 00";
+    call OpbWrite();
+    call OpbRead();
+
+    UpdateStatus("write BICSR: BIST start");
+    $opbAddrStr = "00 06 00 00";
+    $opbDataStr = "00 D8 30 44";
+    //$opbDataStr = "00 D8 30 50";
+    //$opbDataStr = "00 D8 30 00";
+    call OpbWrite();
+    $opbDataStr = "00 58 00 00";
+    call OpbWrite();
+    call OpbRead();
+
+    UpdateStatus("read BICSR: BIST status");
+    $opbAddrStr = "00 06 00 00";
+    $opbDataStr = "00 58 00 00";
+    call OpbWrite();
+    call OpbRead();
+
+    UpdateStatus("read BICSR1: BIST Error Count");
+    $opbAddrStr = "00 06 00 00";
+    $opbDataStr = "00 6C 00 00";
+    call OpbWrite();
+    call OpbRead();
+
+    UpdateStatus("write BICSR: BIST stop");
+    $opbAddrStr = "00 06 00 00";
+    $opbDataStr = "00 D8 00 00";
+    call OpbWrite();
+    $opbDataStr = "00 58 00 00";
+    call OpbWrite();
+    call OpbRead();
+
+    UpdateStatus("read BICSR: BIST status");
+    $opbAddrStr = "00 06 00 00";
+    $opbDataStr = "00 58 00 00";
+    call OpbWrite();
+    call OpbRead();
+
+    UpdateStatus("read BICSR1: BIST Error Count");
+    $opbAddrStr = "00 06 00 00";
+    $opbDataStr = "00 6C 00 00";
+    call OpbWrite();
+    call OpbRead();
+
+    UpdateStatus("read PHYSTS : PHY Status");
+    $opbAddrStr = "00 06 00 00";
+    $opbDataStr = "00 40 00 00";
+    call OpbWrite();
+    call OpbRead();
+    return;
+}
+
+function PHY_Init()
+{
+    UpdateStatus("--------------------------------");
+    UpdateStatus("PHY Init");
+
+    UpdateStatus("write BMCR : B15=1, reset");
+    $opbAddrStr = "00 06 00 00";
+    $opbDataStr = "00 80 B1 00";
+    call OpbWrite();
+    
+    Sleep(1);
+    UpdateStatus("read BMCR : B15=0");
+    $opbAddrStr = "00 06 00 00";
+    $opbDataStr = "00 00 00 00";
+    call OpbWrite();
+
+    UpdateStatus("RMII configuration: RCSR(0x17) = 0x81"); 
+    $opbAddrStr = "00 06 00 00";
+    $opbDataStr = "00 DC 00 81"; //B8=0:RMII_TX_CLOCK_SHIFT
+    call OpbWrite();
+
+    UpdateStatus("Disable Wake on Lan(todo)");
+
+
+    UpdateStatus("write BMCR : Enable Auto-Neo");
+    $opbAddrStr = "00 06 00 00";
+    $opbDataStr = "00 80 31 00";
+    call OpbWrite();
+    $opbDataStr = "00 00 00 00";
+    call OpbWrite();
+    call OpbRead();
+
+    UpdateStatus("write ANAR : ENABLE Duplex-Mode");
+    $opbAddrStr = "00 06 00 00";
+    $opbDataStr = "00 90 01 E1";
+    call OpbWrite();
+    call OpbRead();
+
+    UpdateStatus("read ANAR : ENABLE Duplex-Mode");
+    $opbAddrStr = "00 06 00 00";
+    $opbDataStr = "00 10 00 00";
+    call OpbWrite();
+    call OpbRead();
+
+    UpdateStatus("read ANNPTR : Page Config");
+    $opbAddrStr = "00 06 00 00";
+    $opbDataStr = "00 1C 00 00";
+    call OpbWrite();
+    call OpbRead();
+
+    UpdateStatus("read LEDCR  : LED Config");
+    $opbAddrStr = "00 06 00 00";
+    $opbDataStr = "00 60 00 00";
+    call OpbWrite();
+    call OpbRead();
+
+    UpdateStatus("write PHYCR  : Restart MDIX");
+    $opbAddrStr = "00 06 00 00";
+    $opbDataStr = "00 E4 80 00";
+    call OpbWrite();
+
+    UpdateStatus("write BMCR  : RESTART_AUTO_NEG");
+    $opbAddrStr = "00 06 00 00";
+    $opbDataStr = "00 80 33 00";
+    call OpbWrite();
+
+    UpdateStatus("Sleep(1)...");
+    Sleep(1);
+
+    UpdateStatus("read PHYSTS : PHY Status");
+    $opbAddrStr = "00 06 00 00";
+    $opbDataStr = "00 40 00 00";
+    call OpbWrite();
+    call OpbRead();
+    return;
+}
+
+function PHY_FunctionTest()
+{
+    UpdateStatus("--------------------------------");
+    UpdateStatus("PHY_FunctionTest");
+
+    //B[0]: Tx Send finish, B[1]: correct Rx Data; B[9:2]: length of Rx Package
+    $test_result = "00000000";
+    $exp_result = "00000243";
+
+    UpdateStatus("write PHY_TX_WORD0_ADDR");
+    $opbAddrStr = "00 06 00 10";
+    $opbDataStr = "12 34 56 78";
+    call OpbWrite();
+
+    UpdateStatus("write PHY_TX_WORD1_ADDR");
+    $opbAddrStr = "00 06 00 11";
+    $opbDataStr = "9A BC DE F0 ";
+    call OpbWrite();
+
+    UpdateStatus("write PHY_TX_WORD2_ADDR");
+    $opbAddrStr = "00 06 00 12";
+    $opbDataStr = "11 22 33 44";
+    call OpbWrite();
+
+    UpdateStatus("write PHY_TX_WORD3_ADDR");
+    $opbAddrStr = "00 06 00 13";
+    $opbDataStr = "55 66 77 88";
+    call OpbWrite();
+
+    UpdateStatus("read PHY_STATUS_ADDR : PHY Package TEST Result before test runs");
+    $opbAddrStr = "00 06 00 02";
+    $opbDataStr = "00 00 00 00";
+    call OpbRead();
+
+    UpdateStatus("write PHY_CTRL_ADDR : PHY Package TEST is running...");
+    $opbAddrStr = "00 06 00 01";
+    $opbDataStr = "00 00 00 01";
+    call OpbWrite();
+    $opbDataStr = "00 00 00 00";
+    call OpbWrite();
+    $opbDataStr = "00 00 00 01";
+    call OpbWrite();
+    $opbDataStr = "00 00 00 00";
+    call OpbWrite();
+    $opbDataStr = "00 00 00 01";
+    call OpbWrite();
+    $opbDataStr = "00 00 00 00";
+    call OpbWrite();
+    call OpbRead();
+
+    Sleep(1);
+
+    UpdateStatus("read PHY_STATUS_ADDR : PHY Package TEST Result after test runs");
+    $opbAddrStr = "00 06 00 02";
+    $opbDataStr = "00 00 00 00";
+    call OpbRead();
+    $test_result = $opbDataStr;
+
+    UpdateStatus("read PHY_RX_WORD0_ADDR");
+    $opbAddrStr = "00 06 00 20";
+    $opbDataStr = "00 00 00 00";
+    call OpbRead();
+
+    UpdateStatus("read PHY_RX_WORD1_ADDR");
+    $opbAddrStr = "00 06 00 21";
+    $opbDataStr = "00 00 00 00";
+    call OpbRead();
+
+    UpdateStatus("read PHY_RX_WORD2_ADDR");
+    $opbAddrStr = "00 06 00 22";
+    $opbDataStr = "00 00 00 00";
+    call OpbRead();
+
+    UpdateStatus("read PHY_RX_WORD3_ADDR");
+    $opbAddrStr = "00 06 00 23";
+    $opbDataStr = "00 00 00 00";
+    call OpbRead();
+
+    UpdateStatus("read PHY_RX_WORD4_ADDR");
+    $opbAddrStr = "00 06 00 24";
+    $opbDataStr = "00 00 00 00";
+    call OpbRead();
+
+    UpdateStatus("read PHY_RX_WORD5_ADDR");
+    $opbAddrStr = "00 06 00 25";
+    $opbDataStr = "00 00 00 00";
+    call OpbRead();
+
+    UpdateStatus("read PHY_RX_WORD6_ADDR");
+    $opbAddrStr = "00 06 00 26";
+    $opbDataStr = "00 00 00 00";
+    call OpbRead();
+
+    UpdateStatus("read PHY_RX_WORD7_ADDR");
+    $opbAddrStr = "00 06 00 27";
+    $opbDataStr = "00 00 00 00";
+    call OpbRead();
+
+    UpdateStatus("read PHY_RX_WORD8_ADDR");
+    $opbAddrStr = "00 06 00 28";
+    $opbDataStr = "00 00 00 00";
+    call OpbRead();
+
+    UpdateStatus("read PHY_RX_WORD9_ADDR");
+    $opbAddrStr = "00 06 00 29";
+    $opbDataStr = "00 00 00 00";
+    call OpbRead();
+
+    UpdateStatus("read PHY_RX_WORD10_ADDR");
+    $opbAddrStr = "00 06 00 2A";
+    $opbDataStr = "00 00 00 00";
+    call OpbRead();
+
+    UpdateStatus("read PHY_RX_WORD11_ADDR");
+    $opbAddrStr = "00 06 00 2B";
+    $opbDataStr = "00 00 00 00";
+    call OpbRead();
+
+    if($test_result  == $exp_result)
+    {
+        UpdateStatus("PHY Test pass!");
+        return;
+    }
+
+    UpdateStatus("PHY Test failed!");
+    return;
+}
+
+function PHY_Test()
+{
+    call PHY_BIST();
+    call PHY_dummyRegs(); 
+
+    UpdateStatus("write PHY_CTRL_ADDR : reset phy");
+    $opbAddrStr = "00 06 00 01";
+    $opbDataStr = "00 00 00 02";
+    call OpbWrite();
+    Sleep(1);
+
+    UpdateStatus("write PHY_CTRL_ADDR : release reset");
+    $opbAddrStr = "00 06 00 01";
+    $opbDataStr = "00 00 00 00";
+    call OpbWrite();
+    call OpbRead();
+
+    call PHY_Init();
+    
+    call PHY_FunctionTest();
+
+    return;
+}

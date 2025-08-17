@@ -26,6 +26,7 @@ module ctrl_package_transceiver_tb;
     reg [127:0] expected_pattern;
     reg [127:0] received_data;
     wire [127:0] rx_package_o;
+    wire [7:0]   rx_bit_cnt_debug;  // Debug signal
     reg [7:0]   rx_counter;
     
     // Clock generation (50MHz = 20ns period)
@@ -52,7 +53,10 @@ module ctrl_package_transceiver_tb;
         // RX interface
         .ctrl_rx_clk    (ctrl_rx_clk),
         .ctrl_rx_data   (ctrl_rx_data),
-        .ctrl_rx_dv     (ctrl_rx_dv)
+        .ctrl_rx_dv     (ctrl_rx_dv),
+        
+        // Debug interface
+        .rx_bit_cnt_o   (rx_bit_cnt_debug)
     );
     
     // Test sequence
@@ -77,7 +81,8 @@ module ctrl_package_transceiver_tb;
         
         // Test Case 1: Basic transmission and loopback
         test_case = 1;
-        $display("\nTest Case %0d: Basic TX/RX loopback test", test_case);
+        $display("\nTest Case %0d: Basic TX/RX loopback test (144-bit with 16-bit padding)", test_case);
+        $display("Transmitting: 128-bit data + 16-bit FFFF padding = 144 bits total");
         
         // Start transmission
         @(posedge sys_clk);
@@ -93,8 +98,8 @@ module ctrl_package_transceiver_tb;
             // Wait for TX to start and create loopback manually
             wait(ctrl_tx_en);  // Wait for transmission to start
             
-            // Create loopback during transmission
-            repeat(65) begin  // 64 cycles for data + 1 extra cycle for last ctrl_rx_dv (128 bits / 2 bits per cycle = 64)
+            // Create loopback during transmission (continuous sending)
+            repeat(75) begin  // 72 cycles for data + 3 extra cycles (144 bits / 2 bits per cycle = 72)
                 @(posedge sys_clk);
                 if (ctrl_tx_en) begin
                     // Loopback: feed TX data to RX  
@@ -105,25 +110,20 @@ module ctrl_package_transceiver_tb;
                     received_data = {received_data[125:0], ctrl_tx_data};
                     rx_counter = rx_counter + 2;
                     
-                    $display("Time: %0t - TX: 0x%h, RX: 0x%h", $time, ctrl_tx_data, ctrl_rx_data);
-                end else if (rx_counter > 0 && rx_counter <= 128) begin
+                    $display("Time: %0t - TX: 0x%h, RX: 0x%h, rx_cnt: %0d, debug_cnt: %0d", 
+                             $time, ctrl_tx_data, ctrl_rx_data, rx_counter, rx_bit_cnt_debug);
+                end else if (rx_counter > 0 && rx_counter <= 144) begin  // Now expecting 144 bits
                     // Keep ctrl_rx_dv high for one more cycle after TX ends to ensure last data is latched
                     ctrl_rx_dv = 1;
-                    $display("Time: %0t - Extra RX cycle for last data", $time);
-                    @(posedge sys_clk);
-                    ctrl_rx_dv = 0;
-                    // Exit loop after extra cycle
-                    rx_counter = 8'b11111111; // Signal to break from outer repeat
+                    $display("Time: %0t - Extra RX cycle for last data, debug_cnt: %0d", $time, rx_bit_cnt_debug);
+                    // Note: Do not add extra @(posedge sys_clk) here to avoid nested timing issues
                 end else begin
                     ctrl_rx_dv = 0;
-                    // Exit loop when transmission stops
-                    rx_counter = 8'b11111111; // Signal to break from outer repeat
                 end
                 
-                // Break from repeat loop if transmission completed
-                if (rx_counter >= 128) begin
+                // Exit early if transmission completed
+                if (rx_counter >= 144) begin  // Updated to 144 bits
                     ctrl_rx_dv = 0;
-                    rx_counter = 128; // Cap the counter
                 end
             end
             
@@ -143,11 +143,20 @@ module ctrl_package_transceiver_tb;
         end
         
         if (rx_good) begin
-            $display("✓ RX pattern match successful");
+            $display("✓ RX pattern match successful (including 16-bit padding)");
         end else begin
             $display("✗ RX pattern mismatch");
-            $display("Expected: 0x%h", expected_pattern);
-            $display("Received: 0x%h", received_data);
+            $display("Expected: 0x%h (first 128 bits)", expected_pattern);
+            $display("Received: 0x%h (first 128 bits)", received_data);
+            $display("RX Package Output: 0x%h", rx_package_o);
+            $display("Debug bit count: %0d (should be 144)", rx_bit_cnt_debug);
+        end
+        
+        // Additional check: verify that we received exactly 144 bits
+        if (rx_bit_cnt_debug == 144) begin
+            $display("✓ Correct number of bits received (144 including padding)");
+        end else begin
+            $display("✗ Incorrect bit count: expected 144, got %0d", rx_bit_cnt_debug);
         end
         
         // Test Case 2: Transmission without RX
@@ -210,15 +219,15 @@ module ctrl_package_transceiver_tb;
     
     // Timeout watchdog
     initial begin
-        #50000; // 50us timeout
+        #50000; // 50us timeout (restored to original for continuous sending)
         $display("ERROR: Testbench timeout!");
         $finish;
     end
     
     // Monitor key signals
     initial begin
-        $monitor("Time: %0t | rst_n=%b tx_start=%b tx_done=%b rx_good=%b | TX: en=%b data=0x%h | RX: dv=%b data=0x%h", 
-                 $time, rst_n, tx_start, tx_done, rx_good, ctrl_tx_en, ctrl_tx_data, ctrl_rx_dv, ctrl_rx_data);
+        $monitor("Time: %0t | rst_n=%b tx_start=%b tx_done=%b rx_good=%b | TX: en=%b data=0x%h | RX: dv=%b data=0x%h | Debug: rx_bit_cnt=%0d", 
+                 $time, rst_n, tx_start, tx_done, rx_good, ctrl_tx_en, ctrl_tx_data, ctrl_rx_dv, ctrl_rx_data, rx_bit_cnt_debug);
     end
 
 endmodule

@@ -20,7 +20,7 @@
 `timescale 1ns / 100ps
 `define FW_VERSION  32'h0000_0001 // Firmware version
 `define FPGA_ID     32'h0000_0050 // FPGA ID
-`define BUILD_DATE  32'h2025_0815 // YYYY_MMDD
+`define BUILD_DATE  32'h2025_0817 // YYYY_MMDD
 
 module top_hw(
     // Clock and Reset
@@ -50,7 +50,7 @@ module top_hw(
     input  APP_FPGA_SPI1_MOSI,
     input  APP_FPGA_SPI_CLK,
     input  DISABLE_HDW_FPGA,
-    input  APP_FPGA_TDO,
+    //input  APP_FPGA_TDO,
 
     // GPIO Inputs
     input  BMENLP_STATE,
@@ -90,10 +90,10 @@ module top_hw(
     
     output APP_FPGA_SPI0_MISO,
     output APP_FPGA_SPI1_MISO,
-    output APP_FPGA_TMS,
-    output APP_FPGA_TDI,
-    output APP_FPGA_TCK,
-    output APP_FPGA_TRST,
+    //output APP_FPGA_TMS,
+    //output APP_FPGA_TDI,
+    //output APP_FPGA_TCK,
+    //output APP_FPGA_TRST,
 
     // GPIO Outputs
     output BMENLP_LOC_CNTL,
@@ -236,7 +236,7 @@ module top_hw(
 
     assign clk_100mhz    = HDW_FPGA_100M_CLK;
     assign clk_50mhz     = HDW_FPGA_50M_CLK;
-    assign rst_n       = HDW_DEVRST_N;
+    assign rst_n         = HDW_DEVRST_N;
 
     assign rxd         = HDW_DBUG_SCLK;      // J36-P1
     assign clkin_2khz  = HDW_DBUG_MISO;      // J36
@@ -586,7 +586,7 @@ module top_hw(
         .APP_FPGA_SPI1_MOSI (APP_FPGA_SPI1_MOSI),
         .APP_FPGA_SPI_CLK   (APP_FPGA_SPI_CLK),
         .DISABLE_HDW_FPGA   (DISABLE_HDW_FPGA),
-        .APP_FPGA_TDO       (APP_FPGA_TDO),
+        .APP_FPGA_TDO       (0),
         
         // Output Interface
         .HSSB_PMII_CLK      (HSSB_PMII_CLK),
@@ -599,10 +599,10 @@ module top_hw(
         
         .APP_FPGA_SPI0_MISO (APP_FPGA_SPI0_MISO),
         .APP_FPGA_SPI1_MISO (APP_FPGA_SPI1_MISO),
-        .APP_FPGA_TMS       (APP_FPGA_TMS),
-        .APP_FPGA_TDI       (APP_FPGA_TDI),
-        .APP_FPGA_TCK       (APP_FPGA_TCK),
-        .APP_FPGA_TRST      (APP_FPGA_TRST)
+        .APP_FPGA_TMS       (),
+        .APP_FPGA_TDI       (),
+        .APP_FPGA_TCK       (),
+        .APP_FPGA_TRST      ()
     );
 
     // End of module
