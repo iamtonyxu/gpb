@@ -266,12 +266,13 @@ Uint16 AuxEepromReadByte(Uint16 Addr)
 *	History:		9/16/08 - Original
 *
 ******************************************************************************/
-Uint16 AuxEepromTest(void)
+Uint16 AuxEepromTest(Byte *pDoneFlag)
 {
 	Uint16 idx;
 	int Datum = -1;
 	Uint16 ErrCnt = 0;
 	Uint32 Sum = 0;
+	*pDoneFlag = 0;
 
 	for(idx = 0; idx < EEPROM_SIZE; idx++) {
 		if(!(idx % 32))
@@ -285,6 +286,8 @@ Uint16 AuxEepromTest(void)
 	
 	if(Sum != 0xff000)
 		ErrCnt |= 0x0001;
+	else
+	    *pDoneFlag |= 0x01;
 
 	for(idx = 0; idx < EEPROM_SIZE; idx++)
 		AuxEepromWriteByte(idx, 0x55);
@@ -295,6 +298,7 @@ Uint16 AuxEepromTest(void)
 			break;
 		}
 	}
+	*pDoneFlag |= 0x02;
 
 	for(idx = 0; idx < EEPROM_SIZE; idx++)
 		AuxEepromWriteByte(idx, 0xaa);
@@ -305,11 +309,23 @@ Uint16 AuxEepromTest(void)
 			break;
 		}
 	}
+    *pDoneFlag |= 0x04;
+
+    for(idx = 0; idx < EEPROM_SIZE; idx++)
+        AuxEepromWriteByte(idx, 0x00);
+
+    for(idx = 0; idx < EEPROM_SIZE; idx++) {
+        if(AuxEepromReadByte(idx) != 0x00) {
+            ErrCnt |= 0x0008;
+            break;
+        }
+    }
+    *pDoneFlag |= 0x08;
 
 	for(idx = 0; idx < EEPROM_SIZE; idx++)
 		AuxEepromWriteByte(idx, 0xff);
+    *pDoneFlag |= 0x10;
 
 	return ErrCnt;
 
 } /* AuxEepromTest() */
-
