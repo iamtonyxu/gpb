@@ -11,6 +11,14 @@
 `define PHY_RX_WORD1_ADDR       16'h0021
 `define PHY_RX_WORD2_ADDR       16'h0022
 `define PHY_RX_WORD3_ADDR       16'h0023
+`define PHY_RX_WORD4_ADDR       16'h0024
+`define PHY_RX_WORD5_ADDR       16'h0025
+`define PHY_RX_WORD6_ADDR       16'h0026
+`define PHY_RX_WORD7_ADDR       16'h0027
+`define PHY_RX_WORD8_ADDR       16'h0028
+`define PHY_RX_WORD9_ADDR       16'h0029
+`define PHY_RX_WORD10_ADDR      16'h002A
+`define PHY_RX_WORD11_ADDR      16'h002B
 
 module PHY_IF
 (
@@ -56,7 +64,7 @@ module PHY_IF
     reg     [31:0]              smii_read_data_reg;
 
     // Reset counter for PHY reset
-    reg     [7:0]               reset_cnt;
+    //reg     [7:0]               reset_cnt;
     wire                        phy_rst;
 
     // tx_start to trigger package send
@@ -66,7 +74,7 @@ module PHY_IF
     wire tx_done;
     wire rx_good;
     reg [127:0] tx_package;
-    wire [127:0] rx_package;
+    wire [143:0] rx_package;
     
     // Synchronizers for reading PHY_CLK domain signals in OPB_CLK domain
     reg tx_done_sync1, tx_done_sync2;
@@ -77,7 +85,7 @@ module PHY_IF
     wire ctrl_tx_en;
     wire [1:0] ctrl_rx_data;
     wire ctrl_rx_dv;
-
+    wire [7:0] rx_bit_cnt_o;
 
     // afifo to pass OPB DI from OPB_CLK to CLK_25MHZ 
     // only if OPB_WE is asserted and OPB_ADDR is PHY_REG_ACCESS_ADDR
@@ -134,16 +142,40 @@ module PHY_IF
                     OPB_DO <= tx_package[127:96];
                 end
                 `PHY_RX_WORD0_ADDR: begin
-                    OPB_DO <= rx_package[31:0];
+                    OPB_DO <= rx_package[47:16];
                 end
                 `PHY_RX_WORD1_ADDR: begin
-                    OPB_DO <= rx_package[63:32];
+                    OPB_DO <= rx_package[79:48];
                 end
                 `PHY_RX_WORD2_ADDR: begin
-                    OPB_DO <= rx_package[95:64];
+                    OPB_DO <= rx_package[111:80];
                 end
                 `PHY_RX_WORD3_ADDR: begin
-                    OPB_DO <= rx_package[127:96];
+                    OPB_DO <= rx_package[143:112];
+                end
+                `PHY_RX_WORD4_ADDR: begin
+                    OPB_DO <= rx_package[45:14];
+                end
+                `PHY_RX_WORD5_ADDR: begin
+                    OPB_DO <= rx_package[77:46];
+                end
+                `PHY_RX_WORD6_ADDR: begin
+                    OPB_DO <= rx_package[109:78];
+                end
+                `PHY_RX_WORD7_ADDR: begin
+                    OPB_DO <= rx_package[141:110];
+                end
+                `PHY_RX_WORD8_ADDR: begin
+                    OPB_DO <= rx_package[43:12];
+                end
+                `PHY_RX_WORD9_ADDR: begin
+                    OPB_DO <= rx_package[75:44];
+                end
+                `PHY_RX_WORD10_ADDR: begin
+                    OPB_DO <= rx_package[107:76];
+                end
+                `PHY_RX_WORD11_ADDR: begin
+                    OPB_DO <= rx_package[139:108];
                 end
                 default: begin
                     // Default case, return zero
@@ -157,17 +189,8 @@ module PHY_IF
         end
     end
 
-    // Generate smii_reset from OPB_RST
-    always @(posedge OPB_CLK or posedge OPB_RST) begin
-        if (OPB_RST) begin
-            reset_cnt <= 8'b11111111;
-        end else begin
-            reset_cnt <= {reset_cnt[6:0], 1'b0};
-        end
-    end
-
     // phy_rst
-    assign phy_rst = reset_cnt[7];
+    assign phy_rst = phy_tx_ctrl[1];
 
     // SERIAL_MII instance
     SERIAL_MII serial_mii_inst (
@@ -210,7 +233,7 @@ module PHY_IF
         if (OPB_RST) begin
             phy_rx_status <= 32'h0;
         end else begin
-            phy_rx_status <= {30'h0, rx_good_sync2, tx_done_sync2};
+            phy_rx_status <= {22'h0, rx_bit_cnt_o, rx_good_sync2, tx_done_sync2};
         end
     end
 
@@ -257,6 +280,10 @@ module PHY_IF
     
     assign tx_start_synced = tx_start_sync2;
 
+    assign rx_good = (tx_package == rx_package[143:16]) ||
+                     (tx_package == rx_package[141:14]) ||
+                     (tx_package == rx_package[139:12]);
+
     // Synchronize tx_done and rx_good from PHY_CLK to OPB_CLK domain for status reading
     always @(posedge OPB_CLK or posedge OPB_RST) begin
         if (OPB_RST) begin
@@ -274,7 +301,7 @@ module PHY_IF
 
 // PHY RMII Interface instance
 phy_ctrl_rmii phy_ctrl_rmii_inst (
-    .sysclk(OPB_CLK),
+    .sysclk(PHY_CLK),
     .reset_n(~phy_rst),
     
     // RMII Interface
@@ -299,7 +326,7 @@ ctrl_package_transceiver ctrl_pkg_transceiver_inst (
     .rst_n(~phy_rst),
     .tx_start(tx_start_synced),  // Use synchronized signal from OPB_CLK domain
     .tx_done(tx_done),
-    .rx_good(rx_good),
+    .rx_good(),
     .tx_package_i(tx_package),
     .rx_package_o(rx_package),
     .ctrl_tx_clk(),              // Not used, clock is internal
@@ -307,7 +334,8 @@ ctrl_package_transceiver ctrl_pkg_transceiver_inst (
     .ctrl_tx_en(ctrl_tx_en),     // Output: sends enable to phy_ctrl_rmii
     .ctrl_rx_clk(),              // Not used, clock is internal
     .ctrl_rx_data(ctrl_rx_data), // Input: receives data from phy_ctrl_rmii
-    .ctrl_rx_dv(ctrl_rx_dv)      // Input: receives data valid from phy_ctrl_rmii
+    .ctrl_rx_dv(ctrl_rx_dv),     // Input: receives data valid from phy_ctrl_rmii
+    .rx_bit_cnt_o(rx_bit_cnt_o)  // Output: sends received bit count to phy_ctrl_rmii
 );
 
 endmodule

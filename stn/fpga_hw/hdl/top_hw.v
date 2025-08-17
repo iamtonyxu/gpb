@@ -236,7 +236,7 @@ module top_hw(
 
     assign clk_100mhz    = HDW_FPGA_100M_CLK;
     assign clk_50mhz     = HDW_FPGA_50M_CLK;
-    assign rst_n       = HDW_DEVRST_N;
+    assign rst_n         = HDW_DEVRST_N;
 
     assign rxd         = HDW_DBUG_SCLK;      // J36-P1
     assign clkin_2khz  = HDW_DBUG_MISO;      // J36

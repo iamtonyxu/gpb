@@ -41,75 +41,47 @@ module phy_ctrl_rmii (
     output wire         ctrl_rx_err
 );
 
-    assign phy_tx_data = ctrl_tx_data;  // Direct connection since both are 2-bit
-    assign phy_tx_en   = ctrl_tx_en;
+    // TX path: sysclk to phy_tx_clk domain
+    reg [1:0]   tx_data_sync1, tx_data_sync2;
+    reg         tx_en_sync1, tx_en_sync2;
     
-    assign ctrl_rx_data = phy_rx_data;  // Direct connection since both are 2-bit
-    assign ctrl_rx_dv   = phy_rx_dv;
+    always @(posedge phy_tx_clk or negedge reset_n) begin
+        if (!reset_n) begin
+            tx_data_sync1 <= 2'b00;
+            tx_data_sync2 <= 2'b00;
+            tx_en_sync1   <= 1'b0;
+            tx_en_sync2   <= 1'b0;
+        end else begin
+            tx_data_sync1 <= ctrl_tx_data;
+            tx_data_sync2 <= tx_data_sync1;
+            tx_en_sync1   <= ctrl_tx_en;
+            tx_en_sync2   <= tx_en_sync1;
+        end
+    end
+    
+    assign phy_tx_data = tx_data_sync2;
+    assign phy_tx_en   = tx_en_sync2;
+
+    // RX path: phy_rx_clk to sysclk domain  
+    reg [1:0]   rx_data_sync1, rx_data_sync2;
+    reg         rx_dv_sync1, rx_dv_sync2;
+    
+    always @(posedge sysclk or negedge reset_n) begin
+        if (!reset_n) begin
+            rx_data_sync1 <= 2'b00;
+            rx_data_sync2 <= 2'b00;
+            rx_dv_sync1   <= 1'b0;
+            rx_dv_sync2   <= 1'b0;
+        end else begin
+            rx_data_sync1 <= phy_rx_data;
+            rx_data_sync2 <= rx_data_sync1;
+            rx_dv_sync1   <= phy_rx_dv;
+            rx_dv_sync2   <= rx_dv_sync1;
+        end
+    end
+    
+    assign ctrl_rx_data = rx_data_sync2;
+    assign ctrl_rx_dv   = rx_dv_sync2;
     assign ctrl_rx_err  = 1'b0;  // Error detection not implemented in this version
-
-/*
-    // Internal signals
-    wire [3:0]  tx_fifo_rdata;
-    wire        tx_fifo_rdata_vld;
-    wire [3:0]  rx_fifo_rdata;
-    wire        rx_fifo_rdata_vld;
-    wire [3:0]  tx_wdata;
-    wire [3:0]  rx_wdata;
-    
-    // Constants
-    localparam RX_IFACE = 0;
-    localparam TX_IFACE = 1;
-    
-    // Reset signal (convert active low to active high for FIFO modules)
-    wire reset = ~reset_n;
-
-    //------------------
-    // TX Data Path
-    //------------------
-    // Signals from "sysclk" domain are synchronized to the RMII interface domain
-    // Convert 4-bit data at sysclk to 2-bit data at phy_tx_clk
-    assign tx_wdata = ctrl_tx_data;
-    
-    tr_fifo_rmii #(
-        .IFACE(TX_IFACE)
-    ) tx_fifo (
-        .reset          (reset),
-        .wdata          (tx_wdata),
-        .wdata_en       (ctrl_tx_en),
-        .write_clock    (sysclk),
-        .read_clock     (phy_tx_clk),
-        .rdata          (tx_fifo_rdata),
-        .rdata_vld      (tx_fifo_rdata_vld)
-    );
-    
-    // Extract 2-bit data for PHY TX interface
-    assign phy_tx_data = tx_fifo_rdata[1:0];
-    assign phy_tx_en   = tx_fifo_rdata_vld;
-
-    //------------------
-    // RX Data Path  
-    //------------------
-    // Signals from the RMII interface are synchronized to the "sysclk" domain
-    // Convert 2-bit data at phy_rx_clk to 4-bit data at sysclk
-    assign rx_wdata = {2'b00, phy_rx_data};
-    
-    tr_fifo_rmii #(
-        .IFACE(RX_IFACE)
-    ) rx_fifo (
-        .reset          (reset),
-        .wdata          (rx_wdata),
-        .wdata_en       (phy_rx_dv),
-        .write_clock    (phy_rx_clk),
-        .read_clock     (sysclk),
-        .rdata          (rx_fifo_rdata),
-        .rdata_vld      (rx_fifo_rdata_vld)
-    );
-
-    // Extract control signals for system interface
-    assign ctrl_rx_data = rx_fifo_rdata[3:0];
-    assign ctrl_rx_dv   = rx_fifo_rdata_vld;
-    assign ctrl_rx_err  = 1'b0;  // Error detection not implemented in this version
-*/
 
 endmodule
