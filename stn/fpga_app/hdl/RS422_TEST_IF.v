@@ -281,7 +281,7 @@ module RS422_TEST_IF(
                     rx_err_bytes[i] <= 32'b0;
                 end else if(clear) begin
                     rx_err_bytes[i] <= 32'b0;      // Clear on clear command
-                end else if (data_stream_out_stb[i] && (data_stream_out[i][7:0] != test_pattern)) begin
+                end else if (data_stream_out_stb[i] && (data_stream_out[i][7:0] != test_pattern) && rx_recv_bytes[i] < tx_trans_bytes) begin
                     rx_err_bytes[i] <= rx_err_bytes[i] + 1;     // Increment on error detected
                 end
             end
@@ -296,15 +296,15 @@ module RS422_TEST_IF(
             rx_status <= 32'b0;                 // Clear on clear command
         end else if (act_tx_trans_bytes == tx_trans_bytes) begin
             rx_status[0] <= 1'b1;               // Transmission complete
-            rx_status[1] <= (rx_recv_bytes[0] == tx_trans_bytes) ? 1'b1 : 1'b0;
-            rx_status[2] <= (rx_recv_bytes[1] == tx_trans_bytes) ? 1'b1 : 1'b0;
-            rx_status[3] <= (rx_recv_bytes[2] == tx_trans_bytes) ? 1'b1 : 1'b0;
-            rx_status[4] <= (rx_recv_bytes[3] == tx_trans_bytes) ? 1'b1 : 1'b0;
-            rx_status[5] <= (rx_recv_bytes[4] == tx_trans_bytes) ? 1'b1 : 1'b0;
-            rx_status[6] <= (rx_recv_bytes[5] == tx_trans_bytes) ? 1'b1 : 1'b0;
-            rx_status[7] <= (rx_recv_bytes[6] == tx_trans_bytes) ? 1'b1 : 1'b0;
-            rx_status[8] <= (rx_recv_bytes[7] == tx_trans_bytes) ? 1'b1 : 1'b0;
-            rx_status[9] <= (rx_recv_bytes[8] == tx_trans_bytes) ? 1'b1 : 1'b0;
+            rx_status[1] <= (rx_recv_bytes[0] >= tx_trans_bytes) ? 1'b1 : 1'b0;
+            rx_status[2] <= (rx_recv_bytes[1] >= tx_trans_bytes) ? 1'b1 : 1'b0;
+            rx_status[3] <= (rx_recv_bytes[2] >= tx_trans_bytes) ? 1'b1 : 1'b0;
+            rx_status[4] <= (rx_recv_bytes[3] >= tx_trans_bytes) ? 1'b1 : 1'b0;
+            rx_status[5] <= (rx_recv_bytes[4] >= tx_trans_bytes) ? 1'b1 : 1'b0;
+            rx_status[6] <= (rx_recv_bytes[5] >= tx_trans_bytes) ? 1'b1 : 1'b0;
+            rx_status[7] <= (rx_recv_bytes[6] >= tx_trans_bytes) ? 1'b1 : 1'b0;
+            rx_status[8] <= (rx_recv_bytes[7] >= tx_trans_bytes) ? 1'b1 : 1'b0;
+            rx_status[9] <= (rx_recv_bytes[8] >= tx_trans_bytes) ? 1'b1 : 1'b0;
         end
     end
 

@@ -18,7 +18,7 @@
 `timescale 1ns / 1ps
 `define FW_VERSION  32'h0000_0001 // Firmware version
 `define FPGA_ID     32'h0000_0100 // FPGA ID
-`define BUILD_DATE  32'h2025_0817 // YYYY_MMDD
+`define BUILD_DATE  32'h2025_0822 // YYYY_MMDD
 
 module top_app(
     // BANK-2/4, 3.3V I/O
