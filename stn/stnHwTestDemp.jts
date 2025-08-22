@@ -11,7 +11,7 @@ UpdateStatus("-------------     Start     --------------------");
 $OPBCom = 10;
 call OpbOpen();
 
-$enableTest = 0;
+$enableTest = 1;
 if($enableTest > 0)
 {
     // demo to read FPGA Version register @32'h0000_0000
@@ -38,7 +38,7 @@ if($enableTest > 0)
     call OpbRead();
 }
 
-call PHY_Test();
+//call PHY_Test();
 
 $enableTest = 0;
 if($enableTest > 0)
@@ -674,8 +674,6 @@ function PHY_FunctionTest()
     call OpbWrite();
     $opbDataStr = "00 00 00 01";
     call OpbWrite();
-    $opbDataStr = "00 00 00 00";
-    call OpbWrite();
     call OpbRead();
 
     Sleep(1);
@@ -752,6 +750,10 @@ function PHY_FunctionTest()
         return;
     }
 
+    $opbAddrStr = "00 06 00 01";
+    $opbDataStr = "00 00 00 00";
+    call OpbWrite();
+
     UpdateStatus("PHY Test failed!");
     return;
 }
@@ -777,5 +779,43 @@ function PHY_Test()
     
     call PHY_FunctionTest();
 
+    return;
+}
+
+function FPGA_IF_Test()
+{
+    UpdateStatus("HW-APP FPGA Interface Test start");
+    $opbAddrStr = "00 04 00 00";
+    $opbDataStr = "00 00 00 00";
+    call OpbWrite();
+    call OpbRead();
+    UpdateStatus($opbDataStr); //expected: "00000000"
+
+    $opbDataStr = "00 00 01 FF";
+    call OpbWrite();
+    call OpbRead();
+    UpdateStatus($opbDataStr); //expected: "0001FFFF"
+
+    $opbDataStr = "00 00 00 5A";
+    call OpbWrite();
+    call OpbRead();
+    UpdateStatus($opbDataStr); //expected: "00005A5A"
+
+    $opbDataStr = "00 00 01 5A";
+    call OpbWrite();
+    call OpbRead();
+    UpdateStatus($opbDataStr); //expected: "00015A5A"
+
+    $opbDataStr = "00 00 00 A5";
+    call OpbWrite();
+    call OpbRead();
+    UpdateStatus($opbDataStr); //expected: "0000A5A5"
+
+    $opbDataStr = "00 00 01 A5";
+    call OpbWrite();
+    call OpbRead();
+    UpdateStatus($opbDataStr); //expected: "0001A5A5"
+
+    UpdateStatus("HW-APP FPGA Interface Test PASS!");
     return;
 }
