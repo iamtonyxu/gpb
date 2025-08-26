@@ -250,7 +250,7 @@ module top_hw(
     assign HDW_DBUG_HEADER10 = 1'b0; // Reserved
 
     // status LEDs
-    assign HDW_FPGA_DONE      = rst_n; // D33 ON after FPGA configuration
+    assign HDW_FPGA_DONE      = ~rst_n; // D33 OFF after FPGA configuration
 
     assign HDW_FPGA_STAT_LED1 = opb_wakeup ? HDW_FPGA_STAT_LED1_W : pulse_1hz;   // D20 ON
     assign HDW_FPGA_STAT_LED2 = opb_wakeup ? HDW_FPGA_STAT_LED2_W : pulse_1hz;   // D21 ON
@@ -259,11 +259,24 @@ module top_hw(
     // Wake-up Logic
     //=========================================================================
     // OPB wakeup - any opb_re and opb_we will wake up the system
+    reg [3:0]seconds;
+    always @(posedge pulse_1hz or negedge rst_n) begin
+        if(!rst_n) begin
+            seconds <= 4'b0000;
+        end else begin
+            if(seconds < 4'b1111) begin
+                seconds <= seconds + 1;
+            end
+        end
+    end
+    
     always @(posedge opb_clk or negedge rst_n) begin
         if (!rst_n) begin
             opb_wakeup <= 1'b0;
         end else begin
             if (opb_re || opb_we) begin
+                opb_wakeup <= 1'b1;
+            end else if(seconds > 1) begin
                 opb_wakeup <= 1'b1;
             end
         end
