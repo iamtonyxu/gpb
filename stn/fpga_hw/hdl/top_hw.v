@@ -18,9 +18,9 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////// 
 
 `timescale 1ns / 100ps
-`define FW_VERSION  32'h0001_0000 // Firmware version
+`define FW_VERSION  32'h0001_0001 // Firmware version
 `define FPGA_ID     32'h0000_0050 // FPGA ID
-`define BUILD_DATE  32'h2025_0822 // YYYY_MMDD
+`define BUILD_DATE  32'h2025_0830 // YYYY_MMDD
 
 module top_hw(
     // Clock and Reset

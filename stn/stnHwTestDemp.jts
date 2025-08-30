@@ -11,7 +11,7 @@ UpdateStatus("-------------     Start     --------------------");
 $OPBCom = 10;
 call OpbOpen();
 
-$enableTest = 1;
+$enableTest = 0;
 if($enableTest > 0)
 {
     // demo to read FPGA Version register @32'h0000_0000
@@ -40,17 +40,115 @@ if($enableTest > 0)
 
 //call PHY_Test();
 
+//EepromByteWrite, EepromByteRead
 $enableTest = 0;
 if($enableTest > 0)
 {
-    // demo to read GPIO_IN1
-    UpdateStatus("demo to read GPIO_IN1");
-    call readGPIO_IN1();
-    //$printStr = StringCat("BMPLS=", $BMPLS);
-    //UpdateStatus($BMPLS);
+    UpdateStatus("EepromByteWrite and EepromByteRead.");
+    // Input: $eep_addr_h, $eep_addr_l, $eep_byte
+    $eep_addr_h = 0;
+    $eep_addr_l = 0;
+    $eep_byte = 100;
+
+    //EepromByteWrite
+    $eep_addr_l = 0;
+    while($eep_addr_l < 32)
+    {
+        $eep_byte = $eep_byte + 1;
+        //call EepromByteWrite();
+        $eep_addr_l = $eep_addr_l + 1;
+    }
+
+    //EepromByteRead
+    $eep_addr_l = 0;
+    while($eep_addr_l < 32)
+    {
+        call EepromByteRead();
+        UpdateStatus($eep_byte);
+        $eep_addr_l = $eep_addr_l + 1;
+    }
+}
+
+//EepromPageWrite, EepromByteRead
+$enableTest = 0;
+if($enableTest > 0)
+{
+    UpdateStatus("EepromPageWrite and EepromByteRead.");
+    $eep_addr_h = 0;
+    $eep_addr_l = 0;
+    $eep_page = Array1DCreate("Integer", 32);
+    $ii = 0;
+    while($ii < 32)
+    {
+        $jj = $ii + 20;
+        Array1DSetValue($eep_page, $ii, $jj);
+        $ii = $ii + 1;
+    }
+    call EepromPageWrite();
+    Sleep(1);
+
+    $eep_addr_h = 0;
+    $eep_addr_l = 0;
+    while($eep_addr_l < 32)
+    {
+        $eep_byte = 0;
+        call EepromByteRead();
+        UpdateStatus($eep_byte);
+        $eep_addr_l = $eep_addr_l + 1;
+    }
 
 }
 
+//EepromPageWrite
+$enableTest = 1;
+if($enableTest > 0)
+{
+    UpdateStatus("EepromPageRead the whole chip start, please wait about 2 mins");
+    $eep_page = Array1DCreate("Integer", 32);
+    $ii = 0;
+    while($ii < 32) 
+    {
+        Array1DSetValue($eep_page, $ii, 190);
+        $ii = $ii + 1;
+    }
+
+    $page = 0;
+    $eep_addr_h = 0;
+    $eep_addr_l = 0;
+    while($page < 256) // 256 pages totally
+    {
+        //UpdateStatus("EepromPageWrite into page");
+        //UpdateStatus($page);
+        call EepromPageWrite();
+        $eep_addr_l = $eep_addr_l + 32;
+        if($eep_addr_l >= 256)
+        {
+            $eep_addr_h = $eep_addr_h + 1;
+            $eep_addr_l = 0;
+        }
+        $page = $page + 1;
+    }
+    UpdateStatus("EepromPageRead the whole chip end!");
+
+}
+
+//EepromPageRead
+$enableTest = 1;
+if($enableTest > 0)
+{
+    UpdateStatus("EepromPageRead on one page start.");
+    $eep_addr_h = 1;
+    $eep_addr_l = 0;
+    call EepromPageRead();
+    $ii = 0;
+    while($ii < 32)
+    {
+        $eep_byte = Array1DGetValue($eep_page, $ii);
+        UpdateStatus($eep_byte);
+        $ii = $ii + 1;
+    }
+    UpdateStatus("EepromPageRead on one page end.");
+}
 
 
 call OpbClose();
@@ -817,5 +915,183 @@ function FPGA_IF_Test()
     UpdateStatus($opbDataStr); //expected: "0001A5A5"
 
     UpdateStatus("HW-APP FPGA Interface Test PASS!");
+    return;
+}
+
+// EEPROM Write Byte Operation
+// Input: $eep_addr_h, $eep_addr_l, $eep_byte
+function EepromByteWrite()
+{
+    $sendMessage = Array1DCreate("INTEGER", 10);
+    Array1DSetValue($sendMessage, 0, 90);  //start: 0x5A = 90
+    Array1DSetValue($sendMessage, 1, 0);   //0x00
+    Array1DSetValue($sendMessage, 2, 5);   //0x05
+    Array1DSetValue($sendMessage, 3, 0);   //0x00
+    Array1DSetValue($sendMessage, 4, 0);   //0x00
+    Array1DSetValue($sendMessage, 5, 48);  //0x30 = 48, eeprom write
+    Array1DSetValue($sendMessage, 6, $eep_addr_h);  //(addr >> 8)
+    Array1DSetValue($sendMessage, 7, $eep_addr_l);  //(addr & 0xff)
+    Array1DSetValue($sendMessage, 8, $eep_byte); //data
+    Array1DSetValue($sendMessage, 9, 165); //end: 0xA5 = 165
+
+    // send message
+    Serial_SendBinaryFromArray($comObject, $sendMessage, 0, 10);
+    SleepMilliseconds(2);
+
+    // receive message
+    //$timeout = 1;           // wait for 1 second
+    //$replyMessage = Serial_ReceiveBinaryToArray($comObject, $timeout);
+    Serial_DiscardInBuffer($comObject);
+
+    return;
+}
+
+// EEPROM Read Byte Operation
+// Input: $eep_addr_l, $eep_addr_l
+// Ouput: $eep_byte
+function EepromByteRead()
+{
+    $eep_byte = 0;
+    $sendMessage = Array1DCreate("INTEGER", 10);
+    Array1DSetValue($sendMessage, 0, 90);  //start: 0x5A = 90
+    Array1DSetValue($sendMessage, 1, 0);   //0x00
+    Array1DSetValue($sendMessage, 2, 5);   //0x05
+    Array1DSetValue($sendMessage, 3, 0);   //0x00
+    Array1DSetValue($sendMessage, 4, 0);   //0x00
+    Array1DSetValue($sendMessage, 5, 0);  //0x00, eeprom read
+    Array1DSetValue($sendMessage, 6, $eep_addr_h);  //(addr >> 8)
+    Array1DSetValue($sendMessage, 7, $eep_addr_l);  //(addr & 0xff)
+    Array1DSetValue($sendMessage, 8, 0);  //data
+    Array1DSetValue($sendMessage, 9, 165); //end: 0xA5 = 165
+
+    // send message to reqest eeprom read
+    Serial_SendBinaryFromArray($comObject, $sendMessage, 0, 10);
+
+    // receive message: echo
+    //$replyMessage = Serial_ReceiveBinaryToArray($comObject, 1);
+
+    // send message to readback eeprom data
+    Array1DSetValue($sendMessage, 0, 91);  //start: 0x5B = 91
+    Array1DSetValue($sendMessage, 9, 164); //end: 0xA4 = 164
+    Serial_SendBinaryFromArray($comObject, $sendMessage, 0, 10);
+
+    // receive message
+    $replyMessage = Serial_ReceiveBinaryToArray($comObject, 1);
+    $eep_byte = Array1DGetValue($replyMessage, 18);
+
+    return;
+}
+
+// EEPROM Write Page Operation
+// Input: $eep_addr_h: Integer
+// Input: $eep_addr_l: Integer
+// Input: $eep_page: Array1D with 32 bytes
+function EepromPageWrite()
+{
+    $sendMessage = Array1DCreate("INTEGER", 10);
+    $eep_byte = 0;
+    Array1DSetValue($sendMessage, 0, 90);  //start: 0x5A = 90
+    Array1DSetValue($sendMessage, 1, 0);   //0x00
+    Array1DSetValue($sendMessage, 2, 5);   //0x05
+    Array1DSetValue($sendMessage, 3, 0);   //0x00
+    Array1DSetValue($sendMessage, 4, 0);   //0x00
+    Array1DSetValue($sendMessage, 5, 48);  //0x30 = 48, eeprom write
+    Array1DSetValue($sendMessage, 6, $eep_addr_h);  //(addr >> 8)
+    Array1DSetValue($sendMessage, 7, $eep_addr_l);  //(addr & 0xff)
+    Array1DSetValue($sendMessage, 8, $eep_byte); //data
+    Array1DSetValue($sendMessage, 9, 165); //end: 0xA5 = 165
+
+    $ii = 0;
+    while($ii < 32)
+    {
+        $eep_byte = Array1DGetValue($eep_page, $ii);
+        Array1DSetValue($sendMessage, 6, $eep_addr_h);  //(addr >> 8)
+        Array1DSetValue($sendMessage, 7, $eep_addr_l);  //(addr & 0xff)
+        Array1DSetValue($sendMessage, 8, $eep_byte); //data
+
+        // send message
+        Serial_SendBinaryFromArray($comObject, $sendMessage, 0, 10);
+        SleepMilliseconds(1); //1ms
+
+        $eep_addr_l = $eep_addr_l + 1;
+        if($eep_addr_l == 256)
+        {
+            $eep_addr_l = 0;
+            $eep_addr_h = $eep_addr_h + 1;
+        }
+
+        $ii = $ii + 1;
+    }
+
+    // receive echo
+    //($replyMessage, $numBytes) = Serial_ReceiveBinaryToArrayWithCount($comObject, 1);
+    //UpdateStatus($numBytes);
+    Serial_DiscardInBuffer($comObject);
+
+    return;
+}
+
+// EEPROM Read Page Operation
+// Input: $eep_addr_h: Integer
+// Input: $eep_addr_l: Integer
+// Output: $eep_page: Array1D with 32 bytes
+function EepromPageRead()
+{
+    $eep_page = Array1DCreate("INTEGER", 32); 
+    $eep_byte = 0;
+
+    $sendMessage = Array1DCreate("INTEGER", 10);
+    $eep_byte = 0;
+    Array1DSetValue($sendMessage, 0, 90);  //start: 0x5A = 90
+    Array1DSetValue($sendMessage, 1, 0);   //0x00
+    Array1DSetValue($sendMessage, 2, 5);   //0x05
+    Array1DSetValue($sendMessage, 3, 0);   //0x00
+    Array1DSetValue($sendMessage, 4, 0);   //0x00
+    Array1DSetValue($sendMessage, 5, 00);  //0x00, eeprom read
+    Array1DSetValue($sendMessage, 6, $eep_addr_h);  //(addr >> 8)
+    Array1DSetValue($sendMessage, 7, $eep_addr_l);  //(addr & 0xff)
+    Array1DSetValue($sendMessage, 8, $eep_byte); //data
+    Array1DSetValue($sendMessage, 9, 165); //end: 0xA5 = 165
+
+    $ii = 0;
+    while($ii < 32)
+    {
+        Array1DSetValue($sendMessage, 0, 90);  //start: 0x5A = 90
+        Array1DSetValue($sendMessage, 6, $eep_addr_h);  //(addr >> 8)
+        Array1DSetValue($sendMessage, 7, $eep_addr_l);  //(addr & 0xff)
+        Array1DSetValue($sendMessage, 9, 165); //end: 0xA5 = 165
+
+        // send message to request eeprom read operation
+        Serial_SendBinaryFromArray($comObject, $sendMessage, 0, 10);
+        SleepMilliseconds(1); //1ms
+
+        Array1DSetValue($sendMessage, 0, 91);  //start: 0x5B = 91
+        Array1DSetValue($sendMessage, 9, 164); //end: 0xA4 = 164
+
+        // send message to read eeprom data
+        Serial_SendBinaryFromArray($comObject, $sendMessage, 0, 10);
+
+        $eep_addr_l = $eep_addr_l + 1;
+        if($eep_addr_l == 256)
+        {
+            $eep_addr_l = 0;
+            $eep_addr_h = $eep_addr_h + 1;
+        }
+
+        $ii = $ii + 1;
+    }
+
+    // receive message including echo and eeprom data
+    $replyMessage = Serial_ReceiveBinaryToArray($comObject, 1);
+
+    $ii = 0;
+    while($ii < 32)
+    {
+        $index = $ii*20 + 18;
+        $eep_byte = Array1DGetValue($replyMessage, $index);
+        Array1DSetValue($eep_page, $ii, $eep_byte);
+        $ii = $ii + 1;
+    }
+
     return;
 }

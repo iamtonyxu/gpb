@@ -17,10 +17,10 @@ module EEPROM_OPB_IF (
 );
 
     // Parameters
-    parameter CLK_DIV = 100; // Derive 1 MHz clock from OPB_CLK (100 MHz)
+    parameter CLK_DIV = 10; // Derive 10 MHz clock from OPB_CLK (100 MHz)
 
     // Internal Registers
-    reg     [7:0]   clk_cnt;       // Divide OPB_CLK by 100 to get 1 MHz clock
+    reg     [7:0]   clk_cnt;       // Divide OPB_CLK by 10 to get 10 MHz clock
     reg             strobe_1us;   // 1us pulse generated from OPB_CLK
     reg             eep_done_reg; // Register to indicate EEPROM operation done
     reg     [7:0]   eep_rddata_reg; // Register to store read data from EEPROM
