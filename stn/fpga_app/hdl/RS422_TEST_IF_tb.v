@@ -230,14 +230,31 @@ module RS422_TEST_IF_tb;
             // Simulate reception on RX1 (SYNC_LOC_MONITOR)
             simulate_uart_rx(9'b000000001, 8'h55);
             #10000; // Small gap between bytes
-            
             // Simulate reception on RX2 (SYNC_MONITOR) 
             simulate_uart_rx(9'b000000010, 8'h55);
             #10000;
-            
             // Simulate reception on RX3 (DMD_MSSB_RX)
             simulate_uart_rx(9'b000000100, 8'h55);
             #10000;
+            // Simulate reception on RX4
+            simulate_uart_rx(9'b000001000, 8'hA5);
+            #10000;
+            // Simulate reception on RX5
+            simulate_uart_rx(9'b000010000, 8'h5A);
+            #10000;
+            // Simulate reception on RX6
+            simulate_uart_rx(9'b000100000, 8'h3C);
+            #10000;
+            // Simulate reception on RX7
+            simulate_uart_rx(9'b001000000, 8'hC3);
+            #10000;
+            // Simulate reception on RX8
+            simulate_uart_rx(9'b010000000, 8'hF0);
+            #10000;
+            // Simulate reception on RX9
+            simulate_uart_rx(9'b100000000, 8'h0F);
+            #10000;
+
         end
         
         // Wait for processing to complete
@@ -268,7 +285,46 @@ module RS422_TEST_IF_tb;
         
         opb_read(32'h0000000F, read_data); // RX3_ERR_BYTES_ADDR
         $display("RX3 Error Bytes: %d", read_data);
+
+        // Read and display received data
+        $display("\n=== Reading Received Data ===");
         
+        // Read RX1 received data
+        opb_read(32'h00000020, read_data); // RX1_RECV_DATA_ADDR
+        $display("RX1 Received Data: 0x%08X", read_data);
+        
+        // Read RX2 received data  
+        opb_read(32'h00000021, read_data); // RX2_RECV_DATA_ADDR
+        $display("RX2 Received Data: 0x%08X", read_data);
+        
+        // Read RX3 received data
+        opb_read(32'h00000022, read_data); // RX3_RECV_DATA_ADDR
+        $display("RX3 Received Data: 0x%08X", read_data);
+        
+        // Read RX4 received data
+        opb_read(32'h00000023, read_data); // RX4_RECV_DATA_ADDR
+        $display("RX4 Received Data: 0x%08X", read_data);
+        
+        // Read RX5 received data
+        opb_read(32'h00000024, read_data); // RX5_RECV_DATA_ADDR
+        $display("RX5 Received Data: 0x%08X", read_data);
+        
+        // Read RX6 received data
+        opb_read(32'h00000025, read_data); // RX6_RECV_DATA_ADDR
+        $display("RX6 Received Data: 0x%08X", read_data);
+
+        // Read RX7 received data
+        opb_read(32'h00000026, read_data); // RX7_RECV_DATA_ADDR
+        $display("RX7 Received Data: 0x%08X", read_data);
+        
+        // Read RX8 received data
+        opb_read(32'h00000027, read_data); // RX8_RECV_DATA_ADDR
+        $display("RX8 Received Data: 0x%08X", read_data);
+        
+        // Read RX9 received data
+        opb_read(32'h00000028, read_data); // RX9_RECV_DATA_ADDR
+        $display("RX9 Received Data: 0x%08X", read_data);
+
         $display("\n=== Test 5: Error Detection Test ===");
         
         // Clear previous test
