@@ -566,9 +566,10 @@ module top(
         .SP2_WE(SP2_WE)                  // Scratchpad 2 write enable
     );
 
-    EEPROM_OPB_IF eeprom_0(
+    EEPROM_OPB_IF_V2 eeprom_0(
     .OPB_CLK(OPB_CLK),               // OPB clock
     .OPB_RST(OPB_RST),               // OPB reset
+    .OPB_ADDR(OPB_ADDR[15:0]),       // OPB address
     .EEP_DI(OPB_DO),                 // EEPROM data input
     .EEP_RE(EEP_RE),                 // EEPROM read enable
     .EEP_WE(EEP_WE),                 // EEPROM write enable
