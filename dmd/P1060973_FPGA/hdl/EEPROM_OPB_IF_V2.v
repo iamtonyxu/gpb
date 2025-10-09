@@ -132,14 +132,14 @@ module EEPROM_OPB_IF_V2 (
                                  eeprom_page_wrdata3, eeprom_page_wrdata2, eeprom_page_wrdata1, eeprom_page_wrdata0};
 
     // eeprom_page_rddata
-    assign eeprom_page_rdata_0 = eeprom_page_rddata[31:0];
-    assign eeprom_page_rdata_1 = eeprom_page_rddata[63:32];
-    assign eeprom_page_rdata_2 = eeprom_page_rddata[95:64];
-    assign eeprom_page_rdata_3 = eeprom_page_rddata[127:96];
-    assign eeprom_page_rdata_4 = eeprom_page_rddata[159:128];
-    assign eeprom_page_rdata_5 = eeprom_page_rddata[191:160];
-    assign eeprom_page_rdata_6 = eeprom_page_rddata[223:192];
-    assign eeprom_page_rdata_7 = eeprom_page_rddata[255:224];
+    assign eeprom_page_rddata0 = eeprom_page_rddata[31:0];
+    assign eeprom_page_rddata1 = eeprom_page_rddata[63:32];
+    assign eeprom_page_rddata2 = eeprom_page_rddata[95:64];
+    assign eeprom_page_rddata3 = eeprom_page_rddata[127:96];
+    assign eeprom_page_rddata4 = eeprom_page_rddata[159:128];
+    assign eeprom_page_rddata5 = eeprom_page_rddata[191:160];
+    assign eeprom_page_rddata6 = eeprom_page_rddata[223:192];
+    assign eeprom_page_rddata7 = eeprom_page_rddata[255:224];
 
     // EEP_DO
     always @(posedge OPB_CLK or posedge OPB_RST) begin
