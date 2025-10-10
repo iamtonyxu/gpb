@@ -128,8 +128,14 @@ module EEPROM_OPB_IF_V2 (
     end
 
     // eeprom_page_wrdata
-    assign eeprom_page_wrdata = {eeprom_page_wrdata7, eeprom_page_wrdata6, eeprom_page_wrdata5, eeprom_page_wrdata4,
-                                 eeprom_page_wrdata3, eeprom_page_wrdata2, eeprom_page_wrdata1, eeprom_page_wrdata0};
+    assign eeprom_page_wrdata = {eeprom_page_wrdata7,
+                                eeprom_page_wrdata6,
+                                eeprom_page_wrdata5,
+                                eeprom_page_wrdata4,
+                                eeprom_page_wrdata3,
+                                eeprom_page_wrdata2,
+                                eeprom_page_wrdata1,
+                                eeprom_page_wrdata0};
 
     // eeprom_page_rddata
     assign eeprom_page_rddata0 = eeprom_page_rddata[31:0];
@@ -149,6 +155,14 @@ module EEPROM_OPB_IF_V2 (
             case(OPB_ADDR[7:0])
                 `EEP_BYTE_CONTROL: EEP_DO <= {eep_done_reg, 23'h0, eep_rddata_reg};
                 `EEP_PAGE_CONTROL: EEP_DO <= {16'h0, eeprom_page_seq, 7'h0, eeprom_page_num};
+                `EEP_PAGE_WRDATA0: EEP_DO <= eeprom_page_wrdata0;
+                `EEP_PAGE_WRDATA1: EEP_DO <= eeprom_page_wrdata1;
+                `EEP_PAGE_WRDATA2: EEP_DO <= eeprom_page_wrdata2;
+                `EEP_PAGE_WRDATA3: EEP_DO <= eeprom_page_wrdata3;
+                `EEP_PAGE_WRDATA4: EEP_DO <= eeprom_page_wrdata4;
+                `EEP_PAGE_WRDATA5: EEP_DO <= eeprom_page_wrdata5;
+                `EEP_PAGE_WRDATA6: EEP_DO <= eeprom_page_wrdata6;
+                `EEP_PAGE_WRDATA7: EEP_DO <= eeprom_page_wrdata7;
                 `EEP_PAGE_RDDATA0: EEP_DO <= eeprom_page_rddata0;
                 `EEP_PAGE_RDDATA1: EEP_DO <= eeprom_page_rddata1;
                 `EEP_PAGE_RDDATA2: EEP_DO <= eeprom_page_rddata2;

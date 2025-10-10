@@ -42,3 +42,4 @@
 `define GANTRY_MOT_SIZE         32'h00000010        /* Gantry Motor size */
 `define LIFT_MOT_SIZE           32'h00000010        /* Lift Motor size */
 `define MSSB_SIZE               32'h00000010        /* MSSB size */
+`define EEP_SIZE                32'h000000FF        /* EEPROM size */

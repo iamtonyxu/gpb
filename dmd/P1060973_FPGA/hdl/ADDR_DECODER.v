@@ -207,8 +207,8 @@ module AdderDecode(
     assign MSSB_SRV_RE          = DEC_RE & (DEC_ADDR >= `MSSB_SRV_ADDR) & (DEC_ADDR < (`MSSB_SRV_ADDR + `MSSB_SIZE));
     assign MSSB_SRV_WE          = DEC_WE & (DEC_ADDR >= `MSSB_SRV_ADDR) & (DEC_ADDR < (`MSSB_SRV_ADDR + `MSSB_SIZE));
 
-    assign EEP_RE               = DEC_RE & (DEC_ADDR == `EEP_ADDR);
-    assign EEP_WE               = DEC_WE & (DEC_ADDR == `EEP_ADDR);
+    assign EEP_RE               = DEC_RE & (DEC_ADDR >= `EEP_ADDR) & (DEC_ADDR < (`EEP_ADDR + `EEP_SIZE));
+    assign EEP_WE               = DEC_WE & (DEC_ADDR >= `EEP_ADDR) & (DEC_ADDR < (`EEP_ADDR + `EEP_SIZE));
 
     assign PWR_IF_RE            = DEC_RE & (DEC_ADDR == `PWR_IF_ADDR);
     assign PWR_IF_WE            = DEC_WE & (DEC_ADDR == `PWR_IF_ADDR);
