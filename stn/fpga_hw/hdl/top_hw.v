@@ -411,17 +411,18 @@ module top_hw(
     );
 
     // EEPROM_OPB_IF instantiation
-    EEPROM_OPB_IF u_eeprom_opb_if(
-        .OPB_CLK  (opb_clk),
-        .OPB_RST  (opb_rst),
-        .EEP_DI   (opb_do),
-        .EEP_RE   (eep_re),
-        .EEP_WE   (eep_we),
-        .EEP_DO   (eep_in),
-        .EEP_CS_N (HDW_EEP_CS_N),
-        .EEP_SI   (HDW_EEP_SDI),
-        .EEP_SCK  (HDW_EEP_SCLK),
-        .EEP_SO   (HDW_EEP_SDO)
+    EEPROM_OPB_IF_V2 eeprom_0(
+    .OPB_CLK(opb_clk),               // OPB clock
+    .OPB_RST(opb_rst),               // OPB reset
+    .OPB_ADDR(opb_addr[15:0]),       // OPB address
+    .EEP_DI(opb_do),                 // EEPROM data input
+    .EEP_RE(eep_re),                 // EEPROM read enable
+    .EEP_WE(eep_we),                 // EEPROM write enable
+    .EEP_DO(eep_in),                 // EEPROM data output
+    .EEP_CS_N(HDW_EEP_CS_N),         // EEPROM chip select (active low)
+    .EEP_SI(HDW_EEP_SDI),            // EEPROM serial input
+    .EEP_SCK(HDW_EEP_SCLK),          // EEPROM serial clock
+    .EEP_SO(HDW_EEP_SDO)             // EEPROM serial output
     );
 
     // GPIO instantiation
