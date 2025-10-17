@@ -346,6 +346,10 @@ module top(
     wire          lft_mot_pwr_en_2;
     wire          lft_mot_pwr_override;
 
+    // ADC UART signals
+    wire ADC_UART_TXD;
+    wire ADC_UART_OVERRIDE;
+
     // PWM Test has higher priority than GPIO
     assign GNT_MOT_PWR_EN = gnt_mot_pwr_override ? gnt_mot_pwr_en_2 : gnt_mot_pwr_en_1;
     assign GNT_BRK_PWR_EN = (|gnt_brk_pwr_override) ? (|gnt_brk_pwr_en_2) : gnt_brk_pwr_en_1; // Brake power enable
@@ -397,7 +401,7 @@ module top(
     assign DBUG_HEADER8 = PULSE_20KHZ; // CLK_20KHZ output for debugging
     assign REF_CLK_2KHZ = DBUG_HEADER10; // REF_CLK_2KHZ input for Freq counter
 
-    assign DBUG_HEADER4 = UART_TXD;
+    assign DBUG_HEADER4 = ADC_UART_OVERRIDE ? ADC_UART_TXD : UART_TXD;
     assign UART_RXD = DBUG_HEADER2;
 
     // PULSE_1HZ
@@ -591,7 +595,9 @@ ADC_ADS8864_IF adc_0 (
 
     .ADC_CNVST(ADC_CNVST),
     .ADC_SCLK(ST_ADC_CLK),
-    .ADC_SDOUT(ADC_SDOUT)
+    .ADC_SDOUT(ADC_SDOUT),
+    .UART_TXD(ADC_UART_TXD),
+    .UART_OVERRIDE(ADC_UART_OVERRIDE)
 );
 
 DAC_DACx0504_IF dac_0 (

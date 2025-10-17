@@ -61,9 +61,12 @@ module ADC_ADS8864_IF(
 
 	output reg              ADC_CNVST = 1'b0,
 	output                  ADC_SCLK,
-	input                   ADC_SDOUT
+	input                   ADC_SDOUT,
+
+	output                  UART_TXD,
+	output                  UART_OVERRIDE
 );
-	 
+
 	 //Registers
 	 reg [2:0] control;				        // control[1]: start sample, control[2]: reset module, 
 	 reg [3:0] status = 4'b0000;			// status[0]: busy, status[1]: done, status[2]: aq timeout, status[3]: busy timout
@@ -88,7 +91,31 @@ module ADC_ADS8864_IF(
 	 wire clk_aq;
 	 wire clk_sd;	
 	 wire [15:0] ram_opb_do;
-	 
+
+	// UART Baud rate and clock frequency
+    parameter BAUD_RATE = 115200; // Baud rate
+    parameter CLOCK_FREQUENCY = 100000000; // Clock frequency in Hz
+
+	// afifo signals
+	wire [15:0] adc_fifo_wdata, adc_fifo_rdata;
+	wire adc_fifo_rempty;
+	wire adc_fifo_wr;
+	reg  adc_fifo_rd;
+
+	// UART signal
+	reg [15:0] uart_tx_data;
+	reg [1:0] uart_tx_state;
+	reg [7:0] uart_data_out;
+	reg uart_data_valid;
+	wire uart_data_ack;
+
+	// UART state machine
+	parameter UART_IDLE = 2'b00;
+	parameter UART_SEND_LOW = 2'b01;
+	parameter UART_SEND_HIGH = 2'b10;
+	parameter UART_WAIT = 2'b11;
+
+	// RAM read enable
 	 wire ram_re = OPB_RE &
 							(OPB_ADDR[11:0] >= `D_RAM_ADDR) & 
 							(OPB_ADDR[11:0] < (`D_RAM_ADDR + `D_RAM_SIZE));
@@ -364,8 +391,6 @@ module ADC_ADS8864_IF(
 
 	end
 
-
-
 /* Write Access */
 	always@(posedge OPB_CLK or posedge OPB_RST) begin
 		if(OPB_RST) begin
@@ -386,5 +411,143 @@ module ADC_ADS8864_IF(
 			control <= 3'b000;
 		end	
 	end
-					
+
+	// FIFO between ADC and UART TXD
+	afifo #(
+		.DSIZE(16),
+		.ASIZE(10)
+	) ADC_FIFO (
+		.i_wclk(ram_wr_clk),
+		.i_wrst_n(~OPB_RST),
+		.i_wr(adc_fifo_wr),
+		.i_wdata(adc_fifo_wdata),
+		.o_wfull(),
+		.i_rclk(OPB_CLK),
+		.i_rrst_n(~OPB_RST),
+		.i_rd(adc_fifo_rd),
+		.o_rdata(adc_fifo_rdata),
+		.o_rempty(adc_fifo_rempty)
+	);
+	assign adc_fifo_wdata = sdout_buf;
+	assign adc_fifo_wr = (state == `S_READ18);
+
+	// UART module
+    cmn_uart #(
+        .BAUD_RATE(BAUD_RATE),
+        .CLOCK_FREQUENCY(CLOCK_FREQUENCY)
+	) adc_uart_inst (
+        .CLOCK(OPB_CLK),
+        .RESET(OPB_RST),
+        .uart_active(1'b1),
+        .DATA_STREAM_IN(uart_data_out),
+        .DATA_STREAM_IN_STB(uart_data_valid),
+        .DATA_STREAM_IN_ACK(uart_data_ack),
+        .next_command_ready(),
+        .DATA_STREAM_OUT(),
+        .DATA_STREAM_OUT_STB(),
+        .DATA_STREAM_OUT_ACK(1'b0),
+        .TX(UART_TXD),
+        .RX(1'b1),
+        .debug_uart_phy()
+    );
+
+	// UART TX state machine
+	always @(posedge OPB_CLK or posedge OPB_RST) begin
+		if (OPB_RST) begin
+			uart_tx_state <= UART_IDLE;
+			uart_tx_data <= 16'h0;
+			uart_data_out <= 8'h0;
+			uart_data_valid <= 1'b0;
+			adc_fifo_rd <= 1'b0;
+		end
+		else begin
+			case (uart_tx_state)
+				UART_IDLE: begin
+					uart_data_valid <= 1'b0;
+					adc_fifo_rd <= 1'b0;
+					// Check if we are in the END state and FIFO is not empty
+					if (state == `S_END && !adc_fifo_rempty) begin
+						adc_fifo_rd <= 1'b1;
+						uart_tx_state <= UART_SEND_LOW;
+					end
+				end
+				
+				UART_SEND_LOW: begin
+					adc_fifo_rd <= 1'b0;
+					uart_tx_data <= adc_fifo_rdata; // Save the data read from FIFO
+					uart_data_out <= adc_fifo_rdata[7:0]; // Send low 8 bits
+					uart_data_valid <= 1'b1;
+					if (uart_data_ack) begin
+						uart_data_valid <= 1'b0;
+						uart_tx_state <= UART_SEND_HIGH;
+					end
+				end
+				
+				UART_SEND_HIGH: begin
+					uart_data_out <= uart_tx_data[15:8]; // Send high 8 bits
+					uart_data_valid <= 1'b1;
+					if (uart_data_ack) begin
+						uart_data_valid <= 1'b0;
+						uart_tx_state <= UART_WAIT;
+					end
+				end
+				
+				UART_WAIT: begin
+					// Check if there is more data in the FIFO
+					if (!adc_fifo_rempty) begin
+						adc_fifo_rd <= 1'b1;
+						uart_tx_state <= UART_SEND_LOW;
+					end
+					else begin
+						uart_tx_state <= UART_IDLE;
+					end
+				end
+				
+				default: begin
+					uart_tx_state <= UART_IDLE;
+				end
+			endcase
+		end
+	end
+
+	// Extended empty signal for adc_fifo_rempty
+	reg adc_data_sending;
+	reg adc_fifo_rempty_d1, adc_fifo_rempty_d2;
+	reg [16:0] extend_counter; // Counter for 1ms delay (100000 cycles at 100MHz)
+
+	parameter EXTEND_COUNT = 17'd100000; // 1ms at 100MHz clock
+
+	always @(posedge OPB_CLK or posedge OPB_RST) begin
+		if (OPB_RST) begin
+			adc_fifo_rempty_d1 <= 1'b1;
+			adc_fifo_rempty_d2 <= 1'b1;
+			extend_counter <= 17'h0;
+		end
+		else begin
+			adc_fifo_rempty_d1 <= adc_fifo_rempty;
+			adc_fifo_rempty_d2 <= adc_fifo_rempty_d1;
+			
+			// Detect falling edge of adc_fifo_rempty (1->0 transition)
+			if (adc_fifo_rempty_d2 && !adc_fifo_rempty_d1) begin
+				extend_counter <= EXTEND_COUNT;
+			end
+			else if (extend_counter > 0) begin
+				extend_counter <= extend_counter - 1'b1;
+			end
+		end
+	end
+
+	// adc_data_sending
+	always @(posedge OPB_CLK or posedge OPB_RST) begin
+		if (OPB_RST) begin
+			adc_data_sending <= 1'b0;
+		end
+		else begin
+			adc_data_sending <= (extend_counter > 0);
+		end
+	end
+
+	// UART_OVERRIDE signal
+	assign UART_OVERRIDE = adc_data_sending;
+
 endmodule
