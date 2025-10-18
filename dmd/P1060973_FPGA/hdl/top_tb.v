@@ -4,7 +4,7 @@ module top_tb;
 
     // Test Case Configuration
     integer SCRATCHPAD_TEST        = 0;    // Enable Scratchpad Test
-    integer ADC_TEST               = 0;    // Enable ADC Test
+    integer ADC_TEST               = 1;    // Enable ADC Test
     integer DAC_TEST               = 0;    // Enable DAC Test
     integer EEPROM_TEST            = 0;    // Enable EEPROM Test
     integer OSC_COUNTER_TEST       = 0;    // Enable Oscillator Counter Test
@@ -12,7 +12,7 @@ module top_tb;
     integer MSSB_TEST              = 0;    // Enable MSSB Test
     integer GANTRY_MOT_TEST        = 0;    // Enable Gantry Motor Test
     integer LIFT_MOT_TEST          = 0;    // Enable Lift Motor Test
-    integer GANTRY_BRK_TEST        = 1;    // Enable Gantry Brake Test
+    integer GANTRY_BRK_TEST        = 0;    // Enable Gantry Brake Test
 
     // System Clock and Reset
     reg SYS_CLK;
@@ -346,11 +346,16 @@ module top_tb;
         // ADC Test
         if (ADC_TEST == 1) begin
             $display("ADC Test Start...");
+            // OPB WRITE: Configure ADC Control Register: Sample length = 16
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h06); uart_send(8'h08); uart_send(8'h06);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h10); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
             // OPB WRITE: Trigger ADC Convert
             uart_send(8'h5A); uart_send(8'h00); uart_send(8'h06); uart_send(8'h08); uart_send(8'h00);
             uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h02); uart_send(8'hA5);
-            repeat(10) uart_recv(uart_tdata);
-            #1000000;    // Wait 1us
+            repeat(16) uart_recv(uart_tdata); // Sample length = 16
+            #2000000;    // Wait 2ms
 
             // OPB Read: Check ADC Status
             uart_send(8'h5B); uart_send(8'h00); uart_send(8'h06); uart_send(8'h08); uart_send(8'h08);

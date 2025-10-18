@@ -417,7 +417,7 @@ module ADC_ADS8864_IF(
 		.DSIZE(16),
 		.ASIZE(10)
 	) ADC_FIFO (
-		.i_wclk(ram_wr_clk),
+		.i_wclk(clk_sd),
 		.i_wrst_n(~OPB_RST),
 		.i_wr(adc_fifo_wr),
 		.i_wdata(adc_fifo_wdata),
@@ -528,7 +528,8 @@ module ADC_ADS8864_IF(
 			adc_fifo_rempty_d2 <= adc_fifo_rempty_d1;
 			
 			// Detect falling edge of adc_fifo_rempty (1->0 transition)
-			if (adc_fifo_rempty_d2 && !adc_fifo_rempty_d1) begin
+			//if (adc_fifo_rempty_d2 && !adc_fifo_rempty_d1) begin
+			if(!adc_fifo_rempty) begin
 				extend_counter <= EXTEND_COUNT;
 			end
 			else if (extend_counter > 0) begin
