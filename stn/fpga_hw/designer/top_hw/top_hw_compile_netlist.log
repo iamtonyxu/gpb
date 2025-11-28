@@ -1,0 +1,31 @@
+
+===============================================================================.
+
+Info: Global design data: 
+      Total globals:                       7 
+      Globals that cannot be demoted:      0 
+      Globals considered for demotion:     7 
+
+
+Info: List of globals considered for demotion: 
+    CLK    ASYN   DATA   Instance Name 
+    ---    ----   ----   ------------- 
+    1974   0      1      'I_2' 
+    322    0      0      'I_3' 
+    124    0      1      'clkgen_25mhz/N_1_inferred_clock_RNIECG26' 
+    50     0      1      'u_clkgen/pulse2khz_div/CLK_OUT_RNIVQBC5' 
+    26     0      0      'I_4' 
+    4      0      3      'clkgen_2khz/N_1_inferred_clock_RNINDJ72' 
+    0      2083   0      'I_1' 
+
+Info: Demotion information: 
+      Disconnected 1 data pins from global 'I_2'. This behavior is controlled by the 'Minimum fanout of non-clock nets to be kept on globals' threshold in the tool options for the Synthesize step. Typically, the low-skew global resources are used for clock and reset nets. When using global resources for data nets, consider the data path effect of global insertion delay and added buffer delay when the net drives carry chain logic.
+      Disconnected 1 data pins from global 'clkgen_25mhz/N_1_inferred_clock_RNIECG26'. This behavior is controlled by the 'Minimum fanout of non-clock nets to be kept on globals' threshold in the tool options for the Synthesize step. Typically, the low-skew global resources are used for clock and reset nets. When using global resources for data nets, consider the data path effect of global insertion delay and added buffer delay when the net drives carry chain logic.
+      Disconnected 3 data pins from global 'clkgen_2khz/N_1_inferred_clock_RNINDJ72'. This behavior is controlled by the 'Minimum fanout of non-clock nets to be kept on globals' threshold in the tool options for the Synthesize step. Typically, the low-skew global resources are used for clock and reset nets. When using global resources for data nets, consider the data path effect of global insertion delay and added buffer delay when the net drives carry chain logic.
+Info: [127205381]:  CMPPF_302: Added 0 row global instances.
+Info: [127205382]:  CMPPF_303: Deleted 0 global instances.
+
+===============================================================================.
+
+Info: read prtition file C:/repo1/gpb/stn/fpga_hw/designer/top_hw/top_hw.nmatinit.pdc.
+INFO: Reading Partition PDC file C:/repo1/gpb/stn/fpga_hw/designer/top_hw/top_hw.nmatinit.pdc. 0 error(s) and 0 warning(s)

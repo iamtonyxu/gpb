@@ -1,0 +1,17 @@
+**** Begin Compile Point : serial_eeprom_if_v2 ****
+**** End Compile Point : serial_eeprom_if_v2 ****
+**** Begin Compile Point : top_hw ****
+@W: BN114 :|Removing instance CP_fanout_cell_serial_eeprom_if_v2_rtl_inst (in view: work.serial_eeprom_if_v2_rtl_ilm(rtl)) because it does not drive other instances.
+@W: FX107 :"c:\repo1\gpb\stn\fpga_hw\hdl\afifo.v":149:1:149:6|RAM opb_fifo_inst.mem[31:0] (in view: work.PHY_IF(verilog)) does not have a read/write conflict check. Possible simulation mismatch. To resolve a read/write conflict, either set syn_ramstyle = rw_check, or enable the "Read Write Check on RAM" Implementation Option. For more information, search for "read/write conflict check" in Online Help.
+@W: FX107 :"c:\repo1\gpb\stn\fpga_hw\hdl\afifo.v":149:1:149:6|RAM mem[7:0] (in view: work.afifo_8s_4s_8s_4s_1(verilog)) does not have a read/write conflict check. Possible simulation mismatch. To resolve a read/write conflict, either set syn_ramstyle = rw_check, or enable the "Read Write Check on RAM" Implementation Option. For more information, search for "read/write conflict check" in Online Help.
+@W: FX107 :"c:\repo1\gpb\stn\fpga_hw\hdl\afifo.v":149:1:149:6|RAM mem[7:0] (in view: work.afifo_8s_4s_8s_4s_0(verilog)) does not have a read/write conflict check. Possible simulation mismatch. To resolve a read/write conflict, either set syn_ramstyle = rw_check, or enable the "Read Write Check on RAM" Implementation Option. For more information, search for "read/write conflict check" in Online Help.
+@W: BN114 :"c:\repo1\gpb\stn\fpga_hw\hdl\afifo.v":149:1:149:6|Removing instance opb_fifo_inst.mem_mem_0_2 (in view: work.PHY_IF(verilog)) because it does not drive other instances.
+**** End Compile Point : top_hw ****
+@W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
+@W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
+@W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
+@W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
+@W: MT420 |Found inferred clock CLOCK_DIV_4|clkout_inferred_clock with period 10.00ns. Please declare a user-defined clock on net u_clkgen.pulse2khz_div.clkout.
+@W: MT420 |Found inferred clock CLOCK_DIV_8|N_1_inferred_clock with period 10.00ns. Please declare a user-defined clock on net clkgen_2khz.N_1.
+@W: MT420 |Found inferred clock CLOCK_DIV_7|N_1_inferred_clock with period 10.00ns. Please declare a user-defined clock on net clkgen_25mhz.N_1_0.
+@W: MT420 |Found inferred clock top_hw|HDW_DBUG_MISO with period 10.00ns. Please declare a user-defined clock on port HDW_DBUG_MISO.

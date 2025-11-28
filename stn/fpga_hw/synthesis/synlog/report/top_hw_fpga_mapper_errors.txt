@@ -1,0 +1,4 @@
+**** Begin Compile Point : serial_eeprom_if_v2 ****
+**** End Compile Point : serial_eeprom_if_v2 ****
+**** Begin Compile Point : top_hw ****
+**** End Compile Point : top_hw ****

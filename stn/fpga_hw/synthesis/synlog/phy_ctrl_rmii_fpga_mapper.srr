@@ -1,0 +1,565 @@
+# Sat Aug 16 13:39:42 2025
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-3
+Install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: LAPTOP-6FQD1N4B
+
+Implementation : synthesis
+Synopsys Microchip Technology Mapper, Version map202309actp1, Build 008R, Built Jul 25 2024 08:49:59, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 185MB peak: 185MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 188MB peak: 200MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 188MB peak: 200MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 190MB peak: 200MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 191MB peak: 200MB)
+
+
+Vector Gate Optimization Enabled: Optimizing  Partial Hanging Logic. 
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 249MB peak: 249MB)
+
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_async.v":832:12:832:17|Removing sequential instance genblk10\.memraddr_r[4:0] (in view: work.afifo_4x32_afifo_4x32_0_corefifo_async_Z2_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_async.v":815:12:815:17|Removing sequential instance genblk10\.memwaddr_r[4:0] (in view: work.afifo_4x32_afifo_4x32_0_corefifo_async_Z2_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_async.v":832:12:832:17|Removing sequential instance genblk10\.memraddr_r[4:0] (in view: work.afifo_4x32_afifo_4x32_0_corefifo_async_Z2_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_async.v":815:12:815:17|Removing sequential instance genblk10\.memwaddr_r[4:0] (in view: work.afifo_4x32_afifo_4x32_0_corefifo_async_Z2_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 252MB peak: 252MB)
+
+@N: MO231 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_async.v":678:12:678:17|Found counter in view:work.afifo_4x32_afifo_4x32_0_corefifo_async_Z2_0(verilog) instance genblk10\.rptr[5:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_async.v":678:12:678:17|Found counter in view:work.afifo_4x32_afifo_4x32_0_corefifo_async_Z2_1(verilog) instance genblk10\.rptr[5:0] 
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 255MB peak: 255MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+NConnInternalConnection caching is on
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 255MB peak: 255MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 255MB peak: 256MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 255MB peak: 256MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 255MB peak: 256MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 256MB peak: 256MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 256MB peak: 256MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:01s		     3.94ns		 123 /       137
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 256MB peak: 257MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 256MB peak: 257MB)
+
+
+Starting CDBProcessSetClockGroups... (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 257MB peak: 257MB)
+
+
+Finished with CDBProcessSetClockGroups (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 257MB peak: 258MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 208MB peak: 258MB)
+
+Writing Analyst data base C:\repo1\gpb\stn\fpga_hw\synthesis\synwork\phy_ctrl_rmii_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 256MB peak: 258MB)
+
+Writing Verilog Simulation files
+@N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
+@N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
+@W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
+@W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
+@W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
+
+Finished Writing Verilog Simulation files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 257MB peak: 258MB)
+
+
+Finished Writing Netlists (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 257MB peak: 258MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 256MB peak: 258MB)
+
+@W: MT420 |Found inferred clock phy_ctrl_rmii|phy_rx_clk with period 10.00ns. Please declare a user-defined clock on port phy_rx_clk.
+@W: MT420 |Found inferred clock phy_ctrl_rmii|sysclk with period 10.00ns. Please declare a user-defined clock on port sysclk.
+@W: MT420 |Found inferred clock phy_ctrl_rmii|phy_tx_clk with period 10.00ns. Please declare a user-defined clock on port phy_tx_clk.
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Sat Aug 16 13:39:45 2025
+#
+
+
+Top view:               phy_ctrl_rmii
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    C:\repo1\gpb\stn\fpga_hw\designer\phy_ctrl_rmii\synthesis.fdc
+                       
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: 5.902
+
+                             Requested     Estimated     Requested     Estimated               Clock        Clock     
+Starting Clock               Frequency     Frequency     Period        Period        Slack     Type         Group     
+----------------------------------------------------------------------------------------------------------------------
+phy_ctrl_rmii|phy_rx_clk     100.0 MHz     379.0 MHz     10.000        2.638         7.362     inferred     (multiple)
+phy_ctrl_rmii|phy_tx_clk     100.0 MHz     281.0 MHz     10.000        3.559         6.441     inferred     (multiple)
+phy_ctrl_rmii|sysclk         100.0 MHz     244.0 MHz     10.000        4.098         5.902     inferred     (multiple)
+======================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                              |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+------------------------------------------------------------------------------------------------------------------------------------------
+Starting                  Ending                    |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+------------------------------------------------------------------------------------------------------------------------------------------
+phy_ctrl_rmii|phy_rx_clk  phy_ctrl_rmii|phy_rx_clk  |  10.000      7.362  |  No paths    -      |  No paths    -      |  No paths    -    
+phy_ctrl_rmii|phy_rx_clk  phy_ctrl_rmii|sysclk      |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+phy_ctrl_rmii|sysclk      phy_ctrl_rmii|phy_rx_clk  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+phy_ctrl_rmii|sysclk      phy_ctrl_rmii|sysclk      |  10.000      5.902  |  No paths    -      |  No paths    -      |  No paths    -    
+phy_ctrl_rmii|sysclk      phy_ctrl_rmii|phy_tx_clk  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+phy_ctrl_rmii|phy_tx_clk  phy_ctrl_rmii|sysclk      |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+phy_ctrl_rmii|phy_tx_clk  phy_ctrl_rmii|phy_tx_clk  |  10.000      6.441  |  No paths    -      |  No paths    -      |  No paths    -    
+==========================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: phy_ctrl_rmii|phy_rx_clk
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                                                                              Starting                                                            Arrival          
+Instance                                                                                                      Reference                    Type     Pin     Net                   Time        Slack
+                                                                                                              Clock                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.wptr[1]                                 phy_ctrl_rmii|phy_rx_clk     SLE      Q       wptr_cmb_axb_1        0.257       7.362
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.wptr[2]                                 phy_ctrl_rmii|phy_rx_clk     SLE      Q       wptr_cmb_axb_2        0.257       7.371
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.wptr[3]                                 phy_ctrl_rmii|phy_rx_clk     SLE      Q       wptr_cmb_axb_3        0.257       7.380
+rx_fifo.rx_fifo_we                                                                                            phy_ctrl_rmii|phy_rx_clk     SLE      Q       rx_fifo_we            0.257       7.765
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.wptr[4]                                 phy_ctrl_rmii|phy_rx_clk     SLE      Q       wptr_cmb_axb_4        0.257       7.767
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.full_r                                  phy_ctrl_rmii|phy_rx_clk     SLE      Q       full_r                0.257       7.849
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.wptr[0]                                 phy_ctrl_rmii|phy_rx_clk     SLE      Q       wptr_cmb_axb_0        0.257       7.851
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_mem_reg\[1\][5]     phy_ctrl_rmii|phy_rx_clk     SLE      Q       rptr_bin_sync[5]      0.257       8.015
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_mem_reg\[1\][4]     phy_ctrl_rmii|phy_rx_clk     SLE      Q       rptr_gray_sync[4]     0.257       8.078
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.wptr[5]                                 phy_ctrl_rmii|phy_rx_clk     SLE      Q       wptr_cmb_axb_5        0.257       8.280
+===================================================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                                                  Starting                                                           Required          
+Instance                                                                          Reference                    Type     Pin     Net                  Time         Slack
+                                                                                  Clock                                                                                
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.full_r      phy_ctrl_rmii|phy_rx_clk     SLE      D       wdiff_bus[5]         10.000       7.362
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.rptr_bin_sync2[0]     phy_ctrl_rmii|phy_rx_clk     SLE      D       rptr_bin_sync[0]     10.000       8.015
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.rptr_bin_sync2[1]     phy_ctrl_rmii|phy_rx_clk     SLE      D       rptr_bin_sync[1]     10.000       8.130
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.wptr[5]     phy_ctrl_rmii|phy_rx_clk     SLE      D       wptr_cmb[5]          10.000       8.182
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.wptr[4]     phy_ctrl_rmii|phy_rx_clk     SLE      D       wptr_cmb[4]          10.000       8.191
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.wptr[3]     phy_ctrl_rmii|phy_rx_clk     SLE      D       wptr_cmb[3]          10.000       8.201
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.wptr[2]     phy_ctrl_rmii|phy_rx_clk     SLE      D       wptr_cmb[2]          10.000       8.210
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.rptr_bin_sync2[2]     phy_ctrl_rmii|phy_rx_clk     SLE      D       rptr_bin_sync[2]     10.000       8.329
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.wptr[1]     phy_ctrl_rmii|phy_rx_clk     SLE      D       wptr_cmb[1]          10.000       8.622
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.wptr[0]     phy_ctrl_rmii|phy_rx_clk     SLE      D       wdiff_bus            10.000       8.632
+=======================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         10.000
+
+    - Propagation time:                      2.638
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 7.362
+
+    Number of logic level(s):                6
+    Starting point:                          rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.wptr[1] / Q
+    Ending point:                            rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.full_r / D
+    The start point is clocked by            phy_ctrl_rmii|phy_rx_clk [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
+    The end   point is clocked by            phy_ctrl_rmii|phy_rx_clk [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
+
+Instance / Net                                                                                      Pin      Pin               Arrival     No. of    
+Name                                                                                       Type     Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.wptr[1]              SLE      Q        Out     0.257     0.257 r     -         
+wptr_cmb_axb_1                                                                             Net      -        -       0.645     -           3         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.wptr_RNIO98SF[1]     ARI1     B        In      -         0.903 r     -         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.wptr_RNIO98SF[1]     ARI1     FCO      Out     0.387     1.290 r     -         
+wptr_cmb_cry_1                                                                             Net      -        -       0.000     -           1         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.wptr_RNIHMRVI[2]     ARI1     FCI      In      -         1.290 r     -         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.wptr_RNIHMRVI[2]     ARI1     S        Out     0.354     1.644 r     -         
+wptr_cmb[2]                                                                                Net      -        -       0.146     -           2         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wdiff_bus_cry_2                ARI1     A        In      -         1.790 r     -         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wdiff_bus_cry_2                ARI1     FCO      Out     0.336     2.126 r     -         
+wdiff_bus_cry_2                                                                            Net      -        -       0.000     -           1         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wdiff_bus_cry_3                ARI1     FCI      In      -         2.126 r     -         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wdiff_bus_cry_3                ARI1     FCO      Out     0.009     2.136 r     -         
+wdiff_bus_cry_3                                                                            Net      -        -       0.000     -           1         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wdiff_bus_cry_4                ARI1     FCI      In      -         2.136 r     -         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wdiff_bus_cry_4                ARI1     FCO      Out     0.009     2.145 r     -         
+wdiff_bus_cry_4                                                                            Net      -        -       0.000     -           1         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wdiff_bus_s_5                  ARI1     FCI      In      -         2.145 r     -         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wdiff_bus_s_5                  ARI1     S        Out     0.354     2.499 r     -         
+wdiff_bus[5]                                                                               Net      -        -       0.139     -           1         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.full_r               SLE      D        In      -         2.638 r     -         
+=====================================================================================================================================================
+Total path delay (propagation time + setup) of 2.638 is 1.708(64.7%) logic and 0.931(35.3%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: phy_ctrl_rmii|phy_tx_clk
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                                                  Starting                                                            Arrival          
+Instance                                                                          Reference                    Type     Pin     Net                   Time        Slack
+                                                                                  Clock                                                                                
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+tx_fifo.fifo_read_en                                                              phy_ctrl_rmii|phy_tx_clk     SLE      Q       fifo_read_en          0.257       6.441
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.empty_r     phy_ctrl_rmii|phy_tx_clk     SLE      Q       fifo_empty            0.257       6.538
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.rptr[0]     phy_ctrl_rmii|phy_tx_clk     SLE      Q       rdiff_bus             0.257       6.578
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.rptr[1]     phy_ctrl_rmii|phy_tx_clk     SLE      Q       rptr[1]               0.257       6.588
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.rptr[2]     phy_ctrl_rmii|phy_tx_clk     SLE      Q       rptr[2]               0.257       6.597
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.rptr[3]     phy_ctrl_rmii|phy_tx_clk     SLE      Q       rptr[3]               0.257       6.607
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.rptr[4]     phy_ctrl_rmii|phy_tx_clk     SLE      Q       rptr[4]               0.257       6.642
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2[0]     phy_ctrl_rmii|phy_tx_clk     SLE      Q       wptr_bin_sync2[0]     0.257       7.053
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2[1]     phy_ctrl_rmii|phy_tx_clk     SLE      Q       wptr_bin_sync2[1]     0.257       7.063
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2[2]     phy_ctrl_rmii|phy_tx_clk     SLE      Q       wptr_bin_sync2[2]     0.257       7.072
+=======================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                                                   Starting                                                                  Required          
+Instance                                                                           Reference                    Type     Pin     Net                         Time         Slack
+                                                                                   Clock                                                                                       
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.empty_r      phy_ctrl_rmii|phy_tx_clk     SLE      D       empty_r_4                   10.000       6.441
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.aempty_r     phy_ctrl_rmii|phy_tx_clk     SLE      EN      almostemptyi_2_sqmuxa_i     9.850        6.780
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.aempty_r     phy_ctrl_rmii|phy_tx_clk     SLE      D       almostemptyi_deassert_i     10.000       6.922
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2[0]      phy_ctrl_rmii|phy_tx_clk     SLE      D       wptr_bin_sync[0]            10.000       8.015
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2[1]      phy_ctrl_rmii|phy_tx_clk     SLE      D       wptr_bin_sync[1]            10.000       8.130
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.rptr[5]      phy_ctrl_rmii|phy_tx_clk     SLE      D       rptr_s[5]                   10.000       8.160
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.rptr[4]      phy_ctrl_rmii|phy_tx_clk     SLE      D       rptr_s[4]                   10.000       8.169
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.rptr[3]      phy_ctrl_rmii|phy_tx_clk     SLE      D       rptr_s[3]                   10.000       8.179
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.rptr[2]      phy_ctrl_rmii|phy_tx_clk     SLE      D       rptr_s[2]                   10.000       8.188
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.rptr[1]      phy_ctrl_rmii|phy_tx_clk     SLE      D       rptr_s[1]                   10.000       8.198
+===============================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         10.000
+
+    - Propagation time:                      3.559
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 6.441
+
+    Number of logic level(s):                10
+    Starting point:                          tx_fifo.fifo_read_en / Q
+    Ending point:                            tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.empty_r / D
+    The start point is clocked by            phy_ctrl_rmii|phy_tx_clk [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
+    The end   point is clocked by            phy_ctrl_rmii|phy_tx_clk [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
+
+Instance / Net                                                                                       Pin      Pin               Arrival     No. of    
+Name                                                                                        Type     Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+tx_fifo.fifo_read_en                                                                        SLE      Q        Out     0.257     0.257 r     -         
+fifo_read_en                                                                                Net      -        -       0.665     -           4         
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.empty_r_RNII26H2      ARI1     C        In      -         0.922 r     -         
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.empty_r_RNII26H2      ARI1     FCO      Out     0.464     1.386 r     -         
+rdiff_bus_cry_0_cy                                                                          Net      -        -       0.000     -           1         
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2_RNI34B3C[0]      ARI1     FCI      In      -         1.386 r     -         
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2_RNI34B3C[0]      ARI1     FCO      Out     0.009     1.396 r     -         
+rdiff_bus_cry_0                                                                             Net      -        -       0.000     -           1         
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2_RNIM7GLL[1]      ARI1     FCI      In      -         1.396 r     -         
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2_RNIM7GLL[1]      ARI1     FCO      Out     0.009     1.405 r     -         
+rdiff_bus_cry_1                                                                             Net      -        -       0.000     -           1         
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2_RNIBDL7V[2]      ARI1     FCI      In      -         1.405 r     -         
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2_RNIBDL7V[2]      ARI1     FCO      Out     0.009     1.415 r     -         
+rdiff_bus_cry_2                                                                             Net      -        -       0.000     -           1         
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2_RNI2LQP81[3]     ARI1     FCI      In      -         1.415 r     -         
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2_RNI2LQP81[3]     ARI1     FCO      Out     0.009     1.424 r     -         
+rdiff_bus_cry_3                                                                             Net      -        -       0.000     -           1         
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2_RNIRUVBI1[4]     ARI1     FCI      In      -         1.424 r     -         
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2_RNIRUVBI1[4]     ARI1     S        Out     0.354     1.778 f     -         
+rdiff_bus[4]                                                                                Net      -        -       0.146     -           2         
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.emptyilto5_3                    CFG2     B        In      -         1.924 f     -         
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.emptyilto5_3                    CFG2     Y        Out     0.091     2.016 f     -         
+emptyi_3                                                                                    Net      -        -       0.665     -           4         
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.emptyilto5                      CFG4     D        In      -         2.680 f     -         
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.emptyilto5                      CFG4     Y        Out     0.226     2.907 f     -         
+emptyi                                                                                      Net      -        -       0.146     -           2         
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.empty_r9              CFG2     A        In      -         3.053 f     -         
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.empty_r9              CFG2     Y        Out     0.056     3.109 f     -         
+empty_r9                                                                                    Net      -        -       0.139     -           1         
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.empty_r_4_f0          CFG3     C        In      -         3.248 f     -         
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.empty_r_4_f0          CFG3     Y        Out     0.172     3.420 f     -         
+empty_r_4                                                                                   Net      -        -       0.139     -           1         
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.empty_r               SLE      D        In      -         3.559 f     -         
+======================================================================================================================================================
+Total path delay (propagation time + setup) of 3.559 is 1.658(46.6%) logic and 1.901(53.4%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: phy_ctrl_rmii|sysclk
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                                                  Starting                                                        Arrival          
+Instance                                                                          Reference                Type     Pin     Net                   Time        Slack
+                                                                                  Clock                                                                            
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+rx_fifo.fifo_read_en                                                              phy_ctrl_rmii|sysclk     SLE      Q       fifo_read_en          0.257       5.902
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.empty_r     phy_ctrl_rmii|sysclk     SLE      Q       fifo_empty            0.257       5.979
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.rptr[0]     phy_ctrl_rmii|sysclk     SLE      Q       rdiff_bus             0.257       6.020
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.rptr[1]     phy_ctrl_rmii|sysclk     SLE      Q       rptr[1]               0.257       6.029
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.rptr[2]     phy_ctrl_rmii|sysclk     SLE      Q       rptr[2]               0.257       6.038
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.rptr[3]     phy_ctrl_rmii|sysclk     SLE      Q       rptr[3]               0.257       6.048
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.rptr[4]     phy_ctrl_rmii|sysclk     SLE      Q       rptr[4]               0.257       6.057
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2[0]     phy_ctrl_rmii|sysclk     SLE      Q       wptr_bin_sync2[0]     0.257       6.495
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2[1]     phy_ctrl_rmii|sysclk     SLE      Q       wptr_bin_sync2[1]     0.257       6.504
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2[2]     phy_ctrl_rmii|sysclk     SLE      Q       wptr_bin_sync2[2]     0.257       6.513
+===================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                                                   Starting                                                       Required          
+Instance                                                                           Reference                Type     Pin     Net                  Time         Slack
+                                                                                   Clock                                                                            
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.empty_r      phy_ctrl_rmii|sysclk     SLE      D       empty_r_4            10.000       5.902
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.aempty_r     phy_ctrl_rmii|sysclk     SLE      EN      N_13                 9.850        6.839
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.aempty_r     phy_ctrl_rmii|sysclk     SLE      D       N_24_i               10.000       6.999
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.full_r       phy_ctrl_rmii|sysclk     SLE      D       wdiff_bus[5]         10.000       7.362
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.rptr_bin_sync2[0]      phy_ctrl_rmii|sysclk     SLE      D       rptr_bin_sync[0]     10.000       8.015
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2[0]      phy_ctrl_rmii|sysclk     SLE      D       wptr_bin_sync[0]     10.000       8.015
+tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.rptr_bin_sync2[1]      phy_ctrl_rmii|sysclk     SLE      D       rptr_bin_sync[1]     10.000       8.130
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2[1]      phy_ctrl_rmii|sysclk     SLE      D       wptr_bin_sync[1]     10.000       8.130
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.rptr[5]      phy_ctrl_rmii|sysclk     SLE      D       rptr_s[5]            10.000       8.160
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.rptr[4]      phy_ctrl_rmii|sysclk     SLE      D       rptr_s[4]            10.000       8.169
+====================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         10.000
+
+    - Propagation time:                      4.098
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     5.902
+
+    Number of logic level(s):                11
+    Starting point:                          rx_fifo.fifo_read_en / Q
+    Ending point:                            rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.empty_r / D
+    The start point is clocked by            phy_ctrl_rmii|sysclk [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
+    The end   point is clocked by            phy_ctrl_rmii|sysclk [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
+
+Instance / Net                                                                                          Pin      Pin               Arrival     No. of    
+Name                                                                                           Type     Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+rx_fifo.fifo_read_en                                                                           SLE      Q        Out     0.257     0.257 r     -         
+fifo_read_en                                                                                   Net      -        -       0.645     -           3         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.empty_r_RNIE8GR8         ARI1     C        In      -         0.903 r     -         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.empty_r_RNIE8GR8         ARI1     FCO      Out     0.464     1.367 r     -         
+rdiff_bus_cry_0_cy                                                                             Net      -        -       0.000     -           1         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2_RNIRV3TF[0]         ARI1     FCI      In      -         1.367 r     -         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2_RNIRV3TF[0]         ARI1     FCO      Out     0.009     1.376 r     -         
+rdiff_bus_cry_0                                                                                Net      -        -       0.000     -           1         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2_RNIAPNUM[1]         ARI1     FCI      In      -         1.376 r     -         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2_RNIAPNUM[1]         ARI1     FCO      Out     0.009     1.386 r     -         
+rdiff_bus_cry_1                                                                                Net      -        -       0.000     -           1         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2_RNIRKB0U[2]         ARI1     FCI      In      -         1.386 r     -         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2_RNIRKB0U[2]         ARI1     FCO      Out     0.009     1.395 r     -         
+rdiff_bus_cry_2                                                                                Net      -        -       0.000     -           1         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2_RNIEIV151[3]        ARI1     FCI      In      -         1.395 r     -         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2_RNIEIV151[3]        ARI1     FCO      Out     0.009     1.405 r     -         
+rdiff_bus_cry_3                                                                                Net      -        -       0.000     -           1         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2_RNI3IJ3C1[4]        ARI1     FCI      In      -         1.405 r     -         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.wptr_bin_sync2_RNI3IJ3C1[4]        ARI1     FCO      Out     0.009     1.414 r     -         
+rdiff_bus_cry_4                                                                                Net      -        -       0.000     -           1         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.almostemptyi_2_sqmuxa_i_o2_RNO     ARI1     FCI      In      -         1.414 r     -         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.almostemptyi_2_sqmuxa_i_o2_RNO     ARI1     S        Out     0.354     1.768 f     -         
+rdiff_bus[5]                                                                                   Net      -        -       0.139     -           1         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.almostemptyi_2_sqmuxa_i_o2         CFG3     C        In      -         1.907 f     -         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.almostemptyi_2_sqmuxa_i_o2         CFG3     Y        Out     0.154     2.061 r     -         
+N_17                                                                                           Net      -        -       0.645     -           3         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.empty_r10_0_a2_0         CFG3     B        In      -         2.706 r     -         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.empty_r10_0_a2_0         CFG3     Y        Out     0.103     2.810 f     -         
+N_34                                                                                           Net      -        -       0.645     -           3         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.empty_r10_0_a2           CFG3     B        In      -         3.455 f     -         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.empty_r10_0_a2           CFG3     Y        Out     0.091     3.546 f     -         
+empty_r_1_sqmuxa                                                                               Net      -        -       0.139     -           1         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.empty_r_4_f0             CFG4     D        In      -         3.685 f     -         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.empty_r_4_f0             CFG4     Y        Out     0.274     3.959 r     -         
+empty_r_4                                                                                      Net      -        -       0.139     -           1         
+rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.genblk10\.empty_r                  SLE      D        In      -         4.098 r     -         
+=========================================================================================================================================================
+Total path delay (propagation time + setup) of 4.098 is 1.745(42.6%) logic and 2.353(57.4%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+
+Finished final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 257MB peak: 258MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 257MB peak: 258MB)
+
+---------------------------------------
+Resource Usage Report for phy_ctrl_rmii 
+
+Mapping to part: mpf050tfcvg484std
+Cell usage:
+CLKINT          3 uses
+CFG1           3 uses
+CFG2           37 uses
+CFG3           19 uses
+CFG4           11 uses
+
+Carry cells:
+ARI1            52 uses - used for arithmetic functions
+
+
+Sequential Cells: 
+SLE            137 uses
+
+DSP Blocks:    0 of 150 (0%)
+
+I/O ports: 21
+I/O primitives: 15
+INBUF          6 uses
+OUTBUF         9 uses
+
+
+Global Clock Buffers: 3
+
+Total LUTs:    122
+
+Extra resources required for RAM and MACC_PA interface logic during P&R:
+
+RAM64X12 Interface Logic : SLEs = 0; LUTs = 0;
+RAM1K20  Interface Logic : SLEs = 0; LUTs = 0;
+MACC_PA     Interface Logic : SLEs = 0; LUTs = 0;
+MACC_PA_BC_ROM     Interface Logic : SLEs = 0; LUTs = 0;
+
+Total number of SLEs after P&R:  137 + 0 + 0 + 0 = 137;
+Total number of LUTs after P&R:  122 + 0 + 0 + 0 = 122;
+
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 126MB peak: 258MB)
+
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+# Sat Aug 16 13:39:45 2025
+
+###########################################################]

@@ -1,0 +1,129 @@
+#OPTIONS:"|-layerid|0|-orig_srs|C:\\repo1\\gpb\\stn\\fpga_hw\\synthesis\\synwork\\tr_fifo_rmii_comp.srs|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-I|C:\\repo1\\gpb\\stn\\fpga_hw\\synthesis\\|-I|C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib|-sysv|-devicelib|C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\generic\\acg5.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\bin64\\c_ver.exe":1721969592
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\generic\\acg5.v":1721920354
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\hypermods.v":1721919828
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\scemi_objects.v":1721919828
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\scemi_pipes.svh":1721919828
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\component\\polarfire_syn_comps.v":1755322387
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\component\\work\\afifo_4x32\\afifo_4x32_0\\rtl\\vlog\\core\\corefifo_fwft.v":1755321519
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\component\\work\\afifo_4x32\\afifo_4x32_0\\rtl\\vlog\\core\\corefifo_sync_scntr.v":1755321519
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\component\\work\\afifo_4x32\\afifo_4x32_0\\rtl\\vlog\\core\\corefifo_sync.v":1755321519
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\component\\work\\afifo_4x32\\afifo_4x32_0\\rtl\\vlog\\core\\corefifo_graytobinconv.v":1755321519
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\component\\work\\afifo_4x32\\afifo_4x32_0\\rtl\\vlog\\core\\corefifo_nstagessync.v":1755321519
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\component\\work\\afifo_4x32\\afifo_4x32_0\\rtl\\vlog\\core\\corefifo_async.v":1755321519
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\component\\work\\afifo_4x32\\afifo_4x32_0\\rtl\\vlog\\core\\COREFIFO.v":1755321519
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\component\\work\\afifo_4x32\\afifo_4x32.v":1755321519
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\hdl\\tr_fifo_rmii.v":1755322367
+0			"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v" verilog
+1			"C:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_fwft.v" verilog
+2			"C:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_sync_scntr.v" verilog
+3			"C:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_sync.v" verilog
+4			"C:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_graytobinconv.v" verilog
+5			"C:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_nstagessync.v" verilog
+6			"C:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_async.v" verilog
+7			"C:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\COREFIFO.v" verilog
+8			"C:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32.v" verilog
+9			"C:\repo1\gpb\stn\fpga_hw\hdl\tr_fifo_rmii.v" verilog
+#Dependency Lists(Uses List)
+0 -1
+1 -1
+2 -1
+3 -1
+4 -1
+5 -1
+6 4 5
+7 1 3 2 6
+8 7
+9 8
+#Dependency Lists(Users Of)
+0 -1
+1 7
+2 7
+3 7
+4 6
+5 6
+6 7
+7 8
+8 9
+9 -1
+#Design Unit to File Association
+module work tr_fifo_rmii 9
+module work afifo_4x32 8
+module work afifo_4x32_afifo_4x32_0_COREFIFO 7
+module work afifo_4x32_afifo_4x32_0_corefifo_async 6
+module work afifo_4x32_afifo_4x32_0_corefifo_nstagessync 5
+module work afifo_4x32_afifo_4x32_0_corefifo_graytobinconv 4
+module work afifo_4x32_afifo_4x32_0_corefifo_sync 3
+module work afifo_4x32_afifo_4x32_0_corefifo_sync_scntr 2
+module work afifo_4x32_afifo_4x32_0_corefifo_fwft 1
+module work CLKBUF_DIFF_ODT 0
+module work CLKBUF_DIFF 0
+module work PFSOC_SCSM 0
+module work CORELNKTMR_V 0
+module work XCVR 0
+module work XCVR_VV 0
+module work XCVR_TEST 0
+module work XCVR_REF_CLK 0
+module work XCVR_REF_CLK_P 0
+module work XCVR_REF_CLK_N 0
+module work XCVR_PMA 0
+module work XCVR_PIPE 0
+module work XCVR_PIPE_AXI1 0
+module work XCVR_PIPE_AXI0 0
+module work XCVR_DUAL_PCS 0
+module work XCVR_APB_LINK_V2 0
+module work XCVR_APB_LINK_V 0
+module work XCVR_APB_LINK 0
+module work XCVR_8B10B 0
+module work XCVR_64B6XB 0
+module work VREFCTRL 0
+module work VREFBANKDYN 0
+module work VOLTAGEDETECT 0
+module work USPI 0
+module work UPROM 0
+module work TX_PLL 0
+module work TVS 0
+module work TAMPER 0
+module work SYS_SERVICES 0
+module work SYSRESET 0
+module work SYSCTRL_RESET_STATUS 0
+module work SCB 0
+module work QUADRST 0
+module work QUADRST_PCIE 0
+module work PLL 0
+module work PF_SPI 0
+module work PCIE 0
+module work PCIE_COMMON 0
+module work OSC_RC2MHZ 0
+module work OSC_RC200MHZ 0
+module work OSC_RC160MHZ 0
+module work LANERST 0
+module work LANECTRL 0
+module work IOD 0
+module work INIT 0
+module work ICB_NGMUX 0
+module work ICB_MUXING 0
+module work ICB_INT 0
+module work ICB_CLKSTOP 0
+module work ICB_CLKSTOP_EN 0
+module work ICB_CLKINT 0
+module work ICB_CLKDIV 0
+module work ICB_CLKDIVDELAY 0
+module work ICB_BANKCLK 0
+module work HS_IO_CLK 0
+module work GPSS_COMMON 0
+module work GLITCHDETECT 0
+module work ENFORCE 0
+module work DRI 0
+module work DLL 0
+module work DEBUG 0
+module work CRYPTO_SOC 0
+module work CRYPTO 0
+module work CRN_INT 0
+module work CRN_COMMON 0
+module work BANKEN 0
+module work BANKCTRL_HSIO 0
+module work BANKCTRL_GPIO 0
+module work BANKCTRLM 0
+module work APBS 0
+module work APBM 0

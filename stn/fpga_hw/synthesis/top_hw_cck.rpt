@@ -1,0 +1,218 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-3
+Install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: LAPTOP-6FQD1N4B
+
+Implementation : synthesis
+
+# Written on Fri Oct 17 10:53:31 2025
+
+##### DESIGN INFO #######################################################
+
+Top View:                "top_hw"
+Constraint File(s):      "C:\repo1\gpb\stn\fpga_hw\designer\top_hw\synthesis.fdc"
+
+
+
+
+##### SUMMARY ############################################################
+
+Found 2 issues in 2 out of 16 constraints
+
+
+##### DETAILS ############################################################
+
+
+
+Clock Relationships
+*******************
+
+Starting                              Ending                                |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+clk_100mhz                            clk_100mhz                            |     10.000           |     No paths         |     No paths         |     No paths                         
+clk_100mhz                            clk_50mhz                             |     10.000           |     No paths         |     No paths         |     No paths                         
+clk_100mhz                            CLOCK_DIV_4|clkout_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+clk_100mhz                            CLOCK_DIV_7|N_1_inferred_clock        |     Diff grp         |     No paths         |     No paths         |     No paths                         
+clk_100mhz                            top_hw|HDW_DBUG_MISO                  |     Diff grp         |     No paths         |     No paths         |     No paths                         
+clk_50mhz                             clk_100mhz                            |     10.000           |     No paths         |     No paths         |     No paths                         
+clk_50mhz                             clk_50mhz                             |     20.000           |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_4|clkout_inferred_clock     clk_100mhz                            |     Diff grp         |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_4|clkout_inferred_clock     CLOCK_DIV_4|clkout_inferred_clock     |     10.000           |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_8|N_1_inferred_clock        clk_100mhz                            |     Diff grp         |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_8|N_1_inferred_clock        CLOCK_DIV_8|N_1_inferred_clock        |     10.000           |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_7|N_1_inferred_clock        clk_100mhz                            |     Diff grp         |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_7|N_1_inferred_clock        CLOCK_DIV_7|N_1_inferred_clock        |     10.000           |     No paths         |     No paths         |     No paths                         
+top_hw|HDW_DBUG_MISO                  clk_100mhz                            |     Diff grp         |     No paths         |     No paths         |     No paths                         
+top_hw|HDW_DBUG_MISO                  clk_50mhz                             |     Diff grp         |     No paths         |     No paths         |     No paths                         
+top_hw|HDW_DBUG_MISO                  top_hw|HDW_DBUG_MISO                  |     10.000           |     No paths         |     No paths         |     No paths                         
+=======================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+Unconstrained Start/End Points
+******************************
+
+p:APP_AUX_IO0
+p:APP_AUX_IO1
+p:APP_AUX_IO2
+p:APP_AUX_IO3
+p:APP_AUX_IO4
+p:APP_AUX_IO5
+p:APP_FPGA_SPI0_CS_N
+p:APP_FPGA_SPI0_MISO
+p:APP_FPGA_SPI0_MOSI
+p:APP_FPGA_SPI1_CS_N
+p:APP_FPGA_SPI1_MISO
+p:APP_FPGA_SPI1_MOSI
+p:APP_FPGA_SPI_CLK
+p:BEL_SW_CONFIG0
+p:BEL_SW_CONFIG1
+p:BEL_SW_CONFIG2
+p:BEL_SW_CONFIG3
+p:BEL_SW_CONFIG4
+p:BEL_SW_CONFIG5
+p:BEL_SW_CONFIG6
+p:BEL_SW_CONFIG7
+p:BMENLP_CNTL
+p:BMENLP_LOC_CNTL
+p:BMENLP_STATE
+p:CDOS_STS_N
+p:CMNR_STS_N
+p:CSPARESW1_N
+p:CSPARESW2_N
+p:DC_MAIN_DOOR_SW_N
+p:DISABLE_HDW_FPGA
+p:EMO_GOOD_N
+p:ETH_LED1
+p:ETH_LED2
+p:HDW_DBUG_ACTIVE
+p:HDW_DBUG_CS_N
+p:HDW_DBUG_HEADER2
+p:HDW_DBUG_HEADER6
+p:HDW_DBUG_HEADER8
+p:HDW_DBUG_HEADER10
+p:HDW_DBUG_MOSI
+p:HDW_DBUG_SCLK
+p:HDW_DEVRST_N
+p:HDW_EEP_CS_N
+p:HDW_EEP_SCLK
+p:HDW_EEP_SDI
+p:HDW_EEP_SDO
+p:HDW_FPGA_DONE
+p:HDW_GANT_ROT_EN
+p:HSSB_PMII_CLK
+p:HSSB_PMII_RESET_N
+p:HSSB_PMII_RX_DATA0
+p:HSSB_PMII_RX_DATA1
+p:HSSB_PMII_RX_DATA2
+p:HSSB_PMII_RX_DATA3
+p:HSSB_PMII_RX_DV
+p:HSSB_PMII_TX_DATA0
+p:HSSB_PMII_TX_DATA1
+p:HSSB_PMII_TX_DATA2
+p:HSSB_PMII_TX_DATA3
+p:HSSB_PMII_TX_EN
+p:KVBEL_SW_CONFIG0
+p:KVBEL_SW_CONFIG1
+p:KVBEL_SW_CONFIG2
+p:KVBEL_SW_CONFIG3
+p:KVBEL_SW_CONFIG4
+p:KVBEL_SW_CONFIG5
+p:KVBEL_SW_CONFIG6
+p:KVBEL_SW_CONFIG7
+p:KVBMENLP_CNTL
+p:KVBMENLP_STATE
+p:LS_ERROR_N
+p:LS_OSSD1_N
+p:MEL_SW_CONFIG0
+p:MEL_SW_CONFIG1
+p:MEL_SW_CONFIG2
+p:MEL_SW_CONFIG3
+p:MEL_SW_CONFIG4
+p:MEL_SW_CONFIG5
+p:MEL_SW_CONFIG6
+p:MEL_SW_CONFIG7
+p:MTNENLP_CCH_STATE
+p:MTNENLP_CNTL
+p:MTNENLP_DKB_STATE
+p:MTNENLP_LOC_CNTL
+p:MTNENLP_STATE
+p:NEUTRON_DR_SW1_N
+p:NEUTRON_DR_SW2_N
+p:PENDANT_INST
+p:PENDANT_MEB_N
+p:PHY_MDC
+p:PHY_MDIO (bidir end point)
+p:PHY_MDIO (bidir start point)
+p:PHY_RST_N
+p:PWRENLP_CNTL
+p:PWRENLP_LOC_CNTL
+p:PWRENLP_STATE
+p:SPD_AC_DR_N
+p:TP85
+p:TP86
+p:TP88
+p:TP89
+p:TP91
+p:TP92
+p:TP93
+p:TP94
+p:TP95
+p:TP96
+p:TP97
+p:TP98
+p:TP99
+p:TP100
+p:TP101
+p:TP102
+p:TP140
+p:TP141
+p:TP142
+p:TP143
+p:TP144
+p:TP145
+p:TP146
+p:TP147
+p:TP148
+p:TP149
+p:TP150
+p:TP151
+p:TP152
+p:TP153
+p:TP154
+p:TP155
+
+
+Inapplicable constraints
+************************
+
+(none)
+
+
+Applicable constraints with issues
+**********************************
+
+create_clock -name clk_50mhz -period 20 HDW_FPGA_50M_CLK
+	@W::"c:/repo1/gpb/stn/fpga_hw/designer/top_hw/synthesis.fdc":8:0:8:0|object "HDW_FPGA_50M_CLK" is missing qualifier which may result in undesired results; objects must be of type port (get_ports), cell (get_cells), pin (get_pins), or net (get_nets)
+create_clock -name clk_100mhz -period 10 HDW_FPGA_100M_CLK
+	@W::"c:/repo1/gpb/stn/fpga_hw/designer/top_hw/synthesis.fdc":7:0:7:0|object "HDW_FPGA_100M_CLK" is missing qualifier which may result in undesired results; objects must be of type port (get_ports), cell (get_cells), pin (get_pins), or net (get_nets)
+
+Constraints with matching wildcard expressions
+**********************************************
+
+(none)
+
+
+Library Report
+**************
+
+
+# End of Constraint Checker Report

@@ -1,0 +1,25 @@
+@N: MF472 |Synthesis running in Automatic Compile Point mode
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\hdl\afifo.v":149:1:149:6|Removing sequential instance mem[7:0] (in view: work.afifo_8s_2s_8s_2s_0(verilog)) of type view:PrimLib.ram1(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\hdl\afifo.v":149:1:149:6|Removing sequential instance mem[7:0] (in view: work.afifo_8s_2s_8s_2s_1(verilog)) of type view:PrimLib.ram1(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\hdl\ctrl_package_transceiver.v":124:4:124:9|Removing sequential instance rx_good (in view: work.ctrl_package_transceiver(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\hdl\cmn_uart.vhd":476:8:476:9|Removing sequential instance next_command_ready (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN115 :"c:\repo1\gpb\stn\fpga_hw\hdl\clkgen.v":76:11:76:25|Removing instance pulse200khz_div (in view: work.ClkGen(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\repo1\gpb\stn\fpga_hw\hdl\clkgen.v":83:11:83:24|Removing instance pulse20khz_div (in view: work.ClkGen(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\repo1\gpb\stn\fpga_hw\hdl\clkgen.v":105:11:105:19|Removing instance wdclk_div (in view: work.ClkGen(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\repo1\gpb\stn\fpga_hw\hdl\clkgen.v":128:11:128:23|Removing instance clk_16khz_div (in view: work.ClkGen(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\repo1\gpb\stn\fpga_hw\hdl\clkgen.v":98:11:98:23|Removing instance pulse2mhz_div (in view: work.ClkGen(verilog)) because it does not drive other instances.
+@N: FP130 |Promoting Net HDW_DEVRST_N_arst on CLKINT  I_1 
+@N: FP130 |Promoting Net HDW_FPGA_100M_CLK on CLKINT  I_2 
+@N: FP130 |Promoting Net HDW_FPGA_50M_CLK on CLKINT  I_3 
+@N: FP130 |Promoting Net clkgen_25mhz.clkout on CLKINT  I_2 
+@N: FP130 |Promoting Net u_clkgen.pulse2khz_div.CLK_OUT on CLKINT  I_2 
+@N: FP130 |Promoting Net HDW_DBUG_MISO on CLKINT  I_4 
+@N: FP130 |Promoting Net clkgen_2khz.clkout on CLKINT  I_2 
+@N: FX1184 |Applying syn_allowed_resources blockrams=160 on top level netlist top_hw 
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+@N: BN225 |Writing default property annotation file C:\repo1\gpb\stn\fpga_hw\synthesis\top_hw.sap.
+@N: MO225 :"c:\repo1\gpb\stn\fpga_hw\hdl\serial_mii.vhd":145:10:145:11|There are no possible illegal states for state machine SERIAL_MII_CYCLE_STATE[0:3] (in view: work.SERIAL_MII(behavioral)); safe FSM implementation is not required.
+@N: MO225 :"c:\repo1\gpb\stn\fpga_hw\hdl\cmn_uart.vhd":353:6:353:7|There are no possible illegal states for state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl)); safe FSM implementation is not required.

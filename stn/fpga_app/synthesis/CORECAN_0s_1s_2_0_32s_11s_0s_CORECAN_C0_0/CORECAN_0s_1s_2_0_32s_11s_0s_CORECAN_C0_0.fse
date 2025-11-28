@@ -1,0 +1,118 @@
+
+fsm_encoding {11219650219656} onehot
+
+fsm_state_encoding {11219650219656} 000000 {0000000000001}
+
+fsm_state_encoding {11219650219656} 000001 {0000000000010}
+
+fsm_state_encoding {11219650219656} 000010 {0000000000100}
+
+fsm_state_encoding {11219650219656} 000011 {0000000001000}
+
+fsm_state_encoding {11219650219656} 000101 {0000000010000}
+
+fsm_state_encoding {11219650219656} 000110 {0000000100000}
+
+fsm_state_encoding {11219650219656} 000111 {0000001000000}
+
+fsm_state_encoding {11219650219656} 001000 {0000010000000}
+
+fsm_state_encoding {11219650219656} 001001 {0000100000000}
+
+fsm_state_encoding {11219650219656} 001010 {0001000000000}
+
+fsm_state_encoding {11219650219656} 001011 {0010000000000}
+
+fsm_state_encoding {11219650219656} 001100 {0100000000000}
+
+fsm_state_encoding {11219650219656} 001101 {1000000000000}
+
+fsm_registers {11219650219656} {OII0[12]}  {OII0[11]}  {OII0[10]}  {OII0[9]}  {OII0[8]}  {OII0[7]}  {OII0[6]}  {OII0[5]}  {OII0[4]}  {OII0[3]}  {OII0[2]}  {OII0[1]}  {OII0[0]} 
+
+fsm_encoding {11139960139964} onehot
+
+fsm_state_encoding {11139960139964} OilI {00000001}
+
+fsm_state_encoding {11139960139964} li0l {00000010}
+
+fsm_state_encoding {11139960139964} oi0l {00000100}
+
+fsm_state_encoding {11139960139964} ii0l {00001000}
+
+fsm_state_encoding {11139960139964} OO1l {00010000}
+
+fsm_state_encoding {11139960139964} IO1l {00100000}
+
+fsm_state_encoding {11139960139964} lO1l {01000000}
+
+fsm_state_encoding {11139960139964} oO1l {10000000}
+
+fsm_registers {11139960139964} {OI1l[7]}  {OI1l[6]}  {OI1l[5]}  {OI1l[4]}  {OI1l[3]}  {OI1l[2]}  {OI1l[1]}  {OI1l[0]} 
+
+fsm_encoding {119399093995} onehot
+
+fsm_state_encoding {119399093995} OilI {00001}
+
+fsm_state_encoding {119399093995} IilI {00010}
+
+fsm_state_encoding {119399093995} lilI {00100}
+
+fsm_state_encoding {119399093995} oilI {01000}
+
+fsm_state_encoding {119399093995} iilI {10000}
+
+fsm_registers {119399093995} {OO0I[4]}  {OO0I[3]}  {OO0I[2]}  {OO0I[1]}  {OO0I[0]} 
+
+fsm_encoding {11177600177602} onehot
+
+fsm_state_encoding {11177600177602} iIil {00001}
+
+fsm_state_encoding {11177600177602} Olil {00010}
+
+fsm_state_encoding {11177600177602} Ilil {00100}
+
+fsm_state_encoding {11177600177602} llil {01000}
+
+fsm_state_encoding {11177600177602} olil {10000}
+
+fsm_registers {11177600177602} {ilil[4]}  {ilil[3]}  {ilil[2]}  {ilil[1]}  {ilil[0]} 
+
+fsm_encoding {11208050208051} original
+
+fsm_state_encoding {11208050208051} ilO0 {000}
+
+fsm_state_encoding {11208050208051} O0O0 {001}
+
+fsm_state_encoding {11208050208051} I0O0 {010}
+
+fsm_state_encoding {11208050208051} l0O0 {011}
+
+fsm_state_encoding {11208050208051} o0O0 {100}
+
+fsm_state_encoding {11208050208051} i0O0 {101}
+
+fsm_registers {11208050208051} {l1O0[2]}  {l1O0[1]}  {l1O0[0]} 
+
+fsm_encoding {114075040753} sequential
+
+fsm_state_encoding {114075040753} lOi {00}
+
+fsm_state_encoding {114075040753} oOi {01}
+
+fsm_state_encoding {114075040753} iOi {10}
+
+fsm_state_encoding {114075040753} OIi {11}
+
+fsm_registers {114075040753} {IIi[1]}  {IIi[0]} 
+
+fsm_encoding {114075040753} sequential
+
+fsm_state_encoding {114075040753} lOi {00}
+
+fsm_state_encoding {114075040753} oOi {01}
+
+fsm_state_encoding {114075040753} iOi {10}
+
+fsm_state_encoding {114075040753} OIi {11}
+
+fsm_registers {114075040753} {IIi[1]}  {IIi[0]} 

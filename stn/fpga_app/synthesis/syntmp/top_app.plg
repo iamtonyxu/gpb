@@ -1,0 +1,28 @@
+@P:  Worst Slack : 2.259
+@P:  ADC_ADS8864_IF|ram_wr_clk_inferred_clock - Estimated Frequency : NA
+@P:  ADC_ADS8864_IF|ram_wr_clk_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  ADC_ADS8864_IF|ram_wr_clk_inferred_clock - Estimated Period : NA
+@P:  ADC_ADS8864_IF|ram_wr_clk_inferred_clock - Requested Period : 10.000
+@P:  ADC_ADS8864_IF|ram_wr_clk_inferred_clock - Slack : NA
+@P:  CLOCK_DIV_9|N_1_inferred_clock - Estimated Frequency : 259.3 MHz
+@P:  CLOCK_DIV_9|N_1_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  CLOCK_DIV_9|N_1_inferred_clock - Estimated Period : 3.857
+@P:  CLOCK_DIV_9|N_1_inferred_clock - Requested Period : 10.000
+@P:  CLOCK_DIV_9|N_1_inferred_clock - Slack : 3.072
+@P:  top_app|APP_DBUG_MISO - Estimated Frequency : 459.6 MHz
+@P:  top_app|APP_DBUG_MISO - Requested Frequency : 100.0 MHz
+@P:  top_app|APP_DBUG_MISO - Estimated Period : 2.176
+@P:  top_app|APP_DBUG_MISO - Requested Period : 10.000
+@P:  top_app|APP_DBUG_MISO - Slack : 7.824
+@P:  top_app|APP_FPGA_100M_CLK - Estimated Frequency : 129.2 MHz
+@P:  top_app|APP_FPGA_100M_CLK - Requested Frequency : 100.0 MHz
+@P:  top_app|APP_FPGA_100M_CLK - Estimated Period : 7.741
+@P:  top_app|APP_FPGA_100M_CLK - Requested Period : 10.000
+@P:  top_app|APP_FPGA_100M_CLK - Slack : 2.259
+@P: top_app Part : mpf100tfcg484-1
+@P: top_app Register bits  : 8920 
+@P: top_app DSP Blocks  : 0
+@P: top_app I/O primitives : 182
+@P: top_app RAM1K20 :  17
+@P: top_app RAM64x12 :  14
+@P:  CPU Time : 0h:00m:13s

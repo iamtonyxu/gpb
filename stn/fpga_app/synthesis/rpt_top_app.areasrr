@@ -1,0 +1,1018 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-3
+Install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: LAPTOP-6FQD1N4B
+
+Implementation : synthesis
+
+#### START OF AREA REPORT #####[
+
+Part:			MPF100TFCG484-1 (Microchip)
+
+-----------------------------------------------------------------------
+########   Utilization report for  Top level view:   top_app   ########
+=======================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      2948               100 %                
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top_app:	2948 (41.79 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      2338               100 %                
+ARI1     1492               100 %                
+=================================================
+Total COMBINATIONAL LOGIC in the block top_app:	3830 (54.29 % Utilization)
+
+
+MEMORY ELEMENTS
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM1K20      1                  100 %                
+RAM64X12     6                  100 %                
+=====================================================
+Total MEMORY ELEMENTS in the block top_app:	7 (0.10 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     6                  100 %                
+===================================================
+Total GLOBAL BUFFERS in the block top_app:	6 (0.09 % Utilization)
+
+
+IO PADS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+IO       182                100 %                
+=================================================
+Total IO PADS in the block top_app:	182 (2.58 % Utilization)
+
+--------------------------------------------------------------------
+########   Utilization report for  cell:   ADC_ADS8864_IF   ########
+Instance path:   top_app.ADC_ADS8864_IF                             
+====================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      181                6.14 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top_app.ADC_ADS8864_IF:	181 (2.57 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      182                7.78 %               
+ARI1     106                7.1 %                
+=================================================
+Total COMBINATIONAL LOGIC in the block top_app.ADC_ADS8864_IF:	288 (4.08 % Utilization)
+
+
+MEMORY ELEMENTS
+Name        Total elements     Utilization     Notes
+----------------------------------------------------
+RAM1K20     1                  100 %                
+====================================================
+Total MEMORY ELEMENTS in the block top_app.ADC_ADS8864_IF:	1 (0.01 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  16.7 %               
+===================================================
+Total GLOBAL BUFFERS in the block top_app.ADC_ADS8864_IF:	1 (0.01 % Utilization)
+
+-----------------------------------------------------------------
+########   Utilization report for  cell:   CLOCK_DIV_8   ########
+Instance path:   ADC_ADS8864_IF.CLOCK_DIV_8                      
+=================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      17                 0.5770 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block ADC_ADS8864_IF.CLOCK_DIV_8:	17 (0.24 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      10                 0.4280 %             
+ARI1     32                 2.14 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block ADC_ADS8864_IF.CLOCK_DIV_8:	42 (0.60 % Utilization)
+
+-------------------------------------------------------------------------
+########   Utilization report for  cell:   CLOCK_DIV_top_app_0   ########
+Instance path:   ADC_ADS8864_IF.CLOCK_DIV_top_app_0                      
+=========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      17                 0.5770 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block ADC_ADS8864_IF.CLOCK_DIV_top_app_0:	17 (0.24 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      10                 0.4280 %             
+ARI1     32                 2.14 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block ADC_ADS8864_IF.CLOCK_DIV_top_app_0:	42 (0.60 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  16.7 %               
+===================================================
+Total GLOBAL BUFFERS in the block ADC_ADS8864_IF.CLOCK_DIV_top_app_0:	1 (0.01 % Utilization)
+
+--------------------------------------------------------------------------
+########   Utilization report for  cell:   DP_RAM_2R_1W_16s_10s   ########
+Instance path:   ADC_ADS8864_IF.DP_RAM_2R_1W_16s_10s                      
+==========================================================================
+
+MEMORY ELEMENTS
+Name        Total elements     Utilization     Notes
+----------------------------------------------------
+RAM1K20     1                  100 %                
+====================================================
+Total MEMORY ELEMENTS in the block ADC_ADS8864_IF.DP_RAM_2R_1W_16s_10s:	1 (0.01 % Utilization)
+
+-----------------------------------------------------------------
+########   Utilization report for  cell:   ADDR_DECODE   ########
+Instance path:   top_app.ADDR_DECODE                             
+=================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      12                 0.4070 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top_app.ADDR_DECODE:	12 (0.17 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      145                6.2 %                
+=================================================
+Total COMBINATIONAL LOGIC in the block top_app.ADDR_DECODE:	145 (2.06 % Utilization)
+
+---------------------------------------------------------------
+########   Utilization report for  cell:   APP2HW_IF   ########
+Instance path:   top_app.APP2HW_IF                             
+===============================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      14                 0.4750 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top_app.APP2HW_IF:	14 (0.20 % Utilization)
+
+------------------------------------------------------------
+########   Utilization report for  cell:   CAN_IF   ########
+Instance path:   top_app.CAN_IF                             
+============================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      488                16.6 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top_app.CAN_IF:	488 (6.92 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      188                8.04 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block top_app.CAN_IF:	188 (2.66 % Utilization)
+
+---------------------------------------------------------------------
+########   Utilization report for  cell:   CORECAN_wrapper   ########
+Instance path:   CAN_IF.CORECAN_wrapper                              
+=====================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      122                4.14 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block CAN_IF.CORECAN_wrapper:	122 (1.73 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      47                 2.01 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block CAN_IF.CORECAN_wrapper:	47 (0.67 % Utilization)
+
+----------------------------------------------------------------
+########   Utilization report for  cell:   CORECAN_C0   ########
+Instance path:   CORECAN_wrapper.CORECAN_C0                     
+================================================================
+-----------------------------------------------------------------------
+########   Utilization report for  cell:   CORECAN_wrapper_0   ########
+Instance path:   CAN_IF.CORECAN_wrapper_0                              
+=======================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      122                4.14 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block CAN_IF.CORECAN_wrapper_0:	122 (1.73 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      47                 2.01 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block CAN_IF.CORECAN_wrapper_0:	47 (0.67 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   CORECAN_C0_0   ########
+Instance path:   CORECAN_wrapper_0.CORECAN_C0_0                   
+==================================================================
+-----------------------------------------------------------------------
+########   Utilization report for  cell:   CORECAN_wrapper_1   ########
+Instance path:   CAN_IF.CORECAN_wrapper_1                              
+=======================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      122                4.14 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block CAN_IF.CORECAN_wrapper_1:	122 (1.73 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      47                 2.01 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block CAN_IF.CORECAN_wrapper_1:	47 (0.67 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   CORECAN_C0_1   ########
+Instance path:   CORECAN_wrapper_1.CORECAN_C0_1                   
+==================================================================
+-----------------------------------------------------------------------
+########   Utilization report for  cell:   CORECAN_wrapper_2   ########
+Instance path:   CAN_IF.CORECAN_wrapper_2                              
+=======================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      122                4.14 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block CAN_IF.CORECAN_wrapper_2:	122 (1.73 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      47                 2.01 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block CAN_IF.CORECAN_wrapper_2:	47 (0.67 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   CORECAN_C0_2   ########
+Instance path:   CORECAN_wrapper_2.CORECAN_C0_2                   
+==================================================================
+------------------------------------------------------------------
+########   Utilization report for  cell:   CLOCK_DIV_10   ########
+Instance path:   top_app.CLOCK_DIV_10                             
+==================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      17                 0.5770 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top_app.CLOCK_DIV_10:	17 (0.24 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      6                  0.2570 %             
+ARI1     16                 1.07 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block top_app.CLOCK_DIV_10:	22 (0.31 % Utilization)
+
+------------------------------------------------------------
+########   Utilization report for  cell:   ClkGen   ########
+Instance path:   top_app.ClkGen                             
+============================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      97                 3.29 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top_app.ClkGen:	97 (1.37 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      71                 3.04 %               
+ARI1     32                 2.14 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block top_app.ClkGen:	103 (1.46 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  16.7 %               
+===================================================
+Total GLOBAL BUFFERS in the block top_app.ClkGen:	1 (0.01 % Utilization)
+
+-----------------------------------------------------------------------
+########   Utilization report for  cell:   CLOCK_DIV_top_app   ########
+Instance path:   ClkGen.CLOCK_DIV_top_app                              
+=======================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      17                 0.5770 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block ClkGen.CLOCK_DIV_top_app:	17 (0.24 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      10                 0.4280 %             
+ARI1     32                 2.14 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block ClkGen.CLOCK_DIV_top_app:	42 (0.60 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  16.7 %               
+===================================================
+Total GLOBAL BUFFERS in the block ClkGen.CLOCK_DIV_top_app:	1 (0.01 % Utilization)
+
+---------------------------------------------------------------------
+########   Utilization report for  cell:   DAC_DACx0504_IF   ########
+Instance path:   top_app.DAC_DACx0504_IF                             
+=====================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      113                3.83 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top_app.DAC_DACx0504_IF:	113 (1.60 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      115                4.92 %               
+ARI1     16                 1.07 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block top_app.DAC_DACx0504_IF:	131 (1.86 % Utilization)
+
+
+MEMORY ELEMENTS
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM64X12     4                  66.7 %               
+=====================================================
+Total MEMORY ELEMENTS in the block top_app.DAC_DACx0504_IF:	4 (0.06 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  16.7 %               
+===================================================
+Total GLOBAL BUFFERS in the block top_app.DAC_DACx0504_IF:	1 (0.01 % Utilization)
+
+-----------------------------------------------------------------
+########   Utilization report for  cell:   CLOCK_DIV_9   ########
+Instance path:   DAC_DACx0504_IF.CLOCK_DIV_9                     
+=================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      17                 0.5770 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block DAC_DACx0504_IF.CLOCK_DIV_9:	17 (0.24 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      8                  0.3420 %             
+ARI1     16                 1.07 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block DAC_DACx0504_IF.CLOCK_DIV_9:	24 (0.34 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  16.7 %               
+===================================================
+Total GLOBAL BUFFERS in the block DAC_DACx0504_IF.CLOCK_DIV_9:	1 (0.01 % Utilization)
+
+-------------------------------------------------------------------------
+########   Utilization report for  cell:   DP_RAM_2R_1W_24s_4s   ########
+Instance path:   DAC_DACx0504_IF.DP_RAM_2R_1W_24s_4s                     
+=========================================================================
+
+MEMORY ELEMENTS
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM64X12     2                  33.3 %               
+=====================================================
+Total MEMORY ELEMENTS in the block DAC_DACx0504_IF.DP_RAM_2R_1W_24s_4s:	2 (0.03 % Utilization)
+
+-------------------------------------------------------------------------
+########   Utilization report for  cell:   afifo_24s_4s_24s_4s   ########
+Instance path:   DAC_DACx0504_IF.afifo_24s_4s_24s_4s                     
+=========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      40                 1.36 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block DAC_DACx0504_IF.afifo_24s_4s_24s_4s:	40 (0.57 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      39                 1.67 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block DAC_DACx0504_IF.afifo_24s_4s_24s_4s:	39 (0.55 % Utilization)
+
+
+MEMORY ELEMENTS
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM64X12     2                  33.3 %               
+=====================================================
+Total MEMORY ELEMENTS in the block DAC_DACx0504_IF.afifo_24s_4s_24s_4s:	2 (0.03 % Utilization)
+
+----------------------------------------------------------
+########   Utilization report for  cell:   GPIO   ########
+Instance path:   top_app.GPIO                             
+==========================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      177                6 %                  
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top_app.GPIO:	177 (2.51 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      87                 3.72 %               
+ARI1     20                 1.34 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block top_app.GPIO:	107 (1.52 % Utilization)
+
+------------------------------------------------------------------------
+########   Utilization report for  cell:   OSCILLATOR_COUNTER   ########
+Instance path:   top_app.OSCILLATOR_COUNTER                             
+========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      75                 2.54 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top_app.OSCILLATOR_COUNTER:	75 (1.06 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      42                 1.8 %                
+ARI1     17                 1.14 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block top_app.OSCILLATOR_COUNTER:	59 (0.84 % Utilization)
+
+-----------------------------------------------------------------------
+########   Utilization report for  cell:   afifo_8s_2s_8s_2s   ########
+Instance path:   OSCILLATOR_COUNTER.afifo_8s_2s_8s_2s                  
+=======================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      24                 0.8140 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block OSCILLATOR_COUNTER.afifo_8s_2s_8s_2s:	24 (0.34 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      16                 0.6840 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block OSCILLATOR_COUNTER.afifo_8s_2s_8s_2s:	16 (0.23 % Utilization)
+
+-------------------------------------------------------------------
+########   Utilization report for  cell:   RS422_TEST_IF   ########
+Instance path:   top_app.RS422_TEST_IF                             
+===================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      1329               45.1 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top_app.RS422_TEST_IF:	1329 (18.84 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      898                38.4 %               
+ARI1     1251               83.8 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block top_app.RS422_TEST_IF:	2149 (30.46 % Utilization)
+
+---------------------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_1   ########
+Instance path:   RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_1                       
+===========================================================================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      29                 0.9840 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_1:	29 (0.41 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      36                 1.54 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_1:	36 (0.51 % Utilization)
+
+---------------------------------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF   ########
+Instance path:   RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF                       
+=======================================================================================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      32                 1.09 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF:	32 (0.45 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      38                 1.63 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF:	38 (0.54 % Utilization)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_0   ########
+Instance path:   RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_0                       
+=========================================================================================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      32                 1.09 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_0:	32 (0.45 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      38                 1.63 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_0:	38 (0.54 % Utilization)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_1   ########
+Instance path:   RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_1                       
+=========================================================================================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      32                 1.09 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_1:	32 (0.45 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      38                 1.63 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_1:	38 (0.54 % Utilization)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_2   ########
+Instance path:   RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_2                       
+=========================================================================================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      32                 1.09 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_2:	32 (0.45 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      38                 1.63 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_2:	38 (0.54 % Utilization)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_3   ########
+Instance path:   RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_3                       
+=========================================================================================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      32                 1.09 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_3:	32 (0.45 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      38                 1.63 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_3:	38 (0.54 % Utilization)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_4   ########
+Instance path:   RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_4                       
+=========================================================================================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      32                 1.09 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_4:	32 (0.45 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      39                 1.67 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_4:	39 (0.55 % Utilization)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_5   ########
+Instance path:   RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_5                       
+=========================================================================================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      32                 1.09 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_5:	32 (0.45 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      39                 1.67 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_5:	39 (0.55 % Utilization)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_6   ########
+Instance path:   RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_6                       
+=========================================================================================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      32                 1.09 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_6:	32 (0.45 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      38                 1.63 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_6:	38 (0.54 % Utilization)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_7   ########
+Instance path:   RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_7                       
+=========================================================================================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      32                 1.09 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_7:	32 (0.45 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      40                 1.71 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block RS422_TEST_IF.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF_7:	40 (0.57 % Utilization)
+
+----------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   SCRATCH_PAD_REGISTER_65537_256_539298053   ########
+Instance path:   top_app.SCRATCH_PAD_REGISTER_65537_256_539298053                             
+==============================================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      96                 3.26 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top_app.SCRATCH_PAD_REGISTER_65537_256_539298053:	96 (1.36 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      50                 2.14 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block top_app.SCRATCH_PAD_REGISTER_65537_256_539298053:	50 (0.71 % Utilization)
+
+----------------------------------------------------------------
+########   Utilization report for  cell:   cmd_server   ########
+Instance path:   top_app.cmd_server                             
+================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      348                11.8 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block top_app.cmd_server:	348 (4.93 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      553                23.7 %               
+ARI1     34                 2.28 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block top_app.cmd_server:	587 (8.32 % Utilization)
+
+
+MEMORY ELEMENTS
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM64X12     2                  33.3 %               
+=====================================================
+Total MEMORY ELEMENTS in the block top_app.cmd_server:	2 (0.03 % Utilization)
+
+----------------------------------------------------------------
+########   Utilization report for  cell:   msg_buffer   ########
+Instance path:   cmd_server.msg_buffer                          
+================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      81                 2.75 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmd_server.msg_buffer:	81 (1.15 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      55                 2.35 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmd_server.msg_buffer:	55 (0.78 % Utilization)
+
+
+MEMORY ELEMENTS
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM64X12     2                  33.3 %               
+=====================================================
+Total MEMORY ELEMENTS in the block cmd_server.msg_buffer:	2 (0.03 % Utilization)
+
+-------------------------------------------------------------------------
+########   Utilization report for  cell:   afifo_8s_4s_8s_4s_1   ########
+Instance path:   msg_buffer.afifo_8s_4s_8s_4s_1                          
+=========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      40                 1.36 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block msg_buffer.afifo_8s_4s_8s_4s_1:	40 (0.57 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      30                 1.28 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block msg_buffer.afifo_8s_4s_8s_4s_1:	30 (0.43 % Utilization)
+
+
+MEMORY ELEMENTS
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM64X12     1                  16.7 %               
+=====================================================
+Total MEMORY ELEMENTS in the block msg_buffer.afifo_8s_4s_8s_4s_1:	1 (0.01 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   afifo_8s_4s_8s_4s_1_0   ########
+Instance path:   msg_buffer.afifo_8s_4s_8s_4s_1_0                          
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      40                 1.36 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block msg_buffer.afifo_8s_4s_8s_4s_1_0:	40 (0.57 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      24                 1.03 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block msg_buffer.afifo_8s_4s_8s_4s_1_0:	24 (0.34 % Utilization)
+
+
+MEMORY ELEMENTS
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+RAM64X12     1                  16.7 %               
+=====================================================
+Total MEMORY ELEMENTS in the block msg_buffer.afifo_8s_4s_8s_4s_1_0:	1 (0.01 % Utilization)
+
+--------------------------------------------------------------------
+########   Utilization report for  cell:   opb_emu_target   ########
+Instance path:   cmd_server.opb_emu_target                          
+====================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      217                7.36 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmd_server.opb_emu_target:	217 (3.08 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      429                18.3 %               
+ARI1     34                 2.28 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmd_server.opb_emu_target:	463 (6.56 % Utilization)
+
+-----------------------------------------------------------------
+########   Utilization report for  cell:   CLOCK_DIV_0   ########
+Instance path:   opb_emu_target.CLOCK_DIV_0                      
+=================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      17                 0.5770 %             
+=================================================
+Total SEQUENTIAL ELEMENTS in the block opb_emu_target.CLOCK_DIV_0:	17 (0.24 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      7                  0.2990 %             
+ARI1     16                 1.07 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block opb_emu_target.CLOCK_DIV_0:	23 (0.33 % Utilization)
+
+--------------------------------------------------------------
+########   Utilization report for  cell:   msg_read   ########
+Instance path:   opb_emu_target.msg_read                      
+==============================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      97                 3.29 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block opb_emu_target.msg_read:	97 (1.37 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      122                5.22 %               
+ARI1     9                  0.6030 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block opb_emu_target.msg_read:	131 (1.86 % Utilization)
+
+---------------------------------------------------------------
+########   Utilization report for  cell:   msg_write   ########
+Instance path:   opb_emu_target.msg_write                      
+===============================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      94                 3.19 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block opb_emu_target.msg_write:	94 (1.33 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      277                11.8 %               
+ARI1     9                  0.6030 %             
+=================================================
+Total COMBINATIONAL LOGIC in the block opb_emu_target.msg_write:	286 (4.05 % Utilization)
+
+---------------------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_0   ########
+Instance path:   cmd_server.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_0                          
+===========================================================================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      50                 1.7 %                
+=================================================
+Total SEQUENTIAL ELEMENTS in the block cmd_server.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_0:	50 (0.71 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      69                 2.95 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block cmd_server.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_0:	69 (0.98 % Utilization)
+
+
+##### END OF AREA REPORT #####]
+

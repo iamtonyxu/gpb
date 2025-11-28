@@ -1,0 +1,191 @@
+Compile Report
+Microchip Technology Inc. - Microchip Libero Software Release v2024.2 (Version 2024.2.0.13)
+Date: Fri Sep  5 13:04:14 2025
+
+Device Selection
++------------------------+-------------+
+| Family                 | PolarFire   |
+| Device                 | MPF100T     |
+| Package                | FCG484      |
+| Speed Grade            | -1          |
+| Core Voltage           | 1.0V        |
+| Part Range             | EXT         |
+| Default I/O technology | LVCMOS 1.8V |
++------------------------+-------------+
+
+Source Files
++---------+------------------------------------------------+
+| Topcell | top_app                                        |
+| Format  | Verilog                                        |
+| Source  | C:\repo1\gpb\stn\fpga_app\synthesis\top_app.vm |
++---------+------------------------------------------------+
+
+Options
++----------------------------------------------------+----+
+| Limit the number of high fanout nets to display to | 10 |
++----------------------------------------------------+----+
+
+Resource Usage
++---------------------------+-------+--------+------------+
+| Type                      | Used  | Total  | Percentage |
++---------------------------+-------+--------+------------+
+| 4LUT                      | 21869 | 108600 | 20.14      |
+| DFF                       | 9696  | 108600 | 8.93       |
+| I/O Register              | 0     | 732    | 0.00       |
+| User I/O                  | 182   | 244    | 74.59      |
+| -- Single-ended I/O       | 182   | 244    | 74.59      |
+| -- Differential I/O Pairs | 0     | 122    | 0.00       |
+| uSRAM                     | 14    | 1008   | 1.39       |
+| LSRAM                     | 17    | 352    | 4.83       |
+| Math                      | 0     | 336    | 0.00       |
+| H-Chip Global             | 10    | 48     | 20.83      |
+| PLL                       | 0     | 8      | 0.00       |
+| DLL                       | 0     | 8      | 0.00       |
+| Transceiver Lanes         | 0     | 8      | 0.00       |
+| Transceiver PCIe          | 0     | 2      | 0.00       |
++---------------------------+-------+--------+------------+
+
+Detailed Logic Resource Usage
++-----------------------+-------+------+
+| Type                  | 4LUT  | DFF  |
++-----------------------+-------+------+
+| Fabric Logic          | 21089 | 8916 |
+| uSRAM Interface Logic | 168   | 168  |
+| LSRAM Interface Logic | 612   | 612  |
+| Math Interface Logic  | 0     | 0    |
+| Total Used            | 21869 | 9696 |
++-----------------------+-------+------+
+
+Detailed Carry Chains Resource Usage
++--------+------+
+| Length | Used |
+| 7      | 21   |
+| 8      | 28   |
+| 9      | 42   |
+| 11     | 1    |
+| 12     | 1    |
+| 13     | 1    |
+| 15     | 4    |
+| 16     | 22   |
+| 17     | 5    |
+| 27     | 4    |
+| 32     | 4    |
+| 33     | 28   |
+| 64     | 4    |
+| Total  | 165  |
++--------+------+
+
+Detailed 4LUT Groups Resource Usage
++--------+------+
+| Length | Used |
+| 2      | 470  |
+| 5      | 56   |
+| 22     | 12   |
+| Total  | 538  |
++--------+------+
+
+I/O Function
++-------------------------------+--------------+-------------+-----------------+
+| Type                          | w/o register | w/ register | w/ DDR register |
++-------------------------------+--------------+-------------+-----------------+
+| Input I/O                     | 104          | 0           | 0               |
+| Output I/O                    | 78           | 0           | 0               |
+| Bidirectional I/O             | 0            | 0           | 0               |
+| Differential Input I/O Pairs  | 0            | 0           | 0               |
+| Differential Output I/O Pairs | 0            | 0           | 0               |
++-------------------------------+--------------+-------------+-----------------+
+
+Nets assigned to chip global resources
++--------+---------+--------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                     |
++--------+---------+--------------------------------------------------------------------------+
+| 8831   | INT_NET | Net   : NN_1                                                             |
+|        |         | Driver: I_1/U0_RGB1                                                      |
+|        |         | Source: NETLIST                                                          |
+| 2947   | INT_NET | Net   : APP_DEVRST_N_arst                                                |
+|        |         | Driver: I_2/U0_RGB1                                                      |
+|        |         | Source: NETLIST                                                          |
+| 1448   | INT_NET | Net   : u_can_if/CAN1_inst/uut/MSC_i_36/MSC_net_910                      |
+|        |         | Driver: u_can_if/CAN1_inst/uut/MSC_i_36/MSC_i_71/o11_rep_RNI8DTL/U0_RGB1 |
+|        |         | Source: NETLIST                                                          |
+| 1448   | INT_NET | Net   : u_can_if/CAN4_inst/uut/MSC_i_18/MSC_net_910                      |
+|        |         | Driver: u_can_if/CAN4_inst/uut/MSC_i_18/MSC_i_71/o11_rep_RNI8DTL/U0_RGB1 |
+|        |         | Source: NETLIST                                                          |
+| 1448   | INT_NET | Net   : u_can_if/CAN3_inst/uut/MSC_i_0/MSC_net_910                       |
+|        |         | Driver: u_can_if/CAN3_inst/uut/MSC_i_0/MSC_i_71/o11_rep_RNI8DTL/U0_RGB1  |
+|        |         | Source: NETLIST                                                          |
+| 1448   | INT_NET | Net   : u_can_if/CAN2_inst/uut/MSC_i_54/MSC_net_910                      |
+|        |         | Driver: u_can_if/CAN2_inst/uut/MSC_i_54/MSC_i_71/o11_rep_RNI8DTL/U0_RGB1 |
+|        |         | Source: NETLIST                                                          |
+| 83     | INT_NET | Net   : u_adc/clk_sd                                                     |
+|        |         | Driver: u_adc/sclk/CLK_OUT_i_m2_RNISPRS5/U0_RGB1                         |
+|        |         | Source: NETLIST                                                          |
+| 78     | INT_NET | Net   : u_dac/clk_sd                                                     |
+|        |         | Driver: u_dac/sclk/N_1_inferred_clock_RNISAT47/U0_RGB1                   |
+|        |         | Source: NETLIST                                                          |
+| 51     | INT_NET | Net   : APP_DBUG_HEADER4_c                                               |
+|        |         | Driver: u_clkgen/pulse2khz_div/CLK_OUT_RNIVQBC5/U0_RGB1                  |
+|        |         | Source: NETLIST                                                          |
+| 13     | INT_NET | Net   : NN_2                                                             |
+|        |         | Driver: I_3/U0_RGB1                                                      |
+|        |         | Source: NETLIST                                                          |
++--------+---------+--------------------------------------------------------------------------+
+
+Nets assigned to row global resources
++--------+------+------+
+| Fanout | Type | Name |
++--------+------+------+
++--------+------+------+
+
+High fanout nets
++--------+---------+--------------------------------------------------------------------+
+| Fanout | Type    | Name                                                               |
++--------+---------+--------------------------------------------------------------------+
+| 947    | INT_NET | Net   : u_rs422/tx_ctrl_Z[2]                                       |
+|        |         | Driver: u_rs422/tx_ctrl[2]                                         |
+| 346    | INT_NET | Net   : opb_addr[0]                                                |
+|        |         | Driver: u_cmd_server/opb_emu_target_inst/msg_read_inst/OPB_ADDR[0] |
+| 183    | INT_NET | Net   : opb_addr[5]                                                |
+|        |         | Driver: u_cmd_server/opb_emu_target_inst/msg_read_inst/OPB_ADDR[5] |
+| 167    | INT_NET | Net   : u_can_if/CAN3_inst/uut/MSC_i_0/MSC_net_877                 |
+|        |         | Driver: u_can_if/CAN3_inst/uut/MSC_i_0/O01/I01_0                   |
+| 167    | INT_NET | Net   : u_can_if/CAN4_inst/uut/MSC_i_18/MSC_net_877                |
+|        |         | Driver: u_can_if/CAN4_inst/uut/MSC_i_18/O01/I01_0                  |
+| 167    | INT_NET | Net   : u_can_if/CAN1_inst/uut/MSC_i_36/MSC_net_877                |
+|        |         | Driver: u_can_if/CAN1_inst/uut/MSC_i_36/O01/I01_0                  |
+| 167    | INT_NET | Net   : u_can_if/CAN2_inst/uut/MSC_i_54/MSC_net_877                |
+|        |         | Driver: u_can_if/CAN2_inst/uut/MSC_i_54/O01/I01_0                  |
+| 163    | INT_NET | Net   : opb_addr[1]                                                |
+|        |         | Driver: u_cmd_server/opb_emu_target_inst/msg_read_inst/OPB_ADDR[1] |
+| 155    | INT_NET | Net   : opb_addr[2]                                                |
+|        |         | Driver: u_cmd_server/opb_emu_target_inst/msg_read_inst/OPB_ADDR[2] |
+| 148    | INT_NET | Net   : u_can_if/CAN3_inst/uut/MSC_i_0/l1[0]                       |
+|        |         | Driver: u_can_if/CAN3_inst/uut/MSC_i_0/MSC_i_58/lOI[0]             |
++--------+---------+--------------------------------------------------------------------+
+
+High fanout nets (through buffer trees)
++--------+---------+--------------------------------------------------------------------+
+| Fanout | Type    | Name                                                               |
++--------+---------+--------------------------------------------------------------------+
+| 947    | INT_NET | Net   : u_rs422/tx_ctrl_Z[2]                                       |
+|        |         | Driver: u_rs422/tx_ctrl[2]                                         |
+| 346    | INT_NET | Net   : opb_addr[0]                                                |
+|        |         | Driver: u_cmd_server/opb_emu_target_inst/msg_read_inst/OPB_ADDR[0] |
+| 183    | INT_NET | Net   : opb_addr[5]                                                |
+|        |         | Driver: u_cmd_server/opb_emu_target_inst/msg_read_inst/OPB_ADDR[5] |
+| 167    | INT_NET | Net   : u_can_if/CAN3_inst/uut/MSC_i_0/MSC_net_877                 |
+|        |         | Driver: u_can_if/CAN3_inst/uut/MSC_i_0/O01/I01_0                   |
+| 167    | INT_NET | Net   : u_can_if/CAN4_inst/uut/MSC_i_18/MSC_net_877                |
+|        |         | Driver: u_can_if/CAN4_inst/uut/MSC_i_18/O01/I01_0                  |
+| 167    | INT_NET | Net   : u_can_if/CAN1_inst/uut/MSC_i_36/MSC_net_877                |
+|        |         | Driver: u_can_if/CAN1_inst/uut/MSC_i_36/O01/I01_0                  |
+| 167    | INT_NET | Net   : u_can_if/CAN2_inst/uut/MSC_i_54/MSC_net_877                |
+|        |         | Driver: u_can_if/CAN2_inst/uut/MSC_i_54/O01/I01_0                  |
+| 163    | INT_NET | Net   : opb_addr[1]                                                |
+|        |         | Driver: u_cmd_server/opb_emu_target_inst/msg_read_inst/OPB_ADDR[1] |
+| 155    | INT_NET | Net   : opb_addr[2]                                                |
+|        |         | Driver: u_cmd_server/opb_emu_target_inst/msg_read_inst/OPB_ADDR[2] |
+| 148    | INT_NET | Net   : u_can_if/CAN3_inst/uut/MSC_i_0/l1[0]                       |
+|        |         | Driver: u_can_if/CAN3_inst/uut/MSC_i_0/MSC_i_58/lOI[0]             |
++--------+---------+--------------------------------------------------------------------+
+

@@ -1,0 +1,30 @@
+Resource Usage Report for mezz_fifo 
+
+Mapping to part: mpf050tfcvg484std
+Cell usage:
+mezz_fifo_mezz_fifo_0_COREFIFO  1 use
+
+
+Sequential Cells: 
+SLE            0 uses
+
+DSP Blocks:    0 of 150 (0%)
+
+I/O ports: 17
+I/O primitives: 17
+INBUF          9 uses
+OUTBUF         8 uses
+
+
+Total LUTs:    0
+
+Extra resources required for RAM and MACC_PA interface logic during P&R:
+
+RAM64X12 Interface Logic : SLEs = 0; LUTs = 0;
+RAM1K20  Interface Logic : SLEs = 0; LUTs = 0;
+MACC_PA     Interface Logic : SLEs = 0; LUTs = 0;
+MACC_PA_BC_ROM     Interface Logic : SLEs = 0; LUTs = 0;
+
+Total number of SLEs after P&R:  0 + 0 + 0 + 0 = 0;
+Total number of LUTs after P&R:  0 + 0 + 0 + 0 = 0;
+

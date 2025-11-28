@@ -1,0 +1,29 @@
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+@N: MF104 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":35:7:35:19|Found compile point of type hard on View view:work.RS422_TEST_IF(verilog) 
+@N: MF105 |Performing bottom-up mapping of Compile point view:work.RS422_TEST_IF(verilog) 
+@N: MF106 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":35:7:35:19|Mapping Compile point view:work.RS422_TEST_IF(verilog) because 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":298:12:298:17|Found counter in view:work.RS422_TEST_IF(verilog) instance err_bytes_gen\[8\]\.rx_err_bytes\[8\][31:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":298:12:298:17|Found counter in view:work.RS422_TEST_IF(verilog) instance err_bytes_gen\[7\]\.rx_err_bytes\[7\][31:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":298:12:298:17|Found counter in view:work.RS422_TEST_IF(verilog) instance err_bytes_gen\[6\]\.rx_err_bytes\[6\][31:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":298:12:298:17|Found counter in view:work.RS422_TEST_IF(verilog) instance err_bytes_gen\[5\]\.rx_err_bytes\[5\][31:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":298:12:298:17|Found counter in view:work.RS422_TEST_IF(verilog) instance err_bytes_gen\[4\]\.rx_err_bytes\[4\][31:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":298:12:298:17|Found counter in view:work.RS422_TEST_IF(verilog) instance err_bytes_gen\[3\]\.rx_err_bytes\[3\][31:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":298:12:298:17|Found counter in view:work.RS422_TEST_IF(verilog) instance err_bytes_gen\[2\]\.rx_err_bytes\[2\][31:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":298:12:298:17|Found counter in view:work.RS422_TEST_IF(verilog) instance err_bytes_gen\[1\]\.rx_err_bytes\[1\][31:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":298:12:298:17|Found counter in view:work.RS422_TEST_IF(verilog) instance err_bytes_gen\[0\]\.rx_err_bytes\[0\][31:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":282:12:282:17|Found counter in view:work.RS422_TEST_IF(verilog) instance recv_bytes_gen\[8\]\.rx_recv_bytes\[8\][31:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":282:12:282:17|Found counter in view:work.RS422_TEST_IF(verilog) instance recv_bytes_gen\[7\]\.rx_recv_bytes\[7\][31:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":282:12:282:17|Found counter in view:work.RS422_TEST_IF(verilog) instance recv_bytes_gen\[6\]\.rx_recv_bytes\[6\][31:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":282:12:282:17|Found counter in view:work.RS422_TEST_IF(verilog) instance recv_bytes_gen\[5\]\.rx_recv_bytes\[5\][31:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":282:12:282:17|Found counter in view:work.RS422_TEST_IF(verilog) instance recv_bytes_gen\[4\]\.rx_recv_bytes\[4\][31:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":282:12:282:17|Found counter in view:work.RS422_TEST_IF(verilog) instance recv_bytes_gen\[3\]\.rx_recv_bytes\[3\][31:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":282:12:282:17|Found counter in view:work.RS422_TEST_IF(verilog) instance recv_bytes_gen\[2\]\.rx_recv_bytes\[2\][31:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":282:12:282:17|Found counter in view:work.RS422_TEST_IF(verilog) instance recv_bytes_gen\[1\]\.rx_recv_bytes\[1\][31:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":282:12:282:17|Found counter in view:work.RS422_TEST_IF(verilog) instance recv_bytes_gen\[0\]\.rx_recv_bytes\[0\][31:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":268:4:268:9|Found counter in view:work.RS422_TEST_IF(verilog) instance act_tx_trans_bytes[31:0] 
+@N: MF179 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":332:21:332:57|Found 32 by 32 bit equality operator ('==') un1_tx_trans_bytes (in view: work.RS422_TEST_IF(verilog))
+@N: MO225 :"c:\repo1\gpb\stn\fpga_app\hdl\cmn_uart.vhd":353:6:353:7|There are no possible illegal states for state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_RS422_TEST_IF(rtl)); safe FSM implementation is not required.
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.

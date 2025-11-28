@@ -19,7 +19,7 @@ KEY VendorTechnology_IO_DEFT_STD "LVCMOS18"
 KEY VendorTechnology_OPCONR ""
 KEY VendorTechnology_PLL_SUPPLY ""
 KEY VendorTechnology_RAD_EXPOSURE ""
-KEY VendorTechnology_RESERVEMIGRATIONPINS "1"
+KEY VendorTechnology_RESERVEMIGRATIONPINS "0"
 KEY VendorTechnology_RESTRICTPROBEPINS "0"
 KEY VendorTechnology_RESTRICTSPIPINS "0"
 KEY VendorTechnology_SYSTEM_CONTROLLER_SUSPEND_MODE "0"
@@ -52,42 +52,452 @@ ENDLIST
 LIST GlobalIncludeFileList
 ENDLIST
 LIST FileManager
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.1.101\COREFIFO.cxf,actgen_cxf"
+STATE="utd"
+TIME="1755321519"
+SIZE="1298"
+PARENT="<project>\component\work\afifo_4x32\afifo_4x32.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\clock_driver.v,tb_hdl"
+STATE="utd"
+TIME="1755318268"
+SIZE="697"
+PARENT="<project>\component\Actel\DirectCore\COREFIFO\3.1.101\COREFIFO.cxf"
+PARENT="<project>\component\work\afifo_4x32\afifo_4x32_0\afifo_4x32_afifo_4x32_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\fifo_driver.v,tb_hdl"
+STATE="utd"
+TIME="1755318268"
+SIZE="13955"
+PARENT="<project>\component\Actel\DirectCore\COREFIFO\3.1.101\COREFIFO.cxf"
+PARENT="<project>\component\work\afifo_4x32\afifo_4x32_0\afifo_4x32_afifo_4x32_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\fifo_monitor.v,tb_hdl"
+STATE="utd"
+TIME="1755318268"
+SIZE="22096"
+PARENT="<project>\component\Actel\DirectCore\COREFIFO\3.1.101\COREFIFO.cxf"
+PARENT="<project>\component\work\afifo_4x32\afifo_4x32_0\afifo_4x32_afifo_4x32_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\g4_dp_ext_mem.v,tb_hdl"
+STATE="utd"
+TIME="1755318268"
+SIZE="3801"
+PARENT="<project>\component\Actel\DirectCore\COREFIFO\3.1.101\COREFIFO.cxf"
+PARENT="<project>\component\work\afifo_4x32\afifo_4x32_0\afifo_4x32_afifo_4x32_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\MEM_WeqR.v,tb_hdl"
+STATE="utd"
+TIME="1755318268"
+SIZE="2194"
+PARENT="<project>\component\Actel\DirectCore\COREFIFO\3.1.101\COREFIFO.cxf"
+PARENT="<project>\component\work\afifo_4x32\afifo_4x32_0\afifo_4x32_afifo_4x32_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\MEM_WgtR.v,tb_hdl"
+STATE="utd"
+TIME="1755318268"
+SIZE="2287"
+PARENT="<project>\component\Actel\DirectCore\COREFIFO\3.1.101\COREFIFO.cxf"
+PARENT="<project>\component\work\afifo_4x32\afifo_4x32_0\afifo_4x32_afifo_4x32_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\MEM_WltR.v,tb_hdl"
+STATE="utd"
+TIME="1755318268"
+SIZE="1981"
+PARENT="<project>\component\Actel\DirectCore\COREFIFO\3.1.101\COREFIFO.cxf"
+PARENT="<project>\component\work\afifo_4x32\afifo_4x32_0\afifo_4x32_afifo_4x32_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32.cxf,actgen_cxf"
+STATE="utd"
+TIME="1755321520"
+SIZE="5789"
+ENDFILE
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32.v,hdl"
+STATE="utd"
+TIME="1755321519"
+SIZE="6592"
+PARENT="<project>\component\work\afifo_4x32\afifo_4x32.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32_0\afifo_4x32_afifo_4x32_0_COREFIFO.cxf,actgen_cxf"
+STATE="utd"
+TIME="1755321519"
+SIZE="3611"
+PARENT="<project>\component\work\afifo_4x32\afifo_4x32.cxf"
+ENDFILE
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32_0\coreparameters.v,tb_hdl"
+STATE="utd"
+TIME="1755321519"
+SIZE="991"
+PARENT="<project>\component\work\afifo_4x32\afifo_4x32_0\afifo_4x32_afifo_4x32_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+IS_INCLUDED="TRUE"
+ENDFILE
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32_0\mti\scripts\runall.do,do"
+STATE="utd"
+TIME="1755321519"
+SIZE="23"
+PARENT="<project>\component\work\afifo_4x32\afifo_4x32_0\afifo_4x32_afifo_4x32_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32_0\mti\scripts\wave.do,do"
+STATE="utd"
+TIME="1755321519"
+SIZE="3286"
+PARENT="<project>\component\work\afifo_4x32\afifo_4x32_0\afifo_4x32_afifo_4x32_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\COREFIFO.v,hdl"
+STATE="utd"
+TIME="1755321519"
+SIZE="71420"
+PARENT="<project>\component\work\afifo_4x32\afifo_4x32_0\afifo_4x32_afifo_4x32_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_async.v,hdl"
+STATE="utd"
+TIME="1755321519"
+SIZE="55018"
+PARENT="<project>\component\work\afifo_4x32\afifo_4x32_0\afifo_4x32_afifo_4x32_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_fwft.v,hdl"
+STATE="utd"
+TIME="1755321519"
+SIZE="13311"
+PARENT="<project>\component\work\afifo_4x32\afifo_4x32_0\afifo_4x32_afifo_4x32_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_graytobinconv.v,hdl"
+STATE="utd"
+TIME="1755321519"
+SIZE="2547"
+PARENT="<project>\component\work\afifo_4x32\afifo_4x32_0\afifo_4x32_afifo_4x32_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_nstagessync.v,hdl"
+STATE="utd"
+TIME="1755321519"
+SIZE="2330"
+PARENT="<project>\component\work\afifo_4x32\afifo_4x32_0\afifo_4x32_afifo_4x32_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_sync.v,hdl"
+STATE="utd"
+TIME="1755321519"
+SIZE="33346"
+PARENT="<project>\component\work\afifo_4x32\afifo_4x32_0\afifo_4x32_afifo_4x32_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_sync_scntr.v,hdl"
+STATE="utd"
+TIME="1755321519"
+SIZE="23537"
+PARENT="<project>\component\work\afifo_4x32\afifo_4x32_0\afifo_4x32_afifo_4x32_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\test\user\testbench.v,tb_hdl"
+STATE="utd"
+TIME="1755321519"
+SIZE="19024"
+PARENT="<project>\component\work\afifo_4x32\afifo_4x32_0\afifo_4x32_afifo_4x32_0_COREFIFO.cxf"
+MODULE_UNDER_TEST="testbench"
+SIMULATION_TIME=" -all"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\test\user\top_define.v,tb_hdl"
+STATE="utd"
+TIME="1755321519"
+SIZE="401"
+PARENT="<project>\component\work\afifo_4x32\afifo_4x32_0\afifo_4x32_afifo_4x32_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+IS_INCLUDED="TRUE"
+ENDFILE
 VALUE "<project>\constraint\io\top_hw.pdc,io_pdc"
 STATE="utd"
-TIME="1750497095"
-SIZE="15551"
+TIME="1755425420"
+SIZE="15558"
+ENDFILE
+VALUE "<project>\constraint\stn_hw_fpga_synth.sdc,sdc"
+STATE="utd"
+TIME="1755418832"
+SIZE="1537"
+ENDFILE
+VALUE "<project>\hdl\ADDR_DECODE.v,hdl"
+STATE="utd"
+TIME="1752299411"
+SIZE="5239"
+ENDFILE
+VALUE "<project>\hdl\addr_definition.v,hdl"
+STATE="utd"
+TIME="1760668247"
+SIZE="1218"
+ENDFILE
+VALUE "<project>\hdl\afifo.v,hdl"
+STATE="utd"
+TIME="1750471156"
+SIZE="20479"
+ENDFILE
+VALUE "<project>\hdl\APP_IF.v,hdl"
+STATE="utd"
+TIME="1755828365"
+SIZE="3639"
+ENDFILE
+VALUE "<project>\hdl\ClkGen.v,hdl"
+STATE="utd"
+TIME="1752294317"
+SIZE="5487"
+ENDFILE
+VALUE "<project>\hdl\CLOCK_DIV.V,hdl"
+STATE="utd"
+TIME="1750471156"
+SIZE="1308"
+ENDFILE
+VALUE "<project>\hdl\cmd_server.v,hdl"
+STATE="utd"
+TIME="1755252753"
+SIZE="3117"
+ENDFILE
+VALUE "<project>\hdl\cmn_uart.vhd,hdl"
+STATE="utd"
+TIME="1750471156"
+SIZE="25394"
+ENDFILE
+VALUE "<project>\hdl\ctrl_package_transceiver.v,hdl"
+STATE="utd"
+TIME="1755406570"
+SIZE="4983"
+ENDFILE
+VALUE "<project>\hdl\ctrl_package_transceiver_tb.v,hdl"
+STATE="utd"
+TIME="1755406390"
+SIZE="8131"
+ENDFILE
+VALUE "<project>\hdl\EEPROM_OPB_IF.v,hdl"
+STATE="utd"
+TIME="1756545736"
+SIZE="3605"
+ENDFILE
+VALUE "<project>\hdl\EEPROM_OPB_IF_V2.v,hdl"
+STATE="utd"
+TIME="1760071170"
+SIZE="9825"
+ENDFILE
+VALUE "<project>\hdl\gpio.v,hdl"
+STATE="utd"
+TIME="1755673694"
+SIZE="10274"
+ENDFILE
+VALUE "<project>\hdl\msg_buffer.v,hdl"
+STATE="utd"
+TIME="1750471156"
+SIZE="2269"
+ENDFILE
+VALUE "<project>\hdl\msg_read.v,hdl"
+STATE="utd"
+TIME="1756551276"
+SIZE="10593"
+ENDFILE
+VALUE "<project>\hdl\msg_read_tb.v,hdl"
+STATE="utd"
+TIME="1756550658"
+SIZE="7465"
+ENDFILE
+VALUE "<project>\hdl\msg_write.v,hdl"
+STATE="utd"
+TIME="1754301197"
+SIZE="10006"
+ENDFILE
+VALUE "<project>\hdl\opb_emu_target.v,hdl"
+STATE="utd"
+TIME="1750471358"
+SIZE="5613"
+ENDFILE
+VALUE "<project>\hdl\OSCILLATOR_COUNTER.v,hdl"
+STATE="utd"
+TIME="1752297791"
+SIZE="4887"
+ENDFILE
+VALUE "<project>\hdl\phy_ctrl_rmii.v,hdl"
+STATE="utd"
+TIME="1755356962"
+SIZE="2769"
+ENDFILE
+VALUE "<project>\hdl\PHY_IF.v,hdl"
+STATE="utd"
+TIME="1755407844"
+SIZE="12180"
+ENDFILE
+VALUE "<project>\hdl\PHY_IF_tb.v,hdl"
+STATE="utd"
+TIME="1755234910"
+SIZE="7318"
+ENDFILE
+VALUE "<project>\hdl\SCRATCH_PAD_REGISTER.v,hdl"
+STATE="utd"
+TIME="1754103555"
+SIZE="2804"
+ENDFILE
+VALUE "<project>\hdl\serial_eeprom_if.vhd,hdl"
+STATE="utd"
+TIME="1750471358"
+SIZE="15011"
+ENDFILE
+VALUE "<project>\hdl\serial_eeprom_if_v2.vhd,hdl"
+STATE="utd"
+TIME="1759737918"
+SIZE="24189"
+ENDFILE
+VALUE "<project>\hdl\serial_eeprom_if_v2_tb.v,hdl"
+STATE="utd"
+TIME="1759285048"
+SIZE="6053"
+ENDFILE
+VALUE "<project>\hdl\SERIAL_MII.vhd,hdl"
+STATE="utd"
+TIME="1470615539"
+SIZE="10887"
+ENDFILE
+VALUE "<project>\hdl\SER_EEPROM_SIM.vhd,hdl"
+STATE="utd"
+TIME="1756193790"
+SIZE="11970"
 ENDFILE
 VALUE "<project>\hdl\top_hw.v,hdl"
 STATE="utd"
-TIME="1750496628"
-SIZE="10038"
+TIME="1760669559"
+SIZE="19629"
+ENDFILE
+VALUE "<project>\hdl\top_hw_tb.v,hdl"
+STATE="utd"
+TIME="1754301406"
+SIZE="17974"
+ENDFILE
+VALUE "<project>\synthesis\mezz_fifo.so,so"
+STATE="utd"
+TIME="1755318953"
+SIZE="217"
+ENDFILE
+VALUE "<project>\synthesis\mezz_fifo.vm,syn_vm"
+STATE="ood"
+TIME="1755318952"
+SIZE="6511"
+ENDFILE
+VALUE "<project>\synthesis\mezz_fifo_syn.prj,prj"
+STATE="utd"
+TIME="1755318953"
+SIZE="4230"
+ENDFILE
+VALUE "<project>\synthesis\mezz_fifo_vm.sdc,syn_sdc"
+STATE="utd"
+TIME="1755318952"
+SIZE="807"
+ENDFILE
+VALUE "<project>\synthesis\phy_ctrl_rmii.so,so"
+STATE="utd"
+TIME="1755322785"
+SIZE="225"
+ENDFILE
+VALUE "<project>\synthesis\phy_ctrl_rmii.vm,syn_vm"
+STATE="ood"
+TIME="1755322784"
+SIZE="73624"
+ENDFILE
+VALUE "<project>\synthesis\phy_ctrl_rmii_syn.prj,prj"
+STATE="utd"
+TIME="1755322785"
+SIZE="3935"
+ENDFILE
+VALUE "<project>\synthesis\phy_ctrl_rmii_vm.sdc,syn_sdc"
+STATE="utd"
+TIME="1755322784"
+SIZE="1717"
+ENDFILE
+VALUE "<project>\synthesis\synwork\layer0.so,so"
+STATE="utd"
+TIME="1755334790"
+SIZE="159"
 ENDFILE
 VALUE "<project>\synthesis\top_hw.so,so"
 STATE="utd"
-TIME="1750496040"
+TIME="1756557260"
 SIZE="211"
 ENDFILE
 VALUE "<project>\synthesis\top_hw.vm,syn_vm"
 STATE="utd"
-TIME="1750496040"
-SIZE="54698"
+TIME="1756557258"
+SIZE="1018274"
 ENDFILE
 VALUE "<project>\synthesis\top_hw_syn.prj,prj"
 STATE="utd"
-TIME="1750496041"
-SIZE="2927"
+TIME="1756557261"
+SIZE="4348"
 ENDFILE
 VALUE "<project>\synthesis\top_hw_vm.sdc,syn_sdc"
 STATE="utd"
-TIME="1750496040"
-SIZE="1005"
+TIME="1756557258"
+SIZE="2946"
+ENDFILE
+VALUE "<project>\synthesis\tr_fifo_rmii.so,so"
+STATE="utd"
+TIME="1755322401"
+SIZE="223"
+ENDFILE
+VALUE "<project>\synthesis\tr_fifo_rmii.vm,syn_vm"
+STATE="ood"
+TIME="1755322401"
+SIZE="37757"
+ENDFILE
+VALUE "<project>\synthesis\tr_fifo_rmii_syn.prj,prj"
+STATE="utd"
+TIME="1755322402"
+SIZE="3872"
+ENDFILE
+VALUE "<project>\synthesis\tr_fifo_rmii_vm.sdc,syn_sdc"
+STATE="utd"
+TIME="1755322401"
+SIZE="1423"
 ENDFILE
 ENDLIST
 LIST UsedFile
 ENDLIST
 LIST NewModulesInfo
+LIST "afifo_4x32_afifo_4x32_0_COREFIFO::work"
+FILE "<project>\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\COREFIFO.v,hdl"
+LIST Other_Association
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32_0\coreparameters.v,tb_hdl"
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\test\user\top_define.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\clock_driver.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\fifo_driver.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\fifo_monitor.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\g4_dp_ext_mem.v,tb_hdl"
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\test\user\testbench.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\MEM_WeqR.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\MEM_WgtR.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\MEM_WltR.v,tb_hdl"
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32_0\mti\scripts\wave.do,do"
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32_0\mti\scripts\runall.do,do"
+ENDLIST
+ENDLIST
 LIST "top_hw::work"
 FILE "<project>\hdl\top_hw.v,hdl"
+LIST SynthesisConstraints
+VALUE "<project>\constraint\stn_hw_fpga_synth.sdc,sdc"
+ENDLIST
+LIST TimingConstraints
+VALUE "<project>\constraint\stn_hw_fpga_synth.sdc,sdc"
+ENDLIST
+LIST PNRConstraints
+VALUE "<project>\constraint\io\top_hw.pdc,io_pdc"
+VALUE "<project>\constraint\stn_hw_fpga_synth.sdc,sdc"
+ENDLIST
 LIST ProjectState5.1
 LIST Impl1
 ideSYNTHESIS(<project>\synthesis\top_hw.vm,syn_vm)=StateSuccess
@@ -105,6 +515,20 @@ ENDLIST
 LIST AssociatedStimulus
 ENDLIST
 LIST Other_Association
+LIST afifo_4x32_afifo_4x32_0_COREFIFO
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32_0\coreparameters.v,tb_hdl"
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\test\user\top_define.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\clock_driver.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\fifo_driver.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\fifo_monitor.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\g4_dp_ext_mem.v,tb_hdl"
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\test\user\testbench.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\MEM_WeqR.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\MEM_WgtR.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\MEM_WltR.v,tb_hdl"
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32_0\mti\scripts\wave.do,do"
+VALUE "<project>\component\work\afifo_4x32\afifo_4x32_0\mti\scripts\runall.do,do"
+ENDLIST
 ENDLIST
 LIST SimulationOptions
 UseAutomaticDoFile=true
@@ -228,12 +652,164 @@ ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
 Reports;Reports;0
-ReportsCurrentItem;Place and Route:top_hw_pinrpt_name.rpt
+ReportsCurrentItem;Export FlashPro Express Job:top_hw_exportJob.log
+HDL;hdl\addr_definition.v;0
+HDL;hdl\ADDR_DECODE.v;0
+HDL;hdl\top_hw.v;0
+HDL;hdl\PHY_IF.v;0
+HDL;hdl\phy_ctrl_rmii.v;0
+HDL;constraint\stn_hw_fpga_synth.sdc;0
+Constraint Manager;Constraint Manager;0
+HDL;hdl\APP_IF.v;0
+HDL;hdl\tr_fifo_rmii.v;0
+HDL;hdl\tr_fifo_rmii.vhd;0
+HDL;synthesis\tr_fifo_rmii.srr;0
+HDL;component\work\afifo_4x32\afifo_4x32.v;0
+HDL;hdl\mezz_fifo_mezz_fifo_0_USRAM_top.vhd;0
 StartPage;StartPage;0
+HDL;hdl\cmd_server.v;0
+HDL;hdl\gpio.v;0
+HDL;hdl\CLOCK_DIV.V;0
+HDL;hdl\msg_read.v;0
+HDL;hdl\SCRATCH_PAD_REGISTER.v;0
+HDL;hdl\top_hw_tb.v;0
 ACTIVEVIEW;Reports
 ENDLIST
 LIST ModuleSubBlockList
+LIST "ADDER_DECODE::work","hdl\ADDR_DECODE.v","FALSE","FALSE"
+ENDLIST
+LIST "afifo_4x32::work","component\work\afifo_4x32\afifo_4x32.v","TRUE","FALSE"
+SUBBLOCK "afifo_4x32_afifo_4x32_0_COREFIFO::work","component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\COREFIFO.v","FALSE","FALSE"
+ENDLIST
+LIST "afifo_4x32_afifo_4x32_0_COREFIFO::work","component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\COREFIFO.v","FALSE","FALSE"
+SUBBLOCK "afifo_4x32_afifo_4x32_0_corefifo_fwft::work","component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_fwft.v","FALSE","FALSE"
+SUBBLOCK "afifo_4x32_afifo_4x32_0_corefifo_sync_scntr::work","component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_sync_scntr.v","FALSE","FALSE"
+SUBBLOCK "afifo_4x32_afifo_4x32_0_corefifo_sync::work","component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_sync.v","FALSE","FALSE"
+SUBBLOCK "afifo_4x32_afifo_4x32_0_ram_wrapper::work","","FALSE","FALSE"
+SUBBLOCK "afifo_4x32_afifo_4x32_0_corefifo_async::work","component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_async.v","FALSE","FALSE"
+ENDLIST
+LIST "afifo_4x32_afifo_4x32_0_corefifo_fwft::work","component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_fwft.v","FALSE","FALSE"
+ENDLIST
+LIST "afifo_4x32_afifo_4x32_0_corefifo_sync::work","component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_sync.v","FALSE","FALSE"
+ENDLIST
+LIST "afifo_4x32_afifo_4x32_0_corefifo_sync_scntr::work","component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_sync_scntr.v","FALSE","FALSE"
+ENDLIST
+LIST "afifo_4x32_afifo_4x32_0_ram_wrapper::work","","FALSE","FALSE"
+ENDLIST
+LIST "APP_IF::work","hdl\APP_IF.v","FALSE","FALSE"
+ENDLIST
+LIST "ClkGen::work","hdl\ClkGen.v","FALSE","FALSE"
+SUBBLOCK "CLOCK_DIV::work","hdl\CLOCK_DIV.V","FALSE","FALSE"
+ENDLIST
+LIST "CLOCK_DIV::work","hdl\CLOCK_DIV.V","FALSE","FALSE"
+ENDLIST
+LIST "cmd_server::work","hdl\cmd_server.v","FALSE","FALSE"
+SUBBLOCK "cmn_uart::work","hdl\cmn_uart.vhd","FALSE","FALSE"
+SUBBLOCK "msg_buffer::work","hdl\msg_buffer.v","FALSE","FALSE"
+SUBBLOCK "opb_emu_target::work","hdl\opb_emu_target.v","FALSE","FALSE"
+ENDLIST
+LIST "ctrl_package_transceiver::work","hdl\ctrl_package_transceiver.v","FALSE","FALSE"
+ENDLIST
+LIST "ctrl_package_transceiver_tb::work","hdl\ctrl_package_transceiver_tb.v","FALSE","FALSE"
+SUBBLOCK "ctrl_package_transceiver::work","hdl\ctrl_package_transceiver.v","FALSE","FALSE"
+ENDLIST
+LIST "EEPROM_OPB_IF_V2::work","hdl\EEPROM_OPB_IF_V2.v","FALSE","FALSE"
+SUBBLOCK "serial_eeprom_if_v2::work","hdl\serial_eeprom_if_v2.vhd","FALSE","FALSE"
+ENDLIST
+LIST "afifo::work","hdl\afifo.v","FALSE","FALSE"
+ENDLIST
+LIST "afifo_4x32_afifo_4x32_0_corefifo_async::work","component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_async.v","FALSE","FALSE"
+SUBBLOCK "afifo_4x32_afifo_4x32_0_corefifo_graytobinconv::work","component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_graytobinconv.v","FALSE","FALSE"
+SUBBLOCK "afifo_4x32_afifo_4x32_0_corefifo_nstagessync::work","component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_nstagessync.v","FALSE","FALSE"
+ENDLIST
+LIST "afifo_4x32_afifo_4x32_0_corefifo_graytobinconv::work","component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_graytobinconv.v","FALSE","FALSE"
+ENDLIST
+LIST "afifo_4x32_afifo_4x32_0_corefifo_nstagessync::work","component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_nstagessync.v","FALSE","FALSE"
+ENDLIST
+LIST "cmn_uart::work","hdl\cmn_uart.vhd","FALSE","FALSE"
+ENDLIST
+LIST "SCRATCH_PAD_REGISTER::work","hdl\SCRATCH_PAD_REGISTER.v","FALSE","FALSE"
+ENDLIST
+LIST "afifo::work","hdl\afifo.v","FALSE","FALSE"
+ENDLIST
+LIST "afifo::work","hdl\afifo.v","FALSE","FALSE"
+ENDLIST
+LIST "GPIO::work","hdl\gpio.v","FALSE","FALSE"
+ENDLIST
+LIST "msg_buffer::work","hdl\msg_buffer.v","FALSE","FALSE"
+SUBBLOCK "afifo::work","hdl\afifo.v","FALSE","FALSE"
+ENDLIST
+LIST "msg_read::work","hdl\msg_read.v","FALSE","FALSE"
+ENDLIST
+LIST "msg_read_tb::work","hdl\msg_read_tb.v","FALSE","FALSE"
+SUBBLOCK "afifo::work","hdl\afifo.v","FALSE","FALSE"
+SUBBLOCK "msg_read::work","hdl\msg_read.v","FALSE","FALSE"
+ENDLIST
+LIST "msg_write::work","hdl\msg_write.v","FALSE","FALSE"
+ENDLIST
+LIST "opb_emu_target::work","hdl\opb_emu_target.v","FALSE","FALSE"
+SUBBLOCK "CLOCK_DIV::work","hdl\CLOCK_DIV.V","FALSE","FALSE"
+SUBBLOCK "msg_read::work","hdl\msg_read.v","FALSE","FALSE"
+SUBBLOCK "msg_write::work","hdl\msg_write.v","FALSE","FALSE"
+ENDLIST
+LIST "OSCILLATOR_COUNTER::work","hdl\OSCILLATOR_COUNTER.v","FALSE","FALSE"
+SUBBLOCK "afifo::work","hdl\afifo.v","FALSE","FALSE"
+ENDLIST
+LIST "phy_ctrl_rmii::work","hdl\phy_ctrl_rmii.v","FALSE","FALSE"
+ENDLIST
+LIST "PHY_IF::work","hdl\PHY_IF.v","FALSE","FALSE"
+SUBBLOCK "SERIAL_MII::work","hdl\SERIAL_MII.vhd","FALSE","FALSE"
+SUBBLOCK "ctrl_package_transceiver::work","hdl\ctrl_package_transceiver.v","FALSE","FALSE"
+SUBBLOCK "afifo::work","hdl\afifo.v","FALSE","FALSE"
+SUBBLOCK "phy_ctrl_rmii::work","hdl\phy_ctrl_rmii.v","FALSE","FALSE"
+ENDLIST
+LIST "PHY_IF_tb::work","hdl\PHY_IF_tb.v","FALSE","FALSE"
+SUBBLOCK "PHY_IF::work","hdl\PHY_IF.v","FALSE","FALSE"
+ENDLIST
+LIST "SER_EEPROM_SIM::work","hdl\SER_EEPROM_SIM.vhd","FALSE","FALSE"
+ENDLIST
+LIST "serial_eeprom_if_v2::work","hdl\serial_eeprom_if_v2.vhd","FALSE","FALSE"
+ENDLIST
+LIST "SERIAL_MII::work","hdl\SERIAL_MII.vhd","FALSE","FALSE"
+ENDLIST
 LIST "top_hw::work","hdl\top_hw.v","FALSE","FALSE"
+SUBBLOCK "ADDER_DECODE::work","hdl\ADDR_DECODE.v","FALSE","FALSE"
+SUBBLOCK "APP_IF::work","hdl\APP_IF.v","FALSE","FALSE"
+SUBBLOCK "CLOCK_DIV::work","hdl\CLOCK_DIV.V","FALSE","FALSE"
+SUBBLOCK "ClkGen::work","hdl\ClkGen.v","FALSE","FALSE"
+SUBBLOCK "EEPROM_OPB_IF_V2::work","hdl\EEPROM_OPB_IF_V2.v","FALSE","FALSE"
+SUBBLOCK "GPIO::work","hdl\gpio.v","FALSE","FALSE"
+SUBBLOCK "OSCILLATOR_COUNTER::work","hdl\OSCILLATOR_COUNTER.v","FALSE","FALSE"
+SUBBLOCK "PHY_IF::work","hdl\PHY_IF.v","FALSE","FALSE"
+SUBBLOCK "cmd_server::work","hdl\cmd_server.v","FALSE","FALSE"
+SUBBLOCK "SCRATCH_PAD_REGISTER::work","hdl\SCRATCH_PAD_REGISTER.v","FALSE","FALSE"
+ENDLIST
+LIST "top_hw_tb::work","hdl\top_hw_tb.v","FALSE","FALSE"
+SUBBLOCK "top_hw::work","hdl\top_hw.v","FALSE","FALSE"
+ENDLIST
+LIST "clock_driver::work","component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\clock_driver.v","FALSE","TRUE"
+ENDLIST
+LIST "fifo_driver::work","component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\fifo_driver.v","FALSE","TRUE"
+ENDLIST
+LIST "fifo_monitor::work","component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\fifo_monitor.v","FALSE","TRUE"
+ENDLIST
+LIST "g4_dp_ext_mem::work","component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\g4_dp_ext_mem.v","FALSE","TRUE"
+SUBBLOCK "MEM_WgtR::work","component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\MEM_WgtR.v","FALSE","TRUE"
+SUBBLOCK "MEM_WltR::work","component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\MEM_WltR.v","FALSE","TRUE"
+SUBBLOCK "MEM_WeqR::work","component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\MEM_WeqR.v","FALSE","TRUE"
+ENDLIST
+LIST "MEM_WeqR::work","component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\MEM_WeqR.v","FALSE","TRUE"
+ENDLIST
+LIST "MEM_WgtR::work","component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\MEM_WgtR.v","FALSE","TRUE"
+ENDLIST
+LIST "MEM_WltR::work","component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\MEM_WltR.v","FALSE","TRUE"
+ENDLIST
+LIST "testbench::work","component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\test\user\testbench.v","FALSE","TRUE"
+SUBBLOCK "afifo_4x32_afifo_4x32_0_COREFIFO::work","component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\COREFIFO.v","FALSE","FALSE"
+SUBBLOCK "clock_driver::work","component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\clock_driver.v","FALSE","TRUE"
+SUBBLOCK "fifo_driver::work","component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\fifo_driver.v","FALSE","TRUE"
+SUBBLOCK "fifo_monitor::work","component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\fifo_monitor.v","FALSE","TRUE"
+SUBBLOCK "g4_dp_ext_mem::work","component\Actel\DirectCore\COREFIFO\3.1.101\rtl\vlog\test\user\g4_dp_ext_mem.v","FALSE","TRUE"
 ENDLIST
 ENDLIST
 LIST ActiveTestBenchList
@@ -244,6 +820,7 @@ ENDLIST
 LIST FPTabList
 ENDLIST
 LIST TimingTabList
+VALUE "constraint\stn_hw_fpga_synth.sdc"
 ENDLIST
 LIST FDCTabList
 ENDLIST

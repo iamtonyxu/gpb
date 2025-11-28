@@ -1,0 +1,389 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Aug 11 17:51:14 2025
+# Process ID: 9304
+# Current directory: C:/repo1/gpb/stn/fpga_app/project_1/project_1.runs/synth_1
+# Command line: vivado.exe -log can_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source can_top.tcl
+# Log file: C:/repo1/gpb/stn/fpga_app/project_1/project_1.runs/synth_1/can_top.vds
+# Journal file: C:/repo1/gpb/stn/fpga_app/project_1/project_1.runs/synth_1\vivado.jou
+# Running On: LAPTOP-6FQD1N4B, OS: Windows, CPU Frequency: 2611 MHz, CPU Physical cores: 12, Host memory: 34016 MB
+#-----------------------------------------------------------
+source can_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1002.219 ; gain = 118.070
+Command: read_checkpoint -auto_incremental -incremental C:/repo1/gpb/stn/fpga_app/project_1/project_1.srcs/utils_1/imports/synth_1/top_app.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/repo1/gpb/stn/fpga_app/project_1/project_1.srcs/utils_1/imports/synth_1/top_app.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top can_top -part xc7vx485tffg1157-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12384
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'rx_inter', assumed default net type 'wire' [C:/repo1/gpb/stn/fpga_app/hdl/can_top.v:589]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1448.863 ; gain = 412.090
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'can_top' [C:/repo1/gpb/stn/fpga_app/hdl/can_top.v:214]
+INFO: [Synth 8-6157] synthesizing module 'can_registers' [C:/repo1/gpb/stn/fpga_app/hdl/can_registers.v:173]
+INFO: [Synth 8-6157] synthesizing module 'can_register_asyn_syn' [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn_syn.v:77]
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter RESET_VALUE bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'can_register_asyn_syn' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn_syn.v:77]
+INFO: [Synth 8-6157] synthesizing module 'can_register_asyn' [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn.v:77]
+	Parameter WIDTH bound to: 4 - type: integer 
+	Parameter RESET_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'can_register_asyn' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn.v:77]
+INFO: [Synth 8-6157] synthesizing module 'can_register_asyn__parameterized0' [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn.v:77]
+	Parameter WIDTH bound to: 3 - type: integer 
+	Parameter RESET_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'can_register_asyn__parameterized0' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn.v:77]
+INFO: [Synth 8-6157] synthesizing module 'can_register_asyn_syn__parameterized0' [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn_syn.v:77]
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter RESET_VALUE bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'can_register_asyn_syn__parameterized0' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn_syn.v:77]
+INFO: [Synth 8-6157] synthesizing module 'can_register_asyn_syn__parameterized1' [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn_syn.v:77]
+	Parameter WIDTH bound to: 2 - type: integer 
+	Parameter RESET_VALUE bound to: 2'b00 
+INFO: [Synth 8-6155] done synthesizing module 'can_register_asyn_syn__parameterized1' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn_syn.v:77]
+INFO: [Synth 8-6157] synthesizing module 'can_register' [C:/repo1/gpb/stn/fpga_app/hdl/can_register.v:77]
+	Parameter WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'can_register' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_register.v:77]
+INFO: [Synth 8-6157] synthesizing module 'can_register_asyn__parameterized1' [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn.v:77]
+	Parameter WIDTH bound to: 8 - type: integer 
+	Parameter RESET_VALUE bound to: 96 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'can_register_asyn__parameterized1' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn.v:77]
+INFO: [Synth 8-6157] synthesizing module 'can_register_asyn__parameterized2' [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn.v:77]
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter RESET_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'can_register_asyn__parameterized2' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn.v:77]
+INFO: [Synth 8-6155] done synthesizing module 'can_registers' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_registers.v:173]
+INFO: [Synth 8-6157] synthesizing module 'can_btl' [C:/repo1/gpb/stn/fpga_app/hdl/can_btl.v:155]
+INFO: [Synth 8-6155] done synthesizing module 'can_btl' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_btl.v:155]
+INFO: [Synth 8-6157] synthesizing module 'can_bsp' [C:/repo1/gpb/stn/fpga_app/hdl/can_bsp.v:236]
+INFO: [Synth 8-6157] synthesizing module 'can_crc' [C:/repo1/gpb/stn/fpga_app/hdl/can_crc.v:75]
+INFO: [Synth 8-6155] done synthesizing module 'can_crc' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_crc.v:75]
+INFO: [Synth 8-6157] synthesizing module 'can_acf' [C:/repo1/gpb/stn/fpga_app/hdl/can_acf.v:92]
+INFO: [Synth 8-6155] done synthesizing module 'can_acf' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_acf.v:92]
+INFO: [Synth 8-6157] synthesizing module 'can_fifo' [C:/repo1/gpb/stn/fpga_app/hdl/can_fifo.v:149]
+INFO: [Synth 8-6155] done synthesizing module 'can_fifo' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_fifo.v:149]
+INFO: [Synth 8-6157] synthesizing module 'can_ibo' [C:/repo1/gpb/stn/fpga_app/hdl/can_ibo.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'can_ibo' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_ibo.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'can_bsp' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_bsp.v:236]
+INFO: [Synth 8-6155] done synthesizing module 'can_top' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_top.v:214]
+WARNING: [Synth 8-7129] Port fifo_selected in module can_fifo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[7] in module can_bsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[6] in module can_bsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port overload_frame in module can_registers is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1565.984 ; gain = 529.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1565.984 ; gain = 529.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1157-1
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1565.984 ; gain = 529.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6895] The reference checkpoint C:/repo1/gpb/stn/fpga_app/project_1/project_1.srcs/utils_1/imports/synth_1/top_app.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1565.984 ; gain = 529.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1565.984 ; gain = 529.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1565.984 ; gain = 529.211
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : 
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    9 Bit       Adders := 3     
+	   2 Input    8 Bit       Adders := 3     
+	   2 Input    7 Bit       Adders := 4     
+	   3 Input    7 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 10    
+	   3 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 3     
+	   3 Input    4 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 6     
+	   2 Input    3 Bit       Adders := 13    
+	   3 Input    3 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input     15 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 4     
++---Registers : 
+	               29 Bit    Registers := 1     
+	               15 Bit    Registers := 2     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 36    
+	                7 Bit    Registers := 3     
+	                6 Bit    Registers := 6     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 6     
+	                3 Bit    Registers := 15    
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 116   
++---RAMs : 
+	              512 Bit	(64 X 8 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   15 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 7     
+	   2 Input    8 Bit        Muxes := 17    
+	  11 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 5     
+	   2 Input    6 Bit        Muxes := 7     
+	   2 Input    5 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 8     
+	   8 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 20    
+	   2 Input    2 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 144   
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port fifo_selected in module can_fifo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[7] in module can_bsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[6] in module can_bsp is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1983.086 ; gain = 946.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+---------------------------------------+-----------+----------------------+-------------+
+|Module Name | RTL Object                            | Inference | Size (Depth x Width) | Primitives  | 
++------------+---------------------------------------+-----------+----------------------+-------------+
+|can_top     | i_can_bsp/i_can_fifo/length_fifo_reg  | Implied   | 64 x 4               | RAM64M x 2  | 
+|can_top     | i_can_bsp/i_can_fifo/fifo_reg         | Implied   | 64 x 8               | RAM64M x 3  | 
+|can_top     | i_can_bsp/i_can_fifo/overrun_info_reg | Implied   | 64 x 1               | RAM64M x 1  | 
++------------+---------------------------------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1991.930 ; gain = 955.156
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+---------------------------------------+-----------+----------------------+-------------+
+|Module Name | RTL Object                            | Inference | Size (Depth x Width) | Primitives  | 
++------------+---------------------------------------+-----------+----------------------+-------------+
+|can_top     | i_can_bsp/i_can_fifo/length_fifo_reg  | Implied   | 64 x 4               | RAM64M x 2  | 
+|can_top     | i_can_bsp/i_can_fifo/fifo_reg         | Implied   | 64 x 8               | RAM64M x 3  | 
+|can_top     | i_can_bsp/i_can_fifo/overrun_info_reg | Implied   | 64 x 1               | RAM64M x 1  | 
++------------+---------------------------------------+-----------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2001.121 ; gain = 964.348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2001.121 ; gain = 964.348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2001.121 ; gain = 964.348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2001.121 ; gain = 964.348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2001.121 ; gain = 964.348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2001.121 ; gain = 964.348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2001.121 ; gain = 964.348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    14|
+|3     |LUT1   |     8|
+|4     |LUT2   |   108|
+|5     |LUT3   |    95|
+|6     |LUT4   |   141|
+|7     |LUT5   |   182|
+|8     |LUT6   |   480|
+|9     |MUXF7  |    29|
+|10    |MUXF8  |     1|
+|11    |RAM64M |     5|
+|12    |FDCE   |   314|
+|13    |FDPE   |    20|
+|14    |FDRE   |   289|
+|15    |IBUF   |    23|
+|16    |OBUF   |    13|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------------+-----------------------------------------+------+
+|      |Instance                  |Module                                   |Cells |
++------+--------------------------+-----------------------------------------+------+
+|1     |top                       |                                         |  1724|
+|2     |  i_can_bsp               |can_bsp                                  |   931|
+|3     |    i_can_acf             |can_acf                                  |    35|
+|4     |    i_can_crc_rx          |can_crc                                  |    41|
+|5     |    i_can_fifo            |can_fifo                                 |   248|
+|6     |  i_can_btl               |can_btl                                  |    97|
+|7     |  i_can_registers         |can_registers                            |   626|
+|8     |    ACCEPTANCE_CODE_REG0  |can_register                             |    14|
+|9     |    ACCEPTANCE_CODE_REG1  |can_register_0                           |     8|
+|10    |    ACCEPTANCE_CODE_REG2  |can_register_1                           |    13|
+|11    |    ACCEPTANCE_CODE_REG3  |can_register_2                           |    11|
+|12    |    ACCEPTANCE_MASK_REG0  |can_register_3                           |    22|
+|13    |    ACCEPTANCE_MASK_REG1  |can_register_4                           |    42|
+|14    |    ACCEPTANCE_MASK_REG2  |can_register_5                           |    29|
+|15    |    ACCEPTANCE_MASK_REG3  |can_register_6                           |    25|
+|16    |    BUS_TIMING_0_REG      |can_register_7                           |    18|
+|17    |    BUS_TIMING_1_REG      |can_register_8                           |    33|
+|18    |    CLOCK_DIVIDER_REG_3   |can_register_asyn__parameterized2        |     1|
+|19    |    CLOCK_DIVIDER_REG_7   |can_register_asyn__parameterized2_9      |    34|
+|20    |    CLOCK_DIVIDER_REG_LOW |can_register_asyn__parameterized0        |    10|
+|21    |    COMMAND_REG           |can_register_asyn_syn__parameterized1    |    11|
+|22    |    COMMAND_REG0          |can_register_asyn_syn__parameterized0    |     4|
+|23    |    COMMAND_REG1          |can_register_asyn_syn__parameterized0_10 |     1|
+|24    |    COMMAND_REG4          |can_register_asyn_syn__parameterized0_11 |     5|
+|25    |    ERROR_WARNING_REG     |can_register_asyn__parameterized1        |    16|
+|26    |    IRQ_EN_REG            |can_register_12                          |    15|
+|27    |    MODE_REG0             |can_register_asyn_syn                    |    63|
+|28    |    MODE_REG_BASIC        |can_register_asyn                        |     7|
+|29    |    MODE_REG_EXT          |can_register_asyn__parameterized0_13     |     4|
+|30    |    TX_DATA_REG0          |can_register_14                          |    24|
+|31    |    TX_DATA_REG1          |can_register_15                          |    16|
+|32    |    TX_DATA_REG10         |can_register_16                          |    13|
+|33    |    TX_DATA_REG11         |can_register_17                          |    14|
+|34    |    TX_DATA_REG12         |can_register_18                          |    12|
+|35    |    TX_DATA_REG2          |can_register_19                          |    23|
+|36    |    TX_DATA_REG3          |can_register_20                          |    21|
+|37    |    TX_DATA_REG4          |can_register_21                          |    12|
+|38    |    TX_DATA_REG5          |can_register_22                          |    19|
+|39    |    TX_DATA_REG6          |can_register_23                          |    16|
+|40    |    TX_DATA_REG7          |can_register_24                          |    13|
+|41    |    TX_DATA_REG8          |can_register_25                          |    15|
+|42    |    TX_DATA_REG9          |can_register_26                          |    16|
++------+--------------------------+-----------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2001.121 ; gain = 964.348
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2001.121 ; gain = 964.348
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2001.121 ; gain = 964.348
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2003.969 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 49 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2037.473 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  RAM64M => RAM64M (RAMD64E(x4)): 5 instances
+
+Synth Design complete, checksum: ed88f511
+INFO: [Common 17-83] Releasing license: Synthesis
+49 Infos, 8 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 2037.473 ; gain = 1010.414
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/repo1/gpb/stn/fpga_app/project_1/project_1.runs/synth_1/can_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file can_top_utilization_synth.rpt -pb can_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 11 17:52:02 2025...

@@ -1,0 +1,4 @@
+@E: CD590 :"C:\repo1\gpb\stn\fpga_hw\hdl\tr_fifo_rmii.vhd":90:26:90:40|Instantiated entity afifo_4x32 has not been analyzed.
+@E: Parse errors encountered - exiting
+@E::VHDL compiler failed
+

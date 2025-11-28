@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- *************************************************************************************
+FILE DESCRIPTION
+Max Top 5 critical clocks will be reported. For rest user needs to refer to Detailed report
+*******************************************************************************************-->
+<report_table display_priority="2" name="Timing Summary">
+<report_link name="Detailed report">
+<data>C:\repo1\gpb\stn\fpga_hw\synthesis\synlog\top_hw_fpga_mapper.srr</data>
+<title>START OF TIMING REPORT</title>
+</report_link>
+<row>
+<data tcl_name="clock_name">Clock Name</data>
+<data tcl_name="req_freq">Req Freq</data>
+<data tcl_name="est_freq">Est Freq</data>
+<data tcl_name="slack">Slack</data>
+</row>
+<row>
+<data>CLOCK_DIV_4|clkout_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>457.3 MHz</data>
+<data>7.813</data>
+</row>
+<row>
+<data>CLOCK_DIV_7|N_1_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>286.4 MHz</data>
+<data>6.508</data>
+</row>
+<row>
+<data>CLOCK_DIV_8|N_1_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>777.8 MHz</data>
+<data>8.714</data>
+</row>
+<row>
+<data>clk_50mhz</data>
+<data>50.0 MHz</data>
+<data>127.0 MHz</data>
+<data>6.585</data>
+</row>
+<row>
+<data>clk_100mhz</data>
+<data>100.0 MHz</data>
+<data>153.6 MHz</data>
+<data>3.489</data>
+</row>
+<row>
+<data>top_hw|HDW_DBUG_MISO</data>
+<data>100.0 MHz</data>
+<data>389.5 MHz</data>
+<data>7.433</data>
+</row>
+</report_table>

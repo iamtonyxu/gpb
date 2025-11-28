@@ -1,0 +1,35 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2024.2 (Version 2024.2.0.13)
+
+Date      :  Sat Aug 16 13:18:40 2025
+Project   :  C:\repo1\gpb\stn\fpga_hw
+Component :  afifo_4x32
+Family    :  PolarFire
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/repo1/gpb/stn/fpga_hw/component/work/afifo_4x32/afifo_4x32_0/rtl/vlog/core/COREFIFO.v
+    C:/repo1/gpb/stn/fpga_hw/component/work/afifo_4x32/afifo_4x32_0/rtl/vlog/core/corefifo_sync.v
+    C:/repo1/gpb/stn/fpga_hw/component/work/afifo_4x32/afifo_4x32_0/rtl/vlog/core/corefifo_sync_scntr.v
+    C:/repo1/gpb/stn/fpga_hw/component/work/afifo_4x32/afifo_4x32_0/rtl/vlog/core/corefifo_async.v
+    C:/repo1/gpb/stn/fpga_hw/component/work/afifo_4x32/afifo_4x32_0/rtl/vlog/core/corefifo_nstagessync.v
+    C:/repo1/gpb/stn/fpga_hw/component/work/afifo_4x32/afifo_4x32_0/rtl/vlog/core/corefifo_graytobinconv.v
+    C:/repo1/gpb/stn/fpga_hw/component/work/afifo_4x32/afifo_4x32_0/rtl/vlog/core/corefifo_fwft.v
+    C:/repo1/gpb/stn/fpga_hw/component/work/afifo_4x32/afifo_4x32.v
+
+Stimulus files for all Simulation tools:
+    C:/repo1/gpb/stn/fpga_hw/component/work/afifo_4x32/afifo_4x32_0/mti/scripts/wave.do
+    C:/repo1/gpb/stn/fpga_hw/component/work/afifo_4x32/afifo_4x32_0/mti/scripts/runall.do
+
+    C:/repo1/gpb/stn/fpga_hw/component/work/afifo_4x32/afifo_4x32_0/coreparameters.v
+    C:/repo1/gpb/stn/fpga_hw/component/work/afifo_4x32/afifo_4x32_0/rtl/vlog/test/user/top_define.v
+    C:/repo1/gpb/stn/fpga_hw/component/Actel/DirectCore/COREFIFO/3.1.101/rtl/vlog/test/user/clock_driver.v
+    C:/repo1/gpb/stn/fpga_hw/component/Actel/DirectCore/COREFIFO/3.1.101/rtl/vlog/test/user/fifo_driver.v
+    C:/repo1/gpb/stn/fpga_hw/component/Actel/DirectCore/COREFIFO/3.1.101/rtl/vlog/test/user/fifo_monitor.v
+    C:/repo1/gpb/stn/fpga_hw/component/Actel/DirectCore/COREFIFO/3.1.101/rtl/vlog/test/user/g4_dp_ext_mem.v
+    C:/repo1/gpb/stn/fpga_hw/component/work/afifo_4x32/afifo_4x32_0/rtl/vlog/test/user/testbench.v
+    C:/repo1/gpb/stn/fpga_hw/component/Actel/DirectCore/COREFIFO/3.1.101/rtl/vlog/test/user/MEM_WeqR.v
+    C:/repo1/gpb/stn/fpga_hw/component/Actel/DirectCore/COREFIFO/3.1.101/rtl/vlog/test/user/MEM_WgtR.v
+    C:/repo1/gpb/stn/fpga_hw/component/Actel/DirectCore/COREFIFO/3.1.101/rtl/vlog/test/user/MEM_WltR.v
+
+Constraint files:
+    C:/repo1/gpb/stn/fpga_hw/component/work/afifo_4x32\afifo_4x32_0\afifo_4x32_afifo_4x32_0_COREFIFO.sdc

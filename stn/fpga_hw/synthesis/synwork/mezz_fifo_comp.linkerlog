@@ -1,0 +1,27 @@
+	Link Summary for source view work.mezz_fifo_mezz_fifo_0_COREFIFO.syn_black_box of instance mezz_fifo_0 :
+	============================
+		Target view link candidate 1: work.mezz_fifo_mezz_fifo_0_COREFIFO.verilog
+		==========================
+			 Interface Mismatch between View work.mezz_fifo_mezz_fifo_0_COREFIFO.syn_black_box and View work.mezz_fifo_mezz_fifo_0_COREFIFO.verilog
+			 	Details:
+			 	========
+			 	The following ports in the source view work.mezz_fifo_mezz_fifo_0_COREFIFO.syn_black_box do NOT exist in the target view work.mezz_fifo_mezz_fifo_0_COREFIFO.verilog:
+			 	======================================
+			 		Port CLK
+			 		Port MEMRD[3:0]
+			 		Port RESET
+			 		Port AFULL
+			 		Port DB_DETECT
+			 		Port DVLD
+			 		Port MEMWD[3:0]
+			 		Port OVERFLOW
+			 		Port RDCNT[5:0]
+			 		Port SB_CORRECT
+			 		Port UNDERFLOW
+			 		Port WACK
+			 		Port WRCNT[5:0]
+			 	The following ports in the target view work.mezz_fifo_mezz_fifo_0_COREFIFO.verilog do NOT exist in the source view work.mezz_fifo_mezz_fifo_0_COREFIFO.syn_black_box:
+			 	======================================
+			 		Port RRESET_N
+			 		Port WRESET_N
+

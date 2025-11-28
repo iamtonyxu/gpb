@@ -1,0 +1,85 @@
+{
+"Synplify Pro (R) Job Log" : {
+	"Date" : "12:10:37    12-Aug-2025",
+	"Working Directory" : "C:/repo1/gpb/stn/fpga_app/synthesis",
+	"Install" : "C:/Microchip/Libero_SoC_v2024.2/SynplifyPro"
+},
+"synthesis" :{
+   "Job Flow" : "Sequential",
+   "Start Time" : "12:09:34",
+   "Runtime" : "01m:03s",
+   "Executable Run Time" : "01m:02s",
+   "synthesis" : {
+      "Job Flow" : "Sequential",
+      "Start Time" : "12:09:34",
+      "Runtime" : "01m:03s",
+      "Executable Run Time" : "01m:02s",
+      "compile" : {
+         "Job Flow" : "Sequential",
+         "Start Time" : "12:09:34",
+         "Runtime" : "31s",
+         "Executable Run Time" : "30s",
+         "compile_flow" : {
+            "Job Flow" : "Sequential",
+            "Start Time" : "12:09:34",
+            "Runtime" : "25s",
+            "Executable Run Time" : "24s",
+            "compiler" : {
+               "executable" : "bin64/c_hdl.exe",
+               "Run Directory" : "C:/repo1/gpb/stn/fpga_app/synthesis",
+               "Run State" : "Complete",
+               "Return Code" : "0",
+               "Has Errors" : "no",
+               "Run Start Time" : "12:09:34",
+               "Run Time" : "23s",
+               "Exe Run Time" : "22s",
+               "Memory Usage" : "-",
+               "Up-to-date (run skipped)" : "no"
+            },
+            "multi_srs_gen" : {
+               "executable" : "bin64/syn_nfilter.exe",
+               "Run Directory" : "C:/repo1/gpb/stn/fpga_app/synthesis",
+               "Run State" : "Complete",
+               "Return Code" : "0",
+               "Has Errors" : "no",
+               "Run Start Time" : "12:09:57",
+               "Run Time" : "02s",
+               "Exe Run Time" : "02s",
+               "Memory Usage" : "-",
+               "Up-to-date (run skipped)" : "no"
+            }
+         },
+         "premap" : {
+            "executable" : "bin64/m_generic.exe",
+            "Run Directory" : "C:/repo1/gpb/stn/fpga_app/synthesis",
+            "Run State" : "Complete",
+            "Return Code" : "1",
+            "Has Errors" : "no",
+            "Run Start Time" : "12:09:59",
+            "Run Time" : "06s",
+            "Exe Run Time" : "06s",
+            "Memory Usage" : "-",
+            "Up-to-date (run skipped)" : "no"
+         }
+      },
+      "map" : {
+         "Job Flow" : "Sequential",
+         "Start Time" : "12:10:05",
+         "Runtime" : "32s",
+         "Executable Run Time" : "32s",
+         "fpga_mapper" : {
+            "executable" : "bin64/m_generic.exe",
+            "Run Directory" : "C:/repo1/gpb/stn/fpga_app/synthesis",
+            "Run State" : "Complete",
+            "Return Code" : "1",
+            "Has Errors" : "no",
+            "Run Start Time" : "12:10:05",
+            "Run Time" : "32s",
+            "Exe Run Time" : "32s",
+            "Memory Usage" : "-",
+            "Up-to-date (run skipped)" : "no"
+         }
+      }
+   }
+}
+}

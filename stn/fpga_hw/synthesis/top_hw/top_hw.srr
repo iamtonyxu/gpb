@@ -1,0 +1,200 @@
+# Fri Oct 17 10:53:35 2025
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-3
+Install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: LAPTOP-6FQD1N4B
+
+Implementation : synthesis
+Synopsys Microchip Technology Mapper, Version map202309actp1, Build 008R, Built Jul 25 2024 08:49:59, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 188MB peak: 188MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 190MB peak: 203MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 190MB peak: 203MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 192MB peak: 203MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 193MB peak: 203MB)
+
+
+Vector Gate Optimization Enabled: Optimizing  Partial Hanging Logic. 
+
+@N: MF104 :"c:\repo1\gpb\stn\fpga_hw\hdl\serial_eeprom_if_v2.vhd":45:7:45:25|Found compile point of type hard on View view:work.serial_eeprom_if_v2(rtl) 
+
+
+@N: MF105 |Performing bottom-up mapping of Top level view:work.top_hw(verilog) 
+
+Start loading ILMs (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 255MB peak: 255MB)
+
+@W: BN114 :|Removing instance CP_fanout_cell_serial_eeprom_if_v2_rtl_inst (in view: work.serial_eeprom_if_v2_rtl_ilm(rtl)) because it does not drive other instances.
+
+Start creating ILM for FPGA serial_eeprom_if_v2 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 257MB peak: 257MB)
+
+
+Finished creating ILM for FPGA serial_eeprom_if_v2 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 257MB peak: 257MB)
+
+
+Finished loading ILMs (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 257MB peak: 258MB)
+
+
+Begin compile point sub-process log
+
+@N: MF106 :"c:\repo1\gpb\stn\fpga_hw\hdl\top_hw.v":25:7:25:12|Mapping Top level view:work.top_hw(verilog) because 
+		 RTL and/or Constraints changed.
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 257MB peak: 258MB)
+
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 262MB peak: 262MB)
+
+@N: MO231 :"c:\repo1\gpb\stn\fpga_hw\hdl\oscillator_counter.v":68:4:68:9|Found counter in view:work.top_hw(verilog) instance oscillator_counter_1.count_data[15:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_hw\hdl\oscillator_counter.v":68:4:68:9|Found counter in view:work.top_hw(verilog) instance oscillator_counter_0.count_data[15:0] 
+@W: FX107 :"c:\repo1\gpb\stn\fpga_hw\hdl\afifo.v":149:1:149:6|RAM opb_fifo_inst.mem[31:0] (in view: work.PHY_IF(verilog)) does not have a read/write conflict check. Possible simulation mismatch. To resolve a read/write conflict, either set syn_ramstyle = rw_check, or enable the "Read Write Check on RAM" Implementation Option. For more information, search for "read/write conflict check" in Online Help.
+@N: FX702 :"c:\repo1\gpb\stn\fpga_hw\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance opb_fifo_inst.mem[31:0] (in view: work.PHY_IF(verilog)).
+@N: FX702 :"c:\repo1\gpb\stn\fpga_hw\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance opb_fifo_inst.mem[31:0]
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":285:22:285:54|Found 32 by 32 bit equality operator ('==') un6_rx_good_0 (in view: work.PHY_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":285:22:285:54|Found 32 by 32 bit equality operator ('==') un6_rx_good_1 (in view: work.PHY_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":285:22:285:54|Found 32 by 32 bit equality operator ('==') un6_rx_good_2 (in view: work.PHY_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":285:22:285:54|Found 32 by 32 bit equality operator ('==') un6_rx_good_3 (in view: work.PHY_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":283:22:283:54|Found 32 by 32 bit equality operator ('==') un2_rx_good_0 (in view: work.PHY_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":283:22:283:54|Found 32 by 32 bit equality operator ('==') un2_rx_good_1 (in view: work.PHY_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":283:22:283:54|Found 32 by 32 bit equality operator ('==') un2_rx_good_2 (in view: work.PHY_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":283:22:283:54|Found 32 by 32 bit equality operator ('==') un2_rx_good_3 (in view: work.PHY_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":284:22:284:54|Found 32 by 32 bit equality operator ('==') un4_rx_good_0 (in view: work.PHY_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":284:22:284:54|Found 32 by 32 bit equality operator ('==') un4_rx_good_1 (in view: work.PHY_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":284:22:284:54|Found 32 by 32 bit equality operator ('==') un4_rx_good_2 (in view: work.PHY_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":284:22:284:54|Found 32 by 32 bit equality operator ('==') un4_rx_good_3 (in view: work.PHY_IF(verilog))
+Encoding state machine state[2:0] (in view: work.ctrl_package_transceiver(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+@N: MO231 :"c:\repo1\gpb\stn\fpga_hw\hdl\ctrl_package_transceiver.v":106:4:106:9|Found counter in view:work.ctrl_package_transceiver(verilog) instance rx_bit_cnt[7:1] 
+Encoding state machine SERIAL_MII_CYCLE_STATE[0:3] (in view: work.SERIAL_MII(behavioral))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N: MO225 :"c:\repo1\gpb\stn\fpga_hw\hdl\serial_mii.vhd":145:10:145:11|There are no possible illegal states for state machine SERIAL_MII_CYCLE_STATE[0:3] (in view: work.SERIAL_MII(behavioral)); safe FSM implementation is not required.
+@N: MO231 :"c:\repo1\gpb\stn\fpga_hw\hdl\serial_mii.vhd":145:10:145:11|Found counter in view:work.SERIAL_MII(behavioral) instance SERIAL_MII_SHIFT_COUNTER[4:0] 
+@W: FX107 :"c:\repo1\gpb\stn\fpga_hw\hdl\afifo.v":149:1:149:6|RAM mem[7:0] (in view: work.afifo_8s_4s_8s_4s_1(verilog)) does not have a read/write conflict check. Possible simulation mismatch. To resolve a read/write conflict, either set syn_ramstyle = rw_check, or enable the "Read Write Check on RAM" Implementation Option. For more information, search for "read/write conflict check" in Online Help.
+@N: FX702 :"c:\repo1\gpb\stn\fpga_hw\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0] (in view: work.afifo_8s_4s_8s_4s_1(verilog)).
+@N: FX702 :"c:\repo1\gpb\stn\fpga_hw\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0]
+@W: FX107 :"c:\repo1\gpb\stn\fpga_hw\hdl\afifo.v":149:1:149:6|RAM mem[7:0] (in view: work.afifo_8s_4s_8s_4s_0(verilog)) does not have a read/write conflict check. Possible simulation mismatch. To resolve a read/write conflict, either set syn_ramstyle = rw_check, or enable the "Read Write Check on RAM" Implementation Option. For more information, search for "read/write conflict check" in Online Help.
+@N: FX702 :"c:\repo1\gpb\stn\fpga_hw\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0] (in view: work.afifo_8s_4s_8s_4s_0(verilog)).
+@N: FX702 :"c:\repo1\gpb\stn\fpga_hw\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0]
+Encoding state machine state[2:0] (in view: work.opb_emu_target(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+@N: MO231 :"c:\repo1\gpb\stn\fpga_hw\hdl\msg_read.v":176:4:176:9|Found counter in view:work.msg_read(verilog) instance timeout_cnt[7:0] 
+Encoding state machine state[6:0] (in view: work.msg_write(verilog))
+original code -> new code
+   00000000 -> 0000001
+   00000001 -> 0000010
+   00000010 -> 0000100
+   00000011 -> 0001000
+   00000100 -> 0010000
+   00000101 -> 0100000
+   00000110 -> 1000000
+@N: MO231 :"c:\repo1\gpb\stn\fpga_hw\hdl\msg_write.v":235:4:235:9|Found counter in view:work.msg_write(verilog) instance timeout_cnt[7:0] 
+Encoding state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N: MO225 :"c:\repo1\gpb\stn\fpga_hw\hdl\cmn_uart.vhd":353:6:353:7|There are no possible illegal states for state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl)); safe FSM implementation is not required.
+Encoding state machine uart_tx_state[0:4] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl))
+original code -> new code
+   00001 -> 00001
+   00010 -> 00010
+   00100 -> 00100
+   01000 -> 01000
+   10000 -> 10000
+
+Starting factoring (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:08s; Memory used current: 272MB peak: 273MB)
+
+@W: BN114 :"c:\repo1\gpb\stn\fpga_hw\hdl\afifo.v":149:1:149:6|Removing instance opb_fifo_inst.mem_mem_0_2 (in view: work.PHY_IF(verilog)) because it does not drive other instances.
+
+Finished factoring (Real Time elapsed 0h:00m:15s; CPU Time elapsed 0h:00m:14s; Memory used current: 305MB peak: 305MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+NConnInternalConnection caching is on
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:19s; CPU Time elapsed 0h:00m:17s; Memory used current: 298MB peak: 326MB)
+
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\hdl\ctrl_package_transceiver.v":45:4:45:9|Removing sequential instance phy_if_0.ctrl_pkg_transceiver_inst.bit_cnt[0] (in view: work.top_hw(verilog)) because it does not drive other instances.
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:21s; CPU Time elapsed 0h:00m:19s; Memory used current: 300MB peak: 326MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:28s; CPU Time elapsed 0h:00m:26s; Memory used current: 306MB peak: 326MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:29s; CPU Time elapsed 0h:00m:26s; Memory used current: 307MB peak: 326MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:32s; CPU Time elapsed 0h:00m:29s; Memory used current: 307MB peak: 326MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:34s; CPU Time elapsed 0h:00m:31s; Memory used current: 347MB peak: 347MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:32s		     1.72ns		3066 /      2153
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:38s; CPU Time elapsed 0h:00m:35s; Memory used current: 348MB peak: 348MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:38s; CPU Time elapsed 0h:00m:35s; Memory used current: 349MB peak: 349MB)
+
+
+End compile point sub-process log
+
+Writing compile point status file C:\repo1\gpb\stn\fpga_hw\synthesis\top_hw\cpprop
+
+Summary of Compile Points :
+*************************** 
+Name       Status       Reason        
+--------------------------------------
+top_hw     Remapped     Design changed
+======================================
+
+Process took 0h:00m:39s realtime, 0h:00m:35s cputime
+# Fri Oct 17 10:54:15 2025
+
+###########################################################]

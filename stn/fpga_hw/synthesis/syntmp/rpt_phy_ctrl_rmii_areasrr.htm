@@ -1,0 +1,325 @@
+<html><body><samp><pre>
+<!@TC:1755322773>
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-3
+Install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: LAPTOP-6FQD1N4B
+
+Implementation : synthesis
+
+#### START OF AREA REPORT #####[
+
+Part:			MPF050TFCVG484STD (Microchip)
+
+-----------------------------------------------------------------------------
+########   Utilization report for  Top level view:   phy_ctrl_rmii   ########
+=============================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      137                100 %                
+=================================================
+Total SEQUENTIAL ELEMENTS in the block phy_ctrl_rmii:	137 (44.05 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      70                 100 %                
+ARI1     52                 100 %                
+=================================================
+Total COMBINATIONAL LOGIC in the block phy_ctrl_rmii:	122 (39.23 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     3                  100 %                
+===================================================
+Total GLOBAL BUFFERS in the block phy_ctrl_rmii:	3 (0.96 % Utilization)
+
+
+IO PADS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+IO       15                 100 %                
+=================================================
+Total IO PADS in the block phy_ctrl_rmii:	15 (4.82 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   tr_fifo_rmii_0s_0s_1s   ########
+Instance path:   phy_ctrl_rmii.tr_fifo_rmii_0s_0s_1s                       
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      68                 49.6 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block phy_ctrl_rmii.tr_fifo_rmii_0s_0s_1s:	68 (21.86 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      34                 48.6 %               
+ARI1     26                 50 %                 
+=================================================
+Total COMBINATIONAL LOGIC in the block phy_ctrl_rmii.tr_fifo_rmii_0s_0s_1s:	60 (19.29 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   afifo_4x32_1   ########
+Instance path:   tr_fifo_rmii_0s_0s_1s.afifo_4x32_1               
+==================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      65                 47.4 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block tr_fifo_rmii_0s_0s_1s.afifo_4x32_1:	65 (20.90 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      29                 41.4 %               
+ARI1     26                 50 %                 
+=================================================
+Total COMBINATIONAL LOGIC in the block tr_fifo_rmii_0s_0s_1s.afifo_4x32_1:	55 (17.68 % Utilization)
+
+-------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   afifo_4x32_afifo_4x32_0_COREFIFO_Z1_1   ########
+Instance path:   afifo_4x32_1.afifo_4x32_afifo_4x32_0_COREFIFO_Z1_1                        
+===========================================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      65                 47.4 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block afifo_4x32_1.afifo_4x32_afifo_4x32_0_COREFIFO_Z1_1:	65 (20.90 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      29                 41.4 %               
+ARI1     26                 50 %                 
+=================================================
+Total COMBINATIONAL LOGIC in the block afifo_4x32_1.afifo_4x32_afifo_4x32_0_COREFIFO_Z1_1:	55 (17.68 % Utilization)
+
+--------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   afifo_4x32_afifo_4x32_0_corefifo_async_Z2_1   ######## 
+Instance path:   afifo_4x32_afifo_4x32_0_COREFIFO_Z1_1.afifo_4x32_afifo_4x32_0_corefifo_async_Z2_1
+==================================================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      65                 47.4 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block afifo_4x32_afifo_4x32_0_COREFIFO_Z1_1.afifo_4x32_afifo_4x32_0_corefifo_async_Z2_1:	65 (20.90 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      29                 41.4 %               
+ARI1     26                 50 %                 
+=================================================
+Total COMBINATIONAL LOGIC in the block afifo_4x32_afifo_4x32_0_COREFIFO_Z1_1.afifo_4x32_afifo_4x32_0_corefifo_async_Z2_1:	55 (17.68 % Utilization)
+
+---------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   afifo_4x32_afifo_4x32_0_corefifo_graytobinconv_5_1   ########       
+Instance path:   afifo_4x32_afifo_4x32_0_corefifo_async_Z2_1.afifo_4x32_afifo_4x32_0_corefifo_graytobinconv_5_1
+===============================================================================================================
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      5                  7.14 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block afifo_4x32_afifo_4x32_0_corefifo_async_Z2_1.afifo_4x32_afifo_4x32_0_corefifo_graytobinconv_5_1:	5 (1.61 % Utilization)
+
+---------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   afifo_4x32_afifo_4x32_0_corefifo_graytobinconv_5_2   ########       
+Instance path:   afifo_4x32_afifo_4x32_0_corefifo_async_Z2_1.afifo_4x32_afifo_4x32_0_corefifo_graytobinconv_5_2
+===============================================================================================================
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      5                  7.14 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block afifo_4x32_afifo_4x32_0_corefifo_async_Z2_1.afifo_4x32_afifo_4x32_0_corefifo_graytobinconv_5_2:	5 (1.61 % Utilization)
+
+----------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   afifo_4x32_afifo_4x32_0_corefifo_nstagessync_2s_5_0   ########       
+Instance path:   afifo_4x32_afifo_4x32_0_corefifo_async_Z2_1.afifo_4x32_afifo_4x32_0_corefifo_nstagessync_2s_5_0
+================================================================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      12                 8.76 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block afifo_4x32_afifo_4x32_0_corefifo_async_Z2_1.afifo_4x32_afifo_4x32_0_corefifo_nstagessync_2s_5_0:	12 (3.86 % Utilization)
+
+------------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   afifo_4x32_afifo_4x32_0_corefifo_nstagessync_2s_5_0_1   ########       
+Instance path:   afifo_4x32_afifo_4x32_0_corefifo_async_Z2_1.afifo_4x32_afifo_4x32_0_corefifo_nstagessync_2s_5_0_1
+==================================================================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      12                 8.76 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block afifo_4x32_afifo_4x32_0_corefifo_async_Z2_1.afifo_4x32_afifo_4x32_0_corefifo_nstagessync_2s_5_0_1:	12 (3.86 % Utilization)
+
+---------------------------------------------------------------------------
+########   Utilization report for  cell:   tr_fifo_rmii_1s_0s_1s   ########
+Instance path:   phy_ctrl_rmii.tr_fifo_rmii_1s_0s_1s                       
+===========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      69                 50.4 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block phy_ctrl_rmii.tr_fifo_rmii_1s_0s_1s:	69 (22.19 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      36                 51.4 %               
+ARI1     26                 50 %                 
+=================================================
+Total COMBINATIONAL LOGIC in the block phy_ctrl_rmii.tr_fifo_rmii_1s_0s_1s:	62 (19.94 % Utilization)
+
+------------------------------------------------------------------
+########   Utilization report for  cell:   afifo_4x32_0   ########
+Instance path:   tr_fifo_rmii_1s_0s_1s.afifo_4x32_0               
+==================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      65                 47.4 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block tr_fifo_rmii_1s_0s_1s.afifo_4x32_0:	65 (20.90 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      32                 45.7 %               
+ARI1     26                 50 %                 
+=================================================
+Total COMBINATIONAL LOGIC in the block tr_fifo_rmii_1s_0s_1s.afifo_4x32_0:	58 (18.65 % Utilization)
+
+-------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   afifo_4x32_afifo_4x32_0_COREFIFO_Z1_0   ########
+Instance path:   afifo_4x32_0.afifo_4x32_afifo_4x32_0_COREFIFO_Z1_0                        
+===========================================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      65                 47.4 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block afifo_4x32_0.afifo_4x32_afifo_4x32_0_COREFIFO_Z1_0:	65 (20.90 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      32                 45.7 %               
+ARI1     26                 50 %                 
+=================================================
+Total COMBINATIONAL LOGIC in the block afifo_4x32_0.afifo_4x32_afifo_4x32_0_COREFIFO_Z1_0:	58 (18.65 % Utilization)
+
+--------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   afifo_4x32_afifo_4x32_0_corefifo_async_Z2_0   ######## 
+Instance path:   afifo_4x32_afifo_4x32_0_COREFIFO_Z1_0.afifo_4x32_afifo_4x32_0_corefifo_async_Z2_0
+==================================================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      65                 47.4 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block afifo_4x32_afifo_4x32_0_COREFIFO_Z1_0.afifo_4x32_afifo_4x32_0_corefifo_async_Z2_0:	65 (20.90 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      32                 45.7 %               
+ARI1     26                 50 %                 
+=================================================
+Total COMBINATIONAL LOGIC in the block afifo_4x32_afifo_4x32_0_COREFIFO_Z1_0.afifo_4x32_afifo_4x32_0_corefifo_async_Z2_0:	58 (18.65 % Utilization)
+
+-------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   afifo_4x32_afifo_4x32_0_corefifo_graytobinconv_5   ########       
+Instance path:   afifo_4x32_afifo_4x32_0_corefifo_async_Z2_0.afifo_4x32_afifo_4x32_0_corefifo_graytobinconv_5
+=============================================================================================================
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      5                  7.14 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block afifo_4x32_afifo_4x32_0_corefifo_async_Z2_0.afifo_4x32_afifo_4x32_0_corefifo_graytobinconv_5:	5 (1.61 % Utilization)
+
+---------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   afifo_4x32_afifo_4x32_0_corefifo_graytobinconv_5_0   ########       
+Instance path:   afifo_4x32_afifo_4x32_0_corefifo_async_Z2_0.afifo_4x32_afifo_4x32_0_corefifo_graytobinconv_5_0
+===============================================================================================================
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      5                  7.14 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block afifo_4x32_afifo_4x32_0_corefifo_async_Z2_0.afifo_4x32_afifo_4x32_0_corefifo_graytobinconv_5_0:	5 (1.61 % Utilization)
+
+--------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   afifo_4x32_afifo_4x32_0_corefifo_nstagessync_2s_5   ########       
+Instance path:   afifo_4x32_afifo_4x32_0_corefifo_async_Z2_0.afifo_4x32_afifo_4x32_0_corefifo_nstagessync_2s_5
+==============================================================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      12                 8.76 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block afifo_4x32_afifo_4x32_0_corefifo_async_Z2_0.afifo_4x32_afifo_4x32_0_corefifo_nstagessync_2s_5:	12 (3.86 % Utilization)
+
+------------------------------------------------------------------------------------------------------------------
+########   Utilization report for  cell:   afifo_4x32_afifo_4x32_0_corefifo_nstagessync_2s_5_1_0   ########       
+Instance path:   afifo_4x32_afifo_4x32_0_corefifo_async_Z2_0.afifo_4x32_afifo_4x32_0_corefifo_nstagessync_2s_5_1_0
+==================================================================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      12                 8.76 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block afifo_4x32_afifo_4x32_0_corefifo_async_Z2_0.afifo_4x32_afifo_4x32_0_corefifo_nstagessync_2s_5_1_0:	12 (3.86 % Utilization)
+
+
+##### END OF AREA REPORT #####]
+
+
+</pre></samp></body></html>

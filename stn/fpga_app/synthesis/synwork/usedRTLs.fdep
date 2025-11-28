@@ -1,0 +1,28 @@
+#List of actual used RTLs.
+
+File                                                                                                           Type     IN_PROJECT/INCLUDED/LIBRARY
+
+"C:\repo1\gpb\stn\fpga_app\hdl\top_app.v"                                                                   verilog                      IN PROJECT
+"C:\repo1\gpb\stn\fpga_app\hdl\gpio.v"                                                                      verilog                      IN PROJECT
+"C:\repo1\gpb\stn\fpga_app\hdl\CAN_IF.v"                                                                    verilog                      IN PROJECT
+"C:\repo1\gpb\stn\fpga_app\hdl\CORECAN_wrapper.v"                                                           verilog                      IN PROJECT
+"C:\repo1\gpb\stn\fpga_app\component\work\CORECAN_C0\CORECAN_C0.v"                                          verilog                      IN PROJECT
+"C:\repo1\gpb\stn\fpga_app\component\Microchip\DirectCore\CORECAN\2.0.100\rtl\core_encrypted\corecan.v"     verilog                      IN PROJECT
+"C:\repo1\gpb\stn\fpga_app\hdl\APP2HW_IF.v"                                                                 verilog                      IN PROJECT
+"C:\repo1\gpb\stn\fpga_app\hdl\RS422_TEST_IF.v"                                                             verilog                      IN PROJECT
+"C:\repo1\gpb\stn\fpga_app\hdl\cmn_uart.vhd"                                                                   vhdl                      IN PROJECT
+"C:\repo1\gpb\stn\fpga_app\hdl\DAC_DACx0504_IF.v"                                                           verilog                      IN PROJECT
+"C:\repo1\gpb\stn\fpga_app\hdl\afifo.v"                                                                     verilog                      IN PROJECT
+"C:\repo1\gpb\stn\fpga_app\hdl\DP_RAM_2R_1W.v"                                                              verilog                      IN PROJECT
+"C:\repo1\gpb\stn\fpga_app\hdl\CLOCK_DIV.V"                                                                 verilog                      IN PROJECT
+"C:\repo1\gpb\stn\fpga_app\hdl\ADC_ADS8864_IF.v"                                                            verilog                      IN PROJECT
+"C:\repo1\gpb\stn\fpga_app\hdl\OSCILLATOR_COUNTER.v"                                                        verilog                      IN PROJECT
+"C:\repo1\gpb\stn\fpga_app\hdl\ClkGen.v"                                                                    verilog                      IN PROJECT
+"C:\repo1\gpb\stn\fpga_app\hdl\SCRATCH_PAD_REGISTER.v"                                                      verilog                      IN PROJECT
+"C:\repo1\gpb\stn\fpga_app\hdl\ADDR_DEFINITION.v"                                                           verilog                        INCLUDED
+"C:\repo1\gpb\stn\fpga_app\hdl\ADDR_DECODE.v"                                                               verilog                      IN PROJECT
+"C:\repo1\gpb\stn\fpga_app\hdl\cmd_server.v"                                                                verilog                      IN PROJECT
+"C:\repo1\gpb\stn\fpga_app\hdl\opb_emu_target.v"                                                            verilog                      IN PROJECT
+"C:\repo1\gpb\stn\fpga_app\hdl\msg_write.v"                                                                 verilog                      IN PROJECT
+"C:\repo1\gpb\stn\fpga_app\hdl\msg_read.v"                                                                  verilog                      IN PROJECT
+"C:\repo1\gpb\stn\fpga_app\hdl\msg_buffer.v"                                                                verilog                      IN PROJECT

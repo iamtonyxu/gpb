@@ -1,0 +1,136 @@
+# Sat Aug 16 13:39:40 2025
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-3
+Install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: LAPTOP-6FQD1N4B
+
+Implementation : synthesis
+Synopsys Microchip Technology Pre-mapping, Version map202309actp1, Build 008R, Built Jul 25 2024 08:49:59, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 185MB peak: 185MB)
+
+
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 190MB peak: 200MB)
+
+Reading constraint file: C:\repo1\gpb\stn\fpga_hw\designer\phy_ctrl_rmii\synthesis.fdc
+@L: C:\repo1\gpb\stn\fpga_hw\synthesis\phy_ctrl_rmii_scck.rpt 
+See clock summary report "C:\repo1\gpb\stn\fpga_hw\synthesis\phy_ctrl_rmii_scck.rpt"
+@N: MF472 |Synthesis running in Automatic Compile Point mode
+@N: MF474 |No compile point is identified in Automatic Compile Point mode
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 193MB peak: 200MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 193MB peak: 200MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 194MB peak: 200MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 195MB peak: 200MB)
+
+
+Vector Gate Optimization Enabled: Optimizing  Partial Hanging Logic. 
+NConnInternalConnection caching is on
+
+Starting HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 251MB peak: 251MB)
+
+
+Finished HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 251MB peak: 251MB)
+
+
+Started DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 251MB peak: 251MB)
+
+
+Finished DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 251MB peak: 252MB)
+
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo.v":1100:3:1100:8|Removing sequential instance re_pulse_d2 (in view: work.afifo_4x32_afifo_4x32_0_COREFIFO_Z1_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo.v":1100:3:1100:8|Removing sequential instance REN_d2 (in view: work.afifo_4x32_afifo_4x32_0_COREFIFO_Z1_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo.v":1100:3:1100:8|Removing sequential instance re_pulse_d2 (in view: work.afifo_4x32_afifo_4x32_0_COREFIFO_Z1_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo.v":1100:3:1100:8|Removing sequential instance REN_d2 (in view: work.afifo_4x32_afifo_4x32_0_COREFIFO_Z1_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo.v":1100:3:1100:8|Removing sequential instance RE_d2 (in view: work.afifo_4x32_afifo_4x32_0_COREFIFO_Z1_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo.v":1100:3:1100:8|Removing sequential instance re_pulse_d1 (in view: work.afifo_4x32_afifo_4x32_0_COREFIFO_Z1_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_async.v":776:12:776:17|Removing sequential instance genblk10\.afull_r (in view: work.afifo_4x32_afifo_4x32_0_corefifo_async_Z2_0(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo.v":1100:3:1100:8|Removing sequential instance RE_d2 (in view: work.afifo_4x32_afifo_4x32_0_COREFIFO_Z1_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo.v":1100:3:1100:8|Removing sequential instance re_pulse_d1 (in view: work.afifo_4x32_afifo_4x32_0_COREFIFO_Z1_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_async.v":776:12:776:17|Removing sequential instance genblk10\.afull_r (in view: work.afifo_4x32_afifo_4x32_0_corefifo_async_Z2_1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo.v":1100:3:1100:8|Removing sequential instance RE_d1 (in view: work.afifo_4x32_afifo_4x32_0_COREFIFO_Z1_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo.v":1100:3:1100:8|Removing sequential instance RE_d1 (in view: work.afifo_4x32_afifo_4x32_0_COREFIFO_Z1_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\hdl\tr_fifo_rmii.v":55:4:55:9|Removing sequential instance rx_dibit_a[1:0] (in view: work.tr_fifo_rmii_0s_0s_1s(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo.v":1030:3:1030:8|Removing sequential instance re_set (in view: work.afifo_4x32_afifo_4x32_0_COREFIFO_Z1_0(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo.v":1030:3:1030:8|Removing sequential instance re_set (in view: work.afifo_4x32_afifo_4x32_0_COREFIFO_Z1_1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo.v":1100:3:1100:8|Removing sequential instance REN_d1 (in view: work.afifo_4x32_afifo_4x32_0_COREFIFO_Z1_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo.v":1100:3:1100:8|Removing sequential instance REN_d1 (in view: work.afifo_4x32_afifo_4x32_0_COREFIFO_Z1_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: FP130 |Promoting Net sysclk on CLKINT  I_1 
+@N: FP130 |Promoting Net phy_tx_clk on CLKINT  I_2 
+@N: FP130 |Promoting Net phy_rx_clk on CLKINT  I_3 
+@N: FX1184 |Applying syn_allowed_resources blockrams=160 on top level netlist phy_ctrl_rmii 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 252MB peak: 252MB)
+
+
+
+Clock Summary
+******************
+
+          Start                        Requested     Requested     Clock        Clock          Clock
+Level     Clock                        Frequency     Period        Type         Group          Load 
+----------------------------------------------------------------------------------------------------
+0 -       phy_ctrl_rmii|sysclk         100.0 MHz     10.000        inferred     (multiple)     77   
+                                                                                                    
+0 -       phy_ctrl_rmii|phy_tx_clk     100.0 MHz     10.000        inferred     (multiple)     43   
+                                                                                                    
+0 -       phy_ctrl_rmii|phy_rx_clk     100.0 MHz     10.000        inferred     (multiple)     37   
+====================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                             Clock     Source               Clock Pin                  Non-clock Pin     Non-clock Pin
+Clock                        Load      Pin                  Seq Example                Seq Example       Comb Example 
+----------------------------------------------------------------------------------------------------------------------
+phy_ctrl_rmii|sysclk         77        sysclk(port)         rx_fifo.fifo_read_en.C     -                 I_1.A(CLKINT)
+                                                                                                                      
+phy_ctrl_rmii|phy_tx_clk     43        phy_tx_clk(port)     tx_fifo.fifo_dvld_p.C      -                 I_2.A(CLKINT)
+                                                                                                                      
+phy_ctrl_rmii|phy_rx_clk     37        phy_rx_clk(port)     rx_fifo.rx_fifo_we.C       -                 I_3.A(CLKINT)
+======================================================================================================================
+
+@W: MT530 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_nstagessync.v":62:0:62:5|Found inferred clock phy_ctrl_rmii|phy_rx_clk which controls 37 sequential elements including rx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_mem_reg\[1\][5:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_nstagessync.v":62:0:62:5|Found inferred clock phy_ctrl_rmii|sysclk which controls 77 sequential elements including tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_mem_reg\[1\][5:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_nstagessync.v":62:0:62:5|Found inferred clock phy_ctrl_rmii|phy_tx_clk which controls 43 sequential elements including tx_fifo.i_mezz_fifo.afifo_4x32_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_mem_reg\[1\][5:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file C:\repo1\gpb\stn\fpga_hw\synthesis\phy_ctrl_rmii.sap.
+
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 254MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 254MB peak: 254MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 165MB peak: 255MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Aug 16 13:39:41 2025
+
+###########################################################]

@@ -1,0 +1,417 @@
+# Mon Aug 11 21:10:47 2025
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-3
+Install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: LAPTOP-6FQD1N4B
+
+Implementation : synthesis
+Synopsys Microchip Technology Mapper, Version map202309actp1, Build 008R, Built Jul 25 2024 08:49:59, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 189MB peak: 189MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 191MB peak: 204MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 191MB peak: 204MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 194MB peak: 204MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 196MB peak: 204MB)
+
+
+Vector Gate Optimization Enabled: Optimizing  Partial Hanging Logic. 
+
+
+
+@N: MF105 |Performing bottom-up mapping of Compile point view:work.CORECAN_0s_1s_2_0_32s_11s_0s_CORECAN_C0_0(verilog) 
+
+Begin environment creation (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 260MB peak: 260MB)
+
+
+Finished environment creation (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 260MB peak: 261MB)
+
+
+Start loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 260MB peak: 261MB)
+
+
+Start creating ILM for FPGA iil_OO0 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 261MB peak: 261MB)
+
+
+Finished creating ILM for FPGA iil_OO0 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 261MB peak: 261MB)
+
+
+Finished loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 261MB peak: 261MB)
+
+
+Begin compile point sub-process log
+
+		 no database from previous run found.
+
+@W: BN120 |Unrecognized resource in syn_allowed_resources: ultrarams
+Allowable resources for this device are :
+cost 
+luts 
+registers 
+blockrams 
+blockmults 
+global_buffers 
+srl 
+fpuram 
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 261MB peak: 262MB)
+
+@W: BN120 |Unrecognized resource in syn_allowed_resources: ultrarams
+Allowable resources for this device are :
+cost 
+luts 
+registers 
+blockrams 
+blockmults 
+global_buffers 
+srl 
+fpuram 
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 268MB peak: 268MB)
+
+Encoding state machine <encrypted> (in view: work.iil_OO0(verilog))
+original code -> new code
+   000000 -> 0000000000001
+   000001 -> 0000000000010
+   000010 -> 0000000000100
+   000011 -> 0000000001000
+   000101 -> 0000000010000
+   000110 -> 0000000100000
+   000111 -> 0000001000000
+   001000 -> 0000010000000
+   001001 -> 0000100000000
+   001010 -> 0001000000000
+   001011 -> 0010000000000
+   001100 -> 0100000000000
+   001101 -> 1000000000000
+Encoding state machine <encrypted> (in view: work.Il0_0(verilog))
+original code -> new code
+   0000 -> 00000001
+   0001 -> 00000010
+   0010 -> 00000100
+   0011 -> 00001000
+   0100 -> 00010000
+   0101 -> 00100000
+   0110 -> 01000000
+   0111 -> 10000000
+Encoding state machine <encrypted> (in view: work.I1lI_0(verilog))
+original code -> new code
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   011 -> 01000
+   100 -> 10000
+Encoding state machine <encrypted> (in view: work.l01_0(verilog))
+original code -> new code
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   011 -> 01000
+   100 -> 10000
+Encoding state machine <encrypted> (in view: work.i01_Z3_layer0_CORECAN_0s_1s_2_0_32s_11s_0s_CORECAN_C0_0(verilog))
+original code -> new code
+   000 -> 000
+   001 -> 001
+   010 -> 010
+   011 -> 011
+   100 -> 100
+   101 -> 101
+Encoding state machine <encrypted> (in view: work.lI1_CORECAN_0s_1s_2_0_32s_11s_0s_CORECAN_C0_0(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+Encoding state machine <encrypted> (in view: work.lI1_0_CORECAN_0s_1s_2_0_32s_11s_0s_CORECAN_C0_0(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+
+Starting factoring (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:03s; Memory used current: 279MB peak: 279MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 316MB peak: 316MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+NConnInternalConnection caching is on
+@W: BN120 |Unrecognized resource in syn_allowed_resources: ultrarams
+Allowable resources for this device are :
+cost 
+luts 
+registers 
+blockrams 
+blockmults 
+global_buffers 
+srl 
+fpuram 
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:07s; Memory used current: 307MB peak: 335MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:11s; CPU Time elapsed 0h:00m:08s; Memory used current: 308MB peak: 335MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:42s; CPU Time elapsed 0h:00m:31s; Memory used current: 370MB peak: 370MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:43s; CPU Time elapsed 0h:00m:31s; Memory used current: 371MB peak: 371MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:45s; CPU Time elapsed 0h:00m:33s; Memory used current: 371MB peak: 371MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:48s; CPU Time elapsed 0h:00m:37s; Memory used current: 355MB peak: 386MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:37s		     1.62ns		4225 /      1565
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:51s; CPU Time elapsed 0h:00m:39s; Memory used current: 355MB peak: 386MB)
+
+@W: BN120 |Unrecognized resource in syn_allowed_resources: ultrarams
+Allowable resources for this device are :
+cost 
+luts 
+registers 
+blockrams 
+blockmults 
+global_buffers 
+srl 
+fpuram 
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:52s; CPU Time elapsed 0h:00m:40s; Memory used current: 356MB peak: 386MB)
+
+
+End compile point sub-process log
+
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Mon Aug 11 21:11:39 2025
+#
+
+
+Top view:               top_app
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    C:\repo1\gpb\stn\fpga_app\designer\top_app\synthesis.fdc
+                       
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: 2.138
+
+                                             Requested     Estimated     Requested     Estimated               Clock        Clock          
+Starting Clock                               Frequency     Frequency     Period        Period        Slack     Type         Group          
+-------------------------------------------------------------------------------------------------------------------------------------------
+ADC_ADS8864_IF|ram_wr_clk_inferred_clock     100.0 MHz     NA            10.000        NA            NA        inferred     (multiple)     
+CLOCK_DIV_9|N_1_inferred_clock               100.0 MHz     NA            10.000        NA            NA        inferred     (multiple)     
+top_app|APP_DBUG_MISO                        100.0 MHz     NA            10.000        NA            NA        inferred     (multiple)     
+top_app|APP_FPGA_100M_CLK                    100.0 MHz     NA            10.000        NA            NA        inferred     (multiple)     
+System                                       100.0 MHz     127.2 MHz     10.000        7.862         2.138     system       system_clkgroup
+===========================================================================================================================================
+Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks            |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------
+Starting  Ending  |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+--------------------------------------------------------------------------------------------------------
+System    System  |  10.000      2.138  |  No paths    -      |  No paths    -      |  No paths    -    
+========================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+              Starting                                      Arrival          
+Instance      Reference     Type     Pin     Net            Time        Slack
+              Clock                                                          
+-----------------------------------------------------------------------------
+encrypted     System        SLE      Q       pmmK94wbI3     0.218       2.138
+encrypted     System        SLE      Q       pmmK94wbDn     0.201       2.415
+encrypted     System        SLE      Q       pmmK94uFhn     0.201       2.449
+encrypted     System        SLE      Q       pmmK94vwbJ     0.201       2.468
+encrypted     System        SLE      Q       pmmK94uFbJ     0.218       2.492
+encrypted     System        SLE      Q       pmmK94uFm3     0.218       2.529
+encrypted     System        SLE      Q       pmmK94vwrJ     0.218       2.553
+encrypted     System        SLE      Q       pmmK94vv7J     0.218       2.568
+encrypted     System        SLE      Q       cFmr9oqbJ      0.218       2.569
+encrypted     System        SLE      Q       pmmK94vwhn     0.218       2.569
+=============================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+              Starting                                                            Required          
+Instance      Reference     Type     Pin     Net                                  Time         Slack
+              Clock                                                                                 
+----------------------------------------------------------------------------------------------------
+encrypted     System        SLE      D       jBvA48BF78yhn                        10.000       2.138
+encrypted     System        SLE      D       behAdtFzKtDI0I3                      10.000       2.138
+encrypted     System        SLE      EN      dqzHC4o0hj05GwaFw1jqpHimnsraak2F     9.873        2.291
+encrypted     System        SLE      EN      dqzHC4o0hj05GwaFw1jqpHimnsraak2F     9.873        2.291
+encrypted     System        SLE      EN      dqzHC4o0hj05GwaFw1jqpHimnsraak2F     9.873        2.291
+encrypted     System        SLE      EN      dqzHC4o0hj05GwaFw1jqpHimnsraak2F     9.873        2.291
+encrypted     System        SLE      EN      dqzHC4o0hj05GwaFw1jqpHimnsraak2F     9.873        2.291
+encrypted     System        SLE      EN      dqzHC4o0hj05GwaFw1jqpHimnsraak2F     9.873        2.291
+encrypted     System        SLE      EN      dqzHC4o0hj05GwaFw1jqpHimnsraak2F     9.873        2.291
+encrypted     System        SLE      EN      dqzHC4o0hj05GwaFw1jqpHimnsraak2F     9.873        2.291
+====================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    + Estimated clock delay at ending point: 0.000
+    = Required time:                         10.000
+
+    - Propagation time:                      7.862
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (critical) :                     2.138
+
+    Number of logic level(s):                13
+    Starting point:                          encrypted / Q
+    Ending point:                            encrypted / D
+    The start point is clocked by            System [rising] on pin CLK
+    The end   point is clocked by            System [rising] on pin CLK
+
+Instance / Net                             Pin      Pin               Arrival     No. of    
+Name                              Type     Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------
+encrypted                         SLE      Q        Out     0.218     0.218 r     -         
+pmmK94wbI3                        Net      -        -       0.960     -           62        
+encrypted                         CFG4     C        In      -         1.178 r     -         
+encrypted                         CFG4     Y        Out     0.148     1.326 r     -         
+bCLfF6baaDba                      Net      -        -       0.547     -           3         
+encrypted                         CFG4     D        In      -         1.873 r     -         
+encrypted                         CFG4     Y        Out     0.212     2.085 f     -         
+1zb3hri                           Net      -        -       0.609     -           7         
+encrypted                         CFG4     C        In      -         2.694 f     -         
+encrypted                         CFG4     Y        Out     0.148     2.842 f     -         
+cykag0u7zarJ                      Net      -        -       0.118     -           1         
+encrypted                         CFG4     D        In      -         2.960 f     -         
+encrypted                         CFG4     Y        Out     0.192     3.151 f     -         
+BL7pzm3                           Net      -        -       1.070     -           116       
+encrypted                         ARI1     B        In      -         4.221 f     -         
+encrypted                         ARI1     Y        Out     0.207     4.428 r     -         
+fdkgxuHo8pyore9cIpzqIE4CdJpl6     Net      -        -       0.118     -           1         
+encrypted                         ARI1     A        In      -         4.546 r     -         
+encrypted                         ARI1     Y        Out     0.126     4.672 f     -         
+fdkgxuHo8pyore9cIpzqIE4CdJpl7     Net      -        -       0.118     -           1         
+encrypted                         ARI1     B        In      -         4.790 f     -         
+encrypted                         ARI1     Y        Out     0.207     4.997 f     -         
+1zb7pbi                           Net      -        -       0.124     -           2         
+encrypted                         CFG4     C        In      -         5.121 f     -         
+encrypted                         CFG4     Y        Out     0.145     5.267 f     -         
+ypwEq5GFs2f8mGD50Eg9              Net      -        -       0.124     -           2         
+encrypted                         CFG4     D        In      -         5.391 f     -         
+encrypted                         CFG4     Y        Out     0.192     5.582 f     -         
+JAFg9ao0FEp7whIsj                 Net      -        -       0.985     -           72        
+encrypted                         CFG4     C        In      -         6.567 f     -         
+encrypted                         CFG4     Y        Out     0.148     6.715 f     -         
+fCjqsjJse1msB017                  Net      -        -       0.118     -           1         
+encrypted                         CFG4     D        In      -         6.833 f     -         
+encrypted                         CFG4     Y        Out     0.232     7.065 r     -         
+jBvA48B1z7LH7                     Net      -        -       0.118     -           1         
+encrypted                         CFG4     D        In      -         7.183 r     -         
+encrypted                         CFG4     Y        Out     0.212     7.395 f     -         
+behAdtFysFcfwrJ                   Net      -        -       0.118     -           1         
+encrypted                         CFG4     D        In      -         7.513 f     -         
+encrypted                         CFG4     Y        Out     0.232     7.744 r     -         
+jBvA48BF78yhn                     Net      -        -       0.118     -           1         
+encrypted                         SLE      D        In      -         7.862 r     -         
+============================================================================================
+Total path delay (propagation time + setup) of 7.862 is 2.618(33.3%) logic and 5.244(66.7%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+Writing compile point status file C:\repo1\gpb\stn\fpga_app\synthesis\CORECAN_0s_1s_2_0_32s_11s_0s_CORECAN_C0_0\cpprop
+
+Summary of Compile Points :
+*************************** 
+Name                                          Status     Reason     
+--------------------------------------------------------------------
+CORECAN_0s_1s_2_0_32s_11s_0s_CORECAN_C0_0     Mapped     No database
+====================================================================
+
+Process took 0h:00m:53s realtime, 0h:00m:41s cputime
+# Mon Aug 11 21:11:41 2025
+
+###########################################################]

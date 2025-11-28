@@ -1,0 +1,14 @@
+Software Version: 2024.2.0.13
+Opened 'C:\repo1\gpb\stn\fpga_app\designer\top_app\top_app_fp\top_app.pro'
+PDB file 'C:\repo1\gpb\stn\fpga_app\designer\top_app\top_app.pdb' has been loaded successfully.
+DESIGN : top_app;  CHECKSUM : 5CF6;  PDB_VERSION : 1.9
+Info: Programming Interface selected is JTAG.
+Info: Design version: 0
+Successfully generated bitstream file and it has been added to the job container; file programs Fabric and sNVM.
+Fabric component bitstream digest: 01d3a699dc28520cb81478341fb8e5cdaf8d7c101bdcf9a0e95236e28568a35b
+sNVM component bitstream digest: 0518243917cec285a1a0d6c60130e508a4423d516b98ef53fcb385e958094141
+Entire bitstream digest: 85aa1ee004e23870b23ad55f0ff67d99853e35bb2c490827a0ff207325f18b55
+Finished: Fri Sep 05 15:48:49 2025 (Elapsed time 00:00:11)
+
+Project saved.
+Project closed.

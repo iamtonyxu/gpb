@@ -1,0 +1,85 @@
+Info: No timing constraint has been associated to the 'Place and Route' tool. 'Place and Route' will be run in non Timing Driven mode.
+INFO: The option "Abort flow if errors are found in PDC" is turned ON in Project Settings> Design flow page. The Place & Route tool will fail if errors are found in associated PDC files. Please uncheck the option to ignore the errors and continue running the tool
+TBBmalloc: skip allocation functions replacement in ucrtbase.dll: unknown prologue for function _msize
+***** Place and Route Configurations *****
+Timing-driven            : OFF
+Power-driven             : OFF
+I/O Register Combining   : OFF
+Global Pins Demotion     : OFF
+Driver Replication       : OFF
+High-effort              : OFF
+Repair min-delay         : OFF
+Incremental              : OFF
+
+INFO: Reading User PDC file C:\repo1\gpb\stn\fpga_app\constraint\io\top_app.pdc. 0 error(s) and 0 warning(s)
+
+Running the I/O Bank and Globals Assigner.
+Info:  Globals Assigner found no global involed in the problem.
+Info:  I/O Bank and Globals Assigner identified 182 fixed I/O macros, 0 unfixed I/O macros
+
+I/O Bank and Globals Assigner completed successfully.
+Total time spent in I/O Bank and Globals Assigner: 1 seconds
+TBBmalloc: skip allocation functions replacement in ucrtbase.dll: unknown prologue for function _msize
+
+Placer V5.0 - 2024.2.0 
+Design: top_app                         Started: Fri Sep  5 13:04:33 2025
+
+Initializing Normal-Effort Standard Placement ...
+Clustering ...
+Placing ...
+Improving placement ...
+End of placement.
+
+Placer Runtime Summary   :
+Clustering (1 pass)      : 9 seconds
+Placement                : 9 seconds
+Improvement              : 28 seconds
+
+Placer completed successfully.
+
+Design: top_app                         
+Finished: Fri Sep  5 13:05:36 2025
+Total CPU Time:     00:01:25            Total Elapsed Time: 00:01:03
+Total Memory Usage: 1210.9 Mbytes
+                        o - o - o - o - o - o
+
+
+Warning:  The following clocks are routed using regular routing resources instead of dedicated global resources. Clocks using regular routing are more susceptible to noise than those using dedicated global resources. Microchip recommends promoting these signals to dedicated global resources.
+    Driver: u_adc/ram_wr_clk:Q
+       Net: u_adc/ram_wr_clk_Z
+Clock pins: 1
+TBBmalloc: skip allocation functions replacement in ucrtbase.dll: unknown prologue for function _msize
+TBBmalloc: skip allocation functions replacement in ucrtbase.dll: unknown prologue for function _msize
+
+Router 
+Design: C:\repo1\gpb\stn\fpga_app\designer\top_app\top_appStarted: Fri Sep  5 13:05:47 2025
+
+
+Router completed successfully.
+
+Design: C:\repo1\gpb\stn\fpga_app\designer\top_app\top_app
+Finished: Fri Sep  5 13:06:19 2025
+Total CPU Time:     00:00:34            Total Elapsed Time: 00:00:32
+Total Memory Usage: 2029.5 Mbytes
+                        o - o - o - o - o - o
+
+Resource Usage
++---------------+-------+--------+------------+
+| Type          | Used  | Total  | Percentage |
++---------------+-------+--------+------------+
+| 4LUT          | 21869 | 108600 | 20.14      |
+| DFF           | 9696  | 108600 | 8.93       |
+| I/O Register  | 0     | 244    | 0.00       |
+| Logic Element | 22772 | 108600 | 20.97      |
++---------------+-------+--------+------------+
+
+I/O Placement
++--------+-------+------------+
+| Type   | Count | Percentage |
++--------+-------+------------+
+| Locked |  182  | 100.00%    |
+| Placed |  0    | 0.00%      |
++--------+-------+------------+
+
+TBBmalloc: skip allocation functions replacement in ucrtbase.dll: unknown prologue for function _msize
+Completed writing pin report files.

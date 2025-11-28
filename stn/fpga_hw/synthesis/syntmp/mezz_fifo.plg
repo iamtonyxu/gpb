@@ -1,0 +1,11 @@
+@P:  Worst Slack : NA
+@P:  System - Estimated Frequency : NA
+@P:  System - Requested Frequency : 100.0 MHz
+@P:  System - Estimated Period : NA
+@P:  System - Requested Period : 10.000
+@P:  System - Slack : NA
+@P: mezz_fifo Part : mpf050tfcvg484std
+@P: mezz_fifo Register bits  : 0 
+@P: mezz_fifo DSP Blocks  : 0
+@P: mezz_fifo I/O primitives : 17
+@P:  CPU Time : 0h:00m:02s

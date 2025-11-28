@@ -52,35 +52,190 @@ ENDLIST
 LIST GlobalIncludeFileList
 ENDLIST
 LIST FileManager
+VALUE "<project>\component\Microchip\DirectCore\CORECAN\2.0.100\CORECAN.cxf,actgen_cxf"
+STATE="utd"
+TIME="1753939336"
+SIZE="512"
+PARENT="<project>\component\work\CORECAN_C0\CORECAN_C0.cxf"
+ENDFILE
+VALUE "<project>\component\Microchip\DirectCore\CORECAN\2.0.100\rtl\core_encrypted\corecan.v,hdl"
+STATE="utd"
+TIME="1753938261"
+SIZE="163084"
+PARENT="<project>\component\Microchip\DirectCore\CORECAN\2.0.100\CORECAN.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\CORECAN_C0\CORECAN_C0.cxf,actgen_cxf"
+STATE="utd"
+TIME="1753939336"
+SIZE="4502"
+ENDFILE
+VALUE "<project>\component\work\CORECAN_C0\CORECAN_C0.v,hdl"
+STATE="utd"
+TIME="1753939336"
+SIZE="3727"
+PARENT="<project>\component\work\CORECAN_C0\CORECAN_C0.cxf"
+IS_READONLY="TRUE"
+ENDFILE
 VALUE "<project>\constraint\io\top_app.pdc,io_pdc"
 STATE="utd"
-TIME="1750558354"
-SIZE="20739"
+TIME="1754144450"
+SIZE="21304"
+ENDFILE
+VALUE "<project>\hdl\ADC_ADS8864_IF.v,hdl"
+STATE="utd"
+TIME="1750472507"
+SIZE="12816"
+ENDFILE
+VALUE "<project>\hdl\ADDR_DECODE.v,hdl"
+STATE="utd"
+TIME="1754964958"
+SIZE="6789"
+ENDFILE
+VALUE "<project>\hdl\ADDR_DEFINITION.v,hdl"
+STATE="utd"
+TIME="1754969380"
+SIZE="1586"
+ENDFILE
+VALUE "<project>\hdl\afifo.v,hdl"
+STATE="utd"
+TIME="1750471156"
+SIZE="20479"
+ENDFILE
+VALUE "<project>\hdl\APP2HW_IF.v,hdl"
+STATE="utd"
+TIME="1755829201"
+SIZE="4778"
+ENDFILE
+VALUE "<project>\hdl\CAN_IF.v,hdl"
+STATE="utd"
+TIME="1754971683"
+SIZE="3417"
+ENDFILE
+VALUE "<project>\hdl\CAN_IF_tb.v,hdl"
+STATE="utd"
+TIME="1754971697"
+SIZE="7914"
+ENDFILE
+VALUE "<project>\hdl\ClkGen.v,hdl"
+STATE="utd"
+TIME="1752294317"
+SIZE="5487"
+ENDFILE
+VALUE "<project>\hdl\CLOCK_DIV.V,hdl"
+STATE="utd"
+TIME="1750471156"
+SIZE="1308"
+ENDFILE
+VALUE "<project>\hdl\cmd_server.v,hdl"
+STATE="utd"
+TIME="1752288799"
+SIZE="3117"
+ENDFILE
+VALUE "<project>\hdl\cmn_uart.vhd,hdl"
+STATE="utd"
+TIME="1750471156"
+SIZE="25394"
+ENDFILE
+VALUE "<project>\hdl\CORECAN_wrapper.v,hdl"
+STATE="utd"
+TIME="1754971759"
+SIZE="3908"
+ENDFILE
+VALUE "<project>\hdl\CORECAN_wrapper_tb.v,hdl"
+STATE="utd"
+TIME="1754962246"
+SIZE="4309"
+ENDFILE
+VALUE "<project>\hdl\DAC_DACx0504_IF.v,hdl"
+STATE="utd"
+TIME="1750472264"
+SIZE="6652"
+ENDFILE
+VALUE "<project>\hdl\DP_RAM_2R_1W.v,hdl"
+STATE="utd"
+TIME="1753930656"
+SIZE="1602"
+ENDFILE
+VALUE "<project>\hdl\gpio.v,hdl"
+STATE="utd"
+TIME="1754824150"
+SIZE="15704"
+ENDFILE
+VALUE "<project>\hdl\msg_buffer.v,hdl"
+STATE="utd"
+TIME="1750471156"
+SIZE="2269"
+ENDFILE
+VALUE "<project>\hdl\msg_read.v,hdl"
+STATE="utd"
+TIME="1750471358"
+SIZE="10591"
+ENDFILE
+VALUE "<project>\hdl\msg_write.v,hdl"
+STATE="utd"
+TIME="1750471156"
+SIZE="10004"
+ENDFILE
+VALUE "<project>\hdl\opb_emu_target.v,hdl"
+STATE="utd"
+TIME="1750471358"
+SIZE="5613"
+ENDFILE
+VALUE "<project>\hdl\OSCILLATOR_COUNTER.v,hdl"
+STATE="utd"
+TIME="1752297791"
+SIZE="4887"
+ENDFILE
+VALUE "<project>\hdl\RS422_TEST_IF.v,hdl"
+STATE="utd"
+TIME="1757044065"
+SIZE="14926"
+ENDFILE
+VALUE "<project>\hdl\RS422_TEST_IF_tb.v,hdl"
+STATE="utd"
+TIME="1757045197"
+SIZE="14867"
+ENDFILE
+VALUE "<project>\hdl\SCRATCH_PAD_REGISTER.v,hdl"
+STATE="utd"
+TIME="1754097795"
+SIZE="2804"
 ENDFILE
 VALUE "<project>\hdl\top_app.v,hdl"
 STATE="utd"
-TIME="1750581906"
-SIZE="11354"
+TIME="1757048454"
+SIZE="28372"
+ENDFILE
+VALUE "<project>\hdl\top_app_tb.v,hdl"
+STATE="utd"
+TIME="1754720129"
+SIZE="34920"
+ENDFILE
+VALUE "<project>\synthesis\synwork\layer0.so,so"
+STATE="utd"
+TIME="1754966303"
+SIZE="159"
 ENDFILE
 VALUE "<project>\synthesis\top_app.so,so"
 STATE="utd"
-TIME="1750556478"
+TIME="1757048617"
 SIZE="214"
 ENDFILE
 VALUE "<project>\synthesis\top_app.vm,syn_vm"
-STATE="ood"
-TIME="1750556478"
-SIZE="49525"
+STATE="utd"
+TIME="1757048615"
+SIZE="3443800"
 ENDFILE
 VALUE "<project>\synthesis\top_app_syn.prj,prj"
 STATE="utd"
-TIME="1750556478"
-SIZE="2933"
+TIME="1757048618"
+SIZE="4562"
 ENDFILE
 VALUE "<project>\synthesis\top_app_vm.sdc,syn_sdc"
 STATE="utd"
-TIME="1750556478"
-SIZE="1007"
+TIME="1757048615"
+SIZE="2126"
 ENDFILE
 ENDLIST
 LIST UsedFile
@@ -90,6 +245,18 @@ LIST "top_app::work"
 FILE "<project>\hdl\top_app.v,hdl"
 LIST PNRConstraints
 VALUE "<project>\constraint\io\top_app.pdc,io_pdc"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSYNTHESIS(<project>\synthesis\top_app.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
 ENDLIST
 ENDLIST
 ENDLIST
@@ -193,6 +360,18 @@ IS32BIT="1"
 EndProfile
 ENDLIST
 LIST ProjectState5.1
+LIST "top_app::work"
+LIST Impl1
+ideSYNTHESIS(<project>\synthesis\top_app.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
 ENDLIST
 LIST ExcludePackageForSimulation
 ENDLIST
@@ -206,15 +385,116 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-Reports;Reports;0
-ReportsCurrentItem;synthesis:synplify.log
+HDL;hdl\CAN_IF.v;0
 HDL;hdl\top_app.v;0
-HDL;constraint\io\top_app.pdc;0
+HDL;hdl\RS422_TEST_IF.v;0
 StartPage;StartPage;0
-ACTIVEVIEW;Reports
+HDL;hdl\top_app_tb.v;0
+HDL;hdl\CORECAN_wrapper.v;0
+Reports;Reports;0
+ReportsCurrentItem;Export FlashPro Express Job:top_app_exportJob.log
+HDL;hdl\ADDR_DECODE.v;0
+HDL;hdl\ADDR_DEFINITION.v;0
+HDL;hdl\ADC_ADS8864_IF.v;0
+HDL;hdl\gpio.v;0
+Constraint Manager;Constraint Manager;0
+HDL;hdl\can_defines.v;0
+ACTIVEVIEW;hdl\CORECAN_wrapper.v
 ENDLIST
 LIST ModuleSubBlockList
+LIST "ADC_ADS8864_IF::work","hdl\ADC_ADS8864_IF.v","FALSE","FALSE"
+SUBBLOCK "CLOCK_DIV::work","hdl\CLOCK_DIV.V","FALSE","FALSE"
+SUBBLOCK "DP_RAM_2R_1W::work","hdl\DP_RAM_2R_1W.v","FALSE","FALSE"
+ENDLIST
+LIST "ADDR_DECODE::work","hdl\ADDR_DECODE.v","FALSE","FALSE"
+ENDLIST
+LIST "APP2HW_IF::work","hdl\APP2HW_IF.v","FALSE","FALSE"
+ENDLIST
+LIST "CAN_IF::work","hdl\CAN_IF.v","FALSE","FALSE"
+SUBBLOCK "CORECAN_wrapper::work","hdl\CORECAN_wrapper.v","FALSE","FALSE"
+ENDLIST
+LIST "CAN_IF_tb::work","hdl\CAN_IF_tb.v","FALSE","FALSE"
+SUBBLOCK "CAN_IF::work","hdl\CAN_IF.v","FALSE","FALSE"
+ENDLIST
+LIST "ClkGen::work","hdl\ClkGen.v","FALSE","FALSE"
+SUBBLOCK "CLOCK_DIV::work","hdl\CLOCK_DIV.V","FALSE","FALSE"
+ENDLIST
+LIST "CLOCK_DIV::work","hdl\CLOCK_DIV.V","FALSE","FALSE"
+ENDLIST
+LIST "cmd_server::work","hdl\cmd_server.v","FALSE","FALSE"
+SUBBLOCK "cmn_uart::work","hdl\cmn_uart.vhd","FALSE","FALSE"
+SUBBLOCK "msg_buffer::work","hdl\msg_buffer.v","FALSE","FALSE"
+SUBBLOCK "opb_emu_target::work","hdl\opb_emu_target.v","FALSE","FALSE"
+ENDLIST
+LIST "CORECAN::work","component\Microchip\DirectCore\CORECAN\2.0.100\rtl\core_encrypted\corecan.v","FALSE","FALSE"
+ENDLIST
+LIST "CORECAN_C0::work","component\work\CORECAN_C0\CORECAN_C0.v","TRUE","FALSE"
+SUBBLOCK "CORECAN::work","component\Microchip\DirectCore\CORECAN\2.0.100\rtl\core_encrypted\corecan.v","FALSE","FALSE"
+ENDLIST
+LIST "CORECAN_wrapper::work","hdl\CORECAN_wrapper.v","FALSE","FALSE"
+SUBBLOCK "CORECAN_C0::work","component\work\CORECAN_C0\CORECAN_C0.v","TRUE","FALSE"
+ENDLIST
+LIST "CORECAN_wrapper_tb::work","hdl\CORECAN_wrapper_tb.v","FALSE","FALSE"
+SUBBLOCK "CORECAN_wrapper::work","hdl\CORECAN_wrapper.v","FALSE","FALSE"
+ENDLIST
+LIST "DAC_DACx0504_IF::work","hdl\DAC_DACx0504_IF.v","FALSE","FALSE"
+SUBBLOCK "CLOCK_DIV::work","hdl\CLOCK_DIV.V","FALSE","FALSE"
+SUBBLOCK "DP_RAM_2R_1W::work","hdl\DP_RAM_2R_1W.v","FALSE","FALSE"
+SUBBLOCK "afifo::work","hdl\afifo.v","FALSE","FALSE"
+ENDLIST
+LIST "afifo::work","hdl\afifo.v","FALSE","FALSE"
+ENDLIST
+LIST "cmn_uart::work","hdl\cmn_uart.vhd","FALSE","FALSE"
+ENDLIST
+LIST "DP_RAM_2R_1W::work","hdl\DP_RAM_2R_1W.v","FALSE","FALSE"
+ENDLIST
+LIST "SCRATCH_PAD_REGISTER::work","hdl\SCRATCH_PAD_REGISTER.v","FALSE","FALSE"
+ENDLIST
+LIST "afifo::work","hdl\afifo.v","FALSE","FALSE"
+ENDLIST
+LIST "DP_RAM_2R_1W::work","hdl\DP_RAM_2R_1W.v","FALSE","FALSE"
+ENDLIST
+LIST "afifo::work","hdl\afifo.v","FALSE","FALSE"
+ENDLIST
+LIST "GPIO::work","hdl\gpio.v","FALSE","FALSE"
+ENDLIST
+LIST "msg_buffer::work","hdl\msg_buffer.v","FALSE","FALSE"
+SUBBLOCK "afifo::work","hdl\afifo.v","FALSE","FALSE"
+ENDLIST
+LIST "msg_read::work","hdl\msg_read.v","FALSE","FALSE"
+ENDLIST
+LIST "msg_write::work","hdl\msg_write.v","FALSE","FALSE"
+ENDLIST
+LIST "opb_emu_target::work","hdl\opb_emu_target.v","FALSE","FALSE"
+SUBBLOCK "CLOCK_DIV::work","hdl\CLOCK_DIV.V","FALSE","FALSE"
+SUBBLOCK "msg_read::work","hdl\msg_read.v","FALSE","FALSE"
+SUBBLOCK "msg_write::work","hdl\msg_write.v","FALSE","FALSE"
+ENDLIST
+LIST "OSCILLATOR_COUNTER::work","hdl\OSCILLATOR_COUNTER.v","FALSE","FALSE"
+SUBBLOCK "afifo::work","hdl\afifo.v","FALSE","FALSE"
+ENDLIST
+LIST "RS422_TEST_IF::work","hdl\RS422_TEST_IF.v","FALSE","FALSE"
+SUBBLOCK "cmn_uart::work","hdl\cmn_uart.vhd","FALSE","FALSE"
+ENDLIST
+LIST "RS422_TEST_IF_tb::work","hdl\RS422_TEST_IF_tb.v","FALSE","FALSE"
+SUBBLOCK "RS422_TEST_IF::work","hdl\RS422_TEST_IF.v","FALSE","FALSE"
+ENDLIST
 LIST "top_app::work","hdl\top_app.v","FALSE","FALSE"
+SUBBLOCK "ADC_ADS8864_IF::work","hdl\ADC_ADS8864_IF.v","FALSE","FALSE"
+SUBBLOCK "ADDR_DECODE::work","hdl\ADDR_DECODE.v","FALSE","FALSE"
+SUBBLOCK "APP2HW_IF::work","hdl\APP2HW_IF.v","FALSE","FALSE"
+SUBBLOCK "CAN_IF::work","hdl\CAN_IF.v","FALSE","FALSE"
+SUBBLOCK "CLOCK_DIV::work","hdl\CLOCK_DIV.V","FALSE","FALSE"
+SUBBLOCK "ClkGen::work","hdl\ClkGen.v","FALSE","FALSE"
+SUBBLOCK "DAC_DACx0504_IF::work","hdl\DAC_DACx0504_IF.v","FALSE","FALSE"
+SUBBLOCK "GPIO::work","hdl\gpio.v","FALSE","FALSE"
+SUBBLOCK "OSCILLATOR_COUNTER::work","hdl\OSCILLATOR_COUNTER.v","FALSE","FALSE"
+SUBBLOCK "RS422_TEST_IF::work","hdl\RS422_TEST_IF.v","FALSE","FALSE"
+SUBBLOCK "cmd_server::work","hdl\cmd_server.v","FALSE","FALSE"
+SUBBLOCK "SCRATCH_PAD_REGISTER::work","hdl\SCRATCH_PAD_REGISTER.v","FALSE","FALSE"
+ENDLIST
+LIST "top_app_tb::work","hdl\top_app_tb.v","FALSE","FALSE"
+SUBBLOCK "top_app::work","hdl\top_app.v","FALSE","FALSE"
 ENDLIST
 ENDLIST
 LIST ActiveTestBenchList

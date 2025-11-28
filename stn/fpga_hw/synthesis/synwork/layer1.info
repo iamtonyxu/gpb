@@ -1,0 +1,3 @@
+|cmn_uart|parameter BAUD_RATE 115200;,parameter CLOCK_FREQUENCY 100000000;|
+serial_eeprom_if_v2
+SERIAL_MII

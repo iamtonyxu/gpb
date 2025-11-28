@@ -1,0 +1,251 @@
+# Fri Sep  5 13:03:07 2025
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-3
+Install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: LAPTOP-6FQD1N4B
+
+Implementation : synthesis
+Synopsys Microchip Technology Mapper, Version map202309actp1, Build 008R, Built Jul 25 2024 08:49:59, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 189MB peak: 189MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 191MB peak: 204MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 191MB peak: 204MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 193MB peak: 204MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 195MB peak: 204MB)
+
+
+Vector Gate Optimization Enabled: Optimizing  Partial Hanging Logic. 
+
+@N: MF104 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":35:7:35:19|Found compile point of type hard on View view:work.RS422_TEST_IF(verilog) 
+
+
+@N: MF105 |Performing bottom-up mapping of Top level view:work.top_app(verilog) 
+
+Start loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 265MB peak: 265MB)
+
+@W: BN114 :|Removing instance CP_fanout_cell_RS422_TEST_IF_verilog_inst (in view: work.RS422_TEST_IF_rtl_ilm(verilog)) because it does not drive other instances.
+
+Start creating ILM for FPGA RS422_TEST_IF (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 268MB peak: 268MB)
+
+
+Finished creating ILM for FPGA RS422_TEST_IF (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 269MB peak: 269MB)
+
+
+Start creating ILM for FPGA CORECAN_0s_1s_2_0_32s_11s_0s (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 269MB peak: 269MB)
+
+
+Finished creating ILM for FPGA CORECAN_0s_1s_2_0_32s_11s_0s (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 269MB peak: 270MB)
+
+
+Finished loading ILMs (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 267MB peak: 270MB)
+
+
+Begin compile point sub-process log
+
+@N: MF106 :"c:\repo1\gpb\stn\fpga_app\hdl\top_app.v":23:7:23:13|Mapping Top level view:work.top_app(verilog) because 
+		 RTL and/or Constraints changed.
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 268MB peak: 270MB)
+
+@N: MO111 :"c:\repo1\gpb\stn\fpga_app\hdl\top_app.v":243:16:243:33|Tristate driver APP_FPGA_SPI1_MISO (in view: work.top_app(verilog)) on net APP_FPGA_SPI1_MISO (in view: work.top_app(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\repo1\gpb\stn\fpga_app\hdl\top_app.v":240:16:240:33|Tristate driver APP_FPGA_SPI0_MISO (in view: work.top_app(verilog)) on net APP_FPGA_SPI0_MISO (in view: work.top_app(verilog)) has its enable tied to GND.
+@W: MO171 :"c:\repo1\gpb\stn\fpga_app\hdl\app2hw_if.v":69:4:69:9|Sequential instance u_app2hw_if.app_data_out[16] is reduced to a combinational gate by constant propagation. 
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 271MB peak: 271MB)
+
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\oscillator_counter.v":68:4:68:9|Found counter in view:work.top_app(verilog) instance oscillator_counter_0.count_data[15:0] 
+Encoding state machine state[22:0] (in view: work.ADC_ADS8864_IF(verilog))
+original code -> new code
+   00000 -> 00000000000000000000001
+   00001 -> 00000000000000000000010
+   00010 -> 00000000000000000000100
+   00110 -> 00000000000000000001000
+   00111 -> 00000000000000000010000
+   01000 -> 00000000000000000100000
+   01001 -> 00000000000000001000000
+   01010 -> 00000000000000010000000
+   01011 -> 00000000000000100000000
+   01100 -> 00000000000001000000000
+   01101 -> 00000000000010000000000
+   01110 -> 00000000000100000000000
+   01111 -> 00000000001000000000000
+   10000 -> 00000000010000000000000
+   10001 -> 00000000100000000000000
+   10010 -> 00000001000000000000000
+   10011 -> 00000010000000000000000
+   10100 -> 00000100000000000000000
+   10101 -> 00001000000000000000000
+   10110 -> 00010000000000000000000
+   10111 -> 00100000000000000000000
+   11000 -> 01000000000000000000000
+   11001 -> 10000000000000000000000
+Encoding state machine status[5:0] (in view: work.ADC_ADS8864_IF(verilog))
+original code -> new code
+   0000 -> 000001
+   0001 -> 000010
+   0010 -> 000100
+   0100 -> 001000
+   0101 -> 010000
+   0110 -> 100000
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\adc_ads8864_if.v":147:4:147:9|Found counter in view:work.ADC_ADS8864_IF(verilog) instance data_count[10:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\adc_ads8864_if.v":130:1:130:6|Found counter in view:work.ADC_ADS8864_IF(verilog) instance conv_count[5:0] 
+@W: FX107 :"c:\repo1\gpb\stn\fpga_app\hdl\dp_ram_2r_1w.v":53:1:53:6|RAM data_in_ram.ram[15:0] (in view: work.ADC_ADS8864_IF(verilog)) does not have a read/write conflict check. Possible simulation mismatch. To resolve a read/write conflict, either set syn_ramstyle = rw_check, or enable the "Read Write Check on RAM" Implementation Option. For more information, search for "read/write conflict check" in Online Help.
+Encoding state machine state[3:0] (in view: work.DAC_DACx0504_IF(verilog))
+original code -> new code
+   000 -> 00
+   001 -> 01
+   010 -> 10
+   100 -> 11
+@N: MO225 :"c:\repo1\gpb\stn\fpga_app\hdl\dac_dacx0504_if.v":127:4:127:9|There are no possible illegal states for state machine state[3:0] (in view: work.DAC_DACx0504_IF(verilog)); safe FSM implementation is not required.
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\dac_dacx0504_if.v":127:4:127:9|Found counter in view:work.DAC_DACx0504_IF(verilog) instance bit_count[4:0] 
+@W: FX107 :"c:\repo1\gpb\stn\fpga_app\hdl\afifo.v":149:1:149:6|RAM opb_fifo_inst.mem[23:0] (in view: work.DAC_DACx0504_IF(verilog)) does not have a read/write conflict check. Possible simulation mismatch. To resolve a read/write conflict, either set syn_ramstyle = rw_check, or enable the "Read Write Check on RAM" Implementation Option. For more information, search for "read/write conflict check" in Online Help.
+@N: FX702 :"c:\repo1\gpb\stn\fpga_app\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance opb_fifo_inst.mem[23:0] (in view: work.DAC_DACx0504_IF(verilog)).
+@N: FX702 :"c:\repo1\gpb\stn\fpga_app\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance opb_fifo_inst.mem[23:0]
+@W: FX107 :"c:\repo1\gpb\stn\fpga_app\hdl\dp_ram_2r_1w.v":53:1:53:6|RAM data_in_ram.ram[23:0] (in view: work.DAC_DACx0504_IF(verilog)) does not have a read/write conflict check. Possible simulation mismatch. To resolve a read/write conflict, either set syn_ramstyle = rw_check, or enable the "Read Write Check on RAM" Implementation Option. For more information, search for "read/write conflict check" in Online Help.
+@N: MF179 :"c:\repo1\gpb\stn\fpga_app\hdl\corecan_wrapper.v":45:12:45:40|Found 11 by 11 bit equality operator ('==') CAN4_inst.OPB_DO7 (in view: work.CAN_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_app\hdl\corecan_wrapper.v":45:12:45:40|Found 11 by 11 bit equality operator ('==') CAN3_inst.OPB_DO7 (in view: work.CAN_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_app\hdl\corecan_wrapper.v":45:12:45:40|Found 11 by 11 bit equality operator ('==') CAN2_inst.OPB_DO7 (in view: work.CAN_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_app\hdl\corecan_wrapper.v":45:12:45:40|Found 11 by 11 bit equality operator ('==') CAN1_inst.OPB_DO7 (in view: work.CAN_IF(verilog))
+@W: FX107 :"c:\repo1\gpb\stn\fpga_app\hdl\afifo.v":149:1:149:6|RAM mem[7:0] (in view: work.afifo_8s_4s_8s_4s_1(verilog)) does not have a read/write conflict check. Possible simulation mismatch. To resolve a read/write conflict, either set syn_ramstyle = rw_check, or enable the "Read Write Check on RAM" Implementation Option. For more information, search for "read/write conflict check" in Online Help.
+@N: FX702 :"c:\repo1\gpb\stn\fpga_app\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0] (in view: work.afifo_8s_4s_8s_4s_1(verilog)).
+@N: FX702 :"c:\repo1\gpb\stn\fpga_app\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0]
+@W: FX107 :"c:\repo1\gpb\stn\fpga_app\hdl\afifo.v":149:1:149:6|RAM mem[7:0] (in view: work.afifo_8s_4s_8s_4s_0(verilog)) does not have a read/write conflict check. Possible simulation mismatch. To resolve a read/write conflict, either set syn_ramstyle = rw_check, or enable the "Read Write Check on RAM" Implementation Option. For more information, search for "read/write conflict check" in Online Help.
+@N: FX702 :"c:\repo1\gpb\stn\fpga_app\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0] (in view: work.afifo_8s_4s_8s_4s_0(verilog)).
+@N: FX702 :"c:\repo1\gpb\stn\fpga_app\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0]
+Encoding state machine state[2:0] (in view: work.opb_emu_target(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\msg_read.v":176:4:176:9|Found counter in view:work.msg_read(verilog) instance timeout_cnt[7:0] 
+Encoding state machine state[6:0] (in view: work.msg_write(verilog))
+original code -> new code
+   00000000 -> 0000001
+   00000001 -> 0000010
+   00000010 -> 0000100
+   00000011 -> 0001000
+   00000100 -> 0010000
+   00000101 -> 0100000
+   00000110 -> 1000000
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\msg_write.v":235:4:235:9|Found counter in view:work.msg_write(verilog) instance timeout_cnt[7:0] 
+Encoding state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_0(rtl))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N: MO225 :"c:\repo1\gpb\stn\fpga_app\hdl\cmn_uart.vhd":353:6:353:7|There are no possible illegal states for state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_0(rtl)); safe FSM implementation is not required.
+Encoding state machine uart_tx_state[0:4] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_0(rtl))
+original code -> new code
+   00001 -> 00001
+   00010 -> 00010
+   00100 -> 00100
+   01000 -> 01000
+   10000 -> 10000
+
+Starting factoring (Real Time elapsed 0h:00m:11s; CPU Time elapsed 0h:00m:11s; Memory used current: 277MB peak: 277MB)
+
+@W: BN132 :"c:\repo1\gpb\stn\fpga_app\hdl\dac_dacx0504_if.v":95:4:95:9|Removing instance u_dac.opb_dummy_re because it is equivalent to instance addr_decode_0.DAC_RE_d1. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Finished factoring (Real Time elapsed 0h:00m:12s; CPU Time elapsed 0h:00m:12s; Memory used current: 292MB peak: 292MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+NConnInternalConnection caching is on
+@N: BN362 :"c:\repo1\gpb\stn\fpga_app\hdl\adc_ads8864_if.v":147:4:147:9|Removing sequential instance u_adc.status[3] (in view: work.top_app(verilog)) because it does not drive other instances.
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:13s; Memory used current: 291MB peak: 305MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:14s; CPU Time elapsed 0h:00m:14s; Memory used current: 292MB peak: 305MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:14s; CPU Time elapsed 0h:00m:14s; Memory used current: 293MB peak: 305MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:15s; CPU Time elapsed 0h:00m:14s; Memory used current: 293MB peak: 305MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:15s; CPU Time elapsed 0h:00m:15s; Memory used current: 293MB peak: 305MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:17s; CPU Time elapsed 0h:00m:16s; Memory used current: 339MB peak: 339MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:17s		     2.73ns		1884 /      1732
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:18s; Memory used current: 340MB peak: 340MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:18s; Memory used current: 341MB peak: 341MB)
+
+
+End compile point sub-process log
+
+Writing compile point status file C:\repo1\gpb\stn\fpga_app\synthesis\top_app\cpprop
+
+Summary of Compile Points :
+*************************** 
+Name        Status       Reason        
+---------------------------------------
+top_app     Remapped     Design changed
+=======================================
+
+Process took 0h:00m:19s realtime, 0h:00m:18s cputime
+# Fri Sep  5 13:03:26 2025
+
+###########################################################]

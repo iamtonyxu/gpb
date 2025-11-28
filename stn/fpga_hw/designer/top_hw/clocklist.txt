@@ -1,0 +1,5 @@
+"HDW_DBUG_MISO",,"HDW_DBUG_MISO","HDW_DBUG_MISO"
+"HDW_FPGA_100M_CLK",,"HDW_FPGA_100M_CLK","HDW_FPGA_100M_CLK"
+"HDW_FPGA_50M_CLK",,"HDW_FPGA_50M_CLK","HDW_FPGA_50M_CLK"
+"clkgen_25mhz/clkout:Q",,"clkgen_25mhz/clkout:Q","clkgen_25mhz/clkout:Q"
+"clkgen_2khz/clkout:Q",,"clkgen_2khz/clkout:Q","clkgen_2khz/clkout:Q"

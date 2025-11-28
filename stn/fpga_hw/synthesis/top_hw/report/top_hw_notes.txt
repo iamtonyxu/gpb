@@ -1,0 +1,33 @@
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+@N: MF104 :"c:\repo1\gpb\stn\fpga_hw\hdl\serial_eeprom_if_v2.vhd":45:7:45:25|Found compile point of type hard on View view:work.serial_eeprom_if_v2(rtl) 
+@N: MF105 |Performing bottom-up mapping of Top level view:work.top_hw(verilog) 
+@N: MF106 :"c:\repo1\gpb\stn\fpga_hw\hdl\top_hw.v":25:7:25:12|Mapping Top level view:work.top_hw(verilog) because 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_hw\hdl\oscillator_counter.v":68:4:68:9|Found counter in view:work.top_hw(verilog) instance oscillator_counter_1.count_data[15:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_hw\hdl\oscillator_counter.v":68:4:68:9|Found counter in view:work.top_hw(verilog) instance oscillator_counter_0.count_data[15:0] 
+@N: FX702 :"c:\repo1\gpb\stn\fpga_hw\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance opb_fifo_inst.mem[31:0] (in view: work.PHY_IF(verilog)).
+@N: FX702 :"c:\repo1\gpb\stn\fpga_hw\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance opb_fifo_inst.mem[31:0]
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":285:22:285:54|Found 32 by 32 bit equality operator ('==') un6_rx_good_0 (in view: work.PHY_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":285:22:285:54|Found 32 by 32 bit equality operator ('==') un6_rx_good_1 (in view: work.PHY_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":285:22:285:54|Found 32 by 32 bit equality operator ('==') un6_rx_good_2 (in view: work.PHY_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":285:22:285:54|Found 32 by 32 bit equality operator ('==') un6_rx_good_3 (in view: work.PHY_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":283:22:283:54|Found 32 by 32 bit equality operator ('==') un2_rx_good_0 (in view: work.PHY_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":283:22:283:54|Found 32 by 32 bit equality operator ('==') un2_rx_good_1 (in view: work.PHY_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":283:22:283:54|Found 32 by 32 bit equality operator ('==') un2_rx_good_2 (in view: work.PHY_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":283:22:283:54|Found 32 by 32 bit equality operator ('==') un2_rx_good_3 (in view: work.PHY_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":284:22:284:54|Found 32 by 32 bit equality operator ('==') un4_rx_good_0 (in view: work.PHY_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":284:22:284:54|Found 32 by 32 bit equality operator ('==') un4_rx_good_1 (in view: work.PHY_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":284:22:284:54|Found 32 by 32 bit equality operator ('==') un4_rx_good_2 (in view: work.PHY_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_hw\hdl\phy_if.v":284:22:284:54|Found 32 by 32 bit equality operator ('==') un4_rx_good_3 (in view: work.PHY_IF(verilog))
+@N: MO231 :"c:\repo1\gpb\stn\fpga_hw\hdl\ctrl_package_transceiver.v":106:4:106:9|Found counter in view:work.ctrl_package_transceiver(verilog) instance rx_bit_cnt[7:1] 
+@N: MO225 :"c:\repo1\gpb\stn\fpga_hw\hdl\serial_mii.vhd":145:10:145:11|There are no possible illegal states for state machine SERIAL_MII_CYCLE_STATE[0:3] (in view: work.SERIAL_MII(behavioral)); safe FSM implementation is not required.
+@N: MO231 :"c:\repo1\gpb\stn\fpga_hw\hdl\serial_mii.vhd":145:10:145:11|Found counter in view:work.SERIAL_MII(behavioral) instance SERIAL_MII_SHIFT_COUNTER[4:0] 
+@N: FX702 :"c:\repo1\gpb\stn\fpga_hw\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0] (in view: work.afifo_8s_4s_8s_4s_1(verilog)).
+@N: FX702 :"c:\repo1\gpb\stn\fpga_hw\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0]
+@N: FX702 :"c:\repo1\gpb\stn\fpga_hw\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0] (in view: work.afifo_8s_4s_8s_4s_0(verilog)).
+@N: FX702 :"c:\repo1\gpb\stn\fpga_hw\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0]
+@N: MO231 :"c:\repo1\gpb\stn\fpga_hw\hdl\msg_read.v":176:4:176:9|Found counter in view:work.msg_read(verilog) instance timeout_cnt[7:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_hw\hdl\msg_write.v":235:4:235:9|Found counter in view:work.msg_write(verilog) instance timeout_cnt[7:0] 
+@N: MO225 :"c:\repo1\gpb\stn\fpga_hw\hdl\cmn_uart.vhd":353:6:353:7|There are no possible illegal states for state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl)); safe FSM implementation is not required.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\hdl\ctrl_package_transceiver.v":45:4:45:9|Removing sequential instance phy_if_0.ctrl_pkg_transceiver_inst.bit_cnt[0] (in view: work.top_hw(verilog)) because it does not drive other instances.

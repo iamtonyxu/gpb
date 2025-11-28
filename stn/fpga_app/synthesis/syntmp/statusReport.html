@@ -1,0 +1,125 @@
+<html> 
+ 			<head> 			<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+			<title>Project Status Summary Page</title>
+			<link rel="stylesheet" type="text/css" href="projectstatuspage.css" />
+			<script type = "text/javascript" src="projectstatuspage.js"></script>
+			</head>
+
+ 			<body style="background-color:#f0f0ff;">
+ 			
+<table style="border:none;" width="100%" ><tr> <td class="outline">
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 	     <thead class="tablehead"><tr><th colspan="4">Project Settings</th><tr> 
+ <tr> <td class="optionTitle" align="left"> Project Name</td> <td> top_app_syn</td> <td class="optionTitle" align="left"> Device Name</td> <td> synthesis: Microchip PolarFire : MPF100T</td> </tr>
+<tr> <td class="optionTitle" align="left"> Implementation Name</td> <td> synthesis</td> <td class="optionTitle" align="left"> Top Module</td> <td> top_app</td> </tr>
+ 		 </thead> 
+		 <tbody> <tr> <td class="optionTitle" align="left"> Retiming</td> <td> 0</td> <td class="optionTitle" align="left"> Resource Sharing</td> <td> 1</td> </tr>
+<tr> <td class="optionTitle" align="left"> Fanout Guide</td> <td> 10000</td> <td class="optionTitle" align="left"> Disable I/O Insertion</td> <td> 0</td> </tr>
+<tr> <td class="optionTitle" align="left"> Disable Sequential Optimizations</td> <td> 0</td> <td class="optionTitle" align="left"> FSM Compiler</td> <td> 1</td> </tr>
+ 
+</tbody> 
+  </table><br>	 <table width="100%" border="1" cellspacing= "0" cellpadding= "0" >
+ 				   <thead class="tablehead"><tr><th   colspan="9">Run Status</th></tr></thead>
+         <tbody>
+ 		<tr>
+ 			<th align="left" width="17%">Job Name</th>
+			<th align="left">Status</th>
+ 			<td class="lnote" align="center" title="Notes"></td>
+ 			<td class="lwarn" align="center" title="Warnings"></td>
+ 			<td class="lerror" align="center" title="Errors"></td>
+ 			<th align="left">CPU Time</th>
+ 			<th align="left">Real Time</th>
+ 			<th align="left">Memory</th>
+ 			<th align="left">Date/Time</th>
+         </tr>
+  <tr>
+  <td class="optionTitle"> (compiler)</td><td>Complete</td>
+ <td>72</td>
+ <td>347</td>
+<td>0</td>
+<td>-</td>
+<td>00m:26s</td>
+<td>-</td>
+<td><font size="-1">2025/9/5</font><br/><font size="-2">13:02</font></td>
+</tr> 
+
+ <tr>
+  <td class="optionTitle"> (premap)</td><td>Complete</td>
+ <td>93</td>
+ <td>59</td>
+<td>0</td>
+<td>0m:06s</td>
+<td>0m:06s</td>
+<td>329MB</td>
+<td><font size="-1">2025/9/5</font><br/><font size="-2">13:03</font></td>
+</tr> 
+
+ <tr>
+  <td class="optionTitle"> (fpga_mapper)</td><td>Complete</td>
+ <td>36</td>
+ <td>17</td>
+<td>0</td>
+<td>0m:14s</td>
+<td>0m:34s</td>
+<td>391MB</td>
+<td><font size="-1">2025/9/5</font><br/><font size="-2">13:03</font></td>
+</tr> 
+
+<tr>
+  <td class="optionTitle">Multi-srs Generator</td>
+  <td>Complete</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td>00m:01s</td><td class="empty"></td><td class="empty"></td><td><font size="-1">2025/9/5</font><br/><font size="-2">13:02</font></td> 		</tbody>
+     </table>
+ <br> 
+ <table width="100%" border="1" cellspacing= "0" cellpadding= "0" >
+ 				   <thead class="tablehead"><tr><th   colspan="4">Area Summary</th></tr></thead>
+<tfoot> <tr> <td class="optionTitle" colspan="2"></td><td class="optionTitle" colspan="2"></td></tr> 
+ </tfoot> 
+ <tbody> <tr> 
+<td title ="Total Carry Cells used" class="optionTitle" align="left">Carry Cells</td> <td>4132</td>
+<td title ="Total Sequential Cells used" class="optionTitle" align="left">Sequential Cells</td> <td>8920</td>
+</tr>
+<tr> 
+<td title ="Total DSP Blocks used" class="optionTitle" align="left">DSP Blocks
+(dsp_used)</td> <td>0</td>
+<td title ="Total I/O Cells used" class="optionTitle" align="left">I/O Cells</td> <td>182</td>
+</tr>
+<tr> 
+<td title ="Total Global Clock Buffers used" class="optionTitle" align="left">Global Clock Buffers</td> <td>10</td>
+<td title ="Total RAM1K20 used" class="optionTitle" align="left">RAM1K20
+(v_ram)</td> <td>17</td>
+</tr>
+<tr> 
+<td title ="Total RAM64x12 used" class="optionTitle" align="left">RAM64x12
+(v_ram)</td> <td>14</td>
+<td title ="Total LUTs used" class="optionTitle" align="left">LUTs
+(total_luts)</td> <td>21058</td>
+</tr>
+ 
+</tbody>
+    </table><br>
+ <table width="100%" border="1" cellspacing= "0" cellpadding= "0" >
+ 				   <thead class="tablehead"><tr><th   colspan="4">Timing Summary</th></tr></thead>
+<tfoot> <tr> <td class="optionTitle" colspan="4"></td></tr> 
+ </tfoot> 
+<tbody> 
+   <tr><th class="optionTitle" align= "left ">Clock Name</th><th class="optionTitle" align= "left ">Req Freq</th><th class="optionTitle" align= "left ">Est Freq</th><th class="optionTitle" align= "left ">Slack</th></tr> 
+<tr> <td  align="left">ADC_ADS8864_IF|ram_wr_clk_inferred_clock</td><td  align="left">100.0 MHz</td><td  align="left">NA</td><td  align="left">NA</td></tr> 
+<tr> <td  align="left">CLOCK_DIV_9|N_1_inferred_clock</td><td  align="left">100.0 MHz</td><td  align="left">259.3 MHz</td><td  align="left">3.072</td></tr> 
+<tr> <td  align="left">top_app|APP_DBUG_MISO</td><td  align="left">100.0 MHz</td><td  align="left">459.6 MHz</td><td  align="left">7.824</td></tr> 
+<tr> <td  align="left">top_app|APP_FPGA_100M_CLK</td><td  align="left">100.0 MHz</td><td  align="left">129.2 MHz</td><td  align="left">2.259</td></tr> 
+</tbody> 
+ </table>
+<br>
+ <table width="100%" border="1" cellspacing= "0" cellpadding= "0" >
+ 				   <thead class="tablehead"><tr><th   colspan="5">Compile Points Summary</th></tr></thead>
+<tbody> 
+   <tr><th class="optionTitle" align= "left ">Name</th><th class="optionTitle" align= "left ">Status</th><th class="optionTitle" align= "left ">Reason</th><th class="optionTitle" align= "left ">Real Time</th><th class="optionTitle" align= "left ">CPU Time</th></tr> 
+<tr> <td  align="left">CORECAN_0s_1s_2_0_32s_11s_0s</td><td  align="left">Unchanged</td><td  align="left">-</td><td  align="left">0h:00m:59s</td><td  align="left">0h:00m:55s</td></tr> 
+<tr> <td  align="left">iil</td><td  align="left">Unchanged</td><td  align="left">-</td><td  align="left">0h:00m:07s</td><td  align="left">0h:00m:07s</td></tr> 
+<tr> <td  align="left">RS422_TEST_IF</td><td  align="left">Unchanged</td><td  align="left">-</td><td  align="left">0h:00m:07s</td><td  align="left">0h:00m:06s</td></tr> 
+<tr> <td  align="left">top_app</td><td  align="left">Remapped</td><td  align="left">Design changed</td><td  align="left">0h:00m:18s</td><td  align="left">0h:00m:18s</td></tr> 
+</tbody> 
+ </table>
+<br>
+<br> 
+</td></tr></table></body> 
+ </html>

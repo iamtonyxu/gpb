@@ -1,0 +1,143 @@
+C:/repo1/gpb/stn/fpga_hw/hdl/ClkGen.v {1 {vlog -work work -vopt C:/repo1/gpb/stn/fpga_hw/hdl/ClkGen.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module ClkGen
+
+Top level modules:
+	ClkGen
+
+} {} {}} C:/repo1/gpb/stn/fpga_hw/hdl/opb_emu_target.v {1 {vlog -work work -vopt C:/repo1/gpb/stn/fpga_hw/hdl/opb_emu_target.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module opb_emu_target
+
+Top level modules:
+	opb_emu_target
+
+} {} {}} C:/repo1/gpb/stn/fpga_hw/hdl/top_hw_tb.v {1 {vlog -work work -vopt +incdir+C:/repo1/gpb/stn/fpga_hw/hdl C:/repo1/gpb/stn/fpga_hw/hdl/top_hw_tb.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module top_hw_tb
+
+Top level modules:
+	top_hw_tb
+
+} {} {}} C:/repo1/gpb/stn/fpga_hw/hdl/PHY_IF.v {1 {vlog -work work -vopt C:/repo1/gpb/stn/fpga_hw/hdl/PHY_IF.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module PHY_IF
+
+Top level modules:
+	PHY_IF
+
+} {} {}} C:/repo1/gpb/stn/fpga_hw/hdl/GPIO.v {1 {vlog -work work -vopt C:/repo1/gpb/stn/fpga_hw/hdl/GPIO.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module GPIO
+
+Top level modules:
+	GPIO
+
+} {} {}} C:/repo1/gpb/stn/fpga_hw/hdl/APP_IF.v {1 {vlog -work work -vopt C:/repo1/gpb/stn/fpga_hw/hdl/APP_IF.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module APP_IF
+
+Top level modules:
+	APP_IF
+
+} {} {}} C:/repo1/gpb/stn/fpga_hw/hdl/SCRATCH_PAD_REGISTER.v {1 {vlog -work work -vopt C:/repo1/gpb/stn/fpga_hw/hdl/SCRATCH_PAD_REGISTER.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module SCRATCH_PAD_REGISTER
+
+Top level modules:
+	SCRATCH_PAD_REGISTER
+
+} {} {}} C:/repo1/gpb/stn/fpga_hw/hdl/msg_write.v {1 {vlog -work work -vopt C:/repo1/gpb/stn/fpga_hw/hdl/msg_write.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module msg_write
+
+Top level modules:
+	msg_write
+
+} {} {}} C:/repo1/gpb/stn/fpga_hw/hdl/serial_eeprom_if.vhd {1 {vcom -work work -2002 -explicit -vopt C:/repo1/gpb/stn/fpga_hw/hdl/serial_eeprom_if.vhd
+Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 19 2013
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity serial_eeprom_if
+-- Compiling architecture RTL of serial_eeprom_if
+
+} {} {}} C:/repo1/gpb/stn/fpga_hw/hdl/top_hw.v {1 {vlog -work work -vopt C:/repo1/gpb/stn/fpga_hw/hdl/top_hw.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module top_hw
+
+Top level modules:
+	top_hw
+
+} {} {}} C:/repo1/gpb/stn/fpga_hw/hdl/cmd_server.v {1 {vlog -work work -vopt C:/repo1/gpb/stn/fpga_hw/hdl/cmd_server.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module cmd_server
+
+Top level modules:
+	cmd_server
+
+} {} {}} C:/repo1/gpb/stn/fpga_hw/hdl/OSCILLATOR_COUNTER.v {1 {vlog -work work -vopt C:/repo1/gpb/stn/fpga_hw/hdl/OSCILLATOR_COUNTER.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module OSCILLATOR_COUNTER
+
+Top level modules:
+	OSCILLATOR_COUNTER
+
+} {} {}} C:/repo1/gpb/stn/fpga_hw/hdl/afifo.v {1 {vlog -work work -vopt C:/repo1/gpb/stn/fpga_hw/hdl/afifo.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module afifo
+
+Top level modules:
+	afifo
+
+} {} {}} C:/repo1/gpb/stn/fpga_hw/hdl/cmn_uart.vhd {1 {vcom -work work -2002 -explicit -vopt C:/repo1/gpb/stn/fpga_hw/hdl/cmn_uart.vhd
+Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 19 2013
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity cmn_uart
+-- Compiling architecture RTL of cmn_uart
+
+} {} {}} C:/repo1/gpb/stn/fpga_hw/hdl/EEPROM_OPB_IF.v {1 {vlog -work work -vopt C:/repo1/gpb/stn/fpga_hw/hdl/EEPROM_OPB_IF.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module EEPROM_OPB_IF
+
+Top level modules:
+	EEPROM_OPB_IF
+
+} {} {}} C:/repo1/gpb/stn/fpga_hw/hdl/ADDR_DECODE.v {1 {vlog -work work -vopt +incdir+C:/repo1/gpb/stn/fpga_hw/hdl C:/repo1/gpb/stn/fpga_hw/hdl/ADDR_DECODE.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module ADDER_DECODE
+
+Top level modules:
+	ADDER_DECODE
+
+} {} {}} C:/repo1/gpb/stn/fpga_hw/hdl/CLOCK_DIV.V {1 {vlog -work work -vopt C:/repo1/gpb/stn/fpga_hw/hdl/CLOCK_DIV.V
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module CLOCK_DIV
+
+Top level modules:
+	CLOCK_DIV
+
+} {} {}} C:/repo1/gpb/stn/fpga_hw/hdl/msg_buffer.v {1 {vlog -work work -vopt C:/repo1/gpb/stn/fpga_hw/hdl/msg_buffer.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module msg_buffer
+
+Top level modules:
+	msg_buffer
+
+} {} {}} C:/repo1/gpb/stn/fpga_hw/hdl/msg_read.v {1 {vlog -work work -vopt C:/repo1/gpb/stn/fpga_hw/hdl/msg_read.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module msg_read
+
+Top level modules:
+	msg_read
+
+} {} {}} C:/repo1/gpb/stn/fpga_hw/hdl/ADDR_DEFINITION.v {1 {vlog -work work -vopt C:/repo1/gpb/stn/fpga_hw/hdl/ADDR_DEFINITION.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+
+} {} {}}

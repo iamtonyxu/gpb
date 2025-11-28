@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Aug 11 17:44:52 2025
+# Process ID: 22840
+# Current directory: C:/repo1/gpb/stn/fpga_app/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10348 C:\repo1\gpb\stn\fpga_app\project_1\project_1.xpr
+# Log file: C:/repo1/gpb/stn/fpga_app/project_1/vivado.log
+# Journal file: C:/repo1/gpb/stn/fpga_app/project_1\vivado.jou
+# Running On: LAPTOP-6FQD1N4B, OS: Windows, CPU Frequency: 2611 MHz, CPU Physical cores: 12, Host memory: 34016 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/repo1/gpb/stn/fpga_app/project_1/project_1.xpr
+update_compile_order -fileset sources_1
+add_files -norecurse {C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn_syn.v C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn.v C:/repo1/gpb/stn/fpga_app/hdl/opb_emu_target.v C:/repo1/gpb/stn/fpga_app/hdl/gpio.v C:/repo1/gpb/stn/fpga_app/hdl/msg_buffer.v C:/repo1/gpb/stn/fpga_app/hdl/can_bsp.v C:/repo1/gpb/stn/fpga_app/hdl/can_crc.v C:/repo1/gpb/stn/fpga_app/hdl/can_defines.v C:/repo1/gpb/stn/fpga_app/hdl/top_app_tb.v C:/repo1/gpb/stn/fpga_app/hdl/CAN_IF_tb.v C:/repo1/gpb/stn/fpga_app/hdl/can_register_syn.v C:/repo1/gpb/stn/fpga_app/hdl/cmn_uart.vhd C:/repo1/gpb/stn/fpga_app/hdl/ADDR_DEFINITION.v C:/repo1/gpb/stn/fpga_app/hdl/DAC_DACx0504_IF.v C:/repo1/gpb/stn/fpga_app/hdl/CORECAN_wrapper_tb.v C:/repo1/gpb/stn/fpga_app/hdl/APP2HW_IF.v C:/repo1/gpb/stn/fpga_app/hdl/top_app.v C:/repo1/gpb/stn/fpga_app/hdl/ADDR_DECODE.v C:/repo1/gpb/stn/fpga_app/hdl/OSCILLATOR_COUNTER.v C:/repo1/gpb/stn/fpga_app/hdl/DP_RAM_2R_1W.v C:/repo1/gpb/stn/fpga_app/hdl/can_registers.v C:/repo1/gpb/stn/fpga_app/hdl/ClkGen.v C:/repo1/gpb/stn/fpga_app/hdl/can_fifo.v C:/repo1/gpb/stn/fpga_app/hdl/can_ibo.v C:/repo1/gpb/stn/fpga_app/hdl/CORECAN_wrapper.v C:/repo1/gpb/stn/fpga_app/hdl/RS422_TEST_IF.v C:/repo1/gpb/stn/fpga_app/hdl/cmd_server.v C:/repo1/gpb/stn/fpga_app/hdl/can_btl.v C:/repo1/gpb/stn/fpga_app/hdl/can_top.v C:/repo1/gpb/stn/fpga_app/hdl/RS422_TEST_IF_tb.v C:/repo1/gpb/stn/fpga_app/hdl/CAN_IF.v C:/repo1/gpb/stn/fpga_app/hdl/ADC_ADS8864_IF.v C:/repo1/gpb/stn/fpga_app/hdl/msg_write.v C:/repo1/gpb/stn/fpga_app/hdl/msg_read.v C:/repo1/gpb/stn/fpga_app/hdl/SCRATCH_PAD_REGISTER.v C:/repo1/gpb/stn/fpga_app/hdl/can_register.v C:/repo1/gpb/stn/fpga_app/hdl/CLOCK_DIV.V C:/repo1/gpb/stn/fpga_app/hdl/can_acf.v C:/repo1/gpb/stn/fpga_app/hdl/afifo.v}
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top can_top [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1

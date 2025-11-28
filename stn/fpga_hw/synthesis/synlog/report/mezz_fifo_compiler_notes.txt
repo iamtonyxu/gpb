@@ -1,0 +1,28 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N:"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo.vhd":19:7:19:15|Top entity is set to mezz_fifo.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo.vhd'.
+@N: CD231 :"C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd2008\std1164.vhd":889:16:889:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
+@N|Running in 64-bit mode
+@N: CG1349 :	| Running Verilog Compiler in System Verilog mode
+@N: CG334 :"C:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_COREFIFO\mezz_fifo_mezz_fifo_0_COREFIFO_0\rtl\vlog\core\COREFIFO.v":437:13:437:25|Read directive translate_off.
+@N: CG333 :"C:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_COREFIFO\mezz_fifo_mezz_fifo_0_COREFIFO_0\rtl\vlog\core\COREFIFO.v":449:13:449:24|Read directive translate_on.
+@N:"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo.vhd":19:7:19:15|Top entity is set to mezz_fifo.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo.vhd'.
+@N: CD231 :"C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd2008\std1164.vhd":889:16:889:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
+@N: CD630 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo.vhd":19:7:19:15|Synthesizing work.mezz_fifo.rtl.
+@N: CG1349 :	| Running Verilog Compiler in System Verilog mode
+@N: CG334 :"C:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_COREFIFO\mezz_fifo_mezz_fifo_0_COREFIFO_0\rtl\vlog\core\COREFIFO.v":437:13:437:25|Read directive translate_off.
+@N: CG333 :"C:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_COREFIFO\mezz_fifo_mezz_fifo_0_COREFIFO_0\rtl\vlog\core\COREFIFO.v":449:13:449:24|Read directive translate_on.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_COREFIFO\mezz_fifo_mezz_fifo_0_COREFIFO_0\rtl\vlog\core\COREFIFO.v":19:7:19:78|Synthesizing module mezz_fifo_mezz_fifo_0_COREFIFO_mezz_fifo_mezz_fifo_0_COREFIFO_0_COREFIFO in library work.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_COREFIFO\mezz_fifo_mezz_fifo_0_COREFIFO_0\rtl\vlog\core\corefifo_nstagessync.v":20:7:20:90|Synthesizing module mezz_fifo_mezz_fifo_0_COREFIFO_mezz_fifo_mezz_fifo_0_COREFIFO_0_corefifo_nstagessync in library work.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_COREFIFO\mezz_fifo_mezz_fifo_0_COREFIFO_0\rtl\vlog\core\corefifo_graytobinconv.v":20:7:20:92|Synthesizing module mezz_fifo_mezz_fifo_0_COREFIFO_mezz_fifo_mezz_fifo_0_COREFIFO_0_corefifo_graytobinconv in library work.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_COREFIFO\mezz_fifo_mezz_fifo_0_COREFIFO_0\rtl\vlog\core\corefifo_async.v":20:7:20:84|Synthesizing module mezz_fifo_mezz_fifo_0_COREFIFO_mezz_fifo_mezz_fifo_0_COREFIFO_0_corefifo_async in library work.
+@N: CG179 :"C:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_COREFIFO\mezz_fifo_mezz_fifo_0_COREFIFO_0\rtl\vlog\core\corefifo_async.v":753:35:753:41|Removing redundant assignment.
+@N: CG179 :"C:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_COREFIFO\mezz_fifo_mezz_fifo_0_COREFIFO_0\rtl\vlog\core\corefifo_async.v":795:35:795:41|Removing redundant assignment.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_COREFIFO\mezz_fifo_mezz_fifo_0_COREFIFO.v":49:7:49:36|Synthesizing module mezz_fifo_mezz_fifo_0_COREFIFO in library work.
+@N: CL159 :"C:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_COREFIFO\mezz_fifo_mezz_fifo_0_COREFIFO_0\rtl\vlog\core\corefifo_async.v":113:31:113:36|Input re_top is unused.
+@N: CL159 :"C:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_COREFIFO\mezz_fifo_mezz_fifo_0_COREFIFO_0\rtl\vlog\core\COREFIFO.v":161:36:161:38|Input CLK is unused.
+@N: CL159 :"C:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_COREFIFO\mezz_fifo_mezz_fifo_0_COREFIFO_0\rtl\vlog\core\COREFIFO.v":164:36:164:42|Input RESET_N is unused.
+@N|Running in 64-bit mode
+

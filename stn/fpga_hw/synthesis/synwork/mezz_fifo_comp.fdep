@@ -1,0 +1,144 @@
+#OPTIONS:"|-mixedhdl|-top|work.mezz_fifo|-layerid|0|-orig_srs|C:\\repo1\\gpb\\stn\\fpga_hw\\synthesis\\synwork\\mezz_fifo_comp.srs|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-work_is_curlib|1|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-vhdl2008|-work_is_curlib|1|-ignore_undefined_lib|-lib|work"
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\bin64\\c_vhdl.exe":1721969626
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\location.map":1721919830
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\std.vhd":1721919856
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd\\snps_haps_pkg.vhd":1721919830
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\std1164.vhd":1721919830
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\std_textio.vhd":1721919830
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\numeric.vhd":1721921378
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd\\umr_capim.vhd":1721919830
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\arith.vhd":1721919830
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\unsigned.vhd":1721919830
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd\\hyperents.vhd":1721919830
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\hdl\\mezz_fifo.vhd":1470615395
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\generic\\smartfusion2.vhd":1721920418
+#OPTIONS:"|-mixedhdl|-modhint|C:\\repo1\\gpb\\stn\\fpga_hw\\synthesis\\synwork\\_verilog_hintfile|-top|work.mezz_fifo_mezz_fifo_0_COREFIFO|-mpparams|C:\\repo1\\gpb\\stn\\fpga_hw\\synthesis\\synwork\\_mh_params|-layerid|1|-orig_srs|C:\\repo1\\gpb\\stn\\fpga_hw\\synthesis\\synwork\\mezz_fifo_comp.srs|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-I|C:\\repo1\\gpb\\stn\\fpga_hw\\synthesis\\|-I|C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib|-sysv|-devicelib|C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\generic\\acg5.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\bin64\\c_ver.exe":1721969592
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\synthesis\\synwork\\_verilog_hintfile":1755318941
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\generic\\acg5.v":1721920354
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\hypermods.v":1721919828
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\scemi_objects.v":1721919828
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\scemi_pipes.svh":1721919828
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\component\\polarfire_syn_comps.v":1755318939
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\component\\work\\mezz_fifo_mezz_fifo_0_COREFIFO\\mezz_fifo_mezz_fifo_0_COREFIFO_0\\rtl\\vlog\\core\\corefifo_graytobinconv.v":1755318646
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\component\\work\\mezz_fifo_mezz_fifo_0_COREFIFO\\mezz_fifo_mezz_fifo_0_COREFIFO_0\\rtl\\vlog\\core\\corefifo_nstagessync.v":1755318646
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\component\\work\\mezz_fifo_mezz_fifo_0_COREFIFO\\mezz_fifo_mezz_fifo_0_COREFIFO_0\\rtl\\vlog\\core\\corefifo_async.v":1755318646
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\component\\work\\mezz_fifo_mezz_fifo_0_COREFIFO\\mezz_fifo_mezz_fifo_0_COREFIFO_0\\rtl\\vlog\\core\\corefifo_fwft.v":1755318646
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\component\\work\\mezz_fifo_mezz_fifo_0_COREFIFO\\mezz_fifo_mezz_fifo_0_COREFIFO_0\\rtl\\vlog\\core\\corefifo_sync_scntr.v":1755318646
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\component\\work\\mezz_fifo_mezz_fifo_0_COREFIFO\\mezz_fifo_mezz_fifo_0_COREFIFO_0\\rtl\\vlog\\core\\corefifo_sync.v":1755318646
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\component\\work\\mezz_fifo_mezz_fifo_0_COREFIFO\\mezz_fifo_mezz_fifo_0_COREFIFO_0\\rtl\\vlog\\core\\COREFIFO.v":1755318646
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\component\\work\\mezz_fifo_mezz_fifo_0_COREFIFO\\mezz_fifo_mezz_fifo_0_COREFIFO.v":1755318646
+0			"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo.vhd" vhdl
+1			"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v" verilog
+2			"C:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_COREFIFO\mezz_fifo_mezz_fifo_0_COREFIFO_0\rtl\vlog\core\corefifo_graytobinconv.v" verilog
+3			"C:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_COREFIFO\mezz_fifo_mezz_fifo_0_COREFIFO_0\rtl\vlog\core\corefifo_nstagessync.v" verilog
+4			"C:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_COREFIFO\mezz_fifo_mezz_fifo_0_COREFIFO_0\rtl\vlog\core\corefifo_async.v" verilog
+5			"C:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_COREFIFO\mezz_fifo_mezz_fifo_0_COREFIFO_0\rtl\vlog\core\corefifo_fwft.v" verilog
+6			"C:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_COREFIFO\mezz_fifo_mezz_fifo_0_COREFIFO_0\rtl\vlog\core\corefifo_sync_scntr.v" verilog
+7			"C:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_COREFIFO\mezz_fifo_mezz_fifo_0_COREFIFO_0\rtl\vlog\core\corefifo_sync.v" verilog
+8			"C:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_COREFIFO\mezz_fifo_mezz_fifo_0_COREFIFO_0\rtl\vlog\core\COREFIFO.v" verilog
+9			"C:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_COREFIFO\mezz_fifo_mezz_fifo_0_COREFIFO.v" verilog
+#Dependency Lists(Uses List)
+0 9
+1 -1
+2 -1
+3 -1
+4 2 3
+5 -1
+6 -1
+7 -1
+8 5 7 6 4
+9 8
+#Dependency Lists(Users Of)
+0 -1
+1 -1
+2 4
+3 4
+4 8
+5 8
+6 8
+7 8
+8 9
+9 0
+#Design Unit to File Association
+module work mezz_fifo_mezz_fifo_0_COREFIFO 9
+module work mezz_fifo_mezz_fifo_0_COREFIFO_mezz_fifo_mezz_fifo_0_COREFIFO_0_COREFIFO 8
+module work mezz_fifo_mezz_fifo_0_COREFIFO_mezz_fifo_mezz_fifo_0_COREFIFO_0_corefifo_sync 7
+module work mezz_fifo_mezz_fifo_0_COREFIFO_mezz_fifo_mezz_fifo_0_COREFIFO_0_corefifo_sync_scntr 6
+module work mezz_fifo_mezz_fifo_0_COREFIFO_mezz_fifo_mezz_fifo_0_COREFIFO_0_corefifo_fwft 5
+module work mezz_fifo_mezz_fifo_0_COREFIFO_mezz_fifo_mezz_fifo_0_COREFIFO_0_corefifo_async 4
+module work mezz_fifo_mezz_fifo_0_COREFIFO_mezz_fifo_mezz_fifo_0_COREFIFO_0_corefifo_nstagessync 3
+module work mezz_fifo_mezz_fifo_0_COREFIFO_mezz_fifo_mezz_fifo_0_COREFIFO_0_corefifo_graytobinconv 2
+module work CLKBUF_DIFF_ODT 1
+module work CLKBUF_DIFF 1
+module work PFSOC_SCSM 1
+module work CORELNKTMR_V 1
+module work XCVR 1
+module work XCVR_VV 1
+module work XCVR_TEST 1
+module work XCVR_REF_CLK 1
+module work XCVR_REF_CLK_P 1
+module work XCVR_REF_CLK_N 1
+module work XCVR_PMA 1
+module work XCVR_PIPE 1
+module work XCVR_PIPE_AXI1 1
+module work XCVR_PIPE_AXI0 1
+module work XCVR_DUAL_PCS 1
+module work XCVR_APB_LINK_V2 1
+module work XCVR_APB_LINK_V 1
+module work XCVR_APB_LINK 1
+module work XCVR_8B10B 1
+module work XCVR_64B6XB 1
+module work VREFCTRL 1
+module work VREFBANKDYN 1
+module work VOLTAGEDETECT 1
+module work USPI 1
+module work UPROM 1
+module work TX_PLL 1
+module work TVS 1
+module work TAMPER 1
+module work SYS_SERVICES 1
+module work SYSRESET 1
+module work SYSCTRL_RESET_STATUS 1
+module work SCB 1
+module work QUADRST 1
+module work QUADRST_PCIE 1
+module work PLL 1
+module work PF_SPI 1
+module work PCIE 1
+module work PCIE_COMMON 1
+module work OSC_RC2MHZ 1
+module work OSC_RC200MHZ 1
+module work OSC_RC160MHZ 1
+module work LANERST 1
+module work LANECTRL 1
+module work IOD 1
+module work INIT 1
+module work ICB_NGMUX 1
+module work ICB_MUXING 1
+module work ICB_INT 1
+module work ICB_CLKSTOP 1
+module work ICB_CLKSTOP_EN 1
+module work ICB_CLKINT 1
+module work ICB_CLKDIV 1
+module work ICB_CLKDIVDELAY 1
+module work ICB_BANKCLK 1
+module work HS_IO_CLK 1
+module work GPSS_COMMON 1
+module work GLITCHDETECT 1
+module work ENFORCE 1
+module work DRI 1
+module work DLL 1
+module work DEBUG 1
+module work CRYPTO_SOC 1
+module work CRYPTO 1
+module work CRN_INT 1
+module work CRN_COMMON 1
+module work BANKEN 1
+module work BANKCTRL_HSIO 1
+module work BANKCTRL_GPIO 1
+module work BANKCTRLM 1
+module work APBS 1
+module work APBM 1
+module work mezz_fifo 0
+arch work mezz_fifo rtl 0

@@ -1,0 +1,2 @@
+Library, Design Unit ,Compile time , Hardware Gen ,Optimization Stg1 ,Optimization Stg2 , Peak Mem Usage, Incr Mem Usage, Hardware Gen ,Optimization Stg1 ,Optimization Stg2
+work , Entity: serial_eeprom_if_v2 Architecture: rtl,0h:00m:02s,0h:00m:00s,0h:00m:00s,0h:00m:02s,   138 MB,    18 MB,     0 MB,    13 MB,     6 MB

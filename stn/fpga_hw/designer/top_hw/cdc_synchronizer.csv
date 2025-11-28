@@ -1,0 +1,9 @@
+Synchronizer SLE From,Synchronizer SLE To,Manhattan Cluster Distance
+phy_if_0/tx_done_sync2,phy_if_0/phy_rx_status[0],0
+phy_if_0/rx_good_sync2,phy_if_0/phy_rx_status[1],0
+phy_if_0/ctrl_pkg_transceiver_inst/rx_good,phy_if_0/rx_good_sync1,0
+phy_if_0/rx_good_sync1,phy_if_0/rx_good_sync2,0
+phy_if_0/ctrl_pkg_transceiver_inst/tx_done,phy_if_0/tx_done_sync1,0
+phy_if_0/tx_done_sync1,phy_if_0/tx_done_sync2,0
+phy_if_0/tx_start,phy_if_0/tx_start_sync1,1
+phy_if_0/tx_start_sync1,phy_if_0/tx_start_sync2,0
