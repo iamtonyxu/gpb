@@ -1,0 +1,15 @@
+Software Version: 2024.2.0.13
+Opened 'C:\repo2\gpb\dmd\P1060973_FPGA\designer\top\top_fp\top.pro'
+PDB file 'C:\repo2\gpb\dmd\P1060973_FPGA\designer\top\top.pdb' has been loaded successfully.
+DESIGN : top;  CHECKSUM : 5373;  PDB_VERSION : 1.9
+Info: Programming Interface selected is JTAG.
+Info: Design version: 0
+File/Folder 'C:\repo2\gpb\dmd\P1060973_FPGA\designer\top\top.ppd' will be overwritten.
+Successfully exported PPD file for currently secured device: 'C:\repo2\gpb\dmd\P1060973_FPGA\designer\top\top.ppd'; file programs Fabric and sNVM.
+Fabric component bitstream digest: 72f4c75ccbbcb4505952ddb72eadb9361a3edaee3ec89a7c32ef29a5f0b86b51
+sNVM component bitstream digest: bf91de18849e1b243e90ebd58b0e2db30a63b77f2fae436afd58ac3aacd80f2c
+Entire bitstream digest: 4402cb9bf886bac8e56fe15a23ea26baf1af57ce1fefc6f6f21a38d9f4846da4
+Finished: Mon Jun 23 18:11:44 2025 (Elapsed time 00:00:25)
+
+Project saved.
+Project closed.

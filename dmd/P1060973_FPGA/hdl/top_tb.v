@@ -4,13 +4,13 @@ module top_tb;
 
     // Test Case Configuration
     integer SCRATCHPAD_TEST        = 0;    // Enable Scratchpad Test
-    integer ADC_TEST               = 0;    // Enable ADC Test
+    integer ADC_TEST               = 1;    // Enable ADC Test
     integer DAC_TEST               = 0;    // Enable DAC Test
     integer EEPROM_TEST            = 0;    // Enable EEPROM Test
     integer OSC_COUNTER_TEST       = 0;    // Enable Oscillator Counter Test
     integer GPIO_TEST              = 0;    // Enable GPIO Test
     integer MSSB_TEST              = 0;    // Enable MSSB Test
-    integer GANTRY_MOT_TEST        = 1;    // Enable Gantry Motor Test
+    integer GANTRY_MOT_TEST        = 0;    // Enable Gantry Motor Test
     integer LIFT_MOT_TEST          = 0;    // Enable Lift Motor Test
     integer GANTRY_BRK_TEST        = 0;    // Enable Gantry Brake Test
 
@@ -346,11 +346,16 @@ module top_tb;
         // ADC Test
         if (ADC_TEST == 1) begin
             $display("ADC Test Start...");
+            // OPB WRITE: Configure ADC Control Register: Sample length = 16
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h06); uart_send(8'h08); uart_send(8'h06);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h10); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
             // OPB WRITE: Trigger ADC Convert
             uart_send(8'h5A); uart_send(8'h00); uart_send(8'h06); uart_send(8'h08); uart_send(8'h00);
             uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h02); uart_send(8'hA5);
-            repeat(10) uart_recv(uart_tdata);
-            #1000000;    // Wait 1us
+            repeat(16) uart_recv(uart_tdata); // Sample length = 16
+            #2000000;    // Wait 2ms
 
             // OPB Read: Check ADC Status
             uart_send(8'h5B); uart_send(8'h00); uart_send(8'h06); uart_send(8'h08); uart_send(8'h08);
@@ -736,7 +741,31 @@ end
             repeat(10) uart_recv(uart_tdata);
 
             // Wait for some time
-            #(1000000); // Wait for 1ms 
+            #(1000000); // Wait for 1ms
+
+            // Write motor start: ADDR_PWM_CONTROL, pwm_start = 1
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h10*ii); uart_send(8'h05);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h01); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Wait for some time
+            #(1000000); // Wait for 1ms
+
+            // Simulate over-current condition
+            OC_V_GNT_BRK_DRV = 1;
+            #400; // Wait for 400us
+            OC_V_GNT_BRK_DRV = 0;
+
+            // Wait for some time
+            #(1000000); // Wait for 1ms
+
+            // Write motor start: ADDR_PWM_CONTROL, pwm_stop = 1
+            uart_send(8'h5A); uart_send(8'h00); uart_send(8'h07); uart_send(8'h10*ii); uart_send(8'h05);
+            uart_send(8'h00); uart_send(8'h00); uart_send(8'h00); uart_send(8'h02); uart_send(8'hA5);
+            repeat(10) uart_recv(uart_tdata);
+
+            // Wait for some time
+            #(10000); // Wait for 10us
 
             // OPB WRITE: Gantry Motor Write
             // Write to PWM configuration register, test_mode = 1, set_test_duration = 16'h10, 16*25 = 0.4ms

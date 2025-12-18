@@ -18,11 +18,11 @@ Finished optimization stage 1 on PH_PWM (CPU Time 0h:00m:00s, Memory Used curren
 @N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\SIMPLE_PH_PWM.vhd":5:7:5:19|Synthesizing work.simple_ph_pwm.behavioral.
 Post processing for work.simple_ph_pwm.behavioral
 Running optimization stage 1 on SIMPLE_PH_PWM .......
-Finished optimization stage 1 on SIMPLE_PH_PWM (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 97MB)
+Finished optimization stage 1 on SIMPLE_PH_PWM (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
 @N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":22:7:22:19|Synthesizing work.cmn_debouncer.rtl.
 Post processing for work.cmn_debouncer.rtl
 Running optimization stage 1 on cmn_debouncer .......
-Finished optimization stage 1 on cmn_debouncer (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 97MB)
+Finished optimization stage 1 on cmn_debouncer (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
 Post processing for work.cmn_pwm.rtl
 Running optimization stage 1 on cmn_pwm .......
 @W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":195:9:195:10|Pruning unused register sync_mot_pwm_param45_3(9 downto 0). Make sure that there are no unused intermediate registers.
@@ -31,7 +31,7 @@ Running optimization stage 1 on cmn_pwm .......
 @W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":167:9:167:10|Pruning unused register valid_mot_pwm_param45_4(9 downto 0). Make sure that there are no unused intermediate registers.
 @W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":167:9:167:10|Pruning unused register valid_mot_pwm_param23_4(9 downto 0). Make sure that there are no unused intermediate registers.
 @W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":167:9:167:10|Pruning unused register valid_mot_pwm_param01_6(9 downto 0). Make sure that there are no unused intermediate registers.
-Finished optimization stage 1 on cmn_pwm (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 97MB)
+Finished optimization stage 1 on cmn_pwm (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
 @N: Setting default value for generic baud_rate to 921600;
 @N: Setting default value for generic clock_frequency to 100000000;
 @N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":42:7:42:14|Synthesizing work.cmn_uart.rtl.
@@ -49,7 +49,7 @@ Finished optimization stage 1 on work_cmn_uart_rtl_false_921600_100000000_1_BAUD
 @N: CD604 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd":298:20:298:33|OTHERS clause is not synthesized.
 Post processing for work.serial_eeprom_if.rtl
 Running optimization stage 1 on serial_eeprom_if .......
-Finished optimization stage 1 on serial_eeprom_if (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 99MB)
+Finished optimization stage 1 on serial_eeprom_if (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
 @N: Setting default value for generic baud_rate to 115200;
 @N: Setting default value for generic clock_frequency to 100000000;
 @N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":42:7:42:14|Synthesizing work.cmn_uart.rtl.
@@ -132,9 +132,9 @@ Running optimization stage 2 on cmn_debouncer_8_8 .......
 @W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Pruning register bit 29 of debounce_cntr(29 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Optimizing register bit debounce_cntr(28) to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Pruning register bit 28 of debounce_cntr(28 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-Finished optimization stage 2 on cmn_debouncer_8_8 (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 102MB)
+Finished optimization stage 2 on cmn_debouncer_8_8 (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 103MB)
 Running optimization stage 2 on SIMPLE_PH_PWM .......
-Finished optimization stage 2 on SIMPLE_PH_PWM (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 102MB)
+Finished optimization stage 2 on SIMPLE_PH_PWM (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 103MB)
 Running optimization stage 2 on PH_PWM_625_0_80_128_3_3 .......
 Finished optimization stage 2 on PH_PWM_625_0_80_128_3_3 (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 104MB)
 Running optimization stage 2 on CMN_DEADBAND_5 .......

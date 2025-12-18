@@ -48,6 +48,7 @@ module cmn_pwm_wrapper
     parameter DEFAULT_TEST_DURATION = 16'd4000; // 100ms at start_pwm_period_out (25us) if test_mode = 1
     parameter MAX_TEST_DURATION = 16'd5000; // 125ms at start_pwm_period_out (25us) if test_mode = 1
     parameter MAX_SYNC_CNTR = 3; // 3 clock cycles at 25MHz
+    parameter DEBOUNCE_TIME = 8; // 8 clock cycles  at 25MHz
 
     // Internal registers
     // pwm_config[2] -> test_mode
@@ -98,6 +99,9 @@ module cmn_pwm_wrapper
     wire [1:0] brk_pwm;
     wire mot_en_out;
     wire brk_en_out;
+
+    wire filt_mot_over_curr; // filtered motor over-current signal
+    wire filt_brk_over_curr; // filtered brake over-current signal
 
     // OPB write operation
     // pwm_config
@@ -186,7 +190,7 @@ module cmn_pwm_wrapper
     * 1) pwm_start = 1 and pwm_stop = 0
     * pwm_start will trigger the state from ST_IDLE to ST_PWM when
     * With test_mode = 0: 
-    *   1) pwm_stop = 1
+    *   1) pwm_stop = 1; 2) over-current detected
     * With test_mode = 1:
     *   1) pwm_stop = 1;  or 2) after 100ms;  or 3) over-current detected 
     *
@@ -222,10 +226,16 @@ module cmn_pwm_wrapper
                     if(pwm_stop) begin
                         state <= ST_IDLE;
                     end else if(test_mode) begin
-                        if ((act_test_duration == set_test_duration + 1) || mot_over_curr_i || brk_over_curr_i) begin
+                        if ((act_test_duration == set_test_duration + 1) || filt_mot_over_curr || filt_brk_over_curr) begin
                             state <= ST_IDLE;
                         end else begin
                             state <= ST_PWM;
+                        end
+                    end else begin
+                        if (filt_mot_over_curr || filt_brk_over_curr) begin
+                            state <= ST_IDLE; // stop PWM generation if over-current detected
+                        end else begin
+                            state <= ST_PWM; // continue PWM generation
                         end
                     end
                 end
@@ -264,10 +274,10 @@ module cmn_pwm_wrapper
             pwm_status <= 0;
         end else if(state == ST_PWM) begin
             pwm_status[23:8] <= act_test_duration;
-            if(mot_over_curr_i) begin
+            if(filt_mot_over_curr) begin
                 pwm_status[0] <= 1; // over-current detected
             end
-            if(brk_over_curr_i) begin
+            if(filt_brk_over_curr) begin
                 pwm_status[1] <= 1; // over-current detected
             end
         end else if (state == ST_IDLE && pwm_start) begin
@@ -319,6 +329,32 @@ module cmn_pwm_wrapper
         .brk_en_in(brk_pwm_enable),
         .mel_ctrl(1'b1),
         .start_pwm_period_out(start_pwm_period_out)
+    );
+
+    // Motor over-current debouncer
+    cmn_debouncer #(
+        .DEBOUNCE_TIME_LTOH(DEBOUNCE_TIME),
+        .DEBOUNCE_TIME_HTOL(DEBOUNCE_TIME)
+    ) i_mot_filt (
+        .clk(clk_25MHz),
+        .reset(OPB_RST),
+        .clk_en(1'b1),
+        .bypass(1'b0),
+        .sig_in(mot_over_curr_i),
+        .sig_out(filt_mot_over_curr)
+    );
+
+    // Brake over-current debouncer
+    cmn_debouncer #(
+        .DEBOUNCE_TIME_LTOH(DEBOUNCE_TIME),
+        .DEBOUNCE_TIME_HTOL(DEBOUNCE_TIME)
+    ) i_brk_filt (
+        .clk(clk_25MHz),
+        .reset(OPB_RST),
+        .clk_en(1'b1),
+        .bypass(1'b0),
+        .sig_in(brk_over_curr_i),
+        .sig_out(filt_brk_over_curr)
     );
 
     // assign outputs

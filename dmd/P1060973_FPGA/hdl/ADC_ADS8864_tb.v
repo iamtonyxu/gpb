@@ -1,6 +1,6 @@
 `timescale 1ns / 100ps
 
-module ADC_ADS8864_tb;
+module ADC_ADS8864_V2_tb;
 
     // Inputs
     reg [31:0] OPB_DI;
@@ -11,6 +11,8 @@ module ADC_ADS8864_tb;
     reg OPB_RST;
     reg SYSCLK;
     wire ADC_SDOUT;
+    wire UART_TXD;
+    wire UART_OVERRIDE;
 
     // Outputs
     wire [31:0] OPB_DO;
@@ -35,7 +37,9 @@ module ADC_ADS8864_tb;
         //.SYSCLK(SYSCLK),
         .ADC_CNVST(ADC_CNVST),
         .ADC_SCLK(ADC_SCLK),
-        .ADC_SDOUT(ADC_SDOUT)
+        .ADC_SDOUT(ADC_SDOUT),
+        .UART_TXD(UART_TXD),
+        .UART_OVERRIDE(UART_OVERRIDE)
     );
 
     DUT_ADS8864 adc_dut (

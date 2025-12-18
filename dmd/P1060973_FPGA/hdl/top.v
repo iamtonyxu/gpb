@@ -346,6 +346,10 @@ module top(
     wire          lft_mot_pwr_en_2;
     wire          lft_mot_pwr_override;
 
+    // ADC UART signals
+    wire ADC_UART_TXD;
+    wire ADC_UART_OVERRIDE;
+
     // PWM Test has higher priority than GPIO
     assign GNT_MOT_PWR_EN = gnt_mot_pwr_override ? gnt_mot_pwr_en_2 : gnt_mot_pwr_en_1;
     assign GNT_BRK_PWR_EN = (|gnt_brk_pwr_override) ? (|gnt_brk_pwr_en_2) : gnt_brk_pwr_en_1; // Brake power enable
@@ -357,18 +361,28 @@ module top(
     assign GNT_PWM_PHB_LO = gantry_mot_pwm[3]; // PWM phase B low
     assign GNT_PWM_PHC_HI = gantry_mot_pwm[4]; // PWM phase C high
     assign GNT_PWM_PHC_LO = gantry_mot_pwm[5]; // PWM phase C low
+    
     assign GNT_BRK1_PWM_HI = gantry_brk1_pwm[0]; // Brake 1 PWM high
     assign GNT_BRK1_PWM_LO = gantry_brk1_pwm[1]; // Brake 1 PWM low
-    assign GNT_BRK1_RET_PWM_HI = gantry_brk1_ret_pwm[0]; // Brake 1 ret PWM high
-    assign GNT_BRK1_RET_PWM_LO = gantry_brk1_ret_pwm[1]; // Brake 1 ret PWM low
+    assign GNT_BRK1_RET_PWM_HI = gantry_brk1_pwm[1]; // Brake 1 ret PWM high
+    assign GNT_BRK1_RET_PWM_LO = gantry_brk1_pwm[0]; // Brake 1 ret PWM low
+    //assign GNT_BRK1_RET_PWM_HI = gantry_brk1_ret_pwm[0]; // Brake 1 ret PWM high
+    //assign GNT_BRK1_RET_PWM_LO = gantry_brk1_ret_pwm[1]; // Brake 1 ret PWM low
+    
     assign GNT_BRK2_PWM_HI = gantry_brk2_pwm[0]; // Brake 2 PWM high
     assign GNT_BRK2_PWM_LO = gantry_brk2_pwm[1]; // Brake 2 PWM low
-    assign GNT_BRK2_RET_PWM_HI = gantry_brk2_ret_pwm[0]; // Brake 2 ret PWM high
-    assign GNT_BRK2_RET_PWM_LO = gantry_brk2_ret_pwm[1]; // Brake 2 ret PWM low
+    assign GNT_BRK2_RET_PWM_HI = gantry_brk2_pwm[1]; // Brake 2 ret PWM high
+    assign GNT_BRK2_RET_PWM_LO = gantry_brk2_pwm[0]; // Brake 2 ret PWM low
+    //assign GNT_BRK2_RET_PWM_HI = gantry_brk2_ret_pwm[0]; // Brake 2 ret PWM high
+    //assign GNT_BRK2_RET_PWM_LO = gantry_brk2_ret_pwm[1]; // Brake 2 ret PWM low
+    
     assign GNT_BRK3_PWM_HI = gantry_brk3_pwm[0]; // Brake 3 PWM high
     assign GNT_BRK3_PWM_LO = gantry_brk3_pwm[1]; // Brake 3 PWM low
-    assign GNT_BRK3_RET_PWM_HI = gantry_brk3_ret_pwm[0]; // Brake 3 ret PWM high
-    assign GNT_BRK3_RET_PWM_LO = gantry_brk3_ret_pwm[1]; // Brake 3 ret PWM low
+    assign GNT_BRK3_RET_PWM_HI = gantry_brk3_pwm[1]; // Brake 3 ret PWM high
+    assign GNT_BRK3_RET_PWM_LO = gantry_brk3_pwm[0]; // Brake 3 ret PWM low
+    //assign GNT_BRK3_RET_PWM_HI = gantry_brk3_ret_pwm[0]; // Brake 3 ret PWM high
+    //assign GNT_BRK3_RET_PWM_LO = gantry_brk3_ret_pwm[1]; // Brake 3 ret PWM low
+    
     assign LFT_PWM_PHA_HI = lift_mot_pwm[0]; // Lift motor phase A high
     assign LFT_PWM_PHA_LO = lift_mot_pwm[1]; // Lift motor phase A low
     assign LFT_PWM_PHB_HI = lift_mot_pwm[2]; // Lift motor phase B high
@@ -379,7 +393,7 @@ module top(
 //
     assign SYS_CLK = FPGA_100M_CLK; // 100MHz Clock
     
-    assign POWER_GOOD = PULSE_1HZ; // Power good signal after FPGA programmed
+    assign POWER_GOOD = 1; // Power good signal after FPGA programmed
     assign MSSB_COMM_FAULT = PULSE_1HZ; // MSSB communication fault signal
     assign HSWAP_FAULT = PULSE_1HZ; // HSWAP fault signal
 
@@ -387,7 +401,7 @@ module top(
     assign DBUG_HEADER8 = PULSE_20KHZ; // CLK_20KHZ output for debugging
     assign REF_CLK_2KHZ = DBUG_HEADER10; // REF_CLK_2KHZ input for Freq counter
 
-    assign DBUG_HEADER4 = UART_TXD;
+    assign DBUG_HEADER4 = ADC_UART_OVERRIDE ? ADC_UART_TXD : UART_TXD;
     assign UART_RXD = DBUG_HEADER2;
 
     // PULSE_1HZ
@@ -556,9 +570,10 @@ module top(
         .SP2_WE(SP2_WE)                  // Scratchpad 2 write enable
     );
 
-    EEPROM_OPB_IF eeprom_0(
+    EEPROM_OPB_IF_V2 eeprom_0(
     .OPB_CLK(OPB_CLK),               // OPB clock
     .OPB_RST(OPB_RST),               // OPB reset
+    .OPB_ADDR(OPB_ADDR[15:0]),       // OPB address
     .EEP_DI(OPB_DO),                 // EEPROM data input
     .EEP_RE(EEP_RE),                 // EEPROM read enable
     .EEP_WE(EEP_WE),                 // EEPROM write enable
@@ -580,7 +595,9 @@ ADC_ADS8864_IF adc_0 (
 
     .ADC_CNVST(ADC_CNVST),
     .ADC_SCLK(ST_ADC_CLK),
-    .ADC_SDOUT(ADC_SDOUT)
+    .ADC_SDOUT(ADC_SDOUT),
+    .UART_TXD(ADC_UART_TXD),
+    .UART_OVERRIDE(ADC_UART_OVERRIDE)
 );
 
 DAC_DACx0504_IF dac_0 (

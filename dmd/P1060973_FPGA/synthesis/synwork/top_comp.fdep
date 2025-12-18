@@ -5,7 +5,7 @@
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\hypermods.v":1721919828
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\scemi_objects.v":1721919828
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\scemi_pipes.svh":1721919828
-#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\component\\polarfire_syn_comps.v":1749236594
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\component\\polarfire_syn_comps.v":1750671919
 #CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\CLK_DIV.V":1745416052
 #CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\dual_port_ram.v":1745416052
 #CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\ADC_ADS8864_IF.v":1746520293
@@ -26,10 +26,10 @@
 #CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\opb_emu_target.v":1745634123
 #CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\cmd_server.v":1745416052
 #CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\cmn_pwm_wrapper.v":1748179875
-#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\top.v":1749233631
-#CUR:"afifo_8s_4s_8s_4s_mem_9640_initial_block":1749236596
-#CUR:"afifo_8s_2s_8s_2s_mem_9640_initial_block":1749236597
-#CUR:"afifo_24s_4s_24s_4s_mem_9640_initial_block":1749236597
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\top.v":1750671879
+#CUR:"afifo_8s_4s_8s_4s_mem_22728_initial_block":1750671922
+#CUR:"afifo_8s_2s_8s_2s_mem_22728_initial_block":1750671923
+#CUR:"afifo_24s_4s_24s_4s_mem_22728_initial_block":1750671924
 #OPTIONS:"|-mixedhdl|-top|work.cmn_pwm|-top|work.cmn_uart|-top|work.serial_eeprom_if|-top|work.cmn_uart|-mpparams|C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\synthesis\\synwork\\_mh_params|-layerid|1|-orig_srs|C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\synthesis\\synwork\\top_comp.srs|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-work_is_curlib|1|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-vhdl2008|-work_is_curlib|1|-ignore_undefined_lib|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\bin64\\c_vhdl.exe":1721969626
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\location.map":1721919830

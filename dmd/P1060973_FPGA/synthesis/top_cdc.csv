@@ -101,6 +101,6 @@ SERNO,END_INSTANCE,END_CLOCK,START_CLOCK,START_INSTANCE,CDC_TYPE,SYNCHRONIZER,NU
 100,osc_counter_0.resetb,top|FPGA_100M_CLK,top|DBUG_HEADER10,osc_counter_0.cntr_trig,Different Clock Domains,NO,0,NO,Combinatorial logic detected at clock domain crossing. Enable signal for synchonizer registers does not have a safe crossing.
 101,osc_counter_0.startb,top|FPGA_100M_CLK,top|DBUG_HEADER10,osc_counter_0.cntr_trig,Different Clock Domains,NO,0,NO,Combinatorial logic detected at clock domain crossing. Enable signal for synchonizer registers does not have a safe crossing.
 102,osc_counter_0.count_data[15:0],top|FPGA_100M_CLK,top|DBUG_HEADER10,osc_counter_0.cntr_trig,Different Clock Domains,NO,0,NO,Combinatorial logic detected at clock domain crossing.
-103,osc_counter_0.opb_fifo_inst.wq1_rgray[2:0],top|FPGA_100M_CLK,top|DBUG_HEADER10,osc_counter_0.opb_fifo_inst.rgray[1:0],Different Clock Domains,YES,2,NO,Divergence detected in the crossover path.
-104,osc_counter_0.opb_fifo_inst.rq1_wgray[2:0],top|DBUG_HEADER10,top|FPGA_100M_CLK,osc_counter_0.opb_fifo_inst.wgray[1:0],Different Clock Domains,YES,2,NO,Divergence detected in the crossover path.
+103,osc_counter_0.opb_fifo_inst.wq1_rgray[2:0],top|FPGA_100M_CLK,top|DBUG_HEADER10,osc_counter_0.opb_fifo_inst.rbin[2:0],Different Clock Domains,YES,2,NO,Divergence detected in the crossover path.
+104,osc_counter_0.opb_fifo_inst.rq1_wgray[2:0],top|DBUG_HEADER10,top|FPGA_100M_CLK,osc_counter_0.opb_fifo_inst.wbin[2:0],Different Clock Domains,YES,2,NO,Divergence detected in the crossover path.
 105,cmd_server_0.opb_emu_target_inst.msg_write_inst.tx_data[31:0],top|FPGA_100M_CLK,CLOCK_DIV_9|N_17_inferred_clock,dac_0.data_in_ram.ram[23:0],Different Clock Domains,YES,NA,Not Analyzed,Potential RAM synchronizer detected.

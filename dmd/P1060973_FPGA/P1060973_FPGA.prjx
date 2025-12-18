@@ -300,22 +300,22 @@ SIZE="159"
 ENDFILE
 VALUE "<project>\synthesis\top.so,so"
 STATE="utd"
-TIME="1749173917"
+TIME="1749236664"
 SIZE="211"
 ENDFILE
 VALUE "<project>\synthesis\top.vm,syn_vm"
 STATE="utd"
-TIME="1749173914"
-SIZE="2803502"
+TIME="1749236661"
+SIZE="2864799"
 ENDFILE
 VALUE "<project>\synthesis\top_syn.prj,prj"
 STATE="utd"
-TIME="1749173918"
-SIZE="4861"
+TIME="1749236665"
+SIZE="4927"
 ENDFILE
 VALUE "<project>\synthesis\top_vm.sdc,syn_sdc"
 STATE="utd"
-TIME="1749173915"
+TIME="1749236662"
 SIZE="5023"
 ENDFILE
 ENDLIST
@@ -426,8 +426,8 @@ NAME="synplify_Pro"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\bin\synplify_pro.exe"
-PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
-BATCH=1
+PARAM=""
+BATCH=0
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -486,15 +486,8 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-Reports;Reports;0
-ReportsCurrentItem;Export FlashPro Express Job:top_exportJob.log
-HDL;hdl\PH_PWM_SIMPLE.vhd;0
-HDL;hdl\cmn_pwm.vhd;0
-HDL;hdl\MSSB_IF.v;0
-HDL;synthesis\top.srr;0
-HDL;hdl\top.v;0
 StartPage;StartPage;0
-ACTIVEVIEW;Reports
+ACTIVEVIEW;StartPage
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADC_ADS8864_IF::work","hdl\ADC_ADS8864_IF.v","FALSE","FALSE"
