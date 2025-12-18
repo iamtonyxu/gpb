@@ -1,0 +1,4 @@
+@W: BN120 |Unrecognized resource in syn_allowed_resources: ultrarams
+@W: BN120 |Unrecognized resource in syn_allowed_resources: ultrarams
+@W: BN120 |Unrecognized resource in syn_allowed_resources: ultrarams
+@W: BN120 |Unrecognized resource in syn_allowed_resources: ultrarams

@@ -1,0 +1,16 @@
+Project Name: fpga_app
+Location: C:\repo1\gpb\stn\fpga_app
+Description: 
+Preferred HDL Type: Verilog
+
+#-----------------------------------------------------
+                  Device Details
+#-----------------------------------------------------
+
+Part Number    : MPF100T-1FCG484E
+Family         : PolarFire
+Die            : MPF100T
+Package        : FCG484
+Speed          : -1
+Core Voltage   : 1.0
+Range          : EXT

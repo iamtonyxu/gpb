@@ -1,0 +1,1821 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?xml-stylesheet href="rptstyle.xsl" type="text/xsl" ?>
+<doc>
+<text>SmartTime Version 2024.2.0.13</text>
+<text>Microchip Technology Inc. - Microchip Libero Software Release v2024.2 (Version 2024.2.0.13)
+Date: Fri Oct 17 11:01:44 2025 </text>
+<table>
+<header>
+</header>
+<row>
+ <cell>Design</cell>
+ <cell>top_hw</cell>
+</row>
+<row>
+ <cell>Family</cell>
+ <cell>PolarFire</cell>
+</row>
+<row>
+ <cell>Die</cell>
+ <cell>MPF050T</cell>
+</row>
+<row>
+ <cell>Package</cell>
+ <cell>FCVG484</cell>
+</row>
+<row>
+ <cell>Temperature Range</cell>
+ <cell>0 - 100 C</cell>
+</row>
+<row>
+ <cell>Voltage Range</cell>
+ <cell>0.97 - 1.03 V</cell>
+</row>
+<row>
+ <cell>Speed Grade</cell>
+ <cell>STD</cell>
+</row>
+</table>
+<text></text>
+<text></text>
+<section>
+<name>Coverage Summary</name>
+<text></text>
+<table>
+<header>
+ <cell>Type of check</cell>
+ <cell>Constrained</cell>
+ <cell>UnConstrained</cell>
+ <cell>Total</cell>
+</header>
+<row>
+ <cell>Setup</cell>
+ <cell>         4347</cell>
+ <cell>          328</cell>
+ <cell>         4675</cell>
+</row>
+<row>
+ <cell>Recovery</cell>
+ <cell>          304</cell>
+ <cell>         2182</cell>
+ <cell>         2486</cell>
+</row>
+<row>
+ <cell>Output Setup</cell>
+ <cell>            6</cell>
+ <cell>           65</cell>
+ <cell>           71</cell>
+</row>
+<row>
+ <cell>Total Setup</cell>
+ <cell>         4657</cell>
+ <cell>         2575</cell>
+ <cell>         7232</cell>
+</row>
+<separator/>
+<row>
+ <cell>Hold</cell>
+ <cell>         4347</cell>
+ <cell>          328</cell>
+ <cell>         4675</cell>
+</row>
+<row>
+ <cell>Removal</cell>
+ <cell>          304</cell>
+ <cell>         2182</cell>
+ <cell>         2486</cell>
+</row>
+<row>
+ <cell>Output Hold</cell>
+ <cell>            6</cell>
+ <cell>           65</cell>
+ <cell>           71</cell>
+</row>
+<row>
+ <cell>Total Hold</cell>
+ <cell>         4657</cell>
+ <cell>         2575</cell>
+ <cell>         7232</cell>
+</row>
+</table>
+<section>
+<name>Clock domain: </name>
+<text>HDW_DBUG_MISO</text>
+<text></text>
+<table>
+<header>
+ <cell>Type of check</cell>
+ <cell>Constrained</cell>
+ <cell>UnConstrained</cell>
+ <cell>Total</cell>
+</header>
+<row>
+ <cell>Setup</cell>
+ <cell>            0</cell>
+ <cell>           26</cell>
+ <cell>           26</cell>
+</row>
+<row>
+ <cell>Recovery</cell>
+ <cell>            0</cell>
+ <cell>           26</cell>
+ <cell>           26</cell>
+</row>
+<row>
+ <cell>Output Setup</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Total Setup</cell>
+ <cell>            0</cell>
+ <cell>           52</cell>
+ <cell>           52</cell>
+</row>
+<separator/>
+<row>
+ <cell>Hold</cell>
+ <cell>            0</cell>
+ <cell>           26</cell>
+ <cell>           26</cell>
+</row>
+<row>
+ <cell>Removal</cell>
+ <cell>            0</cell>
+ <cell>           26</cell>
+ <cell>           26</cell>
+</row>
+<row>
+ <cell>Output Hold</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Total Hold</cell>
+ <cell>            0</cell>
+ <cell>           52</cell>
+ <cell>           52</cell>
+</row>
+</table>
+<section>
+<name>Enhancement Suggestions</name>
+<text></text>
+<text> - Clock constraint is missing </text>
+<text> - Max input delay constraint missing on port:</text>
+<text>   </text>
+<list>
+ <item>HDW_DEVRST_N</item>
+</list>
+<text></text>
+<text> - Min input delay constraint missing on port:</text>
+<text>   </text>
+<list>
+ <item>HDW_DEVRST_N</item>
+</list>
+<text></text>
+<text></text>
+<text></text>
+<text> - Setup unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>oscillator_counter_0/cntr_trig:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/o_rempty:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rbin[0]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rbin[1]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rbin[2]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rgray[0]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rgray[1]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq1_wgray[0]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq1_wgray[1]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq1_wgray[2]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq2_wgray[0]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq2_wgray[1]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq2_wgray[2]:D</item>
+ <item>oscillator_counter_1/cntr_trig:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/o_rempty:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rbin[0]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rbin[1]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rbin[2]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rgray[0]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rgray[1]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq1_wgray[0]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq1_wgray[1]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq1_wgray[2]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq2_wgray[0]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq2_wgray[1]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq2_wgray[2]:D</item>
+</list>
+<text></text>
+<text> - Recovery unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>oscillator_counter_0/cntr_trig:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/o_rempty:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rbin[0]:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rbin[1]:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rbin[2]:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rgray[0]:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rgray[1]:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq1_wgray[0]:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq1_wgray[1]:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq1_wgray[2]:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq2_wgray[0]:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq2_wgray[1]:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq2_wgray[2]:ALn</item>
+ <item>oscillator_counter_1/cntr_trig:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/o_rempty:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rbin[0]:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rbin[1]:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rbin[2]:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rgray[0]:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rgray[1]:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq1_wgray[0]:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq1_wgray[1]:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq1_wgray[2]:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq2_wgray[0]:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq2_wgray[1]:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq2_wgray[2]:ALn</item>
+</list>
+<text></text>
+<text> - Hold unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>oscillator_counter_0/cntr_trig:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/o_rempty:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rbin[0]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rbin[1]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rbin[2]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rgray[0]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rgray[1]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq1_wgray[0]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq1_wgray[1]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq1_wgray[2]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq2_wgray[0]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq2_wgray[1]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq2_wgray[2]:D</item>
+ <item>oscillator_counter_1/cntr_trig:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/o_rempty:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rbin[0]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rbin[1]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rbin[2]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rgray[0]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rgray[1]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq1_wgray[0]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq1_wgray[1]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq1_wgray[2]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq2_wgray[0]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq2_wgray[1]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq2_wgray[2]:D</item>
+</list>
+<text></text>
+<text> - Removal unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>oscillator_counter_0/cntr_trig:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/o_rempty:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rbin[0]:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rbin[1]:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rbin[2]:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rgray[0]:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rgray[1]:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq1_wgray[0]:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq1_wgray[1]:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq1_wgray[2]:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq2_wgray[0]:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq2_wgray[1]:ALn</item>
+ <item>oscillator_counter_0/opb_fifo_inst/rq2_wgray[2]:ALn</item>
+ <item>oscillator_counter_1/cntr_trig:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/o_rempty:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rbin[0]:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rbin[1]:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rbin[2]:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rgray[0]:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rgray[1]:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq1_wgray[0]:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq1_wgray[1]:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq1_wgray[2]:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq2_wgray[0]:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq2_wgray[1]:ALn</item>
+ <item>oscillator_counter_1/opb_fifo_inst/rq2_wgray[2]:ALn</item>
+</list>
+<text></text>
+</section>
+</section>
+<section>
+<name>Clock domain: </name>
+<text>clk_100mhz</text>
+<text></text>
+<table>
+<header>
+ <cell>Type of check</cell>
+ <cell>Constrained</cell>
+ <cell>UnConstrained</cell>
+ <cell>Total</cell>
+</header>
+<row>
+ <cell>Setup</cell>
+ <cell>         3703</cell>
+ <cell>           70</cell>
+ <cell>         3773</cell>
+</row>
+<row>
+ <cell>Recovery</cell>
+ <cell>            0</cell>
+ <cell>         2010</cell>
+ <cell>         2010</cell>
+</row>
+<row>
+ <cell>Output Setup</cell>
+ <cell>            3</cell>
+ <cell>           61</cell>
+ <cell>           64</cell>
+</row>
+<row>
+ <cell>Total Setup</cell>
+ <cell>         3706</cell>
+ <cell>         2141</cell>
+ <cell>         5847</cell>
+</row>
+<separator/>
+<row>
+ <cell>Hold</cell>
+ <cell>         3703</cell>
+ <cell>           70</cell>
+ <cell>         3773</cell>
+</row>
+<row>
+ <cell>Removal</cell>
+ <cell>            0</cell>
+ <cell>         2010</cell>
+ <cell>         2010</cell>
+</row>
+<row>
+ <cell>Output Hold</cell>
+ <cell>            3</cell>
+ <cell>           61</cell>
+ <cell>           64</cell>
+</row>
+<row>
+ <cell>Total Hold</cell>
+ <cell>         3706</cell>
+ <cell>         2141</cell>
+ <cell>         5847</cell>
+</row>
+</table>
+<section>
+<name>Enhancement Suggestions</name>
+<text></text>
+<text> - Max input delay constraint missing on ports:</text>
+<text>   </text>
+<list>
+ <item>APP_AUX_IO0</item>
+ <item>APP_AUX_IO1</item>
+ <item>APP_AUX_IO2</item>
+ <item>APP_AUX_IO3</item>
+ <item>APP_AUX_IO4</item>
+ <item>APP_AUX_IO5</item>
+ <item>APP_FPGA_SPI0_CS_N</item>
+ <item>APP_FPGA_SPI0_MOSI</item>
+ <item>APP_FPGA_SPI1_CS_N</item>
+ <item>APP_FPGA_SPI1_MOSI</item>
+ <item>APP_FPGA_SPI_CLK</item>
+ <item>BEL_SW_CONFIG0</item>
+ <item>BEL_SW_CONFIG1</item>
+ <item>BEL_SW_CONFIG2</item>
+ <item>BEL_SW_CONFIG3</item>
+ <item>BEL_SW_CONFIG4</item>
+ <item>BEL_SW_CONFIG5</item>
+ <item>BEL_SW_CONFIG6</item>
+ <item>BEL_SW_CONFIG7</item>
+ <item>BMENLP_STATE</item>
+ <item>CDOS_STS_N</item>
+ <item>CMNR_STS_N</item>
+ <item>CSPARESW1_N</item>
+ <item>CSPARESW2_N</item>
+ <item>DC_MAIN_DOOR_SW_N</item>
+ <item>DISABLE_HDW_FPGA</item>
+ <item>EMO_GOOD_N</item>
+ <item>HDW_DBUG_SCLK</item>
+ <item>HDW_DEVRST_N</item>
+ <item>HDW_EEP_SDO</item>
+ <item>HSSB_PMII_TX_DATA0</item>
+ <item>HSSB_PMII_TX_DATA1</item>
+ <item>HSSB_PMII_TX_DATA2</item>
+ <item>HSSB_PMII_TX_DATA3</item>
+ <item>HSSB_PMII_TX_EN</item>
+ <item>KVBEL_SW_CONFIG0</item>
+ <item>KVBEL_SW_CONFIG1</item>
+ <item>KVBEL_SW_CONFIG2</item>
+ <item>KVBEL_SW_CONFIG3</item>
+ <item>KVBEL_SW_CONFIG4</item>
+ <item>KVBEL_SW_CONFIG5</item>
+ <item>KVBEL_SW_CONFIG6</item>
+ <item>KVBEL_SW_CONFIG7</item>
+ <item>KVBMENLP_STATE</item>
+ <item>LS_ERROR_N</item>
+ <item>LS_OSSD1_N</item>
+ <item>MEL_SW_CONFIG0</item>
+ <item>MEL_SW_CONFIG1</item>
+ <item>MEL_SW_CONFIG2</item>
+ <item>MEL_SW_CONFIG3</item>
+ <item>MEL_SW_CONFIG4</item>
+ <item>MEL_SW_CONFIG5</item>
+ <item>MEL_SW_CONFIG6</item>
+ <item>MEL_SW_CONFIG7</item>
+ <item>MTNENLP_CCH_STATE</item>
+ <item>MTNENLP_DKB_STATE</item>
+ <item>MTNENLP_STATE</item>
+ <item>NEUTRON_DR_SW1_N</item>
+ <item>NEUTRON_DR_SW2_N</item>
+ <item>PENDANT_INST</item>
+ <item>PENDANT_MEB_N</item>
+ <item>PWRENLP_STATE</item>
+ <item>SPD_AC_DR_N</item>
+</list>
+<text></text>
+<text> - Min input delay constraint missing on ports:</text>
+<text>   </text>
+<list>
+ <item>APP_AUX_IO0</item>
+ <item>APP_AUX_IO1</item>
+ <item>APP_AUX_IO2</item>
+ <item>APP_AUX_IO3</item>
+ <item>APP_AUX_IO4</item>
+ <item>APP_AUX_IO5</item>
+ <item>APP_FPGA_SPI0_CS_N</item>
+ <item>APP_FPGA_SPI0_MOSI</item>
+ <item>APP_FPGA_SPI1_CS_N</item>
+ <item>APP_FPGA_SPI1_MOSI</item>
+ <item>APP_FPGA_SPI_CLK</item>
+ <item>BEL_SW_CONFIG0</item>
+ <item>BEL_SW_CONFIG1</item>
+ <item>BEL_SW_CONFIG2</item>
+ <item>BEL_SW_CONFIG3</item>
+ <item>BEL_SW_CONFIG4</item>
+ <item>BEL_SW_CONFIG5</item>
+ <item>BEL_SW_CONFIG6</item>
+ <item>BEL_SW_CONFIG7</item>
+ <item>BMENLP_STATE</item>
+ <item>CDOS_STS_N</item>
+ <item>CMNR_STS_N</item>
+ <item>CSPARESW1_N</item>
+ <item>CSPARESW2_N</item>
+ <item>DC_MAIN_DOOR_SW_N</item>
+ <item>DISABLE_HDW_FPGA</item>
+ <item>EMO_GOOD_N</item>
+ <item>HDW_DBUG_SCLK</item>
+ <item>HDW_DEVRST_N</item>
+ <item>HDW_EEP_SDO</item>
+ <item>HSSB_PMII_TX_DATA0</item>
+ <item>HSSB_PMII_TX_DATA1</item>
+ <item>HSSB_PMII_TX_DATA2</item>
+ <item>HSSB_PMII_TX_DATA3</item>
+ <item>HSSB_PMII_TX_EN</item>
+ <item>KVBEL_SW_CONFIG0</item>
+ <item>KVBEL_SW_CONFIG1</item>
+ <item>KVBEL_SW_CONFIG2</item>
+ <item>KVBEL_SW_CONFIG3</item>
+ <item>KVBEL_SW_CONFIG4</item>
+ <item>KVBEL_SW_CONFIG5</item>
+ <item>KVBEL_SW_CONFIG6</item>
+ <item>KVBEL_SW_CONFIG7</item>
+ <item>KVBMENLP_STATE</item>
+ <item>LS_ERROR_N</item>
+ <item>LS_OSSD1_N</item>
+ <item>MEL_SW_CONFIG0</item>
+ <item>MEL_SW_CONFIG1</item>
+ <item>MEL_SW_CONFIG2</item>
+ <item>MEL_SW_CONFIG3</item>
+ <item>MEL_SW_CONFIG4</item>
+ <item>MEL_SW_CONFIG5</item>
+ <item>MEL_SW_CONFIG6</item>
+ <item>MEL_SW_CONFIG7</item>
+ <item>MTNENLP_CCH_STATE</item>
+ <item>MTNENLP_DKB_STATE</item>
+ <item>MTNENLP_STATE</item>
+ <item>NEUTRON_DR_SW1_N</item>
+ <item>NEUTRON_DR_SW2_N</item>
+ <item>PENDANT_INST</item>
+ <item>PENDANT_MEB_N</item>
+ <item>PWRENLP_STATE</item>
+ <item>SPD_AC_DR_N</item>
+</list>
+<text></text>
+<text></text>
+<text> - Max output delay constraint missing on ports:</text>
+<text>   </text>
+<list>
+ <item>APP_FPGA_SPI0_MISO</item>
+ <item>APP_FPGA_SPI1_MISO</item>
+ <item>BMENLP_CNTL</item>
+ <item>BMENLP_LOC_CNTL</item>
+ <item>ETH_LED1</item>
+ <item>ETH_LED2</item>
+ <item>HDW_DBUG_HEADER2</item>
+ <item>HDW_DBUG_HEADER4</item>
+ <item>HDW_EEP_CS_N</item>
+ <item>HDW_EEP_SCLK</item>
+ <item>HDW_EEP_SDI</item>
+ <item>HDW_FPGA_STAT_LED1</item>
+ <item>HDW_FPGA_STAT_LED2</item>
+ <item>HDW_GANT_ROT_EN</item>
+ <item>HSSB_PMII_CLK</item>
+ <item>HSSB_PMII_RESET_N</item>
+ <item>HSSB_PMII_RX_DATA0</item>
+ <item>HSSB_PMII_RX_DATA1</item>
+ <item>HSSB_PMII_RX_DATA2</item>
+ <item>HSSB_PMII_RX_DATA3</item>
+ <item>HSSB_PMII_RX_DV</item>
+ <item>KVBMENLP_CNTL</item>
+ <item>MTNENLP_CNTL</item>
+ <item>MTNENLP_LOC_CNTL</item>
+ <item>PHY_MDC</item>
+ <item>PHY_MDIO</item>
+ <item>PHY_RST_N</item>
+ <item>PWRENLP_CNTL</item>
+ <item>PWRENLP_LOC_CNTL</item>
+ <item>TP100</item>
+ <item>TP101</item>
+ <item>TP102</item>
+ <item>TP140</item>
+ <item>TP141</item>
+ <item>TP142</item>
+ <item>TP143</item>
+ <item>TP144</item>
+ <item>TP145</item>
+ <item>TP146</item>
+ <item>TP147</item>
+ <item>TP148</item>
+ <item>TP149</item>
+ <item>TP150</item>
+ <item>TP151</item>
+ <item>TP152</item>
+ <item>TP153</item>
+ <item>TP154</item>
+ <item>TP155</item>
+ <item>TP85</item>
+ <item>TP86</item>
+ <item>TP88</item>
+ <item>TP89</item>
+ <item>TP91</item>
+ <item>TP92</item>
+ <item>TP93</item>
+ <item>TP94</item>
+ <item>TP95</item>
+ <item>TP96</item>
+ <item>TP97</item>
+ <item>TP98</item>
+ <item>TP99</item>
+</list>
+<text></text>
+<text> - Min output delay constraint missing on ports:</text>
+<text>   </text>
+<list>
+ <item>APP_FPGA_SPI0_MISO</item>
+ <item>APP_FPGA_SPI1_MISO</item>
+ <item>BMENLP_CNTL</item>
+ <item>BMENLP_LOC_CNTL</item>
+ <item>ETH_LED1</item>
+ <item>ETH_LED2</item>
+ <item>HDW_DBUG_HEADER2</item>
+ <item>HDW_DBUG_HEADER4</item>
+ <item>HDW_EEP_CS_N</item>
+ <item>HDW_EEP_SCLK</item>
+ <item>HDW_EEP_SDI</item>
+ <item>HDW_FPGA_STAT_LED1</item>
+ <item>HDW_FPGA_STAT_LED2</item>
+ <item>HDW_GANT_ROT_EN</item>
+ <item>HSSB_PMII_CLK</item>
+ <item>HSSB_PMII_RESET_N</item>
+ <item>HSSB_PMII_RX_DATA0</item>
+ <item>HSSB_PMII_RX_DATA1</item>
+ <item>HSSB_PMII_RX_DATA2</item>
+ <item>HSSB_PMII_RX_DATA3</item>
+ <item>HSSB_PMII_RX_DV</item>
+ <item>KVBMENLP_CNTL</item>
+ <item>MTNENLP_CNTL</item>
+ <item>MTNENLP_LOC_CNTL</item>
+ <item>PHY_MDC</item>
+ <item>PHY_MDIO</item>
+ <item>PHY_RST_N</item>
+ <item>PWRENLP_CNTL</item>
+ <item>PWRENLP_LOC_CNTL</item>
+ <item>TP100</item>
+ <item>TP101</item>
+ <item>TP102</item>
+ <item>TP140</item>
+ <item>TP141</item>
+ <item>TP142</item>
+ <item>TP143</item>
+ <item>TP144</item>
+ <item>TP145</item>
+ <item>TP146</item>
+ <item>TP147</item>
+ <item>TP148</item>
+ <item>TP149</item>
+ <item>TP150</item>
+ <item>TP151</item>
+ <item>TP152</item>
+ <item>TP153</item>
+ <item>TP154</item>
+ <item>TP155</item>
+ <item>TP85</item>
+ <item>TP86</item>
+ <item>TP88</item>
+ <item>TP89</item>
+ <item>TP91</item>
+ <item>TP92</item>
+ <item>TP93</item>
+ <item>TP94</item>
+ <item>TP95</item>
+ <item>TP96</item>
+ <item>TP97</item>
+ <item>TP98</item>
+ <item>TP99</item>
+</list>
+<text></text>
+<text></text>
+<text> - Setup unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>app_if_0/OPB_DO_1[0]:D</item>
+ <item>app_if_0/OPB_DO_1[10]:D</item>
+ <item>app_if_0/OPB_DO_1[11]:D</item>
+ <item>app_if_0/OPB_DO_1[12]:D</item>
+ <item>app_if_0/OPB_DO_1[13]:D</item>
+ <item>app_if_0/OPB_DO_1[14]:D</item>
+ <item>app_if_0/OPB_DO_1[15]:D</item>
+ <item>app_if_0/OPB_DO_1[16]:D</item>
+ <item>app_if_0/OPB_DO_1[1]:D</item>
+ <item>app_if_0/OPB_DO_1[2]:D</item>
+ <item>app_if_0/OPB_DO_1[3]:D</item>
+ <item>app_if_0/OPB_DO_1[4]:D</item>
+ <item>app_if_0/OPB_DO_1[5]:D</item>
+ <item>app_if_0/OPB_DO_1[6]:D</item>
+ <item>app_if_0/OPB_DO_1[7]:D</item>
+ <item>app_if_0/OPB_DO_1[8]:D</item>
+ <item>app_if_0/OPB_DO_1[9]:D</item>
+ <item>eeprom_0/eeprom_if_0/eeprom_rddata_reg[0]:D</item>
+ <item>gpio_0/GPIO_IN_REG[0]:D</item>
+ <item>gpio_0/GPIO_IN_REG[10]:D</item>
+ <item>gpio_0/GPIO_IN_REG[11]:D</item>
+ <item>gpio_0/GPIO_IN_REG[12]:D</item>
+ <item>gpio_0/GPIO_IN_REG[13]:D</item>
+ <item>gpio_0/GPIO_IN_REG[14]:D</item>
+ <item>gpio_0/GPIO_IN_REG[15]:D</item>
+ <item>gpio_0/GPIO_IN_REG[16]:D</item>
+ <item>gpio_0/GPIO_IN_REG[17]:D</item>
+ <item>gpio_0/GPIO_IN_REG[18]:D</item>
+ <item>gpio_0/GPIO_IN_REG[1]:D</item>
+ <item>gpio_0/GPIO_IN_REG[2]:D</item>
+ <item>gpio_0/GPIO_IN_REG[3]:D</item>
+ <item>gpio_0/GPIO_IN_REG[4]:D</item>
+ <item>gpio_0/GPIO_IN_REG[5]:D</item>
+ <item>gpio_0/GPIO_IN_REG[6]:D</item>
+ <item>gpio_0/GPIO_IN_REG[7]:D</item>
+ <item>gpio_0/GPIO_IN_REG[8]:D</item>
+ <item>gpio_0/GPIO_IN_REG[9]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[0]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[10]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[11]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[12]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[13]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[14]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[15]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[16]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[17]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[18]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[19]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[1]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[20]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[21]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[22]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[23]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[2]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[3]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[4]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[5]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[6]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[7]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[8]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[9]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/wq1_rgray[0]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/wq1_rgray[1]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/wq1_rgray[2]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/wq1_rgray[0]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/wq1_rgray[1]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/wq1_rgray[2]:D</item>
+ <item>phy_if_0/opb_fifo_inst/wq1_rgray[0]:D</item>
+ <item>phy_if_0/opb_fifo_inst/wq1_rgray[1]:D</item>
+ <item>phy_if_0/opb_fifo_inst/wq1_rgray[2]:D</item>
+</list>
+<text></text>
+<text> - Recovery unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>adder_decode_0/APP_RE_d1:ALn</item>
+ <item>adder_decode_0/CLOCK_RE_d1:ALn</item>
+ <item>adder_decode_0/COUNTER_RE1_d1:ALn</item>
+ <item>adder_decode_0/COUNTER_RE2_d1:ALn</item>
+ <item>adder_decode_0/EEP_RE_d1:ALn</item>
+ <item>adder_decode_0/GPIO_RE_d1:ALn</item>
+ <item>adder_decode_0/PHY_RE_d1:ALn</item>
+ <item>adder_decode_0/SP_RE_d1:ALn</item>
+ <item>app_if_0/OPB_DO_1[0]:ALn</item>
+ <item>app_if_0/OPB_DO_1[10]:ALn</item>
+ <item>app_if_0/OPB_DO_1[11]:ALn</item>
+ <item>app_if_0/OPB_DO_1[12]:ALn</item>
+ <item>app_if_0/OPB_DO_1[13]:ALn</item>
+ <item>app_if_0/OPB_DO_1[14]:ALn</item>
+ <item>app_if_0/OPB_DO_1[15]:ALn</item>
+ <item>app_if_0/OPB_DO_1[16]:ALn</item>
+ <item>app_if_0/OPB_DO_1[1]:ALn</item>
+ <item>app_if_0/OPB_DO_1[2]:ALn</item>
+ <item>app_if_0/OPB_DO_1[3]:ALn</item>
+ <item>app_if_0/OPB_DO_1[4]:ALn</item>
+ <item>app_if_0/OPB_DO_1[5]:ALn</item>
+ <item>app_if_0/OPB_DO_1[6]:ALn</item>
+ <item>app_if_0/OPB_DO_1[7]:ALn</item>
+ <item>app_if_0/OPB_DO_1[8]:ALn</item>
+ <item>app_if_0/OPB_DO_1[9]:ALn</item>
+ <item>clkgen_25mhz/clkout:ALn</item>
+ <item>clkgen_25mhz/cntr[0]:ALn</item>
+ <item>clkgen_25mhz/cntr[10]:ALn</item>
+ <item>clkgen_25mhz/cntr[11]:ALn</item>
+ <item>clkgen_25mhz/cntr[12]:ALn</item>
+ <item>clkgen_25mhz/cntr[13]:ALn</item>
+ <item>clkgen_25mhz/cntr[14]:ALn</item>
+ <item>clkgen_25mhz/cntr[15]:ALn</item>
+ <item>clkgen_25mhz/cntr[1]:ALn</item>
+ <item>clkgen_25mhz/cntr[2]:ALn</item>
+ <item>clkgen_25mhz/cntr[3]:ALn</item>
+ <item>clkgen_25mhz/cntr[4]:ALn</item>
+ <item>clkgen_25mhz/cntr[5]:ALn</item>
+ <item>clkgen_25mhz/cntr[6]:ALn</item>
+ <item>clkgen_25mhz/cntr[7]:ALn</item>
+ <item>clkgen_25mhz/cntr[8]:ALn</item>
+ <item>clkgen_25mhz/cntr[9]:ALn</item>
+ <item>clkgen_2khz/clkout:ALn</item>
+ <item>clkgen_2khz/cntr[0]:ALn</item>
+ <item>clkgen_2khz/cntr[10]:ALn</item>
+ <item>clkgen_2khz/cntr[11]:ALn</item>
+ <item>clkgen_2khz/cntr[12]:ALn</item>
+ <item>clkgen_2khz/cntr[13]:ALn</item>
+ <item>clkgen_2khz/cntr[14]:ALn</item>
+ <item>clkgen_2khz/cntr[15]:ALn</item>
+ <item>clkgen_2khz/cntr[1]:ALn</item>
+ <item>clkgen_2khz/cntr[2]:ALn</item>
+ <item>clkgen_2khz/cntr[3]:ALn</item>
+ <item>clkgen_2khz/cntr[4]:ALn</item>
+ <item>clkgen_2khz/cntr[5]:ALn</item>
+ <item>clkgen_2khz/cntr[6]:ALn</item>
+ <item>clkgen_2khz/cntr[7]:ALn</item>
+ <item>clkgen_2khz/cntr[8]:ALn</item>
+ <item>clkgen_2khz/cntr[9]:ALn</item>
+ <item>eeprom_0/EEP_DO[0]:ALn</item>
+ <item>eeprom_0/EEP_DO[10]:ALn</item>
+ <item>eeprom_0/EEP_DO[11]:ALn</item>
+ <item>eeprom_0/EEP_DO[12]:ALn</item>
+ <item>eeprom_0/EEP_DO[13]:ALn</item>
+ <item>eeprom_0/EEP_DO[14]:ALn</item>
+ <item>eeprom_0/EEP_DO[15]:ALn</item>
+ <item>eeprom_0/EEP_DO[16]:ALn</item>
+ <item>eeprom_0/EEP_DO[17]:ALn</item>
+ <item>eeprom_0/EEP_DO[18]:ALn</item>
+ <item>eeprom_0/EEP_DO[19]:ALn</item>
+ <item>eeprom_0/EEP_DO[1]:ALn</item>
+ <item>eeprom_0/EEP_DO[20]:ALn</item>
+ <item>eeprom_0/EEP_DO[21]:ALn</item>
+ <item>eeprom_0/EEP_DO[22]:ALn</item>
+ <item>eeprom_0/EEP_DO[23]:ALn</item>
+ <item>eeprom_0/EEP_DO[24]:ALn</item>
+ <item>eeprom_0/EEP_DO[25]:ALn</item>
+ <item>eeprom_0/EEP_DO[26]:ALn</item>
+ <item>eeprom_0/EEP_DO[27]:ALn</item>
+ <item>eeprom_0/EEP_DO[28]:ALn</item>
+ <item>eeprom_0/EEP_DO[29]:ALn</item>
+ <item>eeprom_0/EEP_DO[2]:ALn</item>
+ <item>eeprom_0/EEP_DO[30]:ALn</item>
+ <item>eeprom_0/EEP_DO[31]:ALn</item>
+ <item>eeprom_0/EEP_DO[3]:ALn</item>
+ <item>eeprom_0/EEP_DO[4]:ALn</item>
+ <item>eeprom_0/EEP_DO[5]:ALn</item>
+ <item>eeprom_0/EEP_DO[6]:ALn</item>
+ <item>eeprom_0/EEP_DO[7]:ALn</item>
+ <item>eeprom_0/EEP_DO[8]:ALn</item>
+ <item>eeprom_0/EEP_DO[9]:ALn</item>
+ <item>eeprom_0/clk_cnt[0]:ALn</item>
+ <item>eeprom_0/clk_cnt[1]:ALn</item>
+ <item>eeprom_0/clk_cnt[2]:ALn</item>
+ <item>eeprom_0/clk_cnt[3]:ALn</item>
+ <item>eeprom_0/clk_cnt[4]:ALn</item>
+ <item>eeprom_0/clk_cnt[5]:ALn</item>
+ <item>eeprom_0/clk_cnt[6]:ALn</item>
+ <item>eeprom_0/clk_cnt[7]:ALn</item>
+ <item>eeprom_0/eep_done_reg:ALn</item>
+</list>
+<text></text>
+<text> - Hold unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>app_if_0/OPB_DO_1[0]:D</item>
+ <item>app_if_0/OPB_DO_1[10]:D</item>
+ <item>app_if_0/OPB_DO_1[11]:D</item>
+ <item>app_if_0/OPB_DO_1[12]:D</item>
+ <item>app_if_0/OPB_DO_1[13]:D</item>
+ <item>app_if_0/OPB_DO_1[14]:D</item>
+ <item>app_if_0/OPB_DO_1[15]:D</item>
+ <item>app_if_0/OPB_DO_1[16]:D</item>
+ <item>app_if_0/OPB_DO_1[1]:D</item>
+ <item>app_if_0/OPB_DO_1[2]:D</item>
+ <item>app_if_0/OPB_DO_1[3]:D</item>
+ <item>app_if_0/OPB_DO_1[4]:D</item>
+ <item>app_if_0/OPB_DO_1[5]:D</item>
+ <item>app_if_0/OPB_DO_1[6]:D</item>
+ <item>app_if_0/OPB_DO_1[7]:D</item>
+ <item>app_if_0/OPB_DO_1[8]:D</item>
+ <item>app_if_0/OPB_DO_1[9]:D</item>
+ <item>eeprom_0/eeprom_if_0/eeprom_rddata_reg[0]:D</item>
+ <item>gpio_0/GPIO_IN_REG[0]:D</item>
+ <item>gpio_0/GPIO_IN_REG[10]:D</item>
+ <item>gpio_0/GPIO_IN_REG[11]:D</item>
+ <item>gpio_0/GPIO_IN_REG[12]:D</item>
+ <item>gpio_0/GPIO_IN_REG[13]:D</item>
+ <item>gpio_0/GPIO_IN_REG[14]:D</item>
+ <item>gpio_0/GPIO_IN_REG[15]:D</item>
+ <item>gpio_0/GPIO_IN_REG[16]:D</item>
+ <item>gpio_0/GPIO_IN_REG[17]:D</item>
+ <item>gpio_0/GPIO_IN_REG[18]:D</item>
+ <item>gpio_0/GPIO_IN_REG[1]:D</item>
+ <item>gpio_0/GPIO_IN_REG[2]:D</item>
+ <item>gpio_0/GPIO_IN_REG[3]:D</item>
+ <item>gpio_0/GPIO_IN_REG[4]:D</item>
+ <item>gpio_0/GPIO_IN_REG[5]:D</item>
+ <item>gpio_0/GPIO_IN_REG[6]:D</item>
+ <item>gpio_0/GPIO_IN_REG[7]:D</item>
+ <item>gpio_0/GPIO_IN_REG[8]:D</item>
+ <item>gpio_0/GPIO_IN_REG[9]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[0]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[10]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[11]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[12]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[13]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[14]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[15]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[16]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[17]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[18]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[19]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[1]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[20]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[21]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[22]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[23]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[2]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[3]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[4]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[5]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[6]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[7]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[8]:D</item>
+ <item>gpio_0/SWITCH_IN_REG[9]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/wq1_rgray[0]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/wq1_rgray[1]:D</item>
+ <item>oscillator_counter_0/opb_fifo_inst/wq1_rgray[2]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/wq1_rgray[0]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/wq1_rgray[1]:D</item>
+ <item>oscillator_counter_1/opb_fifo_inst/wq1_rgray[2]:D</item>
+ <item>phy_if_0/opb_fifo_inst/wq1_rgray[0]:D</item>
+ <item>phy_if_0/opb_fifo_inst/wq1_rgray[1]:D</item>
+ <item>phy_if_0/opb_fifo_inst/wq1_rgray[2]:D</item>
+</list>
+<text></text>
+<text> - Removal unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>adder_decode_0/APP_RE_d1:ALn</item>
+ <item>adder_decode_0/CLOCK_RE_d1:ALn</item>
+ <item>adder_decode_0/COUNTER_RE1_d1:ALn</item>
+ <item>adder_decode_0/COUNTER_RE2_d1:ALn</item>
+ <item>adder_decode_0/EEP_RE_d1:ALn</item>
+ <item>adder_decode_0/GPIO_RE_d1:ALn</item>
+ <item>adder_decode_0/PHY_RE_d1:ALn</item>
+ <item>adder_decode_0/SP_RE_d1:ALn</item>
+ <item>app_if_0/OPB_DO_1[0]:ALn</item>
+ <item>app_if_0/OPB_DO_1[10]:ALn</item>
+ <item>app_if_0/OPB_DO_1[11]:ALn</item>
+ <item>app_if_0/OPB_DO_1[12]:ALn</item>
+ <item>app_if_0/OPB_DO_1[13]:ALn</item>
+ <item>app_if_0/OPB_DO_1[14]:ALn</item>
+ <item>app_if_0/OPB_DO_1[15]:ALn</item>
+ <item>app_if_0/OPB_DO_1[16]:ALn</item>
+ <item>app_if_0/OPB_DO_1[1]:ALn</item>
+ <item>app_if_0/OPB_DO_1[2]:ALn</item>
+ <item>app_if_0/OPB_DO_1[3]:ALn</item>
+ <item>app_if_0/OPB_DO_1[4]:ALn</item>
+ <item>app_if_0/OPB_DO_1[5]:ALn</item>
+ <item>app_if_0/OPB_DO_1[6]:ALn</item>
+ <item>app_if_0/OPB_DO_1[7]:ALn</item>
+ <item>app_if_0/OPB_DO_1[8]:ALn</item>
+ <item>app_if_0/OPB_DO_1[9]:ALn</item>
+ <item>clkgen_25mhz/clkout:ALn</item>
+ <item>clkgen_25mhz/cntr[0]:ALn</item>
+ <item>clkgen_25mhz/cntr[10]:ALn</item>
+ <item>clkgen_25mhz/cntr[11]:ALn</item>
+ <item>clkgen_25mhz/cntr[12]:ALn</item>
+ <item>clkgen_25mhz/cntr[13]:ALn</item>
+ <item>clkgen_25mhz/cntr[14]:ALn</item>
+ <item>clkgen_25mhz/cntr[15]:ALn</item>
+ <item>clkgen_25mhz/cntr[1]:ALn</item>
+ <item>clkgen_25mhz/cntr[2]:ALn</item>
+ <item>clkgen_25mhz/cntr[3]:ALn</item>
+ <item>clkgen_25mhz/cntr[4]:ALn</item>
+ <item>clkgen_25mhz/cntr[5]:ALn</item>
+ <item>clkgen_25mhz/cntr[6]:ALn</item>
+ <item>clkgen_25mhz/cntr[7]:ALn</item>
+ <item>clkgen_25mhz/cntr[8]:ALn</item>
+ <item>clkgen_25mhz/cntr[9]:ALn</item>
+ <item>clkgen_2khz/clkout:ALn</item>
+ <item>clkgen_2khz/cntr[0]:ALn</item>
+ <item>clkgen_2khz/cntr[10]:ALn</item>
+ <item>clkgen_2khz/cntr[11]:ALn</item>
+ <item>clkgen_2khz/cntr[12]:ALn</item>
+ <item>clkgen_2khz/cntr[13]:ALn</item>
+ <item>clkgen_2khz/cntr[14]:ALn</item>
+ <item>clkgen_2khz/cntr[15]:ALn</item>
+ <item>clkgen_2khz/cntr[1]:ALn</item>
+ <item>clkgen_2khz/cntr[2]:ALn</item>
+ <item>clkgen_2khz/cntr[3]:ALn</item>
+ <item>clkgen_2khz/cntr[4]:ALn</item>
+ <item>clkgen_2khz/cntr[5]:ALn</item>
+ <item>clkgen_2khz/cntr[6]:ALn</item>
+ <item>clkgen_2khz/cntr[7]:ALn</item>
+ <item>clkgen_2khz/cntr[8]:ALn</item>
+ <item>clkgen_2khz/cntr[9]:ALn</item>
+ <item>eeprom_0/EEP_DO[0]:ALn</item>
+ <item>eeprom_0/EEP_DO[10]:ALn</item>
+ <item>eeprom_0/EEP_DO[11]:ALn</item>
+ <item>eeprom_0/EEP_DO[12]:ALn</item>
+ <item>eeprom_0/EEP_DO[13]:ALn</item>
+ <item>eeprom_0/EEP_DO[14]:ALn</item>
+ <item>eeprom_0/EEP_DO[15]:ALn</item>
+ <item>eeprom_0/EEP_DO[16]:ALn</item>
+ <item>eeprom_0/EEP_DO[17]:ALn</item>
+ <item>eeprom_0/EEP_DO[18]:ALn</item>
+ <item>eeprom_0/EEP_DO[19]:ALn</item>
+ <item>eeprom_0/EEP_DO[1]:ALn</item>
+ <item>eeprom_0/EEP_DO[20]:ALn</item>
+ <item>eeprom_0/EEP_DO[21]:ALn</item>
+ <item>eeprom_0/EEP_DO[22]:ALn</item>
+ <item>eeprom_0/EEP_DO[23]:ALn</item>
+ <item>eeprom_0/EEP_DO[24]:ALn</item>
+ <item>eeprom_0/EEP_DO[25]:ALn</item>
+ <item>eeprom_0/EEP_DO[26]:ALn</item>
+ <item>eeprom_0/EEP_DO[27]:ALn</item>
+ <item>eeprom_0/EEP_DO[28]:ALn</item>
+ <item>eeprom_0/EEP_DO[29]:ALn</item>
+ <item>eeprom_0/EEP_DO[2]:ALn</item>
+ <item>eeprom_0/EEP_DO[30]:ALn</item>
+ <item>eeprom_0/EEP_DO[31]:ALn</item>
+ <item>eeprom_0/EEP_DO[3]:ALn</item>
+ <item>eeprom_0/EEP_DO[4]:ALn</item>
+ <item>eeprom_0/EEP_DO[5]:ALn</item>
+ <item>eeprom_0/EEP_DO[6]:ALn</item>
+ <item>eeprom_0/EEP_DO[7]:ALn</item>
+ <item>eeprom_0/EEP_DO[8]:ALn</item>
+ <item>eeprom_0/EEP_DO[9]:ALn</item>
+ <item>eeprom_0/clk_cnt[0]:ALn</item>
+ <item>eeprom_0/clk_cnt[1]:ALn</item>
+ <item>eeprom_0/clk_cnt[2]:ALn</item>
+ <item>eeprom_0/clk_cnt[3]:ALn</item>
+ <item>eeprom_0/clk_cnt[4]:ALn</item>
+ <item>eeprom_0/clk_cnt[5]:ALn</item>
+ <item>eeprom_0/clk_cnt[6]:ALn</item>
+ <item>eeprom_0/clk_cnt[7]:ALn</item>
+ <item>eeprom_0/eep_done_reg:ALn</item>
+</list>
+<text></text>
+</section>
+</section>
+<section>
+<name>Clock domain: </name>
+<text>clk_50mhz</text>
+<text></text>
+<table>
+<header>
+ <cell>Type of check</cell>
+ <cell>Constrained</cell>
+ <cell>UnConstrained</cell>
+ <cell>Total</cell>
+</header>
+<row>
+ <cell>Setup</cell>
+ <cell>          644</cell>
+ <cell>            0</cell>
+ <cell>          644</cell>
+</row>
+<row>
+ <cell>Recovery</cell>
+ <cell>          304</cell>
+ <cell>           18</cell>
+ <cell>          322</cell>
+</row>
+<row>
+ <cell>Output Setup</cell>
+ <cell>            3</cell>
+ <cell>            0</cell>
+ <cell>            3</cell>
+</row>
+<row>
+ <cell>Total Setup</cell>
+ <cell>          951</cell>
+ <cell>           18</cell>
+ <cell>          969</cell>
+</row>
+<separator/>
+<row>
+ <cell>Hold</cell>
+ <cell>          644</cell>
+ <cell>            0</cell>
+ <cell>          644</cell>
+</row>
+<row>
+ <cell>Removal</cell>
+ <cell>          304</cell>
+ <cell>           18</cell>
+ <cell>          322</cell>
+</row>
+<row>
+ <cell>Output Hold</cell>
+ <cell>            3</cell>
+ <cell>            0</cell>
+ <cell>            3</cell>
+</row>
+<row>
+ <cell>Total Hold</cell>
+ <cell>          951</cell>
+ <cell>           18</cell>
+ <cell>          969</cell>
+</row>
+</table>
+<section>
+<name>Enhancement Suggestions</name>
+<text></text>
+<text> - Max input delay constraint missing on port:</text>
+<text>   </text>
+<list>
+ <item>HDW_DEVRST_N</item>
+</list>
+<text></text>
+<text> - Min input delay constraint missing on port:</text>
+<text>   </text>
+<list>
+ <item>HDW_DEVRST_N</item>
+</list>
+<text></text>
+<text></text>
+<text></text>
+<text> - Recovery unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>oscillator_counter_1/count_data[0]:ALn</item>
+ <item>oscillator_counter_1/count_data[10]:ALn</item>
+ <item>oscillator_counter_1/count_data[11]:ALn</item>
+ <item>oscillator_counter_1/count_data[12]:ALn</item>
+ <item>oscillator_counter_1/count_data[13]:ALn</item>
+ <item>oscillator_counter_1/count_data[14]:ALn</item>
+ <item>oscillator_counter_1/count_data[15]:ALn</item>
+ <item>oscillator_counter_1/count_data[1]:ALn</item>
+ <item>oscillator_counter_1/count_data[2]:ALn</item>
+ <item>oscillator_counter_1/count_data[3]:ALn</item>
+ <item>oscillator_counter_1/count_data[4]:ALn</item>
+ <item>oscillator_counter_1/count_data[5]:ALn</item>
+ <item>oscillator_counter_1/count_data[6]:ALn</item>
+ <item>oscillator_counter_1/count_data[7]:ALn</item>
+ <item>oscillator_counter_1/count_data[8]:ALn</item>
+ <item>oscillator_counter_1/count_data[9]:ALn</item>
+ <item>phy_if_0/tx_start_sync1:ALn</item>
+ <item>phy_if_0/tx_start_sync2:ALn</item>
+</list>
+<text></text>
+<text> - Removal unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>oscillator_counter_1/count_data[0]:ALn</item>
+ <item>oscillator_counter_1/count_data[10]:ALn</item>
+ <item>oscillator_counter_1/count_data[11]:ALn</item>
+ <item>oscillator_counter_1/count_data[12]:ALn</item>
+ <item>oscillator_counter_1/count_data[13]:ALn</item>
+ <item>oscillator_counter_1/count_data[14]:ALn</item>
+ <item>oscillator_counter_1/count_data[15]:ALn</item>
+ <item>oscillator_counter_1/count_data[1]:ALn</item>
+ <item>oscillator_counter_1/count_data[2]:ALn</item>
+ <item>oscillator_counter_1/count_data[3]:ALn</item>
+ <item>oscillator_counter_1/count_data[4]:ALn</item>
+ <item>oscillator_counter_1/count_data[5]:ALn</item>
+ <item>oscillator_counter_1/count_data[6]:ALn</item>
+ <item>oscillator_counter_1/count_data[7]:ALn</item>
+ <item>oscillator_counter_1/count_data[8]:ALn</item>
+ <item>oscillator_counter_1/count_data[9]:ALn</item>
+ <item>phy_if_0/tx_start_sync1:ALn</item>
+ <item>phy_if_0/tx_start_sync2:ALn</item>
+</list>
+<text></text>
+</section>
+</section>
+<section>
+<name>Clock domain: </name>
+<text>clkgen_25mhz/clkout:Q</text>
+<text></text>
+<table>
+<header>
+ <cell>Type of check</cell>
+ <cell>Constrained</cell>
+ <cell>UnConstrained</cell>
+ <cell>Total</cell>
+</header>
+<row>
+ <cell>Setup</cell>
+ <cell>            0</cell>
+ <cell>          228</cell>
+ <cell>          228</cell>
+</row>
+<row>
+ <cell>Recovery</cell>
+ <cell>            0</cell>
+ <cell>          124</cell>
+ <cell>          124</cell>
+</row>
+<row>
+ <cell>Output Setup</cell>
+ <cell>            0</cell>
+ <cell>            2</cell>
+ <cell>            2</cell>
+</row>
+<row>
+ <cell>Total Setup</cell>
+ <cell>            0</cell>
+ <cell>          354</cell>
+ <cell>          354</cell>
+</row>
+<separator/>
+<row>
+ <cell>Hold</cell>
+ <cell>            0</cell>
+ <cell>          228</cell>
+ <cell>          228</cell>
+</row>
+<row>
+ <cell>Removal</cell>
+ <cell>            0</cell>
+ <cell>          124</cell>
+ <cell>          124</cell>
+</row>
+<row>
+ <cell>Output Hold</cell>
+ <cell>            0</cell>
+ <cell>            2</cell>
+ <cell>            2</cell>
+</row>
+<row>
+ <cell>Total Hold</cell>
+ <cell>            0</cell>
+ <cell>          354</cell>
+ <cell>          354</cell>
+</row>
+</table>
+<section>
+<name>Enhancement Suggestions</name>
+<text></text>
+<text> - Clock constraint is missing </text>
+<text> - Max input delay constraint missing on ports:</text>
+<text>   </text>
+<list>
+ <item>HDW_DEVRST_N</item>
+ <item>PHY_MDIO</item>
+</list>
+<text></text>
+<text> - Min input delay constraint missing on ports:</text>
+<text>   </text>
+<list>
+ <item>HDW_DEVRST_N</item>
+ <item>PHY_MDIO</item>
+</list>
+<text></text>
+<text></text>
+<text> - Max output delay constraint missing on ports:</text>
+<text>   </text>
+<list>
+ <item>PHY_MDC</item>
+ <item>PHY_MDIO</item>
+</list>
+<text></text>
+<text> - Min output delay constraint missing on ports:</text>
+<text>   </text>
+<list>
+ <item>PHY_MDC</item>
+ <item>PHY_MDIO</item>
+</list>
+<text></text>
+<text></text>
+<text> - Setup unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>phy_if_0/opb_fifo_inst/o_rempty:D</item>
+ <item>phy_if_0/opb_fifo_inst/rbin[0]:D</item>
+ <item>phy_if_0/opb_fifo_inst/rbin[1]:D</item>
+ <item>phy_if_0/opb_fifo_inst/rbin[2]:D</item>
+ <item>phy_if_0/opb_fifo_inst/rgray[0]:D</item>
+ <item>phy_if_0/opb_fifo_inst/rgray[1]:D</item>
+ <item>phy_if_0/opb_fifo_inst/rq1_wgray[0]:D</item>
+ <item>phy_if_0/opb_fifo_inst/rq1_wgray[1]:D</item>
+ <item>phy_if_0/opb_fifo_inst/rq1_wgray[2]:D</item>
+ <item>phy_if_0/opb_fifo_inst/rq2_wgray[0]:D</item>
+ <item>phy_if_0/opb_fifo_inst/rq2_wgray[1]:D</item>
+ <item>phy_if_0/opb_fifo_inst/rq2_wgray[2]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK_CNTR[0]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK_CNTR[1]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK_CNTR[2]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK_CNTR[3]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK_CNTR[4]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CYCLE_DONE:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CYCLE_STATE[0]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CYCLE_STATE[1]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CYCLE_TYPE:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CYCLE_TYPE:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_OUTPUT_EN:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_OUTPUT_EN:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_PHY_ADDR[0]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_PHY_ADDR[0]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_PHY_ADDR[1]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_PHY_ADDR[1]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[0]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[0]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[10]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[10]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[11]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[11]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[12]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[12]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[13]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[13]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[14]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[14]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[15]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[15]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[1]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[1]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[2]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[2]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[3]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[3]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[4]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[4]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[5]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[5]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[6]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[6]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[7]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[7]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[8]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[8]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[9]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[9]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[0]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[0]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[10]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[10]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[11]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[11]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[12]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[12]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[13]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[13]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[14]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[14]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[15]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[15]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[1]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[1]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[2]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[2]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[3]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[3]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[4]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[4]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[5]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[5]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[6]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[6]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[7]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[7]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[8]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[8]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[9]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[9]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_REG_ADDR[0]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_REG_ADDR[0]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_REG_ADDR[1]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_REG_ADDR[1]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_REG_ADDR[2]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_REG_ADDR[2]:EN</item>
+</list>
+<text></text>
+<text> - Recovery unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>phy_if_0/opb_fifo_inst/o_rempty:ALn</item>
+ <item>phy_if_0/opb_fifo_inst/rbin[0]:ALn</item>
+ <item>phy_if_0/opb_fifo_inst/rbin[1]:ALn</item>
+ <item>phy_if_0/opb_fifo_inst/rbin[2]:ALn</item>
+ <item>phy_if_0/opb_fifo_inst/rgray[0]:ALn</item>
+ <item>phy_if_0/opb_fifo_inst/rgray[1]:ALn</item>
+ <item>phy_if_0/opb_fifo_inst/rq1_wgray[0]:ALn</item>
+ <item>phy_if_0/opb_fifo_inst/rq1_wgray[1]:ALn</item>
+ <item>phy_if_0/opb_fifo_inst/rq1_wgray[2]:ALn</item>
+ <item>phy_if_0/opb_fifo_inst/rq2_wgray[0]:ALn</item>
+ <item>phy_if_0/opb_fifo_inst/rq2_wgray[1]:ALn</item>
+ <item>phy_if_0/opb_fifo_inst/rq2_wgray[2]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK_CNTR[0]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK_CNTR[1]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK_CNTR[2]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK_CNTR[3]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK_CNTR[4]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CYCLE_DONE:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CYCLE_STATE[0]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CYCLE_STATE[1]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CYCLE_TYPE:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_OUTPUT_EN:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_PHY_ADDR[0]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_PHY_ADDR[1]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[0]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[10]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[11]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[12]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[13]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[14]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[15]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[1]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[2]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[3]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[4]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[5]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[6]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[7]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[8]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[9]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[0]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[10]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[11]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[12]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[13]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[14]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[15]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[1]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[2]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[3]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[4]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[5]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[6]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[7]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[8]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[9]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_REG_ADDR[0]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_REG_ADDR[1]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_REG_ADDR[2]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_REG_ADDR[3]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_REG_ADDR[4]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[0]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[10]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[11]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[12]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[13]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[14]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[15]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[16]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[17]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[18]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[19]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[1]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[20]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[21]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[22]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[23]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[24]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[25]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[26]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[27]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[28]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[29]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[2]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[30]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[31]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[3]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[4]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[5]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[6]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[7]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[8]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[9]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT_COUNTER[0]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT_COUNTER[1]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT_COUNTER[2]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT_COUNTER[3]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT_COUNTER[4]:ALn</item>
+ <item>phy_if_0/smii_read_data_reg[0]:ALn</item>
+</list>
+<text></text>
+<text> - Hold unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>phy_if_0/opb_fifo_inst/o_rempty:D</item>
+ <item>phy_if_0/opb_fifo_inst/rbin[0]:D</item>
+ <item>phy_if_0/opb_fifo_inst/rbin[1]:D</item>
+ <item>phy_if_0/opb_fifo_inst/rbin[2]:D</item>
+ <item>phy_if_0/opb_fifo_inst/rgray[0]:D</item>
+ <item>phy_if_0/opb_fifo_inst/rgray[1]:D</item>
+ <item>phy_if_0/opb_fifo_inst/rq1_wgray[0]:D</item>
+ <item>phy_if_0/opb_fifo_inst/rq1_wgray[1]:D</item>
+ <item>phy_if_0/opb_fifo_inst/rq1_wgray[2]:D</item>
+ <item>phy_if_0/opb_fifo_inst/rq2_wgray[0]:D</item>
+ <item>phy_if_0/opb_fifo_inst/rq2_wgray[1]:D</item>
+ <item>phy_if_0/opb_fifo_inst/rq2_wgray[2]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK_CNTR[0]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK_CNTR[1]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK_CNTR[2]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK_CNTR[3]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK_CNTR[4]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CYCLE_DONE:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CYCLE_STATE[0]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CYCLE_STATE[1]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CYCLE_TYPE:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CYCLE_TYPE:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_OUTPUT_EN:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_OUTPUT_EN:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_PHY_ADDR[0]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_PHY_ADDR[0]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_PHY_ADDR[1]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_PHY_ADDR[1]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[0]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[0]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[10]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[10]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[11]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[11]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[12]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[12]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[13]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[13]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[14]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[14]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[15]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[15]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[1]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[1]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[2]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[2]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[3]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[3]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[4]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[4]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[5]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[5]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[6]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[6]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[7]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[7]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[8]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[8]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[9]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[9]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[0]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[0]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[10]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[10]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[11]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[11]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[12]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[12]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[13]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[13]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[14]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[14]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[15]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[15]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[1]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[1]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[2]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[2]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[3]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[3]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[4]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[4]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[5]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[5]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[6]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[6]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[7]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[7]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[8]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[8]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[9]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[9]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_REG_ADDR[0]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_REG_ADDR[0]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_REG_ADDR[1]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_REG_ADDR[1]:EN</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_REG_ADDR[2]:D</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_REG_ADDR[2]:EN</item>
+</list>
+<text></text>
+<text> - Removal unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>phy_if_0/opb_fifo_inst/o_rempty:ALn</item>
+ <item>phy_if_0/opb_fifo_inst/rbin[0]:ALn</item>
+ <item>phy_if_0/opb_fifo_inst/rbin[1]:ALn</item>
+ <item>phy_if_0/opb_fifo_inst/rbin[2]:ALn</item>
+ <item>phy_if_0/opb_fifo_inst/rgray[0]:ALn</item>
+ <item>phy_if_0/opb_fifo_inst/rgray[1]:ALn</item>
+ <item>phy_if_0/opb_fifo_inst/rq1_wgray[0]:ALn</item>
+ <item>phy_if_0/opb_fifo_inst/rq1_wgray[1]:ALn</item>
+ <item>phy_if_0/opb_fifo_inst/rq1_wgray[2]:ALn</item>
+ <item>phy_if_0/opb_fifo_inst/rq2_wgray[0]:ALn</item>
+ <item>phy_if_0/opb_fifo_inst/rq2_wgray[1]:ALn</item>
+ <item>phy_if_0/opb_fifo_inst/rq2_wgray[2]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK_CNTR[0]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK_CNTR[1]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK_CNTR[2]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK_CNTR[3]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CLK_CNTR[4]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CYCLE_DONE:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CYCLE_STATE[0]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CYCLE_STATE[1]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_CYCLE_TYPE:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_OUTPUT_EN:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_PHY_ADDR[0]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_PHY_ADDR[1]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[0]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[10]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[11]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[12]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[13]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[14]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[15]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[1]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[2]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[3]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[4]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[5]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[6]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[7]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[8]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA[9]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[0]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[10]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[11]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[12]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[13]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[14]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[15]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[1]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[2]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[3]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[4]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[5]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[6]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[7]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[8]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_READ_DATA_TEMP[9]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_REG_ADDR[0]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_REG_ADDR[1]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_REG_ADDR[2]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_REG_ADDR[3]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_REG_ADDR[4]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[0]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[10]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[11]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[12]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[13]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[14]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[15]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[16]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[17]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[18]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[19]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[1]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[20]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[21]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[22]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[23]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[24]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[25]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[26]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[27]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[28]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[29]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[2]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[30]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[31]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[3]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[4]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[5]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[6]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[7]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[8]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT[9]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT_COUNTER[0]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT_COUNTER[1]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT_COUNTER[2]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT_COUNTER[3]:ALn</item>
+ <item>phy_if_0/serial_mii_inst/SERIAL_MII_SHIFT_COUNTER[4]:ALn</item>
+ <item>phy_if_0/smii_read_data_reg[0]:ALn</item>
+</list>
+<text></text>
+</section>
+</section>
+<section>
+<name>Clock domain: </name>
+<text>clkgen_2khz/clkout:Q</text>
+<text></text>
+<table>
+<header>
+ <cell>Type of check</cell>
+ <cell>Constrained</cell>
+ <cell>UnConstrained</cell>
+ <cell>Total</cell>
+</header>
+<row>
+ <cell>Setup</cell>
+ <cell>            0</cell>
+ <cell>            4</cell>
+ <cell>            4</cell>
+</row>
+<row>
+ <cell>Recovery</cell>
+ <cell>            0</cell>
+ <cell>            4</cell>
+ <cell>            4</cell>
+</row>
+<row>
+ <cell>Output Setup</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Total Setup</cell>
+ <cell>            0</cell>
+ <cell>            8</cell>
+ <cell>            8</cell>
+</row>
+<separator/>
+<row>
+ <cell>Hold</cell>
+ <cell>            0</cell>
+ <cell>            4</cell>
+ <cell>            4</cell>
+</row>
+<row>
+ <cell>Removal</cell>
+ <cell>            0</cell>
+ <cell>            4</cell>
+ <cell>            4</cell>
+</row>
+<row>
+ <cell>Output Hold</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+ <cell>            0</cell>
+</row>
+<row>
+ <cell>Total Hold</cell>
+ <cell>            0</cell>
+ <cell>            8</cell>
+ <cell>            8</cell>
+</row>
+</table>
+<section>
+<name>Enhancement Suggestions</name>
+<text></text>
+<text> - Clock constraint is missing </text>
+<text> - Max input delay constraint missing on port:</text>
+<text>   </text>
+<list>
+ <item>HDW_DEVRST_N</item>
+</list>
+<text></text>
+<text> - Min input delay constraint missing on port:</text>
+<text>   </text>
+<list>
+ <item>HDW_DEVRST_N</item>
+</list>
+<text></text>
+<text></text>
+<text></text>
+<text> - Setup unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>seconds[0]:D</item>
+ <item>seconds[1]:D</item>
+ <item>seconds[2]:D</item>
+ <item>seconds[3]:D</item>
+</list>
+<text></text>
+<text> - Recovery unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>seconds[0]:ALn</item>
+ <item>seconds[1]:ALn</item>
+ <item>seconds[2]:ALn</item>
+ <item>seconds[3]:ALn</item>
+</list>
+<text></text>
+<text> - Hold unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>seconds[0]:D</item>
+ <item>seconds[1]:D</item>
+ <item>seconds[2]:D</item>
+ <item>seconds[3]:D</item>
+</list>
+<text></text>
+<text> - Removal unconstrained for the following pins:</text>
+<text>   </text>
+<list>
+ <item>seconds[0]:ALn</item>
+ <item>seconds[1]:ALn</item>
+ <item>seconds[2]:ALn</item>
+ <item>seconds[3]:ALn</item>
+</list>
+<text></text>
+</section>
+</section>
+<section>
+<name>Input to Output</name>
+<table>
+<header>
+ <cell>Type of check</cell>
+ <cell>Constrained</cell>
+ <cell>UnConstrained</cell>
+ <cell>Total</cell>
+</header>
+<row>
+ <cell>Output Setup</cell>
+ <cell>            0</cell>
+ <cell>            2</cell>
+ <cell>            2</cell>
+</row>
+<separator/>
+<row>
+ <cell>Output Hold</cell>
+ <cell>            0</cell>
+ <cell>            2</cell>
+ <cell>            2</cell>
+</row>
+</table>
+<section>
+<name>Enhancement Suggestions</name>
+<text></text>
+<text> - Max delay constraint missing on input ports:</text>
+<text>   </text>
+<list>
+ <item>HDW_DEVRST_N</item>
+ <item>HDW_FPGA_100M_CLK</item>
+</list>
+<text></text>
+<text> - Min delay constraint missing on input ports:</text>
+<text>   </text>
+<list>
+ <item>HDW_DEVRST_N</item>
+ <item>HDW_FPGA_100M_CLK</item>
+</list>
+<text></text>
+<text></text>
+<text> - Max delay constraint missing on output ports:</text>
+<text>   </text>
+<list>
+ <item>HDW_DBUG_HEADER4</item>
+ <item>HDW_FPGA_DONE</item>
+</list>
+<text></text>
+<text> - Min delay constraint missing on output ports:</text>
+<text>   </text>
+<list>
+ <item>HDW_DBUG_HEADER4</item>
+ <item>HDW_FPGA_DONE</item>
+</list>
+<text></text>
+<text></text>
+</section>
+</section>
+</section>
+</doc>

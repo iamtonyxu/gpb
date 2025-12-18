@@ -1,0 +1,34 @@
+
+===============================================================================.
+
+Info: Global design data: 
+      Total globals:                       10 
+      Globals that cannot be demoted:      0 
+      Globals considered for demotion:     10 
+
+
+Info: List of globals considered for demotion: 
+    CLK    ASYN   DATA   Instance Name 
+    ---    ----   ----   ------------- 
+    8831   0      3      'I_1' 
+    83     0      1      'u_adc/sclk/CLK_OUT_i_m2_RNISPRS5' 
+    78     0      2      'u_dac/sclk/N_1_inferred_clock_RNISAT47' 
+    50     0      1      'u_clkgen/pulse2khz_div/CLK_OUT_RNIVQBC5' 
+    13     0      0      'I_3' 
+    0      2947   0      'I_2' 
+    0      1448   0      'u_can_if/CAN1_inst/uut/MSC_i_36/MSC_i_71/o11_rep_RNI8DTL' 
+    0      1448   0      'u_can_if/CAN2_inst/uut/MSC_i_54/MSC_i_71/o11_rep_RNI8DTL' 
+    0      1448   0      'u_can_if/CAN3_inst/uut/MSC_i_0/MSC_i_71/o11_rep_RNI8DTL' 
+    0      1448   0      'u_can_if/CAN4_inst/uut/MSC_i_18/MSC_i_71/o11_rep_RNI8DTL' 
+
+Info: Demotion information: 
+      Disconnected 3 data pins from global 'I_1'. This behavior is controlled by the 'Minimum fanout of non-clock nets to be kept on globals' threshold in the tool options for the Synthesize step. Typically, the low-skew global resources are used for clock and reset nets. When using global resources for data nets, consider the data path effect of global insertion delay and added buffer delay when the net drives carry chain logic.
+      Disconnected 1 data pins from global 'u_adc/sclk/CLK_OUT_i_m2_RNISPRS5'. This behavior is controlled by the 'Minimum fanout of non-clock nets to be kept on globals' threshold in the tool options for the Synthesize step. Typically, the low-skew global resources are used for clock and reset nets. When using global resources for data nets, consider the data path effect of global insertion delay and added buffer delay when the net drives carry chain logic.
+      Disconnected 2 data pins from global 'u_dac/sclk/N_1_inferred_clock_RNISAT47'. This behavior is controlled by the 'Minimum fanout of non-clock nets to be kept on globals' threshold in the tool options for the Synthesize step. Typically, the low-skew global resources are used for clock and reset nets. When using global resources for data nets, consider the data path effect of global insertion delay and added buffer delay when the net drives carry chain logic.
+Info: [127205381]:  CMPPF_302: Added 0 row global instances.
+Info: [127205382]:  CMPPF_303: Deleted 0 global instances.
+
+===============================================================================.
+
+Info: read prtition file C:/repo1/gpb/stn/fpga_app/designer/top_app/top_app.nmatinit.pdc.
+INFO: Reading Partition PDC file C:/repo1/gpb/stn/fpga_app/designer/top_app/top_app.nmatinit.pdc. 0 error(s) and 0 warning(s)

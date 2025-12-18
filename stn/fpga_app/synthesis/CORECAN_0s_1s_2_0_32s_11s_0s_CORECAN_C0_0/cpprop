@@ -1,0 +1,9 @@
+n work CORECAN_0s_1s_2_0_32s_11s_0s_CORECAN_C0_0 verilog;
+av .compile_point_summary_status "Mapped";
+av .compile_point_summary_reason "No database";
+av .compile_point_update_model 0;
+av .compile_point_fast_synthesis "No";
+av .compile_point_cputime_used 41.3125;
+av .compile_point_starttime_stamp "Mon Aug 11 21:10:47 2025";
+av .compile_point_endtime_stamp "Mon Aug 11 21:11:40 2025";
+av .compile_point_realtime_used 53.231;

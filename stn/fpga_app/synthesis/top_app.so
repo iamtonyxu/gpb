@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SynplifyOutput>
+	<result>Success</result>
+	<design>top_app</design>
+	<target_verilog>C:\repo1\gpb\stn\fpga_app\synthesis\top_app.vm</target_verilog>
+</SynplifyOutput>

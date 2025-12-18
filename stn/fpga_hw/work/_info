@@ -1,0 +1,430 @@
+m255
+K4
+z2
+13
+cModel Technology
+dC:/modeltech64_10.2c/examples
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+vADDER_DECODE
+Z0 V`JN@9S9cnhjKRR_L]QIcM3
+r1
+31
+IX=d3FMgmKZoFhj7Ag17zY3
+Z1 dC:/repo1/gpb/stn/fpga_hw
+w1752299411
+8C:/repo1/gpb/stn/fpga_hw/hdl/ADDR_DECODE.v
+FC:/repo1/gpb/stn/fpga_hw/hdl/ADDR_DECODE.v
+L0 21
+Z2 OL;L;10.2c;57
+Z3 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z4 !s92 -work work +incdir+C:/repo1/gpb/stn/fpga_hw/hdl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+n@a@d@d@e@r_@d@e@c@o@d@e
+!s100 Fbmo5KZK3b6[[Jj2^??RK3
+!s90 -reportprogress|300|-work|work|-vopt|+incdir+C:/repo1/gpb/stn/fpga_hw/hdl|C:/repo1/gpb/stn/fpga_hw/hdl/ADDR_DECODE.v|
+!s108 1754291253.120000
+!s107 C:/repo1/gpb/stn/fpga_hw/hdl/ADDR_DEFINITION.v|C:/repo1/gpb/stn/fpga_hw/hdl/ADDR_DECODE.v|
+!s85 0
+!i10b 1
+!i111 0
+vafifo
+Z5 V`JN@9S9cnhjKRR_L]QIcM3
+r1
+31
+I46@@CPgMDjL@k=9Q4heJM0
+R1
+Z6 w1750471156
+8C:/repo1/gpb/stn/fpga_hw/hdl/afifo.v
+FC:/repo1/gpb/stn/fpga_hw/hdl/afifo.v
+L0 62
+R2
+R3
+!s100 =QRHl[mW:d]fcH=:A8i6f2
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo1/gpb/stn/fpga_hw/hdl/afifo.v|
+!s108 1754291253.375000
+!s107 C:/repo1/gpb/stn/fpga_hw/hdl/afifo.v|
+!s85 0
+!i10b 1
+!i111 0
+vAPP_IF
+R5
+r1
+31
+Ijmzl3^1O4LBSH8C;B:AYa2
+R1
+w1752400263
+8C:/repo1/gpb/stn/fpga_hw/hdl/APP_IF.v
+FC:/repo1/gpb/stn/fpga_hw/hdl/APP_IF.v
+L0 3
+R2
+R3
+n@a@p@p_@i@f
+!s100 <Ln^oQXR0RA><c@f^KUl`2
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo1/gpb/stn/fpga_hw/hdl/APP_IF.v|
+!s108 1754291253.644000
+!s107 C:/repo1/gpb/stn/fpga_hw/hdl/APP_IF.v|
+!s85 0
+!i10b 1
+!i111 0
+vClkGen
+R5
+r1
+31
+IATgWT8K]65k`^M_KJc9Jm3
+R1
+w1752294317
+8C:/repo1/gpb/stn/fpga_hw/hdl/ClkGen.v
+FC:/repo1/gpb/stn/fpga_hw/hdl/ClkGen.v
+L0 29
+R2
+R3
+n@clk@gen
+!s100 A^k_B;DXPH]7N8A87T:?N3
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo1/gpb/stn/fpga_hw/hdl/ClkGen.v|
+!s108 1754291253.880000
+!s107 C:/repo1/gpb/stn/fpga_hw/hdl/ClkGen.v|
+!s85 0
+!i10b 1
+!i111 0
+vCLOCK_DIV
+R5
+r1
+31
+IdkKR1X_jD1TZIa[E0d@]B0
+R1
+R6
+8C:/repo1/gpb/stn/fpga_hw/hdl/CLOCK_DIV.V
+FC:/repo1/gpb/stn/fpga_hw/hdl/CLOCK_DIV.V
+L0 21
+R2
+R3
+n@c@l@o@c@k_@d@i@v
+!s100 PKOR]fhUIOT4<^j]Rh1LT0
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo1/gpb/stn/fpga_hw/hdl/CLOCK_DIV.V|
+!s108 1754291254.151000
+!s107 C:/repo1/gpb/stn/fpga_hw/hdl/CLOCK_DIV.V|
+!s85 0
+!i10b 1
+!i111 0
+vcmd_server
+R5
+r1
+31
+I_P_oPzj07IInFYl9kPhhe1
+R1
+w1752288799
+8C:/repo1/gpb/stn/fpga_hw/hdl/cmd_server.v
+FC:/repo1/gpb/stn/fpga_hw/hdl/cmd_server.v
+L0 3
+R2
+R3
+!s100 o`O5R_mc>2A>jkL=0ZNjA3
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo1/gpb/stn/fpga_hw/hdl/cmd_server.v|
+!s108 1754291254.352000
+!s107 C:/repo1/gpb/stn/fpga_hw/hdl/cmd_server.v|
+!s85 0
+!i10b 1
+!i111 0
+Ecmn_uart
+R6
+Z7 DPx4 ieee 9 math_real 0 22 X1eFklFj<NHn@4Wz7P8j:2
+Z8 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
+Z9 DPx3 std 6 textio 0 22 Y8d?=bLj9m4jiPLbo;>GT0
+Z10 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
+R1
+Z11 8C:/repo1/gpb/stn/fpga_hw/hdl/cmn_uart.vhd
+Z12 FC:/repo1/gpb/stn/fpga_hw/hdl/cmn_uart.vhd
+l0
+L42
+VWKB>o7VI:Z``]gRTZ:l?P3
+Z13 OL;C;10.2c;57
+32
+Z14 !s110 1754291254
+Z15 !s108 1754291254.609000
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/repo1/gpb/stn/fpga_hw/hdl/cmn_uart.vhd|
+Z17 !s107 C:/repo1/gpb/stn/fpga_hw/hdl/cmn_uart.vhd|
+Z18 o-work work -2002 -explicit
+Z19 tExplicit 1
+!s100 0M0^lDlU>;ObL[fO]aX2;3
+!i10b 1
+!i111 0
+Artl
+R7
+R8
+R9
+R10
+DEx4 work 8 cmn_uart 0 22 WKB>o7VI:Z``]gRTZ:l?P3
+32
+R14
+l178
+L93
+V<Kj[gL1:WN;R52^Jn@FRE1
+R13
+R15
+R16
+R17
+R18
+R19
+!s100 LN;aO>RKRM_4D5TzGjV8K2
+!i10b 1
+!i111 0
+vEEPROM_OPB_IF
+R5
+r1
+31
+I1T?>^d=CCZ@Y?27JW^noT1
+R1
+Z20 w1750471358
+8C:/repo1/gpb/stn/fpga_hw/hdl/EEPROM_OPB_IF.v
+FC:/repo1/gpb/stn/fpga_hw/hdl/EEPROM_OPB_IF.v
+L0 3
+R2
+R3
+n@e@e@p@r@o@m_@o@p@b_@i@f
+!s100 3;bc1<>MHX>oIPSmfEO>k1
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo1/gpb/stn/fpga_hw/hdl/EEPROM_OPB_IF.v|
+!s108 1754291254.843000
+!s107 C:/repo1/gpb/stn/fpga_hw/hdl/EEPROM_OPB_IF.v|
+!s85 0
+!i10b 1
+!i111 0
+vGPIO
+R5
+r1
+31
+ICo:kknLO<oFWS5_nPP@6K3
+R1
+w1754137825
+8C:/repo1/gpb/stn/fpga_hw/hdl/GPIO.v
+FC:/repo1/gpb/stn/fpga_hw/hdl/GPIO.v
+L0 21
+R2
+R3
+n@g@p@i@o
+!s100 QQ:1LAnJe`hh^Fz[9BOR83
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo1/gpb/stn/fpga_hw/hdl/GPIO.v|
+!s108 1754291255.124000
+!s107 C:/repo1/gpb/stn/fpga_hw/hdl/GPIO.v|
+!s85 0
+!i10b 1
+!i111 0
+vmsg_buffer
+R5
+r1
+31
+INV2[92H>HVgdGblXd@]Zc0
+R1
+R6
+8C:/repo1/gpb/stn/fpga_hw/hdl/msg_buffer.v
+FC:/repo1/gpb/stn/fpga_hw/hdl/msg_buffer.v
+L0 3
+R2
+R3
+!s100 HcEz__eI:EohJ?EEEVzz33
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo1/gpb/stn/fpga_hw/hdl/msg_buffer.v|
+!s108 1754291255.413000
+!s107 C:/repo1/gpb/stn/fpga_hw/hdl/msg_buffer.v|
+!s85 0
+!i10b 1
+!i111 0
+vmsg_read
+R5
+r1
+31
+I7nAiY2^7:;XQBfGdmYJd72
+R1
+w1754301196
+8C:/repo1/gpb/stn/fpga_hw/hdl/msg_read.v
+FC:/repo1/gpb/stn/fpga_hw/hdl/msg_read.v
+L0 21
+R2
+R3
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo1/gpb/stn/fpga_hw/hdl/msg_read.v|
+!s100 _j1>gCjZBEQV@MhmX2C?D3
+!s108 1754301202.365000
+!s107 C:/repo1/gpb/stn/fpga_hw/hdl/msg_read.v|
+!s85 0
+!i10b 1
+!i111 0
+vmsg_write
+R5
+r1
+31
+IRfNQdRc3jFE0nd9Im]loa0
+R1
+w1754301197
+8C:/repo1/gpb/stn/fpga_hw/hdl/msg_write.v
+FC:/repo1/gpb/stn/fpga_hw/hdl/msg_write.v
+L0 21
+R2
+R3
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo1/gpb/stn/fpga_hw/hdl/msg_write.v|
+!s100 Z?7=Bll[XNdFCbk3BiNX=0
+!s108 1754301202.724000
+!s107 C:/repo1/gpb/stn/fpga_hw/hdl/msg_write.v|
+!s85 0
+!i10b 1
+!i111 0
+vopb_emu_target
+R5
+r1
+31
+ISiI8@^ofj0;R>z7ekdQ4J1
+R1
+R20
+8C:/repo1/gpb/stn/fpga_hw/hdl/opb_emu_target.v
+FC:/repo1/gpb/stn/fpga_hw/hdl/opb_emu_target.v
+L0 3
+R2
+R3
+!s100 l<B[Dh3eOdT@[?VE@djkM2
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo1/gpb/stn/fpga_hw/hdl/opb_emu_target.v|
+!s108 1754291256.144000
+!s107 C:/repo1/gpb/stn/fpga_hw/hdl/opb_emu_target.v|
+!s85 0
+!i10b 1
+!i111 0
+vOSCILLATOR_COUNTER
+R5
+r1
+31
+IL885?R3@kd?h]had4JW;o1
+R1
+w1752297791
+8C:/repo1/gpb/stn/fpga_hw/hdl/OSCILLATOR_COUNTER.v
+FC:/repo1/gpb/stn/fpga_hw/hdl/OSCILLATOR_COUNTER.v
+L0 22
+R2
+R3
+n@o@s@c@i@l@l@a@t@o@r_@c@o@u@n@t@e@r
+!s100 A:Q8FTdU6ZSfVj:ig2ok:1
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo1/gpb/stn/fpga_hw/hdl/OSCILLATOR_COUNTER.v|
+!s108 1754291256.424000
+!s107 C:/repo1/gpb/stn/fpga_hw/hdl/OSCILLATOR_COUNTER.v|
+!s85 0
+!i10b 1
+!i111 0
+vPHY_IF
+R5
+r1
+31
+IP]C7cNnPSz1gmfC`odThS1
+R1
+w1752400435
+8C:/repo1/gpb/stn/fpga_hw/hdl/PHY_IF.v
+FC:/repo1/gpb/stn/fpga_hw/hdl/PHY_IF.v
+L0 3
+R2
+R3
+n@p@h@y_@i@f
+!s100 W^z<0X8Q?4R`@JRlf9GWW3
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo1/gpb/stn/fpga_hw/hdl/PHY_IF.v|
+!s108 1754291256.691000
+!s107 C:/repo1/gpb/stn/fpga_hw/hdl/PHY_IF.v|
+!s85 0
+!i10b 1
+!i111 0
+vSCRATCH_PAD_REGISTER
+R5
+r1
+31
+Io6CQRa4;EeG4Bg:XVz?PO0
+R1
+w1754103555
+8C:/repo1/gpb/stn/fpga_hw/hdl/SCRATCH_PAD_REGISTER.v
+FC:/repo1/gpb/stn/fpga_hw/hdl/SCRATCH_PAD_REGISTER.v
+L0 26
+R2
+R3
+n@s@c@r@a@t@c@h_@p@a@d_@r@e@g@i@s@t@e@r
+!s100 7OQh`aS114XlE5KJ:5MPN3
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo1/gpb/stn/fpga_hw/hdl/SCRATCH_PAD_REGISTER.v|
+!s108 1754291252.148000
+!s107 C:/repo1/gpb/stn/fpga_hw/hdl/SCRATCH_PAD_REGISTER.v|
+!s85 0
+!i10b 1
+!i111 0
+Eserial_eeprom_if
+R20
+Z21 DPx4 ieee 15 std_logic_arith 0 22 I`lKR?Ob>E^B_e2VdVLiQ0
+Z22 DPx4 ieee 18 std_logic_unsigned 0 22 @_jbHPR7i^Jh?`2fDCO`m3
+R9
+R10
+R1
+Z23 8C:/repo1/gpb/stn/fpga_hw/hdl/serial_eeprom_if.vhd
+Z24 FC:/repo1/gpb/stn/fpga_hw/hdl/serial_eeprom_if.vhd
+l0
+L28
+VL<Q_jS`PMnHmhZ]VK2]b?1
+R13
+32
+Z25 !s110 1754291252
+Z26 !s108 1754291252.361000
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/repo1/gpb/stn/fpga_hw/hdl/serial_eeprom_if.vhd|
+Z28 !s107 C:/repo1/gpb/stn/fpga_hw/hdl/serial_eeprom_if.vhd|
+R18
+R19
+!s100 ]@_IZ:6>G6E;H31lBZn:N3
+!i10b 1
+!i111 0
+Artl
+R21
+R22
+R9
+R10
+DEx4 work 16 serial_eeprom_if 0 22 L<Q_jS`PMnHmhZ]VK2]b?1
+32
+R25
+l93
+L51
+V@lzI;F6Vo9Gb:OhOn0gBh1
+R13
+R26
+R27
+R28
+R18
+R19
+!s100 Idn0K0:<F<S4g:f<9f^280
+!i10b 1
+!i111 0
+vtop_hw
+R5
+r1
+31
+IdizCVI_R]H5LCaSkcGLcX2
+R1
+w1753840734
+8C:/repo1/gpb/stn/fpga_hw/hdl/top_hw.v
+FC:/repo1/gpb/stn/fpga_hw/hdl/top_hw.v
+L0 25
+R2
+R3
+!s100 @3RzN[YAC_;M?f1K3YIcB0
+!s90 -reportprogress|300|-work|work|-vopt|C:/repo1/gpb/stn/fpga_hw/hdl/top_hw.v|
+!s108 1754291252.629000
+!s107 C:/repo1/gpb/stn/fpga_hw/hdl/top_hw.v|
+!s85 0
+!i10b 1
+!i111 0
+vtop_hw_tb
+R5
+r1
+!s85 0
+31
+I`V6DWBQiM1Vo6gXU^EdRV1
+R1
+w1754301406
+8C:/repo1/gpb/stn/fpga_hw/hdl/top_hw_tb.v
+FC:/repo1/gpb/stn/fpga_hw/hdl/top_hw_tb.v
+L0 6
+R2
+!s90 -reportprogress|300|-work|work|-vopt|+incdir+C:/repo1/gpb/stn/fpga_hw/hdl|C:/repo1/gpb/stn/fpga_hw/hdl/top_hw_tb.v|
+R3
+R4
+!i10b 1
+!s100 f6i2adjE0I0DJBiHM3Ba;3
+!s108 1754301417.660000
+!s107 C:/repo1/gpb/stn/fpga_hw/hdl/ADDR_DEFINITION.v|C:/repo1/gpb/stn/fpga_hw/hdl/top_hw_tb.v|
+!i111 0

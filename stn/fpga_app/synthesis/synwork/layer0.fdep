@@ -1,0 +1,229 @@
+#OPTIONS:"|-mixedhdl|-modhint|C:\\repo1\\gpb\\stn\\fpga_app\\synthesis\\synwork\\_verilog_hintfile|-top|top_app|-layerid|0|-orig_srs|C:\\repo1\\gpb\\stn\\fpga_app\\synthesis\\synwork\\top_app_comp.srs|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-I|C:\\repo1\\gpb\\stn\\fpga_app\\hdl|-I|C:\\repo1\\gpb\\stn\\fpga_app\\synthesis\\|-I|C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib|-sysv|-devicelib|C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\generic\\acg5.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\bin64\\c_ver.exe":1721969592
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\synthesis\\synwork\\_verilog_hintfile":1753938099
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\generic\\acg5.v":1721920354
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\hypermods.v":1721919828
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\scemi_objects.v":1721919828
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\scemi_pipes.svh":1721919828
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\component\\polarfire_syn_comps.v":1757048545
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\hdl\\CLOCK_DIV.V":1750471156
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\hdl\\DP_RAM_2R_1W.v":1753930656
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\hdl\\ADC_ADS8864_IF.v":1750472507
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\hdl\\ADDR_DECODE.v":1754964958
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\hdl\\ADDR_DEFINITION.v":1754969380
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\hdl\\APP2HW_IF.v":1755829201
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\component\\Microchip\\DirectCore\\CORECAN\\2.0.100\\rtl\\core_encrypted\\corecan.v":1753938261
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\component\\work\\CORECAN_C0\\CORECAN_C0.v":1753939336
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\hdl\\CORECAN_wrapper.v":1754971759
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\hdl\\CAN_IF.v":1754971683
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\hdl\\ClkGen.v":1752294317
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\hdl\\afifo.v":1750471156
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\hdl\\DAC_DACx0504_IF.v":1750472264
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\hdl\\gpio.v":1754824150
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\hdl\\OSCILLATOR_COUNTER.v":1752297791
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\hdl\\RS422_TEST_IF.v":1757044065
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\hdl\\msg_buffer.v":1750471156
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\hdl\\msg_read.v":1750471358
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\hdl\\msg_write.v":1750471156
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\hdl\\opb_emu_target.v":1750471358
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\hdl\\cmd_server.v":1752288799
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\hdl\\SCRATCH_PAD_REGISTER.v":1754097795
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_app\\hdl\\top_app.v":1757048454
+#CUR:"afifo_8s_4s_8s_4s_mem_9956_initial_block":1757048549
+#CUR:"afifo_8s_2s_8s_2s_mem_9956_initial_block":1757048551
+#CUR:"afifo_24s_4s_24s_4s_mem_9956_initial_block":1757048552
+#numinternalfiles:4
+#defaultlanguage:verilog
+0			"C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v" verilog
+1			"C:\repo1\gpb\stn\fpga_app\hdl\CLOCK_DIV.V" verilog
+2			"C:\repo1\gpb\stn\fpga_app\hdl\DP_RAM_2R_1W.v" verilog
+3			"C:\repo1\gpb\stn\fpga_app\hdl\ADC_ADS8864_IF.v" verilog
+4			"C:\repo1\gpb\stn\fpga_app\hdl\ADDR_DECODE.v" verilog
+5		*	"C:\repo1\gpb\stn\fpga_app\hdl\ADDR_DEFINITION.v" verilog
+6			"C:\repo1\gpb\stn\fpga_app\hdl\APP2HW_IF.v" verilog
+7			"C:\repo1\gpb\stn\fpga_app\component\Microchip\DirectCore\CORECAN\2.0.100\rtl\core_encrypted\corecan.v" verilog
+8			"C:\repo1\gpb\stn\fpga_app\component\work\CORECAN_C0\CORECAN_C0.v" verilog
+9			"C:\repo1\gpb\stn\fpga_app\hdl\CORECAN_wrapper.v" verilog
+10			"C:\repo1\gpb\stn\fpga_app\hdl\CAN_IF.v" verilog
+11			"C:\repo1\gpb\stn\fpga_app\hdl\ClkGen.v" verilog
+12			"C:\repo1\gpb\stn\fpga_app\hdl\afifo.v" verilog
+13			"C:\repo1\gpb\stn\fpga_app\hdl\DAC_DACx0504_IF.v" verilog
+14			"C:\repo1\gpb\stn\fpga_app\hdl\gpio.v" verilog
+15			"C:\repo1\gpb\stn\fpga_app\hdl\OSCILLATOR_COUNTER.v" verilog
+16			"C:\repo1\gpb\stn\fpga_app\hdl\RS422_TEST_IF.v" verilog
+17			"C:\repo1\gpb\stn\fpga_app\hdl\msg_buffer.v" verilog
+18			"C:\repo1\gpb\stn\fpga_app\hdl\msg_read.v" verilog
+19			"C:\repo1\gpb\stn\fpga_app\hdl\msg_write.v" verilog
+20			"C:\repo1\gpb\stn\fpga_app\hdl\opb_emu_target.v" verilog
+21			"C:\repo1\gpb\stn\fpga_app\hdl\cmd_server.v" verilog
+22			"C:\repo1\gpb\stn\fpga_app\hdl\SCRATCH_PAD_REGISTER.v" verilog
+23			"C:\repo1\gpb\stn\fpga_app\hdl\top_app.v" verilog
+#Dependency Lists(Uses List)
+0 -1
+1 -1
+2 -1
+3 1 2
+4 5
+5 -1
+6 -1
+7 -1
+8 7
+9 8
+10 9
+11 1
+12 -1
+13 1 2 12
+14 -1
+15 12
+16 -1
+17 12
+18 -1
+19 -1
+20 18 19 1
+21 17 20
+22 -1
+23 1 21 4 5 22 11 15 3 13 16 6 10 14
+#Dependency Lists(Users Of)
+0 -1
+1 3 11 13 20 23
+2 3 13
+3 23
+4 23
+5 4 23
+6 23
+7 8
+8 9
+9 10
+10 23
+11 23
+12 13 15 17
+13 23
+14 23
+15 23
+16 23
+17 21
+18 20
+19 20
+20 21
+21 23
+22 23
+23 -1
+#Design Unit to File Association
+module work APBM 0
+module work APBS 0
+module work BANKCTRLM 0
+module work BANKCTRL_GPIO 0
+module work BANKCTRL_HSIO 0
+module work BANKEN 0
+module work CRN_COMMON 0
+module work CRN_INT 0
+module work CRYPTO 0
+module work CRYPTO_SOC 0
+module work DEBUG 0
+module work DLL 0
+module work DRI 0
+module work ENFORCE 0
+module work GLITCHDETECT 0
+module work GPSS_COMMON 0
+module work HS_IO_CLK 0
+module work ICB_BANKCLK 0
+module work ICB_CLKDIVDELAY 0
+module work ICB_CLKDIV 0
+module work ICB_CLKINT 0
+module work ICB_CLKSTOP_EN 0
+module work ICB_CLKSTOP 0
+module work ICB_INT 0
+module work ICB_MUXING 0
+module work ICB_NGMUX 0
+module work INIT 0
+module work IOD 0
+module work LANECTRL 0
+module work LANERST 0
+module work OSC_RC160MHZ 0
+module work OSC_RC200MHZ 0
+module work OSC_RC2MHZ 0
+module work PCIE_COMMON 0
+module work PCIE 0
+module work PF_SPI 0
+module work PLL 0
+module work QUADRST_PCIE 0
+module work QUADRST 0
+module work SCB 0
+module work SYSCTRL_RESET_STATUS 0
+module work SYSRESET 0
+module work SYS_SERVICES 0
+module work TAMPER 0
+module work TVS 0
+module work TX_PLL 0
+module work UPROM 0
+module work USPI 0
+module work VOLTAGEDETECT 0
+module work VREFBANKDYN 0
+module work VREFCTRL 0
+module work XCVR_64B6XB 0
+module work XCVR_8B10B 0
+module work XCVR_APB_LINK 0
+module work XCVR_APB_LINK_V 0
+module work XCVR_APB_LINK_V2 0
+module work XCVR_DUAL_PCS 0
+module work XCVR_PIPE_AXI0 0
+module work XCVR_PIPE_AXI1 0
+module work XCVR_PIPE 0
+module work XCVR_PMA 0
+module work XCVR_REF_CLK_N 0
+module work XCVR_REF_CLK_P 0
+module work XCVR_REF_CLK 0
+module work XCVR_TEST 0
+module work XCVR_VV 0
+module work XCVR 0
+module work CORELNKTMR_V 0
+module work PFSOC_SCSM 0
+module work CLKBUF_DIFF 0
+module work CLKBUF_DIFF_ODT 0
+module work CLOCK_DIV 1
+module work DP_RAM_2R_1W 2
+module work ADC_ADS8864_IF 3
+module work ADDR_DECODE 4
+module work APP2HW_IF 6
+module work CORECAN 7
+module work iil 7
+module work Il0 7
+module work il0 7
+module work l00 7
+module work o10 7
+module work Io0 7
+module work lI1 7
+module work l01 7
+module work i01 7
+module work O0o 7
+module work oIi 7
+module work I1i 7
+module work oIlI 7
+module work i0lI 7
+module work I1lI 7
+module work CORECAN_C0 8
+module work CORECAN_wrapper 9
+module work CAN_IF 10
+module work ClkGen 11
+module work afifo 12
+module work DAC_DACx0504_IF 13
+module work GPIO 14
+module work OSCILLATOR_COUNTER 15
+module work RS422_TEST_IF 16
+module work msg_buffer 17
+module work msg_read 18
+module work msg_write 19
+module work opb_emu_target 20
+module work cmd_server 21
+module work SCRATCH_PAD_REGISTER 22
+module work top_app 23
+#Unbound instances to file Association.
+inst work cmd_server cmn_uart 21
+inst work cmd_server cmn_uart 21
+inst work cmn_uart cmn_uart 16
+inst work RS422_TEST_IF cmn_uart 16
+inst work cmn_uart cmn_uart 16
+inst work RS422_TEST_IF cmn_uart 16
+
+#identified top module
+top_module top_app

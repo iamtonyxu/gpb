@@ -1,0 +1,194 @@
+#OPTIONS:"|-mixedhdl|-modhint|C:\\repo1\\gpb\\stn\\fpga_hw\\synthesis\\synwork\\_verilog_hintfile|-top|top_hw|-layerid|0|-orig_srs|C:\\repo1\\gpb\\stn\\fpga_hw\\synthesis\\synwork\\top_hw_comp.srs|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-I|C:\\repo1\\gpb\\stn\\fpga_hw\\hdl|-I|C:\\repo1\\gpb\\stn\\fpga_hw\\synthesis\\|-I|C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib|-sysv|-devicelib|C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\generic\\acg5.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\bin64\\c_ver.exe":1721969592
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\synthesis\\synwork\\_verilog_hintfile":1760668547
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\generic\\acg5.v":1721920354
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\hypermods.v":1721919828
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\scemi_objects.v":1721919828
+#CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vlog\\scemi_pipes.svh":1721919828
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\component\\polarfire_syn_comps.v":1760669574
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\hdl\\ADDR_DECODE.v":1752299411
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\hdl\\ADDR_DEFINITION.v":1760668247
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\hdl\\APP_IF.v":1755828365
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\hdl\\CLOCK_DIV.V":1750471156
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\hdl\\ClkGen.v":1752294317
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\hdl\\EEPROM_OPB_IF_V2.v":1760071170
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\hdl\\gpio.v":1755673694
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\hdl\\afifo.v":1750471156
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\hdl\\OSCILLATOR_COUNTER.v":1752297791
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\hdl\\ctrl_package_transceiver.v":1755406570
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\hdl\\phy_ctrl_rmii.v":1755356962
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\hdl\\PHY_IF.v":1755407844
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\hdl\\msg_buffer.v":1750471156
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\hdl\\msg_read.v":1756551276
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\hdl\\msg_write.v":1754301197
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\hdl\\opb_emu_target.v":1750471358
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\hdl\\cmd_server.v":1755252753
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\hdl\\SCRATCH_PAD_REGISTER.v":1754103555
+#CUR:"C:\\repo1\\gpb\\stn\\fpga_hw\\hdl\\top_hw.v":1760669559
+#CUR:"afifo_8s_4s_8s_4s_mem_9656_initial_block":1760669577
+#CUR:"afifo_8s_2s_8s_2s_mem_9656_initial_block":1760669581
+#CUR:"afifo_32s_2s_32s_2s_mem_9656_initial_block":1760669583
+#numinternalfiles:4
+#defaultlanguage:verilog
+0			"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v" verilog
+1			"C:\repo1\gpb\stn\fpga_hw\hdl\ADDR_DECODE.v" verilog
+2		*	"C:\repo1\gpb\stn\fpga_hw\hdl\ADDR_DEFINITION.v" verilog
+3			"C:\repo1\gpb\stn\fpga_hw\hdl\APP_IF.v" verilog
+4			"C:\repo1\gpb\stn\fpga_hw\hdl\CLOCK_DIV.V" verilog
+5			"C:\repo1\gpb\stn\fpga_hw\hdl\ClkGen.v" verilog
+6			"C:\repo1\gpb\stn\fpga_hw\hdl\EEPROM_OPB_IF_V2.v" verilog
+7			"C:\repo1\gpb\stn\fpga_hw\hdl\gpio.v" verilog
+8			"C:\repo1\gpb\stn\fpga_hw\hdl\afifo.v" verilog
+9			"C:\repo1\gpb\stn\fpga_hw\hdl\OSCILLATOR_COUNTER.v" verilog
+10			"C:\repo1\gpb\stn\fpga_hw\hdl\ctrl_package_transceiver.v" verilog
+11			"C:\repo1\gpb\stn\fpga_hw\hdl\phy_ctrl_rmii.v" verilog
+12			"C:\repo1\gpb\stn\fpga_hw\hdl\PHY_IF.v" verilog
+13			"C:\repo1\gpb\stn\fpga_hw\hdl\msg_buffer.v" verilog
+14			"C:\repo1\gpb\stn\fpga_hw\hdl\msg_read.v" verilog
+15			"C:\repo1\gpb\stn\fpga_hw\hdl\msg_write.v" verilog
+16			"C:\repo1\gpb\stn\fpga_hw\hdl\opb_emu_target.v" verilog
+17			"C:\repo1\gpb\stn\fpga_hw\hdl\cmd_server.v" verilog
+18			"C:\repo1\gpb\stn\fpga_hw\hdl\SCRATCH_PAD_REGISTER.v" verilog
+19			"C:\repo1\gpb\stn\fpga_hw\hdl\top_hw.v" verilog
+#Dependency Lists(Uses List)
+0 -1
+1 2
+2 -1
+3 -1
+4 -1
+5 4
+6 -1
+7 -1
+8 -1
+9 8
+10 -1
+11 -1
+12 8 11 10
+13 8
+14 -1
+15 -1
+16 14 15 4
+17 13 16
+18 -1
+19 4 17 1 2 18 5 9 6 7 12 3
+#Dependency Lists(Users Of)
+0 -1
+1 19
+2 1 19
+3 19
+4 5 16 19
+5 19
+6 19
+7 19
+8 9 12 13
+9 19
+10 12
+11 12
+12 19
+13 17
+14 16
+15 16
+16 17
+17 19
+18 19
+19 -1
+#Design Unit to File Association
+module work APBM 0
+module work APBS 0
+module work BANKCTRLM 0
+module work BANKCTRL_GPIO 0
+module work BANKCTRL_HSIO 0
+module work BANKEN 0
+module work CRN_COMMON 0
+module work CRN_INT 0
+module work CRYPTO 0
+module work CRYPTO_SOC 0
+module work DEBUG 0
+module work DLL 0
+module work DRI 0
+module work ENFORCE 0
+module work GLITCHDETECT 0
+module work GPSS_COMMON 0
+module work HS_IO_CLK 0
+module work ICB_BANKCLK 0
+module work ICB_CLKDIVDELAY 0
+module work ICB_CLKDIV 0
+module work ICB_CLKINT 0
+module work ICB_CLKSTOP_EN 0
+module work ICB_CLKSTOP 0
+module work ICB_INT 0
+module work ICB_MUXING 0
+module work ICB_NGMUX 0
+module work INIT 0
+module work IOD 0
+module work LANECTRL 0
+module work LANERST 0
+module work OSC_RC160MHZ 0
+module work OSC_RC200MHZ 0
+module work OSC_RC2MHZ 0
+module work PCIE_COMMON 0
+module work PCIE 0
+module work PF_SPI 0
+module work PLL 0
+module work QUADRST_PCIE 0
+module work QUADRST 0
+module work SCB 0
+module work SYSCTRL_RESET_STATUS 0
+module work SYSRESET 0
+module work SYS_SERVICES 0
+module work TAMPER 0
+module work TVS 0
+module work TX_PLL 0
+module work UPROM 0
+module work USPI 0
+module work VOLTAGEDETECT 0
+module work VREFBANKDYN 0
+module work VREFCTRL 0
+module work XCVR_64B6XB 0
+module work XCVR_8B10B 0
+module work XCVR_APB_LINK 0
+module work XCVR_APB_LINK_V 0
+module work XCVR_APB_LINK_V2 0
+module work XCVR_DUAL_PCS 0
+module work XCVR_PIPE_AXI0 0
+module work XCVR_PIPE_AXI1 0
+module work XCVR_PIPE 0
+module work XCVR_PMA 0
+module work XCVR_REF_CLK_N 0
+module work XCVR_REF_CLK_P 0
+module work XCVR_REF_CLK 0
+module work XCVR_TEST 0
+module work XCVR_VV 0
+module work XCVR 0
+module work CORELNKTMR_V 0
+module work PFSOC_SCSM 0
+module work CLKBUF_DIFF 0
+module work CLKBUF_DIFF_ODT 0
+module work ADDER_DECODE 1
+module work APP_IF 3
+module work CLOCK_DIV 4
+module work ClkGen 5
+module work EEPROM_OPB_IF_V2 6
+module work GPIO 7
+module work afifo 8
+module work OSCILLATOR_COUNTER 9
+module work ctrl_package_transceiver 10
+module work phy_ctrl_rmii 11
+module work PHY_IF 12
+module work msg_buffer 13
+module work msg_read 14
+module work msg_write 15
+module work opb_emu_target 16
+module work cmd_server 17
+module work SCRATCH_PAD_REGISTER 18
+module work top_hw 19
+#Unbound instances to file Association.
+inst work cmd_server cmn_uart 17
+inst work cmd_server cmn_uart 17
+inst work PHY_IF SERIAL_MII 12
+inst work PHY_IF SERIAL_MII 12
+inst work EEPROM_OPB_IF_V2 serial_eeprom_if_v2 6
+inst work EEPROM_OPB_IF_V2 serial_eeprom_if_v2 6
+
+#identified top module
+top_module top_hw

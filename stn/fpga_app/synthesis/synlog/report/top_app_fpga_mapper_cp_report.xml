@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- *************************************************************************************
+FILE DESCRIPTION
+The file contains the information about all compile points from mapper to be displayed as part of the summary report.
+*******************************************************************************************-->
+<report_table display_priority="4" name="Compile Points Summary">
+<row>
+<data>Name</data>
+<data>Status</data>
+<data>Reason</data>
+<data>Real Time</data>
+<data>CPU Time</data>
+</row>
+<row>
+<data>
+<value>CORECAN_0s_1s_2_0_32s_11s_0s</value>
+<report_link name="Report">
+<data>C:\repo1\gpb\stn\fpga_app\synthesis\CORECAN_0s_1s_2_0_32s_11s_0s\CORECAN_0s_1s_2_0_32s_11s_0s.srr</data>
+</report_link>
+</data>
+<data>Unchanged</data>
+<data>-</data>
+<data>0h:00m:59s</data>
+<data>0h:00m:55s</data>
+</row>
+<row>
+<data>
+<value>iil</value>
+<report_link name="Report">
+<data>C:\repo1\gpb\stn\fpga_app\synthesis\iil\iil.srr</data>
+</report_link>
+</data>
+<data>Unchanged</data>
+<data>-</data>
+<data>0h:00m:07s</data>
+<data>0h:00m:07s</data>
+</row>
+<row>
+<data>
+<value>RS422_TEST_IF</value>
+<report_link name="Report">
+<data>C:\repo1\gpb\stn\fpga_app\synthesis\RS422_TEST_IF\RS422_TEST_IF.srr</data>
+</report_link>
+</data>
+<data>Unchanged</data>
+<data>-</data>
+<data>0h:00m:07s</data>
+<data>0h:00m:06s</data>
+</row>
+<row>
+<data>
+<value>top_app</value>
+<report_link name="Report">
+<data>C:\repo1\gpb\stn\fpga_app\synthesis\top_app\top_app.srr</data>
+</report_link>
+</data>
+<data>Remapped</data>
+<data>Design changed</data>
+<data>0h:00m:18s</data>
+<data>0h:00m:18s</data>
+</row>
+</report_table>

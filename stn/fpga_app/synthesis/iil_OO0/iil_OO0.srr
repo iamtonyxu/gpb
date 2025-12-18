@@ -1,0 +1,350 @@
+# Mon Aug 11 21:10:48 2025
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-3
+Install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: LAPTOP-6FQD1N4B
+
+Implementation : synthesis
+Synopsys Microchip Technology Mapper, Version map202309actp1, Build 008R, Built Jul 25 2024 08:49:59, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 189MB peak: 189MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 191MB peak: 204MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 191MB peak: 204MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 193MB peak: 204MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 195MB peak: 204MB)
+
+
+Vector Gate Optimization Enabled: Optimizing  Partial Hanging Logic. 
+
+
+
+@N: MF105 |Performing bottom-up mapping of Compile point view:work.iil_OO0(verilog) 
+
+Begin environment creation (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 253MB peak: 253MB)
+
+
+Finished environment creation (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 253MB peak: 254MB)
+
+
+Start loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 253MB peak: 254MB)
+
+
+Finished loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 253MB peak: 254MB)
+
+
+Begin compile point sub-process log
+
+		 no database from previous run found.
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 253MB peak: 254MB)
+
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 257MB peak: 257MB)
+
+Encoding state machine u_can_if.CAN1_inst.uut.CORECAN_C0_0.ll0.OI1l[7:0] (in view: work.top_app(verilog))
+original code -> new code
+   0000 -> 00000001
+   0001 -> 00000010
+   0010 -> 00000100
+   0011 -> 00001000
+   0100 -> 00010000
+   0101 -> 00100000
+   0110 -> 01000000
+   0111 -> 10000000
+Encoding state machine u_can_if.CAN1_inst.uut.CORECAN_C0_0.O01.IIi[3:0] (in view: work.top_app(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+Encoding state machine u_can_if.CAN1_inst.uut.CORECAN_C0_0.oI1.IIi[3:0] (in view: work.top_app(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+Encoding state machine <encrypted> (in view: work.iil_OO0(verilog))
+original code -> new code
+   000000 -> 0000000000001
+   000001 -> 0000000000010
+   000010 -> 0000000000100
+   000011 -> 0000000001000
+   000101 -> 0000000010000
+   000110 -> 0000000100000
+   000111 -> 0000001000000
+   001000 -> 0000010000000
+   001001 -> 0000100000000
+   001010 -> 0001000000000
+   001011 -> 0010000000000
+   001100 -> 0100000000000
+   001101 -> 1000000000000
+
+Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 264MB peak: 264MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 275MB peak: 275MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+NConnInternalConnection caching is on
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 265MB peak: 275MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 266MB peak: 275MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 271MB peak: 275MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 271MB peak: 275MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 272MB peak: 275MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 293MB peak: 293MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:04s		     1.79ns		 681 /       304
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 293MB peak: 294MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 293MB peak: 294MB)
+
+
+End compile point sub-process log
+
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Mon Aug 11 21:10:53 2025
+#
+
+
+Top view:               top_app
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    C:\repo1\gpb\stn\fpga_app\designer\top_app\synthesis.fdc
+                       
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: 2.643
+
+                                             Requested     Estimated     Requested     Estimated               Clock        Clock          
+Starting Clock                               Frequency     Frequency     Period        Period        Slack     Type         Group          
+-------------------------------------------------------------------------------------------------------------------------------------------
+ADC_ADS8864_IF|ram_wr_clk_inferred_clock     100.0 MHz     NA            10.000        NA            NA        inferred     (multiple)     
+CLOCK_DIV_9|N_1_inferred_clock               100.0 MHz     NA            10.000        NA            NA        inferred     (multiple)     
+top_app|APP_DBUG_MISO                        100.0 MHz     NA            10.000        NA            NA        inferred     (multiple)     
+top_app|APP_FPGA_100M_CLK                    100.0 MHz     NA            10.000        NA            NA        inferred     (multiple)     
+System                                       100.0 MHz     135.9 MHz     10.000        7.357         2.643     system       system_clkgroup
+===========================================================================================================================================
+Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks            |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------
+Starting  Ending  |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+--------------------------------------------------------------------------------------------------------
+System    System  |  10.000      2.643  |  No paths    -      |  No paths    -      |  No paths    -    
+========================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                   Starting                                                                          Arrival          
+Instance                                           Reference     Type     Pin     Net                                                Time        Slack
+                                                   Clock                                                                                              
+------------------------------------------------------------------------------------------------------------------------------------------------------
+u_can_if.CAN1_inst.uut.CORECAN_C0_0.O01.I1o        System        SLE      Q       inp[20]                                            0.218       2.643
+u_can_if.CAN1_inst.uut.CORECAN_C0_0.O01.Oio[0]     System        SLE      Q       inp[102]                                           0.218       2.681
+u_can_if.CAN1_inst.uut.CORECAN_C0_0.ll0.OII        System        SLE      Q       inp[18]                                            0.218       2.740
+u_can_if.CAN1_inst.uut.CORECAN_C0_0.O01.ooo        System        SLE      Q       inp[68]                                            0.201       3.584
+u_can_if.CAN1_inst.uut.CORECAN_C0_0.O01.ioo[0]     System        SLE      Q       inp[30]                                            0.218       3.686
+u_can_if.CAN1_inst.uut.CORECAN_C0_0.O01.ioo[1]     System        SLE      Q       inp[28]                                            0.218       3.727
+u_can_if.CAN1_inst.uut.CORECAN_C0_0.O01.O1o[3]     System        SLE      Q       inp[34]                                            0.218       3.729
+u_can_if.CAN1_inst.uut.CORECAN_C0_0.O01.O1o[1]     System        SLE      Q       inp[46]                                            0.218       3.762
+u_can_if.CAN1_inst.uut.CORECAN_C0_0.O01.IIi[0]     System        SLE      Q       u_can_if.CAN1_inst.uut.CORECAN_C0_0.O01.IIi[0]     0.218       3.796
+u_can_if.CAN1_inst.uut.CORECAN_C0_0.O01.O1o[2]     System        SLE      Q       inp[40]                                            0.218       3.813
+======================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+              Starting                                         Required          
+Instance      Reference     Type     Pin     Net               Time         Slack
+              Clock                                                              
+---------------------------------------------------------------------------------
+encrypted     System        SLE      D       c15Fhdosfwm3      10.000       2.643
+encrypted     System        SLE      D       c15Fhdosfwhn      10.000       2.651
+encrypted     System        SLE      D       c15FhdosfwbJ      10.000       2.659
+encrypted     System        SLE      D       c15FhdosfvI3      10.000       2.667
+encrypted     System        SLE      D       c15FhdosfvDn      10.000       2.675
+encrypted     System        SLE      D       c15Fhdosfv7J      10.000       2.683
+encrypted     System        SLE      D       c15Fhdosfv23      10.000       2.691
+encrypted     System        SLE      D       c15Fhdosfvxn      10.000       2.699
+encrypted     System        SLE      D       nabhCFylq9d7J     10.000       2.780
+encrypted     System        SLE      D       nabhCFylq9dDn     10.000       2.881
+=================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    + Estimated clock delay at ending point: 0.000
+    = Required time:                         10.000
+
+    - Propagation time:                      7.357
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (critical) :                     2.643
+
+    Number of logic level(s):                15
+    Starting point:                          u_can_if.CAN1_inst.uut.CORECAN_C0_0.O01.I1o / Q
+    Ending point:                            encrypted / D
+    The start point is clocked by            System [rising] on pin CLK
+    The end   point is clocked by            System [rising] on pin CLK
+
+Instance / Net                                               Pin      Pin               Arrival     No. of    
+Name                                                Type     Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------
+u_can_if.CAN1_inst.uut.CORECAN_C0_0.O01.I1o         SLE      Q        Out     0.218     0.218 r     -         
+inp[20]                                             Net      -        -       0.948     -           3         
+u_can_if.CAN1_inst.uut.CORECAN_C0_0.O01.l1o         CFG3     C        In      -         1.166 r     -         
+u_can_if.CAN1_inst.uut.CORECAN_C0_0.O01.l1o         CFG3     Y        Out     0.148     1.314 r     -         
+inp[19]                                             Net      -        -       0.948     -           2         
+u_can_if.CAN1_inst.uut.CORECAN_C0_0.O01.o1o         CFG4     B        In      -         2.262 r     -         
+u_can_if.CAN1_inst.uut.CORECAN_C0_0.O01.o1o         CFG4     Y        Out     0.088     2.350 f     -         
+inp[21]                                             Net      -        -       0.990     -           5         
+u_can_if.CAN1_inst.uut.CORECAN_C0_0.O01.I01_0_1     CFG4     D        In      -         3.340 f     -         
+u_can_if.CAN1_inst.uut.CORECAN_C0_0.O01.I01_0_1     CFG4     Y        Out     0.232     3.571 f     -         
+u_can_if.CAN1_inst.uut.CORECAN_C0_0.O01.I01_0_1     Net      -        -       0.118     -           1         
+u_can_if.CAN1_inst.uut.CORECAN_C0_0.O01.I01_0       CFG3     A        In      -         3.689 f     -         
+u_can_if.CAN1_inst.uut.CORECAN_C0_0.O01.I01_0       CFG3     Y        Out     0.047     3.736 r     -         
+inp[103]                                            Net      -        -       1.133     -           147       
+encrypted                                           CFG4     D        In      -         4.870 r     -         
+encrypted                                           CFG4     Y        Out     0.232     5.101 f     -         
+Dgq9Bl9                                             Net      -        -       0.718     -           16        
+encrypted                                           CFG3     A        In      -         5.819 f     -         
+encrypted                                           CFG3     Y        Out     0.047     5.866 r     -         
+4eFkl7ku903176L11nC0pud8fh4Ixn                      Net      -        -       0.623     -           8         
+encrypted                                           ARI1     C        In      -         6.489 r     -         
+encrypted                                           ARI1     FCO      Out     0.393     6.883 r     -         
+igElzo15I4mIJECq                                    Net      -        -       0.000     -           1         
+encrypted                                           ARI1     FCI      In      -         6.883 r     -         
+encrypted                                           ARI1     FCO      Out     0.008     6.891 r     -         
+igElzo15I4mIJECr                                    Net      -        -       0.000     -           1         
+encrypted                                           ARI1     FCI      In      -         6.891 r     -         
+encrypted                                           ARI1     FCO      Out     0.008     6.899 r     -         
+igElzo15I4mIJECs                                    Net      -        -       0.000     -           1         
+encrypted                                           ARI1     FCI      In      -         6.899 r     -         
+encrypted                                           ARI1     FCO      Out     0.008     6.907 r     -         
+igElzo15I4mIJECt                                    Net      -        -       0.000     -           1         
+encrypted                                           ARI1     FCI      In      -         6.907 r     -         
+encrypted                                           ARI1     FCO      Out     0.008     6.915 r     -         
+igElzo15I4mIJECu                                    Net      -        -       0.000     -           1         
+encrypted                                           ARI1     FCI      In      -         6.915 r     -         
+encrypted                                           ARI1     FCO      Out     0.008     6.923 r     -         
+igElzo15I4mIJECv                                    Net      -        -       0.000     -           1         
+encrypted                                           ARI1     FCI      In      -         6.923 r     -         
+encrypted                                           ARI1     FCO      Out     0.008     6.931 r     -         
+igElzo15I4mIJECw                                    Net      -        -       0.000     -           1         
+encrypted                                           ARI1     FCI      In      -         6.931 r     -         
+encrypted                                           ARI1     FCO      Out     0.008     6.939 r     -         
+igElzo15I4mIJECx                                    Net      -        -       0.000     -           1         
+encrypted                                           ARI1     FCI      In      -         6.939 r     -         
+encrypted                                           ARI1     S        Out     0.300     7.239 r     -         
+c15Fhdosfwm3                                        Net      -        -       0.118     -           1         
+encrypted                                           SLE      D        In      -         7.357 r     -         
+==============================================================================================================
+Total path delay (propagation time + setup) of 7.357 is 1.761(23.9%) logic and 5.596(76.1%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+Writing compile point status file C:\repo1\gpb\stn\fpga_app\synthesis\iil_OO0\cpprop
+
+Summary of Compile Points :
+*************************** 
+Name        Status     Reason     
+----------------------------------
+iil_OO0     Mapped     No database
+==================================
+
+Process took 0h:00m:05s realtime, 0h:00m:05s cputime
+# Mon Aug 11 21:10:53 2025
+
+###########################################################]

@@ -34,7 +34,7 @@ module APP2HW_IF #(
     output                      APP_FPGA_SPI1_MOSI,
     output                      APP_FPGA_SPI_CLK,
     output                      DISABLE_HDW_FPGA,
-    output                      APP_FPGA_TDO,
+    output                      APP_FPGA_TDO, // ignored
 
     // INPUT Interface
     input                       HSSB_PMII_CLK,
@@ -44,13 +44,12 @@ module APP2HW_IF #(
     input                       HSSB_PMII_RX_DATA2,
     input                       HSSB_PMII_RX_DATA3,
     input                       HSSB_PMII_RX_DV,
-    
     input                       APP_FPGA_SPI0_MISO,
     input                       APP_FPGA_SPI1_MISO,
-    input                       APP_FPGA_TMS,
-    input                       APP_FPGA_TDI,
-    input                       APP_FPGA_TCK,
-    input                       APP_FPGA_TRST
+    input                       APP_FPGA_TMS, // ignored
+    input                       APP_FPGA_TDI, // ignored
+    input                       APP_FPGA_TCK, // ignored
+    input                       APP_FPGA_TRST // ignored
 );
 
     // Internal signals
@@ -61,11 +60,18 @@ module APP2HW_IF #(
     always @(posedge OPB_CLK or posedge OPB_RST) begin
         if (OPB_RST) begin
             OPB_DO          <= 32'h0;
-            app_data_out    <= {DATA_WIDTH{1'b0}};
         end else if (APP_RE) begin
             OPB_DO          <= app_data_in;
-        end else if (APP_WE) begin
-            app_data_out    <= OPB_DI[DATA_WIDTH-1:0];
+        end
+    end
+
+    // app_data_out
+    always @(posedge OPB_CLK or posedge OPB_RST) begin
+        if (OPB_RST) begin
+            app_data_out <= {DATA_WIDTH{1'b0}};
+        end else begin
+            app_data_out[16:0] <= {app_data_in[8],app_data_in[7:0], app_data_in[7:0]};
+            app_data_out[31:17] <= 15'h0;
         end
     end
 
@@ -89,7 +95,7 @@ module APP2HW_IF #(
     assign APP_FPGA_SPI1_MOSI   = app_data_out[14];
     assign APP_FPGA_SPI_CLK     = app_data_out[15];
     assign DISABLE_HDW_FPGA     = app_data_out[16];
-    assign APP_FPGA_TDO         = app_data_out[17];
+    assign APP_FPGA_TDO         = app_data_out[17]; // ignored
 
     // Input assignments
     assign app_data_in[0]       = HSSB_PMII_CLK;
@@ -101,10 +107,10 @@ module APP2HW_IF #(
     assign app_data_in[6]       = HSSB_PMII_RX_DV;
     assign app_data_in[7]       = APP_FPGA_SPI0_MISO;
     assign app_data_in[8]       = APP_FPGA_SPI1_MISO;
-    assign app_data_in[9]       = APP_FPGA_TMS;
-    assign app_data_in[10]      = APP_FPGA_TDI;
-    assign app_data_in[11]      = APP_FPGA_TCK;
-    assign app_data_in[12]      = APP_FPGA_TRST;
+    assign app_data_in[9]       = APP_FPGA_TMS; // ignored
+    assign app_data_in[10]      = APP_FPGA_TDI; // ignored
+    assign app_data_in[11]      = APP_FPGA_TCK; // ignored
+    assign app_data_in[12]      = APP_FPGA_TRST;// ignored
     
     // Assign unused input bits to 0
     generate

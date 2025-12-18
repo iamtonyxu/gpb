@@ -1,0 +1,123 @@
+
+#####  START OF RAM REPORT FOR COMPILE POINT: CORECAN_0s_1s_2_0_32s_11s_0s  #####
+
+#####  LSRAM REPORT  #####
+
+INSTANTIATED     RTL_INSTANCE                                                 PRIMITIVE_TYPE     USER_ATTRIBUTE         MAPPED_INSTANCE                                                    DEPTH_X_WIDTH(A/B)     LOW-POWER_MODE     ECC     A_DOUT_PIPE_REG(EN/ARST/SRST)     B_DOUT_PIPE_REG(EN/ARST/SRST)     WRITE_MODE(A/B)           COMMENTS                                                            
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+NO               u_can_if.CAN4_inst.uut.CORECAN_C0_0.O00.O1lI.lIil[7:0]       RAM                syn_ramstyle=lsram     u_can_if.CAN4_inst.uut.CORECAN_C0_0.O00.O1lI.lIil_3_lIil_3_0_0     512X40_512X40          0                  0       0(0/0/0)                          0(0/0/0)                          (NO_CHANGE/NO_CHANGE)     Found property syn_ramstyle="lsram". Inferring instance using LSRAM.
+                 u_can_if.CAN4_inst.uut.CORECAN_C0_0.O00.O1lI.lIil_2[7:0]     RAM                                                                                                                                                                                                                                                                                                                              
+                 u_can_if.CAN4_inst.uut.CORECAN_C0_0.O00.O1lI.lIil_3[7:0]     RAM                                                                                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                                                                                                                                                                               
+NO               u_can_if.CAN4_inst.uut.CORECAN_C0_0.O00.OllI.lIil[7:0]       RAM                syn_ramstyle=lsram     u_can_if.CAN4_inst.uut.CORECAN_C0_0.O00.OllI.lIil_3_lIil_3_0_0     512X40_512X40          0                  0       1(0/1/0)                          1(0/1/0)                          (NO_CHANGE/NO_CHANGE)     Found property syn_ramstyle="lsram". Inferring instance using LSRAM.
+                 u_can_if.CAN4_inst.uut.CORECAN_C0_0.O00.OllI.lIil_2[7:0]     RAM                                                                                                                                                                                                                                                                                                                              
+                 u_can_if.CAN4_inst.uut.CORECAN_C0_0.O00.OllI.lIil_3[7:0]     RAM                                                                                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                                                                                                                                                                               
+NO               u_can_if.CAN4_inst.uut.CORECAN_C0_0.O00.O1lI.lIil_1[7:0]     RAM                syn_ramstyle=lsram     u_can_if.CAN4_inst.uut.CORECAN_C0_0.O00.O1lI.lIil_1_lIil_1_0_0     1KX20_1KX20            0                  0       0(0/0/0)                          0(0/0/0)                          (NO_CHANGE/NO_CHANGE)     Found property syn_ramstyle="lsram". Inferring instance using LSRAM.
+                                                                                                                                                                                                                                                                                                                                                                                                               
+NO               u_can_if.CAN4_inst.uut.CORECAN_C0_0.O00.OllI.lIil_1[7:0]     RAM                syn_ramstyle=lsram     u_can_if.CAN4_inst.uut.CORECAN_C0_0.O00.OllI.lIil_1_lIil_1_0_0     1KX20_1KX20            0                  0       1(0/1/0)                          0(0/0/0)                          (NO_CHANGE/NO_CHANGE)     Found property syn_ramstyle="lsram". Inferring instance using LSRAM.
+===============================================================================================================================================================================================================================================================================================================================================================================================================
+
+#####  URAM REPORT  #####
+
+INSTANTIATED     RTL_INSTANCE                                                    PRIMITIVE_TYPE     USER_ATTRIBUTE        MAPPED_INSTANCE                                                        DEPTH_X_WIDTH     LOW-POWER_MODE     ECC     R_ADDR_REG(EN/ARST/SRST)     R_DATA_PIPE_REG(EN/ARST/SRST)     COMMENTS                                                          
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+NO               u_can_if.CAN4_inst.uut.CORECAN_C0_0.genblk1\.O11.lIil[20:0]     RAM                syn_ramstyle=uram     u_can_if.CAN4_inst.uut.CORECAN_C0_0.genblk1\.O11.lIil_0_lIil_0_0_0     64X12             0                  0       0(0/0/0)                     1(0/0/0)                          Found property syn_ramstyle="uram". Inferring instance using URAM.
+                                                                                                                          u_can_if.CAN4_inst.uut.CORECAN_C0_0.genblk1\.O11.lIil_0_lIil_0_0_1     64X12             0                  0       0(0/0/0)                     1(0/0/0)                                                                                            
+===============================================================================================================================================================================================================================================================================================================================================================================
+
+#####  REG/LOGIC REPORT  #####
+
+RTL_INSTANCE                                      PRIMITIVE_TYPE     USER_ATTRIBUTE     COMMENTS                                                                            
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+u_can_if.CAN4_inst.uut.CORECAN_C0_0.OO0.loI       ROM                NA                 Mapping ROM instance using logic since value for switch "rom_map_logic" is set to 1.
+                                                                                                                                                                            
+u_can_if.CAN4_inst.uut.CORECAN_C0_0.OO0.oiI_1     ROM                NA                 Mapping ROM instance using logic since value for switch "rom_map_logic" is set to 1.
+============================================================================================================================================================================
+
+#####  END OF RAM REPORT FOR COMPILE POINT: CORECAN_0s_1s_2_0_32s_11s_0s  #####
+
+
+#####  START OF RAM REPORT FOR COMPILE POINT: iil  #####
+
+#####  LSRAM REPORT  #####
+
+INSTANTIATED     RTL_INSTANCE     PRIMITIVE_TYPE     USER_ATTRIBUTE     MAPPED_INSTANCE     DEPTH_X_WIDTH(A/B)     LOW-POWER_MODE     ECC     A_DOUT_PIPE_REG(EN/ARST/SRST)     B_DOUT_PIPE_REG(EN/ARST/SRST)     WRITE_MODE(A/B)     COMMENTS
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+==============================================================================================================================================================================================================================================
+
+#####  URAM REPORT  #####
+
+INSTANTIATED     RTL_INSTANCE     PRIMITIVE_TYPE     USER_ATTRIBUTE     MAPPED_INSTANCE     DEPTH_X_WIDTH     LOW-POWER_MODE     ECC     R_ADDR_REG(EN/ARST/SRST)     R_DATA_PIPE_REG(EN/ARST/SRST)     COMMENTS
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+================================================================================================================================================================================================================
+
+#####  REG/LOGIC REPORT  #####
+
+RTL_INSTANCE                                      PRIMITIVE_TYPE     USER_ATTRIBUTE     COMMENTS                                                                            
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+u_can_if.CAN4_inst.uut.CORECAN_C0_0.OO0.oiI_1     ROM                NA                 Mapping ROM instance using logic since value for switch "rom_map_logic" is set to 1.
+                                                                                                                                                                            
+u_can_if.CAN4_inst.uut.CORECAN_C0_0.OO0.loI       ROM                NA                 Mapping ROM instance using logic since value for switch "rom_map_logic" is set to 1.
+                                                                                                                                                                            
+u_can_if.CAN4_inst.uut.CORECAN_C0_0.OO0.OolI      ROM                NA                 Mapping ROM instance using logic since value for switch "rom_map_logic" is set to 1.
+============================================================================================================================================================================
+
+#####  END OF RAM REPORT FOR COMPILE POINT: iil  #####
+
+
+#####  START OF RAM REPORT FOR COMPILE POINT: RS422_TEST_IF  #####
+
+#####  LSRAM REPORT  #####
+
+INSTANTIATED     RTL_INSTANCE     PRIMITIVE_TYPE     USER_ATTRIBUTE     MAPPED_INSTANCE     DEPTH_X_WIDTH(A/B)     LOW-POWER_MODE     ECC     A_DOUT_PIPE_REG(EN/ARST/SRST)     B_DOUT_PIPE_REG(EN/ARST/SRST)     WRITE_MODE(A/B)     COMMENTS
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+==============================================================================================================================================================================================================================================
+
+#####  URAM REPORT  #####
+
+INSTANTIATED     RTL_INSTANCE     PRIMITIVE_TYPE     USER_ATTRIBUTE     MAPPED_INSTANCE     DEPTH_X_WIDTH     LOW-POWER_MODE     ECC     R_ADDR_REG(EN/ARST/SRST)     R_DATA_PIPE_REG(EN/ARST/SRST)     COMMENTS
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+================================================================================================================================================================================================================
+
+#####  REG/LOGIC REPORT  #####
+
+RTL_INSTANCE     PRIMITIVE_TYPE     USER_ATTRIBUTE     COMMENTS
+---------------------------------------------------------------
+===============================================================
+
+#####  END OF RAM REPORT FOR COMPILE POINT: RS422_TEST_IF  #####
+
+
+#####  START OF RAM REPORT FOR COMPILE POINT: top_app  #####
+
+#####  LSRAM REPORT  #####
+
+INSTANTIATED     RTL_INSTANCE                    PRIMITIVE_TYPE     USER_ATTRIBUTE     MAPPED_INSTANCE                   DEPTH_X_WIDTH(A/B)     LOW-POWER_MODE     ECC     A_DOUT_PIPE_REG(EN/ARST/SRST)     B_DOUT_PIPE_REG(EN/ARST/SRST)     WRITE_MODE(A/B)               COMMENTS                                                          
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+NO               u_adc.data_in_ram.ram[15:0]     RAM                DEFAULT            u_adc.data_in_ram.ram_ram_0_0     1KX20_1KX20            0                  0       0(0/0/0)                          0(0/0/0)                          (WRITE_FIRST/WRITE_FIRST)     RAM instance meets the required threshold for mapping using LSRAM.
+===============================================================================================================================================================================================================================================================================================================================================
+
+#####  URAM REPORT  #####
+
+INSTANTIATED     RTL_INSTANCE                                           PRIMITIVE_TYPE     USER_ATTRIBUTE     MAPPED_INSTANCE                                           DEPTH_X_WIDTH     LOW-POWER_MODE     ECC     R_ADDR_REG(EN/ARST/SRST)     R_DATA_PIPE_REG(EN/ARST/SRST)     COMMENTS                                                         
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+NO               u_dac.data_in_ram.ram[23:0]                            RAM                DEFAULT            u_dac.data_in_ram.ram_ram_0_0                             64X12             0                  0       1(0/0/0)                     0(0/0/0)                          RAM instance meets the required threshold for mapping using URAM.
+                                                                                                              u_dac.data_in_ram.ram_ram_0_1                             64X12             0                  0       1(0/0/0)                     0(0/0/0)                                                                                           
+                                                                                                                                                                                                                                                                                                                                                     
+NO               u_dac.opb_fifo_inst.mem[23:0]                          RAM                DEFAULT            u_dac.opb_fifo_inst.mem_mem_0_0                           64X12             0                  0       0(0/0/0)                     0(0/0/0)                          RAM instance meets the required threshold for mapping using URAM.
+                                                                                                              u_dac.opb_fifo_inst.mem_mem_0_1                           64X12             0                  0       0(0/0/0)                     0(0/0/0)                                                                                           
+                                                                                                                                                                                                                                                                                                                                                     
+NO               u_cmd_server.msg_buffer_inst.rx_fifo_inst.mem[7:0]     RAM                DEFAULT            u_cmd_server.msg_buffer_inst.rx_fifo_inst.mem_mem_0_0     64X12             0                  0       0(0/0/0)                     0(0/0/0)                          RAM instance meets the required threshold for mapping using URAM.
+                                                                                                                                                                                                                                                                                                                                                     
+NO               u_cmd_server.msg_buffer_inst.tx_fifo_inst.mem[7:0]     RAM                DEFAULT            u_cmd_server.msg_buffer_inst.tx_fifo_inst.mem_mem_0_0     64X12             0                  0       0(0/0/0)                     0(0/0/0)                          RAM instance meets the required threshold for mapping using URAM.
+=====================================================================================================================================================================================================================================================================================================================================================
+
+#####  REG/LOGIC REPORT  #####
+
+RTL_INSTANCE     PRIMITIVE_TYPE     USER_ATTRIBUTE     COMMENTS
+---------------------------------------------------------------
+===============================================================
+
+#####  END OF RAM REPORT FOR COMPILE POINT: top_app  #####
+

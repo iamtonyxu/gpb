@@ -1,0 +1,20 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CG1349 :	| Running Verilog Compiler in System Verilog mode
+@N: CG334 :"C:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\COREFIFO.v":437:13:437:25|Read directive translate_off.
+@N: CG333 :"C:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\COREFIFO.v":449:13:449:24|Read directive translate_on.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\COREFIFO.v":19:7:19:38|Synthesizing module afifo_4x32_afifo_4x32_0_COREFIFO in library work.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_nstagessync.v":20:7:20:50|Synthesizing module afifo_4x32_afifo_4x32_0_corefifo_nstagessync in library work.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_graytobinconv.v":20:7:20:52|Synthesizing module afifo_4x32_afifo_4x32_0_corefifo_graytobinconv in library work.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_async.v":20:7:20:44|Synthesizing module afifo_4x32_afifo_4x32_0_corefifo_async in library work.
+@N: CG179 :"C:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_async.v":753:35:753:41|Removing redundant assignment.
+@N: CG179 :"C:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_async.v":795:35:795:41|Removing redundant assignment.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32.v":49:7:49:16|Synthesizing module afifo_4x32 in library work.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_hw\hdl\tr_fifo_rmii.v":18:7:18:18|Synthesizing module tr_fifo_rmii in library work.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_hw\hdl\tr_fifo_rmii.v":18:7:18:18|Synthesizing module tr_fifo_rmii in library work.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_hw\hdl\phy_ctrl_rmii.v":23:7:23:19|Synthesizing module phy_ctrl_rmii in library work.
+@N: CL159 :"C:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_async.v":113:31:113:36|Input re_top is unused.
+@N: CL159 :"C:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\COREFIFO.v":161:36:161:38|Input CLK is unused.
+@N: CL159 :"C:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\COREFIFO.v":164:36:164:42|Input RESET_N is unused.
+@N|Running in 64-bit mode
+

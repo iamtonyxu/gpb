@@ -22,6 +22,15 @@
 `define RX7_ERR_BYTES_ADDR      8'h13
 `define RX8_ERR_BYTES_ADDR      8'h14
 `define RX9_ERR_BYTES_ADDR      8'h15
+`define RX1_RECV_DATA_ADDR      8'h20
+`define RX2_RECV_DATA_ADDR      8'h21
+`define RX3_RECV_DATA_ADDR      8'h22
+`define RX4_RECV_DATA_ADDR      8'h23
+`define RX5_RECV_DATA_ADDR      8'h24
+`define RX6_RECV_DATA_ADDR      8'h25
+`define RX7_RECV_DATA_ADDR      8'h26
+`define RX8_RECV_DATA_ADDR      8'h27
+`define RX9_RECV_DATA_ADDR      8'h28
 
 module RS422_TEST_IF(
     // OPB Interface
@@ -65,6 +74,7 @@ module RS422_TEST_IF(
     reg [31:0]  rx_status;                      // READ-ONLY
     reg [31:0]  rx_recv_bytes [0:8];            // READ-ONLY (indexed 0-8 for RX1-RX9)
     reg [31:0]  rx_err_bytes [0:8];             // READ-ONLY (indexed 0-8 for RX1-RX9)
+    reg [31:0]  rx_recv_data [0:8];              // READ-ONLY (indexed 0-8 for RX1-RX9)
 
     reg [31:0]  act_tx_trans_bytes;
 
@@ -177,6 +187,15 @@ module RS422_TEST_IF(
                 `RX7_ERR_BYTES_ADDR:    OPB_DO <= rx_err_bytes[6];
                 `RX8_ERR_BYTES_ADDR:    OPB_DO <= rx_err_bytes[7];
                 `RX9_ERR_BYTES_ADDR:    OPB_DO <= rx_err_bytes[8];
+                `RX1_RECV_DATA_ADDR:    OPB_DO <= rx_recv_data[0];
+                `RX2_RECV_DATA_ADDR:    OPB_DO <= rx_recv_data[1];
+                `RX3_RECV_DATA_ADDR:    OPB_DO <= rx_recv_data[2];
+                `RX4_RECV_DATA_ADDR:    OPB_DO <= rx_recv_data[3];
+                `RX5_RECV_DATA_ADDR:    OPB_DO <= rx_recv_data[4];
+                `RX6_RECV_DATA_ADDR:    OPB_DO <= rx_recv_data[5];
+                `RX7_RECV_DATA_ADDR:    OPB_DO <= rx_recv_data[6];
+                `RX8_RECV_DATA_ADDR:    OPB_DO <= rx_recv_data[7];
+                `RX9_RECV_DATA_ADDR:    OPB_DO <= rx_recv_data[8];
                 default:                OPB_DO <= 32'b0;
             endcase
         end
@@ -283,6 +302,22 @@ module RS422_TEST_IF(
                     rx_err_bytes[i] <= 32'b0;      // Clear on clear command
                 end else if (data_stream_out_stb[i] && (data_stream_out[i][7:0] != test_pattern) && rx_recv_bytes[i] < tx_trans_bytes) begin
                     rx_err_bytes[i] <= rx_err_bytes[i] + 1;     // Increment on error detected
+                end
+            end
+        end
+    endgenerate
+
+    //rx_recv_data
+    // Store the last 4 received data bytes for each RX channel
+    generate
+        for (i = 0; i < 9; i = i + 1) begin : recv_data_gen
+            always @(posedge OPB_CLK or posedge OPB_RST) begin
+                if (OPB_RST) begin
+                    rx_recv_data[i] <= 32'b0;
+                end else if(clear) begin
+                    rx_recv_data[i] <= 32'b0;      // Clear on clear command
+                end else if (data_stream_out_stb[i]) begin
+                    rx_recv_data[i] <= {rx_recv_data[i][23:0], data_stream_out[i]}; // Shift in new byte, store last 4 bytes
                 end
             end
         end

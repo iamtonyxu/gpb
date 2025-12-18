@@ -1,0 +1,1 @@
+@W: MT246 :"c:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo.vhd":150:0:150:10|Blackbox mezz_fifo_mezz_fifo_0_COREFIFO is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)

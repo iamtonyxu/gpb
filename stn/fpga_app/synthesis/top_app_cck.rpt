@@ -1,0 +1,257 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-3
+Install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: LAPTOP-6FQD1N4B
+
+Implementation : synthesis
+
+# Written on Fri Sep  5 13:03:02 2025
+
+##### DESIGN INFO #######################################################
+
+Top View:                "top_app"
+Constraint File(s):      "C:\repo1\gpb\stn\fpga_app\designer\top_app\synthesis.fdc"
+
+
+
+
+##### SUMMARY ############################################################
+
+Found 0 issues in 0 out of 6 constraints
+
+
+##### DETAILS ############################################################
+
+
+
+Clock Relationships
+*******************
+
+Starting                                     Ending                                       |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+top_app|APP_FPGA_100M_CLK                    top_app|APP_FPGA_100M_CLK                    |     10.000           |     No paths         |     No paths         |     No paths                         
+top_app|APP_FPGA_100M_CLK                    CLOCK_DIV_9|N_1_inferred_clock               |     Diff grp         |     No paths         |     No paths         |     No paths                         
+top_app|APP_FPGA_100M_CLK                    ADC_ADS8864_IF|ram_wr_clk_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+top_app|APP_FPGA_100M_CLK                    top_app|APP_DBUG_MISO                        |     Diff grp         |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_9|N_1_inferred_clock               top_app|APP_FPGA_100M_CLK                    |     Diff grp         |     No paths         |     No paths         |     No paths                         
+CLOCK_DIV_9|N_1_inferred_clock               CLOCK_DIV_9|N_1_inferred_clock               |     10.000           |     10.000           |     5.000            |     5.000                            
+ADC_ADS8864_IF|ram_wr_clk_inferred_clock     top_app|APP_FPGA_100M_CLK                    |     Diff grp         |     No paths         |     No paths         |     No paths                         
+top_app|APP_DBUG_MISO                        top_app|APP_FPGA_100M_CLK                    |     Diff grp         |     No paths         |     No paths         |     No paths                         
+top_app|APP_DBUG_MISO                        top_app|APP_DBUG_MISO                        |     10.000           |     No paths         |     No paths         |     No paths                         
+=====================================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+Unconstrained Start/End Points
+******************************
+
+p:AD_CNVST_N
+p:AD_SDOUT
+p:AD_SEL0
+p:AD_SEL1
+p:AD_SEL2
+p:AD_SEL3
+p:AD_SEL4
+p:AD_SEL5
+p:AD_SEL6
+p:AD_SEL7
+p:APP_AUX_IO0
+p:APP_AUX_IO1
+p:APP_AUX_IO2
+p:APP_AUX_IO3
+p:APP_AUX_IO4
+p:APP_AUX_IO5
+p:APP_DBUG_ACTIVE
+p:APP_DBUG_CS_N
+p:APP_DBUG_HEADER2
+p:APP_DBUG_HEADER6
+p:APP_DBUG_HEADER8
+p:APP_DBUG_HEADER10
+p:APP_DBUG_MOSI
+p:APP_DBUG_SCLK
+p:APP_DEVRST_N
+p:APP_FPGA_SPI0_CS_N
+p:APP_FPGA_SPI0_MISO
+p:APP_FPGA_SPI0_MOSI
+p:APP_FPGA_SPI1_CS_N
+p:APP_FPGA_SPI1_MISO
+p:APP_FPGA_SPI1_MOSI
+p:APP_FPGA_SPI_CLK
+p:BMENLP_LOC_SINK_STATE
+p:BMENLP_LOC_SOURCE_STATE
+p:BMENLP_SOURCE_STATE
+p:BMPLS
+p:CAN1_LED_N
+p:CAN2_LED_N
+p:CAN3_LED_N
+p:CAN4_LED_N
+p:CAN_RX1
+p:CAN_RX2
+p:CAN_RX3
+p:CAN_RX4
+p:CAN_TX1
+p:CAN_TX2
+p:CAN_TX3
+p:CAN_TX4
+p:CCW_LIMIT_STAT
+p:CW_LIMIT_STAT
+p:DAC_CS_N
+p:DAC_SDI
+p:DAC_SDO
+p:DISABLE_HDW_FPGA
+p:DKB_EMO_CLOSED
+p:DKB_FUSE_OK_N
+p:DKB_FUSE_ON
+p:DMD_MSSB_RX
+p:ENCODER1_FUSE_OK
+p:ENCODER_FUSE_ON_N
+p:ENCODER_RX1
+p:ENCODER_RX2
+p:ENCODER_TX1
+p:ENCODER_TX2
+p:ENCODER_TX_ENAB1
+p:ENCODER_TX_ENAB2
+p:FLOW_N1
+p:FLOW_N2
+p:FLOW_N3
+p:FLOW_N4
+p:FLOW_N5
+p:FPGA_DONE
+p:GANT_LOCK_PIN_STAT
+p:GROTPWR_STS_N
+p:HEARTBEAT_LED_N
+p:HSSB_PMII_CLK
+p:HSSB_PMII_RESET_N
+p:HSSB_PMII_RX_DATA0
+p:HSSB_PMII_RX_DATA1
+p:HSSB_PMII_RX_DATA2
+p:HSSB_PMII_RX_DATA3
+p:HSSB_PMII_RX_DV
+p:HSSB_PMII_TX_DATA0
+p:HSSB_PMII_TX_DATA1
+p:HSSB_PMII_TX_DATA2
+p:HSSB_PMII_TX_DATA3
+p:HSSB_PMII_TX_EN
+p:HW_GANT_ROT_EN_FLT_N
+p:KVBMENLP_SOURCE_STATE
+p:LGCTRL1
+p:LGCTRL2
+p:LGCTRL3
+p:LP_MON_A0
+p:LP_MON_A1
+p:LP_MON_A2
+p:LP_MON_SEL0
+p:LP_MON_SEL1
+p:LP_MON_SEL2
+p:LP_MON_SEL3
+p:LS_OSSD2_N
+p:LS_RES_REQ_N
+p:LS_WARNING_N
+p:MTNENLP_CCH_SOURCE_STATE
+p:MTNENLP_DKB_SOURCE_STATE
+p:MTNENLP_LOC_SINK_STATE
+p:MTNENLP_LOC_SOURCE_STATE
+p:MTNENLP_SOURCE_STATE
+p:P5VISO_STATUS
+p:P24VDRV_TEMP_FAULT_N
+p:PEND_FUSE_OK_N
+p:PEND_FUSE_ON
+p:PRI_QUADR_A
+p:PRI_QUADR_B
+p:PRI_QUADR_I
+p:PUMP_CLR_FLT_ON
+p:PUMP_EN_ON
+p:PUMP_FAULT
+p:PWRENLP_LOC_SINK_STATE
+p:PWRENLP_LOC_SOURCE_STATE
+p:PWRENLP_SOURCE_STATE
+p:SF6_24V_ON
+p:SF6_VALVE_OPEN
+p:STAT_LED1_N
+p:STAT_LED2_N
+p:STAT_LED3_N
+p:ST_DMD_MSSB_TX
+p:SYNC_LOC_MONITOR
+p:SYNC_LOC_OUT
+p:SYNC_MONITOR
+p:SYNC_OUT
+p:TP114
+p:TP115
+p:TP116
+p:TP117
+p:TP118
+p:TP119
+p:TP120
+p:TP121
+p:TP133
+p:TP134
+p:TP135
+p:TP136
+p:TP137
+p:TP138
+p:TP180
+p:TP181
+p:TP182
+p:TP183
+p:TP184
+p:TP185
+p:TP186
+p:TP187
+p:TP188
+p:TP189
+p:TP190
+p:TP191
+p:TP192
+p:TP193
+p:TP194
+p:TP195
+p:TP196
+p:TP197
+p:TP198
+p:TP199
+p:TP200
+p:TP201
+p:TP202
+p:TP203
+p:TP204
+p:TP205
+p:TP206
+p:TP207
+p:WATER_FUSE_OK_N
+p:WATER_FUSE_ON
+p:WATER_HIGH_ERROR
+p:WATER_LOW_ERROR
+p:WATER_LOW_WARNING
+
+
+Inapplicable constraints
+************************
+
+(none)
+
+
+Applicable constraints with issues
+**********************************
+
+(none)
+
+
+Constraints with matching wildcard expressions
+**********************************************
+
+(none)
+
+
+Library Report
+**************
+
+
+# End of Constraint Checker Report

@@ -1,0 +1,19 @@
+
+. Module name, SLE, CFG, ARI1, BUFFER, MACC_PA, RAM1K20, RAM64X12, GLOBAL, IO
+. phy_ctrl_rmii, 137, 70, 52, 0, 0, 0, 0, 3, 15
+.	. tr_fifo_rmii_0s_0s_1s, 68, 34, 26, 0, 0, 0, 0, 0, 0
+.	.	. afifo_4x32_1, 65, 29, 26, 0, 0, 0, 0, 0, 0
+.	.	.	. afifo_4x32_afifo_4x32_0_COREFIFO_Z1_1, 65, 29, 26, 0, 0, 0, 0, 0, 0
+.	.	.	.	. afifo_4x32_afifo_4x32_0_corefifo_async_Z2_1, 65, 29, 26, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. afifo_4x32_afifo_4x32_0_corefifo_graytobinconv_5_1, 0, 5, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. afifo_4x32_afifo_4x32_0_corefifo_graytobinconv_5_2, 0, 5, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. afifo_4x32_afifo_4x32_0_corefifo_nstagessync_2s_5_0, 12, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. afifo_4x32_afifo_4x32_0_corefifo_nstagessync_2s_5_0_1, 12, 0, 0, 0, 0, 0, 0, 0, 0
+.	. tr_fifo_rmii_1s_0s_1s, 69, 36, 26, 0, 0, 0, 0, 0, 0
+.	.	. afifo_4x32_0, 65, 32, 26, 0, 0, 0, 0, 0, 0
+.	.	.	. afifo_4x32_afifo_4x32_0_COREFIFO_Z1_0, 65, 32, 26, 0, 0, 0, 0, 0, 0
+.	.	.	.	. afifo_4x32_afifo_4x32_0_corefifo_async_Z2_0, 65, 32, 26, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. afifo_4x32_afifo_4x32_0_corefifo_graytobinconv_5, 0, 5, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. afifo_4x32_afifo_4x32_0_corefifo_graytobinconv_5_0, 0, 5, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. afifo_4x32_afifo_4x32_0_corefifo_nstagessync_2s_5, 12, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. afifo_4x32_afifo_4x32_0_corefifo_nstagessync_2s_5_1_0, 12, 0, 0, 0, 0, 0, 0, 0, 0

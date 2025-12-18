@@ -1,0 +1,172 @@
+Compile Report
+Microchip Technology Inc. - Microchip Libero Software Release v2024.2 (Version 2024.2.0.13)
+Date: Fri Oct 17 10:54:42 2025
+
+Device Selection
++------------------------+-------------+
+| Family                 | PolarFire   |
+| Device                 | MPF050T     |
+| Package                | FCVG484     |
+| Speed Grade            | STD         |
+| Core Voltage           | 1.0V        |
+| Part Range             | EXT         |
+| Default I/O technology | LVCMOS 1.8V |
++------------------------+-------------+
+
+Source Files
++---------+----------------------------------------------+
+| Topcell | top_hw                                       |
+| Format  | Verilog                                      |
+| Source  | C:\repo1\gpb\stn\fpga_hw\synthesis\top_hw.vm |
++---------+----------------------------------------------+
+
+Options
++----------------------------------------------------+----+
+| Limit the number of high fanout nets to display to | 10 |
++----------------------------------------------------+----+
+
+Resource Usage
++---------------------------+------+-------+------------+
+| Type                      | Used | Total | Percentage |
++---------------------------+------+-------+------------+
+| 4LUT                      | 3327 | 48144 | 6.91       |
+| DFF                       | 2544 | 48144 | 5.28       |
+| I/O Register              | 0    | 564   | 0.00       |
+| User I/O                  | 140  | 188   | 74.47      |
+| -- Single-ended I/O       | 140  | 188   | 74.47      |
+| -- Differential I/O Pairs | 0    | 94    | 0.00       |
+| uSRAM                     | 4    | 450   | 0.89       |
+| LSRAM                     | 0    | 160   | 0.00       |
+| Math                      | 0    | 150   | 0.00       |
+| H-Chip Global             | 7    | 24    | 29.17      |
+| PLL                       | 0    | 8     | 0.00       |
+| DLL                       | 0    | 8     | 0.00       |
+| Transceiver Lanes         | 0    | 4     | 0.00       |
+| Transceiver PCIe          | 0    | 2     | 0.00       |
++---------------------------+------+-------+------------+
+
+Detailed Logic Resource Usage
++-----------------------+------+------+
+| Type                  | 4LUT | DFF  |
++-----------------------+------+------+
+| Fabric Logic          | 3279 | 2496 |
+| uSRAM Interface Logic | 48   | 48   |
+| LSRAM Interface Logic | 0    | 0    |
+| Math Interface Logic  | 0    | 0    |
+| Total Used            | 3327 | 2544 |
++-----------------------+------+------+
+
+Detailed Carry Chains Resource Usage
++--------+------+
+| Length | Used |
+| 8      | 3    |
+| 9      | 2    |
+| 16     | 4    |
+| 17     | 15   |
+| Total  | 24   |
++--------+------+
+
+Detailed 4LUT Groups Resource Usage
++--------+------+
+| Length | Used |
+| 2      | 160  |
+| 5      | 5    |
+| Total  | 165  |
++--------+------+
+
+I/O Function
++-------------------------------+--------------+-------------+-----------------+
+| Type                          | w/o register | w/ register | w/ DDR register |
++-------------------------------+--------------+-------------+-----------------+
+| Input I/O                     | 69           | 0           | 0               |
+| Output I/O                    | 70           | 0           | 0               |
+| Bidirectional I/O             | 1            | 0           | 0               |
+| Differential Input I/O Pairs  | 0            | 0           | 0               |
+| Differential Output I/O Pairs | 0            | 0           | 0               |
++-------------------------------+--------------+-------------+-----------------+
+
+Nets assigned to chip global resources
++--------+---------+----------------------------------------------------------+
+| Fanout | Type    | Name                                                     |
++--------+---------+----------------------------------------------------------+
+| 2083   | INT_NET | Net   : HDW_DEVRST_N_arst                                |
+|        |         | Driver: I_1/U0_RGB1                                      |
+|        |         | Source: NETLIST                                          |
+| 1974   | INT_NET | Net   : NN_1                                             |
+|        |         | Driver: I_2/U0_RGB1                                      |
+|        |         | Source: NETLIST                                          |
+| 322    | INT_NET | Net   : NN_2                                             |
+|        |         | Driver: I_3/U0_RGB1                                      |
+|        |         | Source: NETLIST                                          |
+| 124    | INT_NET | Net   : clk_25mhz                                        |
+|        |         | Driver: clkgen_25mhz/N_1_inferred_clock_RNIECG26/U0_RGB1 |
+|        |         | Source: NETLIST                                          |
+| 51     | INT_NET | Net   : HDW_DBUG_HEADER4_c                               |
+|        |         | Driver: u_clkgen/pulse2khz_div/CLK_OUT_RNIVQBC5/U0_RGB1  |
+|        |         | Source: NETLIST                                          |
+| 26     | INT_NET | Net   : NN_3                                             |
+|        |         | Driver: I_4/U0_RGB1                                      |
+|        |         | Source: NETLIST                                          |
+| 4      | INT_NET | Net   : pulse_1hz                                        |
+|        |         | Driver: clkgen_2khz/N_1_inferred_clock_RNINDJ72/U0_RGB1  |
+|        |         | Source: NETLIST                                          |
++--------+---------+----------------------------------------------------------+
+
+Nets assigned to row global resources
++--------+------+------+
+| Fanout | Type | Name |
++--------+------+------+
++--------+------+------+
+
+High fanout nets
++--------+---------+----------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                 |
++--------+---------+----------------------------------------------------------------------+
+| 405    | INT_NET | Net   : phy_if_0/phy_tx_ctrl_Z[1]                                    |
+|        |         | Driver: phy_if_0/phy_tx_ctrl[1]                                      |
+| 383    | INT_NET | Net   : opb_addr[0]                                                  |
+|        |         | Driver: u_cmd_server/opb_emu_target_inst/msg_read_inst/OPB_ADDR[0]   |
+| 261    | INT_NET | Net   : eeprom_0/eeprom_if_0/eeprom_cycle_state_rep_Z[2]             |
+|        |         | Driver: eeprom_0/eeprom_if_0/eeprom_cycle_state_rep[2]               |
+| 256    | INT_NET | Net   : eeprom_0/eeprom_if_0/un1_page_wrdata_reg_0_sqmuxa_1_Z        |
+|        |         | Driver: eeprom_0/eeprom_if_0/un1_page_wrdata_reg_0_sqmuxa_1          |
+| 256    | INT_NET | Net   : eeprom_0/eeprom_if_0/un1_eeprom_cycle_state_17_i             |
+|        |         | Driver: eeprom_0/eeprom_if_0/un1_eeprom_cycle_state_17_0_m2_RNIM4TFG |
+| 253    | INT_NET | Net   : opb_addr[1]                                                  |
+|        |         | Driver: u_cmd_server/opb_emu_target_inst/msg_read_inst/OPB_ADDR[1]   |
+| 252    | INT_NET | Net   : eeprom_0/eeprom_if_0/eeprom_cycle_state_Z[11]                |
+|        |         | Driver: eeprom_0/eeprom_if_0/eeprom_cycle_state[11]                  |
+| 206    | INT_NET | Net   : opb_addr[3]                                                  |
+|        |         | Driver: u_cmd_server/opb_emu_target_inst/msg_read_inst/OPB_ADDR[3]   |
+| 186    | INT_NET | Net   : opb_addr[2]                                                  |
+|        |         | Driver: u_cmd_server/opb_emu_target_inst/msg_read_inst/OPB_ADDR[2]   |
+| 158    | INT_NET | Net   : phy_if_0/tx_start_sync2_Z                                    |
+|        |         | Driver: phy_if_0/tx_start_sync2                                      |
++--------+---------+----------------------------------------------------------------------+
+
+High fanout nets (through buffer trees)
++--------+---------+----------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                 |
++--------+---------+----------------------------------------------------------------------+
+| 405    | INT_NET | Net   : phy_if_0/phy_tx_ctrl_Z[1]                                    |
+|        |         | Driver: phy_if_0/phy_tx_ctrl[1]                                      |
+| 383    | INT_NET | Net   : opb_addr[0]                                                  |
+|        |         | Driver: u_cmd_server/opb_emu_target_inst/msg_read_inst/OPB_ADDR[0]   |
+| 261    | INT_NET | Net   : eeprom_0/eeprom_if_0/eeprom_cycle_state_rep_Z[2]             |
+|        |         | Driver: eeprom_0/eeprom_if_0/eeprom_cycle_state_rep[2]               |
+| 256    | INT_NET | Net   : eeprom_0/eeprom_if_0/un1_page_wrdata_reg_0_sqmuxa_1_Z        |
+|        |         | Driver: eeprom_0/eeprom_if_0/un1_page_wrdata_reg_0_sqmuxa_1          |
+| 256    | INT_NET | Net   : eeprom_0/eeprom_if_0/un1_eeprom_cycle_state_17_i             |
+|        |         | Driver: eeprom_0/eeprom_if_0/un1_eeprom_cycle_state_17_0_m2_RNIM4TFG |
+| 253    | INT_NET | Net   : opb_addr[1]                                                  |
+|        |         | Driver: u_cmd_server/opb_emu_target_inst/msg_read_inst/OPB_ADDR[1]   |
+| 252    | INT_NET | Net   : eeprom_0/eeprom_if_0/eeprom_cycle_state_Z[11]                |
+|        |         | Driver: eeprom_0/eeprom_if_0/eeprom_cycle_state[11]                  |
+| 206    | INT_NET | Net   : opb_addr[3]                                                  |
+|        |         | Driver: u_cmd_server/opb_emu_target_inst/msg_read_inst/OPB_ADDR[3]   |
+| 186    | INT_NET | Net   : opb_addr[2]                                                  |
+|        |         | Driver: u_cmd_server/opb_emu_target_inst/msg_read_inst/OPB_ADDR[2]   |
+| 158    | INT_NET | Net   : phy_if_0/tx_start_sync2_Z                                    |
+|        |         | Driver: phy_if_0/tx_start_sync2                                      |
++--------+---------+----------------------------------------------------------------------+
+

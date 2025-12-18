@@ -1,0 +1,15 @@
+Software Version: 2024.2.0.13
+Opened 'C:\repo1\gpb\stn\fpga_hw\designer\top_hw\top_hw_fp\top_hw.pro'
+PDB file 'C:\repo1\gpb\stn\fpga_hw\designer\top_hw\top_hw.pdb' has been loaded successfully.
+DESIGN : top_hw;  CHECKSUM : 24A9;  PDB_VERSION : 1.9
+Info: Programming Interface selected is JTAG.
+Info: Design version: 0
+File/Folder 'C:\repo1\gpb\stn\fpga_hw\designer\top_hw\top_hw.ppd' will be overwritten.
+Successfully exported PPD file for currently secured device: 'C:\repo1\gpb\stn\fpga_hw\designer\top_hw\top_hw.ppd'; file programs Fabric and sNVM.
+Fabric component bitstream digest: 9fd60d6463dbea43420be39d2849917b22cda814cfb3c58bb7d20e2a65e4318a
+sNVM component bitstream digest: 0518243917cec285a1a0d6c60130e508a4423d516b98ef53fcb385e958094141
+Entire bitstream digest: 501725409a4a1cfcad56fd28ce3a87679566ce0d2d7f39871b2fa38e9f5e8d96
+Finished: Fri Oct 17 11:06:59 2025 (Elapsed time 00:00:25)
+
+Project saved.
+Project closed.

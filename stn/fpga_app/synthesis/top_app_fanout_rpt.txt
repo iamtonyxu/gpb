@@ -1,0 +1,20 @@
+
+########			REPORT FOR HIGH FANOUT NETS			########
+
+CLOCK GLOBAL THRESHOLD - 2
+ASYNC GLOBAL THRESHOLD - 800
+GLOBAL THRESHOLD - 5000
+
+NET NAME                                         CLOCK LOADS     ASYNC RST LOADS     DATA LOADS     TOTAL FANOUT     GLOBAL BUFFER PRESENT
+------------------------------------------------------------------------------------------------------------------------------------------
+APP_FPGA_100M_CLK                                8837            0                   3              8840             YES                  
+u_adc.clk_sd                                     83              0                   1              84               YES                  
+u_dac.clk_sd                                     78              0                   2              80               YES                  
+APP_DBUG_HEADER4_c                               50              0                   1              51               YES                  
+APP_DBUG_MISO                                    13              0                   0              13               YES                  
+APP_DEVRST_N_arst                                0               2947                0              2947             YES                  
+u_can_if.CAN4_inst.uut.CORECAN_C0_0.o11_arst     0               1448                0              1448             YES                  
+u_can_if.CAN3_inst.uut.CORECAN_C0_0.o11_arst     0               1448                0              1448             YES                  
+u_can_if.CAN2_inst.uut.CORECAN_C0_0.o11_arst     0               1448                0              1448             YES                  
+u_can_if.CAN1_inst.uut.CORECAN_C0_0.o11_arst     0               1448                0              1448             YES                  
+==========================================================================================================================================

@@ -1,0 +1,152 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Aug 11 17:44:52 2025
+# Process ID: 22840
+# Current directory: C:/repo1/gpb/stn/fpga_app/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10348 C:\repo1\gpb\stn\fpga_app\project_1\project_1.xpr
+# Log file: C:/repo1/gpb/stn/fpga_app/project_1/vivado.log
+# Journal file: C:/repo1/gpb/stn/fpga_app/project_1\vivado.jou
+# Running On: LAPTOP-6FQD1N4B, OS: Windows, CPU Frequency: 2611 MHz, CPU Physical cores: 12, Host memory: 34016 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/repo1/gpb/stn/fpga_app/project_1/project_1.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/repo1/gpb/stn/fpga_app/project_1/project_1.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+open_project: Time (s): cpu = 00:00:51 ; elapsed = 00:00:23 . Memory (MB): peak = 1784.453 ; gain = 386.598
+update_compile_order -fileset sources_1
+add_files -norecurse {C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn_syn.v C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn.v C:/repo1/gpb/stn/fpga_app/hdl/opb_emu_target.v C:/repo1/gpb/stn/fpga_app/hdl/gpio.v C:/repo1/gpb/stn/fpga_app/hdl/msg_buffer.v C:/repo1/gpb/stn/fpga_app/hdl/can_bsp.v C:/repo1/gpb/stn/fpga_app/hdl/can_crc.v C:/repo1/gpb/stn/fpga_app/hdl/can_defines.v C:/repo1/gpb/stn/fpga_app/hdl/top_app_tb.v C:/repo1/gpb/stn/fpga_app/hdl/CAN_IF_tb.v C:/repo1/gpb/stn/fpga_app/hdl/can_register_syn.v C:/repo1/gpb/stn/fpga_app/hdl/cmn_uart.vhd C:/repo1/gpb/stn/fpga_app/hdl/ADDR_DEFINITION.v C:/repo1/gpb/stn/fpga_app/hdl/DAC_DACx0504_IF.v C:/repo1/gpb/stn/fpga_app/hdl/CORECAN_wrapper_tb.v C:/repo1/gpb/stn/fpga_app/hdl/APP2HW_IF.v C:/repo1/gpb/stn/fpga_app/hdl/top_app.v C:/repo1/gpb/stn/fpga_app/hdl/ADDR_DECODE.v C:/repo1/gpb/stn/fpga_app/hdl/OSCILLATOR_COUNTER.v C:/repo1/gpb/stn/fpga_app/hdl/DP_RAM_2R_1W.v C:/repo1/gpb/stn/fpga_app/hdl/can_registers.v C:/repo1/gpb/stn/fpga_app/hdl/ClkGen.v C:/repo1/gpb/stn/fpga_app/hdl/can_fifo.v C:/repo1/gpb/stn/fpga_app/hdl/can_ibo.v C:/repo1/gpb/stn/fpga_app/hdl/CORECAN_wrapper.v C:/repo1/gpb/stn/fpga_app/hdl/RS422_TEST_IF.v C:/repo1/gpb/stn/fpga_app/hdl/cmd_server.v C:/repo1/gpb/stn/fpga_app/hdl/can_btl.v C:/repo1/gpb/stn/fpga_app/hdl/can_top.v C:/repo1/gpb/stn/fpga_app/hdl/RS422_TEST_IF_tb.v C:/repo1/gpb/stn/fpga_app/hdl/CAN_IF.v C:/repo1/gpb/stn/fpga_app/hdl/ADC_ADS8864_IF.v C:/repo1/gpb/stn/fpga_app/hdl/msg_write.v C:/repo1/gpb/stn/fpga_app/hdl/msg_read.v C:/repo1/gpb/stn/fpga_app/hdl/SCRATCH_PAD_REGISTER.v C:/repo1/gpb/stn/fpga_app/hdl/can_register.v C:/repo1/gpb/stn/fpga_app/hdl/CLOCK_DIV.V C:/repo1/gpb/stn/fpga_app/hdl/can_acf.v C:/repo1/gpb/stn/fpga_app/hdl/afifo.v}
+WARNING: [filemgmt 56-12] File 'C:/repo1/gpb/stn/fpga_app/hdl/opb_emu_target.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/repo1/gpb/stn/fpga_app/hdl/gpio.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/repo1/gpb/stn/fpga_app/hdl/msg_buffer.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/repo1/gpb/stn/fpga_app/hdl/cmn_uart.vhd' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/repo1/gpb/stn/fpga_app/hdl/ADDR_DEFINITION.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/repo1/gpb/stn/fpga_app/hdl/DAC_DACx0504_IF.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/repo1/gpb/stn/fpga_app/hdl/APP2HW_IF.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/repo1/gpb/stn/fpga_app/hdl/top_app.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/repo1/gpb/stn/fpga_app/hdl/ADDR_DECODE.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/repo1/gpb/stn/fpga_app/hdl/OSCILLATOR_COUNTER.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/repo1/gpb/stn/fpga_app/hdl/DP_RAM_2R_1W.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/repo1/gpb/stn/fpga_app/hdl/ClkGen.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/repo1/gpb/stn/fpga_app/hdl/RS422_TEST_IF.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/repo1/gpb/stn/fpga_app/hdl/cmd_server.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/repo1/gpb/stn/fpga_app/hdl/CAN_IF.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/repo1/gpb/stn/fpga_app/hdl/ADC_ADS8864_IF.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/repo1/gpb/stn/fpga_app/hdl/msg_write.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/repo1/gpb/stn/fpga_app/hdl/msg_read.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/repo1/gpb/stn/fpga_app/hdl/SCRATCH_PAD_REGISTER.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/repo1/gpb/stn/fpga_app/hdl/CLOCK_DIV.V' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/repo1/gpb/stn/fpga_app/hdl/afifo.v' cannot be added to the project because it already exists in the project, skipping this file
+update_compile_order -fileset sources_1
+set_property top can_top [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/repo1/gpb/stn/fpga_app/project_1/project_1.srcs/utils_1/imports/synth_1/top_app.dcp with file C:/repo1/gpb/stn/fpga_app/project_1/project_1.runs/synth_1/top_app.dcp
+launch_runs synth_1 -jobs 16
+[Mon Aug 11 17:51:05 2025] Launched synth_1...
+Run output will be captured here: C:/repo1/gpb/stn/fpga_app/project_1/project_1.runs/synth_1/runme.log
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7vx485tffg1157-1
+Top: can_top
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'rx_inter', assumed default net type 'wire' [C:/repo1/gpb/stn/fpga_app/hdl/can_top.v:589]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2714.676 ; gain = 397.895
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'can_top' [C:/repo1/gpb/stn/fpga_app/hdl/can_top.v:214]
+INFO: [Synth 8-6157] synthesizing module 'can_registers' [C:/repo1/gpb/stn/fpga_app/hdl/can_registers.v:173]
+INFO: [Synth 8-6157] synthesizing module 'can_register_asyn_syn' [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn_syn.v:77]
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter RESET_VALUE bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'can_register_asyn_syn' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn_syn.v:77]
+INFO: [Synth 8-6157] synthesizing module 'can_register_asyn' [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn.v:77]
+	Parameter WIDTH bound to: 4 - type: integer 
+	Parameter RESET_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'can_register_asyn' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn.v:77]
+INFO: [Synth 8-6157] synthesizing module 'can_register_asyn__parameterized0' [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn.v:77]
+	Parameter WIDTH bound to: 3 - type: integer 
+	Parameter RESET_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'can_register_asyn__parameterized0' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn.v:77]
+INFO: [Synth 8-6157] synthesizing module 'can_register_asyn_syn__parameterized0' [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn_syn.v:77]
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter RESET_VALUE bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'can_register_asyn_syn__parameterized0' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn_syn.v:77]
+INFO: [Synth 8-6157] synthesizing module 'can_register_asyn_syn__parameterized1' [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn_syn.v:77]
+	Parameter WIDTH bound to: 2 - type: integer 
+	Parameter RESET_VALUE bound to: 2'b00 
+INFO: [Synth 8-6155] done synthesizing module 'can_register_asyn_syn__parameterized1' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn_syn.v:77]
+INFO: [Synth 8-6157] synthesizing module 'can_register' [C:/repo1/gpb/stn/fpga_app/hdl/can_register.v:77]
+	Parameter WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'can_register' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_register.v:77]
+INFO: [Synth 8-6157] synthesizing module 'can_register_asyn__parameterized1' [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn.v:77]
+	Parameter WIDTH bound to: 8 - type: integer 
+	Parameter RESET_VALUE bound to: 96 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'can_register_asyn__parameterized1' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn.v:77]
+INFO: [Synth 8-6157] synthesizing module 'can_register_asyn__parameterized2' [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn.v:77]
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter RESET_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'can_register_asyn__parameterized2' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_register_asyn.v:77]
+INFO: [Synth 8-6155] done synthesizing module 'can_registers' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_registers.v:173]
+INFO: [Synth 8-6157] synthesizing module 'can_btl' [C:/repo1/gpb/stn/fpga_app/hdl/can_btl.v:155]
+INFO: [Synth 8-6155] done synthesizing module 'can_btl' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_btl.v:155]
+INFO: [Synth 8-6157] synthesizing module 'can_bsp' [C:/repo1/gpb/stn/fpga_app/hdl/can_bsp.v:236]
+INFO: [Synth 8-6157] synthesizing module 'can_crc' [C:/repo1/gpb/stn/fpga_app/hdl/can_crc.v:75]
+INFO: [Synth 8-6155] done synthesizing module 'can_crc' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_crc.v:75]
+INFO: [Synth 8-6157] synthesizing module 'can_acf' [C:/repo1/gpb/stn/fpga_app/hdl/can_acf.v:92]
+INFO: [Synth 8-6155] done synthesizing module 'can_acf' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_acf.v:92]
+INFO: [Synth 8-6157] synthesizing module 'can_fifo' [C:/repo1/gpb/stn/fpga_app/hdl/can_fifo.v:149]
+INFO: [Synth 8-6155] done synthesizing module 'can_fifo' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_fifo.v:149]
+INFO: [Synth 8-6157] synthesizing module 'can_ibo' [C:/repo1/gpb/stn/fpga_app/hdl/can_ibo.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'can_ibo' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_ibo.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'can_bsp' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_bsp.v:236]
+INFO: [Synth 8-6155] done synthesizing module 'can_top' (0#1) [C:/repo1/gpb/stn/fpga_app/hdl/can_top.v:214]
+WARNING: [Synth 8-7129] Port fifo_selected in module can_fifo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[7] in module can_bsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[6] in module can_bsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port overload_frame in module can_registers is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2831.289 ; gain = 514.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2849.211 ; gain = 532.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2849.211 ; gain = 532.430
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2849.211 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2969.375 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 3054.781 ; gain = 738.000
+37 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 3054.781 ; gain = 1247.477
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 11 17:55:10 2025...

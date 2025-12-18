@@ -34,7 +34,7 @@ module APP_IF#(
     input APP_FPGA_SPI1_MOSI,
     input APP_FPGA_SPI_CLK,
     input DISABLE_HDW_FPGA,
-    input APP_FPGA_TDO,
+    input APP_FPGA_TDO, // ignored
 
     // OUTPUT Interface
     output HSSB_PMII_CLK,
@@ -47,10 +47,10 @@ module APP_IF#(
     
     output APP_FPGA_SPI0_MISO,
     output APP_FPGA_SPI1_MISO,
-    output APP_FPGA_TMS,
-    output APP_FPGA_TDI,
-    output APP_FPGA_TCK,
-    output APP_FPGA_TRST
+    output APP_FPGA_TMS, // ignored
+    output APP_FPGA_TDI, // ignored
+    output APP_FPGA_TCK, // ignored
+    output APP_FPGA_TRST // ignored
 );
 
     // Internal signals

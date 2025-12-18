@@ -1,0 +1,296 @@
+# Fri Oct 17 10:53:36 2025
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-3
+Install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: LAPTOP-6FQD1N4B
+
+Implementation : synthesis
+Synopsys Microchip Technology Mapper, Version map202309actp1, Build 008R, Built Jul 25 2024 08:49:59, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 188MB peak: 188MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 190MB peak: 203MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 190MB peak: 203MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 192MB peak: 203MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 193MB peak: 203MB)
+
+
+Vector Gate Optimization Enabled: Optimizing  Partial Hanging Logic. 
+
+@N: MF104 :"c:\repo1\gpb\stn\fpga_hw\hdl\serial_eeprom_if_v2.vhd":45:7:45:25|Found compile point of type hard on View view:work.serial_eeprom_if_v2(rtl) 
+
+
+@N: MF105 |Performing bottom-up mapping of Compile point view:work.serial_eeprom_if_v2(rtl) 
+
+Begin environment creation (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 252MB peak: 252MB)
+
+
+Finished environment creation (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 253MB peak: 253MB)
+
+
+Start loading ILMs (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 253MB peak: 253MB)
+
+
+Finished loading ILMs (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 253MB peak: 253MB)
+
+
+Begin compile point sub-process log
+
+@N: MF106 :"c:\repo1\gpb\stn\fpga_hw\hdl\serial_eeprom_if_v2.vhd":45:7:45:25|Mapping Compile point view:work.serial_eeprom_if_v2(rtl) because 
+		 RTL and/or Constraints changed.
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 253MB peak: 253MB)
+
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 256MB peak: 256MB)
+
+Encoding state machine eeprom_cycle_state[0:11] (in view: work.serial_eeprom_if_v2(rtl))
+original code -> new code
+   000000000001 -> 000000000001
+   000000000010 -> 000000000010
+   000000000100 -> 000000000100
+   000000001000 -> 000000001000
+   000000010000 -> 000000010000
+   000000100000 -> 000000100000
+   000001000000 -> 000001000000
+   000010000000 -> 000010000000
+   000100000000 -> 000100000000
+   001000000000 -> 001000000000
+   010000000000 -> 010000000000
+   100000000000 -> 100000000000
+
+Starting factoring (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 260MB peak: 260MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:03s; Memory used current: 263MB peak: 263MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+NConnInternalConnection caching is on
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 263MB peak: 263MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 263MB peak: 264MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 263MB peak: 264MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 263MB peak: 264MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:05s; Memory used current: 264MB peak: 264MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 271MB peak: 271MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:06s		     4.13ns		 707 /       892
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 272MB peak: 272MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 272MB peak: 273MB)
+
+
+End compile point sub-process log
+
+@N: MT615 |Found clock clk_100mhz with period 10.00ns 
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Fri Oct 17 10:53:44 2025
+#
+
+
+Top view:               top_hw
+Requested Frequency:    50.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    C:\repo1\gpb\stn\fpga_hw\designer\top_hw\synthesis.fdc
+                       
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: 4.715
+
+                                      Requested     Estimated     Requested     Estimated               Clock        Clock                
+Starting Clock                        Frequency     Frequency     Period        Period        Slack     Type         Group                
+------------------------------------------------------------------------------------------------------------------------------------------
+CLOCK_DIV_4|clkout_inferred_clock     100.0 MHz     NA            10.000        NA            NA        inferred     Inferred_clkgroup_0_1
+CLOCK_DIV_7|N_1_inferred_clock        100.0 MHz     NA            10.000        NA            NA        inferred     Inferred_clkgroup_0_3
+CLOCK_DIV_8|N_1_inferred_clock        100.0 MHz     NA            10.000        NA            NA        inferred     Inferred_clkgroup_0_2
+clk_50mhz                             50.0 MHz      NA            20.000        NA            NA        declared     default_clkgroup     
+clk_100mhz                            100.0 MHz     189.2 MHz     10.000        5.285         4.715     declared     default_clkgroup     
+top_hw|HDW_DBUG_MISO                  100.0 MHz     NA            10.000        NA            NA        inferred     Inferred_clkgroup_0_4
+==========================================================================================================================================
+Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                  |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------------
+Starting    Ending      |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+--------------------------------------------------------------------------------------------------------------
+clk_100mhz  clk_100mhz  |  10.000      4.716  |  No paths    -      |  No paths    -      |  No paths    -    
+==============================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: clk_100mhz
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                           Starting                                              Arrival          
+Instance                                   Reference      Type     Pin     Net                   Time        Slack
+                                           Clock                                                                  
+------------------------------------------------------------------------------------------------------------------
+eeprom_0.eeprom_if_0.bit_cntr[0]           clk_100mhz     SLE      Q       bit_cntr[0]           0.237       4.715
+eeprom_0.eeprom_if_0.bit_cntr[1]           clk_100mhz     SLE      Q       bit_cntr[1]           0.237       4.789
+eeprom_0.eeprom_if_0.page_byte_cntr[4]     clk_100mhz     SLE      Q       page_byte_cntr[4]     0.237       4.846
+eeprom_0.eeprom_if_0.page_byte_cntr[3]     clk_100mhz     SLE      Q       page_byte_cntr[3]     0.237       4.863
+eeprom_0.eeprom_if_0.bit_cntr[2]           clk_100mhz     SLE      Q       bit_cntr[2]           0.237       4.889
+eeprom_0.eeprom_if_0.page_byte_cntr[1]     clk_100mhz     SLE      Q       page_byte_cntr[1]     0.237       5.208
+eeprom_0.eeprom_if_0.sclk                  clk_100mhz     SLE      Q       sclk                  0.237       5.245
+eeprom_0.eeprom_if_0.page_byte_cntr[2]     clk_100mhz     SLE      Q       page_byte_cntr[2]     0.237       5.262
+eeprom_0.eeprom_if_0.page_byte_cntr[0]     clk_100mhz     SLE      Q       page_byte_cntr[0]     0.237       5.372
+eeprom_0.eeprom_if_0.bit_cntr[3]           clk_100mhz     SLE      Q       bit_cntr[3]           0.237       5.423
+==================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                            Starting                                                           Required          
+Instance                                    Reference      Type     Pin     Net                                Time         Slack
+                                            Clock                                                                                
+---------------------------------------------------------------------------------------------------------------------------------
+eeprom_0.eeprom_if_0.page_wrdata_reg[0]     clk_100mhz     SLE      EN      un1_page_wrdata_reg_0_sqmuxa_1     9.850        4.715
+eeprom_0.eeprom_if_0.page_wrdata_reg[1]     clk_100mhz     SLE      EN      un1_page_wrdata_reg_0_sqmuxa_1     9.850        4.715
+eeprom_0.eeprom_if_0.page_wrdata_reg[2]     clk_100mhz     SLE      EN      un1_page_wrdata_reg_0_sqmuxa_1     9.850        4.715
+eeprom_0.eeprom_if_0.page_wrdata_reg[3]     clk_100mhz     SLE      EN      un1_page_wrdata_reg_0_sqmuxa_1     9.850        4.715
+eeprom_0.eeprom_if_0.page_wrdata_reg[4]     clk_100mhz     SLE      EN      un1_page_wrdata_reg_0_sqmuxa_1     9.850        4.715
+eeprom_0.eeprom_if_0.page_wrdata_reg[5]     clk_100mhz     SLE      EN      un1_page_wrdata_reg_0_sqmuxa_1     9.850        4.715
+eeprom_0.eeprom_if_0.page_wrdata_reg[6]     clk_100mhz     SLE      EN      un1_page_wrdata_reg_0_sqmuxa_1     9.850        4.715
+eeprom_0.eeprom_if_0.page_wrdata_reg[7]     clk_100mhz     SLE      EN      un1_page_wrdata_reg_0_sqmuxa_1     9.850        4.715
+eeprom_0.eeprom_if_0.page_wrdata_reg[8]     clk_100mhz     SLE      EN      un1_page_wrdata_reg_0_sqmuxa_1     9.850        4.715
+eeprom_0.eeprom_if_0.page_wrdata_reg[9]     clk_100mhz     SLE      EN      un1_page_wrdata_reg_0_sqmuxa_1     9.850        4.715
+=================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.150
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.850
+
+    - Propagation time:                      5.135
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     4.716
+
+    Number of logic level(s):                4
+    Starting point:                          eeprom_0.eeprom_if_0.bit_cntr[0] / Q
+    Ending point:                            eeprom_0.eeprom_if_0.page_wrdata_reg[0] / EN
+    The start point is clocked by            clk_100mhz [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
+    The end   point is clocked by            clk_100mhz [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
+
+Instance / Net                                                                    Pin      Pin               Arrival     No. of    
+Name                                                                     Type     Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------------------------
+eeprom_0.eeprom_if_0.bit_cntr[0]                                         SLE      Q        Out     0.237     0.237 f     -         
+bit_cntr[0]                                                              Net      -        -       0.683     -           5         
+eeprom_0.eeprom_if_0.proc_EEPROM_CYCLE\.un5_strobe_1us_0_o2              CFG4     D        In      -         0.920 f     -         
+eeprom_0.eeprom_if_0.proc_EEPROM_CYCLE\.un5_strobe_1us_0_o2              CFG4     Y        Out     0.226     1.147 f     -         
+N_181                                                                    Net      -        -       0.683     -           5         
+eeprom_0.eeprom_if_0.proc_EEPROM_CYCLE\.un5_strobe_1us_0_o2_RNIPR46E     CFG3     C        In      -         1.830 f     -         
+eeprom_0.eeprom_if_0.proc_EEPROM_CYCLE\.un5_strobe_1us_0_o2_RNIPR46E     CFG3     Y        Out     0.154     1.984 r     -         
+N_51_i                                                                   Net      -        -       0.751     -           10        
+eeprom_0.eeprom_if_0.page_wrdata_reg_1_sqmuxa_1_0_a5_0_a2                CFG4     B        In      -         2.735 r     -         
+eeprom_0.eeprom_if_0.page_wrdata_reg_1_sqmuxa_1_0_a5_0_a2                CFG4     Y        Out     0.098     2.833 r     -         
+page_wrdata_reg_1_sqmuxa_1                                               Net      -        -       0.751     -           9         
+eeprom_0.eeprom_if_0.un1_page_wrdata_reg_0_sqmuxa_1                      CFG4     C        In      -         3.584 r     -         
+eeprom_0.eeprom_if_0.un1_page_wrdata_reg_0_sqmuxa_1                      CFG4     Y        Out     0.175     3.759 r     -         
+un1_page_wrdata_reg_0_sqmuxa_1                                           Net      -        -       1.376     -           256       
+eeprom_0.eeprom_if_0.page_wrdata_reg[0]                                  SLE      EN       In      -         5.135 r     -         
+===================================================================================================================================
+Total path delay (propagation time + setup) of 5.284 is 1.039(19.7%) logic and 4.245(80.3%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+Writing compile point status file C:\repo1\gpb\stn\fpga_hw\synthesis\serial_eeprom_if_v2\cpprop
+
+Summary of Compile Points :
+*************************** 
+Name                    Status       Reason        
+---------------------------------------------------
+serial_eeprom_if_v2     Remapped     Design changed
+===================================================
+
+Process took 0h:00m:08s realtime, 0h:00m:07s cputime
+# Fri Oct 17 10:53:44 2025
+
+###########################################################]

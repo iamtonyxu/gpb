@@ -1,0 +1,1910 @@
+//
+// Written by Synplify Pro 
+// Product Version "V-2023.09M-3"
+// Program "Synplify Pro", Mapper "map202309actp1, Build 008R"
+// Sat Aug 16 13:33:21 2025
+//
+// Source file index table:
+// Object locations will have the form <file>:<line>
+// file 0 "\c:\microchip\libero_soc_v2024.2\synplifypro\lib\generic\acg5.v "
+// file 1 "\c:\microchip\libero_soc_v2024.2\synplifypro\lib\vlog\hypermods.v "
+// file 2 "\c:\microchip\libero_soc_v2024.2\synplifypro\lib\vlog\scemi_objects.v "
+// file 3 "\c:\microchip\libero_soc_v2024.2\synplifypro\lib\vlog\scemi_pipes.svh "
+// file 4 "\c:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v "
+// file 5 "\c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_fwft.v "
+// file 6 "\c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_sync_scntr.v "
+// file 7 "\c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_sync.v "
+// file 8 "\c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_graytobinconv.v "
+// file 9 "\c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_nstagessync.v "
+// file 10 "\c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo_async.v "
+// file 11 "\c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32_0\rtl\vlog\core\corefifo.v "
+// file 12 "\c:\repo1\gpb\stn\fpga_hw\component\work\afifo_4x32\afifo_4x32.v "
+// file 13 "\c:\repo1\gpb\stn\fpga_hw\hdl\tr_fifo_rmii.v "
+// file 14 "\c:\microchip\libero_soc_v2024.2\synplifypro\lib\nlconst.dat "
+// file 15 "\c:\repo1\gpb\stn\fpga_hw\designer\tr_fifo_rmii\synthesis.fdc "
+
+`timescale 100 ps/100 ps
+module afifo_4x32_afifo_4x32_0_corefifo_nstagessync_2s_5_1 (
+  wptr_gray,
+  wptr_gray_sync,
+  wptr_bin_sync_0,
+  read_clock,
+  reset_c_i
+)
+;
+input [5:0] wptr_gray ;
+output [4:0] wptr_gray_sync ;
+output wptr_bin_sync_0 ;
+input read_clock ;
+input reset_c_i ;
+wire wptr_bin_sync_0 ;
+wire read_clock ;
+wire reset_c_i ;
+wire [5:0] shift_reg_Z;
+wire VCC ;
+wire GND ;
+// @9:62
+(* cdc_synchronizer=1 *)  SLE \shift_mem_reg[1][5]  (
+	.Q(wptr_bin_sync_0),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(shift_reg_Z[5]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @9:62
+(* cdc_synchronizer=1 *)  SLE \shift_mem_reg[1][4]  (
+	.Q(wptr_gray_sync[4]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(shift_reg_Z[4]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @9:62
+(* cdc_synchronizer=1 *)  SLE \shift_mem_reg[1][3]  (
+	.Q(wptr_gray_sync[3]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(shift_reg_Z[3]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @9:62
+(* cdc_synchronizer=1 *)  SLE \shift_mem_reg[1][2]  (
+	.Q(wptr_gray_sync[2]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(shift_reg_Z[2]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @9:62
+(* cdc_synchronizer=1 *)  SLE \shift_mem_reg[1][1]  (
+	.Q(wptr_gray_sync[1]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(shift_reg_Z[1]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @9:62
+(* cdc_synchronizer=1 *)  SLE \shift_mem_reg[1][0]  (
+	.Q(wptr_gray_sync[0]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(shift_reg_Z[0]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @9:48
+(* cdc_synchronizer=1 *)  SLE \shift_reg[5]  (
+	.Q(shift_reg_Z[5]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(wptr_gray[5]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @9:48
+(* cdc_synchronizer=1 *)  SLE \shift_reg[4]  (
+	.Q(shift_reg_Z[4]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(wptr_gray[4]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @9:48
+(* cdc_synchronizer=1 *)  SLE \shift_reg[3]  (
+	.Q(shift_reg_Z[3]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(wptr_gray[3]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @9:48
+(* cdc_synchronizer=1 *)  SLE \shift_reg[2]  (
+	.Q(shift_reg_Z[2]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(wptr_gray[2]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @9:48
+(* cdc_synchronizer=1 *)  SLE \shift_reg[1]  (
+	.Q(shift_reg_Z[1]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(wptr_gray[1]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @9:48
+(* cdc_synchronizer=1 *)  SLE \shift_reg[0]  (
+	.Q(shift_reg_Z[0]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(wptr_gray[0]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* afifo_4x32_afifo_4x32_0_corefifo_nstagessync_2s_5_1 */
+
+module afifo_4x32_afifo_4x32_0_corefifo_nstagessync_2s_5_0 (
+  rptr_gray,
+  rptr_gray_sync,
+  rptr_bin_sync_0,
+  write_clock,
+  reset_c_i
+)
+;
+input [5:0] rptr_gray ;
+output [4:0] rptr_gray_sync ;
+output rptr_bin_sync_0 ;
+input write_clock ;
+input reset_c_i ;
+wire rptr_bin_sync_0 ;
+wire write_clock ;
+wire reset_c_i ;
+wire [5:0] shift_reg_Z;
+wire VCC ;
+wire GND ;
+// @9:48
+(* cdc_synchronizer=1 *)  SLE \shift_reg[1]  (
+	.Q(shift_reg_Z[1]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(rptr_gray[1]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @9:48
+(* cdc_synchronizer=1 *)  SLE \shift_reg[0]  (
+	.Q(shift_reg_Z[0]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(rptr_gray[0]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @9:62
+(* cdc_synchronizer=1 *)  SLE \shift_mem_reg[1][5]  (
+	.Q(rptr_bin_sync_0),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(shift_reg_Z[5]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @9:62
+(* cdc_synchronizer=1 *)  SLE \shift_mem_reg[1][4]  (
+	.Q(rptr_gray_sync[4]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(shift_reg_Z[4]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @9:62
+(* cdc_synchronizer=1 *)  SLE \shift_mem_reg[1][3]  (
+	.Q(rptr_gray_sync[3]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(shift_reg_Z[3]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @9:62
+(* cdc_synchronizer=1 *)  SLE \shift_mem_reg[1][2]  (
+	.Q(rptr_gray_sync[2]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(shift_reg_Z[2]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @9:62
+(* cdc_synchronizer=1 *)  SLE \shift_mem_reg[1][1]  (
+	.Q(rptr_gray_sync[1]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(shift_reg_Z[1]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @9:62
+(* cdc_synchronizer=1 *)  SLE \shift_mem_reg[1][0]  (
+	.Q(rptr_gray_sync[0]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(shift_reg_Z[0]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @9:48
+(* cdc_synchronizer=1 *)  SLE \shift_reg[5]  (
+	.Q(shift_reg_Z[5]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(rptr_gray[5]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @9:48
+(* cdc_synchronizer=1 *)  SLE \shift_reg[4]  (
+	.Q(shift_reg_Z[4]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(rptr_gray[4]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @9:48
+(* cdc_synchronizer=1 *)  SLE \shift_reg[3]  (
+	.Q(shift_reg_Z[3]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(rptr_gray[3]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @9:48
+(* cdc_synchronizer=1 *)  SLE \shift_reg[2]  (
+	.Q(shift_reg_Z[2]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(rptr_gray[2]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* afifo_4x32_afifo_4x32_0_corefifo_nstagessync_2s_5_0 */
+
+module afifo_4x32_afifo_4x32_0_corefifo_graytobinconv_5 (
+  rptr_bin_sync,
+  rptr_gray_sync
+)
+;
+inout [5:0] rptr_bin_sync /* synthesis syn_tristate = 1 */ ;
+input [4:0] rptr_gray_sync ;
+wire GND ;
+wire VCC ;
+// @8:65
+  CFG3 \bin_out_1_0_a2[0]  (
+	.A(rptr_gray_sync[0]),
+	.B(rptr_gray_sync[1]),
+	.C(rptr_bin_sync[2]),
+	.Y(rptr_bin_sync[0])
+);
+defparam \bin_out_1_0_a2[0] .INIT=8'h96;
+// @8:65
+  CFG4 \bin_out_5_0_a2[2]  (
+	.A(rptr_gray_sync[4]),
+	.B(rptr_bin_sync[5]),
+	.C(rptr_gray_sync[2]),
+	.D(rptr_gray_sync[3]),
+	.Y(rptr_bin_sync[2])
+);
+defparam \bin_out_5_0_a2[2] .INIT=16'h6996;
+// @8:65
+  CFG3 \bin_out_4_i_o2[3]  (
+	.A(rptr_gray_sync[3]),
+	.B(rptr_gray_sync[4]),
+	.C(rptr_bin_sync[5]),
+	.Y(rptr_bin_sync[3])
+);
+defparam \bin_out_4_i_o2[3] .INIT=8'h96;
+// @8:65
+  CFG2 \bin_out_1_1_i_o2[0]  (
+	.A(rptr_bin_sync[5]),
+	.B(rptr_gray_sync[4]),
+	.Y(rptr_bin_sync[4])
+);
+defparam \bin_out_1_1_i_o2[0] .INIT=4'h6;
+// @8:65
+  CFG2 \bin_out_6_0_a2[1]  (
+	.A(rptr_bin_sync[2]),
+	.B(rptr_gray_sync[1]),
+	.Y(rptr_bin_sync[1])
+);
+defparam \bin_out_6_0_a2[1] .INIT=4'h6;
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* afifo_4x32_afifo_4x32_0_corefifo_graytobinconv_5 */
+
+module afifo_4x32_afifo_4x32_0_corefifo_graytobinconv_5_0 (
+  wptr_bin_sync,
+  wptr_gray_sync
+)
+;
+inout [5:0] wptr_bin_sync /* synthesis syn_tristate = 1 */ ;
+input [4:0] wptr_gray_sync ;
+wire GND ;
+wire VCC ;
+// @8:65
+  CFG3 \bin_out_1_0_a2[0]  (
+	.A(wptr_gray_sync[0]),
+	.B(wptr_gray_sync[1]),
+	.C(wptr_bin_sync[2]),
+	.Y(wptr_bin_sync[0])
+);
+defparam \bin_out_1_0_a2[0] .INIT=8'h96;
+// @8:65
+  CFG4 \bin_out_5_0_a2[2]  (
+	.A(wptr_gray_sync[4]),
+	.B(wptr_bin_sync[5]),
+	.C(wptr_gray_sync[2]),
+	.D(wptr_gray_sync[3]),
+	.Y(wptr_bin_sync[2])
+);
+defparam \bin_out_5_0_a2[2] .INIT=16'h6996;
+// @8:65
+  CFG3 \bin_out_4_i_o2[3]  (
+	.A(wptr_gray_sync[3]),
+	.B(wptr_gray_sync[4]),
+	.C(wptr_bin_sync[5]),
+	.Y(wptr_bin_sync[3])
+);
+defparam \bin_out_4_i_o2[3] .INIT=8'h96;
+// @8:65
+  CFG2 \bin_out_1_1_i_o2[0]  (
+	.A(wptr_bin_sync[5]),
+	.B(wptr_gray_sync[4]),
+	.Y(wptr_bin_sync[4])
+);
+defparam \bin_out_1_1_i_o2[0] .INIT=4'h6;
+// @8:65
+  CFG2 \bin_out_6_0_a2[1]  (
+	.A(wptr_bin_sync[2]),
+	.B(wptr_gray_sync[1]),
+	.Y(wptr_bin_sync[1])
+);
+defparam \bin_out_6_0_a2[1] .INIT=4'h6;
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* afifo_4x32_afifo_4x32_0_corefifo_graytobinconv_5_0 */
+
+module afifo_4x32_afifo_4x32_0_corefifo_async_Z2 (
+  fifo_read_en_1_sqmuxa_i_1z,
+  N_19,
+  N_10,
+  reading_fifo,
+  rx_fifo_we,
+  fifo_read_en,
+  rdata_vld_c,
+  write_clock,
+  read_clock,
+  reset_c_i
+)
+;
+output fifo_read_en_1_sqmuxa_i_1z ;
+output N_19 ;
+output N_10 ;
+input reading_fifo ;
+input rx_fifo_we ;
+input fifo_read_en ;
+output rdata_vld_c ;
+input write_clock ;
+input read_clock ;
+input reset_c_i ;
+wire fifo_read_en_1_sqmuxa_i_1z ;
+wire N_19 ;
+wire N_10 ;
+wire reading_fifo ;
+wire rx_fifo_we ;
+wire fifo_read_en ;
+wire rdata_vld_c ;
+wire write_clock ;
+wire read_clock ;
+wire reset_c_i ;
+wire [5:0] rptr_s;
+wire [5:1] rptr;
+wire [5:5] wdiff_bus_Z;
+wire [5:0] rptr_bin_sync2_Z;
+wire [5:0] rptr_bin_sync;
+wire [5:0] wptr_bin_sync2_Z;
+wire [5:0] wptr_bin_sync;
+wire [5:1] wptr_cmb;
+wire [5:0] rptr_gray;
+wire [4:0] rptr_gray_3_Z;
+wire [5:0] wptr_gray;
+wire [4:0] wptr_gray_3_Z;
+wire [0:0] wptr_bin_sync2_RNIFEPIC_Y;
+wire [5:1] rdiff_bus_Z;
+wire [1:1] wptr_bin_sync2_RNI8B6IK_Y;
+wire [2:2] wptr_bin_sync2_RNI3AJHS_Y;
+wire [3:3] wptr_bin_sync2_RNI0B0H41_Y;
+wire [4:4] wptr_bin_sync2_RNIVDDGC1_Y;
+wire [0:0] wptr_RNIFPQNE_Y;
+wire [1:1] wptr_RNIC4R3M_Y;
+wire [2:2] wptr_RNIAGRFT_Y;
+wire [3:3] wptr_RNI9TRR41_Y;
+wire [5:5] wptr_RNIAQSJJ1_FCO;
+wire [5:5] wptr_RNIAQSJJ1_Y;
+wire [4:4] wptr_RNI9BS7C1_Y;
+wire [4:1] rptr_cry;
+wire [4:1] rptr_cry_Y;
+wire [5:5] rptr_s_FCO;
+wire [5:5] rptr_s_Y;
+wire [4:0] wptr_gray_sync;
+wire [4:0] rptr_gray_sync;
+wire rdiff_bus ;
+wire VCC ;
+wire empty_r_RNIOJCJ4_Y ;
+wire GND ;
+wire fifo_empty ;
+wire empty_r_4 ;
+wire full_r ;
+wire dvld_r2_3 ;
+wire fifo_aempty ;
+wire N_24_i ;
+wire N_13 ;
+wire wptr_cmb_axb_5 ;
+wire full_r_RNIJFQB7_Y ;
+wire wptr_cmb_axb_4 ;
+wire wptr_cmb_axb_3 ;
+wire wptr_cmb_axb_2 ;
+wire wptr_cmb_axb_1 ;
+wire wptr_cmb_axb_0 ;
+wire wdiff_bus ;
+wire rdiff_bus_cry_0_cy ;
+wire empty_r_RNIOJCJ4_S ;
+wire rdiff_bus_cry_0 ;
+wire emptyilt5 ;
+wire rdiff_bus_cry_1 ;
+wire rdiff_bus_cry_2 ;
+wire rdiff_bus_cry_3 ;
+wire almostemptyi_2_sqmuxa_i_o2_RNO_FCO ;
+wire almostemptyi_2_sqmuxa_i_o2_RNO_Y ;
+wire rdiff_bus_cry_4 ;
+wire wptr_cmb_cry_0_cy ;
+wire full_r_RNIJFQB7_S ;
+wire wptr_cmb_cry_0 ;
+wire wptr_cmb_cry_1 ;
+wire wptr_cmb_cry_2 ;
+wire wptr_cmb_cry_3 ;
+wire wptr_cmb_cry_4 ;
+wire wdiff_bus_cry_0_Z ;
+wire wdiff_bus_cry_0_S ;
+wire wdiff_bus_cry_0_Y ;
+wire wdiff_bus_cry_1_Z ;
+wire wdiff_bus_cry_1_S ;
+wire wdiff_bus_cry_1_Y ;
+wire wdiff_bus_cry_2_Z ;
+wire wdiff_bus_cry_2_S ;
+wire wdiff_bus_cry_2_Y ;
+wire wdiff_bus_cry_3_Z ;
+wire wdiff_bus_cry_3_S ;
+wire wdiff_bus_cry_3_Y ;
+wire wdiff_bus_s_5_FCO ;
+wire wdiff_bus_s_5_Y ;
+wire wdiff_bus_cry_4_Z ;
+wire wdiff_bus_cry_4_S ;
+wire wdiff_bus_cry_4_Y ;
+wire rptr_s_30_FCO ;
+wire rptr_s_30_S ;
+wire rptr_s_30_Y ;
+wire N_17 ;
+wire N_29 ;
+wire N_34 ;
+wire empty_r_1_sqmuxa ;
+wire empty_r9 ;
+wire N_22 ;
+wire N_21 ;
+wire N_20 ;
+wire N_19_0 ;
+wire N_18 ;
+wire N_17_0 ;
+wire N_16 ;
+wire N_15 ;
+wire N_14 ;
+wire N_13_0 ;
+wire N_7 ;
+  CFG1 \genblk10.rptr_RNO[0]  (
+	.A(rdiff_bus),
+	.Y(rptr_s[0])
+);
+defparam \genblk10.rptr_RNO[0] .INIT=2'h1;
+// @10:678
+  SLE \genblk10.rptr[5]  (
+	.Q(rptr[5]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(rptr_s[5]),
+	.EN(empty_r_RNIOJCJ4_Y),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:678
+  SLE \genblk10.rptr[4]  (
+	.Q(rptr[4]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(rptr_s[4]),
+	.EN(empty_r_RNIOJCJ4_Y),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:678
+  SLE \genblk10.rptr[3]  (
+	.Q(rptr[3]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(rptr_s[3]),
+	.EN(empty_r_RNIOJCJ4_Y),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:678
+  SLE \genblk10.rptr[2]  (
+	.Q(rptr[2]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(rptr_s[2]),
+	.EN(empty_r_RNIOJCJ4_Y),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:678
+  SLE \genblk10.rptr[1]  (
+	.Q(rptr[1]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(rptr_s[1]),
+	.EN(empty_r_RNIOJCJ4_Y),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:678
+  SLE \genblk10.rptr[0]  (
+	.Q(rdiff_bus),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(rptr_s[0]),
+	.EN(empty_r_RNIOJCJ4_Y),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:709
+  SLE \genblk10.empty_r  (
+	.Q(fifo_empty),
+	.ADn(GND),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(empty_r_4),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:776
+  SLE \genblk10.full_r  (
+	.Q(full_r),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(wdiff_bus_Z[5]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:709
+  SLE \genblk10.dvld_r  (
+	.Q(dvld_r2_3),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(empty_r_RNIOJCJ4_Y),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:609
+  SLE dvld_r2 (
+	.Q(rdata_vld_c),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(dvld_r2_3),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:709
+  SLE \genblk10.aempty_r  (
+	.Q(fifo_aempty),
+	.ADn(GND),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(N_24_i),
+	.EN(N_13),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:520
+  SLE \rptr_bin_sync2[1]  (
+	.Q(rptr_bin_sync2_Z[1]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(rptr_bin_sync[1]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:520
+  SLE \rptr_bin_sync2[0]  (
+	.Q(rptr_bin_sync2_Z[0]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(rptr_bin_sync[0]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:505
+  SLE \wptr_bin_sync2[5]  (
+	.Q(wptr_bin_sync2_Z[5]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(wptr_bin_sync[5]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:505
+  SLE \wptr_bin_sync2[4]  (
+	.Q(wptr_bin_sync2_Z[4]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(wptr_bin_sync[4]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:505
+  SLE \wptr_bin_sync2[3]  (
+	.Q(wptr_bin_sync2_Z[3]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(wptr_bin_sync[3]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:505
+  SLE \wptr_bin_sync2[2]  (
+	.Q(wptr_bin_sync2_Z[2]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(wptr_bin_sync[2]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:505
+  SLE \wptr_bin_sync2[1]  (
+	.Q(wptr_bin_sync2_Z[1]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(wptr_bin_sync[1]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:505
+  SLE \wptr_bin_sync2[0]  (
+	.Q(wptr_bin_sync2_Z[0]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(wptr_bin_sync[0]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:660
+  SLE \genblk10.wptr[5]  (
+	.Q(wptr_cmb_axb_5),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(wptr_cmb[5]),
+	.EN(full_r_RNIJFQB7_Y),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:660
+  SLE \genblk10.wptr[4]  (
+	.Q(wptr_cmb_axb_4),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(wptr_cmb[4]),
+	.EN(full_r_RNIJFQB7_Y),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:660
+  SLE \genblk10.wptr[3]  (
+	.Q(wptr_cmb_axb_3),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(wptr_cmb[3]),
+	.EN(full_r_RNIJFQB7_Y),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:660
+  SLE \genblk10.wptr[2]  (
+	.Q(wptr_cmb_axb_2),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(wptr_cmb[2]),
+	.EN(full_r_RNIJFQB7_Y),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:660
+  SLE \genblk10.wptr[1]  (
+	.Q(wptr_cmb_axb_1),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(wptr_cmb[1]),
+	.EN(full_r_RNIJFQB7_Y),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:660
+  SLE \genblk10.wptr[0]  (
+	.Q(wptr_cmb_axb_0),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(wdiff_bus),
+	.EN(full_r_RNIJFQB7_Y),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:678
+(* cdc_synchronizer=1 *)  SLE \genblk10.rptr_gray[4]  (
+	.Q(rptr_gray[4]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(rptr_gray_3_Z[4]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:678
+(* cdc_synchronizer=1 *)  SLE \genblk10.rptr_gray[3]  (
+	.Q(rptr_gray[3]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(rptr_gray_3_Z[3]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:678
+(* cdc_synchronizer=1 *)  SLE \genblk10.rptr_gray[2]  (
+	.Q(rptr_gray[2]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(rptr_gray_3_Z[2]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:678
+(* cdc_synchronizer=1 *)  SLE \genblk10.rptr_gray[1]  (
+	.Q(rptr_gray[1]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(rptr_gray_3_Z[1]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:678
+(* cdc_synchronizer=1 *)  SLE \genblk10.rptr_gray[0]  (
+	.Q(rptr_gray[0]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(rptr_gray_3_Z[0]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:660
+(* cdc_synchronizer=1 *)  SLE \genblk10.wptr_gray[5]  (
+	.Q(wptr_gray[5]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(wptr_cmb_axb_5),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:660
+(* cdc_synchronizer=1 *)  SLE \genblk10.wptr_gray[4]  (
+	.Q(wptr_gray[4]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(wptr_gray_3_Z[4]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:660
+(* cdc_synchronizer=1 *)  SLE \genblk10.wptr_gray[3]  (
+	.Q(wptr_gray[3]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(wptr_gray_3_Z[3]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:660
+(* cdc_synchronizer=1 *)  SLE \genblk10.wptr_gray[2]  (
+	.Q(wptr_gray[2]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(wptr_gray_3_Z[2]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:660
+(* cdc_synchronizer=1 *)  SLE \genblk10.wptr_gray[1]  (
+	.Q(wptr_gray[1]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(wptr_gray_3_Z[1]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:660
+(* cdc_synchronizer=1 *)  SLE \genblk10.wptr_gray[0]  (
+	.Q(wptr_gray[0]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(wptr_gray_3_Z[0]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:520
+  SLE \rptr_bin_sync2[5]  (
+	.Q(rptr_bin_sync2_Z[5]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(rptr_bin_sync[5]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:520
+  SLE \rptr_bin_sync2[4]  (
+	.Q(rptr_bin_sync2_Z[4]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(rptr_bin_sync[4]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:520
+  SLE \rptr_bin_sync2[3]  (
+	.Q(rptr_bin_sync2_Z[3]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(rptr_bin_sync[3]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:520
+  SLE \rptr_bin_sync2[2]  (
+	.Q(rptr_bin_sync2_Z[2]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(write_clock),
+	.D(rptr_bin_sync[2]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:678
+(* cdc_synchronizer=1 *)  SLE \genblk10.rptr_gray[5]  (
+	.Q(rptr_gray[5]),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(read_clock),
+	.D(rptr[5]),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:274
+  ARI1 \genblk10.empty_r_RNIOJCJ4  (
+	.FCO(rdiff_bus_cry_0_cy),
+	.S(empty_r_RNIOJCJ4_S),
+	.Y(empty_r_RNIOJCJ4_Y),
+	.B(fifo_empty),
+	.C(fifo_read_en),
+	.D(GND),
+	.A(VCC),
+	.FCI(VCC)
+);
+defparam \genblk10.empty_r_RNIOJCJ4 .INIT=20'h44400;
+// @10:274
+  ARI1 \wptr_bin_sync2_RNIFEPIC[0]  (
+	.FCO(rdiff_bus_cry_0),
+	.S(emptyilt5),
+	.Y(wptr_bin_sync2_RNIFEPIC_Y[0]),
+	.B(wptr_bin_sync2_Z[0]),
+	.C(GND),
+	.D(GND),
+	.A(rdiff_bus),
+	.FCI(rdiff_bus_cry_0_cy)
+);
+defparam \wptr_bin_sync2_RNIFEPIC[0] .INIT=20'h5AA55;
+// @10:274
+  ARI1 \wptr_bin_sync2_RNI8B6IK[1]  (
+	.FCO(rdiff_bus_cry_1),
+	.S(rdiff_bus_Z[1]),
+	.Y(wptr_bin_sync2_RNI8B6IK_Y[1]),
+	.B(wptr_bin_sync2_Z[1]),
+	.C(GND),
+	.D(GND),
+	.A(rptr[1]),
+	.FCI(rdiff_bus_cry_0)
+);
+defparam \wptr_bin_sync2_RNI8B6IK[1] .INIT=20'h5AA55;
+// @10:274
+  ARI1 \wptr_bin_sync2_RNI3AJHS[2]  (
+	.FCO(rdiff_bus_cry_2),
+	.S(rdiff_bus_Z[2]),
+	.Y(wptr_bin_sync2_RNI3AJHS_Y[2]),
+	.B(wptr_bin_sync2_Z[2]),
+	.C(GND),
+	.D(GND),
+	.A(rptr[2]),
+	.FCI(rdiff_bus_cry_1)
+);
+defparam \wptr_bin_sync2_RNI3AJHS[2] .INIT=20'h5AA55;
+// @10:274
+  ARI1 \wptr_bin_sync2_RNI0B0H41[3]  (
+	.FCO(rdiff_bus_cry_3),
+	.S(rdiff_bus_Z[3]),
+	.Y(wptr_bin_sync2_RNI0B0H41_Y[3]),
+	.B(wptr_bin_sync2_Z[3]),
+	.C(GND),
+	.D(GND),
+	.A(rptr[3]),
+	.FCI(rdiff_bus_cry_2)
+);
+defparam \wptr_bin_sync2_RNI0B0H41[3] .INIT=20'h5AA55;
+// @10:274
+  ARI1 almostemptyi_2_sqmuxa_i_o2_RNO (
+	.FCO(almostemptyi_2_sqmuxa_i_o2_RNO_FCO),
+	.S(rdiff_bus_Z[5]),
+	.Y(almostemptyi_2_sqmuxa_i_o2_RNO_Y),
+	.B(rptr[5]),
+	.C(wptr_bin_sync2_Z[5]),
+	.D(GND),
+	.A(VCC),
+	.FCI(rdiff_bus_cry_4)
+);
+defparam almostemptyi_2_sqmuxa_i_o2_RNO.INIT=20'h49900;
+// @10:274
+  ARI1 \wptr_bin_sync2_RNIVDDGC1[4]  (
+	.FCO(rdiff_bus_cry_4),
+	.S(rdiff_bus_Z[4]),
+	.Y(wptr_bin_sync2_RNIVDDGC1_Y[4]),
+	.B(wptr_bin_sync2_Z[4]),
+	.C(GND),
+	.D(GND),
+	.A(rptr[4]),
+	.FCI(rdiff_bus_cry_3)
+);
+defparam \wptr_bin_sync2_RNIVDDGC1[4] .INIT=20'h5AA55;
+// @10:273
+  ARI1 \genblk10.full_r_RNIJFQB7  (
+	.FCO(wptr_cmb_cry_0_cy),
+	.S(full_r_RNIJFQB7_S),
+	.Y(full_r_RNIJFQB7_Y),
+	.B(full_r),
+	.C(rx_fifo_we),
+	.D(GND),
+	.A(VCC),
+	.FCI(VCC)
+);
+defparam \genblk10.full_r_RNIJFQB7 .INIT=20'h44400;
+// @10:273
+  ARI1 \genblk10.wptr_RNIFPQNE[0]  (
+	.FCO(wptr_cmb_cry_0),
+	.S(wdiff_bus),
+	.Y(wptr_RNIFPQNE_Y[0]),
+	.B(wptr_cmb_axb_0),
+	.C(GND),
+	.D(GND),
+	.A(VCC),
+	.FCI(wptr_cmb_cry_0_cy)
+);
+defparam \genblk10.wptr_RNIFPQNE[0] .INIT=20'h4AA00;
+// @10:273
+  ARI1 \genblk10.wptr_RNIC4R3M[1]  (
+	.FCO(wptr_cmb_cry_1),
+	.S(wptr_cmb[1]),
+	.Y(wptr_RNIC4R3M_Y[1]),
+	.B(wptr_cmb_axb_1),
+	.C(GND),
+	.D(GND),
+	.A(VCC),
+	.FCI(wptr_cmb_cry_0)
+);
+defparam \genblk10.wptr_RNIC4R3M[1] .INIT=20'h4AA00;
+// @10:273
+  ARI1 \genblk10.wptr_RNIAGRFT[2]  (
+	.FCO(wptr_cmb_cry_2),
+	.S(wptr_cmb[2]),
+	.Y(wptr_RNIAGRFT_Y[2]),
+	.B(wptr_cmb_axb_2),
+	.C(GND),
+	.D(GND),
+	.A(VCC),
+	.FCI(wptr_cmb_cry_1)
+);
+defparam \genblk10.wptr_RNIAGRFT[2] .INIT=20'h4AA00;
+// @10:273
+  ARI1 \genblk10.wptr_RNI9TRR41[3]  (
+	.FCO(wptr_cmb_cry_3),
+	.S(wptr_cmb[3]),
+	.Y(wptr_RNI9TRR41_Y[3]),
+	.B(wptr_cmb_axb_3),
+	.C(GND),
+	.D(GND),
+	.A(VCC),
+	.FCI(wptr_cmb_cry_2)
+);
+defparam \genblk10.wptr_RNI9TRR41[3] .INIT=20'h4AA00;
+// @10:273
+  ARI1 \genblk10.wptr_RNIAQSJJ1[5]  (
+	.FCO(wptr_RNIAQSJJ1_FCO[5]),
+	.S(wptr_cmb[5]),
+	.Y(wptr_RNIAQSJJ1_Y[5]),
+	.B(wptr_cmb_axb_5),
+	.C(GND),
+	.D(GND),
+	.A(VCC),
+	.FCI(wptr_cmb_cry_4)
+);
+defparam \genblk10.wptr_RNIAQSJJ1[5] .INIT=20'h4AA00;
+// @10:273
+  ARI1 \genblk10.wptr_RNI9BS7C1[4]  (
+	.FCO(wptr_cmb_cry_4),
+	.S(wptr_cmb[4]),
+	.Y(wptr_RNI9BS7C1_Y[4]),
+	.B(wptr_cmb_axb_4),
+	.C(GND),
+	.D(GND),
+	.A(VCC),
+	.FCI(wptr_cmb_cry_3)
+);
+defparam \genblk10.wptr_RNI9BS7C1[4] .INIT=20'h4AA00;
+// @10:358
+  ARI1 wdiff_bus_cry_0 (
+	.FCO(wdiff_bus_cry_0_Z),
+	.S(wdiff_bus_cry_0_S),
+	.Y(wdiff_bus_cry_0_Y),
+	.B(rptr_bin_sync2_Z[0]),
+	.C(GND),
+	.D(GND),
+	.A(wdiff_bus),
+	.FCI(VCC)
+);
+defparam wdiff_bus_cry_0.INIT=20'h5AA55;
+// @10:358
+  ARI1 wdiff_bus_cry_1 (
+	.FCO(wdiff_bus_cry_1_Z),
+	.S(wdiff_bus_cry_1_S),
+	.Y(wdiff_bus_cry_1_Y),
+	.B(rptr_bin_sync2_Z[1]),
+	.C(GND),
+	.D(GND),
+	.A(wptr_cmb[1]),
+	.FCI(wdiff_bus_cry_0_Z)
+);
+defparam wdiff_bus_cry_1.INIT=20'h5AA55;
+// @10:358
+  ARI1 wdiff_bus_cry_2 (
+	.FCO(wdiff_bus_cry_2_Z),
+	.S(wdiff_bus_cry_2_S),
+	.Y(wdiff_bus_cry_2_Y),
+	.B(rptr_bin_sync2_Z[2]),
+	.C(GND),
+	.D(GND),
+	.A(wptr_cmb[2]),
+	.FCI(wdiff_bus_cry_1_Z)
+);
+defparam wdiff_bus_cry_2.INIT=20'h5AA55;
+// @10:358
+  ARI1 wdiff_bus_cry_3 (
+	.FCO(wdiff_bus_cry_3_Z),
+	.S(wdiff_bus_cry_3_S),
+	.Y(wdiff_bus_cry_3_Y),
+	.B(rptr_bin_sync2_Z[3]),
+	.C(GND),
+	.D(GND),
+	.A(wptr_cmb[3]),
+	.FCI(wdiff_bus_cry_2_Z)
+);
+defparam wdiff_bus_cry_3.INIT=20'h5AA55;
+// @10:358
+  ARI1 wdiff_bus_s_5 (
+	.FCO(wdiff_bus_s_5_FCO),
+	.S(wdiff_bus_Z[5]),
+	.Y(wdiff_bus_s_5_Y),
+	.B(rptr_bin_sync2_Z[5]),
+	.C(wptr_cmb[5]),
+	.D(GND),
+	.A(VCC),
+	.FCI(wdiff_bus_cry_4_Z)
+);
+defparam wdiff_bus_s_5.INIT=20'h49900;
+// @10:358
+  ARI1 wdiff_bus_cry_4 (
+	.FCO(wdiff_bus_cry_4_Z),
+	.S(wdiff_bus_cry_4_S),
+	.Y(wdiff_bus_cry_4_Y),
+	.B(rptr_bin_sync2_Z[4]),
+	.C(GND),
+	.D(GND),
+	.A(wptr_cmb[4]),
+	.FCI(wdiff_bus_cry_3_Z)
+);
+defparam wdiff_bus_cry_4.INIT=20'h5AA55;
+// @10:678
+  ARI1 \genblk10.rptr_s_30  (
+	.FCO(rptr_s_30_FCO),
+	.S(rptr_s_30_S),
+	.Y(rptr_s_30_Y),
+	.B(rdiff_bus),
+	.C(GND),
+	.D(GND),
+	.A(VCC),
+	.FCI(VCC)
+);
+defparam \genblk10.rptr_s_30 .INIT=20'h4AA00;
+// @10:678
+  ARI1 \genblk10.rptr_cry[1]  (
+	.FCO(rptr_cry[1]),
+	.S(rptr_s[1]),
+	.Y(rptr_cry_Y[1]),
+	.B(rptr[1]),
+	.C(GND),
+	.D(GND),
+	.A(VCC),
+	.FCI(rptr_s_30_FCO)
+);
+defparam \genblk10.rptr_cry[1] .INIT=20'h4AA00;
+// @10:678
+  ARI1 \genblk10.rptr_cry[2]  (
+	.FCO(rptr_cry[2]),
+	.S(rptr_s[2]),
+	.Y(rptr_cry_Y[2]),
+	.B(rptr[2]),
+	.C(GND),
+	.D(GND),
+	.A(VCC),
+	.FCI(rptr_cry[1])
+);
+defparam \genblk10.rptr_cry[2] .INIT=20'h4AA00;
+// @10:678
+  ARI1 \genblk10.rptr_cry[3]  (
+	.FCO(rptr_cry[3]),
+	.S(rptr_s[3]),
+	.Y(rptr_cry_Y[3]),
+	.B(rptr[3]),
+	.C(GND),
+	.D(GND),
+	.A(VCC),
+	.FCI(rptr_cry[2])
+);
+defparam \genblk10.rptr_cry[3] .INIT=20'h4AA00;
+// @10:678
+  ARI1 \genblk10.rptr_s[5]  (
+	.FCO(rptr_s_FCO[5]),
+	.S(rptr_s[5]),
+	.Y(rptr_s_Y[5]),
+	.B(rptr[5]),
+	.C(GND),
+	.D(GND),
+	.A(VCC),
+	.FCI(rptr_cry[4])
+);
+defparam \genblk10.rptr_s[5] .INIT=20'h4AA00;
+// @10:678
+  ARI1 \genblk10.rptr_cry[4]  (
+	.FCO(rptr_cry[4]),
+	.S(rptr_s[4]),
+	.Y(rptr_cry_Y[4]),
+	.B(rptr[4]),
+	.C(GND),
+	.D(GND),
+	.A(VCC),
+	.FCI(rptr_cry[3])
+);
+defparam \genblk10.rptr_cry[4] .INIT=20'h4AA00;
+// @13:117
+  CFG2 reading_fifo_1_sqmuxa_i (
+	.A(reading_fifo),
+	.B(fifo_empty),
+	.Y(N_10)
+);
+defparam reading_fifo_1_sqmuxa_i.INIT=4'h7;
+// @10:686
+  CFG2 \rptr_gray_3[0]  (
+	.A(rptr[1]),
+	.B(rdiff_bus),
+	.Y(rptr_gray_3_Z[0])
+);
+defparam \rptr_gray_3[0] .INIT=4'h6;
+// @10:686
+  CFG2 \rptr_gray_3[1]  (
+	.A(rptr[1]),
+	.B(rptr[2]),
+	.Y(rptr_gray_3_Z[1])
+);
+defparam \rptr_gray_3[1] .INIT=4'h6;
+// @10:686
+  CFG2 \rptr_gray_3[2]  (
+	.A(rptr[2]),
+	.B(rptr[3]),
+	.Y(rptr_gray_3_Z[2])
+);
+defparam \rptr_gray_3[2] .INIT=4'h6;
+// @10:686
+  CFG2 \rptr_gray_3[3]  (
+	.A(rptr[3]),
+	.B(rptr[4]),
+	.Y(rptr_gray_3_Z[3])
+);
+defparam \rptr_gray_3[3] .INIT=4'h6;
+// @10:686
+  CFG2 \rptr_gray_3[4]  (
+	.A(rptr[4]),
+	.B(rptr[5]),
+	.Y(rptr_gray_3_Z[4])
+);
+defparam \rptr_gray_3[4] .INIT=4'h6;
+// @10:668
+  CFG2 \wptr_gray_3[0]  (
+	.A(wptr_cmb_axb_1),
+	.B(wptr_cmb_axb_0),
+	.Y(wptr_gray_3_Z[0])
+);
+defparam \wptr_gray_3[0] .INIT=4'h6;
+// @10:668
+  CFG2 \wptr_gray_3[1]  (
+	.A(wptr_cmb_axb_1),
+	.B(wptr_cmb_axb_2),
+	.Y(wptr_gray_3_Z[1])
+);
+defparam \wptr_gray_3[1] .INIT=4'h6;
+// @10:668
+  CFG2 \wptr_gray_3[2]  (
+	.A(wptr_cmb_axb_2),
+	.B(wptr_cmb_axb_3),
+	.Y(wptr_gray_3_Z[2])
+);
+defparam \wptr_gray_3[2] .INIT=4'h6;
+// @10:668
+  CFG2 \wptr_gray_3[3]  (
+	.A(wptr_cmb_axb_3),
+	.B(wptr_cmb_axb_4),
+	.Y(wptr_gray_3_Z[3])
+);
+defparam \wptr_gray_3[3] .INIT=4'h6;
+// @10:668
+  CFG2 \wptr_gray_3[4]  (
+	.A(wptr_cmb_axb_4),
+	.B(wptr_cmb_axb_5),
+	.Y(wptr_gray_3_Z[4])
+);
+defparam \wptr_gray_3[4] .INIT=4'h6;
+// @0:1
+  CFG3 \un1_fifo_aempty_0_m2[0]  (
+	.A(reading_fifo),
+	.B(fifo_aempty),
+	.C(fifo_empty),
+	.Y(N_19)
+);
+defparam \un1_fifo_aempty_0_m2[0] .INIT=8'hB1;
+// @10:507
+  CFG3 almostemptyi_2_sqmuxa_i_o2 (
+	.A(rdiff_bus_Z[3]),
+	.B(rdiff_bus_Z[4]),
+	.C(rdiff_bus_Z[5]),
+	.Y(N_17)
+);
+defparam almostemptyi_2_sqmuxa_i_o2.INIT=8'h7F;
+// @10:709
+  CFG3 \wptr_bin_sync2_RNIQ3JMT1[1]  (
+	.A(rdiff_bus_Z[2]),
+	.B(emptyilt5),
+	.C(rdiff_bus_Z[1]),
+	.Y(N_29)
+);
+defparam \wptr_bin_sync2_RNIQ3JMT1[1] .INIT=8'h01;
+// @13:105
+  CFG2 fifo_read_en_1_sqmuxa_i (
+	.A(fifo_aempty),
+	.B(reading_fifo),
+	.Y(fifo_read_en_1_sqmuxa_i_1z)
+);
+defparam fifo_read_en_1_sqmuxa_i.INIT=4'hD;
+// @10:722
+  CFG3 \genblk10.empty_r10_0_a2_0  (
+	.A(rdiff_bus_Z[2]),
+	.B(N_17),
+	.C(rdiff_bus_Z[1]),
+	.Y(N_34)
+);
+defparam \genblk10.empty_r10_0_a2_0 .INIT=8'h20;
+// @10:722
+  CFG3 \genblk10.empty_r10_0_a2  (
+	.A(emptyilt5),
+	.B(N_34),
+	.C(fifo_read_en),
+	.Y(empty_r_1_sqmuxa)
+);
+defparam \genblk10.empty_r10_0_a2 .INIT=8'h04;
+// @10:507
+  CFG4 almostemptyi_2_sqmuxa_i_0 (
+	.A(fifo_read_en),
+	.B(fifo_aempty),
+	.C(N_29),
+	.D(N_17),
+	.Y(N_13)
+);
+defparam almostemptyi_2_sqmuxa_i_0.INIT=16'hCCEA;
+// @10:722
+  CFG3 \genblk10.empty_r9_0_a2  (
+	.A(empty_r_RNIOJCJ4_Y),
+	.B(emptyilt5),
+	.C(N_34),
+	.Y(empty_r9)
+);
+defparam \genblk10.empty_r9_0_a2 .INIT=8'h80;
+// @10:709
+  CFG3 \genblk10.aempty_r_RNO  (
+	.A(fifo_aempty),
+	.B(N_29),
+	.C(N_17),
+	.Y(N_24_i)
+);
+defparam \genblk10.aempty_r_RNO .INIT=8'h57;
+// @10:711
+  CFG4 \genblk10.empty_r_4_f0  (
+	.A(N_34),
+	.B(emptyilt5),
+	.C(empty_r9),
+	.D(empty_r_1_sqmuxa),
+	.Y(empty_r_4)
+);
+defparam \genblk10.empty_r_4_f0 .INIT=16'h00F8;
+// @10:450
+  afifo_4x32_afifo_4x32_0_corefifo_nstagessync_2s_5_1 Wr_corefifo_NstagesSync (
+	.wptr_gray(wptr_gray[5:0]),
+	.wptr_gray_sync(wptr_gray_sync[4:0]),
+	.wptr_bin_sync_0(wptr_bin_sync[5]),
+	.read_clock(read_clock),
+	.reset_c_i(reset_c_i)
+);
+// @10:467
+  afifo_4x32_afifo_4x32_0_corefifo_nstagessync_2s_5_0 Rd_corefifo_NstagesSync (
+	.rptr_gray(rptr_gray[5:0]),
+	.rptr_gray_sync(rptr_gray_sync[4:0]),
+	.rptr_bin_sync_0(rptr_bin_sync[5]),
+	.write_clock(write_clock),
+	.reset_c_i(reset_c_i)
+);
+// @10:482
+  afifo_4x32_afifo_4x32_0_corefifo_graytobinconv_5 Rd_corefifo_grayToBinConv (
+	.rptr_bin_sync(rptr_bin_sync[5:0]),
+	.rptr_gray_sync(rptr_gray_sync[4:0])
+);
+// @10:493
+  afifo_4x32_afifo_4x32_0_corefifo_graytobinconv_5_0 Wr_corefifo_grayToBinConv (
+	.wptr_bin_sync(wptr_bin_sync[5:0]),
+	.wptr_gray_sync(wptr_gray_sync[4:0])
+);
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* afifo_4x32_afifo_4x32_0_corefifo_async_Z2 */
+
+module afifo_4x32_afifo_4x32_0_COREFIFO_Z1 (
+  reset_c_i,
+  read_clock,
+  write_clock,
+  rdata_vld_c,
+  fifo_read_en,
+  rx_fifo_we,
+  reading_fifo,
+  N_10,
+  N_19,
+  fifo_read_en_1_sqmuxa_i
+)
+;
+input reset_c_i ;
+input read_clock ;
+input write_clock ;
+output rdata_vld_c ;
+input fifo_read_en ;
+input rx_fifo_we ;
+input reading_fifo ;
+output N_10 ;
+output N_19 ;
+output fifo_read_en_1_sqmuxa_i ;
+wire reset_c_i ;
+wire read_clock ;
+wire write_clock ;
+wire rdata_vld_c ;
+wire fifo_read_en ;
+wire rx_fifo_we ;
+wire reading_fifo ;
+wire N_10 ;
+wire N_19 ;
+wire fifo_read_en_1_sqmuxa_i ;
+wire N_26 ;
+wire N_25 ;
+wire N_24 ;
+wire N_23 ;
+wire N_22 ;
+wire N_21 ;
+wire N_20 ;
+wire GND ;
+wire VCC ;
+  afifo_4x32_afifo_4x32_0_corefifo_async_Z2 \genblk16.U_corefifo_async  (
+	.fifo_read_en_1_sqmuxa_i_1z(fifo_read_en_1_sqmuxa_i),
+	.N_19(N_19),
+	.N_10(N_10),
+	.reading_fifo(reading_fifo),
+	.rx_fifo_we(rx_fifo_we),
+	.fifo_read_en(fifo_read_en),
+	.rdata_vld_c(rdata_vld_c),
+	.write_clock(write_clock),
+	.read_clock(read_clock),
+	.reset_c_i(reset_c_i)
+);
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* afifo_4x32_afifo_4x32_0_COREFIFO_Z1 */
+
+module afifo_4x32 (
+  fifo_read_en_1_sqmuxa_i,
+  N_19,
+  N_10,
+  reading_fifo,
+  rx_fifo_we,
+  fifo_read_en,
+  rdata_vld_c,
+  write_clock,
+  read_clock,
+  reset_c_i
+)
+;
+output fifo_read_en_1_sqmuxa_i ;
+output N_19 ;
+output N_10 ;
+input reading_fifo ;
+input rx_fifo_we ;
+input fifo_read_en ;
+output rdata_vld_c ;
+input write_clock ;
+input read_clock ;
+input reset_c_i ;
+wire fifo_read_en_1_sqmuxa_i ;
+wire N_19 ;
+wire N_10 ;
+wire reading_fifo ;
+wire rx_fifo_we ;
+wire fifo_read_en ;
+wire rdata_vld_c ;
+wire write_clock ;
+wire read_clock ;
+wire reset_c_i ;
+wire GND ;
+wire VCC ;
+// @12:185
+  afifo_4x32_afifo_4x32_0_COREFIFO_Z1 afifo_4x32_0 (
+	.reset_c_i(reset_c_i),
+	.read_clock(read_clock),
+	.write_clock(write_clock),
+	.rdata_vld_c(rdata_vld_c),
+	.fifo_read_en(fifo_read_en),
+	.rx_fifo_we(rx_fifo_we),
+	.reading_fifo(reading_fifo),
+	.N_10(N_10),
+	.N_19(N_19),
+	.fifo_read_en_1_sqmuxa_i(fifo_read_en_1_sqmuxa_i)
+);
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* afifo_4x32 */
+
+module tr_fifo_rmii (
+  reset,
+  wdata,
+  wdata_en,
+  write_clock,
+  read_clock,
+  rdata,
+  rdata_vld
+)
+;
+
+/*  Synopsys
+.origName=tr_fifo_rmii
+.langParams="IFACE"
+IFACE=0
+ */
+input reset ;
+input [3:0] wdata ;
+input wdata_en ;
+input write_clock ;
+input read_clock ;
+output [3:0] rdata ;
+output rdata_vld ;
+wire reset ;
+wire wdata_en ;
+wire write_clock ;
+wire read_clock ;
+wire rdata_vld ;
+wire NN_1 ;
+wire NN_2 ;
+wire fifo_read_en_Z ;
+wire rx_fifo_we_Z ;
+wire reading_fifo_Z ;
+wire rx_dibit_a_0_sqmuxa_Z ;
+wire GND ;
+wire VCC ;
+wire N_5 ;
+wire N_6 ;
+wire N_10 ;
+wire N_19 ;
+wire reset_c ;
+wire wdata_en_c ;
+wire write_clock_ibuf_Z ;
+wire read_clock_ibuf_Z ;
+wire rdata_vld_c ;
+wire reading_fifo_i ;
+wire fifo_read_en_1_sqmuxa_i ;
+wire reset_c_i ;
+  CFG1 reading_fifo_RNO (
+	.A(reading_fifo_Z),
+	.Y(reading_fifo_i)
+);
+defparam reading_fifo_RNO.INIT=2'h1;
+  CFG1 reset_ibuf_RNI82552 (
+	.A(reset_c),
+	.Y(reset_c_i)
+);
+defparam reset_ibuf_RNI82552.INIT=2'h1;
+// @13:54
+  SLE rx_fifo_we (
+	.Q(rx_fifo_we_Z),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(NN_1),
+	.D(rx_dibit_a_0_sqmuxa_Z),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @13:105
+  SLE fifo_read_en (
+	.Q(fifo_read_en_Z),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(NN_2),
+	.D(N_10),
+	.EN(fifo_read_en_1_sqmuxa_i),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @13:105
+  SLE reading_fifo (
+	.Q(reading_fifo_Z),
+	.ADn(VCC),
+	.ALn(reset_c_i),
+	.CLK(NN_2),
+	.D(reading_fifo_i),
+	.EN(N_19),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @13:20
+  INBUF reset_ibuf (
+	.Y(reset_c),
+	.PAD(reset)
+);
+// @13:22
+  INBUF wdata_en_ibuf (
+	.Y(wdata_en_c),
+	.PAD(wdata_en)
+);
+// @13:23
+  INBUF write_clock_ibuf (
+	.Y(write_clock_ibuf_Z),
+	.PAD(write_clock)
+);
+// @13:24
+  INBUF read_clock_ibuf (
+	.Y(read_clock_ibuf_Z),
+	.PAD(read_clock)
+);
+// @13:25
+  OUTBUF \rdata_obuf[0]  (
+	.PAD(rdata[0]),
+	.D(GND)
+);
+// @13:25
+  OUTBUF \rdata_obuf[1]  (
+	.PAD(rdata[1]),
+	.D(GND)
+);
+// @13:25
+  OUTBUF \rdata_obuf[2]  (
+	.PAD(rdata[2]),
+	.D(GND)
+);
+// @13:25
+  OUTBUF \rdata_obuf[3]  (
+	.PAD(rdata[3]),
+	.D(GND)
+);
+// @13:26
+  OUTBUF rdata_vld_obuf (
+	.PAD(rdata_vld),
+	.D(rdata_vld_c)
+);
+// @13:60
+  CFG2 rx_dibit_a_0_sqmuxa (
+	.A(rx_fifo_we_Z),
+	.B(wdata_en_c),
+	.Y(rx_dibit_a_0_sqmuxa_Z)
+);
+defparam rx_dibit_a_0_sqmuxa.INIT=4'h4;
+  CLKINT I_2 (
+	.Y(NN_1),
+	.A(write_clock_ibuf_Z)
+);
+  CLKINT I_1 (
+	.Y(NN_2),
+	.A(read_clock_ibuf_Z)
+);
+// @13:80
+  afifo_4x32 i_mezz_fifo (
+	.fifo_read_en_1_sqmuxa_i(fifo_read_en_1_sqmuxa_i),
+	.N_19(N_19),
+	.N_10(N_10),
+	.reading_fifo(reading_fifo_Z),
+	.rx_fifo_we(rx_fifo_we_Z),
+	.fifo_read_en(fifo_read_en_Z),
+	.rdata_vld_c(rdata_vld_c),
+	.write_clock(NN_1),
+	.read_clock(NN_2),
+	.reset_c_i(reset_c_i)
+);
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* tr_fifo_rmii */
+

@@ -1,0 +1,12 @@
+SERNO,END_INSTANCE,END_CLOCK,START_CLOCK,START_INSTANCE,CDC_TYPE,SYNCHRONIZER,NUMBER_OF_SYNCHRONIZER_FFs,SAFE_CDC,DESCRIPTION
+1,u_dac.data_out[23:0],CLOCK_DIV_9|N_1_inferred_clock,top_app|APP_FPGA_100M_CLK,u_dac.opb_fifo_inst.mem[23:0],Different Clock Domains,YES,NA,Not Analyzed,Potential RAM synchronizer detected.
+2,u_dac.opb_fifo_inst.wq1_rgray[4:0],top_app|APP_FPGA_100M_CLK,CLOCK_DIV_9|N_1_inferred_clock,u_dac.opb_fifo_inst.rbin[4:0],Different Clock Domains,YES,2,NO,Divergence detected in the crossover path.
+3,u_dac.opb_fifo_inst.rq1_wgray[4:0],CLOCK_DIV_9|N_1_inferred_clock,top_app|APP_FPGA_100M_CLK,u_dac.opb_fifo_inst.wbin[4:0],Different Clock Domains,YES,2,NO,Divergence detected in the crossover path.
+4,u_adc.OPB_DO_1[15:0],top_app|APP_FPGA_100M_CLK,ADC_ADS8864_IF|ram_wr_clk_inferred_clock,u_adc.data_in_ram.ram[15:0],Different Clock Domains,YES,NA,Not Analyzed,Potential RAM synchronizer detected.
+5,u_adc.data_in_ram.ram[15:0],ADC_ADS8864_IF|ram_wr_clk_inferred_clock,top_app|APP_FPGA_100M_CLK,u_adc.sdout_buf[15:0],Different Clock Domains,NO,0,NO,Divergence detected in the crossover path.
+6,oscillator_counter_0.resetb,top_app|APP_FPGA_100M_CLK,top_app|APP_DBUG_MISO,oscillator_counter_0.cntr_trig,Different Clock Domains,NO,0,NO,Combinatorial logic detected at clock domain crossing. Enable signal for synchonizer registers does not have a safe crossing.
+7,oscillator_counter_0.startb,top_app|APP_FPGA_100M_CLK,top_app|APP_DBUG_MISO,oscillator_counter_0.cntr_trig,Different Clock Domains,NO,0,NO,Combinatorial logic detected at clock domain crossing. Enable signal for synchonizer registers does not have a safe crossing.
+8,oscillator_counter_0.count_data[15:0],top_app|APP_FPGA_100M_CLK,top_app|APP_DBUG_MISO,oscillator_counter_0.cntr_trig,Different Clock Domains,NO,0,NO,Combinatorial logic detected at clock domain crossing.
+9,oscillator_counter_0.opb_fifo_inst.wq1_rgray[2:0],top_app|APP_FPGA_100M_CLK,top_app|APP_DBUG_MISO,oscillator_counter_0.opb_fifo_inst.rbin[2:0],Different Clock Domains,YES,2,NO,Divergence detected in the crossover path.
+10,oscillator_counter_0.opb_fifo_inst.rq1_wgray[2:0],top_app|APP_DBUG_MISO,top_app|APP_FPGA_100M_CLK,oscillator_counter_0.opb_fifo_inst.wbin[2:0],Different Clock Domains,YES,2,NO,Divergence detected in the crossover path.
+11,u_cmd_server.opb_emu_target_inst.msg_write_inst.tx_data[31:0],top_app|APP_FPGA_100M_CLK,CLOCK_DIV_9|N_1_inferred_clock,u_dac.data_in_ram.ram[23:0],Different Clock Domains,YES,NA,Not Analyzed,Potential RAM synchronizer detected.

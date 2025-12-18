@@ -18,9 +18,9 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////// 
 
 `timescale 1ns / 100ps
-`define FW_VERSION  32'h0000_0001 // Firmware version
+`define FW_VERSION  32'h0001_0001 // Firmware version
 `define FPGA_ID     32'h0000_0050 // FPGA ID
-`define BUILD_DATE  32'h2025_0817 // YYYY_MMDD
+`define BUILD_DATE  32'h2025_0830 // YYYY_MMDD
 
 module top_hw(
     // Clock and Reset
@@ -250,7 +250,7 @@ module top_hw(
     assign HDW_DBUG_HEADER10 = 1'b0; // Reserved
 
     // status LEDs
-    assign HDW_FPGA_DONE      = rst_n; // D33 ON after FPGA configuration
+    assign HDW_FPGA_DONE      = ~rst_n; // D33 OFF after FPGA configuration
 
     assign HDW_FPGA_STAT_LED1 = opb_wakeup ? HDW_FPGA_STAT_LED1_W : pulse_1hz;   // D20 ON
     assign HDW_FPGA_STAT_LED2 = opb_wakeup ? HDW_FPGA_STAT_LED2_W : pulse_1hz;   // D21 ON
@@ -259,11 +259,24 @@ module top_hw(
     // Wake-up Logic
     //=========================================================================
     // OPB wakeup - any opb_re and opb_we will wake up the system
+    reg [3:0]seconds;
+    always @(posedge pulse_1hz or negedge rst_n) begin
+        if(!rst_n) begin
+            seconds <= 4'b0000;
+        end else begin
+            if(seconds < 4'b1111) begin
+                seconds <= seconds + 1;
+            end
+        end
+    end
+    
     always @(posedge opb_clk or negedge rst_n) begin
         if (!rst_n) begin
             opb_wakeup <= 1'b0;
         end else begin
             if (opb_re || opb_we) begin
+                opb_wakeup <= 1'b1;
+            end else if(seconds > 1) begin
                 opb_wakeup <= 1'b1;
             end
         end
@@ -398,17 +411,18 @@ module top_hw(
     );
 
     // EEPROM_OPB_IF instantiation
-    EEPROM_OPB_IF u_eeprom_opb_if(
-        .OPB_CLK  (opb_clk),
-        .OPB_RST  (opb_rst),
-        .EEP_DI   (opb_do),
-        .EEP_RE   (eep_re),
-        .EEP_WE   (eep_we),
-        .EEP_DO   (eep_in),
-        .EEP_CS_N (HDW_EEP_CS_N),
-        .EEP_SI   (HDW_EEP_SDI),
-        .EEP_SCK  (HDW_EEP_SCLK),
-        .EEP_SO   (HDW_EEP_SDO)
+    EEPROM_OPB_IF_V2 eeprom_0(
+    .OPB_CLK(opb_clk),               // OPB clock
+    .OPB_RST(opb_rst),               // OPB reset
+    .OPB_ADDR(opb_addr[15:0]),       // OPB address
+    .EEP_DI(opb_do),                 // EEPROM data input
+    .EEP_RE(eep_re),                 // EEPROM read enable
+    .EEP_WE(eep_we),                 // EEPROM write enable
+    .EEP_DO(eep_in),                 // EEPROM data output
+    .EEP_CS_N(HDW_EEP_CS_N),         // EEPROM chip select (active low)
+    .EEP_SI(HDW_EEP_SDI),            // EEPROM serial input
+    .EEP_SCK(HDW_EEP_SCLK),          // EEPROM serial clock
+    .EEP_SO(HDW_EEP_SDO)             // EEPROM serial output
     );
 
     // GPIO instantiation

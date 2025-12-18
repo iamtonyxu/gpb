@@ -1,0 +1,4 @@
+@W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
+@W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
+@W: MT420 |Found inferred clock tr_fifo_rmii|write_clock with period 10.00ns. Please declare a user-defined clock on port write_clock.
+@W: MT420 |Found inferred clock tr_fifo_rmii|read_clock with period 10.00ns. Please declare a user-defined clock on port read_clock.

@@ -1,0 +1,246 @@
+//
+// Written by Synplify Pro 
+// Product Version "V-2023.09M-3"
+// Program "Synplify Pro", Mapper "map202309actp1, Build 008R"
+// Sat Aug 16 12:35:52 2025
+//
+// Source file index table:
+// Object locations will have the form <file>:<line>
+// file 0 "\c:\microchip\libero_soc_v2024.2\synplifypro\lib\vhd2008\std.vhd "
+// file 1 "\c:\microchip\libero_soc_v2024.2\synplifypro\lib\vhd\snps_haps_pkg.vhd "
+// file 2 "\c:\microchip\libero_soc_v2024.2\synplifypro\lib\vhd2008\std1164.vhd "
+// file 3 "\c:\microchip\libero_soc_v2024.2\synplifypro\lib\vhd2008\std_textio.vhd "
+// file 4 "\c:\microchip\libero_soc_v2024.2\synplifypro\lib\vhd2008\numeric.vhd "
+// file 5 "\c:\microchip\libero_soc_v2024.2\synplifypro\lib\vhd\umr_capim.vhd "
+// file 6 "\c:\microchip\libero_soc_v2024.2\synplifypro\lib\vhd2008\arith.vhd "
+// file 7 "\c:\microchip\libero_soc_v2024.2\synplifypro\lib\vhd2008\unsigned.vhd "
+// file 8 "\c:\microchip\libero_soc_v2024.2\synplifypro\lib\vhd\hyperents.vhd "
+// file 9 "\c:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo.vhd "
+// file 10 "\c:\microchip\libero_soc_v2024.2\synplifypro\lib\generic\smartfusion2.vhd "
+// file 11 "\c:\microchip\libero_soc_v2024.2\synplifypro\lib\generic\acg5.v "
+// file 12 "\c:\microchip\libero_soc_v2024.2\synplifypro\lib\vlog\hypermods.v "
+// file 13 "\c:\microchip\libero_soc_v2024.2\synplifypro\lib\vlog\scemi_objects.v "
+// file 14 "\c:\microchip\libero_soc_v2024.2\synplifypro\lib\vlog\scemi_pipes.svh "
+// file 15 "\c:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v "
+// file 16 "\c:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_corefifo\mezz_fifo_mezz_fifo_0_corefifo_0\rtl\vlog\core\corefifo_graytobinconv.v "
+// file 17 "\c:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_corefifo\mezz_fifo_mezz_fifo_0_corefifo_0\rtl\vlog\core\corefifo_nstagessync.v "
+// file 18 "\c:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_corefifo\mezz_fifo_mezz_fifo_0_corefifo_0\rtl\vlog\core\corefifo_async.v "
+// file 19 "\c:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_corefifo\mezz_fifo_mezz_fifo_0_corefifo_0\rtl\vlog\core\corefifo_fwft.v "
+// file 20 "\c:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_corefifo\mezz_fifo_mezz_fifo_0_corefifo_0\rtl\vlog\core\corefifo_sync_scntr.v "
+// file 21 "\c:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_corefifo\mezz_fifo_mezz_fifo_0_corefifo_0\rtl\vlog\core\corefifo_sync.v "
+// file 22 "\c:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_corefifo\mezz_fifo_mezz_fifo_0_corefifo_0\rtl\vlog\core\corefifo.v "
+// file 23 "\c:\repo1\gpb\stn\fpga_hw\component\work\mezz_fifo_mezz_fifo_0_corefifo\mezz_fifo_mezz_fifo_0_corefifo.v "
+// file 24 "\c:\microchip\libero_soc_v2024.2\synplifypro\lib\nlconst.dat "
+// file 25 "\c:\repo1\gpb\stn\fpga_hw\designer\mezz_fifo\synthesis.fdc "
+
+`timescale 100 ps/100 ps
+module mezz_fifo (
+  DATA,
+  RCLOCK,
+  RE,
+  RESET,
+  WCLOCK,
+  WE,
+  AEMPTY,
+  DVLD,
+  EMPTY,
+  FULL,
+  Q
+)
+;
+input [3:0] DATA ;
+input RCLOCK ;
+input RE ;
+input RESET ;
+input WCLOCK ;
+input WE ;
+output AEMPTY ;
+output DVLD ;
+output EMPTY ;
+output FULL ;
+output [3:0] Q ;
+wire RCLOCK ;
+wire RE ;
+wire RESET ;
+wire WCLOCK ;
+wire WE ;
+wire AEMPTY ;
+wire DVLD ;
+wire EMPTY ;
+wire FULL ;
+wire [4:0] MEMRADDR;
+wire [4:0] MEMWADDR;
+wire [3:0] MEMWD;
+wire [5:0] RDCNT;
+wire [5:0] WRCNT;
+wire [3:0] DATA_c;
+wire [3:0] Q_c;
+wire AFULL ;
+wire DB_DETECT ;
+wire MEMRE ;
+wire MEMWE ;
+wire OVERFLOW ;
+wire SB_CORRECT ;
+wire UNDERFLOW ;
+wire WACK ;
+wire GND ;
+wire VCC ;
+wire RCLOCK_c ;
+wire RE_c ;
+wire RESET_c ;
+wire WCLOCK_c ;
+wire WE_c ;
+wire AEMPTY_c ;
+wire DVLD_c ;
+wire EMPTY_c ;
+wire FULL_c ;
+// @9:23
+  INBUF \DATA_ibuf[0]  (
+	.Y(DATA_c[0]),
+	.PAD(DATA[0])
+);
+// @9:23
+  INBUF \DATA_ibuf[1]  (
+	.Y(DATA_c[1]),
+	.PAD(DATA[1])
+);
+// @9:23
+  INBUF \DATA_ibuf[2]  (
+	.Y(DATA_c[2]),
+	.PAD(DATA[2])
+);
+// @9:23
+  INBUF \DATA_ibuf[3]  (
+	.Y(DATA_c[3]),
+	.PAD(DATA[3])
+);
+// @9:24
+  INBUF RCLOCK_ibuf (
+	.Y(RCLOCK_c),
+	.PAD(RCLOCK)
+);
+// @9:25
+  INBUF RE_ibuf (
+	.Y(RE_c),
+	.PAD(RE)
+);
+// @9:26
+  INBUF RESET_ibuf (
+	.Y(RESET_c),
+	.PAD(RESET)
+);
+// @9:27
+  INBUF WCLOCK_ibuf (
+	.Y(WCLOCK_c),
+	.PAD(WCLOCK)
+);
+// @9:28
+  INBUF WE_ibuf (
+	.Y(WE_c),
+	.PAD(WE)
+);
+// @9:30
+  OUTBUF AEMPTY_obuf (
+	.PAD(AEMPTY),
+	.D(AEMPTY_c)
+);
+// @9:31
+  OUTBUF DVLD_obuf (
+	.PAD(DVLD),
+	.D(DVLD_c)
+);
+// @9:32
+  OUTBUF EMPTY_obuf (
+	.PAD(EMPTY),
+	.D(EMPTY_c)
+);
+// @9:33
+  OUTBUF FULL_obuf (
+	.PAD(FULL),
+	.D(FULL_c)
+);
+// @9:34
+  OUTBUF \Q_obuf[0]  (
+	.PAD(Q[0]),
+	.D(Q_c[0])
+);
+// @9:34
+  OUTBUF \Q_obuf[1]  (
+	.PAD(Q[1]),
+	.D(Q_c[1])
+);
+// @9:34
+  OUTBUF \Q_obuf[2]  (
+	.PAD(Q[2]),
+	.D(Q_c[2])
+);
+// @9:34
+  OUTBUF \Q_obuf[3]  (
+	.PAD(Q[3]),
+	.D(Q_c[3])
+);
+// @9:150
+  mezz_fifo_mezz_fifo_0_COREFIFO mezz_fifo_0 (
+	.CLK(GND),
+	.DATA(DATA_c[3:0]),
+	.MEMRD({GND, GND, GND, GND}),
+	.RCLOCK(RCLOCK_c),
+	.RE(RE_c),
+	.RESET(RESET_c),
+	.WCLOCK(WCLOCK_c),
+	.WE(WE_c),
+	.AEMPTY(AEMPTY_c),
+	.AFULL(AFULL),
+	.DB_DETECT(DB_DETECT),
+	.DVLD(DVLD_c),
+	.EMPTY(EMPTY_c),
+	.FULL(FULL_c),
+	.MEMRADDR(MEMRADDR[4:0]),
+	.MEMRE(MEMRE),
+	.MEMWADDR(MEMWADDR[4:0]),
+	.MEMWD(MEMWD[3:0]),
+	.MEMWE(MEMWE),
+	.OVERFLOW(OVERFLOW),
+	.Q(Q_c[3:0]),
+	.RDCNT(RDCNT[5:0]),
+	.SB_CORRECT(SB_CORRECT),
+	.UNDERFLOW(UNDERFLOW),
+	.WACK(WACK),
+	.WRCNT(WRCNT[5:0])
+);
+defparam mezz_fifo_0.AE_STATIC_EN=1;
+defparam mezz_fifo_0.AEVAL=7;
+defparam mezz_fifo_0.AF_STATIC_EN=0;
+defparam mezz_fifo_0.AFVAL=60;
+defparam mezz_fifo_0.CTRL_TYPE=3;
+defparam mezz_fifo_0.ECC=0;
+defparam mezz_fifo_0.ESTOP=1;
+defparam mezz_fifo_0.FAMILY=24;
+defparam mezz_fifo_0.FSTOP=1;
+defparam mezz_fifo_0.FWFT=0;
+defparam mezz_fifo_0.OVERFLOW_EN=0;
+defparam mezz_fifo_0.PIPE=1;
+defparam mezz_fifo_0.PREFETCH=0;
+defparam mezz_fifo_0.RCLK_EDGE=1;
+defparam mezz_fifo_0.RDCNT_EN=0;
+defparam mezz_fifo_0.RDEPTH=32;
+defparam mezz_fifo_0.RE_POLARITY=0;
+defparam mezz_fifo_0.READ_DVALID=1;
+defparam mezz_fifo_0.RESET_POLARITY=1;
+defparam mezz_fifo_0.RWIDTH=4;
+defparam mezz_fifo_0.SYNC=0;
+defparam mezz_fifo_0.UNDERFLOW_EN=0;
+defparam mezz_fifo_0.WCLK_EDGE=1;
+defparam mezz_fifo_0.WDEPTH=32;
+defparam mezz_fifo_0.WE_POLARITY=0;
+defparam mezz_fifo_0.WRCNT_EN=0;
+defparam mezz_fifo_0.WRITE_ACK=0;
+defparam mezz_fifo_0.WWIDTH=4;
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* mezz_fifo */
+

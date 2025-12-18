@@ -1,0 +1,7 @@
+C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\bin64\syn_nfilter.exe  -link  -top  top_app  -multisrs  C:\repo1\gpb\stn\fpga_app\synthesis\synwork\top_app_comp.srs  -osyn  C:\repo1\gpb\stn\fpga_app\synthesis\synwork\top_app_mult.srs  -log  C:\repo1\gpb\stn\fpga_app\synthesis\synlog\top_app_multi_srs_gen.srr 
+relcom:..\..\..\..\..\..\Microchip\Libero_SoC_v2024.2\SynplifyPro\bin64\syn_nfilter.exe -link -top top_app -multisrs ..\synwork\top_app_comp.srs -osyn ..\synwork\top_app_mult.srs -log ..\synlog\top_app_multi_srs_gen.srr
+rc:0 success:1 runtime:1
+file:..\synwork\top_app_comp.srs|io:i|time:1757048573|size:841677|exec:0|csum:56762161A3B8FA4E0A29E3FAF34868A9
+file:..\synwork\top_app_mult.srs|io:o|time:1757048575|size:17802|exec:0|csum:
+file:..\synlog\top_app_multi_srs_gen.srr|io:o|time:1757048575|size:1154|exec:0|csum:
+file:..\..\..\..\..\..\microchip\libero_soc_v2024.2\synplifypro\bin64\syn_nfilter.exe|io:i|time:1721921320|size:10549248|exec:1|csum:4A569E4032A00F41D43F579562C7696C

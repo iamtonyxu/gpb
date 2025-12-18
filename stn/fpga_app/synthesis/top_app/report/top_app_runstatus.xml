@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- *************************************************************************************
+FILE DESCRIPTION
+The file contains the job information from mapper to be displayed as part of the summary report.
+*******************************************************************************************-->
+<job_run_status name="Mapper">
+<report_link name="Detailed report">
+<data>C:\repo1\gpb\stn\fpga_app\synthesis\top_app\top_app.srr</data>
+<title></title>
+</report_link>
+<job_status>
+<data>Completed</data>
+</job_status>
+<job_info>
+<info name="Notes">
+<data>27</data>
+<report_link name="more">
+<data>C:\repo1\gpb\stn\fpga_app\synthesis\top_app\report\top_app_notes.txt</data>
+</report_link>
+</info>
+<info name="Warnings">
+<data>8</data>
+<report_link name="more">
+<data>C:\repo1\gpb\stn\fpga_app\synthesis\top_app\report\top_app_warnings.txt</data>
+</report_link>
+</info>
+<info name="Errors">
+<data>0</data>
+<report_link name="more">
+<data>C:\repo1\gpb\stn\fpga_app\synthesis\top_app\report\top_app_errors.txt</data>
+</report_link>
+</info>
+<info name="CPU Time">
+<data>0h:00m:18s</data>
+</info>
+<info name="Real Time">
+<data>0h:00m:19s</data>
+</info>
+<info name="Peak Memory">
+<data>342MB</data>
+</info>
+<info name="Date &amp; Time">
+<data type="timestamp">1757048606</data>
+</info>
+</job_info>
+</job_run_status>

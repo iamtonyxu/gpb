@@ -1,0 +1,21 @@
+@P:  Worst Slack : 5.902
+@P:  phy_ctrl_rmii|phy_rx_clk - Estimated Frequency : 379.0 MHz
+@P:  phy_ctrl_rmii|phy_rx_clk - Requested Frequency : 100.0 MHz
+@P:  phy_ctrl_rmii|phy_rx_clk - Estimated Period : 2.638
+@P:  phy_ctrl_rmii|phy_rx_clk - Requested Period : 10.000
+@P:  phy_ctrl_rmii|phy_rx_clk - Slack : 7.362
+@P:  phy_ctrl_rmii|phy_tx_clk - Estimated Frequency : 281.0 MHz
+@P:  phy_ctrl_rmii|phy_tx_clk - Requested Frequency : 100.0 MHz
+@P:  phy_ctrl_rmii|phy_tx_clk - Estimated Period : 3.559
+@P:  phy_ctrl_rmii|phy_tx_clk - Requested Period : 10.000
+@P:  phy_ctrl_rmii|phy_tx_clk - Slack : 6.441
+@P:  phy_ctrl_rmii|sysclk - Estimated Frequency : 244.0 MHz
+@P:  phy_ctrl_rmii|sysclk - Requested Frequency : 100.0 MHz
+@P:  phy_ctrl_rmii|sysclk - Estimated Period : 4.098
+@P:  phy_ctrl_rmii|sysclk - Requested Period : 10.000
+@P:  phy_ctrl_rmii|sysclk - Slack : 5.902
+@P: phy_ctrl_rmii Part : mpf050tfcvg484std
+@P: phy_ctrl_rmii Register bits  : 137 
+@P: phy_ctrl_rmii DSP Blocks  : 0
+@P: phy_ctrl_rmii I/O primitives : 15
+@P:  CPU Time : 0h:00m:02s

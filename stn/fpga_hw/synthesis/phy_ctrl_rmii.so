@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SynplifyOutput>
+	<result>Success</result>
+	<design>phy_ctrl_rmii</design>
+	<target_verilog>C:\repo1\gpb\stn\fpga_hw\synthesis\phy_ctrl_rmii.vm</target_verilog>
+</SynplifyOutput>

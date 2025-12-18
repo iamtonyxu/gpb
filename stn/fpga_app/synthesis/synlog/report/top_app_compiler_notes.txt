@@ -1,0 +1,73 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N:"C:\repo1\gpb\stn\fpga_app\hdl\cmn_uart.vhd":42:7:42:14|Top entity is set to cmn_uart.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo1\gpb\stn\fpga_app\hdl\cmn_uart.vhd'.
+@N: CD231 :"C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd2008\std1164.vhd":889:16:889:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
+@N|Running in 64-bit mode
+@N: CG1349 :	| Running Verilog Compiler in System Verilog mode
+@N: CG1349 :	| Running Verilog Compiler in System Verilog mode
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\hdl\CLOCK_DIV.V":21:7:21:15|Synthesizing module CLOCK_DIV in library work.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\hdl\afifo.v":62:7:62:11|Synthesizing module afifo in library work.
+@N: CL134 :"C:\repo1\gpb\stn\fpga_app\hdl\afifo.v":149:1:149:6|Found RAM mem, depth=16, width=8
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\hdl\msg_buffer.v":3:7:3:16|Synthesizing module msg_buffer in library work.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\hdl\msg_read.v":21:7:21:14|Synthesizing module msg_read in library work.
+@N: CG179 :"C:\repo1\gpb\stn\fpga_app\hdl\msg_read.v":187:31:187:41|Removing redundant assignment.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\hdl\msg_write.v":21:7:21:15|Synthesizing module msg_write in library work.
+@N: CG179 :"C:\repo1\gpb\stn\fpga_app\hdl\msg_write.v":143:32:143:39|Removing redundant assignment.
+@N: CG179 :"C:\repo1\gpb\stn\fpga_app\hdl\msg_write.v":164:29:164:37|Removing redundant assignment.
+@N: CG179 :"C:\repo1\gpb\stn\fpga_app\hdl\msg_write.v":165:27:165:33|Removing redundant assignment.
+@N: CG179 :"C:\repo1\gpb\stn\fpga_app\hdl\msg_write.v":180:27:180:33|Removing redundant assignment.
+@N: CG179 :"C:\repo1\gpb\stn\fpga_app\hdl\msg_write.v":197:27:197:33|Removing redundant assignment.
+@N: CG179 :"C:\repo1\gpb\stn\fpga_app\hdl\msg_write.v":246:31:246:41|Removing redundant assignment.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\hdl\opb_emu_target.v":3:7:3:20|Synthesizing module opb_emu_target in library work.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\hdl\cmd_server.v":3:7:3:16|Synthesizing module cmd_server in library work.
+@N: CG794 :"C:\repo1\gpb\stn\fpga_app\hdl\cmd_server.v":48:6:48:18|Using module cmn_uart from library work
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\hdl\ADDR_DECODE.v":21:7:21:17|Synthesizing module ADDR_DECODE in library work.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\hdl\SCRATCH_PAD_REGISTER.v":26:7:26:26|Synthesizing module SCRATCH_PAD_REGISTER in library work.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\hdl\ClkGen.v":29:7:29:12|Synthesizing module ClkGen in library work.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\hdl\afifo.v":62:7:62:11|Synthesizing module afifo in library work.
+@N: CL134 :"C:\repo1\gpb\stn\fpga_app\hdl\afifo.v":149:1:149:6|Found RAM mem, depth=4, width=8
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\hdl\OSCILLATOR_COUNTER.v":22:7:22:24|Synthesizing module OSCILLATOR_COUNTER in library work.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\hdl\DP_RAM_2R_1W.v":19:7:19:18|Synthesizing module DP_RAM_2R_1W in library work.
+@N: CL134 :"C:\repo1\gpb\stn\fpga_app\hdl\DP_RAM_2R_1W.v":53:1:53:6|Found RAM ram, depth=1024, width=16
+@N: CL134 :"C:\repo1\gpb\stn\fpga_app\hdl\DP_RAM_2R_1W.v":53:1:53:6|Found RAM ram, depth=1024, width=16
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\hdl\ADC_ADS8864_IF.v":53:7:53:20|Synthesizing module ADC_ADS8864_IF in library work.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\hdl\DP_RAM_2R_1W.v":19:7:19:18|Synthesizing module DP_RAM_2R_1W in library work.
+@N: CL134 :"C:\repo1\gpb\stn\fpga_app\hdl\DP_RAM_2R_1W.v":53:1:53:6|Found RAM ram, depth=16, width=24
+@N: CL134 :"C:\repo1\gpb\stn\fpga_app\hdl\DP_RAM_2R_1W.v":53:1:53:6|Found RAM ram, depth=16, width=24
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\hdl\afifo.v":62:7:62:11|Synthesizing module afifo in library work.
+@N: CL134 :"C:\repo1\gpb\stn\fpga_app\hdl\afifo.v":149:1:149:6|Found RAM mem, depth=16, width=24
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\hdl\DAC_DACx0504_IF.v":16:7:16:21|Synthesizing module DAC_DACx0504_IF in library work.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\hdl\RS422_TEST_IF.v":35:7:35:19|Synthesizing module RS422_TEST_IF in library work.
+@N: CG794 :"C:\repo1\gpb\stn\fpga_app\hdl\RS422_TEST_IF.v":230:14:230:20|Using module cmn_uart from library work
+@N: CG794 :"C:\repo1\gpb\stn\fpga_app\hdl\RS422_TEST_IF.v":208:6:208:13|Using module cmn_uart from library work
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\hdl\APP2HW_IF.v":3:7:3:15|Synthesizing module APP2HW_IF in library work.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\component\work\CORECAN_C0\CORECAN_C0.v":22:7:22:16|Synthesizing module CORECAN_C0 in library work.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\hdl\CORECAN_wrapper.v":3:7:3:21|Synthesizing module CORECAN_wrapper in library work.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\hdl\CAN_IF.v":29:7:29:12|Synthesizing module CAN_IF in library work.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\hdl\gpio.v":24:7:24:10|Synthesizing module GPIO in library work.
+@N: CG364 :"C:\repo1\gpb\stn\fpga_app\hdl\top_app.v":23:7:23:13|Synthesizing module top_app in library work.
+@N: CL159 :"C:\repo1\gpb\stn\fpga_app\hdl\APP2HW_IF.v":9:32:9:37|Input OPB_DI is unused.
+@N: CL159 :"C:\repo1\gpb\stn\fpga_app\hdl\APP2HW_IF.v":11:32:11:39|Input OPB_ADDR is unused.
+@N: CL159 :"C:\repo1\gpb\stn\fpga_app\hdl\APP2HW_IF.v":15:32:15:37|Input APP_WE is unused.
+@N: CL201 :"C:\repo1\gpb\stn\fpga_app\hdl\DAC_DACx0504_IF.v":127:4:127:9|Trying to extract state machine for register state.
+@N: CL201 :"C:\repo1\gpb\stn\fpga_app\hdl\ADC_ADS8864_IF.v":147:4:147:9|Trying to extract state machine for register status.
+@N: CL201 :"C:\repo1\gpb\stn\fpga_app\hdl\ADC_ADS8864_IF.v":147:4:147:9|Trying to extract state machine for register state.
+@N: CL201 :"C:\repo1\gpb\stn\fpga_app\hdl\opb_emu_target.v":130:4:130:9|Trying to extract state machine for register state.
+@N: CL201 :"C:\repo1\gpb\stn\fpga_app\hdl\msg_write.v":74:4:74:9|Trying to extract state machine for register state.
+@N: CL201 :"C:\repo1\gpb\stn\fpga_app\hdl\msg_read.v":74:4:74:9|Trying to extract state machine for register state.
+@N:"C:\repo1\gpb\stn\fpga_app\hdl\cmn_uart.vhd":42:7:42:14|Top entity is set to cmn_uart.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo1\gpb\stn\fpga_app\hdl\cmn_uart.vhd'.
+@N: CD231 :"C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd2008\std1164.vhd":889:16:889:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
+@N: Setting default value for generic baud_rate to 115200;
+@N: Setting default value for generic clock_frequency to 100000000;
+@N: CD630 :"C:\repo1\gpb\stn\fpga_app\hdl\cmn_uart.vhd":42:7:42:14|Synthesizing work.cmn_uart.rtl.
+@N: CD231 :"C:\repo1\gpb\stn\fpga_app\hdl\cmn_uart.vhd":127:27:127:28|Using onehot encoding for type uart_tx_states. For example, enumeration idle is mapped to "10000".
+@N: CD233 :"C:\repo1\gpb\stn\fpga_app\hdl\cmn_uart.vhd":142:27:142:28|Using sequential encoding for type uart_rx_states.
+@N: CD604 :"C:\repo1\gpb\stn\fpga_app\hdl\cmn_uart.vhd":280:20:280:33|OTHERS clause is not synthesized.
+@N: CD604 :"C:\repo1\gpb\stn\fpga_app\hdl\cmn_uart.vhd":468:20:468:33|OTHERS clause is not synthesized.
+@N: CL201 :"C:\repo1\gpb\stn\fpga_app\hdl\cmn_uart.vhd":353:6:353:7|Trying to extract state machine for register uart_rx_state.
+@N: CL201 :"C:\repo1\gpb\stn\fpga_app\hdl\cmn_uart.vhd":222:6:222:7|Trying to extract state machine for register uart_tx_state.
+@N: CL159 :"C:\repo1\gpb\stn\fpga_app\hdl\cmn_uart.vhd":67:12:67:22|Input uart_active is unused.
+@N|Running in 64-bit mode
+

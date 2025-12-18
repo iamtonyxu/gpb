@@ -1,0 +1,16 @@
+Project Name: fpga_hw
+Location: C:\repo1\gpb\stn\fpga_hw
+Description: 
+Preferred HDL Type: Verilog
+
+#-----------------------------------------------------
+                  Device Details
+#-----------------------------------------------------
+
+Part Number    : MPF050T-FCVG484E
+Family         : PolarFire
+Die            : MPF050T
+Package        : FCVG484
+Speed          : STD
+Core Voltage   : 1.0
+Range          : EXT

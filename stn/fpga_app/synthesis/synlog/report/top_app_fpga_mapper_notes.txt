@@ -1,0 +1,38 @@
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+@N: MF104 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":35:7:35:19|Found compile point of type hard on View view:work.RS422_TEST_IF(verilog) 
+@N: MF107 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":35:7:35:19|Old database up-to-date, remapping Compile point view:work.RS422_TEST_IF(verilog) unnecessary 
+**** Begin Compile Point : top_app ****
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+@N: MF104 :"c:\repo1\gpb\stn\fpga_app\hdl\rs422_test_if.v":35:7:35:19|Found compile point of type hard on View view:work.RS422_TEST_IF(verilog) 
+@N: MF105 |Performing bottom-up mapping of Top level view:work.top_app(verilog) 
+@N: MF106 :"c:\repo1\gpb\stn\fpga_app\hdl\top_app.v":23:7:23:13|Mapping Top level view:work.top_app(verilog) because 
+@N: MO111 :"c:\repo1\gpb\stn\fpga_app\hdl\top_app.v":243:16:243:33|Tristate driver APP_FPGA_SPI1_MISO (in view: work.top_app(verilog)) on net APP_FPGA_SPI1_MISO (in view: work.top_app(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\repo1\gpb\stn\fpga_app\hdl\top_app.v":240:16:240:33|Tristate driver APP_FPGA_SPI0_MISO (in view: work.top_app(verilog)) on net APP_FPGA_SPI0_MISO (in view: work.top_app(verilog)) has its enable tied to GND.
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\oscillator_counter.v":68:4:68:9|Found counter in view:work.top_app(verilog) instance oscillator_counter_0.count_data[15:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\adc_ads8864_if.v":147:4:147:9|Found counter in view:work.ADC_ADS8864_IF(verilog) instance data_count[10:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\adc_ads8864_if.v":130:1:130:6|Found counter in view:work.ADC_ADS8864_IF(verilog) instance conv_count[5:0] 
+@N: MO225 :"c:\repo1\gpb\stn\fpga_app\hdl\dac_dacx0504_if.v":127:4:127:9|There are no possible illegal states for state machine state[3:0] (in view: work.DAC_DACx0504_IF(verilog)); safe FSM implementation is not required.
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\dac_dacx0504_if.v":127:4:127:9|Found counter in view:work.DAC_DACx0504_IF(verilog) instance bit_count[4:0] 
+@N: FX702 :"c:\repo1\gpb\stn\fpga_app\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance opb_fifo_inst.mem[23:0] (in view: work.DAC_DACx0504_IF(verilog)).
+@N: FX702 :"c:\repo1\gpb\stn\fpga_app\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance opb_fifo_inst.mem[23:0]
+@N: MF179 :"c:\repo1\gpb\stn\fpga_app\hdl\corecan_wrapper.v":45:12:45:40|Found 11 by 11 bit equality operator ('==') CAN4_inst.OPB_DO7 (in view: work.CAN_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_app\hdl\corecan_wrapper.v":45:12:45:40|Found 11 by 11 bit equality operator ('==') CAN3_inst.OPB_DO7 (in view: work.CAN_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_app\hdl\corecan_wrapper.v":45:12:45:40|Found 11 by 11 bit equality operator ('==') CAN2_inst.OPB_DO7 (in view: work.CAN_IF(verilog))
+@N: MF179 :"c:\repo1\gpb\stn\fpga_app\hdl\corecan_wrapper.v":45:12:45:40|Found 11 by 11 bit equality operator ('==') CAN1_inst.OPB_DO7 (in view: work.CAN_IF(verilog))
+@N: FX702 :"c:\repo1\gpb\stn\fpga_app\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0] (in view: work.afifo_8s_4s_8s_4s_1(verilog)).
+@N: FX702 :"c:\repo1\gpb\stn\fpga_app\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0]
+@N: FX702 :"c:\repo1\gpb\stn\fpga_app\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0] (in view: work.afifo_8s_4s_8s_4s_0(verilog)).
+@N: FX702 :"c:\repo1\gpb\stn\fpga_app\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0]
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\msg_read.v":176:4:176:9|Found counter in view:work.msg_read(verilog) instance timeout_cnt[7:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_app\hdl\msg_write.v":235:4:235:9|Found counter in view:work.msg_write(verilog) instance timeout_cnt[7:0] 
+@N: MO225 :"c:\repo1\gpb\stn\fpga_app\hdl\cmn_uart.vhd":353:6:353:7|There are no possible illegal states for state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_0(rtl)); safe FSM implementation is not required.
+@N: BN362 :"c:\repo1\gpb\stn\fpga_app\hdl\adc_ads8864_if.v":147:4:147:9|Removing sequential instance u_adc.status[3] (in view: work.top_app(verilog)) because it does not drive other instances.
+**** End Compile Point : top_app ****
+@N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
+@N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.

@@ -1,0 +1,392 @@
+<html>
+    <head>
+        <style>
+      body { font-family:arial; font-size:10pt; text-align:left; }
+      h1, h2 {
+          padding-top: 30px;
+      }
+      h3 {
+          padding-top: 20px;
+      }
+      h4, h5, h6 {
+          padding-top: 10px;
+          font-size:12pt;
+      }
+      table {
+          font-family:arial; font-size:10pt; text-align:left;
+          border-color:#B0B0B0;
+          border-style:solid;
+          border-width:1px;
+          border-collapse:collapse;
+      }
+      table th, table td {
+          font-family:arial; font-size:10pt; text-align:left;
+          border-color:#B0B0B0;
+          border-style:solid;
+          border-width:1px;
+          padding: 4px;
+      }
+     </style>
+    </head>
+    <body>
+        <h1 align="center">Global Net Report</h1>
+        <p>Microchip Technology Inc. - Microchip Libero Software Release v2024.2 (Version 2024.2.0.13)</p>
+        <p>Date: Fri Oct 17 11:03:55 2025
+</p>
+        <h2>Global Nets Information</h2>
+        <table cellpadding="4">
+            <tr>
+                <th/>
+                <th> From </th>
+                <th> GB Location </th>
+                <th> Net Name </th>
+                <th> Fanout </th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>I_1/U0</td>
+                <td>(576, 0)</td>
+                <td>I_1/U0_Y</td>
+                <td>2083</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>I_2/U0</td>
+                <td>(577, 0)</td>
+                <td>I_2/U0_Y</td>
+                <td>1974</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>I_3/U0</td>
+                <td>(578, 0)</td>
+                <td>I_3/U0_Y</td>
+                <td>322</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>clkgen_25mhz/N_1_inferred_clock_RNIECG26/U0</td>
+                <td>(580, 0)</td>
+                <td>clkgen_25mhz/N_1_inferred_clock_RNIECG26/U0_Y</td>
+                <td>124</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>u_clkgen/pulse2khz_div/CLK_OUT_RNIVQBC5/U0</td>
+                <td>(582, 0)</td>
+                <td>u_clkgen/pulse2khz_div/CLK_OUT_RNIVQBC5/U0_Y</td>
+                <td>51</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>I_4/U0</td>
+                <td>(579, 0)</td>
+                <td>I_4/U0_Y</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>clkgen_2khz/N_1_inferred_clock_RNINDJ72/U0</td>
+                <td>(581, 0)</td>
+                <td>clkgen_2khz/N_1_inferred_clock_RNINDJ72/U0_Y</td>
+                <td>4</td>
+            </tr>
+        </table>
+        <p/>
+        <h2>I/O to GB Connections</h2>
+        <table cellpadding="4">
+            <tr>
+                <th/>
+                <th> Port Name </th>
+                <th> Pin Number </th>
+                <th> I/O Function </th>
+                <th> From </th>
+                <th> From Location </th>
+                <th> To </th>
+                <th> Net Name </th>
+                <th> Net Type </th>
+                <th> Fanout </th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>HDW_DEVRST_N</td>
+                <td>D16</td>
+                <td>GPIO14NB2/DQS</td>
+                <td>HDW_DEVRST_N_ibuf/U_IOIN:Y</td>
+                <td>(1080, 4)</td>
+                <td>I_1/U0</td>
+                <td>HDW_DEVRST_N_c</td>
+                <td>ROUTED</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>HDW_FPGA_100M_CLK</td>
+                <td>B3</td>
+                <td>GPIO87PB2/CLKIN_S_3/CCC_SW_CLKIN_S_3</td>
+                <td>HDW_FPGA_100M_CLK_ibuf/U_IOIN:Y</td>
+                <td>(120, 4)</td>
+                <td>I_2/U0</td>
+                <td>HDW_FPGA_100M_CLK_ibuf_Z</td>
+                <td>ROUTED</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>HDW_FPGA_50M_CLK</td>
+                <td>Y1</td>
+                <td>HSIO65PB0/CCC_NW_CLKIN_N_0</td>
+                <td>HDW_FPGA_50M_CLK_ibuf/U_IOIN:Y</td>
+                <td>(0, 136)</td>
+                <td>I_3/U0</td>
+                <td>HDW_FPGA_50M_CLK_ibuf_Z</td>
+                <td>ROUTED</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>HDW_DBUG_MISO</td>
+                <td>W1</td>
+                <td>HSIO60NB0</td>
+                <td>HDW_DBUG_MISO_ibuf/U_IOIN:Y</td>
+                <td>(132, 136)</td>
+                <td>I_4/U0</td>
+                <td>HDW_DBUG_MISO_ibuf_Z</td>
+                <td>ROUTED</td>
+                <td>1</td>
+            </tr>
+        </table>
+        <p/>
+        <h2>Fabric to GB Connections</h2>
+        <table cellpadding="4">
+            <tr>
+                <th/>
+                <th> From </th>
+                <th> From Location </th>
+                <th> To </th>
+                <th> Net Name </th>
+                <th> Net Type </th>
+                <th> Fanout </th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>clkgen_25mhz/clkout:Q</td>
+                <td>(575, 10)</td>
+                <td>clkgen_25mhz/N_1_inferred_clock_RNIECG26/U0</td>
+                <td>clkgen_25mhz/N_1_0</td>
+                <td>ROUTED</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>u_clkgen/pulse2khz_div/CLK_OUT:Y</td>
+                <td>(533, 108)</td>
+                <td>u_clkgen/pulse2khz_div/CLK_OUT_RNIVQBC5/U0</td>
+                <td>u_clkgen/pulse2khz_div/CLK_OUT_Z</td>
+                <td>ROUTED</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>clkgen_2khz/clkout:Q</td>
+                <td>(534, 19)</td>
+                <td>clkgen_2khz/N_1_inferred_clock_RNINDJ72/U0</td>
+                <td>clkgen_2khz/N_1</td>
+                <td>ROUTED</td>
+                <td>4</td>
+            </tr>
+        </table>
+        <p/>
+        <h2>CCC to GB Connections</h2>
+        <p>(none)</p>
+        <h2>CCC Input Connections</h2>
+        <p>(none)</p>
+        <h2>Local Nets to RGB Connections</h2>
+        <p>(none)</p>
+        <h2>Global Nets to RGB Connections</h2>
+        <table cellpadding="4">
+            <tr>
+                <th/>
+                <th> From </th>
+                <th> From Location </th>
+                <th> Net Name </th>
+                <th> Fanout </th>
+                <th/>
+                <th> RGB Location </th>
+                <th> Local Fanout </th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>I_1/U0</td>
+                <td>(576, 0)</td>
+                <td>I_1/U0_Y</td>
+                <td>2083</td>
+                <td>1</td>
+                <td>(576, 15)</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>2</td>
+                <td>(576, 69)</td>
+                <td>311</td>
+            </tr>
+            <tr>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>3</td>
+                <td>(576, 96)</td>
+                <td>1329</td>
+            </tr>
+            <tr>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>4</td>
+                <td>(576, 123)</td>
+                <td>409</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>I_2/U0</td>
+                <td>(577, 0)</td>
+                <td>I_2/U0_Y</td>
+                <td>1974</td>
+                <td>1</td>
+                <td>(579, 15)</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>2</td>
+                <td>(579, 69)</td>
+                <td>311</td>
+            </tr>
+            <tr>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>3</td>
+                <td>(579, 96)</td>
+                <td>1260</td>
+            </tr>
+            <tr>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>4</td>
+                <td>(579, 123)</td>
+                <td>386</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>I_3/U0</td>
+                <td>(578, 0)</td>
+                <td>I_3/U0_Y</td>
+                <td>322</td>
+                <td>1</td>
+                <td>(577, 98)</td>
+                <td>152</td>
+            </tr>
+            <tr>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>2</td>
+                <td>(577, 125)</td>
+                <td>170</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>clkgen_25mhz/N_1_inferred_clock_RNIECG26/U0</td>
+                <td>(580, 0)</td>
+                <td>clkgen_25mhz/N_1_inferred_clock_RNIECG26/U0_Y</td>
+                <td>124</td>
+                <td/>
+                <td>(576, 97)</td>
+                <td>124</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>u_clkgen/pulse2khz_div/CLK_OUT_RNIVQBC5/U0</td>
+                <td>(582, 0)</td>
+                <td>u_clkgen/pulse2khz_div/CLK_OUT_RNIVQBC5/U0_Y</td>
+                <td>51</td>
+                <td>1</td>
+                <td>(578, 15)</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td>2</td>
+                <td>(578, 123)</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>I_4/U0</td>
+                <td>(579, 0)</td>
+                <td>I_4/U0_Y</td>
+                <td>26</td>
+                <td/>
+                <td>(580, 98)</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>clkgen_2khz/N_1_inferred_clock_RNINDJ72/U0</td>
+                <td>(581, 0)</td>
+                <td>clkgen_2khz/N_1_inferred_clock_RNINDJ72/U0_Y</td>
+                <td>4</td>
+                <td/>
+                <td>(579, 97)</td>
+                <td>4</td>
+            </tr>
+        </table>
+        <p/>
+        <h2>Clock Signals Summary</h2>
+        <table cellpadding="4">
+            <tr/>
+            <tr>
+                <td>The number of clock signals through  H-Chip Global resources</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>The number of clock signals through     Row Global resources</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>The number of clock signals through  Sector Global resources</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>The number of clock signals through Cluster Global resources</td>
+                <td>317</td>
+            </tr>
+        </table>
+        <p/>
+    </body>
+</html>

@@ -22,10 +22,11 @@ data VCCI_2.5_VOLTR EXT
 data VCCI_3.3_VOLTR EXT
 data FLOW_TYPE NEW
 data PLANNER_IOMODE 1
-data AFL 'C:/repo1/gpb/stn/fpga_hw/designer/top_hw/COMPILE/top_hw.afl'
+data AFL 'C:/repo1/gpb/stn/fpga_hw/designer/top_hw/top_hw.afl'
 data ADL 'C:/repo1/gpb/stn/fpga_hw/designer/top_hw/top_hw.adl'
-data LOC 'C:/repo1/gpb/stn/fpga_hw/designer/top_hw/COMPILE/top_hw.loc'
-data SEG 'C:/repo1/gpb/stn/fpga_hw/designer/top_hw/COMPILE/top_hw.seg'
+data LOC 'C:/repo1/gpb/stn/fpga_hw/designer/top_hw/top_hw.loc'
+data SEG 'C:/repo1/gpb/stn/fpga_hw/designer/top_hw/top_hw.seg'
+data NMAT_TXT 'C:/repo1/gpb/stn/fpga_hw/designer/top_hw/top_hw.nmatinit.txt'
 
 data IO_PDC_0 'C:/repo1/gpb/stn/fpga_hw/constraint/io/top_hw.pdc'
 data TARGET_IOPDC  'C:/repo1/gpb/stn/fpga_hw/constraint/io/user.pdc'

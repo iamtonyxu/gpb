@@ -1,0 +1,287 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-3
+Install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: LAPTOP-6FQD1N4B
+
+Implementation : synthesis
+Synopsys HDL compiler and linker, Version comp202309synp1, Build 280R, Built Jun 20 2024 08:13:40, @
+
+Modified Files: 2
+FID:  path (prevtimestamp, timestamp)
+15       C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25)
+36       C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54)
+
+*******************************************************************
+Modules that may have changed as a result of file changes: 109
+MID:  lib.cell.view
+0        work.ADC_ADS8864_IF.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+1        work.ADDR_DECODE.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+2        work.APBM.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+3        work.APBS.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+4        work.APP2HW_IF.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+5        work.BANKCTRLM.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+6        work.BANKCTRL_GPIO.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+7        work.BANKCTRL_HSIO.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+8        work.BANKEN.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+9        work.CAN_IF.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+10       work.CLKBUF_DIFF.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+11       work.CLKBUF_DIFF_ODT.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+12       work.CLOCK_DIV.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+92       work.CORECAN.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+93       work.CORECAN_C0.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+109      work.CORECAN_wrapper.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+13       work.CORELNKTMR_V.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+14       work.CRN_COMMON.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+15       work.CRN_INT.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+16       work.CRYPTO.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+17       work.CRYPTO_SOC.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+18       work.ClkGen.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+19       work.DAC_DACx0504_IF.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+20       work.DEBUG.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+21       work.DLL.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+22       work.DP_RAM_2R_1W.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+23       work.DRI.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+24       work.ENFORCE.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+25       work.GLITCHDETECT.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+26       work.GPIO.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+27       work.GPSS_COMMON.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+28       work.HS_IO_CLK.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+94       work.I1i.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+95       work.I1lI.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+29       work.ICB_BANKCLK.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+30       work.ICB_CLKDIV.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+31       work.ICB_CLKDIVDELAY.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+32       work.ICB_CLKINT.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+33       work.ICB_CLKSTOP.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+34       work.ICB_CLKSTOP_EN.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+35       work.ICB_INT.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+36       work.ICB_MUXING.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+37       work.ICB_NGMUX.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+38       work.INIT.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+39       work.IOD.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+96       work.Il0.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+97       work.Io0.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+40       work.LANECTRL.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+41       work.LANERST.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+98       work.O0o.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+42       work.OSCILLATOR_COUNTER.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+43       work.OSC_RC160MHZ.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+44       work.OSC_RC200MHZ.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+45       work.OSC_RC2MHZ.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+46       work.PCIE.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+47       work.PCIE_COMMON.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+48       work.PFSOC_SCSM.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+49       work.PF_SPI.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+50       work.PLL.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+51       work.QUADRST.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+52       work.QUADRST_PCIE.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+53       work.RS422_TEST_IF.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+54       work.SCB.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+55       work.SCRATCH_PAD_REGISTER.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+56       work.SYSCTRL_RESET_STATUS.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+57       work.SYSRESET.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+58       work.SYS_SERVICES.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+59       work.TAMPER.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+60       work.TVS.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+61       work.TX_PLL.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+62       work.UPROM.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+63       work.USPI.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+64       work.VOLTAGEDETECT.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+65       work.VREFBANKDYN.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+66       work.VREFCTRL.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+67       work.XCVR.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+68       work.XCVR_64B6XB.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+69       work.XCVR_8B10B.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+70       work.XCVR_APB_LINK.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+71       work.XCVR_APB_LINK_V.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+72       work.XCVR_APB_LINK_V2.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+73       work.XCVR_DUAL_PCS.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+74       work.XCVR_PIPE.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+75       work.XCVR_PIPE_AXI0.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+76       work.XCVR_PIPE_AXI1.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+77       work.XCVR_PMA.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+78       work.XCVR_REF_CLK.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+79       work.XCVR_REF_CLK_N.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+80       work.XCVR_REF_CLK_P.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+81       work.XCVR_TEST.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+82       work.XCVR_VV.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\component\polarfire_syn_comps.v (2025-09-05 12:56:56, 2025-09-05 13:02:25) <-- (module definition)
+83       work.afifo.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+84       work.cmd_server.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+85       work.cmn_uart.rtl may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+99       work.i01.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+100      work.i0lI.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+101      work.iil.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+102      work.il0.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+103      work.l00.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+104      work.l01.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+105      work.lI1.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+87       work.msg_buffer.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+88       work.msg_read.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+89       work.msg_write.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+106      work.o10.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+107      work.oIi.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+108      work.oIlI.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+90       work.opb_emu_target.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (may instantiate this module)
+91       work.top_app.verilog may have changed because the following files changed:
+                        C:\repo1\gpb\stn\fpga_app\hdl\top_app.v (2025-08-22 10:43:05, 2025-09-05 13:00:54) <-- (module definition)
+
+*******************************************************************
+Unmodified files: 38
+FID:  path (timestamp)
+0        C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\generic\acg5.v (2024-07-25 23:12:34)
+1        C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd2008\arith.vhd (2024-07-25 23:03:50)
+2        C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd2008\location.map (2024-07-25 23:03:50)
+3        C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd2008\numeric.vhd (2024-07-25 23:29:38)
+4        C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd2008\std.vhd (2024-07-25 23:04:16)
+5        C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd2008\std1164.vhd (2024-07-25 23:03:50)
+6        C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd2008\std_textio.vhd (2024-07-25 23:03:50)
+7        C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd2008\unsigned.vhd (2024-07-25 23:03:50)
+8        C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd\hyperents.vhd (2024-07-25 23:03:50)
+9        C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd\math_real.vhd (2024-07-25 23:29:32)
+10       C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd\snps_haps_pkg.vhd (2024-07-25 23:03:50)
+11       C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd\umr_capim.vhd (2024-07-25 23:03:50)
+12       C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vlog\hypermods.v (2024-07-25 23:03:48)
+13       C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vlog\scemi_objects.v (2024-07-25 23:03:48)
+14       C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vlog\scemi_pipes.svh (2024-07-25 23:03:48)
+37       C:\repo1\gpb\stn\fpga_app\component\Microchip\DirectCore\CORECAN\2.0.100\rtl\core_encrypted\corecan.v (2025-07-31 13:04:21)
+38       C:\repo1\gpb\stn\fpga_app\component\work\CORECAN_C0\CORECAN_C0.v (2025-07-31 13:22:16)
+16       C:\repo1\gpb\stn\fpga_app\hdl\ADC_ADS8864_IF.v (2025-06-21 10:21:47)
+17       C:\repo1\gpb\stn\fpga_app\hdl\ADDR_DECODE.v (2025-08-12 10:15:58)
+18       C:\repo1\gpb\stn\fpga_app\hdl\ADDR_DEFINITION.v (2025-08-12 11:29:40)
+19       C:\repo1\gpb\stn\fpga_app\hdl\APP2HW_IF.v (2025-08-22 10:20:01)
+20       C:\repo1\gpb\stn\fpga_app\hdl\CAN_IF.v (2025-08-12 12:08:03)
+21       C:\repo1\gpb\stn\fpga_app\hdl\CLOCK_DIV.V (2025-06-21 09:59:16)
+39       C:\repo1\gpb\stn\fpga_app\hdl\CORECAN_wrapper.v (2025-08-12 12:09:19)
+22       C:\repo1\gpb\stn\fpga_app\hdl\ClkGen.v (2025-07-12 12:25:17)
+23       C:\repo1\gpb\stn\fpga_app\hdl\DAC_DACx0504_IF.v (2025-06-21 10:17:44)
+24       C:\repo1\gpb\stn\fpga_app\hdl\DP_RAM_2R_1W.v (2025-07-31 10:57:36)
+25       C:\repo1\gpb\stn\fpga_app\hdl\OSCILLATOR_COUNTER.v (2025-07-12 13:23:11)
+26       C:\repo1\gpb\stn\fpga_app\hdl\RS422_TEST_IF.v (2025-09-05 11:47:45)
+27       C:\repo1\gpb\stn\fpga_app\hdl\SCRATCH_PAD_REGISTER.v (2025-08-02 09:23:15)
+28       C:\repo1\gpb\stn\fpga_app\hdl\afifo.v (2025-06-21 09:59:16)
+29       C:\repo1\gpb\stn\fpga_app\hdl\cmd_server.v (2025-07-12 10:53:19)
+30       C:\repo1\gpb\stn\fpga_app\hdl\cmn_uart.vhd (2025-06-21 09:59:16)
+31       C:\repo1\gpb\stn\fpga_app\hdl\gpio.v (2025-08-10 19:09:10)
+32       C:\repo1\gpb\stn\fpga_app\hdl\msg_buffer.v (2025-06-21 09:59:16)
+33       C:\repo1\gpb\stn\fpga_app\hdl\msg_read.v (2025-06-21 10:02:38)
+34       C:\repo1\gpb\stn\fpga_app\hdl\msg_write.v (2025-06-21 09:59:16)
+35       C:\repo1\gpb\stn\fpga_app\hdl\opb_emu_target.v (2025-06-21 10:02:38)
+
+*******************************************************************
+Unchanged modules: 0
+MID:  lib.cell.view

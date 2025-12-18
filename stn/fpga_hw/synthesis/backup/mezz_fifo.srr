@@ -1,0 +1,1091 @@
+#Build: Synplify Pro (R) V-2023.09M-3, Build 307R, Jul 25 2024
+#install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+#OS: Windows 10 or later
+#Hostname: LAPTOP-6FQD1N4B
+
+# Sat Aug 16 12:19:41 2025
+
+#Implementation: synthesis
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-3
+Install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: LAPTOP-6FQD1N4B
+
+Implementation : synthesis
+Synopsys HDL Compiler, Version comp202309synp1, Build 280R, Built Jun 20 2024 08:13:40, @
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-3
+Install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: LAPTOP-6FQD1N4B
+
+Implementation : synthesis
+Synopsys VHDL Compiler, Version comp202309synp1, Build 280R, Built Jun 20 2024 08:13:40, @
+
+@N|Running in 64-bit mode
+@N:"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo.vhd":19:7:19:15|Top entity is set to mezz_fifo.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_doubleSync.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_grayToBinConv.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_pkg.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_mezz_fifo_0_USRAM_top.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_mezz_fifo_0_ram_wrapper.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo.vhd'.
+VHDL syntax check successful!
+@N: CD231 :"C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd2008\std1164.vhd":889:16:889:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
+Options changed - recompiling
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 94MB peak: 94MB)
+
+
+Process completed successfully.
+# Sat Aug 16 12:19:43 2025
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-3
+Install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: LAPTOP-6FQD1N4B
+
+Implementation : synthesis
+Synopsys Verilog Compiler, Version comp202309synp1, Build 280R, Built Jun 20 2024 08:13:40, @
+
+@N|Running in 64-bit mode
+@I::"C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\generic\acg5.v" (library work)
+@I::"C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v" (library work)
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":21:13:21:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":61:13:61:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":88:13:88:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":118:13:118:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":168:13:168:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":213:13:213:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":232:13:232:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":281:13:281:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":335:13:335:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":657:13:657:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":761:13:761:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":795:13:795:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":1059:13:1059:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":1369:13:1369:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":1396:13:1396:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":1441:13:1441:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":1474:13:1474:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":1492:13:1492:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":1518:13:1518:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":1559:13:1559:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":1581:13:1581:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":1599:13:1599:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":1616:13:1616:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":1635:13:1635:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":1652:13:1652:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":1681:13:1681:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":1712:13:1712:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":1802:13:1802:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":2026:13:2026:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":2187:13:2187:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":2203:13:2203:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":2219:13:2219:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":2235:13:2235:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":2267:13:2267:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":2648:13:2648:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":3661:13:3661:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":3732:13:3732:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":3861:13:3861:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":3879:13:3879:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":3896:13:3896:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":3911:13:3911:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":3926:13:3926:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":3953:13:3953:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":4067:13:4067:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":4098:13:4098:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":4144:13:4144:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":4255:13:4255:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":4439:13:4439:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":4480:13:4480:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":4506:13:4506:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":4523:13:4523:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":4600:13:4600:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":5364:13:5364:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":6174:13:6174:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":6283:13:6283:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":6321:13:6321:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":6394:13:6394:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":7283:13:7283:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":8340:13:8340:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":9299:13:9299:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":10035:13:10035:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":10750:13:10750:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":10784:13:10784:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":10820:13:10820:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":10867:13:10867:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":10901:13:10901:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":11767:13:11767:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":12810:13:12810:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":12822:15:12822:27|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":12833:13:12833:25|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\repo1\gpb\stn\fpga_hw\component\polarfire_syn_comps.v":12846:13:12846:25|User defined pragma syn_black_box detected
+
+Verilog syntax check successful!
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 94MB peak: 94MB)
+
+
+Process completed successfully.
+# Sat Aug 16 12:19:43 2025
+
+###########################################################]
+###########################################################[
+@N:"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo.vhd":19:7:19:15|Top entity is set to mezz_fifo.
+Options changed - recompiling
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_doubleSync.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_grayToBinConv.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_pkg.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_mezz_fifo_0_USRAM_top.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_mezz_fifo_0_ram_wrapper.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo.vhd'.
+VHDL syntax check successful!
+Options changed - recompiling
+@N: CD231 :"C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd2008\std1164.vhd":889:16:889:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
+@N: CD630 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo.vhd":19:7:19:15|Synthesizing work.mezz_fifo.rtl.
+@N: CD630 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":34:7:34:36|Synthesizing work.mezz_fifo_mezz_fifo_0_corefifo.translated.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":400:10:400:18|Signal reg_valid is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":401:10:401:15|Signal reg_rd is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":404:10:404:22|Signal fwft_memraddr is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":405:10:405:16|Signal pf_dvld is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":406:10:406:20|Signal pf_memraddr is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":410:10:410:13|Signal pf_q is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":413:10:413:15|Signal fwft_q is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":430:10:430:17|Signal xhdl_122 is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":434:10:434:15|Signal empty2 is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":435:10:435:16|Signal aempty2 is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":444:10:444:26|Signal dvld_xhdl10_scntr is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":445:10:445:25|Signal dvld_xhdl10_sync is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":447:10:447:18|Signal fwft_dvld is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":456:10:456:23|Signal int_memrd_sig1 is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":457:10:457:23|Signal int_memrd_sig2 is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":470:10:470:23|Signal ext_memrd_sig2 is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":504:10:504:19|Signal fifo_rd_en is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":505:10:505:23|Signal fwft_reg_valid is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":524:10:524:26|Signal temp_a_sb_correct is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":525:10:525:26|Signal temp_b_sb_correct is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":526:10:526:25|Signal temp_a_db_detect is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":527:10:527:25|Signal temp_b_db_detect is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":530:10:530:25|Signal sb_correct_xhdl1 is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":531:10:531:25|Signal sb_correct_xhdl2 is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":532:10:532:24|Signal db_detect_xhdl1 is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":533:10:533:24|Signal db_detect_xhdl2 is undriven. Either assign the signal a value or remove the signal declaration.
+@N: CD630 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_mezz_fifo_0_ram_wrapper.vhd":8:7:8:39|Synthesizing work.mezz_fifo_mezz_fifo_0_ram_wrapper.generated.
+@N: CD630 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_mezz_fifo_0_USRAM_top.vhd":8:7:8:37|Synthesizing work.mezz_fifo_mezz_fifo_0_usram_top.def_arch.
+Post processing for work.mezz_fifo_mezz_fifo_0_usram_top.def_arch
+Running optimization stage 1 on mezz_fifo_mezz_fifo_0_USRAM_top .......
+Finished optimization stage 1 on mezz_fifo_mezz_fifo_0_USRAM_top (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
+Post processing for work.mezz_fifo_mezz_fifo_0_ram_wrapper.generated
+Running optimization stage 1 on mezz_fifo_mezz_fifo_0_ram_wrapper .......
+@W: CL240 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_mezz_fifo_0_ram_wrapper.vhd":29:0:29:10|Signal B_DB_DETECT is floating; a simulation mismatch is possible.
+@W: CL240 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_mezz_fifo_0_ram_wrapper.vhd":28:0:28:10|Signal A_DB_DETECT is floating; a simulation mismatch is possible.
+@W: CL240 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_mezz_fifo_0_ram_wrapper.vhd":27:0:27:11|Signal B_SB_CORRECT is floating; a simulation mismatch is possible.
+@W: CL240 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_mezz_fifo_0_ram_wrapper.vhd":26:0:26:11|Signal A_SB_CORRECT is floating; a simulation mismatch is possible.
+Finished optimization stage 1 on mezz_fifo_mezz_fifo_0_ram_wrapper (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
+@N: CD630 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":33:7:33:42|Synthesizing work.mezz_fifo_mezz_fifo_0_corefifo_async.translated.
+@W: CD434 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":629:33:629:46|Signal wptr_bin_sync2 in the sensitivity list is not used in the process. Make sure all variables in the sensitivity list are referenced in the process.
+@N: CD364 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":821:14:821:20|Removing redundant assignment.
+@N: CD364 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":866:12:866:18|Removing redundant assignment.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":174:10:174:26|Signal almostemptyi_fwft is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":177:10:177:20|Signal temp_xhdl15 is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":185:10:185:24|Signal temp_xhdl22_top is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":186:10:186:17|Signal re_top_p is undriven. Either assign the signal a value or remove the signal declaration.
+@N: CD630 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_grayToBinConv.vhd":32:7:32:50|Synthesizing work.mezz_fifo_mezz_fifo_0_corefifo_graytobinconv.translated.
+@W: CD434 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_grayToBinConv.vhd":73:36:73:36|Signal i in the sensitivity list is not used in the process. Make sure all variables in the sensitivity list are referenced in the process.
+@W: CD638 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_grayToBinConv.vhd":59:10:59:10|Signal i is undriven. Either assign the signal a value or remove the signal declaration.
+Post processing for work.mezz_fifo_mezz_fifo_0_corefifo_graytobinconv.translated
+Running optimization stage 1 on mezz_fifo_mezz_fifo_0_corefifo_grayToBinConv .......
+Finished optimization stage 1 on mezz_fifo_mezz_fifo_0_corefifo_grayToBinConv (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+@N: CD630 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_doubleSync.vhd":31:7:31:47|Synthesizing work.mezz_fifo_mezz_fifo_0_corefifo_doublesync.translated.
+Post processing for work.mezz_fifo_mezz_fifo_0_corefifo_doublesync.translated
+Running optimization stage 1 on mezz_fifo_mezz_fifo_0_corefifo_doubleSync .......
+Finished optimization stage 1 on mezz_fifo_mezz_fifo_0_corefifo_doubleSync (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 99MB)
+Post processing for work.mezz_fifo_mezz_fifo_0_corefifo_async.translated
+Running optimization stage 1 on mezz_fifo_mezz_fifo_0_corefifo_async .......
+@W: CL240 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":186:10:186:17|Signal re_top_p is floating; a simulation mismatch is possible.
+@W: CL240 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":174:10:174:26|Signal almostemptyi_fwft is floating; a simulation mismatch is possible.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":775:6:775:7|Pruning unused register aempty_r_fwft_3. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":775:6:775:7|Pruning unused register empty_r_fwft_5. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":751:6:751:7|Pruning unused register rptr_gray_fwft_3(5 downto 0). Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":751:6:751:7|Pruning unused register rptr_fwft_3(5 downto 0). Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":673:6:673:7|Pruning unused register we_p_r_3. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":673:6:673:7|Pruning unused register full_reg_3. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":658:6:658:7|Pruning unused register empty_reg_3. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":658:6:658:7|Pruning unused register dvld_r2_2. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":645:6:645:7|Pruning unused register re_p_d1_4. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":595:6:595:7|Pruning unused register rptr_bin_sync2_fwft_3(5 downto 0). Make sure that there are no unused intermediate registers.
+@W: CL168 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":582:3:582:23|Removing instance Rd_grayToBinConv_fwft because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":568:3:568:20|Removing instance Rd_doubleSync_fwft because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL111 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":844:6:844:7|All reachable assignments to wrcnt_r(0) are '0'; removing register. To preserve a constant register, use the syn_preserve attribute.
+@W: CL111 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":844:6:844:7|All reachable assignments to wrcnt_r(1) are '0'; removing register. To preserve a constant register, use the syn_preserve attribute.
+@W: CL111 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":844:6:844:7|All reachable assignments to wrcnt_r(2) are '0'; removing register. To preserve a constant register, use the syn_preserve attribute.
+@W: CL111 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":844:6:844:7|All reachable assignments to wrcnt_r(3) are '0'; removing register. To preserve a constant register, use the syn_preserve attribute.
+@W: CL111 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":844:6:844:7|All reachable assignments to wrcnt_r(4) are '0'; removing register. To preserve a constant register, use the syn_preserve attribute.
+@W: CL111 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":844:6:844:7|All reachable assignments to wrcnt_r(5) are '0'; removing register. To preserve a constant register, use the syn_preserve attribute.
+@W: CL111 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":844:6:844:7|All reachable assignments to wack_r are '0'; removing register. To preserve a constant register, use the syn_preserve attribute.
+@W: CL111 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":844:6:844:7|All reachable assignments to overflow_r are '0'; removing register. To preserve a constant register, use the syn_preserve attribute.
+@W: CL111 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":775:6:775:7|All reachable assignments to rdcnt_r(0) are '0'; removing register. To preserve a constant register, use the syn_preserve attribute.
+@W: CL111 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":775:6:775:7|All reachable assignments to rdcnt_r(1) are '0'; removing register. To preserve a constant register, use the syn_preserve attribute.
+@W: CL111 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":775:6:775:7|All reachable assignments to rdcnt_r(2) are '0'; removing register. To preserve a constant register, use the syn_preserve attribute.
+@W: CL111 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":775:6:775:7|All reachable assignments to rdcnt_r(3) are '0'; removing register. To preserve a constant register, use the syn_preserve attribute.
+@W: CL111 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":775:6:775:7|All reachable assignments to rdcnt_r(4) are '0'; removing register. To preserve a constant register, use the syn_preserve attribute.
+@W: CL111 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":775:6:775:7|All reachable assignments to rdcnt_r(5) are '0'; removing register. To preserve a constant register, use the syn_preserve attribute.
+@W: CL111 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":775:6:775:7|All reachable assignments to underflow_r are '0'; removing register. To preserve a constant register, use the syn_preserve attribute.
+Finished optimization stage 1 on mezz_fifo_mezz_fifo_0_corefifo_async (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Post processing for work.mezz_fifo_mezz_fifo_0_corefifo.translated
+Running optimization stage 1 on mezz_fifo_mezz_fifo_0_COREFIFO .......
+@W: CL240 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":532:10:532:24|Signal DB_DETECT_xhdl1 is floating; a simulation mismatch is possible.
+@W: CL240 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":530:10:530:25|Signal SB_CORRECT_xhdl1 is floating; a simulation mismatch is possible.
+@W: CL240 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":527:10:527:25|Signal temp_B_DB_DETECT is floating; a simulation mismatch is possible.
+@W: CL240 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":526:10:526:25|Signal temp_A_DB_DETECT is floating; a simulation mismatch is possible.
+@W: CL240 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":525:10:525:26|Signal temp_B_SB_CORRECT is floating; a simulation mismatch is possible.
+@W: CL240 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":524:10:524:26|Signal temp_A_SB_CORRECT is floating; a simulation mismatch is possible.
+@W: CL240 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":445:10:445:25|Signal DVLD_xhdl10_sync is floating; a simulation mismatch is possible.
+@W: CL240 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":444:10:444:26|Signal DVLD_xhdl10_scntr is floating; a simulation mismatch is possible.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":1240:6:1240:7|Pruning unused register RDATA_ext_r1_2(3 downto 0). Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":1226:6:1226:7|Pruning unused register RDATA_ext_r_2(3 downto 0). Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":1142:6:1142:7|Pruning unused register re_pulse_d3_3. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":1142:6:1142:7|Pruning unused register re_pulse_d2_3. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":1142:6:1142:7|Pruning unused register RE_d3_3. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":1142:6:1142:7|Pruning unused register RE_d2_3. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":1142:6:1142:7|Pruning unused register REN_d3_3. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":1142:6:1142:7|Pruning unused register REN_d2_3. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":1129:6:1129:7|Pruning unused register fwft_Q_r_2(3 downto 0). Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":1114:6:1114:7|Pruning unused register RDATA_r2_2(3 downto 0). Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":1100:6:1100:7|Pruning unused register RDATA_r1_2(3 downto 0). Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":1087:6:1087:7|Pruning unused register RDATA_r_pre_3(3 downto 0). Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":1042:6:1042:7|Pruning unused register AEMPTY1_r1_3. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":1042:6:1042:7|Pruning unused register AEMPTY1_r_3. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":642:6:642:7|Pruning unused register DVLD_scntr_ecc_3. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":642:6:642:7|Pruning unused register DVLD_sync_ecc_3. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":642:6:642:7|Pruning unused register DVLD_async_ecc_4. Make sure that there are no unused intermediate registers.
+Finished optimization stage 1 on mezz_fifo_mezz_fifo_0_COREFIFO (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Post processing for work.mezz_fifo.rtl
+Running optimization stage 1 on mezz_fifo .......
+Finished optimization stage 1 on mezz_fifo (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Running optimization stage 2 on mezz_fifo_mezz_fifo_0_corefifo_doubleSync_0_5 .......
+Finished optimization stage 2 on mezz_fifo_mezz_fifo_0_corefifo_doubleSync_0_5 (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 100MB)
+Running optimization stage 2 on mezz_fifo_mezz_fifo_0_corefifo_grayToBinConv_5 .......
+Finished optimization stage 2 on mezz_fifo_mezz_fifo_0_corefifo_grayToBinConv_5 (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 100MB)
+Running optimization stage 2 on mezz_fifo_mezz_fifo_0_corefifo_async_4_5_32_4_5_32_5_5_0_0_1_1_1_0_1_0_0_0_1_60_7_1_1_1_1_0_0_0_0_0 .......
+@N: CL159 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":81:6:81:11|Input re_top is unused.
+Finished optimization stage 2 on mezz_fifo_mezz_fifo_0_corefifo_async_4_5_32_4_5_32_5_5_0_0_1_1_1_0_1_0_0_0_1_60_7_1_1_1_1_0_0_0_0_0 (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 101MB)
+Running optimization stage 2 on mezz_fifo_mezz_fifo_0_USRAM_top .......
+Finished optimization stage 2 on mezz_fifo_mezz_fifo_0_USRAM_top (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 101MB)
+Running optimization stage 2 on mezz_fifo_mezz_fifo_0_ram_wrapper_4_4_5_5_0_3_1 .......
+@N: CL159 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_mezz_fifo_0_ram_wrapper.vhd":24:4:24:8|Input CLOCK is unused.
+Finished optimization stage 2 on mezz_fifo_mezz_fifo_0_ram_wrapper_4_4_5_5_0_3_1 (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 101MB)
+Running optimization stage 2 on mezz_fifo_mezz_fifo_0_COREFIFO_24_0_1_1_0_0_4_4_32_32_1_0_3_1_1_1_0_7_60_1_0_0_0_1_0_0_0_0 .......
+@N: CL159 :"C:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_COREFIFO.vhd":109:6:109:10|Input MEMRD is unused.
+Finished optimization stage 2 on mezz_fifo_mezz_fifo_0_COREFIFO_24_0_1_1_0_0_4_4_32_32_1_0_3_1_1_1_0_7_60_1_0_0_0_1_0_0_0_0 (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 101MB)
+Running optimization stage 2 on mezz_fifo .......
+Finished optimization stage 2 on mezz_fifo (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 101MB)
+
+For a summary of runtime per design unit, please see file:
+==========================================================
+@L: C:\repo1\gpb\stn\fpga_hw\synthesis\synwork\layer0.duruntime
+
+
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 99MB peak: 101MB)
+
+
+Process completed successfully.
+# Sat Aug 16 12:19:46 2025
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-3
+Install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: LAPTOP-6FQD1N4B
+
+Implementation : synthesis
+Synopsys Synopsys Netlist Linker, Version comp202309synp1, Build 307R, Built Jul 25 2024 08:18:25, @
+
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 93MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sat Aug 16 12:19:47 2025
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: C:\repo1\gpb\stn\fpga_hw\synthesis\synwork\mezz_fifo_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:02s; Memory used current: 24MB peak: 25MB)
+
+Process took 0h:00m:05s realtime, 0h:00m:02s cputime
+
+Process completed successfully.
+# Sat Aug 16 12:19:47 2025
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-3
+Install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: LAPTOP-6FQD1N4B
+
+Implementation : synthesis
+Synopsys Synopsys Netlist Linker, Version comp202309synp1, Build 307R, Built Jul 25 2024 08:18:25, @
+
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 93MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sat Aug 16 12:19:49 2025
+
+###########################################################]
+Premap Report
+
+# Sat Aug 16 12:19:50 2025
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-3
+Install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: LAPTOP-6FQD1N4B
+
+Implementation : synthesis
+Synopsys Microchip Technology Pre-mapping, Version map202309actp1, Build 008R, Built Jul 25 2024 08:49:59, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 185MB peak: 185MB)
+
+
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 190MB peak: 200MB)
+
+Reading constraint file: C:\repo1\gpb\stn\fpga_hw\designer\mezz_fifo\synthesis.fdc
+@L: C:\repo1\gpb\stn\fpga_hw\synthesis\mezz_fifo_scck.rpt 
+See clock summary report "C:\repo1\gpb\stn\fpga_hw\synthesis\mezz_fifo_scck.rpt"
+@N: MF472 |Synthesis running in Automatic Compile Point mode
+@N: MF474 |No compile point is identified in Automatic Compile Point mode
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 193MB peak: 200MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 193MB peak: 200MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 195MB peak: 200MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 195MB peak: 200MB)
+
+
+Vector Gate Optimization Enabled: Optimizing  Partial Hanging Logic. 
+NConnInternalConnection caching is on
+
+Starting HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 250MB peak: 250MB)
+
+
+Finished HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 250MB peak: 251MB)
+
+
+Started DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 250MB peak: 251MB)
+
+
+Finished DisTri Cleanup (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 250MB peak: 251MB)
+
+@N: BN362 :"c:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":844:6:844:7|Removing sequential instance afull_r (in view: work.mezz_fifo_mezz_fifo_0_corefifo_async_4_5_32_4_5_32_5_5_0_0_1_1_1_0_1_0_0_0_1_60_7_1_1_1_1_0_0_0_0_0(translated)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: FP130 |Promoting Net RCLOCK on CLKINT  I_1 
+@N: FP130 |Promoting Net WCLOCK on CLKINT  I_2 
+@N: FX1184 |Applying syn_allowed_resources blockrams=160 on top level netlist mezz_fifo 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 252MB peak: 252MB)
+
+
+
+Clock Summary
+******************
+
+          Start                Requested     Requested     Clock        Clock               Clock
+Level     Clock                Frequency     Period        Type         Group               Load 
+-------------------------------------------------------------------------------------------------
+0 -       System               100.0 MHz     10.000        system       system_clkgroup     0    
+                                                                                                 
+0 -       mezz_fifo|RCLOCK     100.0 MHz     10.000        inferred     (multiple)          48   
+                                                                                                 
+0 -       mezz_fifo|WCLOCK     100.0 MHz     10.000        inferred     (multiple)          37   
+=================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                     Clock     Source           Clock Pin                                                                                        Non-clock Pin     Non-clock Pin
+Clock                Load      Pin              Seq Example                                                                                      Seq Example       Comb Example 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System               0         -                -                                                                                                -                 -            
+                                                                                                                                                                                
+mezz_fifo|RCLOCK     48        RCLOCK(port)     mezz_fifo_0.REN_d1.C                                                                             -                 I_1.A(CLKINT)
+                                                                                                                                                                                
+mezz_fifo|WCLOCK     37        WCLOCK(port)     mezz_fifo_0.RW1\.UI_ram_wrapper_1.U2_asyncnonpipe.mezz_fifo_mezz_fifo_0_USRAM_top_R0C0.C_CLK     -                 I_2.A(CLKINT)
+================================================================================================================================================================================
+
+@W: MT530 :"c:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_doublesync.vhd":84:6:84:7|Found inferred clock mezz_fifo|RCLOCK which controls 48 sequential elements including mezz_fifo_0.L31\.U_corefifo_async.Wr_corefifo_doubleSync.sync_out_xhdl1[5:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_doublesync.vhd":84:6:84:7|Found inferred clock mezz_fifo|WCLOCK which controls 37 sequential elements including mezz_fifo_0.L31\.U_corefifo_async.Rd_corefifo_doubleSync.sync_out_xhdl1[5:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file C:\repo1\gpb\stn\fpga_hw\synthesis\mezz_fifo.sap.
+
+Starting constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 253MB peak: 253MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 253MB peak: 253MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 164MB peak: 254MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Aug 16 12:19:51 2025
+
+###########################################################]
+Map & Optimize Report
+
+# Sat Aug 16 12:19:52 2025
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09M-3
+Install: C:\Microchip\Libero_SoC_v2024.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: LAPTOP-6FQD1N4B
+
+Implementation : synthesis
+Synopsys Microchip Technology Mapper, Version map202309actp1, Build 008R, Built Jul 25 2024 08:49:59, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 185MB peak: 185MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 188MB peak: 200MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 188MB peak: 200MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 190MB peak: 200MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 191MB peak: 200MB)
+
+
+Vector Gate Optimization Enabled: Optimizing  Partial Hanging Logic. 
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 248MB peak: 248MB)
+
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 252MB peak: 252MB)
+
+@N: MO231 :"c:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":910:6:910:7|Found counter in view:work.mezz_fifo_mezz_fifo_0_corefifo_async_4_5_32_4_5_32_5_5_0_0_1_1_1_0_1_0_0_0_1_60_7_1_1_1_1_0_0_0_0_0(translated) instance memraddr_r[4:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":888:6:888:7|Found counter in view:work.mezz_fifo_mezz_fifo_0_corefifo_async_4_5_32_4_5_32_5_5_0_0_1_1_1_0_1_0_0_0_1_60_7_1_1_1_1_0_0_0_0_0(translated) instance memwaddr_r[4:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":730:6:730:7|Found counter in view:work.mezz_fifo_mezz_fifo_0_corefifo_async_4_5_32_4_5_32_5_5_0_0_1_1_1_0_1_0_0_0_1_60_7_1_1_1_1_0_0_0_0_0(translated) instance rptr[5:0] 
+@N: MO231 :"c:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":706:6:706:7|Found counter in view:work.mezz_fifo_mezz_fifo_0_corefifo_async_4_5_32_4_5_32_5_5_0_0_1_1_1_0_1_0_0_0_1_60_7_1_1_1_1_0_0_0_0_0(translated) instance wptr[5:0] 
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 252MB peak: 253MB)
+
+@W: BN132 :"c:\repo1\gpb\stn\fpga_hw\hdl\mezz_fifo_corefifo_async.vhd":775:6:775:7|Removing instance mezz_fifo_0.L31.U_corefifo_async.dvld_r because it is equivalent to instance mezz_fifo_0.REN_d1. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 253MB peak: 253MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+NConnInternalConnection caching is on
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 254MB peak: 254MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 254MB peak: 255MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:01s; Memory used current: 254MB peak: 255MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 254MB peak: 255MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 254MB peak: 255MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 255MB peak: 255MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:01s		     5.48ns		  76 /        81
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 255MB peak: 256MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 255MB peak: 256MB)
+
+
+Starting CDBProcessSetClockGroups... (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 256MB peak: 256MB)
+
+
+Finished with CDBProcessSetClockGroups (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 256MB peak: 256MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 207MB peak: 256MB)
+
+Writing Analyst data base C:\repo1\gpb\stn\fpga_hw\synthesis\synwork\mezz_fifo_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 256MB peak: 256MB)
+
+Writing Verilog Simulation files
+@N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
+@N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
+@W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
+@W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
+
+Finished Writing Verilog Simulation files (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 257MB peak: 257MB)
+
+
+Finished Writing Netlists (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 257MB peak: 258MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 256MB peak: 258MB)
+
+@W: MT420 |Found inferred clock mezz_fifo|RCLOCK with period 10.00ns. Please declare a user-defined clock on port RCLOCK.
+@W: MT420 |Found inferred clock mezz_fifo|WCLOCK with period 10.00ns. Please declare a user-defined clock on port WCLOCK.
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Sat Aug 16 12:19:55 2025
+#
+
+
+Top view:               mezz_fifo
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    C:\repo1\gpb\stn\fpga_hw\designer\mezz_fifo\synthesis.fdc
+                       
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: 7.045
+
+                     Requested     Estimated      Requested     Estimated               Clock        Clock          
+Starting Clock       Frequency     Frequency      Period        Period        Slack     Type         Group          
+--------------------------------------------------------------------------------------------------------------------
+mezz_fifo|RCLOCK     100.0 MHz     338.4 MHz      10.000        2.955         7.045     inferred     (multiple)     
+mezz_fifo|WCLOCK     100.0 MHz     373.2 MHz      10.000        2.679         7.321     inferred     (multiple)     
+System               100.0 MHz     6835.3 MHz     10.000        0.146         9.854     system       system_clkgroup
+====================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                              |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------------------------
+Starting          Ending            |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+--------------------------------------------------------------------------------------------------------------------------
+System            mezz_fifo|RCLOCK  |  10.000      9.854  |  No paths    -      |  No paths    -      |  No paths    -    
+mezz_fifo|RCLOCK  System            |  10.000      7.388  |  No paths    -      |  No paths    -      |  No paths    -    
+mezz_fifo|RCLOCK  mezz_fifo|RCLOCK  |  10.000      7.045  |  No paths    -      |  No paths    -      |  No paths    -    
+mezz_fifo|RCLOCK  mezz_fifo|WCLOCK  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+mezz_fifo|WCLOCK  System            |  10.000      7.451  |  No paths    -      |  No paths    -      |  No paths    -    
+mezz_fifo|WCLOCK  mezz_fifo|RCLOCK  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+mezz_fifo|WCLOCK  mezz_fifo|WCLOCK  |  10.000      7.321  |  No paths    -      |  No paths    -      |  No paths    -    
+==========================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: mezz_fifo|RCLOCK
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                        Starting                                                    Arrival          
+Instance                                                Reference            Type     Pin     Net                   Time        Slack
+                                                        Clock                                                                        
+-------------------------------------------------------------------------------------------------------------------------------------
+mezz_fifo_0.L31\.U_corefifo_async.rptr[0]               mezz_fifo|RCLOCK     SLE      Q       rptr[0]               0.257       7.045
+mezz_fifo_0.L31\.U_corefifo_async.rptr[1]               mezz_fifo|RCLOCK     SLE      Q       rptr[1]               0.257       7.054
+mezz_fifo_0.L31\.U_corefifo_async.rptr[2]               mezz_fifo|RCLOCK     SLE      Q       rptr[2]               0.257       7.064
+mezz_fifo_0.L31\.U_corefifo_async.rptr[3]               mezz_fifo|RCLOCK     SLE      Q       rptr[3]               0.257       7.073
+mezz_fifo_0.L31\.U_corefifo_async.rptr[4]               mezz_fifo|RCLOCK     SLE      Q       rptr[4]               0.257       7.083
+mezz_fifo_0.L31\.U_corefifo_async.empty_r               mezz_fifo|RCLOCK     SLE      Q       EMPTY_c               0.237       7.258
+mezz_fifo_0.L31\.U_corefifo_async.rptr[5]               mezz_fifo|RCLOCK     SLE      Q       rptr[5]               0.257       7.596
+mezz_fifo_0.L31\.U_corefifo_async.wptr_bin_sync2[0]     mezz_fifo|RCLOCK     SLE      Q       rdiff_bus             0.257       7.621
+mezz_fifo_0.L31\.U_corefifo_async.wptr_bin_sync2[1]     mezz_fifo|RCLOCK     SLE      Q       wptr_bin_sync2[1]     0.257       7.631
+mezz_fifo_0.L31\.U_corefifo_async.wptr_bin_sync2[2]     mezz_fifo|RCLOCK     SLE      Q       wptr_bin_sync2[2]     0.257       7.640
+=====================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                    Starting                                            Required          
+Instance                                            Reference            Type     Pin     Net           Time         Slack
+                                                    Clock                                                                 
+--------------------------------------------------------------------------------------------------------------------------
+mezz_fifo_0.L31\.U_corefifo_async.empty_r           mezz_fifo|RCLOCK     SLE      D       empty_r_3     10.000       7.045
+mezz_fifo_0.L31\.U_corefifo_async.aempty_r          mezz_fifo|RCLOCK     SLE      EN      N_10          9.850        7.058
+mezz_fifo_0.L31\.U_corefifo_async.aempty_r          mezz_fifo|RCLOCK     SLE      D       N_18_i        10.000       7.146
+mezz_fifo_0.L31\.U_corefifo_async.memraddr_r[0]     mezz_fifo|RCLOCK     SLE      EN      N_14_i        9.850        7.258
+mezz_fifo_0.L31\.U_corefifo_async.memraddr_r[1]     mezz_fifo|RCLOCK     SLE      EN      N_14_i        9.850        7.258
+mezz_fifo_0.L31\.U_corefifo_async.memraddr_r[2]     mezz_fifo|RCLOCK     SLE      EN      N_14_i        9.850        7.258
+mezz_fifo_0.L31\.U_corefifo_async.memraddr_r[3]     mezz_fifo|RCLOCK     SLE      EN      N_14_i        9.850        7.258
+mezz_fifo_0.L31\.U_corefifo_async.memraddr_r[4]     mezz_fifo|RCLOCK     SLE      EN      N_14_i        9.850        7.258
+mezz_fifo_0.L31\.U_corefifo_async.rptr[0]           mezz_fifo|RCLOCK     SLE      EN      N_14_i        9.850        7.258
+mezz_fifo_0.L31\.U_corefifo_async.rptr[1]           mezz_fifo|RCLOCK     SLE      EN      N_14_i        9.850        7.258
+==========================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         10.000
+
+    - Propagation time:                      2.955
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     7.045
+
+    Number of logic level(s):                8
+    Starting point:                          mezz_fifo_0.L31\.U_corefifo_async.rptr[0] / Q
+    Ending point:                            mezz_fifo_0.L31\.U_corefifo_async.empty_r / D
+    The start point is clocked by            mezz_fifo|RCLOCK [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
+    The end   point is clocked by            mezz_fifo|RCLOCK [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
+
+Instance / Net                                                                       Pin      Pin               Arrival     No. of    
+Name                                                                        Type     Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------------------
+mezz_fifo_0.L31\.U_corefifo_async.rptr[0]                                   SLE      Q        Out     0.257     0.257 r     -         
+rptr[0]                                                                     Net      -        -       0.665     -           4         
+mezz_fifo_0.L31\.U_corefifo_async.rdiff_bus_cry_0                           ARI1     B        In      -         0.922 r     -         
+mezz_fifo_0.L31\.U_corefifo_async.rdiff_bus_cry_0                           ARI1     FCO      Out     0.387     1.309 f     -         
+rdiff_bus_cry_0                                                             Net      -        -       0.000     -           1         
+mezz_fifo_0.L31\.U_corefifo_async.rdiff_bus_cry_1                           ARI1     FCI      In      -         1.309 f     -         
+mezz_fifo_0.L31\.U_corefifo_async.rdiff_bus_cry_1                           ARI1     FCO      Out     0.009     1.319 f     -         
+rdiff_bus_cry_1                                                             Net      -        -       0.000     -           1         
+mezz_fifo_0.L31\.U_corefifo_async.rdiff_bus_cry_2                           ARI1     FCI      In      -         1.319 f     -         
+mezz_fifo_0.L31\.U_corefifo_async.rdiff_bus_cry_2                           ARI1     FCO      Out     0.009     1.328 f     -         
+rdiff_bus_cry_2                                                             Net      -        -       0.000     -           1         
+mezz_fifo_0.L31\.U_corefifo_async.rdiff_bus_cry_3                           ARI1     FCI      In      -         1.328 f     -         
+mezz_fifo_0.L31\.U_corefifo_async.rdiff_bus_cry_3                           ARI1     FCO      Out     0.009     1.337 f     -         
+rdiff_bus_cry_3                                                             Net      -        -       0.000     -           1         
+mezz_fifo_0.L31\.U_corefifo_async.rdiff_bus_cry_4                           ARI1     FCI      In      -         1.337 f     -         
+mezz_fifo_0.L31\.U_corefifo_async.rdiff_bus_cry_4                           ARI1     FCO      Out     0.009     1.347 f     -         
+rdiff_bus_cry_4                                                             Net      -        -       0.000     -           1         
+mezz_fifo_0.L31\.U_corefifo_async.rdiff_bus_s_5                             ARI1     FCI      In      -         1.347 f     -         
+mezz_fifo_0.L31\.U_corefifo_async.rdiff_bus_s_5                             ARI1     S        Out     0.354     1.701 r     -         
+rdiff_bus[5]                                                                Net      -        -       0.139     -           1         
+mezz_fifo_0.L31\.U_corefifo_async.almostemptyi_assert_sig_1_sqmuxa_i_o2     CFG3     C        In      -         1.840 r     -         
+mezz_fifo_0.L31\.U_corefifo_async.almostemptyi_assert_sig_1_sqmuxa_i_o2     CFG3     Y        Out     0.175     2.015 r     -         
+N_13                                                                        Net      -        -       0.645     -           3         
+mezz_fifo_0.L31\.U_corefifo_async.L1\.empty_r_3_0_a2                        CFG4     C        In      -         2.660 r     -         
+mezz_fifo_0.L31\.U_corefifo_async.L1\.empty_r_3_0_a2                        CFG4     Y        Out     0.156     2.816 f     -         
+empty_r_3                                                                   Net      -        -       0.139     -           1         
+mezz_fifo_0.L31\.U_corefifo_async.empty_r                                   SLE      D        In      -         2.955 f     -         
+======================================================================================================================================
+Total path delay (propagation time + setup) of 2.955 is 1.367(46.2%) logic and 1.589(53.8%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: mezz_fifo|WCLOCK
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                                               Starting                                                    Arrival          
+Instance                                                                       Reference            Type     Pin     Net                   Time        Slack
+                                                                               Clock                                                                        
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+mezz_fifo_0.L31\.U_corefifo_async.full_r                                       mezz_fifo|WCLOCK     SLE      Q       FULL_c                0.237       7.321
+mezz_fifo_0.L31\.U_corefifo_async.wptr[1]                                      mezz_fifo|WCLOCK     SLE      Q       wptr[1]               0.257       7.774
+mezz_fifo_0.L31\.U_corefifo_async.wptr[0]                                      mezz_fifo|WCLOCK     SLE      Q       wptr[0]               0.257       7.784
+mezz_fifo_0.L31\.U_corefifo_async.wptr[2]                                      mezz_fifo|WCLOCK     SLE      Q       wptr[2]               0.257       7.873
+mezz_fifo_0.L31\.U_corefifo_async.wptr[3]                                      mezz_fifo|WCLOCK     SLE      Q       wptr[3]               0.257       7.883
+mezz_fifo_0.L31\.U_corefifo_async.memwaddr_r[1]                                mezz_fifo|WCLOCK     SLE      Q       fifo_MEMWADDR[1]      0.257       7.974
+mezz_fifo_0.L31\.U_corefifo_async.memwaddr_r[0]                                mezz_fifo|WCLOCK     SLE      Q       fifo_MEMWADDR[0]      0.257       8.012
+mezz_fifo_0.L31\.U_corefifo_async.Rd_corefifo_doubleSync.sync_out_xhdl1[5]     mezz_fifo|WCLOCK     SLE      Q       rptr_bin_sync[5]      0.257       8.015
+mezz_fifo_0.L31\.U_corefifo_async.wptr[4]                                      mezz_fifo|WCLOCK     SLE      Q       wptr[4]               0.257       8.049
+mezz_fifo_0.L31\.U_corefifo_async.Rd_corefifo_doubleSync.sync_out_xhdl1[4]     mezz_fifo|WCLOCK     SLE      Q       rptr_gray_sync[4]     0.257       8.078
+============================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                                                           Starting                                                   Required          
+Instance                                                                                   Reference            Type         Pin       Net            Time         Slack
+                                                                                           Clock                                                                        
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+mezz_fifo_0.L31\.U_corefifo_async.memwaddr_r[0]                                            mezz_fifo|WCLOCK     SLE          EN        fifo_MEMWE     9.850        7.321
+mezz_fifo_0.L31\.U_corefifo_async.memwaddr_r[1]                                            mezz_fifo|WCLOCK     SLE          EN        fifo_MEMWE     9.850        7.321
+mezz_fifo_0.L31\.U_corefifo_async.memwaddr_r[2]                                            mezz_fifo|WCLOCK     SLE          EN        fifo_MEMWE     9.850        7.321
+mezz_fifo_0.L31\.U_corefifo_async.memwaddr_r[3]                                            mezz_fifo|WCLOCK     SLE          EN        fifo_MEMWE     9.850        7.321
+mezz_fifo_0.L31\.U_corefifo_async.memwaddr_r[4]                                            mezz_fifo|WCLOCK     SLE          EN        fifo_MEMWE     9.850        7.321
+mezz_fifo_0.RW1\.UI_ram_wrapper_1.U2_asyncnonpipe.mezz_fifo_mezz_fifo_0_USRAM_top_R0C0     mezz_fifo|WCLOCK     RAM64x18     C_WEN     fifo_MEMWE     10.000       7.451
+mezz_fifo_0.RW1\.UI_ram_wrapper_1.U2_asyncnonpipe.mezz_fifo_mezz_fifo_0_USRAM_top_R0C0     mezz_fifo|WCLOCK     RAM64x18     C_WEN     fifo_MEMWE     10.000       7.451
+mezz_fifo_0.L31\.U_corefifo_async.wptr[5]                                                  mezz_fifo|WCLOCK     SLE          D         wptr_s[5]      10.000       7.697
+mezz_fifo_0.L31\.U_corefifo_async.wptr[4]                                                  mezz_fifo|WCLOCK     SLE          D         wptr_s[4]      10.000       7.706
+mezz_fifo_0.L31\.U_corefifo_async.wptr[3]                                                  mezz_fifo|WCLOCK     SLE          D         wptr_s[3]      10.000       7.716
+========================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.150
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.850
+
+    - Propagation time:                      2.530
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 7.321
+
+    Number of logic level(s):                1
+    Starting point:                          mezz_fifo_0.L31\.U_corefifo_async.full_r / Q
+    Ending point:                            mezz_fifo_0.L31\.U_corefifo_async.memwaddr_r[0] / EN
+    The start point is clocked by            mezz_fifo|WCLOCK [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
+    The end   point is clocked by            mezz_fifo|WCLOCK [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
+
+Instance / Net                                               Pin      Pin               Arrival     No. of    
+Name                                                Type     Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------
+mezz_fifo_0.L31\.U_corefifo_async.full_r            SLE      Q        Out     0.237     0.237 f     -         
+FULL_c                                              Net      -        -       1.119     -           3         
+mezz_fifo_0.L31\.U_corefifo_async.memwe             CFG2     A        In      -         1.355 f     -         
+mezz_fifo_0.L31\.U_corefifo_async.memwe             CFG2     Y        Out     0.056     1.411 r     -         
+fifo_MEMWE                                          Net      -        -       1.119     -           6         
+mezz_fifo_0.L31\.U_corefifo_async.memwaddr_r[0]     SLE      EN       In      -         2.530 r     -         
+==============================================================================================================
+Total path delay (propagation time + setup) of 2.679 is 0.442(16.5%) logic and 2.237(83.5%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                                                           Starting                                                  Arrival          
+Instance                                                                                   Reference     Type         Pin           Net              Time        Slack
+                                                                                           Clock                                                                      
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+mezz_fifo_0.RW1\.UI_ram_wrapper_1.U2_asyncnonpipe.mezz_fifo_mezz_fifo_0_USRAM_top_R0C0     System        RAM64x18     A_DOUT[0]     RDATA_int[0]     0.000       9.854
+mezz_fifo_0.RW1\.UI_ram_wrapper_1.U2_asyncnonpipe.mezz_fifo_mezz_fifo_0_USRAM_top_R0C0     System        RAM64x18     A_DOUT[0]     RDATA_int[0]     0.000       9.854
+mezz_fifo_0.RW1\.UI_ram_wrapper_1.U2_asyncnonpipe.mezz_fifo_mezz_fifo_0_USRAM_top_R0C0     System        RAM64x18     A_DOUT[1]     RDATA_int[1]     0.000       9.854
+mezz_fifo_0.RW1\.UI_ram_wrapper_1.U2_asyncnonpipe.mezz_fifo_mezz_fifo_0_USRAM_top_R0C0     System        RAM64x18     A_DOUT[1]     RDATA_int[1]     0.000       9.854
+mezz_fifo_0.RW1\.UI_ram_wrapper_1.U2_asyncnonpipe.mezz_fifo_mezz_fifo_0_USRAM_top_R0C0     System        RAM64x18     A_DOUT[2]     RDATA_int[2]     0.000       9.854
+mezz_fifo_0.RW1\.UI_ram_wrapper_1.U2_asyncnonpipe.mezz_fifo_mezz_fifo_0_USRAM_top_R0C0     System        RAM64x18     A_DOUT[2]     RDATA_int[2]     0.000       9.854
+mezz_fifo_0.RW1\.UI_ram_wrapper_1.U2_asyncnonpipe.mezz_fifo_mezz_fifo_0_USRAM_top_R0C0     System        RAM64x18     A_DOUT[3]     RDATA_int[3]     0.000       9.854
+mezz_fifo_0.RW1\.UI_ram_wrapper_1.U2_asyncnonpipe.mezz_fifo_mezz_fifo_0_USRAM_top_R0C0     System        RAM64x18     A_DOUT[3]     RDATA_int[3]     0.000       9.854
+======================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                           Starting                                        Required          
+Instance                   Reference     Type     Pin     Net              Time         Slack
+                           Clock                                                             
+---------------------------------------------------------------------------------------------
+mezz_fifo_0.RDATA_r[0]     System        SLE      D       RDATA_int[0]     10.000       9.854
+mezz_fifo_0.RDATA_r[1]     System        SLE      D       RDATA_int[1]     10.000       9.854
+mezz_fifo_0.RDATA_r[2]     System        SLE      D       RDATA_int[2]     10.000       9.854
+mezz_fifo_0.RDATA_r[3]     System        SLE      D       RDATA_int[3]     10.000       9.854
+=============================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         10.000
+
+    - Propagation time:                      0.146
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 9.854
+
+    Number of logic level(s):                0
+    Starting point:                          mezz_fifo_0.RW1\.UI_ram_wrapper_1.U2_asyncnonpipe.mezz_fifo_mezz_fifo_0_USRAM_top_R0C0 / A_DOUT[0]
+    Ending point:                            mezz_fifo_0.RDATA_r[0] / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            mezz_fifo|RCLOCK [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
+
+Instance / Net                                                                                          Pin           Pin               Arrival     No. of    
+Name                                                                                       Type         Name          Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+mezz_fifo_0.RW1\.UI_ram_wrapper_1.U2_asyncnonpipe.mezz_fifo_mezz_fifo_0_USRAM_top_R0C0     RAM64x18     A_DOUT[0]     Out     0.000     0.000 r     -         
+RDATA_int[0]                                                                               Net          -             -       0.146     -           2         
+mezz_fifo_0.RDATA_r[0]                                                                     SLE          D             In      -         0.146 r     -         
+==============================================================================================================================================================
+Total path delay (propagation time + setup) of 0.146 is 0.000(0.0%) logic and 0.146(100.0%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+
+Finished final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 257MB peak: 258MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 257MB peak: 258MB)
+
+---------------------------------------
+Resource Usage Report for mezz_fifo 
+
+Mapping to part: mpf050tfcvg484std
+Cell usage:
+CLKINT          2 uses
+INV             4 uses
+RAM64x18        1 use
+CFG1           4 uses
+CFG2           22 uses
+CFG3           11 uses
+CFG4           14 uses
+
+Carry cells:
+ARI1            25 uses - used for arithmetic functions
+
+
+Sequential Cells: 
+SLE            81 uses
+
+DSP Blocks:    0 of 150 (0%)
+
+I/O ports: 17
+I/O primitives: 17
+INBUF          9 uses
+OUTBUF         8 uses
+
+
+Global Clock Buffers: 2
+
+Total LUTs:    76
+
+Extra resources required for RAM and MACC_PA interface logic during P&R:
+
+RAM64X12 Interface Logic : SLEs = 0; LUTs = 0;
+RAM1K20  Interface Logic : SLEs = 0; LUTs = 0;
+MACC_PA     Interface Logic : SLEs = 0; LUTs = 0;
+MACC_PA_BC_ROM     Interface Logic : SLEs = 0; LUTs = 0;
+
+Total number of SLEs after P&R:  81 + 0 + 0 + 0 = 81;
+Total number of LUTs after P&R:  76 + 0 + 0 + 0 = 76;
+
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 127MB peak: 258MB)
+
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+# Sat Aug 16 12:19:55 2025
+
+###########################################################]

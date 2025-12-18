@@ -1,0 +1,34 @@
+Detailed Resource Usage
+Module Name,Fabric 4LUT,Fabric DFF,Interface 4LUT,Interface DFF,Single-Ended I/O,uSRAM (64x12),Chip Globals
+Primitives/Primitives,7,5,0,0,140,0,4
+adder_decode_0/Primitives,174,8,0,0,0,0,0
+app_if_0/Primitives,2,26,0,0,0,0,0
+clkgen_25mhz/Primitives,24,17,0,0,0,0,1
+clkgen_2khz/Primitives,23,17,0,0,0,0,1
+eeprom_0/Primitives,413,342,0,0,0,0,0
+eeprom_0/eeprom_if_0/Primitives,705,601,0,0,0,0,0
+gpio_0/Primitives,87,139,0,0,0,0,0
+oscillator_counter_0/Primitives,42,51,0,0,0,0,0
+oscillator_counter_0/opb_fifo_inst/Primitives,16,24,0,0,0,0,0
+oscillator_counter_1/Primitives,42,51,0,0,0,0,0
+oscillator_counter_1/opb_fifo_inst/Primitives,16,24,0,0,0,0,0
+phy_if_0/Primitives,724,233,0,0,0,0,0
+phy_if_0/ctrl_pkg_transceiver_inst/Primitives,252,292,0,0,0,0,0
+phy_if_0/opb_fifo_inst/Primitives,27,24,0,0,0,0,0
+phy_if_0/opb_fifo_inst/mem_mem_0_0/Primitives,0,0,12,12,0,1,0
+phy_if_0/opb_fifo_inst/mem_mem_0_1/Primitives,0,0,12,12,0,1,0
+phy_if_0/phy_ctrl_rmii_inst/Primitives,0,12,0,0,0,0,0
+phy_if_0/serial_mii_inst/Primitives,67,87,0,0,0,0,0
+scratch_pad_register_0/Primitives,54,96,0,0,0,0,0
+u_clkgen/Primitives,64,80,0,0,0,0,0
+u_clkgen/pulse2khz_div/Primitives,43,17,0,0,0,0,1
+u_cmd_server/cmn_uart_inst/Primitives,69,50,0,0,0,0,0
+u_cmd_server/msg_buffer_inst/Primitives,1,1,0,0,0,0,0
+u_cmd_server/msg_buffer_inst/rx_fifo_inst/Primitives,28,40,0,0,0,0,0
+u_cmd_server/msg_buffer_inst/rx_fifo_inst/mem_mem_0_0/Primitives,0,0,12,12,0,1,0
+u_cmd_server/msg_buffer_inst/tx_fifo_inst/Primitives,23,40,0,0,0,0,0
+u_cmd_server/msg_buffer_inst/tx_fifo_inst/mem_mem_0_0/Primitives,0,0,12,12,0,1,0
+u_cmd_server/opb_emu_target_inst/Primitives,24,9,0,0,0,0,0
+u_cmd_server/opb_emu_target_inst/clkgen_1hz/Primitives,23,17,0,0,0,0,0
+u_cmd_server/opb_emu_target_inst/msg_read_inst/Primitives,130,99,0,0,0,0,0
+u_cmd_server/opb_emu_target_inst/msg_write_inst/Primitives,199,94,0,0,0,0,0

@@ -1,0 +1,9 @@
+n work RS422_TEST_IF verilog;
+av .compile_point_summary_status "Remapped";
+av .compile_point_summary_reason "Design changed";
+av .compile_point_update_model 1;
+av .compile_point_fast_synthesis "No";
+av .compile_point_cputime_used 6.89062;
+av .compile_point_starttime_stamp "Fri Sep  5 12:57:26 2025";
+av .compile_point_endtime_stamp "Fri Sep  5 12:57:33 2025";
+av .compile_point_realtime_used 7.033;

@@ -1,0 +1,12 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2024.2 (Version 2024.2.0.13)
+
+Date      :  Thu Jul 31 13:22:16 2025
+Project   :  C:\repo1\gpb\stn\fpga_app
+Component :  CORECAN_C0
+Family    :  PolarFire
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/repo1/gpb/stn/fpga_app/component/Microchip/DirectCore/CORECAN/2.0.100/rtl/core_encrypted/corecan.v
+    C:/repo1/gpb/stn/fpga_app/component/work/CORECAN_C0/CORECAN_C0.v
+
