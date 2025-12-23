@@ -1,4 +1,10 @@
 @N: CD231 :"C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\lib\vhd2008\std1164.vhd":889:16:889:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
+@N: Setting default value for generic debounce_time_ltoh to 8;
+@N: Setting default value for generic debounce_time_htol to 8;
+@N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":22:7:22:19|Synthesizing work.cmn_debouncer.rtl.
+Post processing for work.cmn_debouncer.rtl
+Running optimization stage 1 on work_cmn_debouncer_rtl_8_8_1_DEBOUNCE_TIME_LTOHDEBOUNCE_TIME_HTOL .......
+Finished optimization stage 1 on work_cmn_debouncer_rtl_8_8_1_DEBOUNCE_TIME_LTOHDEBOUNCE_TIME_HTOL (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
 @N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":24:7:24:13|Synthesizing work.cmn_pwm.rtl.
 @W: CD326 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":236:23:236:33|Port half_period_strobe of entity work.ph_pwm is unconnected. If a port needs to remain unconnected, use the keyword open.
 @W: CD638 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":63:14:63:19|Signal enable is undriven. Either assign the signal a value or remove the signal declaration.
@@ -14,11 +20,11 @@ Finished optimization stage 1 on CMN_DEADBAND (CPU Time 0h:00m:00s, Memory Used 
 @N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\PH_PWM.vhd":23:7:23:12|Synthesizing work.ph_pwm.behavioral.
 Post processing for work.ph_pwm.behavioral
 Running optimization stage 1 on PH_PWM .......
-Finished optimization stage 1 on PH_PWM (CPU Time 0h:00m:00s, Memory Used current: 96MB peak: 97MB)
+Finished optimization stage 1 on PH_PWM (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 97MB)
 @N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\SIMPLE_PH_PWM.vhd":5:7:5:19|Synthesizing work.simple_ph_pwm.behavioral.
 Post processing for work.simple_ph_pwm.behavioral
 Running optimization stage 1 on SIMPLE_PH_PWM .......
-Finished optimization stage 1 on SIMPLE_PH_PWM (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
+Finished optimization stage 1 on SIMPLE_PH_PWM (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 97MB)
 @N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":22:7:22:19|Synthesizing work.cmn_debouncer.rtl.
 Post processing for work.cmn_debouncer.rtl
 Running optimization stage 1 on cmn_debouncer .......
@@ -43,13 +49,13 @@ Post processing for work.cmn_uart.rtl
 Running optimization stage 1 on work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY .......
 @W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":353:6:353:7|Pruning unused register uart_rx_stop_count_1(31 downto 0). Make sure that there are no unused intermediate registers.
 @W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":222:6:222:7|Pruning unused register uart_tx_stop_count_2(31 downto 0). Make sure that there are no unused intermediate registers.
-Finished optimization stage 1 on work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 99MB)
-@N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd":28:7:28:22|Synthesizing work.serial_eeprom_if.rtl.
-@N: CD231 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd":53:34:53:35|Using onehot encoding for type eeprom_cycle_state_type. For example, enumeration idle is mapped to "100000000000".
-@N: CD604 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd":298:20:298:33|OTHERS clause is not synthesized.
-Post processing for work.serial_eeprom_if.rtl
-Running optimization stage 1 on serial_eeprom_if .......
-Finished optimization stage 1 on serial_eeprom_if (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Finished optimization stage 1 on work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+@N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if_v2.vhd":45:7:45:25|Synthesizing work.serial_eeprom_if_v2.rtl.
+@N: CD231 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if_v2.vhd":78:34:78:35|Using onehot encoding for type eeprom_cycle_state_type. For example, enumeration idle is mapped to "100000000000".
+@N: CD604 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if_v2.vhd":409:20:409:33|OTHERS clause is not synthesized.
+Post processing for work.serial_eeprom_if_v2.rtl
+Running optimization stage 1 on serial_eeprom_if_v2 .......
+Finished optimization stage 1 on serial_eeprom_if_v2 (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 115MB)
 @N: Setting default value for generic baud_rate to 115200;
 @N: Setting default value for generic clock_frequency to 100000000;
 @N: CD630 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":42:7:42:14|Synthesizing work.cmn_uart.rtl.
@@ -61,7 +67,7 @@ Post processing for work.cmn_uart.rtl
 Running optimization stage 1 on work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY .......
 @W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":353:6:353:7|Pruning unused register uart_rx_stop_count_1(31 downto 0). Make sure that there are no unused intermediate registers.
 @W: CL169 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":222:6:222:7|Pruning unused register uart_tx_stop_count_2(31 downto 0). Make sure that there are no unused intermediate registers.
-Finished optimization stage 1 on work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Finished optimization stage 1 on work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 115MB)
 Running optimization stage 2 on work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY .......
 @N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":353:6:353:7|Trying to extract state machine for register uart_rx_state.
 Extracted state machine for register uart_rx_state
@@ -81,11 +87,11 @@ State machine has 5 reachable states with original encodings of:
    10000
 @W: CL249 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":222:6:222:7|Initial value is not supported on state machine uart_tx_state
 @N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":67:12:67:22|Input uart_active is unused.
-Finished optimization stage 2 on work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
-Running optimization stage 2 on serial_eeprom_if .......
-@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd":100:10:100:11|Optimizing register bit bit_cntr(4) to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd":100:10:100:11|Pruning register bit 4 of bit_cntr(4 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd":100:10:100:11|Trying to extract state machine for register eeprom_cycle_state.
+Finished optimization stage 2 on work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 115MB)
+Running optimization stage 2 on serial_eeprom_if_v2 .......
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if_v2.vhd":129:10:129:11|Optimizing register bit bit_cntr(4) to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if_v2.vhd":129:10:129:11|Pruning register bit 4 of bit_cntr(4 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if_v2.vhd":129:10:129:11|Trying to extract state machine for register eeprom_cycle_state.
 Extracted state machine for register eeprom_cycle_state
 State machine has 12 reachable states with original encodings of:
    000000000001
@@ -100,9 +106,9 @@ State machine has 12 reachable states with original encodings of:
    001000000000
    010000000000
    100000000000
-@W: CL249 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd":100:10:100:11|Initial value is not supported on state machine eeprom_cycle_state
-@W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if.vhd":40:10:40:20|Input port bits 3 to 2 of eeprom_inst(3 downto 0) are unused. Assign logic for all port bits or change the input port size.
-Finished optimization stage 2 on serial_eeprom_if (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+@W: CL249 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if_v2.vhd":129:10:129:11|Initial value is not supported on state machine eeprom_cycle_state
+@W: CL246 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\serial_eeprom_if_v2.vhd":66:10:66:20|Input port bits 3 to 2 of eeprom_inst(3 downto 0) are unused. Assign logic for all port bits or change the input port size.
+Finished optimization stage 2 on serial_eeprom_if_v2 (CPU Time 0h:00m:01s, Memory Used current: 114MB peak: 140MB)
 Running optimization stage 2 on work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY .......
 @N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":353:6:353:7|Trying to extract state machine for register uart_rx_state.
 Extracted state machine for register uart_rx_state
@@ -122,7 +128,7 @@ State machine has 5 reachable states with original encodings of:
    10000
 @W: CL249 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":222:6:222:7|Initial value is not supported on state machine uart_tx_state
 @N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_uart.vhd":67:12:67:22|Input uart_active is unused.
-Finished optimization stage 2 on work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 100MB)
+Finished optimization stage 2 on work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY (CPU Time 0h:00m:00s, Memory Used current: 114MB peak: 140MB)
 Running optimization stage 2 on cmn_debouncer_8_8 .......
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Optimizing register bit debounce_cntr(31) to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Pruning register bit 31 of debounce_cntr(31 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
@@ -132,11 +138,11 @@ Running optimization stage 2 on cmn_debouncer_8_8 .......
 @W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Pruning register bit 29 of debounce_cntr(29 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
 @W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Optimizing register bit debounce_cntr(28) to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Pruning register bit 28 of debounce_cntr(28 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-Finished optimization stage 2 on cmn_debouncer_8_8 (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 103MB)
+Finished optimization stage 2 on cmn_debouncer_8_8 (CPU Time 0h:00m:00s, Memory Used current: 115MB peak: 140MB)
 Running optimization stage 2 on SIMPLE_PH_PWM .......
-Finished optimization stage 2 on SIMPLE_PH_PWM (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 103MB)
+Finished optimization stage 2 on SIMPLE_PH_PWM (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 140MB)
 Running optimization stage 2 on PH_PWM_625_0_80_128_3_3 .......
-Finished optimization stage 2 on PH_PWM_625_0_80_128_3_3 (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 104MB)
+Finished optimization stage 2 on PH_PWM_625_0_80_128_3_3 (CPU Time 0h:00m:00s, Memory Used current: 112MB peak: 140MB)
 Running optimization stage 2 on CMN_DEADBAND_5 .......
 @N: CL201 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_deadband.vhd":91:10:91:11|Trying to extract state machine for register DB_STATE.
 Extracted state machine for register DB_STATE
@@ -146,13 +152,23 @@ State machine has 5 reachable states with original encodings of:
    00100
    01000
    10000
-Finished optimization stage 2 on CMN_DEADBAND_5 (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 104MB)
+Finished optimization stage 2 on CMN_DEADBAND_5 (CPU Time 0h:00m:00s, Memory Used current: 112MB peak: 140MB)
 Running optimization stage 2 on cmn_pwm .......
 @N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":39:5:39:15|Input pulse_200us is unused.
 @N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":46:5:46:19|Input mot_pwm_param01 is unused.
 @N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":47:5:47:19|Input mot_pwm_param23 is unused.
 @N: CL159 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":48:5:48:19|Input mot_pwm_param45 is unused.
-Finished optimization stage 2 on cmn_pwm (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 104MB)
+Finished optimization stage 2 on cmn_pwm (CPU Time 0h:00m:00s, Memory Used current: 112MB peak: 140MB)
+Running optimization stage 2 on work_cmn_debouncer_rtl_8_8_1_DEBOUNCE_TIME_LTOHDEBOUNCE_TIME_HTOL .......
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Optimizing register bit debounce_cntr(31) to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Pruning register bit 31 of debounce_cntr(31 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Optimizing register bit debounce_cntr(30) to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Pruning register bit 30 of debounce_cntr(30 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Optimizing register bit debounce_cntr(29) to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Pruning register bit 29 of debounce_cntr(29 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL190 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Optimizing register bit debounce_cntr(28) to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL260 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_debouncer.vhd":51:10:51:11|Pruning register bit 28 of debounce_cntr(28 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+Finished optimization stage 2 on work_cmn_debouncer_rtl_8_8_1_DEBOUNCE_TIME_LTOHDEBOUNCE_TIME_HTOL (CPU Time 0h:00m:00s, Memory Used current: 112MB peak: 140MB)
 
 For a summary of runtime per design unit, please see file:
 ==========================================================

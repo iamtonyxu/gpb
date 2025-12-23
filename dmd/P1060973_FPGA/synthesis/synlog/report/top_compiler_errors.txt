@@ -1,0 +1,7 @@
+@E: CD590 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":156:26:156:43|Instantiated entity ph_pwm_simple has not been analyzed.
+@E: CD415 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":213:38:213:38|Expecting keyword 'is'
+@E: CD632 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":236:27:236:27|duplicate entity name work
+@E: CD632 :"C:\repo2\gpb\dmd\P1060973_FPGA\hdl\cmn_pwm.vhd":270:33:270:33|duplicate entity name work
+@E: Parse errors encountered - exiting
+@E::VHDL compiler failed
+

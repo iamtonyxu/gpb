@@ -1,0 +1,47 @@
+
+===============================================================================.
+
+Info: Global design data: 
+      Total globals:                       15 
+      Globals that cannot be demoted:      0 
+      Globals considered for demotion:     15 
+
+
+Info: List of globals considered for demotion: 
+    CLK    ASYN   DATA   Instance Name 
+    ---    ----   ----   ------------- 
+    0      5979   0      'I_1' 
+    4770   0      5      'I_2' 
+    190    0      1      'gantry_mot_if_0/clk_16khz_div/N_1_inferred_clock_RNI3FMH6' 
+    190    0      1      'lift_mot_if_0/clk_16khz_div/N_1_inferred_clock_RNITS91' 
+    160    0      1      'adc_0/sclk/CLK_OUT_RNIHMSU6' 
+    117    0      1      'gantry_brk1_if_0/clk_16khz_div/N_1_inferred_clock_RNI3G4C5' 
+    117    0      1      'gantry_brk2_if_0/clk_16khz_div/N_1_inferred_clock_RNI4M4M4' 
+    117    0      1      'gantry_brk3_if_0/clk_16khz_div/N_1_inferred_clock_RNI5S404' 
+    103    0      1      'gantry_brk1_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIDFJO4' 
+    103    0      1      'gantry_brk2_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIEPHB6' 
+    103    0      1      'gantry_brk3_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIF3GU7' 
+    78     0      2      'dac_0/sclk/N_1_inferred_clock_RNINEIH3' 
+    50     0      1      'clk_gen_0/pulse2khz_div/CLK_OUT_RNIP6F97' 
+    13     0      0      'I_3' 
+    5      0      0      'clk_gen_0/wdclk_div/CLK_OUT_RNI6ELQ2' 
+
+Info: Demotion information: 
+      Disconnected 5 data pins from global 'I_2'. This behavior is controlled by the 'Minimum fanout of non-clock nets to be kept on globals' threshold in the tool options for the Synthesize step. Typically, the low-skew global resources are used for clock and reset nets. When using global resources for data nets, consider the data path effect of global insertion delay and added buffer delay when the net drives carry chain logic.
+      Disconnected 1 data pins from global 'gantry_mot_if_0/clk_16khz_div/N_1_inferred_clock_RNI3FMH6'. This behavior is controlled by the 'Minimum fanout of non-clock nets to be kept on globals' threshold in the tool options for the Synthesize step. Typically, the low-skew global resources are used for clock and reset nets. When using global resources for data nets, consider the data path effect of global insertion delay and added buffer delay when the net drives carry chain logic.
+      Disconnected 1 data pins from global 'lift_mot_if_0/clk_16khz_div/N_1_inferred_clock_RNITS91'. This behavior is controlled by the 'Minimum fanout of non-clock nets to be kept on globals' threshold in the tool options for the Synthesize step. Typically, the low-skew global resources are used for clock and reset nets. When using global resources for data nets, consider the data path effect of global insertion delay and added buffer delay when the net drives carry chain logic.
+      Disconnected 1 data pins from global 'adc_0/sclk/CLK_OUT_RNIHMSU6'. This behavior is controlled by the 'Minimum fanout of non-clock nets to be kept on globals' threshold in the tool options for the Synthesize step. Typically, the low-skew global resources are used for clock and reset nets. When using global resources for data nets, consider the data path effect of global insertion delay and added buffer delay when the net drives carry chain logic.
+      Disconnected 1 data pins from global 'gantry_brk1_if_0/clk_16khz_div/N_1_inferred_clock_RNI3G4C5'. This behavior is controlled by the 'Minimum fanout of non-clock nets to be kept on globals' threshold in the tool options for the Synthesize step. Typically, the low-skew global resources are used for clock and reset nets. When using global resources for data nets, consider the data path effect of global insertion delay and added buffer delay when the net drives carry chain logic.
+      Disconnected 1 data pins from global 'gantry_brk2_if_0/clk_16khz_div/N_1_inferred_clock_RNI4M4M4'. This behavior is controlled by the 'Minimum fanout of non-clock nets to be kept on globals' threshold in the tool options for the Synthesize step. Typically, the low-skew global resources are used for clock and reset nets. When using global resources for data nets, consider the data path effect of global insertion delay and added buffer delay when the net drives carry chain logic.
+      Disconnected 1 data pins from global 'gantry_brk3_if_0/clk_16khz_div/N_1_inferred_clock_RNI5S404'. This behavior is controlled by the 'Minimum fanout of non-clock nets to be kept on globals' threshold in the tool options for the Synthesize step. Typically, the low-skew global resources are used for clock and reset nets. When using global resources for data nets, consider the data path effect of global insertion delay and added buffer delay when the net drives carry chain logic.
+      Disconnected 1 data pins from global 'gantry_brk1_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIDFJO4'. This behavior is controlled by the 'Minimum fanout of non-clock nets to be kept on globals' threshold in the tool options for the Synthesize step. Typically, the low-skew global resources are used for clock and reset nets. When using global resources for data nets, consider the data path effect of global insertion delay and added buffer delay when the net drives carry chain logic.
+      Disconnected 1 data pins from global 'gantry_brk2_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIEPHB6'. This behavior is controlled by the 'Minimum fanout of non-clock nets to be kept on globals' threshold in the tool options for the Synthesize step. Typically, the low-skew global resources are used for clock and reset nets. When using global resources for data nets, consider the data path effect of global insertion delay and added buffer delay when the net drives carry chain logic.
+      Disconnected 1 data pins from global 'gantry_brk3_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIF3GU7'. This behavior is controlled by the 'Minimum fanout of non-clock nets to be kept on globals' threshold in the tool options for the Synthesize step. Typically, the low-skew global resources are used for clock and reset nets. When using global resources for data nets, consider the data path effect of global insertion delay and added buffer delay when the net drives carry chain logic.
+      Disconnected 2 data pins from global 'dac_0/sclk/N_1_inferred_clock_RNINEIH3'. This behavior is controlled by the 'Minimum fanout of non-clock nets to be kept on globals' threshold in the tool options for the Synthesize step. Typically, the low-skew global resources are used for clock and reset nets. When using global resources for data nets, consider the data path effect of global insertion delay and added buffer delay when the net drives carry chain logic.
+Info: [127205381]:  CMPPF_302: Added 0 row global instances.
+Info: [127205382]:  CMPPF_303: Deleted 0 global instances.
+
+===============================================================================.
+
+Info: read prtition file C:/repo2/gpb/dmd/P1060973_FPGA/designer/top/top.nmatinit.pdc.
+INFO: Reading Partition PDC file C:/repo2/gpb/dmd/P1060973_FPGA/designer/top/top.nmatinit.pdc. 0 error(s) and 0 warning(s)

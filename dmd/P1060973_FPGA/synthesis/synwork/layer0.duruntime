@@ -21,9 +21,11 @@ Runtime Summary:
 			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
 		* Library: work, DesignUnit: ADC_ADS8864_IF
 			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
+		* Library: work, DesignUnit: afifo_16s_10s_16s_10s
+			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
 		* Library: work, DesignUnit: DP_RAM_2R_1W_16s_10s
 			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
-		* Library: work, DesignUnit: EEPROM_OPB_IF
+		* Library: work, DesignUnit: EEPROM_OPB_IF_V2
 			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
 		* Library: work, DesignUnit: SCRATCH_PAD_REGISTER
 			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time

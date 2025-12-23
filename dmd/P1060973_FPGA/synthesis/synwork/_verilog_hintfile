@@ -10,9 +10,9 @@
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd\\umr_capim.vhd":1721919830
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\arith.vhd":1721919830
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd2008\\unsigned.vhd":1721919830
-#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\serial_eeprom_if.vhd":1745894298
 #CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\cmn_uart.vhd":1745416052
 #CUR:"C:\\Microchip\\Libero_SoC_v2024.2\\SynplifyPro\\lib\\vhd\\math_real.vhd":1721921372
+#CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\serial_eeprom_if_v2.vhd":1759737918
 #CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\PH_PWM.vhd":1747789079
 #CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\SIMPLE_PH_PWM.vhd":1748142462
 #CUR:"C:\\repo2\\gpb\\dmd\\P1060973_FPGA\\hdl\\cmn_deadband.vhd":1474197791
@@ -99,6 +99,27 @@ kk0b0qRwzRpa-F4
 kk0b0NREDbV_CFsH80_#sCFLR
 -4Fbk0k#0R00Ns_sbCHRF8-C4
 MF8l8CkD
+8lFkRDC#HCsNCD_CFbslV_H_
+P.DsHLNRs$I	Fs
+bHMks0RC0#CRH4
+M0bkR	ODRH4
+M0bkRs#0F_LC4Rk#4M
+HbRk0CsCbFbl_N_oC#RCJ4M
+HbRk0CsCbFbl_N_oCINs80.NR6Fn
+kk0b0CRCblsF_obNC8_s8NN0Rn.6
+bHMkC0RCFbslN_boMC_kUlR
+bHMkC0RCFbsl8_N84sRnM
+HbRk0CsCbFIl_s08NN
+RUFbk0kC0RCFbsl8_s8NN0RHU
+M0bkRbCCs_Fl#s0N0
+R4Fbk0kC0RCFbslF_8M4CR
+bHMkC0RCFbslM_H#c0R
+bHMkC0RCFbslM_CRH4
+M0bkRbCC_F#8RF4
+kk0b0CRCb8_#H
+R4Fbk0kC0RC#b_ORD	4k
+F00bkRbCC_MO#RC4
+MF8l8CkD
 8lFkRDCO_lMk0Ns
 LDHs$NsRsIF	N
 bsCNl0RCs1  eh__h.FRLFNDCMN
@@ -117,24 +138,9 @@ bHMk70Rq_aq1 a)qmv_zqa_B-iR4k
 F00bkRRaX-H4
 M0bkRR)X-F4
 kk0b0CR8L_kok0Ns_$bER
--4ClM8FD8kCF
-l8CkDRs#CH_NDCsCbFHl_VH
-DLssN$FRIsH	
-M0bkR#sCC40R
-bHMkO0RD4	R
-bHMk#0R0LsFCk_4#
-R4HkMb0CRCblsF_N#0s40R
-bHMkC0RCFbsl8_N84sRnM
-HbRk0CsCbFIl_s08NN
-RUFbk0kC0RCFbsl8_s8NN0RFU
-kk0b0CRCblsF_M8FC
-R4HkMb0CRCblsF_#HM0
-RcHkMb0CRCblsF_RCM4M
-HbRk0C_Cb#R8F4k
-F00bkRbCC_H#8RF4
-kk0b0CRCbO_#D4	R
-0FkbRk0C_CbOR#M4M
-C88lFk
-DC
+-4ClM8FD8kC
+
+
+
 
 @ 

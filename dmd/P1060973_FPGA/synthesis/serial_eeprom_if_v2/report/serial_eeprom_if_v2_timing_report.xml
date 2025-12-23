@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- *************************************************************************************
+FILE DESCRIPTION
+Max Top 5 critical clocks will be reported. For rest user needs to refer to Detailed report
+*******************************************************************************************-->
+<report_table display_priority="2" name="Timing Summary">
+<report_link name="Detailed report">
+<data>C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\serial_eeprom_if_v2\serial_eeprom_if_v2.srr</data>
+<title>START OF TIMING REPORT</title>
+</report_link>
+<row>
+<data tcl_name="clock_name">Clock Name</data>
+<data tcl_name="req_freq">Req Freq</data>
+<data tcl_name="est_freq">Est Freq</data>
+<data tcl_name="slack">Slack</data>
+</row>
+<row>
+<data>ADC_ADS8864_IF|ram_wr_clk_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>CLOCK_DIV_9|N_1_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>CLOCK_DIV_10|N_1_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>CLOCK_DIV_11_0|N_1_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>CLOCK_DIV_11_1|N_1_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>CLOCK_DIV_11_2|N_1_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>CLOCK_DIV_11_3|N_1_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>CLOCK_DIV_11_4|N_1_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>CLOCK_DIV_11_5|N_1_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>CLOCK_DIV_11_6|N_1_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>top|DBUG_HEADER10</data>
+<data>100.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>top|FPGA_100M_CLK</data>
+<data>100.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>System</data>
+<data>100.0 MHz</data>
+<data>189.2 MHz</data>
+<data>4.715</data>
+</row>
+</report_table>

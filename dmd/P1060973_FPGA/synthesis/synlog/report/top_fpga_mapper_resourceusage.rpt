@@ -3,19 +3,19 @@ Resource Usage Report for top
 Mapping to part: mpf100tfcg484std
 Cell usage:
 CLKINT          15 uses
-CFG1           59 uses
-CFG2           577 uses
-CFG3           808 uses
-CFG4           2376 uses
+CFG1           58 uses
+CFG2           690 uses
+CFG3           1228 uses
+CFG4           2808 uses
 
 Carry cells:
-ARI1            1799 uses - used for arithmetic functions
-ARI1            569 uses - used for Wide-Mux implementation
-Total ARI1      2368 uses
+ARI1            2046 uses - used for arithmetic functions
+ARI1            922 uses - used for Wide-Mux implementation
+Total ARI1      2968 uses
 
 
 Sequential Cells: 
-SLE            4904 uses
+SLE            6069 uses
 
 DSP Blocks:    0 of 336 (0%)
 
@@ -27,15 +27,15 @@ OUTBUF         88 uses
 
 Global Clock Buffers: 15
 
-Total LUTs:    6188
+Total LUTs:    7752
 
 Extra resources required for RAM and MACC_PA interface logic during P&R:
 
-RAM64X12 Interface Logic : SLEs = 72; LUTs = 72;
+RAM64X12 Interface Logic : SLEs = 456; LUTs = 456;
 RAM1K20  Interface Logic : SLEs = 36; LUTs = 36;
 MACC_PA     Interface Logic : SLEs = 0; LUTs = 0;
 MACC_PA_BC_ROM     Interface Logic : SLEs = 0; LUTs = 0;
 
-Total number of SLEs after P&R:  4904 + 72 + 36 + 0 = 5012;
-Total number of LUTs after P&R:  6188 + 72 + 36 + 0 = 6296;
+Total number of SLEs after P&R:  6069 + 456 + 36 + 0 = 6561;
+Total number of LUTs after P&R:  7752 + 456 + 36 + 0 = 8244;
 

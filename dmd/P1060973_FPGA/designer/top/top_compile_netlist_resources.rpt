@@ -1,6 +1,6 @@
 Compile Report
 Microchip Technology Inc. - Microchip Libero Software Release v2024.2 (Version 2024.2.0.13)
-Date: Mon Jun 23 17:46:12 2025
+Date: Sat Oct 18 16:52:33 2025
 
 Device Selection
 +------------------------+-------------+
@@ -29,13 +29,13 @@ Resource Usage
 +---------------------------+------+--------+------------+
 | Type                      | Used | Total  | Percentage |
 +---------------------------+------+--------+------------+
-| 4LUT                      | 6327 | 108600 | 5.83       |
-| DFF                       | 5012 | 108600 | 4.62       |
+| 4LUT                      | 8271 | 108600 | 7.62       |
+| DFF                       | 6561 | 108600 | 6.04       |
 | I/O Register              | 0    | 732    | 0.00       |
 | User I/O                  | 148  | 244    | 60.66      |
 | -- Single-ended I/O       | 148  | 244    | 60.66      |
 | -- Differential I/O Pairs | 0    | 122    | 0.00       |
-| uSRAM                     | 6    | 1008   | 0.60       |
+| uSRAM                     | 38   | 1008   | 3.77       |
 | LSRAM                     | 1    | 352    | 0.28       |
 | Math                      | 0    | 336    | 0.00       |
 | H-Chip Global             | 15   | 48     | 31.25      |
@@ -49,11 +49,11 @@ Detailed Logic Resource Usage
 +-----------------------+------+------+
 | Type                  | 4LUT | DFF  |
 +-----------------------+------+------+
-| Fabric Logic          | 6219 | 4904 |
-| uSRAM Interface Logic | 72   | 72   |
+| Fabric Logic          | 7779 | 6069 |
+| uSRAM Interface Logic | 456  | 456  |
 | LSRAM Interface Logic | 36   | 36   |
 | Math Interface Logic  | 0    | 0    |
-| Total Used            | 6327 | 5012 |
+| Total Used            | 8271 | 6561 |
 +-----------------------+------+------+
 
 Detailed Carry Chains Resource Usage
@@ -62,25 +62,27 @@ Detailed Carry Chains Resource Usage
 | 7      | 1    |
 | 8      | 1    |
 | 9      | 6    |
-| 10     | 14   |
+| 10     | 11   |
 | 11     | 9    |
-| 12     | 1    |
+| 12     | 3    |
 | 13     | 1    |
 | 16     | 28   |
 | 17     | 24   |
+| 18     | 1    |
 | 21     | 4    |
-| 29     | 8    |
+| 29     | 16   |
 | 32     | 2    |
 | 33     | 8    |
-| Total  | 107  |
+| Total  | 115  |
 +--------+------+
 
 Detailed 4LUT Groups Resource Usage
 +--------+------+
 | Length | Used |
-| 2      | 222  |
-| 5      | 25   |
-| Total  | 247  |
+| 2      | 376  |
+| 5      | 18   |
+| 10     | 8    |
+| Total  | 402  |
 +--------+------+
 
 I/O Function
@@ -95,55 +97,55 @@ I/O Function
 +-------------------------------+--------------+-------------+-----------------+
 
 Nets assigned to chip global resources
-+--------+---------+---------------------------------------------------------------------------------+
-| Fanout | Type    | Name                                                                            |
-+--------+---------+---------------------------------------------------------------------------------+
-| 4805   | INT_NET | Net   : RESET_N_arst                                                            |
-|        |         | Driver: I_1/U0_RGB1                                                             |
-|        |         | Source: NETLIST                                                                 |
-| 3839   | INT_NET | Net   : NN_1                                                                    |
-|        |         | Driver: I_2/U0_RGB1                                                             |
-|        |         | Source: NETLIST                                                                 |
-| 161    | INT_NET | Net   : gantry_mot_if_0/clk_25MHz                                               |
-|        |         | Driver: gantry_mot_if_0/clk_16khz_div/N_17_inferred_clock_RNIQJ1U5/U0_RGB1      |
-|        |         | Source: NETLIST                                                                 |
-| 161    | INT_NET | Net   : lift_mot_if_0/clk_25MHz                                                 |
-|        |         | Driver: lift_mot_if_0/clk_16khz_div/N_17_inferred_clock_RNIKR217/U0_RGB1        |
-|        |         | Source: NETLIST                                                                 |
-| 88     | INT_NET | Net   : gantry_brk2_if_0/clk_25MHz                                              |
-|        |         | Driver: gantry_brk2_if_0/clk_16khz_div/N_17_inferred_clock_RNIRRMG/U0_RGB1      |
-|        |         | Source: NETLIST                                                                 |
-| 88     | INT_NET | Net   : gantry_brk3_ret_if_0/clk_25MHz                                          |
-|        |         | Driver: gantry_brk3_ret_if_0/clk_16khz_div/N_17_inferred_clock_RNI6KF44/U0_RGB1 |
-|        |         | Source: NETLIST                                                                 |
-| 88     | INT_NET | Net   : gantry_brk1_if_0/clk_25MHz                                              |
-|        |         | Driver: gantry_brk1_if_0/clk_16khz_div/N_17_inferred_clock_RNIQKG67/U0_RGB1     |
-|        |         | Source: NETLIST                                                                 |
-| 88     | INT_NET | Net   : gantry_brk3_if_0/clk_25MHz                                              |
-|        |         | Driver: gantry_brk3_if_0/clk_16khz_div/N_17_inferred_clock_RNIS2TQ1/U0_RGB1     |
-|        |         | Source: NETLIST                                                                 |
-| 88     | INT_NET | Net   : gantry_brk2_ret_if_0/clk_25MHz                                          |
-|        |         | Driver: gantry_brk2_ret_if_0/clk_16khz_div/N_17_inferred_clock_RNI597J7/U0_RGB1 |
-|        |         | Source: NETLIST                                                                 |
-| 88     | INT_NET | Net   : gantry_brk1_ret_if_0/clk_25MHz                                          |
-|        |         | Driver: gantry_brk1_ret_if_0/clk_16khz_div/N_17_inferred_clock_RNI4UU13/U0_RGB1 |
-|        |         | Source: NETLIST                                                                 |
-| 84     | INT_NET | Net   : adc_0/clk_sd                                                            |
-|        |         | Driver: adc_0/sclk/CLK_OUT_RNIHMSU6/U0_RGB1                                     |
-|        |         | Source: NETLIST                                                                 |
-| 78     | INT_NET | Net   : dac_0/clk_sd                                                            |
-|        |         | Driver: dac_0/sclk/N_17_inferred_clock_RNIE7TP2/U0_RGB1                         |
-|        |         | Source: NETLIST                                                                 |
-| 51     | INT_NET | Net   : DBUG_HEADER6_c                                                          |
-|        |         | Driver: clk_gen_0/pulse2khz_div/CLK_OUT_RNIP6F97/U0_RGB1                        |
-|        |         | Source: NETLIST                                                                 |
-| 13     | INT_NET | Net   : NN_2                                                                    |
-|        |         | Driver: I_3/U0_RGB1                                                             |
-|        |         | Source: NETLIST                                                                 |
-| 5      | INT_NET | Net   : PULSE_100US                                                             |
-|        |         | Driver: clk_gen_0/wdclk_div/CLK_OUT_RNI6ELQ2/U0_RGB1                            |
-|        |         | Source: NETLIST                                                                 |
-+--------+---------+---------------------------------------------------------------------------------+
++--------+---------+--------------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                           |
++--------+---------+--------------------------------------------------------------------------------+
+| 5979   | INT_NET | Net   : RESET_N_arst                                                           |
+|        |         | Driver: I_1/U0_RGB1                                                            |
+|        |         | Source: NETLIST                                                                |
+| 4770   | INT_NET | Net   : NN_1                                                                   |
+|        |         | Driver: I_2/U0_RGB1                                                            |
+|        |         | Source: NETLIST                                                                |
+| 190    | INT_NET | Net   : gantry_mot_if_0/clk_25MHz                                              |
+|        |         | Driver: gantry_mot_if_0/clk_16khz_div/N_1_inferred_clock_RNI3FMH6/U0_RGB1      |
+|        |         | Source: NETLIST                                                                |
+| 190    | INT_NET | Net   : lift_mot_if_0/clk_25MHz                                                |
+|        |         | Driver: lift_mot_if_0/clk_16khz_div/N_1_inferred_clock_RNITS91/U0_RGB1         |
+|        |         | Source: NETLIST                                                                |
+| 160    | INT_NET | Net   : adc_0/clk_sd                                                           |
+|        |         | Driver: adc_0/sclk/CLK_OUT_RNIHMSU6/U0_RGB1                                    |
+|        |         | Source: NETLIST                                                                |
+| 117    | INT_NET | Net   : gantry_brk3_if_0/clk_25MHz                                             |
+|        |         | Driver: gantry_brk3_if_0/clk_16khz_div/N_1_inferred_clock_RNI5S404/U0_RGB1     |
+|        |         | Source: NETLIST                                                                |
+| 117    | INT_NET | Net   : gantry_brk2_if_0/clk_25MHz                                             |
+|        |         | Driver: gantry_brk2_if_0/clk_16khz_div/N_1_inferred_clock_RNI4M4M4/U0_RGB1     |
+|        |         | Source: NETLIST                                                                |
+| 117    | INT_NET | Net   : gantry_brk1_if_0/clk_25MHz                                             |
+|        |         | Driver: gantry_brk1_if_0/clk_16khz_div/N_1_inferred_clock_RNI3G4C5/U0_RGB1     |
+|        |         | Source: NETLIST                                                                |
+| 103    | INT_NET | Net   : gantry_brk1_ret_if_0/clk_25MHz                                         |
+|        |         | Driver: gantry_brk1_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIDFJO4/U0_RGB1 |
+|        |         | Source: NETLIST                                                                |
+| 103    | INT_NET | Net   : gantry_brk2_ret_if_0/clk_25MHz                                         |
+|        |         | Driver: gantry_brk2_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIEPHB6/U0_RGB1 |
+|        |         | Source: NETLIST                                                                |
+| 103    | INT_NET | Net   : gantry_brk3_ret_if_0/clk_25MHz                                         |
+|        |         | Driver: gantry_brk3_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIF3GU7/U0_RGB1 |
+|        |         | Source: NETLIST                                                                |
+| 78     | INT_NET | Net   : dac_0/clk_sd                                                           |
+|        |         | Driver: dac_0/sclk/N_1_inferred_clock_RNINEIH3/U0_RGB1                         |
+|        |         | Source: NETLIST                                                                |
+| 51     | INT_NET | Net   : DBUG_HEADER6_c                                                         |
+|        |         | Driver: clk_gen_0/pulse2khz_div/CLK_OUT_RNIP6F97/U0_RGB1                       |
+|        |         | Source: NETLIST                                                                |
+| 13     | INT_NET | Net   : NN_2                                                                   |
+|        |         | Driver: I_3/U0_RGB1                                                            |
+|        |         | Source: NETLIST                                                                |
+| 5      | INT_NET | Net   : PULSE_100US                                                            |
+|        |         | Driver: clk_gen_0/wdclk_div/CLK_OUT_RNI6ELQ2/U0_RGB1                           |
+|        |         | Source: NETLIST                                                                |
++--------+---------+--------------------------------------------------------------------------------+
 
 Nets assigned to row global resources
 +--------+------+------+
@@ -152,54 +154,54 @@ Nets assigned to row global resources
 +--------+------+------+
 
 High fanout nets
-+--------+---------+------------------------------------------------------------------------+
-| Fanout | Type    | Name                                                                   |
-+--------+---------+------------------------------------------------------------------------+
-| 658    | INT_NET | Net   : OPB_ADDR[0]                                                    |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[0]   |
-| 652    | INT_NET | Net   : OPB_ADDR[1]                                                    |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[1]   |
-| 113    | INT_NET | Net   : gantry_mot_if_0_OPB_ADDR[2]                                    |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[2]   |
-| 97     | INT_NET | Net   : lift_mot_if_0_OPB_ADDR[2]                                      |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_2_rep2 |
-| 87     | INT_NET | Net   : OPB_DO[6]                                                      |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[6]     |
-| 83     | INT_NET | Net   : OPB_DO[15]                                                     |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[15]    |
-| 83     | INT_NET | Net   : OPB_DO[1]                                                      |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[1]     |
-| 83     | INT_NET | Net   : OPB_DO[0]                                                      |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[0]     |
-| 82     | INT_NET | Net   : OPB_DO[14]                                                     |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[14]    |
-| 82     | INT_NET | Net   : OPB_DO[11]                                                     |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[11]    |
-+--------+---------+------------------------------------------------------------------------+
++--------+---------+----------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                 |
++--------+---------+----------------------------------------------------------------------+
+| 875    | INT_NET | Net   : OPB_ADDR[0]                                                  |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[0] |
+| 693    | INT_NET | Net   : OPB_ADDR[1]                                                  |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[1] |
+| 261    | INT_NET | Net   : eeprom_0/eeprom_if_0/eeprom_cycle_state_rep_Z[2]             |
+|        |         | Driver: eeprom_0/eeprom_if_0/eeprom_cycle_state_rep[2]               |
+| 256    | INT_NET | Net   : eeprom_0/eeprom_if_0/un1_page_wrdata_reg_0_sqmuxa_1_Z        |
+|        |         | Driver: eeprom_0/eeprom_if_0/un1_page_wrdata_reg_0_sqmuxa_1          |
+| 256    | INT_NET | Net   : eeprom_0/eeprom_if_0/un1_eeprom_cycle_state_17_i             |
+|        |         | Driver: eeprom_0/eeprom_if_0/un1_eeprom_cycle_state_17_0_m2_RNIM4TFG |
+| 252    | INT_NET | Net   : eeprom_0/eeprom_if_0/eeprom_cycle_state_Z[11]                |
+|        |         | Driver: eeprom_0/eeprom_if_0/eeprom_cycle_state[11]                  |
+| 247    | INT_NET | Net   : eeprom_0_OPB_ADDR[2]                                         |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[2] |
+| 193    | INT_NET | Net   : eeprom_0_OPB_ADDR[3]                                         |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[3] |
+| 129    | INT_NET | Net   : adc_0/ADC_FIFO/rbin_Z[8]                                     |
+|        |         | Driver: adc_0/ADC_FIFO/rbin[8]                                       |
+| 104    | INT_NET | Net   : OPB_DO[15]                                                   |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[15]  |
++--------+---------+----------------------------------------------------------------------+
 
 High fanout nets (through buffer trees)
-+--------+---------+------------------------------------------------------------------------+
-| Fanout | Type    | Name                                                                   |
-+--------+---------+------------------------------------------------------------------------+
-| 658    | INT_NET | Net   : OPB_ADDR[0]                                                    |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[0]   |
-| 652    | INT_NET | Net   : OPB_ADDR[1]                                                    |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[1]   |
-| 113    | INT_NET | Net   : gantry_mot_if_0_OPB_ADDR[2]                                    |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[2]   |
-| 97     | INT_NET | Net   : lift_mot_if_0_OPB_ADDR[2]                                      |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_2_rep2 |
-| 87     | INT_NET | Net   : OPB_DO[6]                                                      |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[6]     |
-| 83     | INT_NET | Net   : OPB_DO[15]                                                     |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[15]    |
-| 83     | INT_NET | Net   : OPB_DO[1]                                                      |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[1]     |
-| 83     | INT_NET | Net   : OPB_DO[0]                                                      |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[0]     |
-| 82     | INT_NET | Net   : OPB_DO[14]                                                     |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[14]    |
-| 82     | INT_NET | Net   : OPB_DO[11]                                                     |
-|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[11]    |
-+--------+---------+------------------------------------------------------------------------+
++--------+---------+----------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                 |
++--------+---------+----------------------------------------------------------------------+
+| 875    | INT_NET | Net   : OPB_ADDR[0]                                                  |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[0] |
+| 693    | INT_NET | Net   : OPB_ADDR[1]                                                  |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[1] |
+| 261    | INT_NET | Net   : eeprom_0/eeprom_if_0/eeprom_cycle_state_rep_Z[2]             |
+|        |         | Driver: eeprom_0/eeprom_if_0/eeprom_cycle_state_rep[2]               |
+| 256    | INT_NET | Net   : eeprom_0/eeprom_if_0/un1_page_wrdata_reg_0_sqmuxa_1_Z        |
+|        |         | Driver: eeprom_0/eeprom_if_0/un1_page_wrdata_reg_0_sqmuxa_1          |
+| 256    | INT_NET | Net   : eeprom_0/eeprom_if_0/un1_eeprom_cycle_state_17_i             |
+|        |         | Driver: eeprom_0/eeprom_if_0/un1_eeprom_cycle_state_17_0_m2_RNIM4TFG |
+| 252    | INT_NET | Net   : eeprom_0/eeprom_if_0/eeprom_cycle_state_Z[11]                |
+|        |         | Driver: eeprom_0/eeprom_if_0/eeprom_cycle_state[11]                  |
+| 247    | INT_NET | Net   : eeprom_0_OPB_ADDR[2]                                         |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[2] |
+| 193    | INT_NET | Net   : eeprom_0_OPB_ADDR[3]                                         |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_ADDR_Z[3] |
+| 129    | INT_NET | Net   : adc_0/ADC_FIFO/rbin_Z[8]                                     |
+|        |         | Driver: adc_0/ADC_FIFO/rbin[8]                                       |
+| 104    | INT_NET | Net   : OPB_DO[15]                                                   |
+|        |         | Driver: cmd_server_0/opb_emu_target_inst/msg_read_inst/OPB_DO_Z[15]  |
++--------+---------+----------------------------------------------------------------------+
 
