@@ -1,0 +1,209 @@
+
+*** Running vivado
+    with args -log top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1001.711 ; gain = 117.242
+Command: link_design -top top -part xc7vx485tffg1157-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1582.879 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc]
+CRITICAL WARNING: [Vivado 12-1815] Setting property 'IOSTANDARD' is not allowed for GT terminals. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:3]
+CRITICAL WARNING: [Common 17-69] Command failed: 'F4' is not a valid site or package pin name. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:5]
+CRITICAL WARNING: [Vivado 12-4470] I/O Standard 'LVCMOS33' is not supported on 'xc7vx485tffg1157-1' part. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:6]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Site location is not valid [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:9]
+CRITICAL WARNING: [Vivado 12-4470] I/O Standard 'LVCMOS33' is not supported on 'xc7vx485tffg1157-1' part. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:10]
+CRITICAL WARNING: [Common 17-69] Command failed: 'H4' is not a valid site or package pin name. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:13]
+CRITICAL WARNING: [Vivado 12-4470] I/O Standard 'LVCMOS33' is not supported on 'xc7vx485tffg1157-1' part. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:14]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Site location is not valid [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:16]
+CRITICAL WARNING: [Vivado 12-4470] I/O Standard 'LVCMOS33' is not supported on 'xc7vx485tffg1157-1' part. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:17]
+CRITICAL WARNING: [Common 17-69] Command failed: 'K4' is not a valid site or package pin name. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:19]
+CRITICAL WARNING: [Vivado 12-4470] I/O Standard 'LVCMOS33' is not supported on 'xc7vx485tffg1157-1' part. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:20]
+CRITICAL WARNING: [Vivado 12-1815] Setting property 'IOSTANDARD' is not allowed for GT terminals. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:23]
+CRITICAL WARNING: [Common 17-69] Command failed: 'M4' is not a valid site or package pin name. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:26]
+CRITICAL WARNING: [Vivado 12-4470] I/O Standard 'LVCMOS33' is not supported on 'xc7vx485tffg1157-1' part. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:27]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Site location is not valid [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:29]
+CRITICAL WARNING: [Vivado 12-4470] I/O Standard 'LVCMOS33' is not supported on 'xc7vx485tffg1157-1' part. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:30]
+CRITICAL WARNING: [Common 17-69] Command failed: 'P4' is not a valid site or package pin name. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:33]
+CRITICAL WARNING: [Vivado 12-4470] I/O Standard 'LVCMOS33' is not supported on 'xc7vx485tffg1157-1' part. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:34]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Site location is not valid [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:36]
+CRITICAL WARNING: [Vivado 12-4470] I/O Standard 'LVCMOS33' is not supported on 'xc7vx485tffg1157-1' part. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:37]
+CRITICAL WARNING: [Common 17-69] Command failed: 'T4' is not a valid site or package pin name. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:39]
+CRITICAL WARNING: [Vivado 12-4470] I/O Standard 'LVCMOS33' is not supported on 'xc7vx485tffg1157-1' part. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:40]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Site location is not valid [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:42]
+CRITICAL WARNING: [Vivado 12-4470] I/O Standard 'LVCMOS33' is not supported on 'xc7vx485tffg1157-1' part. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:43]
+CRITICAL WARNING: [Common 17-69] Command failed: 'V4' is not a valid site or package pin name. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:45]
+CRITICAL WARNING: [Vivado 12-4470] I/O Standard 'LVCMOS33' is not supported on 'xc7vx485tffg1157-1' part. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:46]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Site location is not valid [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:48]
+CRITICAL WARNING: [Vivado 12-4470] I/O Standard 'LVCMOS33' is not supported on 'xc7vx485tffg1157-1' part. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:49]
+CRITICAL WARNING: [Common 17-69] Command failed: 'Y4' is not a valid site or package pin name. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:51]
+CRITICAL WARNING: [Vivado 12-4470] I/O Standard 'LVCMOS33' is not supported on 'xc7vx485tffg1157-1' part. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:52]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Site location is not valid [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:54]
+CRITICAL WARNING: [Vivado 12-4470] I/O Standard 'LVCMOS33' is not supported on 'xc7vx485tffg1157-1' part. [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc:55]
+Finished Parsing XDC File [C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.srcs/constrs_1/new/top_pdu.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1724.488 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+7 Infos, 0 Warnings, 32 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 1724.488 ; gain = 718.082
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx485t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1749.500 ; gain = 25.012
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 16f350191
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 2413.090 ; gain = 663.590
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 16f350191
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.130 . Memory (MB): peak = 2754.113 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 16f350191
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.149 . Memory (MB): peak = 2754.113 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 1727567c4
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.196 . Memory (MB): peak = 2754.113 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 4 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 1727567c4
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.274 . Memory (MB): peak = 2754.113 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 1727567c4
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.281 . Memory (MB): peak = 2754.113 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: c187ba3f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.295 . Memory (MB): peak = 2754.113 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               4  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2754.113 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 15bd93bca
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.363 . Memory (MB): peak = 2754.113 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 15bd93bca
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 2754.113 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 15bd93bca
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2754.113 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2754.113 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 15bd93bca
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2754.113 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+24 Infos, 0 Warnings, 32 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 2754.113 ; gain = 1029.625
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.238 . Memory (MB): peak = 2754.113 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.runs/impl_1/top_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
+Command: report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/repo2/gpb/dmd/EEPROM_Test/project_pdu_board.runs/impl_1/top_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2754.113 ; gain = 0.000
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx485t'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2754.113 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: bf00451d
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 2754.113 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2754.113 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.

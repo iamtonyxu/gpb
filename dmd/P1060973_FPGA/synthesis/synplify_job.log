@@ -1,0 +1,85 @@
+{
+"Synplify Pro (R) Job Log" : {
+	"Date" : "16:52:09    18-Oct-2025",
+	"Working Directory" : "C:/repo2/gpb/dmd/P1060973_FPGA/synthesis",
+	"Install" : "C:/Microchip/Libero_SoC_v2024.2/SynplifyPro"
+},
+"synthesis" :{
+   "Job Flow" : "Sequential",
+   "Start Time" : "16:50:45",
+   "Runtime" : "01m:24s",
+   "Executable Run Time" : "01m:23s",
+   "synthesis" : {
+      "Job Flow" : "Sequential",
+      "Start Time" : "16:50:45",
+      "Runtime" : "01m:24s",
+      "Executable Run Time" : "01m:23s",
+      "compile" : {
+         "Job Flow" : "Sequential",
+         "Start Time" : "16:50:45",
+         "Runtime" : "28s",
+         "Executable Run Time" : "27s",
+         "compile_flow" : {
+            "Job Flow" : "Sequential",
+            "Start Time" : "16:50:45",
+            "Runtime" : "23s",
+            "Executable Run Time" : "22s",
+            "compiler" : {
+               "executable" : "bin64/c_hdl.exe",
+               "Run Directory" : "C:/repo2/gpb/dmd/P1060973_FPGA/synthesis",
+               "Run State" : "Complete",
+               "Return Code" : "0",
+               "Has Errors" : "no",
+               "Run Start Time" : "16:50:45",
+               "Run Time" : "22s",
+               "Exe Run Time" : "21s",
+               "Memory Usage" : "-",
+               "Up-to-date (run skipped)" : "no"
+            },
+            "multi_srs_gen" : {
+               "executable" : "bin64/syn_nfilter.exe",
+               "Run Directory" : "C:/repo2/gpb/dmd/P1060973_FPGA/synthesis",
+               "Run State" : "Complete",
+               "Return Code" : "0",
+               "Has Errors" : "no",
+               "Run Start Time" : "16:51:07",
+               "Run Time" : "01s",
+               "Exe Run Time" : "01s",
+               "Memory Usage" : "-",
+               "Up-to-date (run skipped)" : "no"
+            }
+         },
+         "premap" : {
+            "executable" : "bin64/m_generic.exe",
+            "Run Directory" : "C:/repo2/gpb/dmd/P1060973_FPGA/synthesis",
+            "Run State" : "Complete",
+            "Return Code" : "1",
+            "Has Errors" : "no",
+            "Run Start Time" : "16:51:08",
+            "Run Time" : "05s",
+            "Exe Run Time" : "05s",
+            "Memory Usage" : "-",
+            "Up-to-date (run skipped)" : "no"
+         }
+      },
+      "map" : {
+         "Job Flow" : "Sequential",
+         "Start Time" : "16:51:13",
+         "Runtime" : "56s",
+         "Executable Run Time" : "56s",
+         "fpga_mapper" : {
+            "executable" : "bin64/m_generic.exe",
+            "Run Directory" : "C:/repo2/gpb/dmd/P1060973_FPGA/synthesis",
+            "Run State" : "Complete",
+            "Return Code" : "1",
+            "Has Errors" : "no",
+            "Run Start Time" : "16:51:13",
+            "Run Time" : "56s",
+            "Exe Run Time" : "56s",
+            "Memory Usage" : "-",
+            "Up-to-date (run skipped)" : "no"
+         }
+      }
+   }
+}
+}

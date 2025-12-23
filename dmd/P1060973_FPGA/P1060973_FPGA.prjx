@@ -60,23 +60,23 @@ SIZE="16586"
 ENDFILE
 VALUE "<project>\hdl\ADC_ADS8864_IF.v,hdl"
 STATE="utd"
-TIME="1746520293"
-SIZE="12817"
+TIME="1760776731"
+SIZE="17118"
 ENDFILE
 VALUE "<project>\hdl\ADC_ADS8864_tb.v,hdl"
 STATE="utd"
-TIME="1746517320"
-SIZE="2977"
+TIME="1760695602"
+SIZE="3095"
 ENDFILE
 VALUE "<project>\hdl\ADDR_DECODER.v,hdl"
 STATE="utd"
-TIME="1747557379"
-SIZE="17768"
+TIME="1760070965"
+SIZE="17846"
 ENDFILE
 VALUE "<project>\hdl\Addr_definition.v,hdl"
 STATE="utd"
-TIME="1747556962"
-SIZE="3353"
+TIME="1760070885"
+SIZE="3424"
 ENDFILE
 VALUE "<project>\hdl\afifo.v,hdl"
 STATE="utd"
@@ -135,8 +135,8 @@ SIZE="3894"
 ENDFILE
 VALUE "<project>\hdl\cmn_pwm_wrapper.v,hdl"
 STATE="utd"
-TIME="1748179875"
-SIZE="13100"
+TIME="1751531926"
+SIZE="14390"
 ENDFILE
 VALUE "<project>\hdl\cmn_pwm_wrapper_tb.v,hdl"
 STATE="utd"
@@ -173,15 +173,10 @@ STATE="utd"
 TIME="1746014655"
 SIZE="8198"
 ENDFILE
-VALUE "<project>\hdl\EEPROM_OPB_IF.v,hdl"
+VALUE "<project>\hdl\EEPROM_OPB_IF_V2.v,hdl"
 STATE="utd"
-TIME="1745914703"
-SIZE="3605"
-ENDFILE
-VALUE "<project>\hdl\EEPROM_OPB_IF_tb.v,hdl"
-STATE="utd"
-TIME="1745907234"
-SIZE="4231"
+TIME="1760071170"
+SIZE="9825"
 ENDFILE
 VALUE "<project>\hdl\eep_self_test.vhd,hdl"
 STATE="utd"
@@ -215,7 +210,7 @@ SIZE="5572"
 ENDFILE
 VALUE "<project>\hdl\msg_write.v,hdl"
 STATE="utd"
-TIME="1745416052"
+TIME="1760693610"
 SIZE="10004"
 ENDFILE
 VALUE "<project>\hdl\msg_write_tb.v,hdl"
@@ -268,6 +263,16 @@ STATE="utd"
 TIME="1745894298"
 SIZE="15011"
 ENDFILE
+VALUE "<project>\hdl\serial_eeprom_if_v2.vhd,hdl"
+STATE="utd"
+TIME="1759737918"
+SIZE="24189"
+ENDFILE
+VALUE "<project>\hdl\serial_eeprom_if_v2_tb.v,hdl"
+STATE="utd"
+TIME="1759285048"
+SIZE="6053"
+ENDFILE
 VALUE "<project>\hdl\SER_EEPROM_SIM.vhd,hdl"
 STATE="utd"
 TIME="1474197500"
@@ -285,13 +290,13 @@ SIZE="947"
 ENDFILE
 VALUE "<project>\hdl\top.v,hdl"
 STATE="utd"
-TIME="1749233631"
-SIZE="43459"
+TIME="1760695612"
+SIZE="44193"
 ENDFILE
 VALUE "<project>\hdl\top_tb.v,hdl"
 STATE="utd"
-TIME="1749235672"
-SIZE="33918"
+TIME="1760760847"
+SIZE="34486"
 ENDFILE
 VALUE "<project>\synthesis\synwork\layer0.so,so"
 STATE="utd"
@@ -300,23 +305,23 @@ SIZE="159"
 ENDFILE
 VALUE "<project>\synthesis\top.so,so"
 STATE="utd"
-TIME="1749236664"
+TIME="1760777529"
 SIZE="211"
 ENDFILE
 VALUE "<project>\synthesis\top.vm,syn_vm"
 STATE="utd"
-TIME="1749236661"
-SIZE="2864799"
+TIME="1760777525"
+SIZE="3706024"
 ENDFILE
 VALUE "<project>\synthesis\top_syn.prj,prj"
 STATE="utd"
-TIME="1749236665"
-SIZE="4927"
+TIME="1760777530"
+SIZE="4933"
 ENDFILE
 VALUE "<project>\synthesis\top_vm.sdc,syn_sdc"
 STATE="utd"
-TIME="1749236662"
-SIZE="5023"
+TIME="1760777526"
+SIZE="4996"
 ENDFILE
 ENDLIST
 LIST UsedFile
@@ -426,8 +431,8 @@ NAME="synplify_Pro"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\bin\synplify_pro.exe"
-PARAM=""
-BATCH=0
+PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
+BATCH=1
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -486,15 +491,26 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
+Constraint Manager;Constraint Manager;0
+HDL;hdl\cmn_uart.vhd;0
+HDL;hdl\ADC_ADS8864_IF.v;0
+Reports;Reports;0
+ReportsCurrentItem;Export FlashPro Express Job:top_exportJob.log
+HDL;hdl\top.v;0
+HDL;hdl\msg_buffer.v;0
+HDL;hdl\GPIO.v;0
+HDL;hdl\opb_emu_target.v;0
 StartPage;StartPage;0
-ACTIVEVIEW;StartPage
+ACTIVEVIEW;Constraint Manager
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADC_ADS8864_IF::work","hdl\ADC_ADS8864_IF.v","FALSE","FALSE"
 SUBBLOCK "CLOCK_DIV::work","hdl\CLK_DIV.V","FALSE","FALSE"
 SUBBLOCK "DP_RAM_2R_1W::work","hdl\dual_port_ram.v","FALSE","FALSE"
+SUBBLOCK "afifo::work","hdl\afifo.v","FALSE","FALSE"
+SUBBLOCK "cmn_uart::work","hdl\cmn_uart.vhd","FALSE","FALSE"
 ENDLIST
-LIST "ADC_ADS8864_tb::work","hdl\ADC_ADS8864_tb.v","FALSE","FALSE"
+LIST "ADC_ADS8864_V2_tb::work","hdl\ADC_ADS8864_tb.v","FALSE","FALSE"
 SUBBLOCK "ADC_ADS8864_IF::work","hdl\ADC_ADS8864_IF.v","FALSE","FALSE"
 SUBBLOCK "DUT_ADS8864::work","hdl\DUT_ADS8864.v","FALSE","FALSE"
 ENDLIST
@@ -533,6 +549,7 @@ ENDLIST
 LIST "cmn_pwm_wrapper::work","hdl\cmn_pwm_wrapper.v","FALSE","FALSE"
 SUBBLOCK "CLOCK_DIV::work","hdl\CLK_DIV.V","FALSE","FALSE"
 SUBBLOCK "cmn_pwm::work","hdl\cmn_pwm.vhd","FALSE","FALSE"
+SUBBLOCK "cmn_debouncer::work","hdl\cmn_debouncer.vhd","FALSE","FALSE"
 ENDLIST
 LIST "cmn_pwm_wrapper_tb::work","hdl\cmn_pwm_wrapper_tb.v","FALSE","FALSE"
 SUBBLOCK "cmn_pwm_wrapper::work","hdl\cmn_pwm_wrapper.v","FALSE","FALSE"
@@ -553,12 +570,8 @@ LIST "DUT_DACx0504::work","hdl\DUT_DACx0504.v","FALSE","FALSE"
 ENDLIST
 LIST "eep_self_test::work","hdl\eep_self_test.vhd","FALSE","FALSE"
 ENDLIST
-LIST "EEPROM_OPB_IF::work","hdl\EEPROM_OPB_IF.v","FALSE","FALSE"
-SUBBLOCK "serial_eeprom_if::work","hdl\serial_eeprom_if.vhd","FALSE","FALSE"
-ENDLIST
-LIST "EEPROM_OPB_IF_tb::work","hdl\EEPROM_OPB_IF_tb.v","FALSE","FALSE"
-SUBBLOCK "EEPROM_OPB_IF::work","hdl\EEPROM_OPB_IF.v","FALSE","FALSE"
-SUBBLOCK "SER_EEPROM_SIM::work","hdl\SER_EEPROM_SIM.vhd","FALSE","FALSE"
+LIST "EEPROM_OPB_IF_V2::work","hdl\EEPROM_OPB_IF_V2.v","FALSE","FALSE"
+SUBBLOCK "serial_eeprom_if_v2::work","hdl\serial_eeprom_if_v2.vhd","FALSE","FALSE"
 ENDLIST
 LIST "afifo::work","hdl\afifo.v","FALSE","FALSE"
 ENDLIST
@@ -577,6 +590,8 @@ ENDLIST
 LIST "cmn_uart::work","hdl\cmn_uart.vhd","FALSE","FALSE"
 ENDLIST
 LIST "DP_RAM_2R_1W::work","hdl\dual_port_ram.v","FALSE","FALSE"
+ENDLIST
+LIST "afifo::work","hdl\afifo.v","FALSE","FALSE"
 ENDLIST
 LIST "afifo::work","hdl\afifo.v","FALSE","FALSE"
 ENDLIST
@@ -627,6 +642,12 @@ LIST "SER_EEPROM_SIM::work","hdl\SER_EEPROM_SIM.vhd","FALSE","FALSE"
 ENDLIST
 LIST "serial_eeprom_if::work","hdl\serial_eeprom_if.vhd","FALSE","FALSE"
 ENDLIST
+LIST "serial_eeprom_if_v2::work","hdl\serial_eeprom_if_v2.vhd","FALSE","FALSE"
+ENDLIST
+LIST "serial_eeprom_if_v2_tb::work","hdl\serial_eeprom_if_v2_tb.v","FALSE","FALSE"
+SUBBLOCK "SER_EEPROM_SIM::work","hdl\SER_EEPROM_SIM.vhd","FALSE","FALSE"
+SUBBLOCK "serial_eeprom_if_v2::work","hdl\serial_eeprom_if_v2.vhd","FALSE","FALSE"
+ENDLIST
 LIST "SIMPLE_PH_PWM::work","hdl\SIMPLE_PH_PWM.vhd","FALSE","FALSE"
 ENDLIST
 LIST "top::work","hdl\top.v","FALSE","FALSE"
@@ -635,7 +656,7 @@ SUBBLOCK "AdderDecode::work","hdl\ADDR_DECODER.v","FALSE","FALSE"
 SUBBLOCK "CLOCK_DIV::work","hdl\CLK_DIV.V","FALSE","FALSE"
 SUBBLOCK "ClkGen::work","hdl\CLK_GEN.v","FALSE","FALSE"
 SUBBLOCK "DAC_DACx0504_IF::work","hdl\DAC_DACx0504_IF.v","FALSE","FALSE"
-SUBBLOCK "EEPROM_OPB_IF::work","hdl\EEPROM_OPB_IF.v","FALSE","FALSE"
+SUBBLOCK "EEPROM_OPB_IF_V2::work","hdl\EEPROM_OPB_IF_V2.v","FALSE","FALSE"
 SUBBLOCK "FPGA_WDI::work","hdl\FPGA_WD.v","FALSE","FALSE"
 SUBBLOCK "GPIO::work","hdl\GPIO.v","FALSE","FALSE"
 SUBBLOCK "MSSB_IF::work","hdl\MSSB_IF.v","FALSE","FALSE"

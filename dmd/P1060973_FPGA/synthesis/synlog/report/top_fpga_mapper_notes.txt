@@ -1,115 +1,107 @@
 @N: MF916 |Option synthesis_strategy=base is enabled. 
 @N: MF248 |Running in 64-bit mode.
 @N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":170:4:170:5|Removing sequential instance LAST_PWM[3:1] (in view: work.PH_PWM_625_0_80_3_3_0(behavioral)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance sPWM[3:1] (in view: work.PH_PWM_625_0_80_3_3_0(behavioral)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":197:4:197:5|Removing sequential instance PWM_CNTR[6:0] (in view: work.PH_PWM_625_0_80_3_3_0(behavioral)) of type view:PrimLib.dffpatr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":184:4:184:5|Removing sequential instance ENABLE_CNTR[1:0] (in view: work.PH_PWM_625_0_80_3_3_0(behavioral)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance start_timer[1:0] (in view: work.PH_PWM_625_0_80_3_3_0(behavioral)) of type view:PrimLib.sdffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":170:4:170:5|Removing sequential instance LAST_ENABLE_SYNC (in view: work.PH_PWM_625_0_80_3_3_0(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":157:4:157:5|Removing sequential instance ENABLE_SYNC (in view: work.PH_PWM_625_0_80_3_3_0(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":170:4:170:5|Removing sequential instance LAST_PWM[3:1] (in view: work.PH_PWM_625_0_80_3_3_1(behavioral)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":197:4:197:5|Removing sequential instance PWM_CNTR[6:0] (in view: work.PH_PWM_625_0_80_3_3_1(behavioral)) of type view:PrimLib.dffpatr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":184:4:184:5|Removing sequential instance ENABLE_CNTR[1:0] (in view: work.PH_PWM_625_0_80_3_3_1(behavioral)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":170:4:170:5|Removing sequential instance LAST_ENABLE_SYNC (in view: work.PH_PWM_625_0_80_3_3_1(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":157:4:157:5|Removing sequential instance ENABLE_SYNC (in view: work.PH_PWM_625_0_80_3_3_1(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":170:4:170:5|Removing sequential instance LAST_PWM[3:1] (in view: work.PH_PWM_625_0_80_3_3_2(behavioral)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":197:4:197:5|Removing sequential instance PWM_CNTR[6:0] (in view: work.PH_PWM_625_0_80_3_3_2(behavioral)) of type view:PrimLib.dffpatr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":184:4:184:5|Removing sequential instance ENABLE_CNTR[1:0] (in view: work.PH_PWM_625_0_80_3_3_2(behavioral)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":170:4:170:5|Removing sequential instance LAST_ENABLE_SYNC (in view: work.PH_PWM_625_0_80_3_3_2(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":157:4:157:5|Removing sequential instance ENABLE_SYNC (in view: work.PH_PWM_625_0_80_3_3_2(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":170:4:170:5|Removing sequential instance LAST_PWM[3:1] (in view: work.PH_PWM_625_0_80_3_3_3(behavioral)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":197:4:197:5|Removing sequential instance PWM_CNTR[6:0] (in view: work.PH_PWM_625_0_80_3_3_3(behavioral)) of type view:PrimLib.dffpatr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":184:4:184:5|Removing sequential instance ENABLE_CNTR[1:0] (in view: work.PH_PWM_625_0_80_3_3_3(behavioral)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":170:4:170:5|Removing sequential instance LAST_ENABLE_SYNC (in view: work.PH_PWM_625_0_80_3_3_3(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":157:4:157:5|Removing sequential instance ENABLE_SYNC (in view: work.PH_PWM_625_0_80_3_3_3(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":170:4:170:5|Removing sequential instance LAST_PWM[3:1] (in view: work.PH_PWM_625_0_80_3_3_4(behavioral)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":197:4:197:5|Removing sequential instance PWM_CNTR[6:0] (in view: work.PH_PWM_625_0_80_3_3_4(behavioral)) of type view:PrimLib.dffpatr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":184:4:184:5|Removing sequential instance ENABLE_CNTR[1:0] (in view: work.PH_PWM_625_0_80_3_3_4(behavioral)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":170:4:170:5|Removing sequential instance LAST_ENABLE_SYNC (in view: work.PH_PWM_625_0_80_3_3_4(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":157:4:157:5|Removing sequential instance ENABLE_SYNC (in view: work.PH_PWM_625_0_80_3_3_4(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":170:4:170:5|Removing sequential instance LAST_PWM[3:1] (in view: work.PH_PWM_625_0_80_3_3_5(behavioral)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":197:4:197:5|Removing sequential instance PWM_CNTR[6:0] (in view: work.PH_PWM_625_0_80_3_3_5(behavioral)) of type view:PrimLib.dffpatr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":184:4:184:5|Removing sequential instance ENABLE_CNTR[1:0] (in view: work.PH_PWM_625_0_80_3_3_5(behavioral)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":170:4:170:5|Removing sequential instance LAST_ENABLE_SYNC (in view: work.PH_PWM_625_0_80_3_3_5(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":157:4:157:5|Removing sequential instance ENABLE_SYNC (in view: work.PH_PWM_625_0_80_3_3_5(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":170:4:170:5|Removing sequential instance LAST_PWM[3:1] (in view: work.PH_PWM_625_0_80_3_3_6(behavioral)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":197:4:197:5|Removing sequential instance PWM_CNTR[6:0] (in view: work.PH_PWM_625_0_80_3_3_6(behavioral)) of type view:PrimLib.dffpatr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":184:4:184:5|Removing sequential instance ENABLE_CNTR[1:0] (in view: work.PH_PWM_625_0_80_3_3_6(behavioral)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":170:4:170:5|Removing sequential instance LAST_ENABLE_SYNC (in view: work.PH_PWM_625_0_80_3_3_6(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":157:4:157:5|Removing sequential instance ENABLE_SYNC (in view: work.PH_PWM_625_0_80_3_3_6(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":170:4:170:5|Removing sequential instance LAST_PWM[3:1] (in view: work.PH_PWM_625_0_80_3_3_7(behavioral)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance sPWM[3:1] (in view: work.PH_PWM_625_0_80_3_3_7(behavioral)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":197:4:197:5|Removing sequential instance PWM_CNTR[6:0] (in view: work.PH_PWM_625_0_80_3_3_7(behavioral)) of type view:PrimLib.dffpatr(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":184:4:184:5|Removing sequential instance ENABLE_CNTR[1:0] (in view: work.PH_PWM_625_0_80_3_3_7(behavioral)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Removing sequential instance start_timer[1:0] (in view: work.PH_PWM_625_0_80_3_3_7(behavioral)) of type view:PrimLib.sdffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":170:4:170:5|Removing sequential instance LAST_ENABLE_SYNC (in view: work.PH_PWM_625_0_80_3_3_7(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":157:4:157:5|Removing sequential instance ENABLE_SYNC (in view: work.PH_PWM_625_0_80_3_3_7(behavioral)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: MF104 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\serial_eeprom_if_v2.vhd":45:7:45:25|Found compile point of type hard on View view:work.serial_eeprom_if_v2(rtl) 
+@N: MF107 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\serial_eeprom_if_v2.vhd":45:7:45:25|Old database up-to-date, remapping Compile point view:work.serial_eeprom_if_v2(rtl) unnecessary 
+**** Begin Compile Point : top ****
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+@N: MF104 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\serial_eeprom_if_v2.vhd":45:7:45:25|Found compile point of type hard on View view:work.serial_eeprom_if_v2(rtl) 
+@N: MF105 |Performing bottom-up mapping of Top level view:work.top(verilog) 
+@N: MF106 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\top.v":3:7:3:9|Mapping Top level view:work.top(verilog) because 
 @N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\oscillator_counter.v":65:4:65:9|Found counter in view:work.OSCILLATOR_COUNTER(verilog) instance count_data[15:0] 
-@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\adc_ads8864_if.v":147:4:147:9|Found counter in view:work.ADC_ADS8864_IF(verilog) instance data_count[10:0] 
-@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\adc_ads8864_if.v":130:1:130:6|Found counter in view:work.ADC_ADS8864_IF(verilog) instance conv_count[5:0] 
 @N: MO225 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\dac_dacx0504_if.v":127:4:127:9|There are no possible illegal states for state machine state[3:0] (in view: work.DAC_DACx0504_IF(verilog)); safe FSM implementation is not required.
 @N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\dac_dacx0504_if.v":127:4:127:9|Found counter in view:work.DAC_DACx0504_IF(verilog) instance bit_count[4:0] 
 @N: FX702 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance opb_fifo_inst.mem[23:0] (in view: work.DAC_DACx0504_IF(verilog)).
 @N: FX702 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance opb_fifo_inst.mem[23:0]
 @N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\gpio.v":347:4:347:9|Found counter in view:work.GPIO(verilog) instance LFT_SHUNT_EN_CNT[31:0] 
 @N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\gpio.v":334:4:334:9|Found counter in view:work.GPIO(verilog) instance GNT_SHUNT_EN_CNT[31:0] 
-@N: MO225 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\mssb_if.v":92:4:92:9|There are no possible illegal states for state machine state[1:0] (in view: work.MSSB_IF(verilog)); safe FSM implementation is not required.
-@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\mssb_if.v":196:4:196:9|Found counter in view:work.MSSB_IF(verilog) instance mssb_error_bytes[31:0] 
-@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\mssb_if.v":172:4:172:9|Found counter in view:work.MSSB_IF(verilog) instance mssb_recv_bytes[31:0] 
-@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\mssb_if.v":144:4:144:9|Found counter in view:work.MSSB_IF(verilog) instance actual_trans_bytes[19:0] 
-@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\mssb_if.v":184:4:184:9|Found counter in view:work.MSSB_IF(verilog) instance DATA_STREAM_OUT_EXPECTED[7:0] 
-@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\mssb_if.v":119:4:119:9|Found counter in view:work.MSSB_IF(verilog) instance DATA_STREAM_IN[7:0] 
-@N: MO225 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|There are no possible illegal states for state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl)); safe FSM implementation is not required.
-@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":251:4:251:9|Found counter in view:work.cmn_pwm_wrapper_7(verilog) instance act_test_duration[15:0] 
+@N: MO225 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\mssb_if.v":92:4:92:9|There are no possible illegal states for state machine state[1:0] (in view: work.MSSB_IF_top(verilog)); safe FSM implementation is not required.
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\mssb_if.v":196:4:196:9|Found counter in view:work.MSSB_IF_top(verilog) instance mssb_error_bytes[31:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\mssb_if.v":172:4:172:9|Found counter in view:work.MSSB_IF_top(verilog) instance mssb_recv_bytes[31:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\mssb_if.v":144:4:144:9|Found counter in view:work.MSSB_IF_top(verilog) instance actual_trans_bytes[19:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\mssb_if.v":184:4:184:9|Found counter in view:work.MSSB_IF_top(verilog) instance DATA_STREAM_OUT_EXPECTED[7:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\mssb_if.v":119:4:119:9|Found counter in view:work.MSSB_IF_top(verilog) instance DATA_STREAM_IN[7:0] 
+@N: MO225 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|There are no possible illegal states for state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_921600_100000000_1_BAUD_RATECLOCK_FREQUENCY_top(rtl)); safe FSM implementation is not required.
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":261:4:261:9|Found counter in view:work.cmn_pwm_wrapper_7(verilog) instance act_test_duration[15:0] 
 @N: MF179 :|Found 17 by 17 bit equality operator ('==') un1_act_test_duration_1 (in view: work.cmn_pwm_wrapper_7(verilog))
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance DB_STATE[4] (in view: work.CMN_DEADBAND_5_0(rtl)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
-@N: MO230 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Found up-down counter in view:work.PH_PWM_625_0_80_3_3_0(behavioral) instance PWM_counter[8:0]  
+@N: MO230 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Found up-down counter in view:work.cmn_pwm_0(rtl) instance i_brk_pwm.PWM_counter[8:0]  
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance DB_STATE[4] (in view: work.CMN_DEADBAND_5_top_0(rtl)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
 @N: MO230 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\simple_ph_pwm.vhd":33:8:33:9|Found up-down counter in view:work.SIMPLE_PH_PWM_0(behavioral) instance counter1[15:0]  
-@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_1_0(rtl) instance debounce_cntr[27:0] 
-@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":251:4:251:9|Found counter in view:work.cmn_pwm_wrapper_6(verilog) instance act_test_duration[15:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_top_6(rtl) instance debounce_cntr[27:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_3_0(rtl) instance debounce_cntr[27:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":261:4:261:9|Found counter in view:work.cmn_pwm_wrapper_6(verilog) instance act_test_duration[15:0] 
 @N: MF179 :|Found 17 by 17 bit equality operator ('==') un1_act_test_duration_1 (in view: work.cmn_pwm_wrapper_6(verilog))
-@N: MO230 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Found up-down counter in view:work.PH_PWM_625_0_80_3_3_1(behavioral) instance PWM_counter[8:0]  
+@N: MO230 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Found up-down counter in view:work.cmn_pwm_1(rtl) instance i_brk_pwm.PWM_counter[8:0]  
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance DB_STATE[4] (in view: work.CMN_DEADBAND_5_0_1(rtl)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
-@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_0_1(rtl) instance debounce_cntr[27:0] 
-@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":251:4:251:9|Found counter in view:work.cmn_pwm_wrapper_5(verilog) instance act_test_duration[15:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_top_5(rtl) instance debounce_cntr[27:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_3_1(rtl) instance debounce_cntr[27:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":261:4:261:9|Found counter in view:work.cmn_pwm_wrapper_5(verilog) instance act_test_duration[15:0] 
 @N: MF179 :|Found 17 by 17 bit equality operator ('==') un1_act_test_duration_1 (in view: work.cmn_pwm_wrapper_5(verilog))
-@N: MO230 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Found up-down counter in view:work.PH_PWM_625_0_80_3_3_2(behavioral) instance PWM_counter[8:0]  
+@N: MO230 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Found up-down counter in view:work.cmn_pwm_2(rtl) instance i_brk_pwm.PWM_counter[8:0]  
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance DB_STATE[4] (in view: work.CMN_DEADBAND_5_0_2(rtl)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
-@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_0_2(rtl) instance debounce_cntr[27:0] 
-@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":251:4:251:9|Found counter in view:work.cmn_pwm_wrapper_4(verilog) instance act_test_duration[15:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_top_4(rtl) instance debounce_cntr[27:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_3_3(rtl) instance debounce_cntr[27:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":261:4:261:9|Found counter in view:work.cmn_pwm_wrapper_4(verilog) instance act_test_duration[15:0] 
 @N: MF179 :|Found 17 by 17 bit equality operator ('==') un1_act_test_duration_1 (in view: work.cmn_pwm_wrapper_4(verilog))
-@N: MO230 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Found up-down counter in view:work.PH_PWM_625_0_80_3_3_3(behavioral) instance PWM_counter[8:0]  
+@N: MO230 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Found up-down counter in view:work.cmn_pwm_3(rtl) instance i_brk_pwm.PWM_counter[8:0]  
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance DB_STATE[4] (in view: work.CMN_DEADBAND_5_0_3(rtl)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
-@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_0_3(rtl) instance debounce_cntr[27:0] 
-@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":251:4:251:9|Found counter in view:work.cmn_pwm_wrapper_3(verilog) instance act_test_duration[15:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_top_3(rtl) instance debounce_cntr[27:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_3_5(rtl) instance debounce_cntr[27:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":261:4:261:9|Found counter in view:work.cmn_pwm_wrapper_3(verilog) instance act_test_duration[15:0] 
 @N: MF179 :|Found 17 by 17 bit equality operator ('==') un1_act_test_duration_1 (in view: work.cmn_pwm_wrapper_3(verilog))
-@N: MO230 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Found up-down counter in view:work.PH_PWM_625_0_80_3_3_4(behavioral) instance PWM_counter[8:0]  
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance DB_STATE[4] (in view: work.CMN_DEADBAND_5_0_4(rtl)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
-@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_0_4(rtl) instance debounce_cntr[27:0] 
-@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":251:4:251:9|Found counter in view:work.cmn_pwm_wrapper_2(verilog) instance act_test_duration[15:0] 
+@N: MO230 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Found up-down counter in view:work.cmn_pwm_4(rtl) instance i_brk_pwm.PWM_counter[8:0]  
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_top_2(rtl) instance debounce_cntr[27:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_3_7(rtl) instance debounce_cntr[27:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":261:4:261:9|Found counter in view:work.cmn_pwm_wrapper_2(verilog) instance act_test_duration[15:0] 
 @N: MF179 :|Found 17 by 17 bit equality operator ('==') un1_act_test_duration_1 (in view: work.cmn_pwm_wrapper_2(verilog))
-@N: MO230 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Found up-down counter in view:work.PH_PWM_625_0_80_3_3_5(behavioral) instance PWM_counter[8:0]  
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance DB_STATE[4] (in view: work.CMN_DEADBAND_5_0_5(rtl)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
-@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_0_5(rtl) instance debounce_cntr[27:0] 
-@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":251:4:251:9|Found counter in view:work.cmn_pwm_wrapper_1(verilog) instance act_test_duration[15:0] 
+@N: MO230 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Found up-down counter in view:work.cmn_pwm_5(rtl) instance i_brk_pwm.PWM_counter[8:0]  
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_top_1(rtl) instance debounce_cntr[27:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_3_9(rtl) instance debounce_cntr[27:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":261:4:261:9|Found counter in view:work.cmn_pwm_wrapper_1(verilog) instance act_test_duration[15:0] 
 @N: MF179 :|Found 17 by 17 bit equality operator ('==') un1_act_test_duration_1 (in view: work.cmn_pwm_wrapper_1(verilog))
-@N: MO230 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Found up-down counter in view:work.PH_PWM_625_0_80_3_3_6(behavioral) instance PWM_counter[8:0]  
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance DB_STATE[4] (in view: work.CMN_DEADBAND_5_0_6(rtl)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
-@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_0_6(rtl) instance debounce_cntr[27:0] 
-@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":251:4:251:9|Found counter in view:work.cmn_pwm_wrapper_0(verilog) instance act_test_duration[15:0] 
+@N: MO230 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Found up-down counter in view:work.cmn_pwm_6(rtl) instance i_brk_pwm.PWM_counter[8:0]  
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_top_0(rtl) instance debounce_cntr[27:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_3_11(rtl) instance debounce_cntr[27:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":261:4:261:9|Found counter in view:work.cmn_pwm_wrapper_0(verilog) instance act_test_duration[15:0] 
 @N: MF179 :|Found 17 by 17 bit equality operator ('==') un1_act_test_duration_1 (in view: work.cmn_pwm_wrapper_0(verilog))
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance DB_STATE[4] (in view: work.CMN_DEADBAND_5(rtl)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
-@N: MO230 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Found up-down counter in view:work.PH_PWM_625_0_80_3_3_7(behavioral) instance PWM_counter[8:0]  
+@N: MO230 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\ph_pwm.vhd":85:4:85:5|Found up-down counter in view:work.cmn_pwm_7(rtl) instance i_brk_pwm.PWM_counter[8:0]  
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_deadband.vhd":91:10:91:11|Removing sequential instance DB_STATE[4] (in view: work.CMN_DEADBAND_5_top(rtl)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
 @N: MO230 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\simple_ph_pwm.vhd":33:8:33:9|Found up-down counter in view:work.SIMPLE_PH_PWM_7(behavioral) instance counter1[15:0]  
-@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_1_7(rtl) instance debounce_cntr[27:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_top(rtl) instance debounce_cntr[27:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Found counter in view:work.cmn_debouncer_8_8_3_14(rtl) instance debounce_cntr[27:0] 
+@N: MO225 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\adc_ads8864_if.v":455:1:455:6|There are no possible illegal states for state machine uart_tx_state[3:0] (in view: work.ADC_ADS8864_IF(verilog)); safe FSM implementation is not required.
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\adc_ads8864_if.v":520:1:520:6|Found counter in view:work.ADC_ADS8864_IF(verilog) instance extend_counter[16:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\adc_ads8864_if.v":174:4:174:9|Found counter in view:work.ADC_ADS8864_IF(verilog) instance data_count[10:0] 
+@N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\adc_ads8864_if.v":157:1:157:6|Found counter in view:work.ADC_ADS8864_IF(verilog) instance conv_count[5:0] 
+@N: FX702 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[15:0] (in view: work.afifo_16s_10s_16s_10s(verilog)).
+@N: FX702 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[15:0]
+@N: MF179 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\afifo.v":134:22:135:23|Found 11 by 11 bit equality operator ('==') wfull_next (in view: work.afifo_16s_10s_16s_10s(verilog))
+@N: MF179 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\afifo.v":196:23:196:45|Found 11 by 11 bit equality operator ('==') rempty_next (in view: work.afifo_16s_10s_16s_10s(verilog))
 @N: FX702 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0] (in view: work.afifo_8s_4s_8s_4s_1(verilog)).
 @N: FX702 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0]
 @N: FX702 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0] (in view: work.afifo_8s_4s_8s_4s_0(verilog)).
 @N: FX702 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\afifo.v":149:1:149:6|Found startup values on RAM instance mem[7:0]
 @N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":176:4:176:9|Found counter in view:work.msg_read(verilog) instance timeout_cnt[7:0] 
 @N: MO231 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_write.v":235:4:235:9|Found counter in view:work.msg_write(verilog) instance timeout_cnt[7:0] 
-@N: MO225 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|There are no possible illegal states for state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY(rtl)); safe FSM implementation is not required.
+@N: MO225 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_uart.vhd":353:6:353:7|There are no possible illegal states for state machine uart_rx_state[0:3] (in view: work.work_cmn_uart_rtl_false_115200_100000000_1_BAUD_RATECLOCK_FREQUENCY_0(rtl)); safe FSM implementation is not required.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Removing sequential instance i_brk_filt.deb_sig_out (in view: work.cmn_pwm_wrapper_7(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Removing sequential instance i_brk_filt.deb_sig_out (in view: work.cmn_pwm_wrapper_0(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Removing sequential instance gantry_brk1_if_0.i_mot_filt.deb_sig_out (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Removing sequential instance gantry_brk2_if_0.i_mot_filt.deb_sig_out (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Removing sequential instance gantry_brk3_if_0.i_mot_filt.deb_sig_out (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Removing sequential instance gantry_brk1_ret_if_0.i_mot_filt.deb_sig_out (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Removing sequential instance gantry_brk2_ret_if_0.i_mot_filt.deb_sig_out (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Removing sequential instance gantry_brk3_ret_if_0.i_mot_filt.deb_sig_out (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Removing sequential instance gantry_brk3_ret_if_0.i_mot_filt.debounce_cntr[27:0] (in view: work.top(verilog)) of type view:PrimLib.counter(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Removing sequential instance gantry_brk2_ret_if_0.i_mot_filt.debounce_cntr[27:0] (in view: work.top(verilog)) of type view:PrimLib.counter(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Removing sequential instance gantry_brk1_ret_if_0.i_mot_filt.debounce_cntr[27:0] (in view: work.top(verilog)) of type view:PrimLib.counter(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Removing sequential instance gantry_brk3_if_0.i_mot_filt.debounce_cntr[27:0] (in view: work.top(verilog)) of type view:PrimLib.counter(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Removing sequential instance gantry_brk2_if_0.i_mot_filt.debounce_cntr[27:0] (in view: work.top(verilog)) of type view:PrimLib.counter(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Removing sequential instance gantry_brk1_if_0.i_mot_filt.debounce_cntr[27:0] (in view: work.top(verilog)) of type view:PrimLib.counter(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Removing sequential instance lift_mot_if_0.i_brk_filt.debounce_cntr[27:0] (in view: work.top(verilog)) of type view:PrimLib.counter(prim) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_debouncer.vhd":51:10:51:11|Removing sequential instance gantry_mot_if_0.i_brk_filt.debounce_cntr[27:0] (in view: work.top(verilog)) of type view:PrimLib.counter(prim) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":265:4:265:9|Removing sequential instance adder_decode_0.SHUNT_EN_CNT_RE_d1 (in view: work.top(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":265:4:265:9|Removing sequential instance adder_decode_0.GPIO_FREE_IF_RE_d1 (in view: work.top(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":265:4:265:9|Removing sequential instance adder_decode_0.DEBUG_IF_RE_d1 (in view: work.top(verilog)) because it does not drive other instances.
@@ -127,23 +119,12 @@
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":265:4:265:9|Removing sequential instance adder_decode_0.GANTRY_EMOPS_IF_RE_d1 (in view: work.top(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":265:4:265:9|Removing sequential instance adder_decode_0.GANTRY_96V_IF_RE_d1 (in view: work.top(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\addr_decoder.v":265:4:265:9|Removing sequential instance adder_decode_0.PWR_IF_RE_d1 (in view: work.top(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":262:4:262:9|Removing sequential instance gantry_brk1_if_0.pwm_status[0] (in view: work.top(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":262:4:262:9|Removing sequential instance gantry_brk2_if_0.pwm_status[0] (in view: work.top(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":262:4:262:9|Removing sequential instance gantry_brk3_if_0.pwm_status[0] (in view: work.top(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":262:4:262:9|Removing sequential instance gantry_brk1_ret_if_0.pwm_status[0] (in view: work.top(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":262:4:262:9|Removing sequential instance gantry_brk2_ret_if_0.pwm_status[0] (in view: work.top(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":262:4:262:9|Removing sequential instance gantry_brk3_ret_if_0.pwm_status[0] (in view: work.top(verilog)) because it does not drive other instances.
-@N: FX271 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":241:4:241:9|Replicating instance cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_ADDR[21] (in view: work.top(verilog)) with 5 loads 1 time to improve timing.
-@N: FX271 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":241:4:241:9|Replicating instance cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_ADDR[20] (in view: work.top(verilog)) with 5 loads 1 time to improve timing.
-@N: FX271 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":241:4:241:9|Replicating instance cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_ADDR[9] (in view: work.top(verilog)) with 9 loads 1 time to improve timing.
-@N: FX271 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":241:4:241:9|Replicating instance cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_ADDR[6] (in view: work.top(verilog)) with 10 loads 1 time to improve timing.
-@N: FX271 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":241:4:241:9|Replicating instance cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_ADDR[7] (in view: work.top(verilog)) with 10 loads 1 time to improve timing.
-@N: FX271 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":241:4:241:9|Replicating instance cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_ADDR[8] (in view: work.top(verilog)) with 13 loads 1 time to improve timing.
-@N: FX271 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":241:4:241:9|Replicating instance cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_ADDR[2] (in view: work.top(verilog)) with 99 loads 3 times to improve timing.
-@N: FX271 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":241:4:241:9|Replicating instance cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_ADDR[11] (in view: work.top(verilog)) with 15 loads 1 time to improve timing.
-@N: FX271 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":241:4:241:9|Replicating instance cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_ADDR[12] (in view: work.top(verilog)) with 15 loads 1 time to improve timing.
-@N: FX271 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":241:4:241:9|Replicating instance cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_ADDR[3] (in view: work.top(verilog)) with 64 loads 2 times to improve timing.
-@N: FX271 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\msg_read.v":241:4:241:9|Replicating instance cmd_server_0.opb_emu_target_inst.msg_read_inst.OPB_ADDR[1] (in view: work.top(verilog)) with 41 loads 3 times to improve timing.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":272:4:272:9|Removing sequential instance gantry_brk1_if_0.pwm_status[0] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":272:4:272:9|Removing sequential instance gantry_brk3_if_0.pwm_status[0] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":272:4:272:9|Removing sequential instance gantry_brk1_ret_if_0.pwm_status[0] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":272:4:272:9|Removing sequential instance gantry_brk2_ret_if_0.pwm_status[0] (in view: work.top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\repo2\gpb\dmd\p1060973_fpga\hdl\cmn_pwm_wrapper.v":272:4:272:9|Removing sequential instance gantry_brk3_ret_if_0.pwm_status[0] (in view: work.top(verilog)) because it does not drive other instances.
+**** End Compile Point : top ****
 @N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
 @N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
 @N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.

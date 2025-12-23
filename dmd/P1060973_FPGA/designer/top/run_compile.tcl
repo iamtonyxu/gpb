@@ -20,6 +20,8 @@ set_defvar -name {USE_CONSTRAINT_FLOW} -value True
 set_defvar -name {FHB_AUTO_INSTANTIATION} -value {0}
 set_defvar -name {SYSTEM_CONTROLLER_SUSPEND_MODE} -value {0}
 
+set_partition_info -name "/top" -timestamp "1760777473"
+set_partition_info -name "/top/top" -timestamp "1759989902"
 set_compile_info \
     -category {"Device Selection"} \
     -name {"Family"} \
@@ -70,4 +72,5 @@ compile \
     -fam PolarFire \
     -die PA5M100T \
     -pkg fcg484 \
+    -partition_pdc_file {C:\repo2\gpb\dmd\P1060973_FPGA\designer\top\top.nmatinit.pdc} \
     -merge_pdc 0

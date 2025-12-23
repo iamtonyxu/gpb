@@ -1,0 +1,7 @@
+C:\Microchip\Libero_SoC_v2024.2\SynplifyPro\bin64\syn_nfilter.exe  -link  -top  top  -multisrs  C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\synwork\top_comp.srs  -osyn  C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\synwork\top_mult.srs  -log  C:\repo2\gpb\dmd\P1060973_FPGA\synthesis\synlog\top_multi_srs_gen.srr 
+relcom:..\..\..\..\..\..\Microchip\Libero_SoC_v2024.2\SynplifyPro\bin64\syn_nfilter.exe -link -top top -multisrs ..\synwork\top_comp.srs -osyn ..\synwork\top_mult.srs -log ..\synlog\top_multi_srs_gen.srr
+rc:0 success:1 runtime:1
+file:..\synwork\top_comp.srs|io:i|time:1760777466|size:141964|exec:0|csum:A555197ED5B4B51968458FD3505A869E
+file:..\synwork\top_mult.srs|io:o|time:1760777467|size:19982|exec:0|csum:
+file:..\synlog\top_multi_srs_gen.srr|io:o|time:1760777468|size:1155|exec:0|csum:
+file:..\..\..\..\..\..\microchip\libero_soc_v2024.2\synplifypro\bin64\syn_nfilter.exe|io:i|time:1721921320|size:10549248|exec:1|csum:4A569E4032A00F41D43F579562C7696C

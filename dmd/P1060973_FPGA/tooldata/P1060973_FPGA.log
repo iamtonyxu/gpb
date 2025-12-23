@@ -1,0 +1,16 @@
+Project Name: P1060973_FPGA
+Location: C:\repo2\gpb\dmd\P1060973_FPGA
+Description: 
+Preferred HDL Type: Verilog
+
+#-----------------------------------------------------
+                  Device Details
+#-----------------------------------------------------
+
+Part Number    : MPF100T-FCG484E
+Family         : PolarFire
+Die            : MPF100T
+Package        : FCG484
+Speed          : STD
+Core Voltage   : 1.0
+Range          : EXT

@@ -1,4 +1,6 @@
 |cmn_uart|parameter BAUD_RATE 115200;,parameter CLOCK_FREQUENCY 100000000;|
-serial_eeprom_if
+serial_eeprom_if_v2
+|cmn_uart|parameter BAUD_RATE 115200;,parameter CLOCK_FREQUENCY 100000000;|
 |cmn_uart|parameter BAUD_RATE 921600;,parameter CLOCK_FREQUENCY 100000000;|
 cmn_pwm
+|cmn_debouncer|parameter DEBOUNCE_TIME_LTOH 8;,parameter DEBOUNCE_TIME_HTOL 8;|

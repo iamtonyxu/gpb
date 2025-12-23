@@ -3,7 +3,7 @@
 <doc>
 <title>Global Net Report</title>
 <text>Microchip Technology Inc. - Microchip Libero Software Release v2024.2 (Version 2024.2.0.13)</text>
-<text>Date: Mon Jun 23 18:09:54 2025
+<text>Date: Sat Oct 18 16:53:51 2025
 </text>
 <section>
 <name>Global Nets Information</name>
@@ -20,83 +20,83 @@
  <cell>I_1/U0</cell>
  <cell>(875, 81)</cell>
  <cell>I_1/U0_Y</cell>
- <cell>4771</cell>
+ <cell>5962</cell>
 </row>
 <row>
  <cell>2</cell>
  <cell>I_2/U0</cell>
  <cell>(867, 81)</cell>
  <cell>I_2/U0_Y</cell>
- <cell>3805</cell>
+ <cell>4753</cell>
 </row>
 <row>
  <cell>3</cell>
- <cell>gantry_mot_if_0/clk_16khz_div/N_17_inferred_clock_RNIQJ1U5/U0</cell>
+ <cell>gantry_mot_if_0/clk_16khz_div/N_1_inferred_clock_RNI3FMH6/U0</cell>
  <cell>(864, 82)</cell>
- <cell>gantry_mot_if_0/clk_16khz_div/N_17_inferred_clock_RNIQJ1U5/U0_Y</cell>
- <cell>161</cell>
+ <cell>gantry_mot_if_0/clk_16khz_div/N_1_inferred_clock_RNI3FMH6/U0_Y</cell>
+ <cell>190</cell>
 </row>
 <row>
  <cell>4</cell>
- <cell>lift_mot_if_0/clk_16khz_div/N_17_inferred_clock_RNIKR217/U0</cell>
+ <cell>lift_mot_if_0/clk_16khz_div/N_1_inferred_clock_RNITS91/U0</cell>
  <cell>(865, 82)</cell>
- <cell>lift_mot_if_0/clk_16khz_div/N_17_inferred_clock_RNIKR217/U0_Y</cell>
- <cell>161</cell>
+ <cell>lift_mot_if_0/clk_16khz_div/N_1_inferred_clock_RNITS91/U0_Y</cell>
+ <cell>190</cell>
 </row>
 <row>
  <cell>5</cell>
- <cell>gantry_brk1_if_0/clk_16khz_div/N_17_inferred_clock_RNIQKG67/U0</cell>
- <cell>(869, 81)</cell>
- <cell>gantry_brk1_if_0/clk_16khz_div/N_17_inferred_clock_RNIQKG67/U0_Y</cell>
- <cell>88</cell>
-</row>
-<row>
- <cell>6</cell>
- <cell>gantry_brk1_ret_if_0/clk_16khz_div/N_17_inferred_clock_RNI4UU13/U0</cell>
- <cell>(870, 81)</cell>
- <cell>gantry_brk1_ret_if_0/clk_16khz_div/N_17_inferred_clock_RNI4UU13/U0_Y</cell>
- <cell>88</cell>
-</row>
-<row>
- <cell>7</cell>
- <cell>gantry_brk2_if_0/clk_16khz_div/N_17_inferred_clock_RNIRRMG/U0</cell>
- <cell>(871, 81)</cell>
- <cell>gantry_brk2_if_0/clk_16khz_div/N_17_inferred_clock_RNIRRMG/U0_Y</cell>
- <cell>88</cell>
-</row>
-<row>
- <cell>8</cell>
- <cell>gantry_brk2_ret_if_0/clk_16khz_div/N_17_inferred_clock_RNI597J7/U0</cell>
- <cell>(872, 81)</cell>
- <cell>gantry_brk2_ret_if_0/clk_16khz_div/N_17_inferred_clock_RNI597J7/U0_Y</cell>
- <cell>88</cell>
-</row>
-<row>
- <cell>9</cell>
- <cell>gantry_brk3_if_0/clk_16khz_div/N_17_inferred_clock_RNIS2TQ1/U0</cell>
- <cell>(873, 81)</cell>
- <cell>gantry_brk3_if_0/clk_16khz_div/N_17_inferred_clock_RNIS2TQ1/U0_Y</cell>
- <cell>88</cell>
-</row>
-<row>
- <cell>10</cell>
- <cell>gantry_brk3_ret_if_0/clk_16khz_div/N_17_inferred_clock_RNI6KF44/U0</cell>
- <cell>(874, 81)</cell>
- <cell>gantry_brk3_ret_if_0/clk_16khz_div/N_17_inferred_clock_RNI6KF44/U0_Y</cell>
- <cell>88</cell>
-</row>
-<row>
- <cell>11</cell>
  <cell>adc_0/sclk/CLK_OUT_RNIHMSU6/U0</cell>
  <cell>(864, 81)</cell>
  <cell>adc_0/sclk/CLK_OUT_RNIHMSU6/U0_Y</cell>
- <cell>84</cell>
+ <cell>160</cell>
+</row>
+<row>
+ <cell>6</cell>
+ <cell>gantry_brk1_if_0/clk_16khz_div/N_1_inferred_clock_RNI3G4C5/U0</cell>
+ <cell>(869, 81)</cell>
+ <cell>gantry_brk1_if_0/clk_16khz_div/N_1_inferred_clock_RNI3G4C5/U0_Y</cell>
+ <cell>117</cell>
+</row>
+<row>
+ <cell>7</cell>
+ <cell>gantry_brk2_if_0/clk_16khz_div/N_1_inferred_clock_RNI4M4M4/U0</cell>
+ <cell>(871, 81)</cell>
+ <cell>gantry_brk2_if_0/clk_16khz_div/N_1_inferred_clock_RNI4M4M4/U0_Y</cell>
+ <cell>117</cell>
+</row>
+<row>
+ <cell>8</cell>
+ <cell>gantry_brk3_if_0/clk_16khz_div/N_1_inferred_clock_RNI5S404/U0</cell>
+ <cell>(873, 81)</cell>
+ <cell>gantry_brk3_if_0/clk_16khz_div/N_1_inferred_clock_RNI5S404/U0_Y</cell>
+ <cell>117</cell>
+</row>
+<row>
+ <cell>9</cell>
+ <cell>gantry_brk1_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIDFJO4/U0</cell>
+ <cell>(870, 81)</cell>
+ <cell>gantry_brk1_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIDFJO4/U0_Y</cell>
+ <cell>103</cell>
+</row>
+<row>
+ <cell>10</cell>
+ <cell>gantry_brk2_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIEPHB6/U0</cell>
+ <cell>(872, 81)</cell>
+ <cell>gantry_brk2_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIEPHB6/U0_Y</cell>
+ <cell>103</cell>
+</row>
+<row>
+ <cell>11</cell>
+ <cell>gantry_brk3_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIF3GU7/U0</cell>
+ <cell>(874, 81)</cell>
+ <cell>gantry_brk3_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIF3GU7/U0_Y</cell>
+ <cell>103</cell>
 </row>
 <row>
  <cell>12</cell>
- <cell>dac_0/sclk/N_17_inferred_clock_RNIE7TP2/U0</cell>
+ <cell>dac_0/sclk/N_1_inferred_clock_RNINEIH3/U0</cell>
  <cell>(868, 81)</cell>
- <cell>dac_0/sclk/N_17_inferred_clock_RNIE7TP2/U0_Y</cell>
+ <cell>dac_0/sclk/N_1_inferred_clock_RNINEIH3/U0_Y</cell>
  <cell>78</cell>
 </row>
 <row>
@@ -111,14 +111,14 @@
  <cell>I_2/U0_GB0</cell>
  <cell>(879, 82)</cell>
  <cell>I_2/U0_gbs_1</cell>
- <cell>34</cell>
+ <cell>17</cell>
 </row>
 <row>
  <cell>15</cell>
  <cell>I_1/U0_GB0</cell>
  <cell>(887, 81)</cell>
  <cell>I_1/U0_gbs_1</cell>
- <cell>34</cell>
+ <cell>17</cell>
 </row>
 <row>
  <cell>16</cell>
@@ -162,7 +162,7 @@
  <cell>I_1/U0</cell>
  <cell>RESET_N_c</cell>
  <cell>ROUTED</cell>
- <cell>8</cell>
+ <cell>9</cell>
 </row>
 <row>
  <cell>2</cell>
@@ -198,7 +198,7 @@
  <cell>I_1/U0_GB0</cell>
  <cell>RESET_N_c</cell>
  <cell>ROUTED</cell>
- <cell>8</cell>
+ <cell>9</cell>
 </row>
 <row>
  <cell>5</cell>
@@ -230,97 +230,97 @@
 <row>
  <cell>1</cell>
  <cell>gantry_mot_if_0/clk_16khz_div/clkout:Q</cell>
- <cell>(870, 91)</cell>
- <cell>gantry_mot_if_0/clk_16khz_div/N_17_inferred_clock_RNIQJ1U5/U0</cell>
- <cell>gantry_mot_if_0/clk_16khz_div/N_17_2</cell>
+ <cell>(874, 73)</cell>
+ <cell>gantry_mot_if_0/clk_16khz_div/N_1_inferred_clock_RNI3FMH6/U0</cell>
+ <cell>gantry_mot_if_0/clk_16khz_div/N_1</cell>
  <cell>ROUTED</cell>
  <cell>2</cell>
 </row>
 <row>
  <cell>2</cell>
  <cell>lift_mot_if_0/clk_16khz_div/clkout:Q</cell>
- <cell>(831, 85)</cell>
- <cell>lift_mot_if_0/clk_16khz_div/N_17_inferred_clock_RNIKR217/U0</cell>
- <cell>lift_mot_if_0/clk_16khz_div/N_17_9</cell>
+ <cell>(857, 91)</cell>
+ <cell>lift_mot_if_0/clk_16khz_div/N_1_inferred_clock_RNITS91/U0</cell>
+ <cell>lift_mot_if_0/clk_16khz_div/N_1_0</cell>
  <cell>ROUTED</cell>
  <cell>2</cell>
 </row>
 <row>
  <cell>3</cell>
- <cell>gantry_brk1_if_0/clk_16khz_div/clkout:Q</cell>
- <cell>(911, 79)</cell>
- <cell>gantry_brk1_if_0/clk_16khz_div/N_17_inferred_clock_RNIQKG67/U0</cell>
- <cell>gantry_brk1_if_0/clk_16khz_div/N_17_3</cell>
- <cell>ROUTED</cell>
- <cell>2</cell>
-</row>
-<row>
- <cell>4</cell>
- <cell>gantry_brk1_ret_if_0/clk_16khz_div/clkout:Q</cell>
- <cell>(862, 79)</cell>
- <cell>gantry_brk1_ret_if_0/clk_16khz_div/N_17_inferred_clock_RNI4UU13/U0</cell>
- <cell>gantry_brk1_ret_if_0/clk_16khz_div/N_17_6</cell>
- <cell>ROUTED</cell>
- <cell>2</cell>
-</row>
-<row>
- <cell>5</cell>
- <cell>gantry_brk2_if_0/clk_16khz_div/clkout:Q</cell>
- <cell>(873, 70)</cell>
- <cell>gantry_brk2_if_0/clk_16khz_div/N_17_inferred_clock_RNIRRMG/U0</cell>
- <cell>gantry_brk2_if_0/clk_16khz_div/N_17_4</cell>
- <cell>ROUTED</cell>
- <cell>2</cell>
-</row>
-<row>
- <cell>6</cell>
- <cell>gantry_brk2_ret_if_0/clk_16khz_div/clkout:Q</cell>
- <cell>(874, 73)</cell>
- <cell>gantry_brk2_ret_if_0/clk_16khz_div/N_17_inferred_clock_RNI597J7/U0</cell>
- <cell>gantry_brk2_ret_if_0/clk_16khz_div/N_17_7</cell>
- <cell>ROUTED</cell>
- <cell>2</cell>
-</row>
-<row>
- <cell>7</cell>
- <cell>gantry_brk3_if_0/clk_16khz_div/clkout:Q</cell>
- <cell>(873, 85)</cell>
- <cell>gantry_brk3_if_0/clk_16khz_div/N_17_inferred_clock_RNIS2TQ1/U0</cell>
- <cell>gantry_brk3_if_0/clk_16khz_div/N_17_5</cell>
- <cell>ROUTED</cell>
- <cell>2</cell>
-</row>
-<row>
- <cell>8</cell>
- <cell>gantry_brk3_ret_if_0/clk_16khz_div/clkout:Q</cell>
- <cell>(898, 85)</cell>
- <cell>gantry_brk3_ret_if_0/clk_16khz_div/N_17_inferred_clock_RNI6KF44/U0</cell>
- <cell>gantry_brk3_ret_if_0/clk_16khz_div/N_17_8</cell>
- <cell>ROUTED</cell>
- <cell>2</cell>
-</row>
-<row>
- <cell>9</cell>
  <cell>adc_0/sclk/CLK_OUT:Y</cell>
- <cell>(746, 39)</cell>
+ <cell>(414, 54)</cell>
  <cell>adc_0/sclk/CLK_OUT_RNIHMSU6/U0</cell>
  <cell>adc_0/sclk/CLK_OUT_1</cell>
  <cell>ROUTED</cell>
  <cell>2</cell>
 </row>
 <row>
+ <cell>4</cell>
+ <cell>gantry_brk1_if_0/clk_16khz_div/clkout:Q</cell>
+ <cell>(862, 79)</cell>
+ <cell>gantry_brk1_if_0/clk_16khz_div/N_1_inferred_clock_RNI3G4C5/U0</cell>
+ <cell>gantry_brk1_if_0/clk_16khz_div/N_1_2</cell>
+ <cell>ROUTED</cell>
+ <cell>2</cell>
+</row>
+<row>
+ <cell>5</cell>
+ <cell>gantry_brk2_if_0/clk_16khz_div/clkout:Q</cell>
+ <cell>(874, 85)</cell>
+ <cell>gantry_brk2_if_0/clk_16khz_div/N_1_inferred_clock_RNI4M4M4/U0</cell>
+ <cell>gantry_brk2_if_0/clk_16khz_div/N_1_3</cell>
+ <cell>ROUTED</cell>
+ <cell>2</cell>
+</row>
+<row>
+ <cell>6</cell>
+ <cell>gantry_brk3_if_0/clk_16khz_div/clkout:Q</cell>
+ <cell>(846, 85)</cell>
+ <cell>gantry_brk3_if_0/clk_16khz_div/N_1_inferred_clock_RNI5S404/U0</cell>
+ <cell>gantry_brk3_if_0/clk_16khz_div/N_1_4</cell>
+ <cell>ROUTED</cell>
+ <cell>2</cell>
+</row>
+<row>
+ <cell>7</cell>
+ <cell>gantry_brk1_ret_if_0/clk_16khz_div/clkout:Q</cell>
+ <cell>(836, 79)</cell>
+ <cell>gantry_brk1_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIDFJO4/U0</cell>
+ <cell>gantry_brk1_ret_if_0/clk_16khz_div/N_1_5</cell>
+ <cell>ROUTED</cell>
+ <cell>2</cell>
+</row>
+<row>
+ <cell>8</cell>
+ <cell>gantry_brk2_ret_if_0/clk_16khz_div/clkout:Q</cell>
+ <cell>(897, 85)</cell>
+ <cell>gantry_brk2_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIEPHB6/U0</cell>
+ <cell>gantry_brk2_ret_if_0/clk_16khz_div/N_1_6</cell>
+ <cell>ROUTED</cell>
+ <cell>2</cell>
+</row>
+<row>
+ <cell>9</cell>
+ <cell>gantry_brk3_ret_if_0/clk_16khz_div/clkout:Q</cell>
+ <cell>(852, 94)</cell>
+ <cell>gantry_brk3_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIF3GU7/U0</cell>
+ <cell>gantry_brk3_ret_if_0/clk_16khz_div/N_1_7</cell>
+ <cell>ROUTED</cell>
+ <cell>2</cell>
+</row>
+<row>
  <cell>10</cell>
  <cell>dac_0/sclk/clkout:Q</cell>
- <cell>(636, 61)</cell>
- <cell>dac_0/sclk/N_17_inferred_clock_RNIE7TP2/U0</cell>
- <cell>dac_0/sclk/N_17_1</cell>
+ <cell>(565, 64)</cell>
+ <cell>dac_0/sclk/N_1_inferred_clock_RNINEIH3/U0</cell>
+ <cell>dac_0/sclk/N_1_1</cell>
  <cell>ROUTED</cell>
  <cell>3</cell>
 </row>
 <row>
  <cell>11</cell>
  <cell>clk_gen_0/pulse2khz_div/CLK_OUT:Y</cell>
- <cell>(760, 39)</cell>
+ <cell>(786, 39)</cell>
  <cell>clk_gen_0/pulse2khz_div/CLK_OUT_RNIP6F97/U0</cell>
  <cell>clk_gen_0/pulse2khz_div/CLK_OUT_Z</cell>
  <cell>ROUTED</cell>
@@ -329,7 +329,7 @@
 <row>
  <cell>12</cell>
  <cell>clk_gen_0/wdclk_div/CLK_OUT:Y</cell>
- <cell>(758, 39)</cell>
+ <cell>(784, 39)</cell>
  <cell>clk_gen_0/wdclk_div/CLK_OUT_RNI6ELQ2/U0</cell>
  <cell>clk_gen_0/wdclk_div/CLK_OUT_0</cell>
  <cell>ROUTED</cell>
@@ -368,10 +368,10 @@
  <cell>I_1/U0</cell>
  <cell>(875, 81)</cell>
  <cell>I_1/U0_Y</cell>
- <cell>4771</cell>
+ <cell>5962</cell>
  <cell>1</cell>
  <cell>(437, 13)</cell>
- <cell>105</cell>
+ <cell>601</cell>
 </row>
 <row>
  <cell> </cell>
@@ -381,7 +381,7 @@
  <cell></cell>
  <cell>2</cell>
  <cell>(437, 40)</cell>
- <cell>509</cell>
+ <cell>920</cell>
 </row>
 <row>
  <cell> </cell>
@@ -391,7 +391,7 @@
  <cell></cell>
  <cell>3</cell>
  <cell>(437, 67)</cell>
- <cell>182</cell>
+ <cell>128</cell>
 </row>
 <row>
  <cell> </cell>
@@ -401,7 +401,7 @@
  <cell></cell>
  <cell>4</cell>
  <cell>(437, 97)</cell>
- <cell>58</cell>
+ <cell>42</cell>
 </row>
 <row>
  <cell> </cell>
@@ -410,8 +410,8 @@
  <cell></cell>
  <cell></cell>
  <cell>5</cell>
- <cell>(443, 13)</cell>
- <cell>925</cell>
+ <cell>(437, 124)</cell>
+ <cell>16</cell>
 </row>
 <row>
  <cell> </cell>
@@ -420,8 +420,8 @@
  <cell></cell>
  <cell></cell>
  <cell>6</cell>
- <cell>(443, 40)</cell>
- <cell>1988</cell>
+ <cell>(443, 13)</cell>
+ <cell>1736</cell>
 </row>
 <row>
  <cell> </cell>
@@ -430,8 +430,8 @@
  <cell></cell>
  <cell></cell>
  <cell>7</cell>
- <cell>(443, 67)</cell>
- <cell>953</cell>
+ <cell>(443, 40)</cell>
+ <cell>1935</cell>
 </row>
 <row>
  <cell> </cell>
@@ -440,18 +440,28 @@
  <cell></cell>
  <cell></cell>
  <cell>8</cell>
+ <cell>(443, 67)</cell>
+ <cell>516</cell>
+</row>
+<row>
+ <cell> </cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>9</cell>
  <cell>(443, 97)</cell>
- <cell>51</cell>
+ <cell>68</cell>
 </row>
 <row>
  <cell>2</cell>
  <cell>I_2/U0</cell>
  <cell>(867, 81)</cell>
  <cell>I_2/U0_Y</cell>
- <cell>3805</cell>
+ <cell>4753</cell>
  <cell>1</cell>
  <cell>(436, 14)</cell>
- <cell>24</cell>
+ <cell>449</cell>
 </row>
 <row>
  <cell> </cell>
@@ -461,7 +471,7 @@
  <cell></cell>
  <cell>2</cell>
  <cell>(436, 41)</cell>
- <cell>288</cell>
+ <cell>627</cell>
 </row>
 <row>
  <cell> </cell>
@@ -471,7 +481,7 @@
  <cell></cell>
  <cell>3</cell>
  <cell>(436, 68)</cell>
- <cell>60</cell>
+ <cell>88</cell>
 </row>
 <row>
  <cell> </cell>
@@ -481,7 +491,7 @@
  <cell></cell>
  <cell>4</cell>
  <cell>(442, 14)</cell>
- <cell>761</cell>
+ <cell>1403</cell>
 </row>
 <row>
  <cell> </cell>
@@ -491,7 +501,7 @@
  <cell></cell>
  <cell>5</cell>
  <cell>(442, 41)</cell>
- <cell>1828</cell>
+ <cell>1816</cell>
 </row>
 <row>
  <cell> </cell>
@@ -501,7 +511,7 @@
  <cell></cell>
  <cell>6</cell>
  <cell>(442, 68)</cell>
- <cell>793</cell>
+ <cell>302</cell>
 </row>
 <row>
  <cell> </cell>
@@ -511,16 +521,116 @@
  <cell></cell>
  <cell>7</cell>
  <cell>(442, 98)</cell>
- <cell>51</cell>
+ <cell>68</cell>
 </row>
 <row>
  <cell>3</cell>
- <cell>gantry_mot_if_0/clk_16khz_div/N_17_inferred_clock_RNIQJ1U5/U0</cell>
+ <cell>gantry_mot_if_0/clk_16khz_div/N_1_inferred_clock_RNI3FMH6/U0</cell>
  <cell>(864, 82)</cell>
- <cell>gantry_mot_if_0/clk_16khz_div/N_17_inferred_clock_RNIQJ1U5/U0_Y</cell>
- <cell>161</cell>
+ <cell>gantry_mot_if_0/clk_16khz_div/N_1_inferred_clock_RNI3FMH6/U0_Y</cell>
+ <cell>190</cell>
+ <cell> </cell>
+ <cell>(439, 12)</cell>
+ <cell>190</cell>
+</row>
+<row>
+ <cell>4</cell>
+ <cell>lift_mot_if_0/clk_16khz_div/N_1_inferred_clock_RNITS91/U0</cell>
+ <cell>(865, 82)</cell>
+ <cell>lift_mot_if_0/clk_16khz_div/N_1_inferred_clock_RNITS91/U0_Y</cell>
+ <cell>190</cell>
  <cell>1</cell>
- <cell>(433, 12)</cell>
+ <cell>(436, 96)</cell>
+ <cell>42</cell>
+</row>
+<row>
+ <cell> </cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>2</cell>
+ <cell>(436, 123)</cell>
+ <cell>16</cell>
+</row>
+<row>
+ <cell> </cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>3</cell>
+ <cell>(442, 39)</cell>
+ <cell>16</cell>
+</row>
+<row>
+ <cell> </cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>4</cell>
+ <cell>(442, 66)</cell>
+ <cell>116</cell>
+</row>
+<row>
+ <cell>5</cell>
+ <cell>adc_0/sclk/CLK_OUT_RNIHMSU6/U0</cell>
+ <cell>(864, 81)</cell>
+ <cell>adc_0/sclk/CLK_OUT_RNIHMSU6/U0_Y</cell>
+ <cell>160</cell>
+ <cell>1</cell>
+ <cell>(432, 39)</cell>
+ <cell>99</cell>
+</row>
+<row>
+ <cell> </cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>2</cell>
+ <cell>(432, 66)</cell>
+ <cell>47</cell>
+</row>
+<row>
+ <cell> </cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>3</cell>
+ <cell>(438, 66)</cell>
+ <cell>14</cell>
+</row>
+<row>
+ <cell>6</cell>
+ <cell>gantry_brk1_if_0/clk_16khz_div/N_1_inferred_clock_RNI3G4C5/U0</cell>
+ <cell>(869, 81)</cell>
+ <cell>gantry_brk1_if_0/clk_16khz_div/N_1_inferred_clock_RNI3G4C5/U0_Y</cell>
+ <cell>117</cell>
+ <cell>1</cell>
+ <cell>(435, 13)</cell>
+ <cell>35</cell>
+</row>
+<row>
+ <cell> </cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>2</cell>
+ <cell>(441, 13)</cell>
+ <cell>82</cell>
+</row>
+<row>
+ <cell>7</cell>
+ <cell>gantry_brk2_if_0/clk_16khz_div/N_1_inferred_clock_RNI4M4M4/U0</cell>
+ <cell>(871, 81)</cell>
+ <cell>gantry_brk2_if_0/clk_16khz_div/N_1_inferred_clock_RNI4M4M4/U0_Y</cell>
+ <cell>117</cell>
+ <cell>1</cell>
+ <cell>(437, 12)</cell>
  <cell>44</cell>
 </row>
 <row>
@@ -530,138 +640,18 @@
  <cell></cell>
  <cell></cell>
  <cell>2</cell>
- <cell>(439, 12)</cell>
- <cell>117</cell>
-</row>
-<row>
- <cell>4</cell>
- <cell>lift_mot_if_0/clk_16khz_div/N_17_inferred_clock_RNIKR217/U0</cell>
- <cell>(865, 82)</cell>
- <cell>lift_mot_if_0/clk_16khz_div/N_17_inferred_clock_RNIKR217/U0_Y</cell>
- <cell>161</cell>
- <cell>1</cell>
- <cell>(436, 66)</cell>
- <cell>29</cell>
-</row>
-<row>
- <cell> </cell>
- <cell></cell>
- <cell></cell>
- <cell></cell>
- <cell></cell>
- <cell>2</cell>
- <cell>(436, 96)</cell>
- <cell>58</cell>
-</row>
-<row>
- <cell> </cell>
- <cell></cell>
- <cell></cell>
- <cell></cell>
- <cell></cell>
- <cell>3</cell>
- <cell>(442, 66)</cell>
- <cell>74</cell>
-</row>
-<row>
- <cell>5</cell>
- <cell>gantry_brk1_if_0/clk_16khz_div/N_17_inferred_clock_RNIQKG67/U0</cell>
- <cell>(869, 81)</cell>
- <cell>gantry_brk1_if_0/clk_16khz_div/N_17_inferred_clock_RNIQKG67/U0_Y</cell>
- <cell>88</cell>
- <cell>1</cell>
- <cell>(435, 40)</cell>
- <cell>30</cell>
-</row>
-<row>
- <cell> </cell>
- <cell></cell>
- <cell></cell>
- <cell></cell>
- <cell></cell>
- <cell>2</cell>
- <cell>(435, 67)</cell>
- <cell>14</cell>
-</row>
-<row>
- <cell> </cell>
- <cell></cell>
- <cell></cell>
- <cell></cell>
- <cell></cell>
- <cell>3</cell>
- <cell>(441, 40)</cell>
- <cell>16</cell>
-</row>
-<row>
- <cell> </cell>
- <cell></cell>
- <cell></cell>
- <cell></cell>
- <cell></cell>
- <cell>4</cell>
- <cell>(441, 67)</cell>
- <cell>28</cell>
-</row>
-<row>
- <cell>6</cell>
- <cell>gantry_brk1_ret_if_0/clk_16khz_div/N_17_inferred_clock_RNI4UU13/U0</cell>
- <cell>(870, 81)</cell>
- <cell>gantry_brk1_ret_if_0/clk_16khz_div/N_17_inferred_clock_RNI4UU13/U0_Y</cell>
- <cell>88</cell>
- <cell>1</cell>
- <cell>(434, 39)</cell>
- <cell>49</cell>
-</row>
-<row>
- <cell> </cell>
- <cell></cell>
- <cell></cell>
- <cell></cell>
- <cell></cell>
- <cell>2</cell>
- <cell>(434, 66)</cell>
- <cell>11</cell>
-</row>
-<row>
- <cell> </cell>
- <cell></cell>
- <cell></cell>
- <cell></cell>
- <cell></cell>
- <cell>3</cell>
- <cell>(440, 39)</cell>
- <cell>28</cell>
-</row>
-<row>
- <cell>7</cell>
- <cell>gantry_brk2_if_0/clk_16khz_div/N_17_inferred_clock_RNIRRMG/U0</cell>
- <cell>(871, 81)</cell>
- <cell>gantry_brk2_if_0/clk_16khz_div/N_17_inferred_clock_RNIRRMG/U0_Y</cell>
- <cell>88</cell>
- <cell>1</cell>
- <cell>(437, 39)</cell>
- <cell>72</cell>
-</row>
-<row>
- <cell> </cell>
- <cell></cell>
- <cell></cell>
- <cell></cell>
- <cell></cell>
- <cell>2</cell>
- <cell>(443, 66)</cell>
- <cell>16</cell>
+ <cell>(443, 12)</cell>
+ <cell>73</cell>
 </row>
 <row>
  <cell>8</cell>
- <cell>gantry_brk2_ret_if_0/clk_16khz_div/N_17_inferred_clock_RNI597J7/U0</cell>
- <cell>(872, 81)</cell>
- <cell>gantry_brk2_ret_if_0/clk_16khz_div/N_17_inferred_clock_RNI597J7/U0_Y</cell>
- <cell>88</cell>
+ <cell>gantry_brk3_if_0/clk_16khz_div/N_1_inferred_clock_RNI5S404/U0</cell>
+ <cell>(873, 81)</cell>
+ <cell>gantry_brk3_if_0/clk_16khz_div/N_1_inferred_clock_RNI5S404/U0_Y</cell>
+ <cell>117</cell>
  <cell>1</cell>
- <cell>(432, 14)</cell>
- <cell>30</cell>
+ <cell>(435, 41)</cell>
+ <cell>59</cell>
 </row>
 <row>
  <cell> </cell>
@@ -670,7 +660,7 @@
  <cell></cell>
  <cell></cell>
  <cell>2</cell>
- <cell>(432, 68)</cell>
+ <cell>(435, 68)</cell>
  <cell>11</cell>
 </row>
 <row>
@@ -680,18 +670,28 @@
  <cell></cell>
  <cell></cell>
  <cell>3</cell>
- <cell>(438, 14)</cell>
- <cell>47</cell>
+ <cell>(441, 41)</cell>
+ <cell>18</cell>
+</row>
+<row>
+ <cell> </cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>4</cell>
+ <cell>(441, 68)</cell>
+ <cell>29</cell>
 </row>
 <row>
  <cell>9</cell>
- <cell>gantry_brk3_if_0/clk_16khz_div/N_17_inferred_clock_RNIS2TQ1/U0</cell>
- <cell>(873, 81)</cell>
- <cell>gantry_brk3_if_0/clk_16khz_div/N_17_inferred_clock_RNIS2TQ1/U0_Y</cell>
- <cell>88</cell>
+ <cell>gantry_brk1_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIDFJO4/U0</cell>
+ <cell>(870, 81)</cell>
+ <cell>gantry_brk1_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIDFJO4/U0_Y</cell>
+ <cell>103</cell>
  <cell>1</cell>
- <cell>(435, 68)</cell>
- <cell>49</cell>
+ <cell>(434, 39)</cell>
+ <cell>87</cell>
 </row>
 <row>
  <cell> </cell>
@@ -700,18 +700,18 @@
  <cell></cell>
  <cell></cell>
  <cell>2</cell>
- <cell>(441, 68)</cell>
- <cell>39</cell>
+ <cell>(440, 12)</cell>
+ <cell>16</cell>
 </row>
 <row>
  <cell>10</cell>
- <cell>gantry_brk3_ret_if_0/clk_16khz_div/N_17_inferred_clock_RNI6KF44/U0</cell>
- <cell>(874, 81)</cell>
- <cell>gantry_brk3_ret_if_0/clk_16khz_div/N_17_inferred_clock_RNI6KF44/U0_Y</cell>
- <cell>88</cell>
+ <cell>gantry_brk2_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIEPHB6/U0</cell>
+ <cell>(872, 81)</cell>
+ <cell>gantry_brk2_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIEPHB6/U0_Y</cell>
+ <cell>103</cell>
  <cell>1</cell>
- <cell>(434, 40)</cell>
- <cell>30</cell>
+ <cell>(432, 14)</cell>
+ <cell>59</cell>
 </row>
 <row>
  <cell> </cell>
@@ -720,8 +720,28 @@
  <cell></cell>
  <cell></cell>
  <cell>2</cell>
- <cell>(434, 67)</cell>
+ <cell>(438, 41)</cell>
+ <cell>44</cell>
+</row>
+<row>
  <cell>11</cell>
+ <cell>gantry_brk3_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIF3GU7/U0</cell>
+ <cell>(874, 81)</cell>
+ <cell>gantry_brk3_ret_if_0/clk_16khz_div/N_1_inferred_clock_RNIF3GU7/U0_Y</cell>
+ <cell>103</cell>
+ <cell>1</cell>
+ <cell>(434, 40)</cell>
+ <cell>59</cell>
+</row>
+<row>
+ <cell> </cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>2</cell>
+ <cell>(440, 40)</cell>
+ <cell>16</cell>
 </row>
 <row>
  <cell> </cell>
@@ -730,38 +750,28 @@
  <cell></cell>
  <cell></cell>
  <cell>3</cell>
- <cell>(440, 40)</cell>
- <cell>47</cell>
-</row>
-<row>
- <cell>11</cell>
- <cell>adc_0/sclk/CLK_OUT_RNIHMSU6/U0</cell>
- <cell>(864, 81)</cell>
- <cell>adc_0/sclk/CLK_OUT_RNIHMSU6/U0_Y</cell>
- <cell>84</cell>
- <cell>1</cell>
- <cell>(432, 39)</cell>
- <cell>56</cell>
-</row>
-<row>
- <cell> </cell>
- <cell></cell>
- <cell></cell>
- <cell></cell>
- <cell></cell>
- <cell>2</cell>
- <cell>(438, 39)</cell>
+ <cell>(440, 67)</cell>
  <cell>28</cell>
 </row>
 <row>
  <cell>12</cell>
- <cell>dac_0/sclk/N_17_inferred_clock_RNIE7TP2/U0</cell>
+ <cell>dac_0/sclk/N_1_inferred_clock_RNINEIH3/U0</cell>
  <cell>(868, 81)</cell>
- <cell>dac_0/sclk/N_17_inferred_clock_RNIE7TP2/U0_Y</cell>
+ <cell>dac_0/sclk/N_1_inferred_clock_RNINEIH3/U0_Y</cell>
  <cell>78</cell>
- <cell> </cell>
+ <cell>1</cell>
  <cell>(438, 40)</cell>
- <cell>78</cell>
+ <cell>26</cell>
+</row>
+<row>
+ <cell> </cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell></cell>
+ <cell>2</cell>
+ <cell>(438, 67)</cell>
+ <cell>52</cell>
 </row>
 <row>
  <cell>13</cell>
@@ -780,7 +790,7 @@
  <cell></cell>
  <cell></cell>
  <cell>2</cell>
- <cell>(441, 12)</cell>
+ <cell>(441, 39)</cell>
  <cell>8</cell>
 </row>
 <row>
@@ -798,18 +808,8 @@
  <cell>I_2/U0_GB0</cell>
  <cell>(879, 82)</cell>
  <cell>I_2/U0_gbs_1</cell>
- <cell>34</cell>
- <cell>1</cell>
- <cell>(1313, 68)</cell>
  <cell>17</cell>
-</row>
-<row>
  <cell> </cell>
- <cell></cell>
- <cell></cell>
- <cell></cell>
- <cell></cell>
- <cell>2</cell>
  <cell>(1313, 98)</cell>
  <cell>17</cell>
 </row>
@@ -818,18 +818,8 @@
  <cell>I_1/U0_GB0</cell>
  <cell>(887, 81)</cell>
  <cell>I_1/U0_gbs_1</cell>
- <cell>34</cell>
- <cell>1</cell>
- <cell>(1313, 67)</cell>
  <cell>17</cell>
-</row>
-<row>
  <cell> </cell>
- <cell></cell>
- <cell></cell>
- <cell></cell>
- <cell></cell>
- <cell>2</cell>
  <cell>(1313, 97)</cell>
  <cell>17</cell>
 </row>
@@ -840,7 +830,7 @@
  <cell>I_3/U0_Y</cell>
  <cell>13</cell>
  <cell> </cell>
- <cell>(443, 68)</cell>
+ <cell>(443, 41)</cell>
  <cell>13</cell>
 </row>
 <row>
@@ -867,15 +857,15 @@
 </row>
 <row>
  <cell>The number of clock signals through     Row Global resources</cell>
- <cell>39</cell>
+ <cell>38</cell>
 </row>
 <row>
  <cell>The number of clock signals through  Sector Global resources</cell>
- <cell>70</cell>
+ <cell>81</cell>
 </row>
 <row>
  <cell>The number of clock signals through Cluster Global resources</cell>
- <cell>570</cell>
+ <cell>721</cell>
 </row>
 </table>
 <text></text>
